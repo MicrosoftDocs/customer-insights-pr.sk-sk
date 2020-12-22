@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Funkcia prehľadov cieľových skupín v službe Dynamics 365 Customer Insights
+summary: Prijímajte, zjednocujte a organizujte údaje o zákazníkoch z viacerých zdrojov. Vytvárajte a spravujte profily zákazníkov a segmentáciu v reálnom čase. Integrujte údaje o zákazníkoch s inými systémami, aby boli ešte akčnejšie.
+metadata:
+  title: Dokumentácia k prehľadom cieľových skupín
+  description: Centrum pomoci s kľúčovými odkazmi na prehľady cieľových skupín.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: sk-SK
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406926"
+landingContent:
+- title: Informácie o prehľadoch cieľových skupín
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Prehľad produktu
+      url: overview.md
+    - text: Nové a aktualizované funkcie
+      url: whats-new-audience-insights.md
+    - text: Lokalita komunity
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Zdroje údajov Ingest
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Pridať zdroje údajov
+      url: data-sources.md
+    - text: Prírastkové obnovenie
+      url: incremental-refresh-data-sources.md
+    - text: Vysvetlenie entít
+      url: entities.md
+- title: Zjednotenie údajov
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Priradenie
+      url: map-entities.md
+    - text: Spárovanie
+      url: match-entities.md
+    - text: Zlúčenie
+      url: merge-entities.md
+- title: Spresnenie profilov zákazníkov
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurácia vzťahov
+      url: relationships.md
+    - text: Vypísať aktivity zákazníka
+      url: activities.md
+    - text: Prineste si vlastné modelu strojového učenia
+      url: custom-models.md
+- title: Export údajov zákazníka
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Nastavenie cieľových miest exportovania
+      url: export-destinations.md
+    - text: Karty zákazníka v aplikáciách Dynamics 365
+      url: customer-card-add-in.md
+    - text: Konektor služby Power BI
+      url: export-power-bi.md
+- title: Správa aplikácie
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurácia systému
+      url: system.md
+    - text: Zadefinujte používateľské oprávnenia
+      url: permissions.md
+    - text: Správa viacerých prostredí
+      url: manage-environments.md
