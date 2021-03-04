@@ -1,51 +1,57 @@
 ---
 title: Export údajov služby Customer Insights do Dynamics 365 Marketing
 description: Naučte sa, ako nakonfigurovať pripojenie k Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643792"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269073"
 ---
-# <a name="connector-for-dynamics-365-marketing-preview"></a><span data-ttu-id="f1d1a-103">Konektor pre Dynamics 365 Marketing (ukážka)</span><span class="sxs-lookup"><span data-stu-id="f1d1a-103">Connector for Dynamics 365 Marketing (preview)</span></span>
+# <a name="connector-for-dynamics-365-marketing-preview"></a><span data-ttu-id="96687-103">Konektor pre Dynamics 365 Marketing (ukážka)</span><span class="sxs-lookup"><span data-stu-id="96687-103">Connector for Dynamics 365 Marketing (preview)</span></span>
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-<span data-ttu-id="f1d1a-104">Dynamics 365 Marketing umožňuje pomocou [segmentov](segments.md) generovať kampane a kontaktovať konkrétne skupiny zákazníkov.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-104">Use [segments](segments.md) to generate campaigns and contact specific groups of customers with Dynamics 365 Marketing.</span></span> <span data-ttu-id="f1d1a-105">Viac informácií nájdete v článku [Použitie segmentov z Dynamics 365 Customer Insights s Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/customer-insights-segments)</span><span class="sxs-lookup"><span data-stu-id="f1d1a-105">For more information, see [Use segments from Dynamics 365 Customer Insights with Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/customer-insights-segments)</span></span>
+<span data-ttu-id="96687-104">Dynamics 365 Marketing umožňuje pomocou [segmentov](segments.md) generovať kampane a kontaktovať konkrétne skupiny zákazníkov.</span><span class="sxs-lookup"><span data-stu-id="96687-104">Use [segments](segments.md) to generate campaigns and contact specific groups of customers with Dynamics 365 Marketing.</span></span> <span data-ttu-id="96687-105">Viac informácií nájdete v článku [Použitie segmentov z Dynamics 365 Customer Insights s Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/customer-insights-segments)</span><span class="sxs-lookup"><span data-stu-id="96687-105">For more information, see [Use segments from Dynamics 365 Customer Insights with Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/customer-insights-segments)</span></span>
 
-## <a name="prerequisite"></a><span data-ttu-id="f1d1a-106">Predpoklady</span><span class="sxs-lookup"><span data-stu-id="f1d1a-106">Prerequisite</span></span>
+## <a name="prerequisite"></a><span data-ttu-id="96687-106">Predpoklady</span><span class="sxs-lookup"><span data-stu-id="96687-106">Prerequisite</span></span>
 
-<span data-ttu-id="f1d1a-107">Záznamy kontaktov [z Dynamics 365 Marketing prijaté z Common Data Service](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="f1d1a-107">Contact records [from Dynamics 365 Marketing ingested Common Data Service](connect-power-query.md).</span></span>
+- <span data-ttu-id="96687-107">Pred exportom segmentu z Customer Insights do Sales Marketing byť záznamy kontaktov v Dynamics 365 Marketing.</span><span class="sxs-lookup"><span data-stu-id="96687-107">Contact records must be present in Dynamics 365 Marketing before you can export a segment from Customer Insights to Marketing.</span></span> <span data-ttu-id="96687-108">Prečítajte si viac o tom, ako prijímať kontakty v [Dynamics 365 Marketing pomocou Common Data Services](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="96687-108">Read more on how to ingest contacts in [Dynamics 365 Marketing using Common Data Services](connect-power-query.md).</span></span>
 
-## <a name="configure-the-connector-for-marketing"></a><span data-ttu-id="f1d1a-108">Nakonfigurujte konektor pre Marketing</span><span class="sxs-lookup"><span data-stu-id="f1d1a-108">Configure the connector for Marketing</span></span>
+  > [!NOTE]
+  > <span data-ttu-id="96687-109">Export segmentov z prehľadov cieľových skupín do Marketing nevytvorí nové záznamy kontaktov v inštanciách Marketing.</span><span class="sxs-lookup"><span data-stu-id="96687-109">Exporting segments from audience insights to Marketing will not create new contact records in the Marketing instances.</span></span> <span data-ttu-id="96687-110">Záznamy kontaktov z Marketing musia byť obsiahnuté v prehľadoch cieľových skupín a použité ako zdroj údajov.</span><span class="sxs-lookup"><span data-stu-id="96687-110">The contact records from Marketing must be ingested in audience insights and used as a data source.</span></span> <span data-ttu-id="96687-111">Pred exportom segmentov je ich tiež potrebné ich zahrnúť do zjednotenej entity zákazníka na mapovanie ID zákazníkov na ID kontaktov.</span><span class="sxs-lookup"><span data-stu-id="96687-111">They also need to be included in the unified Customer entity to map customer IDs to contact IDs before segments can be exported.</span></span>
 
-1. <span data-ttu-id="f1d1a-109">V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-109">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+## <a name="configure-the-connector-for-marketing"></a><span data-ttu-id="96687-112">Nakonfigurujte konektor pre Marketing</span><span class="sxs-lookup"><span data-stu-id="96687-112">Configure the connector for Marketing</span></span>
 
-1. <span data-ttu-id="f1d1a-110">Pod **Dynamics 365 Marketing** vyberte **Nastaviť**.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-110">Under **Dynamics 365 Marketing**, select **Set up**.</span></span>
+1. <span data-ttu-id="96687-113">V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.</span><span class="sxs-lookup"><span data-stu-id="96687-113">In audience insights, go to **Admin** > **Export destinations**.</span></span>
 
-1. <span data-ttu-id="f1d1a-111">Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa exportu.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-111">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="96687-114">Pod **Dynamics 365 Marketing** vyberte **Nastaviť**.</span><span class="sxs-lookup"><span data-stu-id="96687-114">Under **Dynamics 365 Marketing**, select **Set up**.</span></span>
 
-1. <span data-ttu-id="f1d1a-112">Zadajte marketingovú adresu URL svojej organizácie do poľa **Adresa servera**.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-112">Enter your organization's Marketing URL in the **Server address** field.</span></span>
+1. <span data-ttu-id="96687-115">Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa exportu.</span><span class="sxs-lookup"><span data-stu-id="96687-115">Give your export destination a recognizable name in the **Display name** field.</span></span>
 
-1. <span data-ttu-id="f1d1a-113">V sekcii **Konto správcu servera** vyberte **Prihlásiť sa** a vyberte Dynamics 365 Marketing.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-113">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Marketing account.</span></span>
+1. <span data-ttu-id="96687-116">Zadajte marketingovú adresu URL svojej organizácie do poľa **Adresa servera**.</span><span class="sxs-lookup"><span data-stu-id="96687-116">Enter your organization's Marketing URL in the **Server address** field.</span></span>
 
-1. <span data-ttu-id="f1d1a-114">Namapujte pole ID zákazníka k ID kontaktu služby Dynamics 365.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-114">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
+1. <span data-ttu-id="96687-117">V sekcii **Konto správcu servera** vyberte **Prihlásiť sa** a vyberte Dynamics 365 Marketing.</span><span class="sxs-lookup"><span data-stu-id="96687-117">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Marketing account.</span></span>
 
-1. <span data-ttu-id="f1d1a-115">Vyberte **Ďalej**.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-115">Select **Next**.</span></span>
+1. <span data-ttu-id="96687-118">Namapujte pole ID zákazníka k ID kontaktu služby Dynamics 365.</span><span class="sxs-lookup"><span data-stu-id="96687-118">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
 
-1. <span data-ttu-id="f1d1a-116">Vyberte jeden alebo viac segmentov.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-116">Choose one or more segments.</span></span>
+1. <span data-ttu-id="96687-119">Vyberte **Ďalej**.</span><span class="sxs-lookup"><span data-stu-id="96687-119">Select **Next**.</span></span>
 
-1. <span data-ttu-id="f1d1a-117">Vyberte položku **Uložiť**.</span><span class="sxs-lookup"><span data-stu-id="f1d1a-117">Select **Save**.</span></span>
+1. <span data-ttu-id="96687-120">Vyberte jeden alebo viac segmentov.</span><span class="sxs-lookup"><span data-stu-id="96687-120">Choose one or more segments.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="f1d1a-118">Export údajov</span><span class="sxs-lookup"><span data-stu-id="f1d1a-118">Export the data</span></span>
+1. <span data-ttu-id="96687-121">Vyberte položku **Uložiť**.</span><span class="sxs-lookup"><span data-stu-id="96687-121">Select **Save**.</span></span>
 
-<span data-ttu-id="f1d1a-119">Môžete [exportovať údaje na vyžiadanie](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="f1d1a-119">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="f1d1a-120">Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="f1d1a-120">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+## <a name="export-the-data"></a><span data-ttu-id="96687-122">Export údajov</span><span class="sxs-lookup"><span data-stu-id="96687-122">Export the data</span></span>
+
+<span data-ttu-id="96687-123">Môžete [exportovať údaje na vyžiadanie](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="96687-123">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="96687-124">Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="96687-124">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
