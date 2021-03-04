@@ -1,20 +1,20 @@
 ---
 title: Export údajov služby Customer Insights do Dynamics 365 Marketing
 description: Naučte sa, ako nakonfigurovať pripojenie k Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643792"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269073"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Konektor pre Dynamics 365 Marketing (ukážka)
 
@@ -24,7 +24,10 @@ Dynamics 365 Marketing umožňuje pomocou [segmentov](segments.md) generovať ka
 
 ## <a name="prerequisite"></a>Predpoklady
 
-Záznamy kontaktov [z Dynamics 365 Marketing prijaté z Common Data Service](connect-power-query.md).
+- Pred exportom segmentu z Customer Insights do Sales Marketing byť záznamy kontaktov v Dynamics 365 Marketing. Prečítajte si viac o tom, ako prijímať kontakty v [Dynamics 365 Marketing pomocou Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > Export segmentov z prehľadov cieľových skupín do Marketing nevytvorí nové záznamy kontaktov v inštanciách Marketing. Záznamy kontaktov z Marketing musia byť obsiahnuté v prehľadoch cieľových skupín a použité ako zdroj údajov. Pred exportom segmentov je ich tiež potrebné ich zahrnúť do zjednotenej entity zákazníka na mapovanie ID zákazníkov na ID kontaktov.
 
 ## <a name="configure-the-connector-for-marketing"></a>Nakonfigurujte konektor pre Marketing
 
@@ -49,3 +52,6 @@ Záznamy kontaktov [z Dynamics 365 Marketing prijaté z Common Data Service](con
 ## <a name="export-the-data"></a>Export údajov
 
 Môžete [exportovať údaje na vyžiadanie](export-destinations.md). Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

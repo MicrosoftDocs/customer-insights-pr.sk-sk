@@ -14,10 +14,10 @@
       href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: "Nové a\_aktualizované funkcie"
       href: audience-insights/whats-new-audience-insights.md
-    - name: Začať
+    - name: Vytvoriť nové prostredie
+      href: audience-insights/home.md
+    - name: Výuka modulov
       items:
-        - name: Vytvoriť nové prostredie
-          href: audience-insights/home.md
         - name: Príjem údajov
           href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
         - name: Vytvorenie zjednoteného profilu zákazníka
@@ -44,7 +44,7 @@
           href: audience-insights/entities.md
     - name: Zjednotenie údajov
       items:
-        - name: Prehľad zjednotenia
+        - name: Prehľad zjednotenia údajov
           href: audience-insights/data-unification.md
         - name: Mapovanie entít a atribútov
           href: audience-insights/map-entities.md
@@ -80,6 +80,8 @@
           href: audience-insights/segments.md
         - name: Získajte informácie o segmentoch
           href: audience-insights/segment-insights.md
+        - name: Pozrite navrhované segmenty
+          href: audience-insights/suggested-segments.md
         - name: Nájsť podobných zákazníkov
           href: audience-insights/find-similar-customer-segments.md
         - name: Definujte opatrenia a kľúčové ukazovateľ výkonnosti
@@ -96,6 +98,12 @@
           href: audience-insights/predict-transactional-churn.md
         - name: Vzorový sprievodca – predikcia odchodov založená na transakciách
           href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Predikcia hodnoty životnosti zákazníka (CLV)
+          href: audience-insights/predict-customer-lifetime-value.md
+        - name: Predikcia odporúčaní produktov
+          href: audience-insights/predict-product-recommendation.md
+        - name: Predikcia odporúčania produktov – vzorový sprievodca
+          href: audience-insights/sample-guide-predict-product-recommendation.md
         - name: Implementujte vlastné modely strojového učenia
           href: audience-insights/custom-models.md
         - name: Pokusy so strojovým učením Azure
@@ -104,10 +112,14 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Možnosti exportu
       items:
-        - name: Objavenie cieľov exportov
+        - name: Prehľad cieľov exportu
           href: audience-insights/export-destinations.md
+        - name: Autopilot
+          href: audience-insights/export-autopilot.md
         - name: Azure Blob Storage
           href: audience-insights/export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: audience-insights/export-azure-data-lake-storage-gen2.md
         - name: DotDigital
           href: audience-insights/export-dotdigital.md
         - name: "Dynamics\_365 Customer Service (doplnok)"
@@ -136,6 +148,8 @@
           href: audience-insights/export-power-apps.md
         - name: Power Automate
           href: audience-insights/export-power-automate.md
+        - name: SendGrid
+          href: audience-insights/export-sendgrid.md
         - name: SFTP
           href: audience-insights/export-sftp.md
     - name: Správa
@@ -152,6 +166,8 @@
           href: audience-insights/supported-languages.md
     - name: Rozšíriteľnosť
       items:
+        - name: Integrácia webových údajov z prehľadov o interakcii
+          href: audience-insights/integrate-engagement-insights.md
         - name: Kontrola schém entít v Common Data Model
           href: audience-insights/entity-schemas.md
         - name: "Práca s\_API"
@@ -170,10 +186,6 @@
       href: engagement-insights/overview.md
     - name: Bezplatná skúšobná verzia
       href: 'https://pi.dynamics.com/'
-    - name: Stručný úvod
-      items:
-        - name: Rýchly štart pre verejnú ukážku
-          href: engagement-insights/quickstart.md
     - name: Začať
       items:
         - name: Začať
@@ -223,4 +235,4 @@
     - name: Obmedzenia služby
       href: engagement-insights/quotas.md
 - name: Obrátiť sa na oddelenie technickej podpory
-  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
+  href: 'https://admin.powerplatform.microsoft.com/support'

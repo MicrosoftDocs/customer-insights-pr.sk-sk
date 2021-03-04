@@ -1,7 +1,7 @@
 ---
 title: Domovská stránka v prehľadoch cieľových skupín
 description: Začnite prezerať aplikáciu na stránke Domov.
-ms.date: 09/30/2020
+ms.date: 01/07/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: bd16966eabb126d9c9945ededc53273df02c3369
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 7cc767f5d80b213a4c1bb5b2e8062bd44c15279b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406920"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477060"
 ---
 # <a name="create-a-new-environment"></a>Vytvoriť nové prostredie
 
@@ -29,6 +29,8 @@ Môžete sa zaregistrovať na skúšku na [skúšobnej registračnej stránke](h
 
 1. Zadajte svoju pracovnú alebo školskú e-mailovú adresu, povedzte nám o sebe viac a vyberte **Ďalej**.
 
+   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Dialógové okno na registráciu skúšobnej inštancie":::
+
 1. Zadajte **Názov** pre vaše nové prostredie. 
 
 1. Vyberte typ skúšobnej verzie.
@@ -41,34 +43,34 @@ Môžete sa zaregistrovať na skúšku na [skúšobnej registračnej stránke](h
 
 Po vytvorení prostredia sa zobrazí **Ukážkové** prostredie, ktoré vám umožní preskúmať aplikáciu pomocou fiktívnych údajov. Vzorové údaje môžete zmeniť tak, aby zodpovedali vášmu odvetviu. Vyberte ikonu **Nastavenia** v hlavičke a vyberte **Nastavenia demoverzie**. Ďalej môžete zmeniť vizuálnu tému. 
 
-[Prejdete do prostredia](#change-between-environments), ktoré ste vytvorili počas procesu registrácie na prácu s vašimi vlastnými údajmi.
+[Prejdete do prostredia](#switch-environments), ktoré ste vytvorili počas procesu registrácie na prácu s vašimi vlastnými údajmi.
 
 ## <a name="create-a-new-production-or-sandbox-environment"></a>Vytvorenie nového produkčného alebo testovacieho prostredia
 
-Vo svojom prostredí vyberte ikonu **Nastavenia** v hlavičke a vyberte **Nové prostredie**.
+Vo svojom prostredí vyberte nástroj na výber **Prostredia** v hlavičke aplikácie a vyberte **Nový**.
 
-Postupujte podľa pokynov, akoby ste [vytvárali testovacie prostredie](#create-a-trial-environment). Pri výbere **Pokročilé nastavenia** získate ďalšiu možnosť na uloženie údajov do vlastného Azure Data Lake. Zadajte názov svojho účtu a kľúč účtu na nadviazanie pripojenia k vášmu Azure Data Lake. Predvolene sa údaje ukladajú v spravovanom dátovom jazere Customer Insights.
+Postupujte podľa pokynov, akoby ste [vytvárali testovacie prostredie](#create-a-trial-environment). Predvolene sa údaje ukladajú v spravovanom dátovom jazere Customer Insights. Pri výbere **Pokročilé nastavenia** získate ďalšiu možnosť na uloženie údajov do vlastného Azure Data Lake. Zadajte názov svojho účtu a kľúč účtu na nadviazanie pripojenia k vášmu Azure Data Lake. 
 
 > [!IMPORTANT]
 > Uložením údajov do vašej služby Azure Data Lake Storage súhlasíte s tým, že údaje budú prenesené a uložené v príslušnej geografickej oblasti pre dané konto úložiska v Azure, ktoré sa môže líšiť od oblasti, v ktorej sú uložené údaje služby Dynamics 365 Customer Insights. [Ďalšie informácie nájdete v centre dôveryhodnosti spoločnosti Microsoft.](https://www.microsoft.com/trust-center)
 
 ## <a name="explore-the-home-page"></a>Preskúmanie domovskej stránky
 
-Môžete [navštíviť vaše prostredie služby Customer Insights](https://home.ci.ai.dynamics.com/) na nasledujúcej adrese URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
-Stránka **Domov** zobrazuje prehľad zákazníckej základne a kľúčové metriky na sledovanie stavu vašej firmy.
+Môžete [získať prístup k prehľadom o cieľových skupinách z Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) na nasledujúcej adrese URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+**Domovská** stránka zobrazuje prehľad segmentov, mier a údajov o obohatení (ak sú nakonfigurované) po dokončení [mapovania](map-entities.md), [párovania](match-entities.md) a [zlučovania](merge-entities.md).
 
 > [!div class="mx-imgBorder"] 
 > ![Prehľady na domovskej stránke](media/home-page-insights.png "Prehľady na domovskej stránke")
 
-Pod **Posledné segmenty** uvidíte skupiny zákazníkov na základe demografických, behaviorálnych alebo transakčných atribútov, ktoré ste definovali. [Vytváranie segmentov](segments.md) pomáha lepšie zacieliť vaše obchodné aktivity.
+Pod **Posledné segmenty** uvidíte skupiny zákazníkov na základe demografických, behaviorálnych alebo transakčných atribútov, ktoré ste definovali. [Vytváranie segmentov](segments.md) vám pomôže zoskupiť zákaznícku základňu a lepšie zacieliť vaše obchodné aktivity.
 
-**Nedávne miery** ukazuje dlaždice s [mierami](measures.md). Miery sú kľúčové ukazovatele výkonu (KPI), ktoré ste definovali. Napríklad priemerná pravdepodobnosť odchodu zákazníkov alebo priemerné online výdavky na zákazníka.
+**Nedávne miery** zobrazujú dlaždice s [kľúčovými ukazovateľmi výkonu (KPI)](measures.md) ktoré ste definovali. Napríklad priemerná pravdepodobnosť odchodu zákazníka alebo priemerné online výdavky na zákazníka.
 
-Sekcia **Nedávne obohatenia** uvádza výsledky behov obohacovania, ktoré skončili nedávno. Obohatenia pridávajú informácie o vašej zákazníckej základni. Napríklad porozumením záujmov a značkám, ku ktorým majú vzťah. Tieto informácie je možné odomknúť pomocou funkcií [obohatenia](enrichment-microsoft-graph.md), po dokončení fáz [mapovania](map-entities.md), [zosúlaďovania](match-entities.md) a [zlúčenia](merge-entities.md).
+Sekcia **Nedávne obohatenia** uvádza výsledky behov obohacovania, ktoré skončili nedávno. [Obohatenia](enrichment-hub.md) pridávajú informácie o vašej zákazníckej základni. Napríklad porozumením záujmov a značkám, ku ktorým majú vzťah.
 
-## <a name="change-between-environments"></a>Zmena medzi prostrediami
+## <a name="switch-environments"></a>Prepnutie prostredí
 
-Po nastavení a konfigurácii [zdrojov údajov](data-sources.md) budete chcieť prejsť z ukážkového prostredia na živé prostredie. Používanie produkčného prostredia vám umožňuje pracovať s vašimi vlastnými údajmi o zákazníkoch. Ak chcete zmeniť prostredie, vyberte ovládací prvok **prostredia** v pravom hornom rohu stránky.
+Ak chcete zmeniť prostredie, vyberte ovládací prvok **prostredia** v pravom hornom rohu stránky.
 
 > [!div class="mx-imgBorder"] 
 > ![Prepnúť prostredie](media/home-page-environment-switcher.png "Prepnúť prostredie")
@@ -78,3 +80,6 @@ Správcovia môžu vytvárať a spravovať [viaceré prostredia](manage-environ
 ## <a name="next-step"></a>Nasledujúci krok
 
 Ak chcete na svojej domovskej stránke zobraziť svoje vlastné prehľady, musíte najskôr [pridať zdroje údajov](data-sources.md) a [zjednotiť](data-unification.md) vaše údaje na vytvorenie profilov zákazníkov.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

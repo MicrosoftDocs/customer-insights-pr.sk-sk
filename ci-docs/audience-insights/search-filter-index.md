@@ -1,7 +1,7 @@
 ---
 title: Vyhľadávanie a filtrovanie profilov zákazníkov
 description: Rýchlo vyhľadajte informácie o zjednotených profiloch zákazníkov a filtrujte konkrétne atribúty.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406937"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270085"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profily zákazníkov: Index vyhľadávania a filtrovania
 
@@ -28,14 +28,6 @@ Výsledkom zjednocovanie vašich zákazníckych údajov je entita profilu zákaz
 Ak definujete atribúty s možnosťou vyhľadávania ako správca po prvý raz, musíte najprv definovať indexované polia. Odporúčame, aby ste si vybrali všetky atribúty, podľa ktorých môžu používatelia vyhľadávať a filtrovať zákazníkov na stránke **Zákazníci**. Môžete zadať iba atribúty, ktoré existujú v entite profilu zákazníka, ktorý ste vytvorili počas procesu zjednotenia údajov.
 
 1. Otvorte stránku **Zákazníci** a vyberte **Index vyhľadávania a filtrovania**.
-
-> [!NOTE]
-> Vytvárame predvolenú konfiguráciu indexu vyhľadávania pre dostupné atribúty v entite Zákazník z nasledujúcich sémantických typov definovaných na stránke Mapa.
-> - Krstné meno osoby, Priezvisko, Prostredné meno, Celé meno
-> - Názov organizácie
-> - E-mailová adresa
-> - Telefónne číslo
-> - Informácie o umiestnení
 
 2. Vyberte **+ pridať** a zadajte indexované polia.
 
@@ -65,3 +57,10 @@ Ponuka **Filter** na stránke **Zákazníci** môže obsahovať rôzny počet ú
 2. Zmeny vykonajte výberom položky **Uložiť**.
 
 3. Vyberte položku **Spustiť**, keď budete pripravení použiť svoje nastavenia.
+
+## <a name="next-steps"></a>Ďalšie kroky
+
+Choďte na stránku **Zákazníci** a vyhľadajte profily zákazníkov alebo pomocou indexovaných polí zobrazte podmnožinu všetkých profilov zákazníkov.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643972"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269717"
 ---
-# <a name="overview-about-data-sources"></a>Prehľad o zdrojoch údajov
+# <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Uvidíte názov každého prijatého zdroj údajov, jeho stav a poslednú aktual
 |Obnovuje sa    |Prebieha prijímanie údajov. Túto operáciu môžete zrušiť tak, že v stĺpci **Akcie** vyberiete **Zastaviť obnovovanie**. Zastavenie obnovovania zdroja údajov sa obnoví do posledného stavu obnovenia.       |
 |Zlyhalo     |Pri prijímaní údajov nastali chyby.         |
 
-Výberom položky **Stav obnovenia** zobrazíte ďalšie podrobnosti o stave obnovenia vrátane podrobností o chybách a následných aktualizáciách procesu.
+Vyberte hodnotu v stĺpci **Stav** ľubovoľného zdroja údajov, aby ste skontrolovali ďalšie podrobnosti. V table **Podrobnosti o postupe** rozbaľte **Zdroje údajov**. Výberom položky **Zobraziť podrobnosti** zobrazíte viac informácií o stave obnovenia vrátane podrobností o chybách a následných aktualizáciách procesu.
 
 Načítanie údajov môže chvíľu trvať. Po úspešnom obnovení môžu byť prijaté údaje preskúmané na stránke **Entity**. Ďalšie informácie nájdete v časti [Entity](entities.md).
 
@@ -76,3 +76,6 @@ Ak chcete obnoviť zdroj údajov na požiadanie, postupujte takto:
 2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete odstrániť, a vyberte **Odstrániť** z rozbaľovacej ponuky.
 
 3. Potvrďte odstránenie.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Konektor Power Automate | Dokumentácia spoločnosti Microsoft
 description: Vytvárajte toky v Microsoft Power Automate z Dynamics 365 Customer Insights.
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406890"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268843"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (ukážka)
 
@@ -22,7 +22,7 @@ ms.locfileid: "4406890"
 
 ## <a name="power-automate-triggers"></a>Spúšťače Power Automate
 
-Môžete použiť rôzne spúšťače, ktoré vám umožňujú vytvárať toky na automatizáciu opakujúcich sa úloh, ako sú upozornenia alebo pokročilejšie akcie. 
+Pomocou spúšťačov môžete vytvárať postupy v cloude a automatizovať opakujúce sa úlohy, napríklad oznámenia alebo pokročilejšie akcie. 
 
 - Spúšťač pri zlyhaní obnovenia zdroja údajov. 
 - Spúšťač pri úspešnom obnovení zdroja údajov.
@@ -36,14 +36,20 @@ Môžete použiť rôzne spúšťače, ktoré vám umožňujú vytvárať toky n
 ## <a name="power-automate-actions"></a>Akcie Power Automate
 Konektor Power Automate poskytuje iné akcie ako dostupné spúšťače. Viac informácií nájdete v dokumente [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Vytvorenie postupu služby Power Automate v prehľadoch cieľových skupín
+## <a name="create-a-power-automate-flow"></a>Vytvorte postup Power Automate
 
-1. V prehľadoch cieľových skupín prejdite na **Správca** > **Systém**.
+1. V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.
 
-1. Na stránke **Systém** vyberte kartu **Stav**.
+1. Na dlaždici **Power Automate** vyberte **Nastaviť**.
 
-1. V sekcii **Zdroje údajov** vyberte **Postupy** a vyberte **Vytvoriť postup** z rozbaľovacieho zoznamu.
-   > [!div class="mx-imgBorder"]
-   > ![Konektor Power Automate zobrazujúci akciu Vytvorenie toku](media/power-automate-connector-create-flow.png "Konektor Power Automate zobrazujúci akciu Vytvorenie toku")
+1. Otvorí sa konektor Customer Insights (verzia Preview) v Power Automate. **Prihláste sa** do Power Automate.
 
-1. V Power Automate vyberte jeden z dostupných spúšťačov a vytvorte požadovaný postup. Ak vytvárate svoj prvý tok, musíte sa najprv autentifikovať pomocou konektora Power Automate.
+1. Vyberte si jeden z dostupných spúšťačov a do nového postupu pridajte ďalšie kroky. Viac informácií nájdete v časti [Vytvorenie postupu v cloude v Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+
+Príklady použitia postupov: 
+- Pošlite správu do kanála Microsoft Teams, ak zlyhá obnovenie zdroja údajov. 
+- Po prekročení prahovej hodnoty v segmente pošlite e-mail vlastníkom údajov.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

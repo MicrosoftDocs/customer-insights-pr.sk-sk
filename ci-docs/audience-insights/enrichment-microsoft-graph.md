@@ -1,20 +1,20 @@
 ---
 title: Obohatenie profilov zákazníkov pomocou programu Microsoft Graph
 description: Použite špeciálne údaje z programu Microsoft Graph na obohatenie údajov svojich zákazníkov značkami a záujmami.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406902"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269349"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte profily zákazníkov o značky a záujmy (ukážka)
 
@@ -35,16 +35,21 @@ Ak chcete nakonfigurovať obohatenie o afinity záujmov, prejdite na stránku **
 
 [Ďalšie informácie o Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Skóre afinity a spoľahlivosť
+## <a name="affinity-level-and-score"></a>Úroveň afinity a skóre
 
-**Skóre afinity** sa počíta na 100-bodovej stupnici, pričom 100 predstavuje segment, ktorý má najvyššiu afinitu pre značku alebo záujem.
+V každom obohatenom profile zákazníka poskytujeme dve súvisiace hodnoty – úroveň afinity a skóre afinity. Tieto hodnoty vám pomôžu určiť, aká silná je afinita k demografickému segmentu daného profilu, k značke alebo záujmu v porovnaní s ostatnými demografickými segmentmi.
 
-**Dôvera v príbuznosť** sa tiež počíta na 100-bodovej stupnici. Označuje úroveň spoľahlivosti systému, že segment má príbuznosť so značkou alebo záujmom. Úroveň spoľahlivosti je založená na veľkosti segmentu a granularite segmentu. Veľkosť segmentu je určená množstvom údajov, ktoré máme pre daný segment. Podrobnosť segmentu je určená počtom atribútov (vek, pohlavie, poloha), ktoré sú v profile k dispozícii.
+*Úroveň afinity* pozostáva zo štyroch úrovní a *skóre afinity* sa počíta na 100-bodovej stupnici, ktorá sa mapuje na úrovne afinity.
 
-Normalizujeme skóre vašej množiny údajov. V dôsledku toho sa nemusia zobraziť všetky možné hodnoty skóre afinity pre vašu množinu údajov. Napríklad nemusia existovať žiadne obohatené profily zákazníkov s hodnotami príbuznosti 100 vo vašich údajoch. Je to možné, ak v demografickom segmente neexistujú zákazníci, ktorí dosiahli skóre 100 za danú značku alebo záujem.
 
-> [!TIP]
-> Keď [vytvárate segmenty](segments.md) pomocou skóre afinity, skontrolujte distribúciu skóre afinity pre vašu množinu údajov a až potom sa rozhodnite pre hodnoty príslušných prahových hodnôt. Napríklad afinitné skóre 10 sa môže považovať za významné v súbore údajov, ktorý má najvyššie afinitné skóre iba 25 pre danú značku alebo záujem.
+|Úroveň afinity |Skóre afinity  |
+|---------|---------|
+|Veľmi vysoká     | 85 – 100       |
+|Vysoký     | 70 – 84        |
+|Stredný     | 35 – 69        |
+|Nízky     | 1 – 34        |
+
+V závislosti od podrobností, ktoré chcete pri meraní afinity, môžete použiť buď úroveň afinity alebo skóre. Skóre afinity vám dáva presnejšiu kontrolu.
 
 ## <a name="supported-countriesregions"></a>Podporované krajiny/regióny
 
@@ -54,17 +59,13 @@ Ak chcete vybrať krajinu, otvorte **Obohatenie značiek** alebo **Obohatenie z�
 
 ### <a name="implications-related-to-country-selection"></a>Dôsledky týkajúce sa výberu krajiny
 
-- Pri [výbere vlastných značiek](#define-your-brands-or-interests) vám poskytneme návrhy na základe vybranej krajiny/regiónu.
+- Pri [výbere vlastných značiek](#define-your-brands-or-interests) systém poskytuje návrhy na základe vybranej krajiny alebo regiónu.
 
-- Pri [výbere odvetvia](#define-your-brands-or-interests) identifikujeme najrelevantnejšie značky alebo záujmy na základe vybranej krajiny/regiónu.
+- Pri [výbere odvetvia](#define-your-brands-or-interests) získate najrelevantnejšie značky alebo záujmy na základe vybranej krajiny alebo regiónu.
 
-- Pri [mapovaní vašich polí](#map-your-fields), ak pole Krajina/región nie je mapované, použijeme údaje programu Microsoft Graph z vybranej krajiny/regiónu na obohatenie profilov vašich zákazníkov. Tento výber použijeme tiež na obohatenie profilov vašich zákazníkov, ktoré nemajú k dispozícii údaje o krajinách/regiónoch.
-
-- Pri [obohacovaní profilov](#refresh-enrichment) obohatíme všetky profily zákazníkov, pre ktoré máme k dispozícii údaje programu Microsoft Graph pre vybrané značky a záujmy, vrátane profilov, ktoré sa nenachádzajú vo vybranej krajine/regióne. Ak ste napríklad vybrali Nemecko, obohatíme profily umiestnené v USA, ak budeme mať k dispozícii údaje programu Microsoft Graph pre vybrané značky a záujmy v USA.
+- Pri [obohacovaní profilov](#refresh-enrichment) obohatíme všetky profily zákazníkov, pre ktoré získame údaje o vybraných značkách a záujmoch. Zahrnutie profilov, ktoré sa nenachádzajú vo vybranej krajine alebo oblasti. Ak ste napríklad vybrali Nemecko, obohatíme profily umiestnené v USA, ak budeme mať k dispozícii údaje programu Microsoft Graph pre vybrané značky a záujmy v USA.
 
 ## <a name="configure-enrichment"></a>Konfigurácia obohatenia
-
-Konfigurácia obohatenia značiek alebo záujmov pozostáva z dvoch krokov:
 
 ### <a name="define-your-brands-or-interests"></a>Definujte svoje značky alebo záujmy
 
@@ -75,9 +76,19 @@ Vyberte jednu z nasledujúcich možností:
 
 Ak chcete pridať značku alebo záujem, zadajte ich do vstupnej oblasti a získajte návrhy na základe zhodných výrazov. Ak neuvedieme hľadanú značku alebo záujem, pošlite nám svoje pripomienky pomocou odkazu **Navrhnúť**.
 
+### <a name="review-enrichment-preferences"></a>Kontrola predvolieb obohacovania
+
+Skontrolujte svoje predvolené predvoľby obohatenia a podľa potreby ich aktualizujte.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Snímka obrazovky okna s predvoľbami obohacovania.":::
+
+### <a name="select-entity-to-enrich"></a>Vyberte entitu na obohatenie
+
+Vyberte **Obohatená entita** a vyberte množinu údajov, ktorú chcete obohatiť o údaje spoločnosti z programu Microsoft Graph. Môžete zvoliť entitu Zákazník, aby ste obohatili všetky svoje zákaznícke profily, alebo vyberte entitu segmentu, aby ste obohatili iba profily zákazníkov obsiahnuté v danom segmente.
+
 ### <a name="map-your-fields"></a>Priraďte svoje polia
 
-Mapujte polia z vašej zjednotenej entity zákazníka na najmenej dva atribúty na definovanie demografického segmentu, ktorý chcete použiť na obohatenie vašich zákazníckych údajov. Zvoľte možnosť **Upraviť** na definovanie mapovania polí a keď to dokončíte, stlačte možnosť **Použiť**. Vyberte **Uložiť** na dokončenie mapovania polí.
+Mapujte polia z vašej zjednotenej entity zákazníka a definujte demografický segment, ktorý má systém používať na obohatenie vašich údajov o zákazníkoch. Mapujte krajinu/región a minimálne atribúty Dátum narodenia alebo Pohlavie. Okrem toho musíte namapovať aspoň jedno mesto (a štát/kraj) alebo PSČ. Zvoľte možnosť **Upraviť** na definovanie mapovania polí a keď to dokončíte, stlačte možnosť **Použiť**. Vyberte **Uložiť** na dokončenie mapovania polí.
 
 Podporované sú nasledujúce formáty a hodnoty, hodnoty nerozlišujú veľké a malé písmená:
 
@@ -120,3 +131,6 @@ Značky a záujmy môžu byť zobrazené aj na jednotlivých zákazníckych kart
 ## <a name="next-steps"></a>Ďalšie kroky
 
 Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md), [merania](measures.md) a dokonca [exportujte údaje](export-destinations.md) na poskytovanie prispôsobenej používateľskej skúsenosti svojim zákazníkom.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

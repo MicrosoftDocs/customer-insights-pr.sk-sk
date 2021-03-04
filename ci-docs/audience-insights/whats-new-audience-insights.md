@@ -1,7 +1,7 @@
 ---
 title: Nové a prichádzajúce funkcie
 description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4650023"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270451"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
@@ -30,6 +30,77 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="january-2021-updates"></a>Aktualizácie z januára 2021
+
+Aktualizácie z januára 2021 zahŕňajú niekoľko funkcií, aktualizácií výkonu a opráv chýb.
+
+#### <a name="extensibility"></a>Rozšíriteľnosť
+
+- **Rozšírená funkčnosť a zvýšený výkon pre export SFTP** Teraz môžete exportovať všetky výstupné entity z nástroja Customer Insights do hostiteľa SFTP. Predtým bol export obmedzený na segmentové entity. Výkon exportu SFTP navyše umožňuje väčší objem dát za kratší čas, v závislosti od výkonu vášho hostiteľa SFTP.    
+  Ďalšie informácie nájdete v časti [Konektor pre SFTP (verzia Preview)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmenty
+
+- **Návrh segmentov s podporou strojového učenia na zlepšenie metrík** Existuje nový spôsob, ako objavovať a vytvárať segmenty. Systém pomocou modelu AI navrhuje segmenty, ktoré môžu pomôcť zlepšiť KPI (mieru), ktorú už sledujete. Ukazujeme mieru vplyvu atribútov, ktoré vyberiete v miere, alebo iného primárneho atribútu. Tieto informácie pomáhajú nájsť potenciálne segmenty, ktoré predstavujú príležitosti.    
+  Ďalšie informácie nájdete v časti [Navrhované segmenty (verzia Preview)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Zjednotenie údajov
+
+- **Vylepšené prostredie priraďovania** V oblasti zjednotenia údajov bolo aktualizované prostredie priraďovania. Umožňuje vám nakonfigurovať a zobraziť pravidlá priraďovania vrátane podrobných štatistík, aby ste ďalej vysvetlili, ako funguje priraďovanie. Existujú možnosti zakázania pravidla priraďovania, aby už nebolo aktívne pri zachovaní konfigurácie, pravidlá priraďovania myšou a ďalšie.
+  Ďalšie informácie nájdete v téme [Priraďovanie entít](match-entities.md).
+
+- **Výstup deduplikácie z procesu priraďovania je k dispozícii ako entita** Výstup procesu deduplikácie z procesu priraďovania je teraz zapísaný do samostatnej entity na ďalšiu analýzu. Táto entita pozostáva z polí použitých v procese deduplikácie a záznamu víťaza a zodpovedajúcich alternatívnych záznamov, ktoré sa zlúčia so záznamom víťaza.
+  Viac informácií nájdete v časti [Výstup deduplikácie ako entita](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Správa systému
+
+- **Bezproblémové zdieľanie údajov do Microsoft Dataverse** Teraz môžete zdieľať výstup zo služby Customer Insights s aplikáciami Microsoft Dataverse využívajúcimi spravované Data Lake Microsoft Dataverse. Keď priradíte prostredie Dataverse s Customer Insights, získate možnosť povoliť zdieľanie údajov.
+  Ďalšie informácie nájdete v článku [Správa prostredí](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>Aktualizácie systému z decembra 2020
+
+Aktualizácie z decembra 2020 zahŕňajú niekoľko funkcií, vylepšenia výkonu a opravy chýb.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Nové a aktualizované funkcie v decembri 2020
+
+#### <a name="data-enrichment"></a>Obohatenie údajov
+
+- **Vylepšené obohatenie afinity značky a záujmov**
+  
+  Zjednodušili sme naše skóre afinity, aby sa dalo lepšie pochopiť a používať. Teraz môžete rýchlo identifikovať zákazníkov na základe afinity k danej značke alebo záujmu.
+
+  Ďalej sme pridali nové možnosti konfigurácie, aby ste lepšie ovládali, akým spôsobom chcete obohatiť svoje profily zákazníkov. 
+
+  Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft-graph.md).
+
+- **Kontrolujte, ktoré profily sa majú obohatiť**
+
+  Teraz môžete obohatiť iba podmnožinu svojich profilov zákazníkov možnosťou vybrať entitu segmentu namiesto predvolenej entity zákazníka. Vytvorte segment s profilmi zákazníkov, ktoré chcete obohatiť, a vyberte ho v konfigurácii obohatenia pre svoju množinu údajov o zákazníkoch.
+  Táto funkcia je v súčasnosti k dispozícii iba pre obohatenia poskytované spoločnosťami Experian a HERE Technologies. Túto schopnosť čoskoro sprístupníme pre ďalšie obohatenia.
+
+  Viac informácií nájdete v časti [Obohatenie profilov zákazníkov o demografické údaje od spoločnosti Experian](enrichment-experian.md) alebo [Obohatenie profilov zákazníkov pomocou HERE Technologies](enrichment-here.md).
+
+#### <a name="extensibility"></a>Rozšíriteľnosť
+
+- **Aktivujte svoje segmenty prostredníctvom služby Autopilot**
+
+  Exportujte segmenty do služby Autopilot a použite ich na marketingové účely. Ďalšie informácie nájdete v časti [Konektor pre Autopilot (verzia Preview)](export-autopilot.md).
+
+- **Aktivujte svoje segmenty prostredníctvom služby SendGrid**
+
+  Exportujte segmenty do služby SendGrid a použite ich na marketingové účely. Ďalšie informácie nájdete v časti [Konektor pre SendGrid](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Správa systému
+
+- **Aktualizované rozhranie na riadenie prostredia**
+  
+  Teraz môžete vytvárať, upravovať, mazať a resetovať prostredia priamo z nástroja na výber prostredia v hlavičke aplikácie. 
+  
+  Prostredie, ktoré používate, bude navyše pripnuté v hornej časti panela s prostredím, takže ho už nemusíte hľadať.
+
+  Ďalšie informácie nájdete v článku [Správa prostredí](manage-environments.md).
 
 ## <a name="november-2020-updates"></a>Aktualizácie z novembra 2020
 
@@ -202,9 +273,9 @@ Aktualizácie z augusta 2020 zahŕňajú niekoľko funkcií, vylepšenia výkonu
 
 #### <a name="enrichment"></a>Obohatenie
 
-- **dostupné obohatenie príbuzností záujmov dostupné na ďalších trhoch**
+- **Obohatenie o afinity záujmov je k dispozícii na viacerých trhoch**
 
-  Rozširujeme dostupnosť obohacovania príbuznosti záujmov mimo USA na päť ďalších trhov: Kanada, Austrália, Spojené kráľovstvo, Francúzsko a Nemecko. Vďaka tomuto rozšíreniu môžete obohatiť svoje zákaznícke údaje o ďalšie záujmy uplatniteľné na tieto trhy. Taktiež obohatíme vaše zákaznícke profily, ktoré sa nachádzajú na týchto trhoch, pomocou miestnych vlastníckych údajov z programu Microsoft Graph.
+  Rozširujeme dostupnosť obohacovania afinít záujmov mimo USA na päť ďalších trhov: Kanada, Austrália, Spojené kráľovstvo, Francúzsko a Nemecko. Vďaka tomuto rozšíreniu môžete obohatiť svoje údaje o zákazníkoch o ďalšie záujmy uplatniteľné na týchto trhoch. Taktiež obohatíme vaše zákaznícke profily, ktoré sa nachádzajú na týchto trhoch, pomocou miestnych vlastníckych údajov z programu Microsoft Graph.
   Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft-graph.md)
 
 
@@ -221,11 +292,11 @@ Aktualizácie pre z júla 2020 zahŕňajú niekoľko funkcií, aktualizácií v�
   Rozšírili sme naše spúšťače pre Power Automate a po dokončení obnovenia procesu zjednotenia (priradenie, párovanie, zlúčenie) môžete vytvoriť oznámenie alebo akciu.    
   Ďalšie informácie nájdete v [konektore Power Automate](export-power-automate.md)
 
-#### <a name="enrichment"></a>Rozšírenie
+#### <a name="enrichment"></a>Obohatenie
 
-- **Obohatenie záujmu o značky je dostupné na ďalších trhoch**
+- **Obohatenie o afinity značiek je k dispozícii na viacerých trhoch**
 
-  Rozširujeme dostupnosť obohatenia záujmu o značky za hranice USA na päť ďalších trhov: Kanadu, Austráliu, Spojené kráľovstvo, Francúzsko a Nemecko. Vďaka tomuto rozšíreniu môžete na týchto trhoch obohatiť svoje zákaznícke údaje o miestne značky. Taktiež obohatíme vaše zákaznícke profily, ktoré sa nachádzajú na týchto trhoch, pomocou miestnych vlastníckych údajov z programu Microsoft Graph.
+  Rozširujeme dostupnosť obohacovania afinít značiek mimo USA na päť ďalších trhov: Kanada, Austrália, Spojené kráľovstvo, Francúzsko a Nemecko. Vďaka tomuto rozšíreniu môžete na týchto trhoch obohatiť svoje zákaznícke údaje o miestne značky. Taktiež obohatíme vaše zákaznícke profily, ktoré sa nachádzajú na týchto trhoch, pomocou miestnych vlastníckych údajov z programu Microsoft Graph.
   Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>Aktualizácie z júna 2020
@@ -238,7 +309,7 @@ Aktualizácie pre z júna 2020 zahŕňajú niekoľko funkcií, aktualizácií v�
 
 - **Obohatenie o údaje spoločnosti z Leadspace**
   
-  Definujte polia v zjednotených profiloch zákazníkov, ktoré sa používajú na vyhľadávanie súvisiacich údajov z Leadspace. Po spustení procesu obohatenia sú profily B2B obohatené o ďalšie atribúty vrátane veľkosti spoločnosti, umiestnenia, odvetvia a ďalších.    
+  Definujte polia v zjednotených profiloch zákazníkov, ktoré sa používajú na vyhľadávanie súvisiacich údajov z Leadspace. Po spustení procesu obohacovania sú profily B2B obohatené o ďalšie atribúty vrátane veľkosti spoločnosti, umiestnenia, odvetvia a ďalšie.    
   Táto spolupráca vám umožňuje zlepšiť kvalitu vašich údajov vďaka vstupu od služieb tretích strán. Na použitie tohto obohatenia potrebujete licenciu od Leadspace na prístup k firemným údajom B2B. Systém použije túto licenciu na to, aby vaše údaje boli neustále obohacované.    
   Ďalšie informácie nájdete v sekcii [Obohatenie o údaje spoločnosti s pomocou Leadspace](enrichment-leadspace.md).
 
@@ -264,7 +335,7 @@ Aktualizácie pre z júna 2020 zahŕňajú niekoľko funkcií, aktualizácií v�
   Nová kontrola doplnku Karta zákazníka pre Dynamics 365 vám umožňuje zobraziť obohatenia značiek a záujmov o vašich kontaktoch v aplikáciách zapojenia zákazníkov v Dynamics 365.    
   Ďalšie informácie nájdete v článku [Doplnok Karta zákazníka](customer-card-add-in.md).
 
-- **Dodatočné spúšťače pre Power Automate**
+- **Viac spúšťačov Power Automate**
 
   Rozšírili sme spúšťače pre Power Automate a pridali sme tieto spúšťače:
   - Získajte oznámenie alebo vykonajte akciu po dokončení automatickej plnej obnovy (zdroje údajov, zjednotenie, segmenty, opatrenia, export)
@@ -295,12 +366,12 @@ Aktualizácie pre z júna 2020 zahŕňajú niekoľko funkcií, aktualizácií v�
   
   Nájdite podobných zákazníkov vo svojej zákazníckej základni pomocou umelej inteligencie. Model strojového učenia na základe binárnej klasifikácie priraďuje zákazníkom v rozšírenom segmente skóre podobnosti. Skóre je založené na podobnosti so zákazníkmi v segmente zdrojov. V závislosti od skóre podobnosti sa profily zákazníkov pridávajú do novovytvoreného segmentu.
 
-  Niekedy sa v oblasti digitálneho marketingu nazýva podobnostné modelovanie a používa model AI na hľadanie zákazníkov, ktorí sú podobní inému segmentu vašich zákazníkov, pomocou zohľadnenia ďalších atribútov. Umožňuje vám to nielen výber atribútov, ale zároveň vám to umožňuje určiť maximálny počet zákazníkov, ktorí by sa mali nachádzať v tomto novom segmente. Model AI potom vypočíta skóre podobnosti pre každého zákazníka na základe vybratých atribútov a nájde zákazníkov s vyšším priemerným skóre podobnosti. Výsledný segment bude zahŕňať zákazníkov, ktorí vyzerajú podobne ako zákazníci vo vašom pôvodnom segmente.    
+  V digitálnom marketingu sa niekedy označuje ako dvojité modelovanie. Používa model AI na vyhľadanie zákazníkov, ktorí sú podobní inému segmentu vašich zákazníkov, a to tak, že zohľadní viac atribútov. Umožňuje vám to nielen výber atribútov, ale zároveň vám to umožňuje určiť maximálny počet zákazníkov, ktorí by sa mali nachádzať v tomto novom segmente. Model AI potom vypočíta skóre podobnosti pre každého zákazníka na základe vybratých atribútov a nájde zákazníkov s vyšším priemerným skóre podobnosti. Výsledný segment bude zahŕňať zákazníkov, ktorí vyzerajú podobne ako zákazníci vo vašom pôvodnom segmente.    
   Ďalšie informácie nájdete v téme [Podobní zákazníci](find-similar-customer-segments.md).
 
 - **Prekrývanie segmentov a rozdiely**
 
-  Prekrývanie segmentov vám umožňuje zistiť, koľko zákazníkov je spoločných pre dva alebo viac segmentov. Napríklad: ako sa segment s vysokými ziskami prekrýva so segmentom zákazníkov s vysokou spokojnosťou alebo ako sa segment stratených zákazníkov prekrýva so segmentom zákazníkov s nízkou spokojnosťou. Okrem toho môžete analyzovať, ako sa prekrývanie mení na základe ďalšieho atribútu podľa vášho výberu.
+  Prekrývanie segmentov vám umožňuje zistiť, koľko zákazníkov je spoločných pre dva alebo viac segmentov. Napríklad: ako sa segment s vysokými ziskami prekrýva so segmentom zákazníkov s vysokou spokojnosťou alebo ako sa segment stratených zákazníkov prekrýva so segmentom zákazníkov s nízkou spokojnosťou. Ďalej môžete analyzovať, ako sa prekrývanie mení, na základe dodatočného atribútu podľa vášho výberu.
 
   Rozdiely segmentov odhaľujú, čo odlišuje jeden segment od zvyšku vašich zákazníkov alebo od iného segmentu. Všetko, čo musíte urobiť, je identifikovať segment a systém potom identifikuje atribúty profilu a opatrenia, ktoré ho odlíšia vo forme klasifikovaného zoznamu rozdielov - od najsilnejšieho rozdielu až po najslabší.    
   Ďalšie informácie nájdete v sekcii [Prehľady o segmentoch (ukážka)](segment-insights.md).
@@ -333,7 +404,7 @@ Aktualizácie z mája 2020 zahŕňajú niekoľko funkcií, aktualizácií výkon
 
 - **Aktualizovaná časová os a stránkovanie na doplnku karty zákazníka**
 
-  Časová os riešenia doplnku Karta zákazníka sa zhoduje s časovou osou aktivity. Stránkovanie časovej osi sa zlepšilo a ukázalo sa až 50 aktivít naraz. Umožňuje tiež načítanie ďalších aktivít na časovej osi.    
+  Časová os riešenia doplnku Karta zákazníka sa zhoduje s časovou osou aktivity. Stránkovanie časovej osi sa zlepšilo a ukázalo sa až 50 aktivít naraz. Umožňuje tiež načítať viac aktivít na časovú os.    
   Ďalšie informácie nájdete v článku [Doplnok Karta zákazníka](customer-card-add-in.md).
 
 - **Spúšťač Power Automate pre zmeny segmentov**
@@ -412,7 +483,7 @@ Aktualizácie z apríla 2020 zahŕňajú niekoľko funkcií, aktualizácií výk
 
 - **Export do LiveRamp**
 
-  Aktivujte svoje údaje v riešení LiveRamp® a spojte sa s viac ako 500 platformami naprieč digitálnymi, sociálnymi a televíznymi ekosystémami. Využite svoje údaje v službe LiveRamp na zacielenie, potlačenie a prispôsobenie reklamných kampaní.    
+  Aktivujte svoje údaje v riešení LiveRamp® a spojte sa s viac ako 500 platformami naprieč digitálnymi, sociálnymi a televíznymi ekosystémami. Použite svoje údaje v službe LiveRamp na zacielenie, potlačenie a prispôsobenie reklamných kampaní.    
   Ďalšie informácie nájdete v [konektore LiveRamp&reg;](export-liveramp.md).
 
 - **Doplnok Customer Insights Teams**
@@ -433,7 +504,7 @@ Aktualizácie z apríla 2020 zahŕňajú niekoľko funkcií, aktualizácií výk
 
 #### <a name="segments"></a>Segmenty
 
-- **Ďalší operátor**
+- **Iný operátor**
   
   Operátor In-set umožňuje segmentáciu pre zákazníkov podľa niekoľkých možných hodnôt reťazca. Predtým, ako bol tento operátor pridaný, ste museli skonštruovať takéto segmenty s viacerými podmienkami ALEBO. Operátor In-set vám to umožní s jedinou podmienkou.    
   Ďalšie informácie nájdete v téme [Tvorba a správa segmentov](segments.md).
@@ -444,3 +515,6 @@ Aktualizácie z apríla 2020 zahŕňajú niekoľko funkcií, aktualizácií výk
   
   Skopírujte svoju konfiguráciu z jedného prostredia do druhého. Pri vytváraní nového prostredia môžete vybrať existujúce prostredie, z ktorého chcete skopírovať konfiguráciu. V súčasnosti podporujeme zdroje údajov, zjednotenie údajov, vzťahy, miery a segmenty, ktoré sa majú skopírovať. Poverenia zdroja údajov a skutočné údaje sa neskopírujú.    
   Ďalšie informácie nájdete v článku [Správa prostredí](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

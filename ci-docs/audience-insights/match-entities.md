@@ -4,17 +4,17 @@ description: Priraďujte entity na účely vytvorenia jednotných profilov záka
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406931"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267497"
 ---
 # <a name="match-entities"></a>Priradenie entít
 
@@ -22,7 +22,7 @@ Po dokončení fázy mapovania ste pripravení zosúladiť vaše entity. Fáza z
 
 ## <a name="specify-the-match-order"></a>Určenie objednávky zosúladenia
 
-Prejdite do časti **Zjednotenie** > **Zosúladenie** a na spustenie fázy zosúladenia vyberte **Nastaviť objednávku**.
+Prejdite do ponuky **Údaje** > **Zjednotiť** > **Spárovať** a vyberte **Nastaviť poradie** na začatie fázy spárovania.
 
 Každé zosúladenie zjednotí dve alebo viac entít do jednej entity a zároveň zachová každý jedinečný záznam zákazníka. V nasledujúcom príklade sme vybrali tri entity: **ContactCSV: TestData** ako **primárnu** entitu, **WebAccountCSV: TestData** ako **entitu 2** a **CallRecordSmall: TestData** ako **entitu 3**. Diagram nad výbermi ilustruje, ako sa vykoná objednávka zosúladenia.
 
@@ -136,7 +136,7 @@ Po identifikácii deduplikovaného záznamu sa tento záznam použije v procese 
 
 1. Spustením procesu priradenia teraz zoskupíte záznamy na základe podmienok definovaných v pravidlách deduplikácie. Po zoskupení záznamov sa na identifikáciu víťazného záznamu použije politika zlúčenia.
 
-1. Tento víťazný záznam sa potom odovzdá priraďovaniu medzi entitami.
+1. Tento víťazný záznam sa potom odovzdá na párovanie medzi entitami spolu so záznamami, ktoré nie sú víťazné (napríklad alternatívne ID), aby sa zlepšila kvalita párovania.
 
 1. Akékoľvek vlastné pravidlá priraďovania definované pre možnosti vždy priradiť a nikdy nepriradiť majú väčšiu prioritu ako pravidlá deduplikácie. Ak pravidlo deduplikácie identifikuje priradené záznamy a ak je nastavené vlastné pravidlo priraďovania, ktoré sa nikdy nebude zhodovať s týmito záznamami, potom sa tieto dva záznamy nezhodujú.
 
@@ -157,6 +157,17 @@ Výsledkom prvého zosúladenia je vytvorenie zjednotenej hlavnej entity. Všetk
 
 > [!TIP]
 > Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
+
+## <a name="deduplication-output-as-an-entity"></a>Výstup deduplikácie ako entita
+Okrem zjednotenej hlavnej entity vytvorenej ako súčasť krížového párovania entít, proces deduplikácie tiež generuje novú entitu pre každú entitu z poradia párovania na identifikáciu deduplikovaných záznamov. Tieto entity možno nájsť spolu s **ConflationMatchPairs:CustomerInsights** v sekcii **Systém** na stránke **Entity** s názvom **Deduplication_Datasource_Entity**.
+
+Entita deduplikovaného výstupu obsahuje nasledujúce informácie:
+- ID/kľúče
+  - Pole primárneho kľúča a jeho alternatívne ID pole. Alternatívne ID pole obsahuje všetky alternatívne ID identifikované pre záznam.
+  - Pole Deduplication_GroupId zobrazuje skupinu alebo klaster identifikovaný v rámci entity, ktorá zoskupuje všetky podobné záznamy na základe zadaných deduplikačných polí. Používa sa na účely spracovania systému. Ak nie sú zadané žiadne pravidlá manuálnej deduplikácie a uplatňujú sa pravidlá systému definované pre deduplikáciu, toto pole v entite výstupu deduplikácie nenájdete.
+  - Deduplication_WinnerId: Toto pole obsahuje ID víťaza z identifikovaných skupín alebo klastrov. Ak je hodnota Deduplication_WinnerId rovnaká ako hodnota primárneho kľúča pre záznam, znamená to, že záznam je víťazným záznamom.
+- Polia používané na definovanie pravidiel deduplikácie.
+- Polia Pravidlo a Skóre označujú, ktoré z pravidiel deduplikácie sa použili a skóre vrátené algoritmom párovania.
 
 ## <a name="review-and-validate-your-matches"></a>Kontrola a potvrdenie zosúladených výsledkov
 
@@ -200,6 +211,11 @@ Zvýšte kvalitu tým, že prekonfigurujete niektoré z vašich parametrov zosú
   > [!div class="mx-imgBorder"]
   > ![Duplikovanie pravidla](media/configure-data-duplicate-rule.png "Duplikovanie pravidla")
 
+- **Deaktivovať pravidlo** na zachovanie pravidla párovania pri jeho vylúčení z procesu párovania.
+
+  > [!div class="mx-imgBorder"]
+  > ![Deaktivácia pravidla](media/configure-data-deactivate-rule.png "Deaktivácia pravidla")
+
 - **Upravte pravidlá** výberom symbolu **Upraviť**. Môžete tiež použiť nasledujúce zmeny:
 
   - Zmena atribútov pre podmienku: Vyberte nové atribúty v riadku špecifickej podmienky.
@@ -229,6 +245,8 @@ Môžete určiť podmienky, aby sa niektoré záznamy zosúladili vždy alebo ni
     - Entity2Key: 34567
 
    Rovnaký súbor šablóny môže určiť vlastné záznamy zosúlaďovania z viacerých entít.
+   
+   Ak chcete určiť vlastné párovanie pre deduplikáciu entity, zadajte rovnakú entitu pre Entitu1 aj Entitu2 a nastavte rôzne hodnoty primárneho kľúča.
 
 5. Po pridaní všetkých úprav, ktoré chcete použiť, uložte súbor šablóny.
 
@@ -250,3 +268,6 @@ Môžete určiť podmienky, aby sa niektoré záznamy zosúladili vždy alebo ni
 ## <a name="next-step"></a>Nasledujúci krok
 
 Po dokončení procesu zosúladenia pre aspoň jeden pár zosúladenia môžete vyriešiť možné rozpory vo svojich údajoch podľa témy [**Zosúladenie**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

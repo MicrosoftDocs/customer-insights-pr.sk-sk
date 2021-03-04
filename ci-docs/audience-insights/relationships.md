@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406936"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269900"
 ---
 # <a name="relationships-between-entities"></a>Vzťahy medzi entitami
 
@@ -28,8 +28,8 @@ Počas procesov zosúlaďovania a zlúčenia sa vytvárajú systémové vzťahy 
 > ![Vytváranie vzťahu](media/relationships-entities-merge.png "Vytváranie vzťahu")
 
 - **Vzťah *CustomerToContact*** bol vytvorený medzi entitou zákazníka a entitou kontaktu. Entita zákazníka získa kľúčové pole **Contact_contactId**, ktoré sa bude vzťahovať na kľúčové pole entity kontaktu **contactID**.
-- **Vzťah _CustomerToAccount_** bol vytvorený medzi entitou zákazníka a entitou obchodného vzťahu. Entita zákazníka získa kľúčové pole **ccount_accountId**, ktoré sa bude vzťahovať na kľúčové pole entity obchodného vzťahu **accountId**.
-- **Vzťah _CustomerToWebAccount_** bol vytvorený medzi entitou zákazníka a entitou WebAccount. Entita zákazníka získa kľúčové pole **WebAccount_webaccountId**, ktoré sa bude vzťahovať na kľúčové pole entity WebAccount **webaccountId**.
+- **Vzťah *CustomerToAccount*** bol vytvorený medzi entitou zákazníka a entitou obchodného vzťahu. Entita zákazníka získa kľúčové pole **ccount_accountId**, ktoré sa bude vzťahovať na kľúčové pole entity obchodného vzťahu **accountId**.
+- **Vzťah *CustomerToWebAccount*** bol vytvorený medzi entitou zákazníka a entitou WebAccount. Entita zákazníka získa kľúčové pole **WebAccount_webaccountId**, ktoré sa bude vzťahovať na kľúčové pole entity WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Vytvorenie vzťahu
 
@@ -69,3 +69,6 @@ Definujte vlastné vzťahy na stránke **Vzťahy**. Každý vzťah pozostáva zo
 ## <a name="next-step"></a>Nasledujúci krok
 
 Systémové a vlastné vzťahy sa používajú na vytváranie segmentov založených na viacerých zdrojoch údajov, ktoré už nie sú zastrešené. Ďalšie informácie nájdete v časti [Segmenty](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

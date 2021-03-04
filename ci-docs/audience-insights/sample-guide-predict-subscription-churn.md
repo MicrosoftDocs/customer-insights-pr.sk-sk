@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653999"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269864"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Predikcia odchodu predplatiteľov (ukážka) – vzorový sprievodca
 
@@ -46,10 +46,9 @@ Prečítajte si články [o príjme údajov](data-sources.md) a konkrétne o [im
    - **DateOfBirth**: Dátum
    - **CreatedOn**: Dátum/Čas/Pásmo
 
-   [!div class="mx-imgBorder"]
-   ![Transformovať dátum narodenia na dátum](media/ecommerce-dob-date.PNG "transformovať dátum narodenia na dátum")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformácia dátumu narodenia na dátum.":::
 
-1. V poli „Názov“ na pravej table premenujte svoj zdroj údajov z **Dotaz** na **eCommerceContacts**
+1. V poli **Názov** na pravej table premenujte svoj zdroj údajov z **Dotaz** na **eCommerceContacts**
 
 1. Uložte zdroj údajov.
 
@@ -67,7 +66,7 @@ Prečítajte si články [o príjme údajov](data-sources.md) a konkrétne o [im
    - **RewardsPoints**: Celé číslo
    - **CreatedOn**: Dátum/Čas
 
-1. V poli „Názov“ na pravej table premenujte svoj zdroj údajov z **Dotaz** na **loyCustomers**.
+1. V poli **Názov** na pravej table premenujte svoj zdroj údajov z **Dotaz** na **loyCustomers**.
 
 1. Uložte zdroj údajov.
 
@@ -90,7 +89,7 @@ Prečítajte si články [o príjme údajov](data-sources.md) a konkrétne o [im
    - **Is_auto_renew**: Pravda/Nepravda
    - **RecurringFrequencyInMonths**: Celé číslo
 
-1. V poli „Názov“ na pravej table premenujte svoj zdroj údajov z **Query** na **SubscriptionHistory**.
+1. V poli **Názov** na pravej table premenujte svoj zdroj údajov z **Dotaz** na **SubscriptionHistory**.
 
 1. Uložte zdroj údajov.
 
@@ -230,3 +229,6 @@ Nový segment môžete vytvoriť na základe entity vytvorenej modelom.
 Teraz máte segment, ktorý sa dynamicky aktualizuje a ktorý identifikuje vysoko rizikových zákazníkov pre toto predplatné.
 
 Ďalšie informácie nájdete v téme [Tvorba a správa segmentov](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

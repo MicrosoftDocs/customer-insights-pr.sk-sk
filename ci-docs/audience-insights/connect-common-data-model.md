@@ -4,17 +4,17 @@ description: Pracujte s údajmi z Common Data Model cez Azure Data Lake Storage.
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643477"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267879"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Pripojte priečinok Common Data Model použitím účtu Azure Data Lake
 
@@ -38,17 +38,25 @@ Tento článok poskytuje informácie o tom, ako prijímať údaje z Common Data 
 
 1. Vyberte položku **Pridať zdroj údajov**.
 
-1. Vyberte položku **Pripojiť k priečinku Common Data Model**, zadajte **Názov** zdroja údajov a vyberte položku **Ďalej**.
+1. Vyberte položku **Pripojiť k priečinku Common Data Model**, zadajte **Názov** zdroja údajov a vyberte položku **Ďalej**. Pokyny týkajúce sa pomenovania: 
+   - Začnite písmenom.
+   - Používajte iba písmená a číslice. Nie je povolené zadávanie špeciálnych znakov a medzier.
+   - Použite 3 až 64 znakov.
 
 1. Na overenie si môžete vybrať medzi použitím možnosti založenej na zdrojoch a možnosti založenej na predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Zadajte informáciu **Kontajner** a vyberte položku **Ďalej**.
    > [!div class="mx-imgBorder"]
-   > ![Dialógové okno na zadávanie podrobností o pripojení k Azure Data Lake](media/enter-new-storage-details.png)
-
-1. V dialógovom okne **Vybrať priečinok Common Data Model** vyberte súbor model.json, z ktorého chcete importovať údaje, a vyberte položku **Ďalej**.
+   > ![Dialógové okno na zadanie nových podrobností pripojenia pre Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Žiadny súbor model.json spojený s iným zdrojom údajov v prostredí sa v zozname nezobrazí.
+   > Aby ste sa mohli pripojiť a vytvoriť zdroj údajov, potrebujete jednu z nasledujúcich rol buď pre kontajner alebo vyššie uvedený účet úložiska:
+   >  - Čítačka údajov objektu Blob
+   >  - Majiteľ údajov objektu Blob
+   >  - Prispievateľ údajov do objektu BLOB úložiska
 
-1. Vo vybranom súbore model.json získate zoznam dostupných entít. Môžete skontrolovať a vybrať zo zoznamu dostupných entít a vybrať položku **Uložiť**. Všetky vybraté entity sa prijmú z nového zdroja údajov.
+1. V dialógovom okne **Vybrať priečinok Common Data Model** vyberte súbor model.json alebo manifest.json, z ktorého chcete importovať údaje, a vyberte položku **Ďalej**.
+   > [!NOTE]
+   > Žiadny súbor model.json ani manifest.json spojený s iným zdrojom údajov v prostredí sa v zozname nezobrazí.
+
+1. Vo vybranom súbore model.json alebo manifest.json získate zoznam dostupných entít. Môžete skontrolovať a vybrať zo zoznamu dostupných entít a vybrať položku **Uložiť**. Všetky vybraté entity sa prijmú z nového zdroja údajov.
    > [!div class="mx-imgBorder"]
    > ![Dialógové okno so zoznamom entít zo súboru model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Tento článok poskytuje informácie o tom, ako prijímať údaje z Common Data 
 9. Po uložení vašich výberov sa otvorí stránka **Zdroje údajov**. Teraz by ste mali vidieť pripojenie priečinka Common Data Model ako zdroja údajov.
 
 > [!NOTE]
-> Súbor model.json sa môže v rovnakom prostredí spojiť iba s jedným zdrojom údajov. Rovnaký súbor model.json je však možné použiť pre zdroje údajov vo viacerých prostrediach.
+> Súbor model.json alebo manifest.json sa môže v rovnakom prostredí spojiť iba s jedným zdrojom údajov. Rovnaký súbor model.json alebo manifest.json je však možné použiť pre zdroje údajov vo viacerých prostrediach.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Úprava zdroja údajov pre Common Data Model
 
-Môžete aktualizovať prístupový kľúč pre účet úložiska, ktoré obsahuje priečinok Common Data Model. Môžete tiež zmeniť súbor model.json. Ak sa chcete pripojiť k inému kontajneru z účtu úložiska alebo zmeniť názov účtu, musíte [vytvoriť nové pripojenie k zdroju údajov](#connect-to-a-common-data-model-folder).
+Môžete aktualizovať prístupový kľúč pre účet úložiska, ktoré obsahuje priečinok Common Data Model. Môžete tiež zmeniť súbor model.json alebo manifest.json. Ak sa chcete pripojiť k inému kontajneru z účtu úložiska alebo zmeniť názov účtu, musíte [vytvoriť nové pripojenie k zdroju údajov](#connect-to-a-common-data-model-folder).
 
 1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zdroje údajov**.
 
@@ -77,13 +85,24 @@ Môžete aktualizovať prístupový kľúč pre účet úložiska, ktoré obsahu
 
 5. Prípadne môžete aktualizáciu vykonať cez pripojenie kľúča účtu na pripojenie založené na zdrojoch alebo predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Pri aktualizácii pripojenia nemôžete zmeniť informácie o **kontajneri**.
    > [!div class="mx-imgBorder"]
-   > ![Dialógové okno na zadávanie podrobností o pripojení k Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Prípadne vyberte iný súbor model.json s inou množinou entít z kontajnera.
+   > ![Dialógové okno na zadanie podrobností pripojenia pre Azure Data Lake k existujúcemu účtu úložiska](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Aby ste sa mohli pripojiť a vytvoriť zdroj údajov, potrebujete jednu z nasledujúcich rol buď pre kontajner alebo vyššie uvedený účet úložiska:
+   >  - Čítačka údajov objektu Blob
+   >  - Majiteľ údajov objektu Blob
+   >  - Prispievateľ údajov do objektu Blob úložiska
+
+
+6. Voliteľne môžete z kontajnera zvoliť iný súbor model.json alebo manifest.json s inou množinou entít.
 
 7. Prípadne môžete vybrať ďalšie entity na príjem. Ak už neexistujú žiadne závislosti, môžete odstrániť aj všetky už vybrané entity.
 
    > [!IMPORTANT]
-   > Ak existujú závislosti na existujúcom súbore model.json a množine entít, zobrazí sa chybová správa a vy nebudete môcť vybrať iný súbor model.json. Pred zmenou súboru model.json odstráňte tieto závislosti alebo vytvorte nový zdroj údajov so súborom model.json, ktorý chcete použiť na to, aby ste zabránili odstráneniu závislostí.
+   > Ak existujú závislosti na existujúcom súbore model.json alebo manifest.json a množine entít, zobrazí sa chybové hlásenie a nemôžete vybrať iný súbor model.json alebo manifest.json. Pred zmenou súboru model.json alebo manifest.json tieto závislosti odstráňte alebo vytvorte nový zdroj údajov so súborom model.json alebo manifest.json, ktorý chcete použiť, aby ste sa vyhli odstráneniu závislostí.
 
 8. Prípadne môžete vybrať ďalšie atribúty alebo entity, ktoré povolia profilovanie údajov alebo zakážu tie už vybrané.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

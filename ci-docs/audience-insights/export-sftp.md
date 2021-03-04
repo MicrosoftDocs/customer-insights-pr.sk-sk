@@ -1,20 +1,20 @@
 ---
 title: Export údajov služby Customer Insights do hostiteľov protokolu SFTP
 description: Prečítajte si, ako nakonfigurovať pripojenie k hostiteľovi SFTP.
-ms.date: 06/05/2020
+ms.date: 01/27/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c2529744d7a26a06324b79cad6a8001d75903545
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: ddba55b3ca159c0095371e46385dcf1d3ed4a63d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643522"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268017"
 ---
 # <a name="connector-for-sftp-preview"></a>Konektor pre SFTP (ukážka)
 
@@ -22,7 +22,7 @@ Používajte svoje zákaznícke údaje v aplikáciách tretích strán tak, že 
 
 ## <a name="prerequisites"></a>Predpoklady
 
-- Dostupnosť hostiteľa SFTP a zodpovedajúce poverenia.
+- Dostupnosť hostiteľa SFTP a zodpovedajúcich poverení.
 
 ## <a name="connect-to-sftp"></a>Pripojenie k SFTP
 
@@ -32,23 +32,22 @@ Používajte svoje zákaznícke údaje v aplikáciách tretích strán tak, že 
 
 1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa.
 
-1. Uveďte **Používateľské meno**, **Heslo** a **Meno hostiteľa** pre váš účet SFTP. Príklad: Ak je koreňovým priečinkom vášho servera SFTP /root/folder a chcete exportovať údaje do /root/folder/ci_export_destination_folder, hostiteľom by mal byť sftp://<server_address>/ci_export_destination_folder".
+1. Uveďte **Používateľské meno**, **Heslo**, **Meno hostiteľa** a **Priečinok na export** pre váš účet SFTP.
 
 1. Na otestovanie pripojenia vyberte **Overiť**.
 
-1. Po úspešnom overení vyberte, či chcete exportovať údaje **skomprimované** alebo **dekomprimované** a vyberte **oddeľovač poľa** pre exportované súbory.
+1. Po úspešnom overení vyberte, či chcete exportovať svoje údaje **Komprimované ako gzip** alebo **Dekomprimované** a vyberte **oddeľovač polí** pre exportované súbory.
 
 1. Vyberte **Súhlasím** na potvrdenie **Ochrany osobných údajov a dodržiavanie súladu s nariadeniami**.
 
 1. Vyberte **Ďalej** a začnite konfigurovať export.
 
-## <a name="configure-the-connection"></a>Konfigurácia pripojenia
+## <a name="configure-the-export"></a>Konfigurácia exportu
 
-1. Vyberte **atribúty zákazníka**, ktoré chcete exportovať. Môžete exportovať jeden alebo viac atribútov.
+1. Vyberte entity, napríklad segmenty, ktoré chcete exportovať.
 
-1. Vyberte **Ďalej**.
-
-1. Vyberte segmenty, ktoré chcete exportovať.
+   > [!NOTE]
+   > Každá vybraná entita bude mať pri exporte až päť výstupných súborov. 
 
 1. Vyberte položku **Uložiť**.
 
@@ -56,7 +55,15 @@ Používajte svoje zákaznícke údaje v aplikáciách tretích strán tak, že 
 
 Môžete [exportovať údaje na vyžiadanie](export-destinations.md). Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Známe obmedzenia
+
+- Čas spustenia exportu závisí od výkonu vášho systému. Ako minimálna konfigurácia vášho servera odporúčame dve jadrá CPU a 1 GB pamäte. 
+- Export entít s až 100 miliónmi zákazníckych profilov môže trvať 90 minút pri použití odporúčanej minimálnej konfigurácie dvoch jadier CPU a 1 GB pamäte. 
+
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 
 Keď povolíte prenos údajov spoločnosti SFTP v službe Dynamics 365 Customer Insights, povoľujete tým prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Spoločnosť Microsoft prenesie tieto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby cieľ exportu plnil všetky prípadné povinnosti týkajúce sa ochrany vašich osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Váš správca služby Dynamics 365 Customer Insights môže túto funkciu kedykoľvek prestať používať odstránením tohto cieľového umiestnenia exportu.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

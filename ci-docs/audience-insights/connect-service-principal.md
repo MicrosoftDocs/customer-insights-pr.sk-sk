@@ -1,20 +1,20 @@
 ---
 title: Pripojenie k účtu Azure Data Lake Storage Gen2 pomocou objektu služby
-description: Použite objekt služby Azure pre prehľady cieľových skupín na pripojenie vlastného dátového jazera, keď ho pripájate k prehľadom cieľových skupín.
-ms.date: 11/24/2020
+description: Použite objekt služby Azure pre prehľady cieľových skupín na pripojenie vlastného Data Lake, keď ho pripájate k prehľadom cieľových skupín.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644107"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267741"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Pripojenie k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure pre prehľady cieľových skupín
 
@@ -22,7 +22,9 @@ Automatizované nástroje, ktoré využívajú služby Azure, by mali mať vždy
 
 Objekt služby môžete použiť na bezpečné [pridanie alebo úpravu priečinka Common Data Model ako zdroj údajov](connect-common-data-model.md) alebo [vytvorenie nového či aktualizáciu existujúceho prostredia](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Na vytvorenie objektu služby potrebujete povolenia správcu predplatného Azure.
+> [!IMPORTANT]
+> - Účet úložiska Azure Data Lake Gen2, ktorý chce používať objekt služby, musí mať [povolený Hierarchický menný priestor (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Na vytvorenie objektu služby potrebujete povolenia správcu predplatného Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Vytvorte objekt služby Azure pre prehľady cieľových skupín
 
@@ -83,7 +85,7 @@ Pripojte účet úložiska Azure Data Lake v prehľadoch cieľových skupín na 
 
 Podľa nasledujúcich pokynov uveďte požadované informácie o vybranom prístupe.
 
-### <a name="resounce-based-storage-account-connection"></a>Pripojenie účtu úložiska na základe zdrojov
+### <a name="resource-based-storage-account-connection"></a>Pripojenie účtu úložiska na základe zdrojov
 
 1. Prejdite na [portál spravovania služby Azure](https://portal.azure.com), prihláste sa do predplatného a otvorte účet úložiska.
 
@@ -108,7 +110,8 @@ Podľa nasledujúcich pokynov uveďte požadované informácie o vybranom príst
 1. Skontrolujte **Predplatné**, **Skupinu zdrojov** a **Názov** účtu úložiska, aby ste v prehľadoch cieľových skupín vybrali správne hodnoty.
 
 1. Pri pripájaní účtu úložiska vyberte v prehľadoch cieľových skupín hodnoty alebo príslušné polia.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Zadajte informácie o ID zdroja účtu úložiska.":::
    
 1. Pokračujte zvyšnými krokmi v prehľadoch cieľových skupín a pripojte účet úložiska.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

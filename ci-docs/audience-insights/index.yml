@@ -6,16 +6,16 @@ metadata:
   description: Centrum pomoci s kľúčovými odkazmi na prehľady cieľových skupín.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: sk-SK
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4406926"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745740"
 landingContent:
 - title: Informácie o prehľadoch cieľových skupín
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Lokalita komunity
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Zdroje údajov Ingest
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Pridať zdroje údajov
-      url: data-sources.md
-    - text: Prírastkové obnovenie
-      url: incremental-refresh-data-sources.md
-    - text: Vysvetlenie entít
-      url: entities.md
 - title: Zjednotenie údajov
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Priradenie
-      url: map-entities.md
-    - text: Spárovanie
-      url: match-entities.md
-    - text: Zlúčenie
-      url: merge-entities.md
-- title: Spresnenie profilov zákazníkov
+    - text: Prehľad zdrojov údajov
+      url: data-sources.md
+    - text: Prehľad zjednotenia
+      url: data-unification.md
+    - text: Vysvetlenie entít
+      url: entities.md
+- title: Obohatenie a spresnenie údajov
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Obohatenie profilov zákazníkov
+      url: enrichment-hub.md
     - text: Konfigurácia vzťahov
       url: relationships.md
     - text: Vypísať aktivity zákazníka
       url: activities.md
-    - text: Prineste si vlastné modelu strojového učenia
-      url: custom-models.md
+- title: Získať prehľady
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vytvorenie segmentov
+      url: segments.md
+    - text: Vytvorenie mier
+      url: measures.md
+    - text: Kompletné údaje s predikciami
+      url: predictions.md
 - title: Export údajov zákazníka
   linkLists:
   - linkListType: how-to-guide

@@ -1,20 +1,20 @@
 ---
 title: Slúži na vytvorenie a spravovanie prostredí
 description: Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644152"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270131"
 ---
 # <a name="manage-environments"></a>Správa prostredí
 
@@ -46,9 +46,9 @@ Existujú dva spôsoby vytvorenia nového prostredia. Môžete buď špecifikova
 
 Vytvorenie prostredia:
 
-1. Vyberte symbol **Nastavenia** v záhlaví aplikácie.
+1. Vyberte nástroj na výber **Prostredia** v hlavičke aplikácie.
 
-1. Vyberte **Nové prostredie**.
+1. Vyberte **Nové**.
 
    > [!div class="mx-imgBorder"]
    > ![Nastavenia prostredia](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Vytvorenie prostredia:
 
    - V prípade možnosti Azure Data Lake Storage Gen2 si môžete vybrať medzi použitím možnosti založenej na zdrojoch a možnosti založenej na predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Názov **kontajnera** sa nedá zmeniť a bude znieť „customerinsights“.
    
-   - Ak chcete použiť [predikcie](predictions.md), navštívte adresu URL inštancie služby Common Data Service v poli **Adresa servera** v sekcii **Používanie predikcií**.
+   - Ak chcete použiť [predikcie](predictions.md) alebo nakonfigurovať zdieľanie údajov s aplikáciami a riešeniami založenými na Microsoft Dataverse, uveďte URL prostredia Microsoft Dataverse pod **Konfigurácia zdieľania údajov s Microsoft Dataverse a povolenie ďalších funkcií**. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s so spravovaným Microsoft Dataverse Data Lake.
+
+     > [!NOTE]
+     > - Zdieľanie údajov so spravovaným Microsoft Dataverse Data Lake nie je momentálne podporované, keď ukladáte všetky údaje do svojho Azure Data Lake Storage.
+     > - [Predikcia chýbajúcich hodnôt v entite](predictions.md) nie je momentálne podporovaná, keď v súčasnosti povolíte zdieľanie údajov so spravovaným Microsoft Dataverse Data Lake.
+
+     > [!div class="mx-imgBorder"]
+     > ![Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Keď spustíte procesy, ako je napríklad príjem údajov alebo vytváranie segmentov, vo vyššie uvedenom účte úložiska sa vytvoria zodpovedajúce priečinky. Dátové súbory a súbory model.json sa vytvoria a pridajú do príslušných podpriečinkov na základe spusteného procesu.
 
@@ -120,11 +127,11 @@ Po dokončení zjednotenia údajov prejdite na stránku **Opatrenia** a **Segmen
 
 Môžete upraviť niektoré podrobnosti o existujúcich prostrediach.
 
-1. Prejdite do **Správca** > **Systém** > **Informácie**.
+1.  Vyberte nástroj na výber **Prostredia** v hlavičke aplikácie.
 
-2. Vyberte **Upraviť**.
+2.  Vyberte ikonu **Upraviť**.
 
-3. Môžete aktualizovať **Zobrazovaný názov** prostredia, ale nemôžete zmeniť **Región** ani **Typ**.
+3. V poli **Upraviť prostredie** môžete aktualizovať **Zobrazovaný názov** prostredia, ale nemôžete zmeniť **Región** alebo **Typ**.
 
 4. Ak je prostredie nakonfigurované na ukladanie údajov do Azure Data Lake Storage Gen2, môžete aktualizovať **Kľúč účtu**. Nemôžete však zmeniť **Názov účtu** ani názov **Kontajnera**.
 
@@ -132,19 +139,27 @@ Môžete upraviť niektoré podrobnosti o existujúcich prostrediach.
 
 ## <a name="reset-an-existing-environment"></a>Reset existujúceho prostredia
 
-Ak chcete odstrániť všetky konfigurácie a odobrať prijaté údaje, môžete prostredie resetovať do prázdneho stavu.
+Ako správca môžete prostredie resetovať do prázdneho stavu, ak chcete odstrániť všetky konfigurácie a odobrať prijaté údaje.
 
-1.  Prejdite do **Správca** > **Systém** > **Informácie**.
+1.  Vyberte nástroj na výber **Prostredia** v hlavičke aplikácie. 
 
-2.  Vyberte položku **Resetovať**. 
+2.  Vyberte prostredie, ktoré chcete resetovať, a vyberte tri bodky **...**. 
 
-3.  Ak chcete potvrdiť odstránenie, zadajte názov prostredia a vyberte položku **Resetovať**.
+3. Vyberte možnosť **Resetovať**. 
+
+4.  Ak chcete potvrdiť odstránenie, zadajte názov prostredia a vyberte položku **Resetovať**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Odstránenie existujúceho prostredia (k dispozícii iba pre správcov)
+
+Ako správca môžete odstrániť prostredie, ktoré spravujete.
+
+1.  Vyberte nástroj na výber **Prostredia** v hlavičke aplikácie.
+
+2.  Vyberte prostredie, ktoré chcete resetovať, a vyberte tri bodky **...**. 
+
+3. Vyberte možnosť **Odstrániť**. 
+
+4.  Odstránenie potvrdíte zadaním názvu prostredia a výberom položky **Odstrániť**.
 
 
-## <a name="delete-an-existing-environment"></a>Odstránenie existujúceho prostredia
-
-1. Prejdite do **Správca** > **Systém** > **Informácie**.
-
-1. Vyberte **Odstrániť**.
-
-1. Odstránenie potvrdíte zadaním názvu prostredia a výberom položky **Odstrániť**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

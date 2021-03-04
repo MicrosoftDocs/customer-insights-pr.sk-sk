@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689194"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270299"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Prijímanie údajov v reálnom čase (ukážka)
 
@@ -83,6 +83,7 @@ Podrobnosti o tomto API vrátane parametrov a odpovedí nájdete v časti **Enti
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Získajte informácie o svojom využití v reálnom čase pomocou telemetrie
 
-Získajte prehľad o objeme požiadaviek na API v reálnom čase a informácie o problémoch, s ktorými sa systém môže stretnúť. Môžete [pristupovať k telemetrii v reálnom čase](system.md#api-usage-tab) tak, že prejdete do časti **Správca** > **Systém** > **Použitie API**. V tabuľke **Operácie** obsahujú riadky pre operácie nad rozhraním API, ktoré používajú metódy v reálnom čase, tlačidlo na zobrazenie použitia API v reálnom čase. Tlačidlo je vizualizované symbolom ďalekohľadu. Výberom tohto tlačidla otvoríte bočnú tablu obsahujúcu podrobnosti o použití rozhrania API v reálnom čase v aktuálnom prostredí.
+Získajte prehľad o objeme požiadaviek na API v reálnom čase a informácie o problémoch, s ktorými sa systém môže stretnúť. Môžete [pristupovať k telemetrii v reálnom čase](system.md#api-usage-tab). 
 
-Použite selektor **Zoskupiť podľa** na výber, ako najlepšie prezentovať svoje interakcie v reálnom čase na časovej osi od posledných 24 hodín do posledných 30 dní. Údaje môžete zoskupiť podľa metódy API, kvalifikovaného názvu entity (prijatá entita), spôsobu vytvorenia (zdroj udalosti), výsledku (úspech alebo zlyhanie) alebo chybových kódov. Dáta sú k dispozícii ako graf histórie a ako tabuľka.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

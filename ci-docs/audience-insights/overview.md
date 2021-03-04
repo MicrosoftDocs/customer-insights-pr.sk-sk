@@ -1,30 +1,26 @@
 ---
-title: Funkcia prehľadov cieľových skupín
-description: Informácie o funkcii prehľadov cieľových skupín v službe Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Prehľady cieľových skupín pre prehľad Dynamics 365 Customer Insights
+description: Prehľad prehľadov cieľových skupín pre Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406924"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477014"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Funkcia prehľadov cieľových skupín v službe Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Prehľady cieľových skupín pre prehľad Dynamics 365 Customer Insights
 
-Skúsenosti zákazníkov sú základom ambícií digitálnej transformácie každej organizácie. Aby organizácie mohli konkurovať na dnešnom trhu, musia si vybudovať zmysluplné vzťahy so svojimi zákazníkmi na osobnej úrovni. Efektívne prispôsobovanie v plnej miere vyžaduje úplný a jednotný pohľad na zákazníkov.
+Prehľady cieľových skupín vám pomôžu lepšie porozumieť vašim zákazníkom. Prepojte údaje z rôznych transakčných, behaviorálnych a observačných zdrojov a vytvorte 360-stupňový pohľad na zákazníka. Tieto informácie použite na získanie skúseností a procesov zameraných na zákazníka. Zjednoťte a pochopte údaje zákazníkov a využite ich na získavanie inteligentných prehľadov a akcií.
 
-Prehľady cieľových skupín vám pomôžu lepšie porozumieť vašim zákazníkom. Prepojte údaje z rôznych transakčných, behaviorálnych a observačných zdrojov a vytvorte 360-stupňový pohľad na zákazníka. Tieto informácie použite na získanie skúseností a procesov zameraných na zákazníka.
-
-**Zjednoťte a pochopte údaje zákazníkov a využite ich na získavanie inteligentných prehľadov a akcií.**
-
-Vďaka prehľadom cieľových skupín môžu organizácie:  
+## <a name="main-benefits"></a>Hlavné výhody 
 
 - **Odstrániť údajové silá a zjednotiť údaje o zákazníkoch**
 
@@ -33,15 +29,15 @@ Vďaka prehľadom cieľových skupín môžu organizácie:
 
 - **Obohatiť sa o inteligenciu publika obsiahnutú v programe Microsoft Graph**
 
-  - Budovať bohatšie zákaznícke profily zahrnutím inteligencie publika obsiahnutej v programe Microsoft Graph.  
+  - Budovať bohatšie zákaznícke profily [zahrnutím inteligencie publika obsiahnutej v programe Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Posilniť svoje obchodné procesy a prispôsobené skúsenosti zákazníkov**
 
   - Podporiť personalizované zapojenie naprieč kanálmi – posilniť profesionálov v oblasti marketingu, predaja a služieb pomocou pripravených kontextuálnych prehľadov o zákazníkoch a prispôsobených kartách s profilmi zákazníkov, ktoré sa dostávajú do obchodných aplikácií, ktoré sa používajú už každý deň
   - Automatizovať skúsenosti a procesy zamerané na zákazníka na základe prispôsobiteľných profilov, obchodných mier a segmentov.
-  - Umožniť a rozšíriť obchodné skúsenosti vybudované na základe Microsoft Power Platform. Rýchlo vytvárať aplikácie pomocou integrovaných prehľadov s využitím výkonného prístupu bez nutnosti programovania z PowerApps.  
+  - Umožniť a rozšíriť obchodné skúsenosti vybudované na základe [Microsoft Power Platform](https://powerplatform.microsoft.com/). Rýchlo vytvárať aplikácie pomocou integrovaných prehľadov s využitím výkonného prístupu bez nutnosti programovania z PowerApps.  
 
-Prehľady cieľových skupín obsahujú funkcie pre týchto kľúčových používateľov:
+## <a name="key-audiences"></a>Kľúčové publiká
 
 - **Analytici/správcovia údajov:**
 
@@ -58,5 +54,8 @@ Prehľady cieľových skupín obsahujú funkcie pre týchto kľúčových použ�
 
 - **Obchodní analytici:**
 
-  - Vytvorte prispôsobiteľné profily, definujte opatrenia a vytvorte segmenty, aby ste získali komplexný pohľad na svojho zákazníka, špecifický pre vašu organizáciu.  
-  - Používajte pripravené konektory pre PowerApps alebo Microsoft Power BI, prípadne rozhrania API na získanie prehľadu o vašich obchodných aplikáciách alebo riešeniach BI.  
+  - Vytvorte prispôsobiteľné profily, definujte opatrenia, vytvorte segmenty a ťažte z prediktívnych analýz, aby ste získali komplexný pohľad na svojho zákazníka, špecifický pre vašu organizáciu.  
+  - Na ďalšie spracovanie prehľadov použite hotové konektory pre niekoľko aplikácií alebo rozhraní API od spoločnosti Microsoft a tretích strán.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

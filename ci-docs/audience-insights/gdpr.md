@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406921"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268705"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žiadosti o práva dotknutých osôb (DSR) podľa GDPR
 
@@ -75,3 +75,6 @@ Správca nájomníka môže exportovať údaje podľa týchto krokov:
 1. Pošlite e-mail na D365CI@microsoft.com, v ktorom je uvedená e-mailová adresa požadovaného používateľa. Tím služby Customer Insights pošle e-mail na zaregistrovanú e-mailovú adresu správcu nájomníka a požiada o potvrdenie exportu údajov.
 2. Potvrďte potvrdenie na exportovanie údajov pre požadovaného používateľa.
 3. Exportované údaje dostanete prostredníctvom e-mailovej adresy správcu nájomníka.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

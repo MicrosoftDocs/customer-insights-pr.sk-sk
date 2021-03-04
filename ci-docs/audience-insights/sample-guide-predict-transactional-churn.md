@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643612"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269809"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Predikcia odchodov založená na transakciách (ukážka) – vzorový sprievodca
 
@@ -49,7 +49,7 @@ Prečítajte si články [o príjme údajov](data-sources.md) a konkrétne o [im
    [!div class="mx-imgBorder"]
    ![Transformovať dátum narodenia na dátum](media/ecommerce-dob-date.PNG "transformovať dátum narodenia na dátum")
 
-1. V poli „Názov“ na pravej table premenujte svoj zdroj údajov z **Dotaz** na **eCommerceContacts**
+1. V poli **Názov** na pravej table premenujte svoj zdroj údajov z **Dotaz** na **eCommerceContacts**
 
 1. Uložte zdroj údajov.
 
@@ -66,7 +66,7 @@ Prečítajte si články [o príjme údajov](data-sources.md) a konkrétne o [im
    - **PurchasedOn**: Dátum/Čas
    - **TotalPrice**: Mena
    
-1. V poli „Názov“ na pravej table premenujte svoj zdroj údajov z **Dotaz** na **eCommercePurchases**.
+1. V poli **Názov** na pravej table premenujte svoj zdroj údajov z **Dotaz** na **eCommercePurchases**.
 
 1. Uložte zdroj údajov.
 
@@ -84,7 +84,7 @@ Prečítajte si články [o príjme údajov](data-sources.md) a konkrétne o [im
    - **RewardsPoints**: Celé číslo
    - **CreatedOn**: Dátum/Čas
 
-1. V poli „Názov“ na pravej table premenujte svoj zdroj údajov z **Dotaz** na **loyCustomers**.
+1. V poli **Názov** na pravej table premenujte svoj zdroj údajov z **Dotaz** na **loyCustomers**.
 
 1. Uložte zdroj údajov.
 
@@ -166,7 +166,7 @@ Po zavedení zjednotených profilov zákazníkov môžeme teraz spustiť predikc
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Vyberte úrovne modelov Okno predikcie a Definícia odchodu.":::
 
-1. Vyberte **História nákupov (povinné)** a **Pridať údaje** pre históriu predplatného.
+1. Vyberte **História nákupov (povinné)** a **Pridať údaje** pre históriu nákupov.
 
 1. Pridajte entitu **eCommercePurchases: eCommerce** a mapujte polia z eCommerce na zodpovedajúce polia požadované modelom.
 
@@ -204,3 +204,6 @@ Nový segment môžete vytvoriť na základe entity vytvorenej modelom.
 Teraz máte segment, ktorý sa dynamicky aktualizuje a ktorý identifikuje vysoko rizikových zákazníkov pre toto predplatné.
 
 Ďalšie informácie nájdete v téme [Tvorba a správa segmentov](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

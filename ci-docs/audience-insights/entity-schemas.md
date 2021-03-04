@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2cf01029ef6b64fe566022d09ce65bca3603189c
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643927"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269303"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémy entít v modeli Common Data Model
 
@@ -45,3 +45,6 @@ Aby sme získali 360-stupňový pohľad na zákazníka a sprístupnili modely Cu
 Entity si môžete pozrieť v sekcii [Navigátor entít vo formáte Common Data Model](https://microsoft.github.io/CDM/). Vyberte položku **Načítať zo služby GitHub!** tlačidlo a prejdite na **foundationCommon** > **crmCommon** > **riešenia** > **customerInsights**, kde nájdete zoznam entít entít pre Customer Insights a ich definície.
 > [!div class="mx-imgBorder"]
 > ![Navigátor entít CDM zobrazuje entitu CustomerActivity](media/CDM-entity-navigator.png "Navigátor entít CDM zobrazuje entitu CustomerActivity")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

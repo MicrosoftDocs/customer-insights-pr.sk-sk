@@ -4,16 +4,16 @@ description: Práca s vlastnými modelmi zo strojového učenia platformy Azure 
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668922"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267253"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastné modely strojového učenia
 
@@ -46,15 +46,15 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 
 1. Vyberte webovú službu strojového učenia Studio (klasického) alebo kanál strojového učenia platformy Azure v rozbaľovacej ponuke **Webová služba, ktorá obsahuje váš model**. Potom vyberte položku **Ďalej**.
    - Zistite viac o [publikovaní webovej služby v strojovom učení Studio (klasickom)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Zistite viac o [publikovaní kanálu v strojovom učení platformy Azure pomocou návrhára](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) alebo [súpravy SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Váš kanál musí byť zverejnený pod [koncovým bodom kanála](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Zistite viac o [publikovaní kanálu v strojovom učení platformy Azure pomocou návrhára](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) alebo [súpravy SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Váš kanál musí byť zverejnený pod [koncovým bodom kanála](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Pre každý **Vstup webovej služby** vyberte zhodnú položku **Entita** v rámci prehľadov cieľových skupín a vyberte položku **Ďalej**.
+   > [!NOTE]
+   > Pracovný postup vlastného modelu použije heuristiku na mapovanie vstupných polí webovej služby na atribúty entít na základe názvu a dátového typu poľa. Ak pole webovej služby nemožno priradiť k entite, zobrazí sa chyba.
 
    > [!div class="mx-imgBorder"]
    > ![Konfigurácia pracovného postupu](media/intelligence-screen2-updated.png "Konfigurácia pracovného postupu")
-
+   
 1. V rámci kroku **Parametre modelového výstupu** nastavte nasledujúce vlastnosti:
    - Strojové učenie Studio (klasické)
       1. Zadajte **Názov entity** výstupu, do ktorého majú prúdiť výsledky výstupu webových služieb.
@@ -112,3 +112,6 @@ Váš pracovný postup sa tiež spustí automaticky pri každej plánovanej aktu
 1. Vyberte možnosť **Odstrániť** a odstránenie potvrďte.
 
 Váš pracovný postup bude odstránený. [Entita](entities.md), ktorá bola vytvorená pri vytvorení pracovného postupu, sa uchová a bude sa dať zobraziť na stránke **Entity**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

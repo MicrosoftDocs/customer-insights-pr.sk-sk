@@ -4,17 +4,17 @@ description: Import údajov zo spravovaného data lake Common Data Service.
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643417"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267833"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Pripojenie k údajom v dátovom jazere spravovanom cez Common Data Service
 
@@ -34,7 +34,10 @@ Tento článok poskytuje informácie o tom, ako sa súčasní zákazníci Dynami
 
 3. Stlačte možnosť **Pripojiť k Common Data Service** a stlačte **Ďalej**.
 
-4. Zadajte **Názov** zdroja údajov a následne vyberte položku **Ďalej**.
+4. Zadajte **Názov** zdroja údajov a následne vyberte položku **Ďalej**. Pokyny týkajúce sa pomenovania: 
+   - Začnite písmenom.
+   - Používajte iba písmená a číslice. Nie je povolené zadávanie špeciálnych znakov a medzier.
+   - Použite 3 až 64 znakov.
 
 5. Zadajte **Adresa servera** pre svoju organizáciu Common Data Service a potom stlačte možnosť **Prihlásiť sa**.
 
@@ -65,3 +68,6 @@ Ak sa chcete pripojiť k inému Common Data Service, [vytvorte nový zdroj údaj
 3. Zo zoznamu vyberte možnosť **Upraviť**.
 
 4. Vyberte ďalšie entity z dostupného zoznamu entít a vyberte položku **Uložiť**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

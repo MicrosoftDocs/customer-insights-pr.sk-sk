@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406914"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267793"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Pripojenie k zdroju údajov Power Query
 
@@ -28,7 +28,10 @@ Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčši
 
 1. Vyberte metódu **Import údajov** a **Ďalej**.
 
-1. Zadajte **Názov** pre zdroj údajov a vyberte **Ďalej** na vytvorenie zdroja údajov.
+1. Zadajte **Názov** pre zdroj údajov a vyberte **Ďalej** na vytvorenie zdroja údajov. Pokyny týkajúce sa pomenovania: 
+   - Začnite písmenom.
+   - Používajte iba písmená a číslice. Nie je povolené zadávanie špeciálnych znakov a medzier.
+   - Použite 3 až 64 znakov.
 
 1. Vyberte jeden z [dostupných konektorov](#available-power-query-data-sources). Pre tento príklad vyberieme konektor **Text/CSV**.
 
@@ -77,3 +80,6 @@ Konektory so značkou začiarknutia v stĺpci **Customer Insights (toky údajov)
 3. Použite svoje zmeny a transformácie v dialógovom okne **Power Query – Upraviť dotazy**, ako je opísané v časti [Vytvorenie nového zdroja údajov](#create-a-new-data-source).
 
 4. Vyberte **Uložiť** v Power Query po dokončení úprav a uložte zmeny.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
