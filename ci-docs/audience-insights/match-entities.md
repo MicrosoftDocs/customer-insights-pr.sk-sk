@@ -1,133 +1,137 @@
 ---
 title: Priraďovanie entít na účely zjednotenia údajov
 description: Priraďujte entity na účely vytvorenia jednotných profilov zákazníkov.
-ms.date: 10/14/2020
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267497"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595583"
 ---
 # <a name="match-entities"></a>Priradenie entít
 
-Po dokončení fázy mapovania ste pripravení zosúladiť vaše entity. Fáza zosúladenia určuje, ako skombinovať vaše množiny údajov do množiny údajov zjednoteného profilu zákazníka. Fáza zosúladenia vyžaduje aspoň [dve mapované entity](map-entities.md).
+Fáza zosúladenia určuje, ako skombinovať vaše množiny údajov do množiny údajov zjednoteného profilu zákazníka. Po dokončení [kroku mapy](map-entities.md) v procese zjednotenia údajov ste pripravení priradiť svoje entity. Fáza zosúladenia vyžaduje aspoň dve mapované entity.
+
+Stránka priraďovania sa skladá z troch častí: 
+- Kľúčové metriky, ktoré sumarizujú počet priradených záznamov
+- Poradie zhody a pravidlá pre priraďovanie medzi entitami
+- Pravidlá pre deduplikáciu zhodných entít
 
 ## <a name="specify-the-match-order"></a>Určenie objednávky zosúladenia
 
 Prejdite do ponuky **Údaje** > **Zjednotiť** > **Spárovať** a vyberte **Nastaviť poradie** na začatie fázy spárovania.
 
-Každé zosúladenie zjednotí dve alebo viac entít do jednej entity a zároveň zachová každý jedinečný záznam zákazníka. V nasledujúcom príklade sme vybrali tri entity: **ContactCSV: TestData** ako **primárnu** entitu, **WebAccountCSV: TestData** ako **entitu 2** a **CallRecordSmall: TestData** ako **entitu 3**. Diagram nad výbermi ilustruje, ako sa vykoná objednávka zosúladenia.
+Každá zhoda zjednocuje dve alebo viac entít do jednej konsolidovanej entity. Zároveň vedie jedinečné záznamy o zákazníkoch. Napríklad sme vybrali dve entity: **eCommerce:eCommerceContacts** ako primárnu entitu a **LoyaltyScheme:loyCustomers** ako druhú entitu. Poradie entít určuje, v akom poradí sa systém pokúsi priradiť záznamy.
 
-> [!div class="mx-imgBorder"]
-> ![Úprava objednávky zosúladenia údajov](media/configure-data-match-order-edit-page.png "Úprava objednávky zosúladenia údajov")
+:::image type="content" source="media/match-page.png" alt-text="Snímka obrazovky stránky Priradenie v oblasti Zjednotiť procesu zjednotenia údajov.":::
   
-**Primárna** entita je zosúladená s **entitou 2**. Množina údajov, ktorá je výsledkom prvého zosúladenia, sa zosúlaďuje s **entitou 3**.
-V tomto príklade sme vybrali len dve zosúladenia, ale systém ich môže podporovať viac.
+Primárna entita *eCommerce:eCommerceContacts* sa porovnáva s ďalšou entitou *LoyaltyScheme:loyCustomers*. Ak máte viac ako dve entity, množina údajov, ktorá je výsledkom prvého kroku zhody, sa porovnáva s nasledujúcou entitou.
 
 > [!IMPORTANT]
-> Entita, ktorú vyberiete ako **primárnu**, bude slúžiť ako základ pre jednotnú množinu údajov predlohy. Ďalšie entity, ktoré sú vybraté počas fázy zosúladenia, sa pridajú do tejto entity. Zároveň to neznamená, že zjednotená entita bude obsahovať *všetky* údaje zahrnuté v tejto entite.
+> Entita, ktorú vyberiete ako primárnu, bude slúžiť ako základ pre jednotnú množinu údajov profilov. Ďalšie entity, ktoré sú vybraté počas fázy zosúladenia, sa pridajú do tejto entity. To neznamená, že zjednotená entita bude obsahovať *všetky* údaje zahrnuté v tejto entite.
 >
 > Existujú dva aspekty, ktoré vám môžu pomôcť pri výbere hierarchie entít:
 >
-> - O ktorej entite si myslíte, že obsahuje najúplnejšie a najspoľahlivejšie údaje o vašich zákazníkoch?
-> - Má entita, ktorú ste práve určili, atribúty, ktoré zdieľajú aj iné entity (napríklad meno, telefónne číslo alebo e-mailová adresa)? Ak nie, vyberte si druhú najspoľahlivejšiu entitu.
+> - Vyberte entitu s najkompletnejšími a najspoľahlivejšími profilovými údajmi o vašich zákazníkoch ako primárnu entitu.
+> - Vyberte entitu, ktorá má niekoľko spoločných atribútov s inými entitami (napríklad meno, telefónne číslo alebo e-mailová adresa) ako primárnu entitu.
 
-Ak chcete uložiť objednávku zosúladenia, vyberte položku **Hotovo**.
+Po zadaní poradia zhody uvidíte definované páry zhody v časti **Podrobnosti o zhodných záznamoch** v časti **Údaje** > **Zjednotiť** > **Priradiť**. Kľúčové metriky budú prázdne, kým sa proces párovania nedokončí.
 
-## <a name="define-rules-for-your-first-match-pair"></a>Definovanie pravidiel pre váš prvý pár zosúladenia
+## <a name="define-rules-for-match-pairs"></a>Definujte pravidlá pre dvojice párov
 
-Po zadaní objednávky zosúladenia sa na stránke **Zosúladiť** zobrazia definované zhody. Dlaždice v hornej časti obrazovky budú prázdne, kým nespustíte objednávku zosúladenia.
+Pravidlá zosúladenia určujú logiku, podľa ktorej budú zosúladené špecifické dvojice entít.
 
-> [!div class="mx-imgBorder"]
-> ![Definovanie pravidiel](media/configure-data-match-need-rules.png "Definovanie pravidiel")
+Varovanie **Vyžadujú sa pravidlá** vedľa názvu entity naznačuje, že pre párový pár nie je definované žiadne pravidlo zhody. 
 
-Upozornenie **Vyžaduje pravidlá** informuje, že žiadne pravidlo zosúladenia nie je definované pre pár zosúladenia. Pravidlá zosúladenia určujú logiku, podľa ktorej budú zosúladené špecifické dvojice entít.
+:::image type="content" source="media/match-rule-add.png" alt-text="Snímok obrazovky sekcie Podrobnosti o zhodnom zázname s ovládacím prvkom na pridanie zvýraznených pravidiel.":::
 
-1. Ak chcete definovať prvé pravidlo, otvorte tablu **Definícia pravidla** výberom zodpovedajúceho riadka zosúladenia v tabuľke zosúladenia (1) a následným výberom položky **Vytvoriť nové pravidlo** (2).
+1. Vyberte **Pridať pravidlá** pod entitou v časti **Podrobnosti o zhodných záznamoch** na definovanie pravidiel zhody.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vytvoriť nové pravidlo](media/configure-data-match-new-rule2.png "Vytvoriť nové pravidlo")
+1. V table **Vytvoriť pravidlo** nakonfigurujte podmienky pravidla.
 
-2. Na table **Upraviť pravidlo** nakonfigurujte podmienky pre toto pravidlo. Každá podmienka je zastúpená dvoma riadkami, ktoré obsahujú povinné výbery.
+   :::image type="content" source="media/match-rule-conditions.png" alt-text="Snímka obrazovky otvoreného pravidla zhody s pridanými podmienkami.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Tabla nového pravidla](media/configure-data-match-new-rule-condition.png "Tabla nového pravidla")
+   - **Entita/pole (prvý riadok)**: Vyberte súvisiacu entitu a atribút, aby ste určili vlastnosť záznamu, ktorá je pre zákazníka pravdepodobne jedinečná. Napríklad telefónne číslo alebo e-mailová adresa. Vyvarujte sa zhody podľa atribútov typu aktivity. Napríklad ID nákupu pravdepodobne nenájde zhodu v iných typoch záznamov.
 
-   Entita/pole (prvé) – Atribút, ktorý sa použije na zosúladenie z prvej entity páru zosúladenia. Príkladom môže byť telefónne číslo alebo e-mailová adresa. Vyberte atribút, ktorý je pravdepodobne jedinečný pre zákazníka.
+   - **Entita/pole (druhý riadok)**: Vyberte atribút, ktorý sa týka atribútu entity uvedenej v prvom riadku.
 
-   > [!TIP]
-   > Vyhýbajte sa zosúladeniu na základe atribútov typu aktivita. Inými slovami, ak sa zdá, že atribút je aktivitou, môže ísť o zlé kritérium na zosúladenie.  
+   - **Normalizovať**: Vyberte si z nasledujúcich možností normalizácie pre vybrané atribúty. 
+     - Medzery: Odstráni všetky medzery. *Ahoj svet* sa stáva *HelloWorld*.
+     - Symboly: Odstráni všetky symboly a špeciálne znaky. *Head&Shoulder* sa stáva *HeadShoulder*.
+     - Text na malé písmená: Konvertuje všetky znaky na malé písmená. *VŠETKY PÍSMENÁ VEĽKÉ a Nadpis* sa stáva *všetky písmená veľké a nadpis*.
+     - Unicode na ASCII: Konvertuje notáciu Unicode na znaky ASCII. */u00B2* sa stáva *2*.
+     - Číslice: Konvertuje ďalšie číselné systémy, napríklad rímske, na arabské číslice. *VIII* sa stane *8*.
+     - Sémantické typy: Štandardizuje mená, tituly, telefónne čísla, adresy atď. 
 
-   Entita/pole (druhé) – Atribút, ktorý sa použije na zosúladenie z druhej entity páru zosúladenia.
+   - **Presnosť**: Nastavte úroveň presnosti, ktorá sa má použiť pre túto podmienku. 
+     - **Základné**: Vyber z možností *Nízka*, *Stredná*, *Vysoká* a *Presná*. Vyberte **presná**, aby sa zosúladili len záznamy, ktoré zodpovedajú na 100 percent. Vyberte jednu z ďalších úrovní, aby sa zosúladili záznamy, ktoré nie sú na 100 percent identické.
+     - **Vlastné**: Nastavte percento, ktorému sa musia záznamy zhodovať. Systém bude porovnávať iba záznamy prekračujúce tento limit.
 
-   Normalizovať – **Metóda normalizácie**: Rôzne možnosti normalizácie sú k dispozícii pre vybrané atribúty. Napríklad odstránenie interpunkcie alebo odstránenie medzier
+1. Zadajte **Názov** pre položku pravidla.
 
-   Pre normalizáciu názvu organizácie (náhľad) môžete tiež vybrať **typ (telefón, meno, organizácia)**
+1. [Pridajte ďalšie podmienky](#add-conditions-to-a-rule) alebo stlačte **Hotovo** a dokončite pravidlo.
 
-   > [!div class="mx-imgBorder"]
-   > ![Normalizácia-B2B](media/match-normalization-b2b.png "Normalizácia-B2B")
+1. Voliteľne stlačte možnosť [pridať ďalšie pravidlá](#add-rules-to-a-match-pair).
 
-   Úroveň presnosti – Úroveň presnosti, ktorá sa použije pre túto podmienku. Nastavenie úrovne presnosti pre podmienku zosúladenia môže mať dva typy: **základné** a **vlastné**.  
-   - Základné: Poskytuje štyri možnosti na výber: nízka, stredná, vysoká a presná. Vyberte **presná**, aby sa zosúladili len záznamy, ktoré zodpovedajú na 100 percent. Vyberte jednu z ďalších úrovní, aby sa zosúladili záznamy, ktoré nie sú na 100 percent identické.
-   - Vlastné: Pomocou jazdca definujte vlastnú percentuálnu zhodu záznamov alebo zadajte zhodu do poľa **Vlastné**. Systém zosúladí iba záznamy, ktoré presahujú tento prah. Hodnoty na jazdci sú medzi 0 a 1. Takže 0,64 predstavuje 64 percent.
+1. Zmeny vykonajte výberom položky **Uložiť**.
 
-3. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
+### <a name="add-conditions-to-a-rule"></a>Pridanie podmienok k pravidlu
 
-### <a name="add-multiple-conditions"></a>Pridanie viacerých podmienok
+Ak chcete priradiť entity, iba ak atribúty spĺňajú viac podmienok, pridajte do pravidla zhody ďalšie podmienky. Podmienky sú spojené s logickým operátorom AND a tak sa vykonávajú iba vtedy, ak sú splnené všetky podmienky.
 
-Ak chcete zosúladiť svoje entity iba v prípade splnenia viacerých podmienok, pridajte ďalšie podmienky, ktoré sú prepojené prostredníctvom operátora A.
+1. Prejdite do časti **Údaje** > **Zjednotiť** > **Priradiť** a vyberte **Upraviť** pri pravidle, ku ktorému chcete pridať podmienky.
 
-1. Na table **Upraviť pravidlo** vyberte položku **Pridať podmienku**. Podmienky môžete odstrániť aj tak, že vyberiete tlačidlo Odstrániť vedľa existujúcej podmienky.
+1. Na table **Upraviť pravidlo** vyberte položku **Pridať podmienku**.
 
-2. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
+1. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
 
-## <a name="add-multiple-rules"></a>Pridanie viacerých pravidiel
+### <a name="add-rules-to-a-match-pair"></a>Pridajte pravidlá k páru
 
-Každá podmienka sa vzťahuje na jeden pár atribútov, zatiaľ čo pravidlá predstavujú množiny podmienok. Ak chcete, aby boli vaše entity zosúladené podľa rôznych množín atribútov, môžete pridať ďalšie pravidlá.
+Pravidlá spárovania predstavujú súbory podmienok. Na spárovanie entít podľa podmienok na základe viacerých atribútov, priraďte ďalšie pravidlá
 
-1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zjednotiť** > **Priradiť**.
+1.  Prejdite do časti **Údaje** > **Zjednotiť** > **Priradiť** a vyberte **Pridať pravidlo** pri entite, ku ktorej chcete pridať podmienky.
 
-2. Vyberte entitu, ktorú chcete zosúladiť, a potom **Pridať pravidlá**.
-
-3. Postupujte podľa pokynov uvedených v článku [Definovanie pravidiel pre váš prvý pár zosúladenia](#define-rules-for-your-first-match-pair).
+2. Postupujte podľa pokynov v časti [Definujte pravidlá pre dvojice párov](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> Záleží na poradí pravidiel. Algoritmus zosúladenia sa pokúša vykonať zosúladenie na základe vášho prvého pravidla a pokračuje v druhom pravidle, len ak sa v rámci prvého pravidla neurčili žiadne zhodné položky.
+> Na poradí pravidiel záleží. Algoritmus priraďovania sa pokúša zhodovať na základe vášho prvého pravidla a na druhé pravidlo pokračuje, iba ak s prvým pravidlom neboli identifikované žiadne zhody.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definovanie deduplikácie na priradenej entite
 
-Spolu so zadaním pravidiel priraďovania medzi entitami, ako je stanovené vo vyššie uvedených častiach, môžete tiež určiť pravidlá deduplikácií. *Deduplikácia* je proces. Identifikuje duplicitné záznamy, zlúci ich do jedného záznamu a prepojí všetky zdrojové záznamy s týmto zlúčeným záznamom s alternatívnymi ID k zlúčenému záznamu.
+Okrem [pravidlá zhody medzi entitami](#define-rules-for-match-pairs), môžete tiež určiť pravidlá deduplikácie. *Deduplikácia* je ďalší proces pri párovaní záznamov. Identifikuje duplicitné záznamy a zlúčte ich do jedného záznamu. Zdrojové záznamy sa prepoja so zlúčeným záznamom s alternatívnymi ID.
 
-Po identifikácii deduplikovaného záznamu sa tento záznam použije v procese priraďovania medzi entitami. Deduplikácia sa implementuje na úrovni entity a je možné ju použiť na každú entitu použitú v procese priraďovania.
+Deduplikované záznamy m sa potom použijú v procese priraďovania medzi entitami. Deduplikácia sa deje na jednotlivých entitách a je možné ju nakonfigurovať pre každú entitu použitú v spárovaní.
+
+Zadávanie pravidiel deduplikácie nie je povinné. Ak nie sú nakonfigurované žiadne takéto pravidlá, použijú sa systémovo definované pravidlá. Kombinujú všetky záznamy do jedného záznamu pred odovzdaním údajov entity do porovnávania medzi entitami na zvýšenie výkonu.
 
 ### <a name="add-deduplication-rules"></a>Pridanie pravidiel deduplikácie
 
-1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zjednotiť** > **Priradiť**.
+1. Prejdite na **Údaje** > **Zjednotenie** > **Spárovanie**.
 
-1. V sekcii **Zlúčené duplikáty** vyberte položku **Nastaviť entity**.
+1. V sekcii **Zlúčené duplikáty** vyberte položku **Nastaviť entity**. Ak sú pravidlá deduplikácie už vytvorené, vyberte možnosť **Upraviť**.
 
-1. V sekcii **Predvoľby zlúčenia** vyberte entity, na ktoré chcete použiť deduplikáciu.
+1. V table **Predvoľby zlúčenia** vyberte entity, na ktoré chcete použiť deduplikáciu.
 
-1. Uveďte, ako sa majú zlúčiť duplicitné záznamy, a vyberte jednu z troch možností zlúčenia:
-   - *Najviac vyplnené*: Identifikuje záznam s najviac vyplnenými atribútmi ako víťazný záznam. Toto je predvolená možnosť zlučovania.
-   - *Najnovšie*: Identifikuje víťazný záznam na základe najväčšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
-   - *Najstaršie*: Identifikuje víťazný záznam na základe najmenšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
+1. Uveďte, ako sa majú kombinovať duplicitné záznamy, a vyberte jednu z troch možností zlúčenia:
+   - **Najviac vyplnené**: Identifikuje záznam s najviac vyplnenými poľami atribútov ako víťazný záznam. Toto je predvolená možnosť zlučovania.
+   - **Najnovšie**: Identifikuje víťazný záznam na základe najväčšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
+   - **Najstaršie**: Identifikuje víťazný záznam na základe najmenšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
  
    > [!div class="mx-imgBorder"]
    > ![Krok 1 pri pravidlách deduplikácie](media/match-selfconflation.png "Krok 1 pri pravidlách deduplikácie")
  
-1. Po výbere entít a nastavení predvoľby zlúčenia vyberte položku **Vytvoriť nové pravidlo** a definujte pravidlá deduplikácie na úrovni entity.
-   - **Vybrať pole** obsahuje zoznam všetkých dostupných polí z entity, pre ktorú chcete deduplikovať zdrojové údaje.
-   - Zadajte nastavenie normalizácie a presnosti podobným spôsobom, aký je uvedený pri priraďovaní medzi entitami.
-   - Ďalšie podmienky môžete definovať výberom položky **Pridať podmienku**.
+1. Po výbere entít a nastavení predvoľby zlúčenia vyberte položku **Pridať pravidlo** a definujte pravidlá deduplikácie na úrovni entity.
+   - Možnosť **Vybrať pole** vypíše všetky dostupné polia od tejto entity. Vyberte pole, v ktorom chcete skontrolovať duplikáty. Vyberte polia, ktoré sú pravdepodobne jedinečné pre každého zákazníka. Napríklad e-mailová adresa alebo kombinácia mena, mesta a telefónneho čísla.
+   - Zadajte nastavenie normalizácie a presnosti.
+   - Definujte ďalšie podmienky výberom položky **Pridať podmienku**.
  
    > [!div class="mx-imgBorder"]
    > ![Krok 2 pri pravidlách deduplikácie](media/match-selfconflation-rules.png "Krok 2 pri pravidlách deduplikácie")
@@ -138,28 +142,13 @@ Po identifikácii deduplikovaného záznamu sa tento záznam použije v procese 
 
 1. Tento víťazný záznam sa potom odovzdá na párovanie medzi entitami spolu so záznamami, ktoré nie sú víťazné (napríklad alternatívne ID), aby sa zlepšila kvalita párovania.
 
-1. Akékoľvek vlastné pravidlá priraďovania definované pre možnosti vždy priradiť a nikdy nepriradiť majú väčšiu prioritu ako pravidlá deduplikácie. Ak pravidlo deduplikácie identifikuje priradené záznamy a ak je nastavené vlastné pravidlo priraďovania, ktoré sa nikdy nebude zhodovať s týmito záznamami, potom sa tieto dva záznamy nezhodujú.
+1. Všetky definované vlastné pravidlá zhody prepíšu pravidlá deduplikácie. Ak pravidlo deduplikácie identifikuje priradené záznamy a ak je nastavené vlastné pravidlo priraďovania, ktoré sa nikdy nebude zhodovať s týmito záznamami, potom sa tieto dva záznamy nezhodujú.
 
-1. Po spustení procesu priraďovania sa zobrazia štatistiky deduplikácie.
-   
-> [!NOTE]
-> Zadávanie pravidiel deduplikácie nie je povinné. Ak nie sú nakonfigurované žiadne takéto pravidlá, použijú sa systémovo definované pravidlá. Zbalia všetky záznamy, ktoré majú rovnakú kombináciu hodnôt (presná zhoda) z primárneho kľúča a polí v pravidlách párovania, do jedného záznamu, skôr než údaje entity prepošlú na účely priradenia medzi entitami, čím sa zvyšuje výkon a usporiadanosť systému.
+1. Po [spustení procesu priraďovania](#run-the-match-process) sa zobrazia štatistiky deduplikácie v hlavných dlaždiciach metrík.
 
-## <a name="run-your-match-order"></a>Spustenie objednávky zosúladenia
+### <a name="deduplication-output-as-an-entity"></a>Výstup deduplikácie ako entita
 
-Po definovaní pravidiel priraďovania vrátane pravidiel priradenia medzi entitami a pravidiel deduplikácie môžete spustiť poradie priraďovania. Na stránke **Zosúladenie** vyberte položku **Spustiť**, čím spustíte proces. Dokončenie príslušného algoritmu môže nejaký čas trvať. Vlastnosti na stránke **Zosúladenie** nie je možné zmeniť, kým sa nedokončí proces zosúladenia. Nájdete zjednotenú entitu profilu zákazníka, ktorá bola vytvorená na stránke **Entity**. Vaša zjednotená entita zákazníka sa nazýva **ConflationMatchPairs : CustomerInsights**.
-
-Ak chcete vykonať ďalšie zmeny a zopakovať krok, môžete zrušiť prebiehajúce zosúladenie. Vyberte text **Obnovuje sa…** a vyberte **Zrušiť úlohu** v spodnej časti zobrazenej bočnej tably.
-
-Po dokončení procesu porovnávania sa text **Obnovuje sa…** zmení na **Úspešné** a môžete znova využiť všetky funkcie stránky.
-
-Výsledkom prvého zosúladenia je vytvorenie zjednotenej hlavnej entity. Všetky následné zosúlaďovania vedú k rozšíreniu tejto entity.
-
-> [!TIP]
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
-
-## <a name="deduplication-output-as-an-entity"></a>Výstup deduplikácie ako entita
-Okrem zjednotenej hlavnej entity vytvorenej ako súčasť krížového párovania entít, proces deduplikácie tiež generuje novú entitu pre každú entitu z poradia párovania na identifikáciu deduplikovaných záznamov. Tieto entity možno nájsť spolu s **ConflationMatchPairs:CustomerInsights** v sekcii **Systém** na stránke **Entity** s názvom **Deduplication_Datasource_Entity**.
+Proces deduplikácie vytvorí novú entitu pre každú entitu z páru na identifikáciu deduplikovaných záznamov. Tieto entity možno nájsť spolu s **ConflationMatchPairs:CustomerInsights** v sekcii **Systém** na stránke **Entity** s názvom **Deduplication_DataSource_Entity**.
 
 Entita deduplikovaného výstupu obsahuje nasledujúce informácie:
 - ID/kľúče
@@ -168,77 +157,71 @@ Entita deduplikovaného výstupu obsahuje nasledujúce informácie:
   - Deduplication_WinnerId: Toto pole obsahuje ID víťaza z identifikovaných skupín alebo klastrov. Ak je hodnota Deduplication_WinnerId rovnaká ako hodnota primárneho kľúča pre záznam, znamená to, že záznam je víťazným záznamom.
 - Polia používané na definovanie pravidiel deduplikácie.
 - Polia Pravidlo a Skóre označujú, ktoré z pravidiel deduplikácie sa použili a skóre vrátené algoritmom párovania.
+   
+## <a name="run-the-match-process"></a>Spustenie procesu spárovania
+
+Po konfigurovaní pravidiel priraďovania vrátane pravidiel priradenia medzi entitami a pravidiel deduplikácie môžete spustiť proces priraďovania. 
+
+Prejdite do časti **Údaje** > **Zjednotiť** > **Spárovať** a vyberte **Spustiť** na spustenie procesu. Dokončenie porovnávacieho algoritmu trvá istý čas a konfiguráciu nemôžete zmeniť, kým sa nedokončí. Ak chcete pristúpiť k zmenám, môžete zrušiť spustenie. Vyberte stav úlohy a zvoľte **Zrušiť úlohu** na table **Podrobnosti o postupe**.
+
+Výsledok úspešného spustenia, entita zjednoteného profilu zákazníka, nájdete na stránke **Entity**. Vaša zjednotená entita zákazníka sa nazývala **Zákazníci** v časti **Profily**. Prvé úspešné spustenie priradenia vytvára zjednotenú entitu *Zákazník*. Všetky nasledujúce spustenia zhôd túto entitu rozširujú.
+
+> [!TIP]
+> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
 
 ## <a name="review-and-validate-your-matches"></a>Kontrola a potvrdenie zosúladených výsledkov
 
-Vyhodnoťte kvalitu vašich zosúladených párov a zosúlaďte ich:
+Prejdite do časti **Údaje** > **Zjednotiť** > **Spárovanie** a vyhodnoťte kvalitu svojich spárovaní a v prípade potreby ich vylepšite.
 
-- Na stránke **Zosúladenie** nájdete dve dlaždice ukazujúce úvodné prehľady o vašich údajoch.
+Dlaždice v hornej časti stránky zobrazujú kľúčové metriky, ktoré sumarizujú počet zhodných záznamov a duplikátov.
 
-  - **Jedineční zákazníci**: zobrazuje počet jedinečných profilov, ktoré systém identifikoval.
-  - **Zosúladené záznamy**: zobrazuje počet zosúladení vo všetkých zosúladených pároch.
+:::image type="content" source="media/match-KPIs.png" alt-text="Orezaná snímka obrazovky s kľúčovými metrikami na stránke Zhoda s číslami a podrobnosťami.":::
 
-- V tabuľke **Objednávka zosúladenia** môžete vyhodnotiť výsledky každého zosúladeného páru porovnaním počtu záznamov, ktoré boli dodané z tejto entity páru zosúladenia oproti percentu úspešne zosúladených záznamov.
+- **Jedinečné zdrojové záznamy** zobrazuje počet jednotlivých zdrojových záznamov, ktoré boli spracované v poslednom spustení priraďovania.
+- **Spárované a nespárované záznamy** zdôrazňuje, koľko jedinečných záznamov zostáva po spracovaní pravidiel zhody.
+- **Iba zodpovedajúce záznamy** zobrazuje počet spárovaní vo všetkých vašich pároch.
 
-- V sekcii **Pravidlá** entity v tabuľke poradie **Objednávka zosúladenia** nájdete percento úspešne zosúladených záznamov na úrovni pravidla. Výberom symbolu tabuľky vedľa pravidla môžete zobraziť všetky tieto záznamy na úrovni pravidiel. Odporúčame, aby ste skontrolovali podmnožinu záznamov a overili, či boli zosúladené správne.
+Výsledky každého páru a jeho pravidlá môžete posúdiť v table **Podrobnosti o zhodných záznamoch**. Porovnajte počet záznamov, ktoré pochádzajú zo zhodnej dvojice, s percentom úspešne zhodných záznamov.
 
-- Experimentujte s odlišnými hodnotami presností vo vašich podmienkach, aby ste určili optimálnu hodnotu.
+Prezrite si pravidlá spárovania a uvidíte percento úspešne zhodných záznamov na úrovni pravidiel. Vyberte elipsu (...) a potom stlačte možnosť **Ukážka zhody** na zobrazenie všetkých týchto záznamov na úrovni pravidla. Odporúčame vám pozrieť sa na niektoré záznamy, aby ste overili, či boli správne priradené.
 
-  1. Vyberte tri bodky (...) pre pravidlo páru zosúlaďovania, s ktorým chcete experimentovať, a vyberte položku **Upraviť**.
+Vyskúšajte rôzne prahové hodnoty presnosti za určitých podmienok, aby ste našli optimálnu hodnotu.
 
-  2. Zvoľte podmienku, s ktorou chcete experimentovať. Každé kritérium je reprezentované jedným riadkom na table **Pravidlo zosúladenia**.
+  1. Vyberte elipsu (...) pre pravidlo, s ktorým chcete experimentovať, a vyberte možnosť **Upraviť**.
 
-  3. Obsah stránky **Ukážka kritéria** závisí od úrovne presnosti, ktorú ste vybrali pre podmienku. Nájdite počet zosúladených a nezosúladených záznamov pre vybratú podmienku.
+  2. Zmeňte hodnoty presnosti v podmienkach, ktoré chcete upraviť.
 
-     Získajte bohatý prehľad o účinkoch rôznych prahových úrovní. Môžete porovnať, koľko záznamov bude zosúladených pod každou prahovou úrovňou, a zobraziť záznamy pod každou možnosťou. Vyberte každú z dlaždíc a skontrolujte údaje v sekcii tabuľky.
+  3. Stlačte **Ukážka** a pozrite si počet spárovaných a nepárovaných záznamov pre vybranú podmienku.
 
-## <a name="optimize-your-matches"></a>Optimalizácia zosúladení
+## <a name="manage-match-rules"></a>Spravovať pravidlá spárovania
 
-Zvýšte kvalitu tým, že prekonfigurujete niektoré z vašich parametrov zosúlaďovania:
+Väčšinu parametrov zhody môžete prekonfigurovať a doladiť.
 
-- **Ak chcete objednávku zosúladenia**, vyberte **Upraviť** a zmeňte polia objednávky zosúladenia.
+:::image type="content" source="media/match-rules-management.png" alt-text="Snímka obrazovky rozbaľovacej ponuky s možnosťami pravidla spárovania.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Úprava objednávky zosúladenia údajov](media/configure-data-match-order-edit.png "Úprava objednávky zosúladenia údajov")
+- Ak ste definovali viacero pravidiel, **zmeňte poradie vašich pravidiel**. Môžete zmeniť poradie pravidiel spárovania stlačením položky **Posunúť nahor** a **Posunúť nadol** alebo pretiahnutím.
 
-- Ak ste definovali viacero pravidiel, **zmeňte poradie vašich pravidiel**. Pravidlá zosúlaďovania môžete preusporiadať tak, že vyberiete možnosť **Posunúť nahor** a **Posunúť nadol** v mriežke pravidiel zosúlaďovania.
-
-  > [!div class="mx-imgBorder"]
-  > ![Zmena poradia pravidla](media/configure-data-change-rule-order.png "Zmena poradia pravidla")
-
-- **Duplikujte pravidlá**, ak ste definovali pravidlo zosúladenia a chceli by ste vytvoriť podobné pravidlo s úpravami. Tak urobíte výberom možnosti **Duplikovať**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Duplikovanie pravidla](media/configure-data-duplicate-rule.png "Duplikovanie pravidla")
+- **Zmeňte podmienky pravidla** stlačením možnosti **Upraviť** a zvoľte si rôzne polia.
 
 - **Deaktivovať pravidlo** na zachovanie pravidla párovania pri jeho vylúčení z procesu párovania.
 
-  > [!div class="mx-imgBorder"]
-  > ![Deaktivácia pravidla](media/configure-data-deactivate-rule.png "Deaktivácia pravidla")
+- **Duplikujte svoje pravidlá** ak ste definovali pravidlo zhody a chcete vytvoriť podobné pravidlo s úpravami, zvoľte **Duplikovať**.
 
-- **Upravte pravidlá** výberom symbolu **Upraviť**. Môžete tiež použiť nasledujúce zmeny:
+- **Odstráňte pravidlo** stlačením symbolu **Odstrániť**.
 
-  - Zmena atribútov pre podmienku: Vyberte nové atribúty v riadku špecifickej podmienky.
-  - Zmena prahovej hodnoty pre podmienku: Upravte jazdec presnosti.
-  - Zmena metódy normalizácie podmienky: Aktualizujte metódu normalizácie.
+## <a name="specify-custom-match-conditions"></a>Zadajte vlastné podmienky spárovania
 
-## <a name="specify-your-custom-match-records"></a>Zadanie vlastných záznamov zosúlaďovania
+Môžete určiť podmienky, aby sa niektoré záznamy zosúladili vždy alebo nikdy. Tieto pravidlá je možné nahrať, aby prepísali štandardný proces zhody. Napríklad ak sú v našich záznamoch záznamy John Doe I a John Doe II, systém by ich mohol priradiť ako jednu osobu. Vlastné pravidlá zhody vám umožňujú určiť, že ich profily odkazujú na rôznych ľudí. 
 
-Môžete určiť podmienky, aby sa niektoré záznamy zosúladili vždy alebo nikdy. Tieto pravidlá možno hromadne odovzdať do procesu zosúlaďovania.
+1. Prejdite do časti **Údaje** > **Zjednotiť** > **Spárovanie** a stlačte **Vlastná zhoda** v časti **Podrobnosti o zhodných záznamoch**.
 
-1. Vyberte možnosť **Vlastné zosúladenie** na obrazovke **Objednávka zosúladenia**.
+  :::image type="content" source="media/custom-match-create.png" alt-text="Snímok obrazovky sekcie pravidiel spárovania so zvýrazneným vlastným ovládacím prvkom spárovania.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Vytvorenie vlastného zosúladenia](media/custom-match-create.png "Vytvorenie vlastného zosúladenia")
+1. Ak nemáte nastavené žiadne vlastné pravidlá zhody, zobrazí sa nová tabla **Vlastná zhoda** s ďalšími podrobnosťami.
 
-2. Ak nemáte žiadne nahrané entity, zobrazí sa nové dialógové okno **Vlastné zosúladenie**, v ktorom je potrebné vyplniť niektoré podrobnosti. Ak ste tieto podrobnosti zadali skôr, prejdite na krok 8.
+1. Vyberte **Vyplniť šablónu**, ak chcete získať súbor šablóny, ktorý môže určovať, ktoré záznamy z ktorých entít sa majú vždy zosúladiť a ktoré sa nemajú zosúladiť nikdy. Budete musieť samostatne vyplniť záznamy „vždy zosúladiť“ a „nikdy nezosúladiť“ v dvoch rôznych súboroch.
 
-   > [!div class="mx-imgBorder"]
-   > ![Dialógové okno Nové vlastné zosúladenie](media/custom-match-new-dialog-box.png "Dialógové okno Nové vlastné zosúladenie")
-
-3. Vyberte **Vyplniť šablónu**, ak chcete získať súbor šablóny, ktorý môže určovať, ktoré záznamy z ktorých entít sa majú vždy zosúladiť a ktoré sa nemajú zosúladiť nikdy. Budete musieť samostatne vyplniť záznamy „vždy zosúladiť“ a „nikdy nezosúladiť“ v dvoch rôznych súboroch.
-
-4. Šablóna obsahuje polia na určenie hodnôt entity a primárneho kľúča entity, ktoré sa majú použiť pri vlastnom zosúlaďovaní. Ak napríklad chcete, aby sa váš primárny kľúč 12345 z entity Predaj vždy zosúladil s primárnym kľúčom 34567 z entity Kontakt, musíte zadať nasledovné:
+1. Šablóna obsahuje polia na určenie hodnôt entity a primárneho kľúča entity, ktoré sa majú použiť pri vlastnom zosúlaďovaní. Napríklad ak chcete primárny kľúč *12345* od entity *Predaj*, aby sa vždy zhodoval s primárnym kľúčom *34567* od entity *Kontakt*, vyplňte šablónu:
     - Entity1: Predaj
     - Entity1Key: 12345
     - Entity2: Kontakt
@@ -248,22 +231,22 @@ Môžete určiť podmienky, aby sa niektoré záznamy zosúladili vždy alebo ni
    
    Ak chcete určiť vlastné párovanie pre deduplikáciu entity, zadajte rovnakú entitu pre Entitu1 aj Entitu2 a nastavte rôzne hodnoty primárneho kľúča.
 
-5. Po pridaní všetkých úprav, ktoré chcete použiť, uložte súbor šablóny.
+1. Po pridaní všetkých úprav, ktoré chcete použiť, uložte súbor šablóny.
 
-6. Prejdite na **Údaje** > **Zdroje údajov** a prijmite súbory šablón ako nové entity. Po príprave ich môžete použiť na určenie konfigurácie zosúladenia.
+1. Prejdite na **Údaje** > **Zdroje údajov** a prijmite súbory šablón ako nové entity. Po príprave ich môžete použiť na určenie konfigurácie zosúladenia.
 
-7. Po nahratí súborov a entít k dispozícii, vyberte znova možnosť **Vlastné zosúladenie**. Zobrazia sa možnosti na určenie entít, ktoré chcete zahrnúť. Z rozbaľovacej ponuky vyberte požadované entity.
+1. Po nahratí súborov a entít k dispozícii, vyberte znova možnosť **Vlastné zosúladenie**. Zobrazia sa možnosti na určenie entít, ktoré chcete zahrnúť. Z rozbaľovacej ponuky vyberte požadované entity.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vlastné prepísanie zosúladenia](media/custom-match-overrides.png "Vlastné prepísanie zosúladenia")
+   :::image type="content" source="media/custom-match-overrides.png" alt-text="Snímka obrazovky dialógového okna na výber prepísania pre vlastný scenár zhody.":::
 
-8. Vyberte entity, ktoré chcete použiť pre **Vždy zosúladiť** a **Nikdy nezosúladiť**, a vyberte **Hotovo**.
+1. Vyberte entity, ktoré chcete použiť pre **Vždy zosúladiť** a **Nikdy nezosúladiť**, a vyberte **Hotovo**.
 
-9. Vyberte **Uložiť** na stránke **Zosúladiť** pre konfiguráciu vlastného zosúladenia, ktorú ste práve nastavili.
+1. Stlačte možnosť **Uložiť** na stránke **Spárovanie** použiť vlastnú konfiguráciu zhody.
 
-10. Vyberte **Spustiť** na stránke **Zosúladiť** a začnite s procesom zosúladenia. Použije sa vlastné konfigurácia zosúlaďovania. Všetky systémové pravidlá zosúlaďovania sa prepíšu nakonfigurovanou množinou.
+1. Stlačte možnosť **Spustiť** na stránke **Zhoda** na spustenie procesu spárovania. Ostatné zadané pravidlá zhody sú prepísané vlastnou konfiguráciou zhody.
 
-11. Po dokončení zosúladenia môžete overiť entitu **ConflationMatchPair**, aby sa potvrdilo, že prepísania sa použili pri zosúlaďovaní.
+> [!TIP]
+> Prejdite do možnosti **Údaje** > **Entity** a skontrolujte entitu **ConflationMatchPair** na potvrdenie, že došlo k použitiu prepísaných zmien.
 
 ## <a name="next-step"></a>Nasledujúci krok
 

@@ -2,19 +2,19 @@
 title: Prehľady cieľových skupín pre prehľad Dynamics 365 Customer Insights
 description: Prehľad prehľadov cieľových skupín pre Dynamics 365 Customer Insights.
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477014"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598649"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Prehľady cieľových skupín pre prehľad Dynamics 365 Customer Insights
 
@@ -25,7 +25,7 @@ Prehľady cieľových skupín vám pomôžu lepšie porozumieť vašim zákazní
 - **Odstrániť údajové silá a zjednotiť údaje o zákazníkoch**
 
   - Ľahko pripojiť a zjednotiť vaše údaje – a priniesť transakčné, pozorovacie a behaviorálne údaje z populárnych [zdrojov údajov pomocou vopred vytvorených konektorov](data-sources.md).
-  - Inteligentne transformovať údaje o zákazníkoch – vytvárať jednotné profily zákazníkov v súlade s [modelom Common Data Model](https://docs.microsoft.com/common-data-model/). Vyriešiť identity zákazníkov pomocou odporúčaní založených na AI/ML.
+  - Inteligentne transformovať údaje o zákazníkoch – vytvárať jednotné profily zákazníkov v súlade s [modelom Common Data Model](/common-data-model/). Vyriešiť identity zákazníkov pomocou odporúčaní založených na AI/ML.
 
 - **Obohatiť sa o inteligenciu publika obsiahnutú v programe Microsoft Graph**
 
@@ -42,7 +42,7 @@ Prehľady cieľových skupín vám pomôžu lepšie porozumieť vašim zákazní
 - **Analytici/správcovia údajov:**
 
   - Prístup k bohatej zbierke konektorov na príjem všetkých vašich údajov o zákazníkoch.
-  - Schopnosť zjednotiť údaje o zákazníkoch a transformovať ich do formátu [modelu Common Data Model](https://docs.microsoft.com/common-data-model/).
+  - Schopnosť zjednotiť údaje o zákazníkoch a transformovať ich do formátu [modelu Common Data Model](/common-data-model/).
   - Obohatenie informácií o zákazníkoch pomocou štatistík z analýz publika obsiahnutých v programe Microsoft Graph, ako sú napríklad podobnosť značky a záujmy.
   - Konfigurácia a ladenie „kliknutím a nie kódovaním“, ktoré uľahčujú konfiguráciu prehľadov cieľových skupín a identifikujú potenciálne problémy.
   - Vyčistenie a štandardizácia údajov o zákazníkoch z rôznych zdrojov pomocou odporúčaní založených na AI.  

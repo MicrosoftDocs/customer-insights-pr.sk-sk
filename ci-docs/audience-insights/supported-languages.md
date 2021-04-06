@@ -1,33 +1,33 @@
 ---
 title: Podporované jazyky pre prehľady cieľových skupín
 description: Porozumenie jazykovej podpore a jej konfigurácia.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268199"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595491"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Podporované jazyky pre funkciu prehľadov cieľových skupín
 
-Funkcia prehľadov cieľových skupín Dynamics 365 Customer Insights podporuje niekoľko jazykov. Táto téma obsahuje zoznam dostupných jazykov a poskytuje podporu pre ich zmenu, ako aj prehľad prekladaného obsahu.
+Prehľad cieľového publika pre Dynamics 365 Customer Insights je preložený do mnohých jazykov. Nasledujúci zoznam obsahuje dostupné jazyky a informácie o tom, čo je preložené. Môžete sa tiež dozvedieť viac informácií o tom, ako zmeniť jazykové nastavenia. 
 
 ## <a name="languages"></a>Jazyky
 
 | Názov jazyka (angličtina)|  Názov jazyka (rodný jazyk) |
 | ------------- | ------------- |
 | Baskičtina | euskara |
-| bulharčina | Български |
-| katalánčina | català |
-| čínština (zjednodušená) | 中文(简体) |
+| Bulharčina | български |
+| Katalánčina | català |
+| Čínština (zjednodušená) | 中文(简体) |
 | Čínština (tradičná) | 中文(繁體) |
 | Chorvátčina | hrvatski |
 | Čeština | čeština |
@@ -42,20 +42,20 @@ Funkcia prehľadov cieľových skupín Dynamics 365 Customer Insights podporuje 
 | Gréčtina | Ελληνικά |
 | Hindčina | हिंदी |
 | Maďarčina | magyar |
-| Indonézština | Bahasa Indonesia |
+| Indonézština | Indonézia |
 | Taliančina | italiano |
 | Japončina | 日本語 |
-| Kazaština | Қазақ |
+| Kazaština | қазақ тілі |
 | Kórejčina | 한국어 |
 | Lotyština | latviešu |
 | Litovčina | lietuvių |
-| Malajčina | Bahasa Melayu |
-| Nórčina (Bokmal) | norsk (bokmål) |
-| Poľština | Polski |
+| Malajčina | Melayu |
+| Nórčina (Bokmal) | norsk bokmål |
+| Poľština | polski |
 | Portugalčina (Brazília) | português |
 | Portugalčina (Portugalsko) | português |
 | Rumunčina | română |
-| Ruština | Русский |
+| Ruština | pусский |
 | Srbčina (cyrilika) | српски |
 | Srbčina (latinka) | srpski |
 | Slovenčina | slovenčina |

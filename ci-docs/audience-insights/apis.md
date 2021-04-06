@@ -1,20 +1,20 @@
 ---
 title: Práca s API
 description: Používajte rozhrania API a pochopte ich obmedzenia.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267543"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710479"
 ---
 # <a name="work-with-customer-insights-apis"></a>Pracujte s rozhraniami API v službe Customer Insights
 
@@ -36,7 +36,7 @@ Tento článok vás prevedie prístupom k rozhraniam API v službe Customer Insi
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Povoliť rozhrania API v službe Customer Insights":::
 
-1. Výberom položky **Preskúmajte naše rozhrania API** si môžete rozhrania API vyskúšať.
+1. Výberom položky **Preskúmajte naše rozhrania API** si môžete [rozhrania API vyskúšať](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Vyberte operáciu pre rozhranie API a vyberte položku **Vyskúšať**.
 
@@ -47,6 +47,9 @@ Tento článok vás prevedie prístupom k rozhraniam API v službe Customer Insi
 1. Prejdite do dolnej časti bočnej tably a vyberte ikonu **Poslať**.
 
 Odpoveď protokolu HTTP sa čoskoro objaví nižšie.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Animovaný gif ukazujúci, ako zvoliť testovanie rozhraní API.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Vytvorte novú registráciu aplikácie na portáli Azure
 
@@ -61,6 +64,8 @@ Tieto kroky vám pomôžu začať používať rozhrania API v službe Customer I
 
 1. Pri novej registrácii aplikácie prejdite na **Povolenia pre API**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Animovaný gif na nastavenie povolenia API v registrácii aplikácie.":::
+
 1. Vyberte položku **Pridať povolenie** a vyberte položku **Customer Insights** na bočnej table.
 
 1. Ako **Typ povolenia** vyberte **Delegované povolenia** a vyberte povolenie **user_impersonation**.
@@ -71,9 +76,11 @@ Tieto kroky vám pomôžu začať používať rozhrania API v službe Customer I
 
 ID aplikácie/klienta môžete použiť na registráciu tejto aplikácie v knižnici Microsoft Authentication Library (MSAL), aby ste získali nosný token, ktorý sa odošle s vašou požiadavkou pre API.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Animovaný gif na udelenie súhlasu správcu.":::
+
 Ďalšie informácie o MSAL nájdete v sekcii [Prehľad knižnice Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Ďalšie informácie o registrácii aplikácií v Azure nájdete v [novom prostredí na registráciu aplikácií na portáli Azure](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Ďalšie informácie o registrácii aplikácií v Azure nájdete v [novom prostredí na registráciu aplikácií na portáli Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Informácie o používaní rozhraní API našich knižníc klientov nájdete v sekcii [Knižnice klientov v službe Customer Insights](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ Informácie o používaní rozhraní API našich knižníc klientov nájdete v s
 
 1. Vyberte položku **Udeliť súhlas správcu pre...** na dokončenie registrácie aplikácie.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Animovaný gif na udelenie súhlasu správcu.":::
+
 1. Na záver musíme do služby Customer Insights pridať názov registrácie aplikácie ako používateľa.    
    Otvorte službu Customer Insights, prejdite na položku **Správca** > **Povolenia** a vyberte položku **Pridať používateľa**.
 
@@ -108,7 +117,7 @@ Informácie o používaní rozhraní API našich knižníc klientov nájdete v s
 
 ## <a name="customer-insights-client-libraries"></a>Knižnice klientov v službe Customer Insights
 
-Táto sekcia vám pomôže začať používať knižnice klientov dostupné pre rozhrania API v službe Customer Insights.
+Táto sekcia vám pomôže začať používať knižnice klientov dostupné pre rozhrania API v službe Customer Insights. Všetky zdrojové kódy knižníc a vzorové aplikácie nájdete na [stránke Customer Insights GitHub](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ Zistite viac o tom, ako začať používať knižnice klientov C# z NuGet.org. �
 
 #### <a name="use-the-c-client-library"></a>Použite knižnicu klientov C#
 
-1. Použite [knižnicu Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview), aby ste získali `AccessToken` pomocou svojej existujúcej [registrácie aplikácie Azure](#create-a-new-app-registration-in-the-azure-portal).
+1. Použite [knižnicu Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview), aby ste získali `AccessToken` pomocou svojej existujúcej [registrácie aplikácie Azure](#create-a-new-app-registration-in-the-azure-portal).
 
 1. Po úspešnom overení a získaní tokenu vytvorte nový alebo použite existujúci `HttpClient` s dodatočným **„oprávnením“ DefaultRequestHeaders** nastavený na **Nosný <access token>** a **Ocp-Apim-Subscription-Key** nastavený na [**kľúč predplatného** z vášho prostredia služby Customer Insights](#get-started-trying-the-customer-insights-apis).    
    Resetujte hlavičku **Oprávnenie**, ak je to vhodné. Napríklad ak vypršala platnosť tokenu.
@@ -141,5 +150,12 @@ Zistite viac o tom, ako začať používať knižnice klientov C# z NuGet.org. �
 1. Odpoveď bude pravdepodobne typu `object`, pretože metóda môže vrátiť viac typov (napríklad `IList<InstanceInfo>` a `ApiErrorResult`). Ak chcete skontrolovať typ návratu, môžete objekty bezpečne obsadiť do typov odpovedí uvedených na [stránke s podrobnosťami o rozhraní API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pre danú operáciu.    
    Ak sú potrebné ďalšie informácie o požiadavke, získajte prístup k nespracovanému objektu odpovede cez **metódy správ HTTP**.
 
+### <a name="nodejs-package"></a>Balíček NodeJS
+
+Použite klientske knižnice NodeJS dostupné cez NPM: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Balík Python
+
+Použite klientske knižnice Python dostupné cez PyPi: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

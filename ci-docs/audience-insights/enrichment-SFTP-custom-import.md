@@ -2,19 +2,19 @@
 title: Obohatenie pomocou vlastného importu protokolu SFTP
 description: Všeobecné informácie o obohatení pomocou vlastného importu protokolu SFTP.
 ms.date: 11/18/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jdahl
-ms.author: mhart
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269625"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595874"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obohatenie profilov zákazníkov o vlastné údaje (ukážka)
 
@@ -50,7 +50,7 @@ Ak chcete nakonfigurovať vlastný import protokolu SFTP, musíte splniť nasled
 
 ## <a name="defining-field-mappings"></a>Definovanie mapovania polí 
 
-Adresár, ktorý obsahuje súbor, ktorý sa má importovať na server SFTP, musí obsahovať aj súbor *model.json*. Tento súbor definuje schému, ktorá sa má použiť na importovanie údajov. Schéma musí používať [Common Data Model](https://docs.microsoft.com/common-data-model/) na určenie mapovania polí. Jednoduchá ukážka súboru model.json vyzerá takto:
+Adresár, ktorý obsahuje súbor, ktorý sa má importovať na server SFTP, musí obsahovať aj súbor *model.json*. Tento súbor definuje schému, ktorá sa má použiť na importovanie údajov. Schéma musí používať [Common Data Model](/common-data-model/) na určenie mapovania polí. Jednoduchá ukážka súboru model.json vyzerá takto:
 
 ```
 {

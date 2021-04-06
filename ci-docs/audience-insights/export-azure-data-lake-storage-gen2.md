@@ -2,19 +2,19 @@
 title: Export údajov služby Customer Insights Azure Data Lake Storage Gen2
 description: Zistite, ako môžete nakonfigurovať pripojenie k Azure Data Lake Storage Gen2.
 ms.date: 02/04/2021
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477198"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596658"
 ---
 # <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Konektor pre Azure Data Lake Storage Gen2 (ukážka)
 
@@ -29,8 +29,8 @@ Uložte si údaje zo služby Customer Insights do služby Azure Data Lake Storag
 1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa.
 
 1. Zadajte **Názov účtu**, **Kľúč účtu** a **Kontajner** pre svoje Azure Data Lake Storage Gen2.
-    - Naučte sa, ako vytvoriť účet úložiska na použitie s Azure Data Lake Storage Gen2, pozri [Vytvorte si účet úložiska](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account). 
-    - Ak sa chcete dozvedieť viac o tom, ako nájsť názov a kľúč účtu úložiska Azure Data Lake Gen2, prečítajte si [Spravujte nastavenia účtu úložiska na portáli Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Naučte sa, ako vytvoriť účet úložiska na použitie s Azure Data Lake Storage Gen2, pozri [Vytvorte si účet úložiska](/azure/storage/blobs/create-data-lake-storage-account). 
+    - Ak sa chcete dozvedieť viac o tom, ako nájsť názov a kľúč účtu úložiska Azure Data Lake Gen2, prečítajte si [Spravujte nastavenia účtu úložiska na portáli Azure](/azure/storage/common/storage-account-manage).
 
 1. Vyberte **Ďalej**.
 

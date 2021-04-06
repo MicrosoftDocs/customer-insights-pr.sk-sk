@@ -19,13 +19,13 @@
     - name: Výuka modulov
       items:
         - name: Príjem údajov
-          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+          href: /learn/modules/ingest-data-customer-insights/
         - name: Vytvorenie zjednoteného profilu zákazníka
-          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+          href: /learn/modules/unified-customer-profile/
         - name: "Práca s\_aplikáciou"
-          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+          href: /learn/modules/working-with-customer-insights/
         - name: Obohatenie údajov a predikcií
-          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+          href: /learn/modules/enrich-data/
     - name: Zdroje údajov
       items:
         - name: Prehľad zdrojov údajov
@@ -114,9 +114,15 @@
       items:
         - name: Prehľad cieľov exportu
           href: audience-insights/export-destinations.md
+        - name: AdRoll
+          href: audience-insights/export-adroll.md
+        - name: Adobe Campaign Standard
+          href: audience-insights/export-adobe-campaign-standard.md
+        - name: Platforma Adobe Experience
+          href: audience-insights/export-adobe-experience-platform.md
         - name: Autopilot
           href: audience-insights/export-autopilot.md
-        - name: Azure Blob Storage
+        - name: Úložisko Azure Blob
           href: audience-insights/export-azure-blob-storage.md
         - name: Azure Data Lake Storage Gen2
           href: audience-insights/export-azure-data-lake-storage-gen2.md

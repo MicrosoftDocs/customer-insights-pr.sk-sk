@@ -1,20 +1,20 @@
 ---
 title: Konektor Power Automate | Dokumentácia spoločnosti Microsoft
-description: Vytvárajte toky v Microsoft Power Automate z Dynamics 365 Customer Insights.
+description: Vytvorenie postupov v Microsoft Power Automate z Dynamics 365 Customer Insights.
 ms.date: 01/20/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268843"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597944"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (ukážka)
 
@@ -34,7 +34,7 @@ Pomocou spúšťačov môžete vytvárať postupy v cloude a automatizovať opak
 [Nakonfigurujte svoje spúšťače v Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Akcie Power Automate
-Konektor Power Automate poskytuje iné akcie ako dostupné spúšťače. Viac informácií nájdete v dokumente [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
+Konektor Power Automate poskytuje iné akcie ako dostupné spúšťače. Viac informácií nájdete v dokumente [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Vytvorte postup Power Automate
 
@@ -44,7 +44,7 @@ Konektor Power Automate poskytuje iné akcie ako dostupné spúšťače. Viac in
 
 1. Otvorí sa konektor Customer Insights (verzia Preview) v Power Automate. **Prihláste sa** do Power Automate.
 
-1. Vyberte si jeden z dostupných spúšťačov a do nového postupu pridajte ďalšie kroky. Viac informácií nájdete v časti [Vytvorenie postupu v cloude v Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+1. Vyberte si jeden z dostupných spúšťačov a do nového postupu pridajte ďalšie kroky. Viac informácií nájdete v časti [Vytvorenie postupu v cloude v Power Automate](/power-automate/get-started-logic-flow).
 
 Príklady použitia postupov: 
 - Pošlite správu do kanála Microsoft Teams, ak zlyhá obnovenie zdroja údajov. 

@@ -2,25 +2,25 @@
 title: Schémy entít pre Customer Insights vo formáte Common Data Model
 description: Pracujte s entitami vo formáte Common Data Model.
 ms.date: 04/17/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269303"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596380"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémy entít v modeli Common Data Model
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Model [Common Data Model](https://docs.microsoft.com/common-data-model/) je deklaratívna špecifikácia a definícia štandardných entít, ktoré predstavujú bežne používané koncepcie a aktivity v rôznych podnikových a produkčných aplikáciách. Tento model sa rozširuje aj na pozorovacie a analytické údaje. Model Common Data Model poskytuje jasne definované, modulárne a rozšíriteľné obchodné entity, ako napríklad Obchodný vzťah, Obchodná jednotka, Prípad, Kontakt, Potenciálny zákazník, Príležitosť a Produkt, ako aj interakcie s dodávateľmi, pracovníkmi a klientami, ako napríklad aktivity a zmluvy o úrovni služieb. Ktokoľvek môže budovať a rozširovať definície formátu Common Data Model s cieľom zaznamenávať ďalšie konkrétne obchodné nápady.
+Model [Common Data Model](/common-data-model/) je deklaratívna špecifikácia a definícia štandardných entít, ktoré predstavujú bežne používané koncepcie a aktivity v rôznych podnikových a produkčných aplikáciách. Tento model sa rozširuje aj na pozorovacie a analytické údaje. Model Common Data Model poskytuje jasne definované, modulárne a rozšíriteľné obchodné entity, ako napríklad Obchodný vzťah, Obchodná jednotka, Prípad, Kontakt, Potenciálny zákazník, Príležitosť a Produkt, ako aj interakcie s dodávateľmi, pracovníkmi a klientami, ako napríklad aktivity a zmluvy o úrovni služieb. Ktokoľvek môže budovať a rozširovať definície formátu Common Data Model s cieľom zaznamenávať ďalšie konkrétne obchodné nápady.
 
 Toto je zdieľaný dátový model, ktorý umožňuje aplikáciám a integrátorom údajom ľahšiu spoluprácu vďaka tomu, že poskytuje jednotnú definíciu údajov. Model Common Data Model obsahuje bohatý systém metaúdajov so štandardnými entitami, vzťahmi, hierarchiami, vlastnosťami a ďalšími. Pochádza z aplikácií systému Dynamics 365 a má otvorený zdroj na serveri GitHub s viac ako 260 štandardnými entitami. Veľký systém interných a externých partnerov prispieva modelu Common Data Model priemyselnými konceptmi.
 
@@ -32,13 +32,13 @@ Aby sme získali 360-stupňový pohľad na zákazníka a sprístupnili modely Cu
 
 | Entita | Opis |
 |---------|---------|
-|[CustomerActivity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Činnosť vykonávaná používateľom, ktorá má pre firmu pozorovaciu hodnotu. |
-|[CustomerProfile](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Osoba alebo organizácia, ktorá buď vykonáva obchodné aktivity, alebo má potenciál sa do nich zapojiť. |
-|[MeasureDefinition](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definícia kľúčových ukazovateľov výkonu rozdelených podľa nulových alebo viacerých dimenzií (ako napr. Mesačný počet aktívnych používateľov, Celková útrata zákazníka či Priemerné náklady na získanie zákazníka) |
-|[Segment](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Definuje skupinu členov so spoločnými črtami. |
-|[SegmentMembership](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Členovia, ktorí sa podieľajú na danom segmente. |
+|[CustomerActivity](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Činnosť vykonávaná používateľom, ktorá má pre firmu pozorovaciu hodnotu. |
+|[CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Osoba alebo organizácia, ktorá buď vykonáva obchodné aktivity, alebo má potenciál sa do nich zapojiť. |
+|[MeasureDefinition](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definícia kľúčových ukazovateľov výkonu rozdelených podľa nulových alebo viacerých dimenzií (ako napr. Mesačný počet aktívnych používateľov, Celková útrata zákazníka či Priemerné náklady na získanie zákazníka) |
+|[Segment](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Definuje skupinu členov so spoločnými črtami. |
+|[SegmentMembership](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Členovia, ktorí sa podieľajú na danom segmente. |
 
-Ďalšie informácie nájdete v dokumentácii o časti [Schémy entít pre Customer Insights v modeli Common Data Model](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
+Ďalšie informácie nájdete v dokumentácii o časti [Schémy entít pre Customer Insights v modeli Common Data Model](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Zobrazte entít pomocou Navigátora entít formátu Common Data Model
 

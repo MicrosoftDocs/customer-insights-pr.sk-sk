@@ -2,19 +2,19 @@
 title: Predikcia hodnoty životnosti zákazníka (CLV)
 description: Predpovedajte potenciálny výnos pre aktívnych zákazníkov v budúcnosti.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268613"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595828"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predikcia hodnoty životnosti zákazníka (CLV) (verzia Preview)
 
@@ -194,11 +194,11 @@ Na stránke s výsledkami sú tri základné sekcie údajov.
   
   - **Miera úspešnosti pri predikovaní zákazníkov s vysokou hodnotou**
 
-  Pozrite sa na rozdiel v predikcii zákazníkov s vysokou hodnotou pomocou modelu AI v porovnaní so základným modelom. Napríklad 84 % miera úspešnosti znamená, že zo všetkých zákazníkov s vysokou hodnotou v tréningových údajov dokázal model AI presne zachytiť 84 %. Potom porovnáme túto úspešnosť s úspešnosťou základného modelu, aby sme mohli nahlásiť relatívnu zmenu. Táto hodnota sa používa na priradenie klasifikácie k modelu.
+    Pozrite sa na rozdiel v predikcii zákazníkov s vysokou hodnotou pomocou modelu AI v porovnaní so základným modelom. Napríklad 84 % miera úspešnosti znamená, že zo všetkých zákazníkov s vysokou hodnotou v tréningových údajov dokázal model AI presne zachytiť 84 %. Potom porovnáme túto úspešnosť s úspešnosťou základného modelu, aby sme mohli nahlásiť relatívnu zmenu. Táto hodnota sa používa na priradenie klasifikácie k modelu.
 
   - **Metriky chýb**
     
-  Ďalšia metrika vám umožňuje skontrolovať celkovú výkonnosť modelu z hľadiska chyby pri predikovaní budúcich hodnôt. Na vyhodnotenie tejto chyby používame celkovú metriku strednej kvadratickej chyby (RMSE). RMSE je štandardný spôsob merania chyby modelu pri predpovedaní kvantitatívnych údajov. RMSE modelu AI sa porovnáva s RMSE základného modelu a uvádza sa relatívny rozdiel.
+    Ďalšia metrika vám umožňuje skontrolovať celkovú výkonnosť modelu z hľadiska chyby pri predikovaní budúcich hodnôt. Na vyhodnotenie tejto chyby používame celkovú metriku strednej kvadratickej chyby (RMSE). RMSE je štandardný spôsob merania chyby modelu pri predpovedaní kvantitatívnych údajov. RMSE modelu AI sa porovnáva s RMSE základného modelu a uvádza sa relatívny rozdiel.
 
   Model AI uprednostňuje presné poradie zákazníkov podľa toho, akú hodnotu pre vaše podnikanie majú. Na odvodenie výslednej klasifikácie modelu sa teda používa iba úspešnosť predikcie zákazníkov s vysokou hodnotou. Metrika RMSE je citlivá na odľahlé hodnoty. V scenároch, kde máte malé percento zákazníkov s mimoriadne vysokými hodnotami nákupu, nemusí celková metrika RMSE poskytnúť úplný obraz o výkone modelu.   
 

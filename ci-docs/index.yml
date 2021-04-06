@@ -7,12 +7,12 @@ metadata:
   ms.date: 10/29/2020
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
+  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
   ms.translationtype: HT
   ms.contentlocale: sk-SK
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4406943"
+  ms.lasthandoff: 03/15/2021
+  ms.locfileid: "5598491"
 title: Dokumentácia k službe Dynamics 365 Customer Insights
 summary: Nájdite užitočné zdroje, ktoré vám pomôžu začať, a dozviete sa o funkciách a možnostiach služby Customer Insights.
 landingContent:
@@ -23,7 +23,7 @@ landingContent:
     - text: Prehľad služby Customer Insights
       url: overview.md
     - text: Plány vydaní
-      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
     - text: Prístup k prostrediu
       url: https://home.ci.ai.dynamics.com/
 - title: Začnite so prehľadmi cieľových skupín
@@ -53,9 +53,9 @@ landingContent:
     - text: Vytvoriť nové prostredie
       url: audience-insights/home.md
     - text: Vytvorenie zjednoteného profilu zákazníka
-      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+      url: /learn/modules/unified-customer-profile/
     - text: Práca s aplikáciou
-      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+      url: /learn/modules/working-with-customer-insights/
 - title: Export údajov o prehľadoch cieľových skupín
   linkLists:
   - linkListType: how-to-guide

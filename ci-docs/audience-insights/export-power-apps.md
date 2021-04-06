@@ -2,19 +2,19 @@
 title: Konektor služby Power Apps
 description: Pripojte sa k Power Apps a Power Automate.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268935"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598174"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Konektor Microsoft Power Apps (ukážka)
 
@@ -22,9 +22,9 @@ Prineste zjednotené profily zákazníkov do svojich prispôsobených aplikáci�
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Pripojenie k Power Apps a Dynamics 365 Customer Insights
 
-Customer Insights sú jedným z mnohých [dostupných zdrojov údajov v Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights sú jedným z mnohých [dostupných zdrojov údajov v Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Prečítajte si dokumentáciu k Power Apps, kde sa dozviete, ako [pridať dátové pripojenie k aplikácii](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Odporúčame tiež si prečítať článok [ako Power Apps využíva delegovanie na spracovanie veľkých množín údajov v aplikáciách plátna](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Prečítajte si dokumentáciu k Power Apps, kde sa dozviete, ako [pridať dátové pripojenie k aplikácii](/powerapps/maker/canvas-apps/add-data-connection). Odporúčame tiež si prečítať článok [ako Power Apps využíva delegovanie na spracovanie veľkých množín údajov v aplikáciách plátna](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Dostupné entity
 
@@ -47,11 +47,11 @@ Delegovanie funguje pre entitu Zákazník a entitu Zjednotená aktivita.
 
 - Delegovanie pre entitu **Zjednotená aktivita**: Delegovanie pre túto entitu funguje iba pre polia **ActivityId** a **CustomerId**.  
 
-- Ďalšie informácie o delegovaní nájdete v časti [Delegovateľné funkcie a operácie Power Apps](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+- Ďalšie informácie o delegovaní nájdete v časti [Delegovateľné funkcie a operácie Power Apps](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Príklad ovládacieho prvku galérie
 
-Napríklad pridáte profily zákazníkov do [ovládacieho prvku galérie](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Napríklad pridáte profily zákazníkov do [ovládacieho prvku galérie](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Pridajte ovládací prvok **Galéria** do aplikácie, ktorú vytvárate.
 

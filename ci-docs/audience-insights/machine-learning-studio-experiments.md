@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270223"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598358"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Používajte modely založené na strojovom učení Azure Studio (klasické)
 
@@ -37,7 +37,7 @@ V rámci prvého kroku musíme vytvoriť pracovný priestor a otvoriť Strojové
 
 1. Vyhľadajte **Pracovný priestor štúdia strojového učenia** a vyberte **Vytvoriť**.
 
-1. Zadajte požadované podrobnosti na [vytvorenie pracovného priestoru](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Vyberte položku **Cenová úroveň plánu webových služieb** na základe množstva údajov, ktoré plánujete importovať. Ak chcete dosiahnuť najlepší výkon, vyberte **Umiestnenie**, ktoré je vám geograficky najbližšie.
+1. Zadajte požadované podrobnosti na [vytvorenie pracovného priestoru](/azure/machine-learning/studio/create-workspace). Vyberte položku **Cenová úroveň plánu webových služieb** na základe množstva údajov, ktoré plánujete importovať. Ak chcete dosiahnuť najlepší výkon, vyberte **Umiestnenie**, ktoré je vám geograficky najbližšie.
 
 1. Po vytvorení zdroja sa zobrazí hlavný panel štúdia strojového učenia. Vyberte **Spustiť štúdio strojového učenia**.
 
@@ -53,7 +53,7 @@ Teraz môžete vytvoriť nový experiment alebo importovať existujúcu šablón
 
 - [Odporúčanie produktu alebo najbližšia najlepšia akcia](#productrecommendation-or-next-best-action)
 
-1. Ak vytvoríte nový experiment alebo použijete šablónu experimentu z galérie, musíte nakonfigurovať vlastnosti **Importovať údaje**. Použite sprievodcu alebo priamo poskytnite údaje na prístup k ukladaciemu priestoru BLOB platformy Azure, ktoré obsahuje vaše údaje.  
+1. Ak vytvoríte nový experiment alebo použijete šablónu experimentu z galérie, musíte nakonfigurovať vlastnosti **Importovať údaje**. Použite sprievodcu alebo priamo poskytnite údaje na prístup k úložisku Azure Blob, ktoré obsahuje vaše údaje.  
 
    ![Experiment so štúdiom strojového učenia Azure](media/azure-machine-learning-studio-experiment.png)
 
@@ -65,7 +65,7 @@ Teraz môžete vytvoriť nový experiment alebo importovať existujúcu šablón
 
    ![Konfigurácia prediktívnej webovej služby](media/predictive-webservice-control.png)
 
-1. Keď experiment prediktívnej webovej služby prebehol úspešne, môžete ho nasadiť na automatické plánovanie. Ak chcete, aby webová služba pracovala s Customer Insights, zvoľte **Nasadiť webovú službu** > **Ukážka Nasadiť webovú službu [nová]**. [Ďalšie informácie o nasadení webovej služby](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Keď experiment prediktívnej webovej služby prebehol úspešne, môžete ho nasadiť na automatické plánovanie. Ak chcete, aby webová služba pracovala s Customer Insights, zvoľte **Nasadiť webovú službu** > **Ukážka Nasadiť webovú službu [nová]**. [Ďalšie informácie o nasadení webovej služby](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Nasadenie prediktívnej webovej služby](media/predictive-webservice-deploy.png)
 
@@ -85,7 +85,7 @@ Analýza straty sa vzťahuje na rôzne oblasti podnikania. V rámci tohto príkl
 
 Definícia straty sa môže líšiť v závislosti od scenára. V rámci tohto príkladu by mal byť hosť, ktorý nenavštívil hotel v minulom roku, označený ako stratený.  
 
-Šablónu pokusu je možné importovať z galérie. Najskôr sa uistite, že ste importovali údaje **Aktivita pobytov v hoteli**, **Údaje o zákazníkovi** a **Údaje o využití služieb** z ukladacieho priestoru BLOB platformy Azure.
+Šablónu pokusu je možné importovať z galérie. Najskôr sa uistite, že ste importovali údaje **Aktivita pobytov v hoteli**, **Údaje o zákazníkovi** a **Údaje o využití služieb** z úložiska Azure Blob.
 
    ![Import údajov pre model straty](media/import-data-azure-blob-storage.png)
 
@@ -116,7 +116,7 @@ Na nasledujúcom obrázku je znázornený kanál trénovania a vyhodnocovania mo
 
 ![Model straty v štúdiu strojového učenia Azure](media/azure-machine-learning-model.png)
 
-Používame tiež techniku s názvom **Dôležitosť charakteristickej vlastnosti permutácie**, dôležitý aspekt optimalizácie modelu. Vstavané modely majú malý až žiadny prehľad o vplyve akejkoľvek konkrétnej charakteristickej vlastnosti na výslednú predikciu. Kalkulačka dôležitosti funkcie používa vlastný algoritmus na výpočet vplyvu jednotlivých charakteristických vlastností na výsledok konkrétneho modelu. Dôležitosť charakteristickej vlastnosti je normalizovaná medzi +1 a -1. Negatívny vplyv znamená, že zodpovedajúci prvok má kontraintuitívny vplyv na výsledok a mal by sa z modelu odstrániť. Pozitívny vplyv naznačuje, že charakteristická vlastnosť výrazne prispieva k predikcii. Tieto hodnoty nie sú korelačnými koeficientmi, pretože ide o rôzne metriky. Viac informácií nájdete v časti [Dôležitosť charakteristickej vlastnosti permutácie](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Používame tiež techniku s názvom **Dôležitosť charakteristickej vlastnosti permutácie**, dôležitý aspekt optimalizácie modelu. Vstavané modely majú malý až žiadny prehľad o vplyve akejkoľvek konkrétnej charakteristickej vlastnosti na výslednú predikciu. Kalkulačka dôležitosti funkcie používa vlastný algoritmus na výpočet vplyvu jednotlivých charakteristických vlastností na výsledok konkrétneho modelu. Dôležitosť charakteristickej vlastnosti je normalizovaná medzi +1 a -1. Negatívny vplyv znamená, že zodpovedajúci prvok má kontraintuitívny vplyv na výsledok a mal by sa z modelu odstrániť. Pozitívny vplyv naznačuje, že charakteristická vlastnosť výrazne prispieva k predikcii. Tieto hodnoty nie sú korelačnými koeficientmi, pretože ide o rôzne metriky. Viac informácií nájdete v časti [Dôležitosť charakteristickej vlastnosti permutácie](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Celý [experiment straty je k dispozícii v galérii Azure AI](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Celý [pokus s odporúčaním produktu je prístupný v galérii Azure AI.](http
 
 ## <a name="integrate-custom-models"></a>Integrácia vlastných modelov
 
-Ak chcete tieto predikcie použiť v Customer Insights, musíte **exportovať** predikcie spolu s ID zákazníkov. [Exportujte ich do rovnakého umiestnenia ukladacieho priestoru BLOB platformy Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs), do ktorého exportujete zdrojové údaje. Prediktívne webové služby môžu byť naplánované tak, aby sa spúšťali pravidelne a aktualizovali skóre.
+Ak chcete tieto predikcie použiť v Customer Insights, musíte **exportovať** predikcie spolu s ID zákazníkov. [Exportujte ich do rovnakého umiestnenia úložiska Azure Blob](/azure/storage/common/storage-import-export-data-from-blobs), do ktorého exportujete zdrojové údaje. Prediktívne webové služby môžu byť naplánované tak, aby sa spúšťali pravidelne a aktualizovali skóre.
 
 Údaje vygenerované vlastným modelom možno použiť na ďalšie obohatenie údajov vašich zákazníkov. Viac informácií nájdete v časti [Vlastné modely strojového učenia](custom-models.md).
 

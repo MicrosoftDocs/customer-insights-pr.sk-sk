@@ -1,7 +1,7 @@
 ---
 title: Nové a prichádzajúce funkcie
 description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270451"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598495"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Sme radi, že môžeme oznámiť naše najnovšie aktualizácie! Tento článok sumarizuje funkcie verejnej ukážky, vylepšenia všeobecnej dostupnosti a aktualizácie funkcií. Ak chcete zobraziť dlhodobé plány pre funkcie, pozrite si [Plány vydaní Dynamics 365 a Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Sme radi, že môžeme oznámiť naše najnovšie aktualizácie! Tento článok sumarizuje funkcie verejnej ukážky, vylepšenia všeobecnej dostupnosti a aktualizácie funkcií. Ak chcete zobraziť dlhodobé plány pre funkcie, pozrite si [Plány vydaní Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
 Môžete si tiež pozrieť nasledujúce video, kde sa dozviete viac o možnostiach plánovaných na posledných šesť mesiacov.
 
@@ -30,6 +30,40 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Aktualizácie z februára 2021
+
+Aktualizácie z februára 2021 zahŕňajú niekoľko funkcií, aktualizácií výkonu a opráv chýb.
+
+#### <a name="extensibility"></a>Rozšíriteľnosť
+
+- **Export segmentov do aplikácie AdRoll**
+
+  Naše exportné destinácie sme rozšírili o AdRoll. Teraz môžete exportovať segmenty z Customer Insights príjemcom v AdRoll a použiť ich ako základ pre svoju reklamu. Ďalšie informácie nájdete v časti [Konektor pre AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmenty
+ 
+- **Duplikovať segment**
+  
+  Ak chcete vytvoriť nový segment na základe existujúceho, môžete teraz duplikovať segment a upraviť ho tak, aby ste ho ďalej spresnili. 
+
+- **Pridajte k segmentu ďalšie atribúty**
+
+  Teraz môžete do výstupu segmentu zahrnúť atribúty, aj keď tieto atribúty nie sú súčasťou profilu zákazníka. Napríklad zahrňte ID predplatného do segmentu, aj keď je súčasťou entity predplatného, ktorá má vzťah M:1 s entitou zákazníka. Pokiaľ atribút patrí entite súvisiacej s entitou zákazníka, môžete teraz zahrnúť tieto atribúty.  
+
+#### <a name="predictions"></a>Predikcie
+
+- **Vytvorenie predikcie odporúčania produktu**
+
+  Pochopenie toho, čo zákazníci majú záujem o kúpu, je jedným z prvých krokov potrebných na zlepšenie obchodných výnosov a budovanie lojality zákazníkov prostredníctvom personalizácie a angažovanosti. Poskytovanie odporúčaní pre produkty, ktoré nie sú v súlade so záujmami vašich zákazníkov, môže vytvoriť pocit odpojenia medzi zákazníkom a vašim podnikaním a v konečnom dôsledku obmedziť celkové potenciálne príjmy a skúsenosti zákazníka. 
+
+  Pomocou vlastných údajov môžete teraz vytvárať predpovede pre produkty, ktoré si zákazníci v budúcnosti pravdepodobne kúpia. Viac informácií nájdete v časti [Predikcia odporúčania produktov](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Správa systému
+
+- **Kopírovacie prostredie podporuje viac typov zdrojov údajov**
+
+  Správcovia môžu kopírovať konfigurácie prostredia do nového prostredia v tej istej organizácii. Táto vlastnosť rozširuje funkčnosť prostredia kopírovania pre prípady, v ktorých sa využívajú zdroje údajov založené na data lake Common Data Service alebo priečinku Common Data Model.
 
 ## <a name="january-2021-updates"></a>Aktualizácie z januára 2021
 

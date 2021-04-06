@@ -1,20 +1,20 @@
 ---
 title: Slúži na vytvorenie a spravovanie segmentov
 description: Vytvorenie segmentov zákazníkov na ich zoskupenie na základe rôznych atribútov.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270375"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597078"
 ---
 # <a name="create-and-manage-segments"></a>Slúži na vytvorenie a spravovanie segmentov
 
@@ -35,19 +35,19 @@ Segmenty sú spravované na stránke **Segmenty**.
 
 1. V prehľadoch cieľových skupín prejdite na stránku **Segmenty**.
 
-2. Vyberte **Nový** > **Prázdny segment**.
+1. Vyberte **Nový** > **Prázdny segment**.
 
-3. Na table **Nový segment** vyberte typ segmentu a zadajte a **Názov**.
+1. Na table **Nový segment** vyberte typ segmentu a zadajte a **Názov**.
 
    Voliteľne uveďte zobrazovaný názov a popis, ktorý pomôže identifikovať segment.
 
-4. Vyberte **Ďalšie** a prejdite na stránku **Tvorca segmentov**, kde definujete skupinu. Skupina je množina zákazníkov.
+1. Vyberte **Ďalšie** a prejdite na stránku **Tvorca segmentov**, kde definujete skupinu. Skupina je množina zákazníkov.
 
-5. Vyberte entity, ktorá obsahuje atribút, podľa ktorého chcete segmentovať.
+1. Vyberte entity, ktorá obsahuje atribút, podľa ktorého chcete segmentovať.
 
-6. Vyberte atribút pre segment podľa. Tento atribút môže mať jeden zo štyroch typov hodnôt: číselný, reťazec, dátum alebo logický.
+1. Vyberte atribút pre segment podľa. Tento atribút môže mať jeden zo štyroch typov hodnôt: číselný, reťazec, dátum alebo logický.
 
-7. Vyberte operátora a hodnotu pre vybraného atribútu.
+1. Vyberte operátora a hodnotu pre vybraného atribútu.
 
    > [!div class="mx-imgBorder"]
    > ![Filter vlastnej skupiny](media/customer-group-numbers.png "Filter skupiny zákazníkov")
@@ -64,9 +64,14 @@ Segmenty sú spravované na stránke **Segmenty**.
    > [!div class="mx-imgBorder"]
    > ![Cesta vzťahov pri vytváraní segmentov](media/segments-multiple-relationships.png "Cesta vzťahov pri vytváraní segmentov")
 
-9. Segment uložte výberom položky **Uložiť**. Váš segment bude uložený a spracovaný, ak budú splnené všetky požiadavky. V opačnom prípade sa uloží ako koncept.
+1. V predvolenom nastavení segmenty generujú výstupnú entitu, ktorá obsahuje všetky atribúty profilov zákazníkov, ktoré zodpovedajú definovaným filtrom. Ak je segment založený na iných entitách ako entita *Zákazník*, môžete do výstupnej entity pridať ďalšie atribúty z týchto entít. Stlačte možnosť **Atribúty projektu** na výber atribútov, ktoré sa pripoja k výstupnej entite.  
 
-10. Ak sa chcete vrátiť späť na stránku **Segmenty**, vyberte **Späť na segmenty**.
+   
+   Príklad: Segment je založený na entite, ktorá obsahuje údaje o činnosti zákazníkov súvisiace s entitou *Zákazník*. Segment vyhľadáva všetkých zákazníkov, ktorí zavolali na technickú podporu za posledných 60 dní. Môžete sa rozhodnúť pridať trvanie hovoru a počet hovorov ku všetkým zodpovedajúcim záznamom zákazníka vo výstupnej entite. Tieto informácie môžu byť užitočné pri zasielaní e-mailov s užitočnými odkazmi na články online pomoci a časté otázky zákazníkom, ktorí často volali.
+
+1. Segment uložte výberom položky **Uložiť**. Váš segment bude uložený a spracovaný, ak budú splnené všetky požiadavky. V opačnom prípade sa uloží ako koncept.
+
+1. Ak sa chcete vrátiť späť na stránku **Segmenty**, vyberte **Späť na segmenty**.
 
 ## <a name="manage-existing-segments"></a>Spravovanie existujúcich segmentov
 
@@ -85,6 +90,7 @@ Po výbere segmentu sú k dispozícii nasledujúce akcie:
 
 - **Zobrazenie** podrobností o segmente vrátane trendu počtu členov a ukážky členov segmentu.
 - **Úprava** segmentu na zmenu jeho vlastností.
+- **Vytvorte duplikát** segmentu. Môžete sa rozhodnúť okamžite upraviť jeho vlastnosti alebo duplikát jednoducho uložiť.
 - **Obnova** segmentu, ktorý obsahuje najnovšie údaje.
 - **Aktivácia** alebo **deaktivácia** segmentu. Segmenty majú dva možné stavy – aktívny alebo neaktívny. Tieto stavy sa hodia pri úprave segmentu. Pre neaktívne segmenty existuje definícia segmentu, zatiaľ však neobsahuje žiadnych zákazníkov. Keď aktivujete segment, jeho stav sa zmení z „neaktívneho“ na „aktívny“ a začne hľadať zákazníkov, ktorí zodpovedajú definícii segmentu. Ak je [plánované obnovenie](system.md#schedule-tab) nakonfigurované, neaktívne segmenty majú **Postavenie** uvedené ako **Preskočené**, čo naznačuje, že k obnoveniu ani nedošlo. Keď je neaktívny segment aktivovaný, obnoví sa a bude zahrnutý do plánovaných aktualizácií.
   Prípadne môžete použiť funkciu **Naplánovať neskôr** v rozbaľovacej ponuke **Aktivácia/Deaktivácia** na určenie budúceho dátumu a času aktivácie a deaktivácie konkrétneho segmentu.

@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267925"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597438"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Používajte modely založené na strojovom učení platformy Azure
 
@@ -25,13 +25,13 @@ Zjednotené údaje v službe Dynamics 365 Customer Insights sú zdrojom pre vytv
 - Prístup do Customer Insights
 - Aktívne predplatné Azure Enterprise
 - [Zjednotené profily zákazníka](data-unification.md)
-- [Export entít do ukladacieho priestoru BLOB platformy Azure](export-azure-blob-storage.md) je nakonfigurovaný
+- [Export entít do úložiska Azure Blob](export-azure-blob-storage.md) je nakonfigurovaný
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Nastavte pracovný priestor strojového učenia platformy Azure
 
-1. V sekcii [Vytvorenie pracovného priestoru služby strojového učenia platformy Azure](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) nájdete rôzne možnosti na vytvorenie pracovného priestoru. S cieľom dosiahnuť čo najlepší výkon vytvorte pracovný priestor v oblasti platformy Azure, ktorá je geograficky najbližšie k vášmu prostrediu služby Customer Insights.
+1. V sekcii [Vytvorenie pracovného priestoru služby strojového učenia platformy Azure](/azure/machine-learning/concept-workspace#-create-a-workspace) nájdete rôzne možnosti na vytvorenie pracovného priestoru. S cieľom dosiahnuť čo najlepší výkon vytvorte pracovný priestor v oblasti platformy Azure, ktorá je geograficky najbližšie k vášmu prostrediu služby Customer Insights.
 
-1. Získajte prístup do vášho pracovného priestoru prostredníctvom služby [strojového učenia platformy Azure Studio](https://ml.azure.com/). Existuje niekoľko [spôsobov interakcie](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) s vaším pracovným priestorom.
+1. Získajte prístup do vášho pracovného priestoru prostredníctvom služby [strojového učenia platformy Azure Studio](https://ml.azure.com/). Existuje niekoľko [spôsobov interakcie](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) s vaším pracovným priestorom.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Spolupracujte s návrhárom služby strojového učenia platformy Azure
 
@@ -39,13 +39,13 @@ Návrhár služby strojového učenia platformy Azure poskytne vizuálne plátno
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Práca so súpravou SDK služby strojového učenia platformy Azure
 
-Dátoví vedci a vývojári umelej inteligencie používajú [súpravu SDK strojového učenia platformy Azure](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) na vytváranie pracovných postupov strojového učenia. V súčasnosti nemožno modely trénované pomocou súpravy SDK integrovať priamo do služby Customer Insights. Na integráciu do služby Customer Insights je potrebný kanál hromadnej predikcie, ktorý tento model využíva.
+Dátoví vedci a vývojári umelej inteligencie používajú [súpravu SDK strojového učenia platformy Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) na vytváranie pracovných postupov strojového učenia. V súčasnosti nemožno modely trénované pomocou súpravy SDK integrovať priamo do služby Customer Insights. Na integráciu do služby Customer Insights je potrebný kanál hromadnej predikcie, ktorý tento model využíva.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Požiadavky na integráciu hromadného kanála so službou Customer Insights
 
 ### <a name="dataset-configuration"></a>Konfigurácia množín údajov
 
-Musíte vytvoriť množiny údajov, aby ste mohli používať údaje entít zo služby Customer Insights vo vašom kanáli pre hromadnú predikciu. Tieto množiny údajov je potrebné zaregistrovať v pracovnom priestore. Momentálne podporujeme iba [tabuľkové množiny údajov](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) vo formáte .csv. Množiny údajov, ktoré zodpovedajú údajom entity, je potrebné parametrizovať ako parameter kanála.
+Musíte vytvoriť množiny údajov, aby ste mohli používať údaje entít zo služby Customer Insights vo vašom kanáli pre hromadnú predikciu. Tieto množiny údajov je potrebné zaregistrovať v pracovnom priestore. Momentálne podporujeme iba [tabuľkové množiny údajov](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) vo formáte .csv. Množiny údajov, ktoré zodpovedajú údajom entity, je potrebné parametrizovať ako parameter kanála.
    
 * Parametre množiny údajov v Návrhárovi
    
@@ -76,7 +76,7 @@ Musíte vytvoriť množiny údajov, aby ste mohli používať údaje entít zo s
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importujte údaje o kanáli do služby Customer Insights
 
-* Návrhár poskytuje [Modul Export údajov](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data), ktorý umožňuje export výstupu kanála do ukladacieho priestoru Azure. V súčasnosti musí modul používať typ údajového súboru **Ukladací priestor objektu BLOB platformy Azure** a parametrizovať **Údajový súbor** a relatívny **Postup**. Customer Insights prepíše oba tieto parametre počas vykonávania kanála na dátový súbor a postup, ktoré sú pre produkt prístupné.
+* Návrhár poskytuje [Modul Export údajov](/azure/machine-learning/algorithm-module-reference/export-data), ktorý umožňuje export výstupu kanála do ukladacieho priestoru Azure. V súčasnosti musí modul používať typ údajového súboru **Úložisko Azure Blob** a parametrizovať **Údajový súbor** a relatívny **Postup**. Customer Insights prepíše oba tieto parametre počas vykonávania kanála na dátový súbor a postup, ktoré sú pre produkt prístupné.
    > [!div class="mx-imgBorder"]
    > ![Konfigurácia modulu Export údajov](media/intelligence-designer-importdata.png "Konfigurácia modulu Export údajov")
    

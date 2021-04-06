@@ -5,16 +5,16 @@ ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268291"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595920"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Doplňte svoje predbežné údaje o predikcie
 
@@ -31,7 +31,7 @@ Predikcie vám umožňujú ľahko vytvárať predikované hodnoty, ktoré môžu
 
 Predtým ako bude vaša organizácia môcť používať funkciu predikcií, skontrolujte, či sú splnené nasledujúce predpoklady:
 
-1. Vaša organizácia má nastavenú inštanciu [v Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) a nachádza sa v rovnakej organizácii ako Customer Insights.
+1. Vaša organizácia má nastavenú inštanciu [v Common Data Service](/ai-builder/build-model#prerequisites) a nachádza sa v rovnakej organizácii ako Customer Insights.
 
 2. Vaše prostredie je spojené s vašou inštanciou Common Data Service.
 
@@ -120,7 +120,7 @@ Po vytvorení predikcie môžete model v nástroji AI Builder prispôsobiť tak,
 
 4. Vyberte **Prispôsobiť v nástroji AI Builder**.
 
-5. Aktualizujte svoj model v nástroji AI Builder. [Prečítajte si viac informácií o správe modelov v nástroji AI Builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Aktualizujte svoj model v nástroji AI Builder. [Prečítajte si viac informácií o správe modelov v nástroji AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Pri ďalšom spustení predikcie sa použije aktualizovaný model, ktorý ste vytvorili.
 
