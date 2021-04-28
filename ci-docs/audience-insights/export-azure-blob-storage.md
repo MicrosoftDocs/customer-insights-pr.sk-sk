@@ -1,7 +1,7 @@
 ---
-title: Export údajov služby Customer Insights do úložiska Azure Blob
-description: Naučte sa, ako nakonfigurovať pripojenie k úložisku Azure Blob.
-ms.date: 09/18/2020
+title: Export údajov služby Customer Insights do úložiska Azure Blob Storage
+description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do úložiska Blob.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,45 +9,57 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0986ee5caf5fa079994ca584fb2c4d9294ddb80b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 294feff2f77c3756fbadb36c90aab430454f5967
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596196"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760254"
 ---
-# <a name="connector-for-azure-blob-storage-preview"></a><span data-ttu-id="65233-103">Konektor pre úložisko Azure Blob (ukážka)</span><span class="sxs-lookup"><span data-stu-id="65233-103">Connector for Azure Blob storage (preview)</span></span>
+# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a><span data-ttu-id="6938c-103">Exportujte zoznam segmentov a ďalšie údaje do Azure Blob Storage (ukážka)</span><span class="sxs-lookup"><span data-stu-id="6938c-103">Export segment list and other data to Azure Blob Storage (preview)</span></span>
 
-<span data-ttu-id="65233-104">Ukladajte svoje údaje zo služby Customer Insights do úložiska Azure Blob alebo ju používajte na prenos svojich údajov do iných aplikácií.</span><span class="sxs-lookup"><span data-stu-id="65233-104">Store your Customer Insights data in an Azure Blob storage or use it to transfer your data to other applications.</span></span>
+<span data-ttu-id="6938c-104">Uložte si údaje zo služby Customer Insights do služby Blob alebo ju použite na prenos údajov do iných aplikácií.</span><span class="sxs-lookup"><span data-stu-id="6938c-104">Store your Customer Insights data in a Blob storage or use it to transfer your data to other applications.</span></span>
 
-## <a name="configure-the-connector-for-azure-blob-storage"></a><span data-ttu-id="65233-105">Konfigurácia konektora pre úložisko Azure Blob</span><span class="sxs-lookup"><span data-stu-id="65233-105">Configure the connector for Azure Blob storage</span></span>
+## <a name="set-up-the-connection-to-blob-storage"></a><span data-ttu-id="6938c-105">Príprava pripojenia do úložiska Blob</span><span class="sxs-lookup"><span data-stu-id="6938c-105">Set up the connection to Blob storage</span></span>
 
-1. <span data-ttu-id="65233-106">V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.</span><span class="sxs-lookup"><span data-stu-id="65233-106">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="6938c-106">Prejdite do časti **Správca** > **Pripojenia**.</span><span class="sxs-lookup"><span data-stu-id="6938c-106">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="65233-107">Pod **Úložisko Azure Blob** vyberte **Nastaviť**.</span><span class="sxs-lookup"><span data-stu-id="65233-107">Under **Azure Blob Storage**, select **Set up**.</span></span>
+1. <span data-ttu-id="6938c-107">Stlačte možnosť **Pridať pripojenie** a stlačením možnosti **úložiska Azure Blob** nakonfigurujte pripojenie.</span><span class="sxs-lookup"><span data-stu-id="6938c-107">Select **Add connection** and choose **Azure Blob Storage** to configure the connection.</span></span>
 
-1. <span data-ttu-id="65233-108">Zadajte **Názov konta**, **Kľúč konta** a **Kontajner** pre váš účet úložiska Azure Blob.</span><span class="sxs-lookup"><span data-stu-id="65233-108">Enter **Account name**, **Account key**, and **Container** for your Azure Blob storage account.</span></span>
-    - <span data-ttu-id="65233-109">Ďalšie informácie o tom, ako nájsť názov a kľúč účtu úložiska Azure Blob nájdete na stránke [Správa nastavení účtu úložiska na portáli Azure](/azure/storage/common/storage-account-manage).</span><span class="sxs-lookup"><span data-stu-id="65233-109">To learn more about how to find the Azure Blob storage account name and account key, see [Manage storage account settings in the Azure portal](/azure/storage/common/storage-account-manage).</span></span>
-    - <span data-ttu-id="65233-110">Informácie o tom, ako vytvoriť kontajner, nájdete v časti [Vytvorenie kontajnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span><span class="sxs-lookup"><span data-stu-id="65233-110">To learn how to create a container, see [Create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span></span>
+1. <span data-ttu-id="6938c-108">Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia.</span><span class="sxs-lookup"><span data-stu-id="6938c-108">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="6938c-109">Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie.</span><span class="sxs-lookup"><span data-stu-id="6938c-109">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="6938c-110">Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.</span><span class="sxs-lookup"><span data-stu-id="6938c-110">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="65233-111">Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa.</span><span class="sxs-lookup"><span data-stu-id="65233-111">Give your destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="6938c-111">Vyberte používateľov, ktorí môžu používať toto pripojenie.</span><span class="sxs-lookup"><span data-stu-id="6938c-111">Choose who can use this connection.</span></span> <span data-ttu-id="6938c-112">Ak neurobíte nič, predvolená hodnota bude Správcovia.</span><span class="sxs-lookup"><span data-stu-id="6938c-112">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="6938c-113">Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="6938c-113">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="65233-112">Vyberte **Ďalej**.</span><span class="sxs-lookup"><span data-stu-id="65233-112">Select **Next**.</span></span>
+1. <span data-ttu-id="6938c-114">Zadajte **Názov účtu**, **Kľúč účtu** a **Kontajner** pre váš účet úložiska Blob.</span><span class="sxs-lookup"><span data-stu-id="6938c-114">Enter **Account name**, **Account key**, and **Container** for your Blob storage account.</span></span>
+    - <span data-ttu-id="6938c-115">Ak sa chcete dozvedieť viac o názve a kľúči účtu úložiska Blob, prečítajte si časť [Správa nastavení účtu v portáli Azure](/azure/storage/common/storage-account-manage).</span><span class="sxs-lookup"><span data-stu-id="6938c-115">To learn more about how to find the Blob storage account name and account key, see [Manage storage account settings in the Azure portal](/azure/storage/common/storage-account-manage).</span></span>
+    - <span data-ttu-id="6938c-116">Informácie o tom, ako vytvoriť kontajner, nájdete v časti [Vytvorenie kontajnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span><span class="sxs-lookup"><span data-stu-id="6938c-116">To learn how to create a container, see [Create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).</span></span>
 
-1. <span data-ttu-id="65233-113">Vyberte si políčko vedľa každej entity, ktorú chcete exportovať do tohto cieľa.</span><span class="sxs-lookup"><span data-stu-id="65233-113">Select the box next to each of the entities you want to export to this destination.</span></span>
+1. <span data-ttu-id="6938c-117">Stlačte možnosť **Uložiť** a dokončite pripojenie.</span><span class="sxs-lookup"><span data-stu-id="6938c-117">Select **Save** to complete the connection.</span></span> 
 
-1. <span data-ttu-id="65233-114">Vyberte položku **Uložiť**.</span><span class="sxs-lookup"><span data-stu-id="65233-114">Select **Save**.</span></span>
+## <a name="configure-an-export"></a><span data-ttu-id="6938c-118">Nakonfigurujte export</span><span class="sxs-lookup"><span data-stu-id="6938c-118">Configure an export</span></span>
 
-<span data-ttu-id="65233-115">Exportované údaje sa ukladajú do kontajnera úložiska Azure Blob, ktorý ste nakonfigurovali.</span><span class="sxs-lookup"><span data-stu-id="65233-115">Exported data is stored in the Azure Blob storage container you configured.</span></span> <span data-ttu-id="65233-116">Vo vašom kontajneri sa automaticky vytvoria nasledujúce cesty k priečinkom:</span><span class="sxs-lookup"><span data-stu-id="65233-116">The following folder paths are automatically created in your container:</span></span>
+<span data-ttu-id="6938c-119">Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu.</span><span class="sxs-lookup"><span data-stu-id="6938c-119">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="6938c-120">Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="6938c-120">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-- <span data-ttu-id="65233-117">Pre zdrojové entity a entity generované systémom: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span><span class="sxs-lookup"><span data-stu-id="65233-117">For source entities and entities generated by the system: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span></span>
-  - <span data-ttu-id="65233-118">Príklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span><span class="sxs-lookup"><span data-stu-id="65233-118">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span></span>
-- <span data-ttu-id="65233-119">Model.json pre exportované entity bude uložené na úrovni %ExportDestinationName%</span><span class="sxs-lookup"><span data-stu-id="65233-119">The model.json for the exported entities will reside at the %ExportDestinationName% level</span></span>
-  - <span data-ttu-id="65233-120">Príklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span><span class="sxs-lookup"><span data-stu-id="65233-120">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span></span>
+1. <span data-ttu-id="6938c-121">Prejdite na **Údaje** > **Exporty**.</span><span class="sxs-lookup"><span data-stu-id="6938c-121">Go to **Data** > **Exports**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="65233-121">Export údajov</span><span class="sxs-lookup"><span data-stu-id="65233-121">Export the data</span></span>
+1. <span data-ttu-id="6938c-122">Na vytvorenie nového exportu stlačte možnosť **Pridať cieľ**.</span><span class="sxs-lookup"><span data-stu-id="6938c-122">To create a new export, select **Add destination**.</span></span>
 
-<span data-ttu-id="65233-122">Môžete [exportovať údaje na vyžiadanie](export-destinations.md#export-data-on-demand).</span><span class="sxs-lookup"><span data-stu-id="65233-122">You can [export data on demand](export-destinations.md#export-data-on-demand).</span></span> <span data-ttu-id="65233-123">Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="65233-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+1. <span data-ttu-id="6938c-123">V poli **Pripojenie na export** vyberte pripojenie v časti úložiska Azure Blob.</span><span class="sxs-lookup"><span data-stu-id="6938c-123">In the **Connection for export** field, choose a connection from the Azure Blob Storage section.</span></span> <span data-ttu-id="6938c-124">Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.</span><span class="sxs-lookup"><span data-stu-id="6938c-124">If you don't see this section name, there are no connections of this type available to you.</span></span>
 
+1. <span data-ttu-id="6938c-125">Vyberte si políčko vedľa každej entity, ktorú chcete exportovať do tohto cieľa.</span><span class="sxs-lookup"><span data-stu-id="6938c-125">Select the box next to each of the entities you want to export to this destination.</span></span>
+
+1. <span data-ttu-id="6938c-126">Vyberte položku **Uložiť**.</span><span class="sxs-lookup"><span data-stu-id="6938c-126">Select **Save**.</span></span>
+
+<span data-ttu-id="6938c-127">Uloženie exportu nespustí export okamžite.</span><span class="sxs-lookup"><span data-stu-id="6938c-127">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="6938c-128">Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="6938c-128">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span>     
+<span data-ttu-id="6938c-129">Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="6938c-129">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+<span data-ttu-id="6938c-130">Exportované údaje sú uložené v kontajneri úložiska Blob, ktorý ste nakonfigurovali.</span><span class="sxs-lookup"><span data-stu-id="6938c-130">Exported data is stored in the Blob storage container you configured.</span></span> <span data-ttu-id="6938c-131">Vo vašom kontajneri sa automaticky vytvoria nasledujúce cesty k priečinkom:</span><span class="sxs-lookup"><span data-stu-id="6938c-131">The following folder paths are automatically created in your container:</span></span>
+
+- <span data-ttu-id="6938c-132">Pre zdrojové entity a entity generované systémom: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span><span class="sxs-lookup"><span data-stu-id="6938c-132">For source entities and entities generated by the system: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`</span></span>
+  - <span data-ttu-id="6938c-133">Príklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span><span class="sxs-lookup"><span data-stu-id="6938c-133">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`</span></span>
+- <span data-ttu-id="6938c-134">Model.json pre exportované entity bude na úrovni %ExportDestinationName%</span><span class="sxs-lookup"><span data-stu-id="6938c-134">The model.json for the exported entities will be at the %ExportDestinationName% level</span></span>
+  - <span data-ttu-id="6938c-135">Príklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span><span class="sxs-lookup"><span data-stu-id="6938c-135">Example: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
