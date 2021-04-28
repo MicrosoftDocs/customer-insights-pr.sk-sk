@@ -1,7 +1,7 @@
 ---
 title: Exportujte údaje Customer Insights do aplikácie Adobe Campaign Standard
 description: Naučte sa, ako používať segmenty štatistík publika v aplikácii Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596334"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760300"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Naučte sa, ako používať segmenty Customer Insights v aplikácii Adobe Campaign Standard (ukážka)
 
@@ -48,15 +48,21 @@ E-mail s ponukou, ktorý chcete poslať, bude obsahovať krstné meno, priezvisk
 
 ## <a name="export-your-target-audience"></a>Exportujte svoje cieľové publikum
 
+### <a name="configure-a-connection"></a>Konfigurácia a pripojenie
+
 Po identifikácii nášho cieľového publika môžeme nakonfigurovať export z prehľadov cieľovej skupiny do účtu úložiska Azure Blob.
 
-1. V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.
+1. V prehľadoch cieľovej skupiny prejdite na **Správca** > **Pripojenia**.
 
-1. Na dlaždici **Kampaň Adobe** vyberte položku **Nastaviť**.
+1. Vyberte **Pridať pripojenie** a zvoľte možnosť **Kampaň Adobe** na konfiguráciu pripojenia alebo vyberte možnosť **Nastaviť** v dlaždici **Kampaň Adobe**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Konfiguračná dlaždica pre Adobe Campaign Standard.":::
 
-1. Zadajte **Zobrazovacie meno** pre tento nový cieľ exportu a potom zadajte **Názov účtu**, **Kľúč účtu** a **Kontajner** účtu úložiska Azure Blob, do ktorého chcete segment exportovať.  
+1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
+
+1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
+
+1. Zadajte znak **Názov účtu**, **Kľúč účtu** a **Kontajner** účtu Azure Blob Storage, do ktorého chcete segment exportovať.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Snímka obrazovky konfigurácií účtu úložiska."::: 
 
@@ -64,7 +70,17 @@ Po identifikácii nášho cieľového publika môžeme nakonfigurovať export z 
 
    - Informácie o tom, ako vytvoriť kontajner, nájdete v časti [Vytvorenie kontajnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Vyberte **Ďalej**.
+1. Stlačte možnosť **Uložiť** a dokončite pripojenie.
+
+### <a name="configure-an-export"></a>Nakonfigurujte export
+
+Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
+
+1. Prejdite na **Údaje** > **Exporty**.
+
+1. Na vytvorenie nového exportu stlačte možnosť **Pridať export**.
+
+1. V poli **Pripojenie na export** vyberte pripojenie v časti Adobe Campaign. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
 
 1. Vyberte segment, ktorý chcete exportovať. V tomto príklade ide o **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Po identifikácii nášho cieľového publika môžeme nakonfigurovať export z 
 
 1. Vyberte položku **Uložiť**.
 
-Po uložení cieľu exportu ho nájdete na v časti **Správca** > **Exporty** > **Moje ciele exportu**.
+Po uložení cieľu exportu ho nájdete v časti **Údaje** > **Exporty**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Snímka obrazovky so zvýrazneným zoznamom exportov a ukážkovým segmentom.":::
-
-Teraz môžete [exportovať segment na požiadanie](export-destinations.md#export-data-on-demand). Export sa spustí aj pri každej [plánovanej obnove](system.md).
+Teraz môžete [exportovať segment na požiadanie](export-destinations.md#run-exports-on-demand). Export sa spustí aj pri každej [plánovanej obnove](system.md).
 
 > [!NOTE]
 > Zaistite, aby počet záznamov v exportovanom segmente bol v rámci povoleného limitu vašej licencie Adobe Campaign Standard.

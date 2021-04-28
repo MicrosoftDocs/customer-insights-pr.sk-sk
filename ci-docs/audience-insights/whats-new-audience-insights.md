@@ -1,7 +1,7 @@
 ---
 title: Nové a prichádzajúce funkcie
 description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598495"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896254"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598495"
 
 Sme radi, že môžeme oznámiť naše najnovšie aktualizácie! Tento článok sumarizuje funkcie verejnej ukážky, vylepšenia všeobecnej dostupnosti a aktualizácie funkcií. Ak chcete zobraziť dlhodobé plány pre funkcie, pozrite si [Plány vydaní Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
-Môžete si tiež pozrieť nasledujúce video, kde sa dozviete viac o možnostiach plánovaných na posledných šesť mesiacov.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých regiónov sa teda môžu niektoré funkcie dostať skôr než do ostatných. Pokiaľ nie je uvedené inak, nemusíte podniknúť žiadne kroky a my aplikáciu automaticky aktualizujeme bez prestojov.
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Aktualizácia z marca 2021
+
+Aktualizácie z marca 2021 obsahujú niekoľko funkcií, vylepšenia výkonu a opravy chýb.
+
+### <a name="activities"></a>Aktivity
+
+- **Sprievodca aktivitou a sémantické typy** Vylepšili sme a aktualizovali sme naše skúsenosti s mapovaním aktivít, aby sme usmernili a zjednodušili vytváranie mapovania aktivít. V tomto novom prostredí dostanú používatelia komentované skúsenosti, ktoré im pomôžu dokončiť každý krok procesu. V kroku mapovania aktivity si používateľ môže okrem výberu z mnohých typov aktivít zvoliť aj sémantické mapovanie údajov pre *Predplatné* a/alebo *SalesOrderLine* na priemyselné štandardné schémy, ktoré sa dajú použiť na následnú spotrebu.    
+  Ďalšie informácie nájdete v článku [Aktivity zákazníka](activities.md).
+
+### <a name="data-ingestion"></a>Prijímanie údajov
+
+- **Pripojte sa k lokálny zdrojom údajov pomocou tokov údajov a brán Power Platform** S potešením oznamujeme ukážku toku údajov Power Platform a lokálne pripojenie pomocou brán v nástroji Customer Insights s pridruženým prostredím Power Platform alebo Dataverse. Všetky nové zdroje údajov vytvorené v prostredí Customer Insights s prepojením prostredia Dataverse predvolené toky údajov Power Platform prinášajúce lokálny dátové pripojenie a bohatú sadu konektorov a transformačných schopností.
+
+### <a name="extensibility"></a>Rozšíriteľnosť
+
+- **Exporty organizované v spojeniach a exportoch** Zmenili sme názov stránky **Ciele exportu** na **Pripojenia** a pridali sme samostatnú stránku pre **Exporty**. V rámci tejto aktualizácie prevedieme existujúci export na páry spojenia a export pomocou tohto spojenia. Správcovia majú teraz viac prehľadu o odchádzajúcich údajoch na stránke **Pripojenia**. Všetky užívateľské roly majú prístup k stránke **Exporty**, ale iba správcovia sa môžu rozhodnúť, že prispievateľom umožnia upravovať konkrétne exporty so zdieľanými pripojeniami.     
+  Viac informácií nájdete v časti [Prehľad pripojení](connections.md) a [Prehľad exportov](export-destinations.md).
+
+- **Export segmentov do Campaign Monitor** Naše cieľové miesta exportu sme rozšírili o Campaign Monitor. Teraz môžete exportovať segmenty z Customer Insights do Campaign Monitor do zoznamov monitorov kampaní a použiť ich ako základ pre svoje marketingové kampane.    
+   Ďalšie informácie nájdete v článku [Export do Campaign Monitor](export-campaign-monitor.md).
+
+- **Export segmentov do Constant Contact** Naše cieľové miesta exportu sme rozšírili o Constant Contact. Teraz môžete exportovať segmenty z Customer Insights do zoznamov Constant Contact do zoznamov monitorov kampaní a použiť ich ako základ pre svoje marketingové kampane.   
+   Ďalšie informácie nájdete v článku [Export do Constant Contact](export-constant-contact.md).
+
+- **Export segmentov do RollWorks** Naše cieľové miesta exportu sme rozšírili o RollWorks. Teraz môžete exportovať segmenty z Customer Insights do cieľovej skupiny RollWorks do zoznamov monitorov kampaní a použiť ich ako základ pre svoje reklamy B2B.    
+   Ďalšie informácie nájdete v článku [Export do RollWorks](export-rollworks.md).
+
+- **Export segmentov do Snapchat** Naše cieľové miesta exportu sme rozšírili o Snapchat. Teraz môžete exportovať segmenty z Customer Insights do cieľovej skupiny Snapchat do zoznamov monitorov kampaní a použiť ich ako základ pre svoje reklamy.     
+   Ďalšie informácie nájdete v článku [Export do Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Predikcie
+
+- **Filtre produktu používajte v prediktívnych odporúčaniach produktov** Do nášho modelu odporúčania produktu sme pridali možnosť používať produktové filtre. Teraz môžete vytvoriť predikciu, ktorú používa iba podmnožinu vašich produktov.    
+   Viac informácií nájdete v časti [Konfigurácia produktových filtrov](predict-product-recommendation.md#configure-product-filters).
+
+- **Vytvárajte segmenty z predpovedí modelu** Pridali sme rýchly spôsob vytvárania segmentov pomocou výsledkov modelu predikcie. Na stránke s výsledkami modelu môžete ľahko vytvoriť nový segment výberom možnosti nového **Vytvorenia segmentu**.    
+  Viac informácií nájdete v časti [Vytvorte segment na základe predikcia modelu](prediction-based-segment.md).
+
+- **Vysvetlivky k odporúčaniu výrobkov** Pridali sme informácie vysvetľujúce kľúčové faktory, ktoré sa model AI naučil pri generovaní produktových odporúčaní, a mieru, do akej tieto faktory prispievajú k odporúčaniam produktu. Tieto informácie sa pridajú na obrazovku s výsledkami modelu.    
+   Viac informácií nájdete v článku [Kontrola stavu predikcie a výsledkov](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Aktualizácie z februára 2021
 
@@ -107,7 +144,7 @@ Aktualizácie z decembra 2020 zahŕňajú niekoľko funkcií, vylepšenia výkon
 
   Ďalej sme pridali nové možnosti konfigurácie, aby ste lepšie ovládali, akým spôsobom chcete obohatiť svoje profily zákazníkov. 
 
-  Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft-graph.md).
+  Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft.md).
 
 - **Kontrolujte, ktoré profily sa majú obohatiť**
 
@@ -309,8 +346,8 @@ Aktualizácie z augusta 2020 zahŕňajú niekoľko funkcií, vylepšenia výkonu
 
 - **Obohatenie o afinity záujmov je k dispozícii na viacerých trhoch**
 
-  Rozširujeme dostupnosť obohacovania afinít záujmov mimo USA na päť ďalších trhov: Kanada, Austrália, Spojené kráľovstvo, Francúzsko a Nemecko. Vďaka tomuto rozšíreniu môžete obohatiť svoje údaje o zákazníkoch o ďalšie záujmy uplatniteľné na týchto trhoch. Taktiež obohatíme vaše zákaznícke profily, ktoré sa nachádzajú na týchto trhoch, pomocou miestnych vlastníckych údajov z programu Microsoft Graph.
-  Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft-graph.md)
+  Rozširujeme dostupnosť obohacovania afinít záujmov mimo USA na päť ďalších trhov: Kanada, Austrália, Spojené kráľovstvo, Francúzsko a Nemecko. Vďaka tomuto rozšíreniu môžete obohatiť svoje údaje o zákazníkoch o ďalšie záujmy uplatniteľné na týchto trhoch. Obohatíme tiež vaše zákaznícke profily, ktoré sa nachádzajú na týchto trhoch, využitím miestnych chránených údajov od spoločnosti Microsoft.
+  Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Aktualizácie z júla 2020
@@ -330,8 +367,8 @@ Aktualizácie pre z júla 2020 zahŕňajú niekoľko funkcií, aktualizácií v�
 
 - **Obohatenie o afinity značiek je k dispozícii na viacerých trhoch**
 
-  Rozširujeme dostupnosť obohacovania afinít značiek mimo USA na päť ďalších trhov: Kanada, Austrália, Spojené kráľovstvo, Francúzsko a Nemecko. Vďaka tomuto rozšíreniu môžete na týchto trhoch obohatiť svoje zákaznícke údaje o miestne značky. Taktiež obohatíme vaše zákaznícke profily, ktoré sa nachádzajú na týchto trhoch, pomocou miestnych vlastníckych údajov z programu Microsoft Graph.
-  Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft-graph.md)
+  Rozširujeme dostupnosť obohacovania afinít značiek mimo USA na päť ďalších trhov: Kanada, Austrália, Spojené kráľovstvo, Francúzsko a Nemecko. Vďaka tomuto rozšíreniu môžete na týchto trhoch obohatiť svoje zákaznícke údaje o miestne značky. Obohatíme tiež vaše zákaznícke profily, ktoré sa nachádzajú na týchto trhoch, využitím miestnych chránených údajov od spoločnosti Microsoft.
+  Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Aktualizácie z júna 2020
 
@@ -355,7 +392,7 @@ Aktualizácie pre z júna 2020 zahŕňajú niekoľko funkcií, aktualizácií v�
 - **Oddelené obohatenie značiek a záujmov**
 
   Značky a záujmy sú teraz k dispozícii ako dva nezávislé druhy obohatenia. Oddelené obohatenia vám poskytujú flexibilitu pri ich individuálnej konfigurácii a správe v závislosti od vašich obchodných požiadaviek alebo potrieb.    
-  Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft-graph.md).
+  Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Rozšíriteľnosť
 

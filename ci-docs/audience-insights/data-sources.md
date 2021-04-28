@@ -1,7 +1,7 @@
 ---
 title: Používanie zdrojov údajov na príjem údajov
 description: Prečítajte si, ako importovať údaje z rôznych zdrojov.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595966"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887913"
 ---
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
@@ -32,8 +32,15 @@ Zdroj údajov môžete pridať tromi hlavnými spôsobmi:
 - [Z priečinka Common Data Model](connect-common-data-model.md)
 - [Z jazera Common Data Service](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Zatiaľ nemôžete pridať údaje z lokálneho zdroja údajov.
+## <a name="add-data-from-on-premises-data-sources"></a>Pridajte údaje z lokálny zdrojov údajov
+
+Na základe je podporované prijímanie údajov z lokálnych zdrojov údajov v prehľadoch cieľovej skupiny tokov údajov Power Platform. Toky údajov je možné v nástroji Customer Insights povoliť používateľom [poskytuje adresu URL prostredia Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) pri nastavovaní prostredia.
+
+Zdroje údajov, ktoré sa predvolene vytvoria po priradení a prostredí Dataverse s nástrojom Customer Insights [Toky údajov Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Odstrániť a znovu vytvoriť zdroje údajov, ktoré existovali pred prostredím Dataverse bolo spojené s používaním lokálnych dátových brán.
+
+Dátové brány z existujúceho prostredia Power BI alebo Power Apps bude viditeľné a môžete ho znova použiť v nástroji Customer Insights. Na stránke zdrojov údajov sú zobrazené odkazy, pomocou ktorých môžete prejsť do prostredia Power Platform, kde môžete zobraziť a nakonfigurovať lokálne dátové brány.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Snímka obrazovky zo stránky zdrojov údajov zobrazujúci odkazy smerujúce do prostredia Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Kontrola prijatých údajov
 
@@ -65,7 +72,7 @@ Ak chcete obnoviť zdroj údajov na požiadanie, postupujte takto:
 
 2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete obnoviť, a vyberte položku **Obnoviť** z rozbaľovacieho zoznamu.
 
-3. Zdroj údajov je teraz spustený na účely manuálneho obnovenia. Obnovením zdroja údajov aktualizujete schému entít aj údaje pre všetky entity uvedené v zdroji údajov.
+3. Zdroj údajov je teraz spustený na účely manuálneho obnovenia. Obnovením zdroja údajov sa aktualizuje schéma entity aj údaje pre všetky entity uvedené v zdroji údajov.
 
 4. Vyberte položku **Zastaviť obnovovanie**, ak chcete zrušiť existujúce obnovenie a zdroj údajov sa vráti do posledného stavu obnovenia.
 

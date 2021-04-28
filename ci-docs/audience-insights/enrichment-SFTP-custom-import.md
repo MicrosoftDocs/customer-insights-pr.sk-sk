@@ -1,7 +1,7 @@
 ---
 title: Obohatenie pomocou vlastného importu protokolu SFTP
 description: Všeobecné informácie o obohatení pomocou vlastného importu protokolu SFTP.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595874"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896300"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obohatenie profilov zákazníkov o vlastné údaje (ukážka)
 
@@ -24,29 +24,48 @@ Vlastný import protokolu SFTP (Secure File Transfer Protocol) vám umožňuje i
 
 Ak chcete nakonfigurovať vlastný import protokolu SFTP, musíte splniť nasledujúce predpoklady:
 
-- Máte používateľské poverenia (používateľské meno a heslo) pre umiestnenie protokolu SFTP, odkiaľ sa budú importovať údaje.
-- Máte adresu URL a číslo portu (zvyčajne 22) hostiteľa protokolu STFP.
-- Máte názov súboru a umiestnenie súboru, ktorý sa má importovať, na hostiteľovi protokolu SFTP.
-- Existuje súbor *model.json*, ktorý určuje schému pre údaje, ktoré sa majú importovať. Tento súbor musí byť v rovnakom adresári ako súbor, ktorý sa má importovať.
-- Máte povolenie roly [Správca](permissions.md#administrator).
+- Máte názov súboru a umiestnenie (cestu) súboru, ktorý sa má importovať na hostiteľa SFTP.
+- Existuje súbor *model.json*, ktorý špecifikuje [schému spoločného dátového modelu](/common-data-model/) na import údajov. Tento súbor musí byť v rovnakom adresári ako súbor, ktorý sa má importovať.
+- Pripojenie SFTP už nakonfiguroval správca *alebo* máte povolenia [správcu](permissions.md#administrator). Budete potrebovať prihlasovacie údaje používateľa, adresu URL a číslo portu pre umiestnenie SFTP, z ktorého chcete importovať údaje.
 
-## <a name="configuration"></a>Konfigurácia
+
+## <a name="configure-the-import"></a>Konfigurácia importu
 
 1. Prejdite na **Údaje** > **Obohatenie** a vyberte kartu **Objavovať**.
 
-1. Na **dlažici vlastného importu protokolu SFTP** vyberte položku **Obohatiť moje údaje**.
+1. V **dlaždici vlastného importu SFTP** stlačte možnosť **Obohatiť moje údaje** a potom stlačte možnosť **Začíname**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Dlaždica vlastného importu protokolu SFTP](media/SFTP_Custom_Import_tile.png "Dlaždica vlastného importu protokolu SFTP")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Dlaždica vlastného importu.":::
 
-1. Vyberte položku **Začíname** a zadajte poverenia a adresu servera SFTP. Napríklad zadajte sftp://mysftpserver.com:22.
+1. V rozbaľovacej ponuke stlačte možnosť [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie** a v rozbaľovacej ponuke stlačte možnosť **Vlastný import SFTP**.
 
-1. Zadajte názov súboru, ktorý obsahuje údaje, a postup k súboru na serveri SFTP, ak sa nenachádza v koreňovom priečinku.
+1. Vyberte **Pripojiť sa k vlastnému importu** na potvrdenie zvoleného spojenia.
 
-1. Všetky vstupy potvrďte výberom položky **Pripojiť k vlastnému importu**.
+1.  Stlačte možnosť **Ďalej** a vstúpte do časti **Názov súboru** a **Cesta** s údajmi, ktoré chcete importovať.
 
-   > [!div class="mx-imgBorder"]
-   > ![Rozbaľovacia ponuka konfigurácie vlastného importu protokolu SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Rozbaľovacia ponuka konfigurácie vlastného importu protokolu SFTP")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Snímka obrazovky pri zadávaní umiestnenia údajov.":::
+
+1. Stlačte možnosť **Ďalej** a uveďte názov obohatenia a názov výstupnej entity. 
+
+1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Nakonfigurujte pripojenie pre vlastný import SFTP 
+
+Na konfiguráciu pripojení musíte byť administrátor. Stlačte možnosť **Pridať pripojenie** pri konfigurácii obohatenia *alebo* prejdite na **Správca** > **Pripojenia** a vyberte **Nastaviť** na dlaždici Vlastný import.
+
+1. Zadajte názov pripojenia do boxu **Zobrazovaný názov**.
+
+1. Zadajte platné používateľské meno, heslo a adresu URL hostiteľa servera STFP, na ktorom sa nachádzajú importované údaje.
+
+1. Skontrolujte a poskytnite svoj súhlas pre **Ochranu osobných údajov a dodržiavanie súladu s nariadeniami** výberom začiarkavacieho políčka **Súhlasím**.
+
+1. Stlačte **Overiť** na overenie konfigurácie.
+
+1. Po dokončení overenia je možné pripojenie uložiť kliknutím na možnosť **Uložiť**.
+
+> [!div class="mx-imgBorder"]
+   > ![Konfiguračná stránka pripojenia Experian](media/enrichment-SFTP-connection.png "Konfiguračná stránka pripojenia Experian")
+
 
 ## <a name="defining-field-mappings"></a>Definovanie mapovania polí 
 
@@ -105,8 +124,5 @@ Môžete získať podrobné zobrazenie každého obohateného profilu výberom *
 ## <a name="next-steps"></a>Ďalšie kroky
 
 Stavajte na svojich obohatených údajoch o zákazníkoch. Vytváraním [segmentov](segments.md), [mier](measures.md) a [exportovaním údajov](export-destinations.md) môžete zákazníkom pripravovať prispôsobené prostredia.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

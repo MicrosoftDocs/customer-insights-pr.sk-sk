@@ -1,7 +1,7 @@
 ---
 title: Export údajov služby Customer Insights do Správcu reklám Facebook
-description: Prečítajte si, ako nakonfigurovať pripojenie s Správcovi reklám Facebook.
-ms.date: 06/05/2020
+description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Facebook Ads Manager.
+ms.date: 04/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,64 +9,83 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3e2b52fe743563e4bf61d870cbf1718e6c752a67
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ca32906a98bc734639fb369d6f5a92e8888fd850
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596702"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906829"
 ---
-# <a name="connector-for-facebook-ads-manager-preview"></a>Konektor pre Správcu reklám Facebook (ukážka)
+# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Export zoznamu segmentov do Facebook Ads Manager (verzia Preview)
 
 Export segmentov zjednotených zákazníckych profilov do Správcu reklám Facebook, na ktorom chcete vytvárať kampane na Facebook a Instagram.
 
-## <a name="prerequisites"></a>Predpoklady
+## <a name="prerequisites-for-connection"></a>Predpoklad na pripojenie
 
-- Musíte mať [**Reklamný účet Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), ktorý zahŕňa [**Firemný účet Facebook**](https://business.facebook.com/) .
+- Musíte mať [konto **Facebook Ad**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), ktoré zahŕňa [Obchodné konto **Facebook**](https://business.facebook.com/).
 - Na počítači musíte byť správcom [**Reklamného účtu Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
-## <a name="connect-to-facebook-ads-manager"></a>Pripojenie k Správcovi reklám Facebook
+## <a name="known-limitations"></a>Známe obmedzenia
 
-1. Prejdite do ponuky **Správca** > **Ciele exportu**.
+- Až 10 miliónov profilov zákazníkov na jeden export do Facebook Ads Manager.
+- Export do Facebook Ads Manager je obmedzený na segmenty.
+- Vytvárajte alebo aktualizujte iba vlastné cieľové skupiny v službe Facebook typu *zoznam zákazníkov*.
+- Export segmentov s celkovým počtom 10 miliónov profilov môže trvať až 90 minút.
 
-1. Pod Správca reklám **Facebook** vyberte **Nastavenie**.
+## <a name="set-up-connection-to-facebook-ads-manager"></a>Nastavenie pripojenia do Facebook Ads Manager
 
-1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa exportu.
+Predtým, ako budú môcť používatelia vytvoriť export, musí správca nakonfigurovať pripojenie k službe a umožniť prispievateľom používať pripojenie.
 
-1. Vyberte **Pokračovať s Facebook** a prihláste sa do svojho reklamného účtu Facebook.
+1. Prejdite do časti **Správca** > **Pripojenia**.
 
-1. Povoľte povolenie **ads_management** po vykonaní overenia cez Facebook.
+1. Stlačte možnosť **Pridať pripojenie** a stlačením možnosti **Facebook Google Ads** nakonfigurujte pripojenie.
 
-1. Zvoľte **Reklamný účet Facebook**, s ktorým chcete pracovať.
+1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
 
-1. Vyberte ikonu **Existujúce vlastné publikum** z rozbaľovacieho zoznamu alebo vytvorte a **Nové vlastné publikum**. Viac informácií nájdete v časti [**Publiká v Správcovi reklám Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude **Správcovia**. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Vyberte **Súhlasím** na potvrdenie **Ochrany osobných údajov a dodržiavanie súladu s nariadeniami**.
+1. Overenie pomocou služby Facebook Ads: 
 
-1. Vyberte **Ďalej** a nakonfigurujte export.
+   1. Vyberte **Pokračovať s Facebook** a prihláste sa do svojho reklamného účtu Facebook.
 
-## <a name="configure-the-connector"></a>Nakonfigurujte konektor
+   1. Povoľte povolenie **ads_management** po vykonaní overenia cez Facebook.
 
-1. V časti **Vyberte pole identifikátora kľúča** vyberte **E-mail**, **Meno a adresa** alebo **Telefón** na odoslanie so Správcu reklám Facebook.
+   1. Zvoľte **Reklamný účet Facebook**, s ktorým chcete pracovať.
+
+   1. Vyberte ikonu **Existujúce vlastné publikum** z rozbaľovacieho zoznamu alebo vytvorte a **Nové vlastné publikum**. Viac informácií nájdete v časti [**Publiká v Správcovi reklám Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+      > [!NOTE]
+      > Vlastné publiká môžete vytvárať alebo aktualizovať iba v službe Facebook typu *zoznam zákazníkov* s týmto exportom. V niektorých prípadoch sa v rozbaľovacom zozname zobrazia cieľové skupiny rôznych typov. Výber iného typu *zoznamu zákazníkov* bude mať za následok zlyhanie exportu. 
+
+1. Prečítajte si časť **Ochrana osobných údajov a ich dodržiavanie** a stlačte možnosť **Súhlasím**.
+
+1. Stlačte možnosť **Uložiť** a dokončite pripojenie.
+
+## <a name="configure-an-export"></a>Nakonfigurujte export
+
+Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
+
+1. Prejdite na **Údaje** > **Exporty**.
+
+1. Na vytvorenie nového exportu stlačte možnosť **Pridať cieľ**. 
+
+1. V poli **Pripojenie na export** vyberte pripojenie v časti **Facebook Ads Manager**. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
+
+1. V časti **Vyberte pole identifikátora kľúča** vyberte **E-mail**, **Meno a adresa** alebo **Telefón** na odoslanie so Správcu reklám Facebook. 
+
+1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia.
 
 1. Priraďte zodpovedajúce atribúty z vašej zjednotenej entity zákazníka na vybratý identifikátor kľúča.
    > [TIP] Najlepšie šance na zabezpečenie súladu nastanú, ak vyberiete ako kľúčový identifikátor **E-mail**. Pridanie ďalších identifikátorov môže zlepšiť zosúladenie.
 
-1. Vyberte **Pridať atribút** na mapovanie ďalších atribútov, ktoré sa majú odoslať do Správcu reklám Facebook. Atribúty zo Správcu reklám Facebook mapujú nasledujúce používateľsky prívetivé mená: **FN** = **Krstné meno**, **LN** = **Priezvisko**, **FI** = **Iniciála krstného mena**, **TELEFÓN** = **Telefón**, **GEN** = **Pohlavie**, **DOB** = **Dátum narodenia**, **ST** = **Štát**, **CT** = **Mesto**, **ZIP** = **PSČ**, **COUNTRY** = **Krajina/región**
+1. Vyberte **Pridať atribút** na mapovanie ďalších atribútov na odoslanie do Facebook Ads Manager. Atribúty z Facebook Ads Manager sú mapované pomocou nasledovných používateľských názvov: **FN** = **Krstné meno**, **LN** = **Priezvisko**, **FI** = **Prvé písmeno**, **PHONE** = **Telefón**, **GEN** = **Pohlavie**, **DOB** = **Dátum narodenia**, **ST** = **Stav**, **CT** = **Mesto**, **ZIP** = **PSČ**, **COUNTRY** = **Krajina/oblasť**
 
 1. Vyberte segmenty, ktoré chcete exportovať.
 
 1. Vyberte položku **Uložiť**.
 
-## <a name="export-the-data"></a>Export údajov
+Uloženie exportu nespustí export okamžite.
 
-Môžete [exportovať údaje na vyžiadanie](export-destinations.md). Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).
-
-## <a name="known-limitations"></a>Známe obmedzenia
-
-- Až 10 miliónov profilov zákazníkov na jeden export do Správcu reklám Facebook 
-- Export do Správcu reklám Facebook je obmedzený na segmenty
-- Export segmentov s celkovým počtom 10 miliónov profilov môže trvať až 90 minút
+Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 

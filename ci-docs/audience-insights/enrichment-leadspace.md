@@ -1,7 +1,7 @@
 ---
 title: Obohatenie profilov spoločností pomocou obohatenia tretej strany Leadspace
 description: Všeobecné informácie o obohatení pomocou obohatenia tretej stranou Leadspace.
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597668"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895932"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obohatenie profilov spoločnosti pomocou Leadspace (náhľad)
 
-Leadspace je spoločnosť zaoberajúca dátovou vedou, ktorá poskytuje platformu B2B Customer Data. Umožňuje zákazníkom so zjednotenými zákazníckymi profilmi pre spoločnosti obohacovať svoje údaje. Obohatenia zahŕňajú ďalšie atribúty, ako napríklad veľkosť, umiestnenie, odvetvie spoločnosti a ďalšie.
+Leadspace je spoločnosť zaoberajúca dátovou vedou, ktorá poskytuje platformu B2B Customer Data. Umožňuje zákazníkom so zjednotenými zákazníckymi profilmi pre spoločnosti obohacovať svoje údaje. Obohatenia zahŕňajú viaceré atribúty, ako sú veľkosť spoločnosti, umiestnenie, priemysel a ďalšie možnosti.
 
 ## <a name="prerequisites"></a>Predpoklady
 
 Na konfiguráciu Leadspace musia byť splnené nasledujúce predpoklady:
 
-- Máte aktívnu licenciu pre Leadspace a „večný kľúč“ (označovaný ako **token pre Leadspace**). Kontaktujte priamo [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) pre podrobnosti o ich produkte.
-- Máte povolenia roly [Správca](permissions.md#administrator).
+- Máte aktívnu licenciu Leadspace.
 - Máte [zjednotené profily zákazníkov](customer-profiles.md) pre spoločnosti.
+- Pripojenie Leadspace už nakonfiguroval správca alebo máte povolenia [správcu](permissions.md#administrator) a „trvalý kľúč” (označovaný ako **Token vedúceho priestoru**). Kontakt [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) priamo pre podrobnosti o ich produkte.
 
-## <a name="configuration"></a>Konfigurácia
+## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 
 1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Obohatenie**.
 
-1. Vyberte **Obohatiť moje údaje** na dlaždici Leadspace.
+1. Zvoľte možnosť **Obohatiť moje údaje** na dlaždici Leadspace a stlačte možnosť **Začíname**.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Snímka obrazovky dlaždice Leadspace.":::
 
-1. Vyberte položku **Začíname** a potom zadajte aktívny **token pre Leadspace** (večný kľúč). Skontrolujte a poskytnite svoj súhlas pre **Ochranu osobných údajov a dodržiavanie súladu s nariadeniami** výberom začiarkavacieho políčka **Súhlasím**. Potvrďte obidva vstupy výberom položky **Pripojiť k Leadspace**.
+1. V rozbaľovacej ponuke stlačte možnosť [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie** a zvoľte možnosť **Leadspace**. 
 
-1. Vyberte **Mapovanie údajov** a vyberte množinu údajov, ktorú chcete obohatiť o údaje spoločnosti z programu Leadspace. Môžete zvoliť entitu *Zákazník*, aby ste obohatili všetky svoje zákaznícke profily, alebo vyberte entitu segmentu, aby ste obohatili iba profily zákazníkov obsiahnuté v danom segmente.
+1. Vyberte **Pripojiť sa k Leadspace** na potvrdenie zvoleného spojenia.
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Vyberte si medzi profilom zákazníka a obohatením segmentu.":::
+1. Stlačte možnosť **Ďalej** a vyberte **Množina údajov o zákazníkoch** na obohatenie o demografické údaje spoločnosti z Leadspace. Môžete zvoliť entitu **Zákazník**, aby ste obohatili všetky svoje zákaznícke profily, alebo vyberte entitu segmentu, aby ste obohatili iba profily zákazníkov obsiahnuté v danom segmente.
 
-1. Kliknite na **Ďalej** a definujte, ktoré polia z vašich zjednotených profilov sa majú použiť na vyhľadanie zodpovedajúcich údajov spoločnosti z Leadspace. Pole **Názov spoločnosti** je povinné. Pre vyššiu presnosť zhody možno pridať až dve ďalšie polia, **Webová lokalita spoločnosti** a **Sídlo spoločnosti**.
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Snímka obrazovky pri výbere množiny údajov o zákazníkoch.":::
+
+1. Stlačte možnosť **Ďalej** a definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na vyhľadanie zodpovedajúcich demografických údajov spoločnosti z Leadspace. Pole **Názov spoločnosti** je povinné. Pre vyššiu presnosť zhody možno pridať až dve ďalšie polia, **Webová lokalita spoločnosti** a **Sídlo spoločnosti**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Tabla mapovania polí Leadspace.":::
-   
-1. Výberom položky **Použiť** dokončíte mapovanie polí.
 
-1. Vyberte **Spustiť** na obohatenie profilov spoločnosti. Dĺžka trvania obohacovania závisí od počtu zjednotených profilov zákazníkov.
+1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
+
+1. Zadajte názov obohatenia a vyberte **Uložiť obohatenie** po preskúmaní vašich možností.
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Nakonfigurujte pripojenie pre Leadspace 
+
+Na konfiguráciu pripojení musíte byť administrátor. Stlačte možnosť **Pridať pripojenie** pri konfigurácii obohatenia *alebo* prejdite na **Správca** > **Pripojenia** a vyberte **Nastaviť** na dlaždici Leadspace.
+
+1. Vyberte položku **Začíname** 
+
+1. Zadajte názov pripojenia do boxu **Zobrazovaný názov**.
+
+1. Poskytnite platný token Leadspace.
+
+1. Skontrolujte a poskytnite svoj súhlas pre **Ochrana osobných údajov a dodržiavanie súladu s nariadeniami** označením začiarkavacieho políčka **Súhlasím**.
+
+1. Stlačte **Overiť** na overenie konfigurácie.
+
+1. Po dokončení overenia stlačte možnosť **Uložiť**.
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Konfiguračná stránka pripojenia Leadspace.":::
 
 ## <a name="enrichment-results"></a>Výsledky obohatenia
 

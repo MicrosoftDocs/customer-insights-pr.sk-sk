@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598649"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896484"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Prehľady cieľových skupín pre prehľad Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ Prehľady cieľových skupín vám pomôžu lepšie porozumieť vašim zákazní
   - Ľahko pripojiť a zjednotiť vaše údaje – a priniesť transakčné, pozorovacie a behaviorálne údaje z populárnych [zdrojov údajov pomocou vopred vytvorených konektorov](data-sources.md).
   - Inteligentne transformovať údaje o zákazníkoch – vytvárať jednotné profily zákazníkov v súlade s [modelom Common Data Model](/common-data-model/). Vyriešiť identity zákazníkov pomocou odporúčaní založených na AI/ML.
 
-- **Obohatiť sa o inteligenciu publika obsiahnutú v programe Microsoft Graph**
+- **Obohatenie o údaje o cieľovej skupine**
 
-  - Budovať bohatšie zákaznícke profily [zahrnutím inteligencie publika obsiahnutej v programe Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Vytvorte si bohatšie profily zákazníkov pomocou [zahrnutia obohatených údajov](enrichment-hub.md).  
 
 - **Posilniť svoje obchodné procesy a prispôsobené skúsenosti zákazníkov**
 
@@ -43,7 +43,7 @@ Prehľady cieľových skupín vám pomôžu lepšie porozumieť vašim zákazní
 
   - Prístup k bohatej zbierke konektorov na príjem všetkých vašich údajov o zákazníkoch.
   - Schopnosť zjednotiť údaje o zákazníkoch a transformovať ich do formátu [modelu Common Data Model](/common-data-model/).
-  - Obohatenie informácií o zákazníkoch pomocou štatistík z analýz publika obsiahnutých v programe Microsoft Graph, ako sú napríklad podobnosť značky a záujmy.
+  - Obohatenie informácií o zákazníkoch pomocou štatistík z analýz publika obsiahnutých, ako sú napríklad podobnosť značky a záujmy.
   - Konfigurácia a ladenie „kliknutím a nie kódovaním“, ktoré uľahčujú konfiguráciu prehľadov cieľových skupín a identifikujú potenciálne problémy.
   - Vyčistenie a štandardizácia údajov o zákazníkoch z rôznych zdrojov pomocou odporúčaní založených na AI.  
 

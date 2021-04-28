@@ -1,7 +1,7 @@
 ---
 title: Slúži na vytvorenie a spravovanie prostredí
 description: Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598312"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5888005"
 ---
 # <a name="manage-environments"></a>Správa prostredí
 
@@ -44,6 +44,9 @@ Tento článok vysvetľuje, ako môžete vytvoriť novú organizáciu a ako zria
 
 Existujú dva spôsoby vytvorenia nového prostredia. Môžete buď špecifikovať úplne novú konfiguráciu alebo môžete skopírovať niektoré nastavenia konfigurácie z existujúceho prostredia.
 
+> [!NOTE]
+> Organizácie môžu vytvárať *dva* prostredia pre každú licenciu Customer Insights. Ak vaša organizácia zakúpi viac ako jednu licenciu, [kontaktujte náš tím podpory](https://go.microsoft.com/fwlink/?linkid=2079641) a zvýšte si počet dostupných prostredí. Ďalšie informácie o kapacite a prídavnej kapacite nájdete v stiahnutom materiáli [Sprievodca licenciami pre Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 Vytvorenie prostredia:
 
 1. Vyberte nástroj na výber **Prostredia** v hlavičke aplikácie.
@@ -55,14 +58,14 @@ Vytvorenie prostredia:
 
 1. V dialógovom okne **Vytvoriť nové prostredie** vyberte **Nové prostredie**.
 
-   Ak chcete [kopírovať údaje z aktuálneho prostredia](#additional-considerations-for-copy-configuration-preview), vyberte **Kopírovať z existujúceho prostredia**. Zobrazí sa zoznam všetkých dostupných prostredí vo vašej organizácii, z ktorých môžete kopírovať údaje.
+   Ak chcete [kopírovať údaje z aktuálneho prostredia](#considerations-for-copy-configuration-preview), vyberte **Kopírovať z existujúceho prostredia**. Zobrazí sa zoznam všetkých dostupných prostredí vo vašej organizácii, z ktorých môžete kopírovať údaje.
 
 1. Uveďte nasledujúce podrobnosti:
    - **Názov**: Názov tohto prostredia. Toto pole je už vyplnené, ak ste skopírovali existujúce prostredie, ale môžete ho zmeniť.
    - **Región**: Región, v ktorom je služba nasadená a hosťovaná.
    - **Typ**: Vyberte, či chcete vytvoriť výrobné alebo izolované prostredie.
 
-2. Voliteľne môžete vybrať **Rozšírené nastavenia**:
+1. Voliteľne môžete vybrať **Rozšírené nastavenia**:
 
    - **Uložiť všetky údaje do**: Určuje, kam sa majú ukladať výstupné údaje vygenerované z Customer Insights. Budete mať dve možnosti: **Úložisko Customer Insights** (Azure Data Lake spravované tímom Customer Insights) a **Azure Data Lake Storage** Gen2 (vaše vlastné úložisko Azure Data Lake Storage). V predvolenom nastavení je vybraná možnosť úložiska Customer Insights.
 
@@ -75,20 +78,20 @@ Vytvorenie prostredia:
 
    - V prípade možnosti Azure Data Lake Storage Gen2 si môžete vybrať medzi použitím možnosti založenej na zdrojoch a možnosti založenej na predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Názov **kontajnera** sa nedá zmeniť a bude znieť „customerinsights“.
    
-   - Ak chcete použiť [predikcie](predictions.md) alebo nakonfigurovať zdieľanie údajov s aplikáciami a riešeniami založenými na Microsoft Dataverse, uveďte URL prostredia Microsoft Dataverse pod **Konfigurácia zdieľania údajov s Microsoft Dataverse a povolenie ďalších funkcií**. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s so spravovaným Microsoft Dataverse Data Lake.
+   - Ak chcete použiť [predikcie](predictions.md), nakonfigurovať zdieľanie údajov s aplikáciami a riešeniami založenými na Microsoft Dataverse, alebo povoliť príjem údajov z lokálnych zdrojov údajov, uveďte adresu URL Microsoft Dataverse prostredia v časti **Konfigurácia zdieľania zdieľanie s Microsoft Dataverse a aktivujte ďalšie funkcie**. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s so spravovaným Microsoft Dataverse Data Lake.
 
      > [!NOTE]
      > - Zdieľanie údajov so spravovaným Microsoft Dataverse Data Lake nie je momentálne podporované, keď ukladáte všetky údaje do svojho Azure Data Lake Storage.
      > - [Predikcia chýbajúcich hodnôt v entite](predictions.md) nie je momentálne podporovaná, keď v súčasnosti povolíte zdieľanie údajov so spravovaným Microsoft Dataverse Data Lake.
 
      > [!div class="mx-imgBorder"]
-     > ![Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
+     > ![Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
    Keď spustíte procesy, ako je napríklad príjem údajov alebo vytváranie segmentov, vo vyššie uvedenom účte úložiska sa vytvoria zodpovedajúce priečinky. Dátové súbory a súbory model.json sa vytvoria a pridajú do príslušných podpriečinkov na základe spusteného procesu.
 
    Ak vytvoríte viac prostredí služby Customer Insights a rozhodnete sa uložiť výstupné entity z týchto prostredí do svojho účtu úložiska, pre každé prostredie sa vytvoria samostatné priečinky s výrazom ci_<environmentid> v kontajneri.
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>Ďalšie informácie o konfigurácii kopírovania (ukážka)
+### <a name="considerations-for-copy-configuration-preview"></a>Dôležité informácie o konfigurácii kopírovania (ukážka)
 
 Skopírujú sa nasledujúce konfiguračné nastavenia:
 
@@ -136,6 +139,18 @@ Môžete upraviť niektoré podrobnosti o existujúcich prostrediach.
 4. Ak je prostredie nakonfigurované na ukladanie údajov do Azure Data Lake Storage Gen2, môžete aktualizovať **Kľúč účtu**. Nemôžete však zmeniť **Názov účtu** ani názov **Kontajnera**.
 
 5. Prípadne môžete aktualizáciu vykonať cez pripojenie založené na kľúči účtu na pripojenie založené na zdrojoch alebo predplatnom. Po inovácii sa po aktualizácii už nebudete môcť vrátiť ku kľúču účtu. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Pri aktualizácii pripojenia nemôžete zmeniť informácie o **kontajneri**.
+
+6. Voliteľne môžete poskytnúť adresu URL prostredia Microsoft Dataverse v časti **Konfigurácia zdieľania údajov s Microsoft Dataverse a aktivujte ďalšie funkcie**. Tieto schopnosti zahŕňajú zdieľanie údajov s aplikáciami a riešeniami založenými na Microsoft Dataverse, príjem dát z lokálnych zdrojov údajov alebo použitie [predikcií](predictions.md). Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s so spravovaným Microsoft Dataverse Data Lake.
+
+   > [!NOTE]
+   > - Zdieľanie údajov so spravovaným Microsoft Dataverse Data Lake nie je momentálne podporované, keď ukladáte všetky údaje do svojho Azure Data Lake Storage.
+   > - [Predikcia chýbajúcich hodnôt v entite](predictions.md), keď v súčasnosti povolíte zdieľanie údajov s Data Lake pod správou Microsoft Dataverse.
+
+   Po aktivácii zdieľania údajov cez Microsoft Dataverse dôjde k spusteniu úplného obnovenia vašich zdrojov údajov a ďalších procesov. Ak sú procesy momentálne spustené a sú v poradí, neuvidíte možnosť povoliť zdieľanie údajov s Microsoft Dataverse. Môžete počkať, kým sa tieto procesy dokončia, alebo ich zrušiť, aby ste povolili zdieľanie údajov. 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse.":::
+   
+   Keď spustíte procesy, ako je napríklad príjem údajov alebo vytváranie segmentov, vo vyššie uvedenom účte úložiska sa vytvoria zodpovedajúce priečinky. Dátové súbory a súbory model.json sa vytvoria a pridajú do príslušných podpriečinkov v závislosti od spusteného procesu.
 
 ## <a name="reset-an-existing-environment"></a>Reset existujúceho prostredia
 

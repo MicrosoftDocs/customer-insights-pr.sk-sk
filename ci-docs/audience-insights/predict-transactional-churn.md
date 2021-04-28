@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597208"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906875"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predikcia odchodov založená na transakciách (ukážka)
 
@@ -46,6 +46,14 @@ Predikcia odchodov založená na transakciách pomáha predvídať, že zákazn�
         - **Časová značka:** Dátum a čas udalosti identifikovaný primárnym kľúčom.
         - **Udalosť:** Názov skupiny udalosti, ktorú chcete použiť. Napríklad pole s názvom „UserAction“ v obchode s potravinami môže byť kupónom, ktorý zákazník použije.
         - **Podrobnosti:** Podrobné informácie o udalosti. Hodnota poľa kupónu môže byť napríklad pole s názvom „CouponValue“ v obchode s potravinami.
+- Navrhované charakteristiky údajov:
+    - Dostatočné historické údaje: Údaje o transakcii minimálne na dvojnásobok zvoleného časového okna. Najlepšie dva až tri roky predplatných údajov. 
+    - Viac nákupov na zákazníka: Ideálne aspoň dve transakcie pre zákazníka.
+    - Počet zákazníkov: Minimálne 10 zákazníckych profilov, najlepšie viac ako 1 000 jedinečných zákazníkov. Model zlyhá s menej ako 10 zákazníkmi a nedostatkom historických údajov.
+    - Úplnosť údajov: Menej ako 20 % chýbajúcich hodnôt v údajovom poli poskytnutej entity.
+
+> [!NOTE]
+> Pre firmy s vysokou frekvenciou nákupu zákazníkov (každých pár týždňov) sa odporúča zvoliť kratšie okno predikcie a definíciu zmeny. Pre nízku frekvenciu nákupov (každých pár mesiacov alebo raz ročne) vyberte dlhšie predikcia okno a definíciu churn.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Vytvorenie predikcie odchodov založenej na transakciách
 
@@ -129,7 +137,9 @@ Predikcia odchodov založená na transakciách pomáha predvídať, že zákazn�
 1. Vyberte predikciu, ktorú chcete skontrolovať.
    - **Názov predikcie:** Názov predikcie zadaný pri jej vytváraní.
    - **Typ predikcie** Typ modelu použitého pre predikciu
-   - **Entita Výstup:** Názov entity, do ktorej sa má uložiť výstup predikcie. Entitu s týmto názvom nájdete v časti **Údaje** > **Entity**.
+   - **Entita Výstup:** Názov entity, do ktorej sa má uložiť výstup predikcie. Entitu s týmto názvom nájdete v časti **Údaje** > **Entity**.    
+     Vo výstupnej entite *ChurnScore* je predpovedaná pravdepodobnosť churn a *IsChurn* je binárny štítok založený na *ChurnScore* s prahom 0,5. Predvolená hranica nemusí pre váš scenár fungovať. [Vytvorte nový segment](segments.md#create-a-new-segment) s vami preferovaným prahom.
+     Nie všetci zákazníci sú nevyhnutne aktívni zákazníci. Niektoré z nich nemuseli dlho vykonávať žiadnu činnosť a na základe vašej definície churn sa už považujú za churn. Predpovedanie rizika zmeny rizika pre zákazníkov, ktorí už zmeny zaznamenali, nie je užitočné, pretože nie sú cieľovou skupinou.
    - **Predikované pole:** Toto pole je vyplnené iba pre niektoré typy predikcií a nepoužíva sa v predikcie odchodov.
    - **Stav:** Stav spustenia predikcie.
         - **Vo fronte:** Predikcia čaká na spustenie ďalších procesov.

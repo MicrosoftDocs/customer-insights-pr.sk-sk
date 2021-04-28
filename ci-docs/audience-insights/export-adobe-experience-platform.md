@@ -1,7 +1,7 @@
 ---
 title: Exportujte údaje Customer Insights do aplikácie Adobe Experience Platform
 description: Naučte sa, ako používať segmenty štatistík publika v aplikácii Adobe Experience Platform.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596288"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760120"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Naučte sa, ako používať segmenty Customer Insights v Adobe Experience Platform (ukážka)
 
@@ -51,21 +51,36 @@ E-mail s ponukou, ktorý chcete poslať, bude obsahovať krstné meno, priezvisk
 
 Po identifikácii nášho cieľového publika môžeme nakonfigurovať export z prehľadov cieľovej skupiny do účtu úložiska Azure Blob.
 
-1. V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.
+### <a name="configure-a-connection"></a>Konfigurácia a pripojenie
 
-1. V dlaždici **Úložisko Azure Blob** stlačte možnosť **Nastaviť**.
+1. Prejdite do časti **Správca** > **Pripojenia**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfiguračná dlaždica pre úložisko Azure Blob.":::
+1. Stlačte možnosť **Pridať pripojenie** a stlačte možnosť **Azure Blob Storage** alebo stlačte **Nastaviť** v dlaždici **Azure Blob Storage**:
 
-1. Zadajte **Zobrazovacie meno** pre tento nový cieľ exportu a potom zadajte **Názov účtu**, **Kľúč účtu** a **Kontajner** účtu úložiska Azure Blob, do ktorého chcete segment exportovať.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfiguračná dlaždica pre úložisko Azure Blob."::: na konfiguráciu pripojenia.
+
+1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
+
+1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Zadajte znak **Názov účtu**, **Kľúč účtu** a **Kontajner** pre váš účet úložiska Blob, kam chcete exportovať segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Snímka obrazovky konfigurácií účtu úložiska."::: 
+   
+    - Ak sa chcete dozvedieť viac o názve a kľúči účtu úložiska Blob, prečítajte si časť [Správa nastavení účtu v portáli Azure](/azure/storage/common/storage-account-manage).
+    - Informácie o tom, ako vytvoriť kontajner, nájdete v časti [Vytvorenie kontajnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Ďalšie informácie o tom, ako nájsť názov a kľúč účtu úložiska Azure Blob nájdete na stránke [Správa nastavení účtu úložiska na portáli Azure](/azure/storage/common/storage-account-manage).
+1. Stlačte možnosť **Uložiť** a dokončite pripojenie. 
 
-   - Informácie o tom, ako vytvoriť kontajner, nájdete v časti [Vytvorenie kontajnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Nakonfigurujte export
 
-1. Vyberte **Ďalej**.
+Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
+
+1. Prejdite na **Údaje** > **Exporty**.
+
+1. Na vytvorenie nového exportu stlačte možnosť **Pridať export**.
+
+1. V poli **Pripojenie na export** vyberte pripojenie v časti úložiska Azure Blob. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
 
 1. Vyberte segment, ktorý chcete exportovať. V tomto príklade ide o **ChurnProneCustomers**.
 
@@ -73,11 +88,9 @@ Po identifikácii nášho cieľového publika môžeme nakonfigurovať export z 
 
 1. Vyberte položku **Uložiť**.
 
-Po uložení cieľu exportu ho nájdete na v časti **Správca** > **Exporty** > **Moje ciele exportu**.
+Po uložení cieľu exportu ho nájdete v časti **Údaje** > **Exporty**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Snímka obrazovky so zvýrazneným zoznamom exportov a ukážkovým segmentom.":::
-
-Teraz môžete [exportovať segment na požiadanie](export-destinations.md#export-data-on-demand). Export sa spustí aj pri každej [plánovanej obnove](system.md).
+Teraz môžete [exportovať segment na požiadanie](export-destinations.md#run-exports-on-demand). Export sa spustí aj pri každej [plánovanej obnove](system.md).
 
 > [!NOTE]
 > Zaistite, aby počet záznamov v exportovanom segmente bol v rámci povoleného limitu vašej licencie Adobe Campaign Standard.

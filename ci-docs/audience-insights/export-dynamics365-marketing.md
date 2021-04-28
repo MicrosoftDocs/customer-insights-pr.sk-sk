@@ -1,7 +1,7 @@
 ---
 title: Export údajov služby Customer Insights do Dynamics 365 Marketing
-description: Naučte sa, ako nakonfigurovať pripojenie k Dynamics 365 Marketing.
-ms.date: 02/01/2021
+description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Dynamics 365 Marketing.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,35 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 892aff643872f11307a2c43e5670edab657d7848
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a13f6f81f5e2570d3302d88c02755f1d86321a01
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597622"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759656"
 ---
-# <a name="connector-for-dynamics-365-marketing-preview"></a>Konektor pre Dynamics 365 Marketing (ukážka)
+# <a name="use-segments-in-dynamics-365-marketing-preview"></a>Použitie segmentov v Dynamics 365 Marketing (ukážka)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Dynamics 365 Marketing umožňuje pomocou [segmentov](segments.md) generovať kampane a kontaktovať konkrétne skupiny zákazníkov. Viac informácií nájdete v článku [Použitie segmentov z Dynamics 365 Customer Insights s Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
 
-## <a name="prerequisite"></a>Predpoklady
+## <a name="prerequisite-for-a-connection"></a>Predpoklad na pripojenie
 
 - Pred exportom segmentu z Customer Insights do Sales Marketing byť záznamy kontaktov v Dynamics 365 Marketing. Prečítajte si viac o tom, ako prijímať kontakty v [Dynamics 365 Marketing pomocou Common Data Services](connect-power-query.md).
 
   > [!NOTE]
   > Export segmentov z prehľadov cieľových skupín do Marketing nevytvorí nové záznamy kontaktov v inštanciách Marketing. Záznamy kontaktov z Marketing musia byť obsiahnuté v prehľadoch cieľových skupín a použité ako zdroj údajov. Pred exportom segmentov je ich tiež potrebné ich zahrnúť do zjednotenej entity zákazníka na mapovanie ID zákazníkov na ID kontaktov.
 
-## <a name="configure-the-connector-for-marketing"></a>Nakonfigurujte konektor pre Marketing
+## <a name="set-up-connection-to-marketing"></a>Nastavenie pripojenia k Marketing
 
-1. V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.
+1. Prejdite do časti **Správca** > **Pripojenia**.
 
-1. Pod **Dynamics 365 Marketing** vyberte **Nastaviť**.
+1. Stlačte možnosť **Pridať pripojenie** a stlačením možnosti **Dynamics 365 Marketing** nakonfigurujte pripojenie.
 
-1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa exportu.
+1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
+
+1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Zadajte marketingovú adresu URL svojej organizácie do poľa **Adresa servera**.
 
@@ -43,15 +45,24 @@ Dynamics 365 Marketing umožňuje pomocou [segmentov](segments.md) generovať ka
 
 1. Namapujte pole ID zákazníka k ID kontaktu služby Dynamics 365.
 
-1. Vyberte **Ďalej**.
+1. Stlačte možnosť **Uložiť** a dokončite pripojenie. 
+
+## <a name="configure-an-export"></a>Nakonfigurujte export
+
+Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
+
+1. Prejdite na **Údaje** > **Exporty**.
+
+1. Na vytvorenie nového exportu stlačte možnosť **Pridať cieľ**.
+
+1. V poli **Pripojenie na export** vyberte pripojenie v časti Dynamics 365 Marketing. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
 
 1. Vyberte jeden alebo viac segmentov.
 
 1. Vyberte položku **Uložiť**.
 
-## <a name="export-the-data"></a>Export údajov
+Uloženie exportu nespustí export okamžite.
 
-Môžete [exportovať údaje na vyžiadanie](export-destinations.md). Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).
-
+Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

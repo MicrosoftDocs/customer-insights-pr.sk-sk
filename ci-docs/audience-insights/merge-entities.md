@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 737c593353878a5e322488d00de5dc5db5befda9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597852"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896530"
 ---
 # <a name="merge-entities"></a>Zlúčenie entít
 
@@ -83,7 +83,7 @@ Ak to nebolo prvýkrát, keď ste úspešne vykonali zlúčenie, všetky násled
 
 ## <a name="next-step"></a>Nasledujúci krok
 
-Konfigurujte [Aktivity](activities.md), [Obohatenie](enrichment-microsoft-graph.md) alebo [Vzťahy](relationships.md) a získajte viac informácií o svojich zákazníkoch.
+Konfigurujte [Aktivity](activities.md), [Obohatenie](enrichment-hub.md) alebo [Vzťahy](relationships.md) a získajte viac informácií o svojich zákazníkoch.
 
 Ak ste už nakonfigurovali činnosti, obohatenie alebo vzťahy alebo ak ste zadefinovali segmenty, automaticky sa spracujú, aby sa použili najnovšie údaje o zákazníkoch.
 

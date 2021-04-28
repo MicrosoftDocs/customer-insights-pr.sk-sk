@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595675"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906921"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikcia rizika straty predplatného (ukážka)
 
@@ -49,6 +49,12 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
         - **Časová značka:** Dátum a čas udalosti identifikovaný primárnym kľúčom.
         - **Udalosť:** Názov skupiny udalosti, ktorú chcete použiť. Napríklad pole s názvom „UserAction“ v streamovanej video službe by mohlo mať hodnotu „Zobrazené“.
         - **Podrobnosti:** Podrobné informácie o udalosti. Napríklad pole s názvom „ShowTitle“ v streamovanej video službe by mohlo mať hodnotu videa, ktoré si prezeral zákazník.
+- Navrhované charakteristiky údajov:
+    - Dostatočné historické údaje: Údaje o predplatnom minimálne na dvojnásobok zvoleného časového okna. Najlepšie dva až tri roky predplatných údajov.
+    - Stav predplatného: Údaje zahŕňajú aktívne a neaktívne predplatné pre každého zákazníka, takže na každé číslo zákazníka existuje viac záznamov.
+    - Počet zákazníkov: Minimálne 10 zákazníckych profilov, najlepšie viac ako 1 000 jedinečných zákazníkov. Model zlyhá s menej ako 10 zákazníkmi a nedostatkom historických údajov.
+    - Úplnosť údajov: Menej ako 20 % chýbajúcich hodnôt v údajovom poli poskytnutej entity.
+   
    > [!NOTE]
    > Budete potrebovať aspoň dva záznamy o aktivite pre 50 % zákazníkov, pre ktorých chcete vypočítať mieru odchodu.
 
@@ -67,7 +73,7 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
 ### <a name="define-customer-churn"></a>Definujte odídených zákazníkov
 
 1. Zadajte číslo **Dni od skončenia predplatného**, po ktorých bude vaša firma považovať zákazníka za strateného. Toto obdobie je zvyčajne určené pre obchodné aktivity, ako sú ponuky alebo iné marketingové úsilie, ktoré sa snažia zabrániť strate zákazníka.
-1. Zadajte počet **Dni skúmania budúcnosti na predpovedanie odchodu** na nastavenie okna, pre ktoré chcete predpovedať odchod. Ak chcete napríklad predpovedať riziko odchodu zákazníkov počas nasledujúcich 90 dní, aby ste sa prispôsobili svojmu marketingovému úsiliu o udržanie. Predpovedanie rizika odchodu na dlhšie alebo kratšie časové obdobia môže sťažiť riešenie faktorov vo vašom profile rizika odchodu, ale to veľmi závisí od vašich konkrétnych obchodných požiadaviek. Na pokračovanie zvoľte možnosť **Ďalej**
+1. Zadajte počet **Dni skúmania budúcnosti na predpovedanie odchodu** na nastavenie okna, pre ktoré chcete predpovedať odchod. Ak chcete napríklad predpovedať riziko odchodu zákazníkov počas nasledujúcich 90 dní, aby ste sa prispôsobili svojmu marketingovému úsiliu o udržanie. Predpovedanie rizika churn na dlhšie alebo kratšie časové obdobia môže sťažiť riešenie faktorov vo vašom profile rizika churn, v závislosti od vašich konkrétnych obchodných požiadaviek. Na pokračovanie zvoľte možnosť **Ďalej**
    >[!TIP]
    > Môžete si vybrať **Uložiť a zavrieť** kedykoľvek a predikciu uložiť ako koncept. Draft predikcie nájdete na karte **Moje predikcie**, kde môžete pokračovať.
 
@@ -113,7 +119,8 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
 1. Vyberte predikciu, ktorú chcete skontrolovať.
    - **Názov predikcie:** Názov predikcie uvedený pri jej vytváraní.
    - **Typ predikcie:** Typ modelu použitého na predikciu
-   - **Entita Výstup:** Názov entity, do ktorej sa má uložiť výstup predikcie. Entitu s týmto názvom nájdete v časti **Údaje** > **Entity**.
+   - **Entita Výstup:** Názov entity, do ktorej sa má uložiť výstup predikcie. Entitu s týmto názvom nájdete v časti **Údaje** > **Entity**.    
+     Vo výstupnej entite *ChurnScore* je predpovedaná pravdepodobnosť churn a *IsChurn* je binárny štítok založený na *ChurnScore* s prahom 0,5. Predvolená hranica nemusí pre váš scenár fungovať. [Vytvorte nový segment](segments.md#create-a-new-segment) s vami preferovaným prahom.
    - **Predikované pole:** Toto pole sa vyplní iba pre niektoré typy predikcií a nepoužíva sa v predikcii rizika straty predplatného.
    - **Postavenie:** Aktuálny stav spustenia predikcie.
         - **Vo fronte:** Predikcia momentálne čaká na spustenie ďalších procesov.

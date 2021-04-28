@@ -1,7 +1,7 @@
 ---
 title: Obohatenie pomocou obohatenia tretej strany Experian
 description: Všeobecné informácie o obohatení pomocou obohatenia tretej stranou Experian.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597806"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896392"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obohatenie profilov zákazníkov o demografické údaje od spoločnosti Experian (ukážka)
 
@@ -25,10 +25,10 @@ Experian je svetový líder v oblasti marketingových služieb a zisťovania kre
 Ak chcete nakonfigurovať Experian, musia byť splnené nasledujúce predpoklady:
 
 - Máte aktívne predplatné Experian. Ak chcete získať predplatné, [kontaktujte Experian](https://www.experian.com/marketing-services/contact) priamo. [Ďalšie informácie o obohacovaní údajov Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Máte ID používateľa, ID strany a číslo modely pre svoj účet Secure Transport (ST) s podporou SSH, ktoré pre vás vytvorila spoločnosť Experian.
-- Máte povolenia roly [Správca](permissions.md#administrator) prehľadoch cieľových skupín.
 
-## <a name="configuration"></a>Konfigurácia
+- Pripojenie Experian už nakonfiguroval správca *alebo* máte povolenia [správcu](permissions.md#administrator). Pre svoj účet Secure Transport (ST) s povoleným SSH, ktorý pre vás spoločnosť Experian vytvorila, potrebujete tiež ID používateľa, ID strany a Číslo modelu.
+
+## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 
 1. Prejdite na **Údaje** > **Obohatenie** a vyberte kartu **Objavovať**.
 
@@ -36,26 +36,46 @@ Ak chcete nakonfigurovať Experian, musia byť splnené nasledujúce predpoklady
 
    > [!div class="mx-imgBorder"]
    > ![Dlaždica Experian](media/experian-tile.png "Dlaždica Experian")
+   > 
 
-1. Vyberte **Začíname** a zadajte ID používateľa, ID strany a Číslo modelu pre váš účet Secure Transport spoločnosti Experian. Skontrolujte a poskytnite svoj súhlas pre **Ochranu osobných údajov a dodržiavanie súladu s nariadeniami** výberom začiarkavacieho políčka **Súhlasím**. Všetky zadané údaje potvrďte výberom položky **Použiť**.
+1. V rozbaľovacej ponuke stlačte možnosť [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie** a v rozbaľovacej ponuke Experian stlačte možnosť Vlastný import SFTP. 
 
-## <a name="map-your-fields"></a>Priraďte svoje polia
+1. Vyberte **Pripojiť sa k Experian** na potvrdenie zvoleného spojenia.
 
-1.  Vyberte **Pridať údaje** a vyberte **Množinu zákazníckych údajov**, ktorú chcete obohatiť o demografické údaje od spoločnosti Experian. Môžete zvoliť entitu **Zákazník**, aby ste obohatili všetky svoje zákaznícke profily, alebo vyberte entitu segmentu, aby ste obohatili iba profily zákazníkov obsiahnuté v danom segmente.
+1.  Stlačte možnosť **Ďalej** a vyberte **Množina údajov o zákazníkoch** na obohatenie o demografické údaje z Experian. Môžete zvoliť entitu **Zákazník**, aby ste obohatili všetky svoje zákaznícke profily, alebo vyberte entitu segmentu, aby ste obohatili iba profily zákazníkov obsiahnuté v danom segmente.
 
-1. Vyberte svoje kľúčové identifikátory spomedzi **Meno a adresa**,**E-mail** alebo **Telefón**, ktoré odošlete spoločnosti Experian na zistenie identity.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Snímka obrazovky pri výbere množiny údajov o zákazníkoch.":::
 
-   > [!TIP]
-   > Viac kľúčových identifikačných atribútov zaslaných spoločnosti Experian pravdepodobne prinesie vyššiu mieru zhody.
+1. Stlačte možnosť **Ďalej** a definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na vyhľadanie zodpovedajúcich demografických údajov z Experian. Aspoň jedno z polí **Meno a adresa**, **Telefón** alebo **Email** je požadované. Pre vyššiu presnosť zhody je možné pridať až dve ďalšie polia. Tento výber ovplyvní mapovacie polia, ku ktorým máte prístup v ďalšom kroku.
 
-1. Vyberte **Ďalej** a mapujte zodpovedajúce atribúty z vašej zjednotenej entity zákazníka pre vybrané polia kľúčového identifikátora.
+    > [!TIP]
+    > Viac kľúčových identifikačných atribútov zaslaných spoločnosti Experian pravdepodobne prinesie vyššiu mieru zhody.
 
-1. Vyberte **Pridať atribút** na mapovanie akýchkoľvek ďalších atribútov, ktoré by ste chceli poslať spoločnosti Experian.
+1. Stlačte možnosť **Ďalej** na spustenie mapovania poľa.
 
-1.  Vyberte **Uložiť** na dokončenie mapovania polí.
+1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na vyhľadanie zodpovedajúcich demografických údajov z Experian. Požadované polia sú označené.
 
-    > [!div class="mx-imgBorder"]
-    > ![Mapovanie polí Experian](media/experian-field-mapping.png "Mapovanie polí Experian")
+1. Uveďte názov obohatenia a názov výstupnej entity.
+
+1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
+
+## <a name="configure-the-connection-for-experian"></a>Nakonfigurujte pripojenie pre Experian 
+
+Na konfiguráciu pripojení musíte byť administrátor. Stlačte možnosť **Pridať pripojenie** pri konfigurácii obohatenia *alebo* prejdite na **Správca** > **Pripojenia** a vyberte **Nastaviť** na dlaždici Experian.
+
+1. Vyberte položku **Začíname**.
+
+1. Zadajte názov pripojenia do boxu **Zobrazovaný názov**.
+
+1. Zadajte platné ID používateľa, ID strany a číslo modelu pre váš účet Experian Secure Transport.
+
+1. Skontrolujte a poskytnite svoj súhlas pre **Ochrana osobných údajov a dodržiavanie súladu s nariadeniami** označením začiarkavacieho políčka **Súhlasím**.
+
+1. Stlačte **Overiť** na overenie konfigurácie.
+
+1. Po dokončení overenia stlačte možnosť **Uložiť**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Konfiguračná tabla pripojenia Experian":::
 
 ## <a name="enrichment-results"></a>Výsledky obohatenia
 
