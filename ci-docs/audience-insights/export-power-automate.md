@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597944"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976107"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (ukážka)
 
@@ -27,7 +27,7 @@ Pomocou spúšťačov môžete vytvárať postupy v cloude a automatizovať opak
 - Spúšťač pri zlyhaní obnovenia zdroja údajov. 
 - Spúšťač pri úspešnom obnovení zdroja údajov.
 - Spúšťač pri prekročení prahu v segmente. Spúšťač je obmedzený na prekročenie prahu.
-- Spúšťač pri prekročení prahu vo firemnej miere. Spúšťač je obmedzený na prekročenie prahu.
+- Spúšťač pri prekročení prahu vo firemnej miere. Podporované sú len podnikové opatrenia bez dimenzie. Spúšťač je obmedzený na prekročenie prahu.
 - Spustí sa, keď sa dokončí úplné obnovenie (zdrojov údajov, segmentov, mier, ...).
 - Spustí sa, keď sa dokončí aktualizácia procesu zjednotenia (priradenie, párovanie, zlúčenie).
 

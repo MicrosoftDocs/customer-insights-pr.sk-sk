@@ -1,7 +1,7 @@
 ---
-title: Inštalácia a konfigurácia doplnku Karta zákazníka
-description: Inštalácia a konfigurácia doplnku Karta zákazníka pre Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Doplnok Customer Card pre aplikácie Dynamics 365
+description: Pomocou tohto doplnku zobrazujte údaje z prehľadov cieľovej skupiny v aplikáciách Dynamics 365.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597346"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059607"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplnok Karta zákazníka (ukážka)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dynamics 365. Pomocou doplnku Karta zákazníka si môžete prezerať demografické údaje, štatistiky a časové harmonogramy aktivít.
+Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dynamics 365. S doplnkom Customer Card nainštalovaným v podporovanej aplikácii Dynamics 365 si môžete zvoliť zobrazenie demografických údajov, štatistík a časových osí aktivít. Doplnok načíta údaje z Customer Insights bez ovplyvnenia údajov v pripojenej aplikácii Dynamics 365. 
 
 ## <a name="prerequisites"></a>Predpoklady
 
-- Aplikácia Dynamics 365 (napríklad Centrum predaja alebo Centrum služieb pre zákazníkov), verzia 9.0 a novšia, s povoleným Zjednoteným rozhraním.
-- Profily zákazníkov [prijaté z aplikácie Dynamics 365 pomocou služby Common Data Service](connect-power-query.md).
-- Používatelia doplnku Karta zákazníka musia byť [pridaní ako používatelia](permissions.md) v prehľadoch cieľových skupín.
-- [Konfigurované možnosti vyhľadávania a filtrovania](search-filter-index.md).
-- Demografický ovládací prvok: Demografické polia (ako napríklad vek alebo pohlavie) sú k dispozícii v zjednotenom profile zákazníka.
-- Kontrola obohatenia: Vyžaduje sa aktívne [obohatenie](enrichment-hub.md) aplikované na profily zákazníkov.
-- Inteligenčný ovládací prvok: Vyžaduje údaje generované pomocou strojového učenia platformy Azure ([predpovede](predictions.md) alebo [vlastné modely](custom-models.md))
-- Merací ovládací prvok: Vyžadujú sa [nakonfigurované miery](measures.md).
-- Ovládací prvok časovej osi: Vyžadujú sa [nakonfigurované aktivity](activities.md).
+- Doplnok funguje iba s aplikáciami Dynamics 365 riadenými modelmi, ako sú napríklad Sales alebo Customer Service, verzia 9.0 a novšia.
+- Aby sa vaše údaje Dynamics 365 mohli namapovať do profilov cieľovej skupiny, musia byť [prijaté z aplikácie Dynamics 365 pomocou konektora Common Data Service](connect-power-query.md).
+- Všetci používatelia Dynamics 365 doplnku Customer Card musia byť [pridaní ako používatelia](permissions.md) v prehľade cieľových skupín, aby mohli vidieť údaje.
+- [Konfigurované možnosti vyhľadávania a filtrovania](search-filter-index.md) v prehľadoch cieľovej skupiny sú nevyhnutné na fungovanie vyhľadávania údajov.
+- Každá kontrola doplnku sa spolieha na konkrétne údaje vo prehľadoch cieľovej skupiny:
+  - Merací ovládací prvok: Vyžadujú sa [nakonfigurované miery](measures.md).
+  - Inteligentná kontrola: Vyžaduje údaje generované pomocou [predikcií](predictions.md) alebo [vlastných modelov](custom-models.md).
+  - Demografický ovládací prvok: Demografické polia (ako napríklad vek alebo pohlavie) sú k dispozícii v zjednotenom profile zákazníka.
+  - Kontrola obohatenia: Vyžaduje sa aktívne [obohatenie](enrichment-hub.md) aplikované na profily zákazníkov.
+  - Ovládací prvok časovej osi: Vyžadujú sa [nakonfigurované aktivity](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Inštalácia doplnku Karta zákazníka
 
@@ -56,9 +57,9 @@ Môže to trvať nejaký čas, kým sa riešenie nainštaluje do vášho prostre
    > [!NOTE]
    > Skontrolujte, či blokovanie automaticky otváraných okien v prehľadávači neblokuje overovacie okno, keď vyberiete tlačidlo **Prihlásiť sa**.
 
-1. Vyberte prostredie, z ktorého chcete načítať údaje.
+1. Vyberte prostredie Customer Insights, z ktorého chcete načítať údaje.
 
-1. Definujte, ktoré pole sa má namapovať k záznamom v aplikácii Dynamics 365.
+1. Definujte mapovanie poľa na záznamy v aplikácii Dynamics 365. V závislosti od vašich údajov v Customer Insights môžete mapovať nasledujúce možnosti:
    - Na mapovanie ku kontaktu vyberte pole v entite Zákazník, ktoré sa zhoduje s ID entity vášho kontaktu.
    - Na mapovanie k obchodnému vzťahu vyberte pole v entite Zákazník, ktoré sa zhoduje s ID entity vášho obchodného vzťahu.
 

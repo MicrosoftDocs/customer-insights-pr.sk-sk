@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595583"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085641"
 ---
 # <a name="match-entities"></a>Priradenie entít
 
@@ -103,6 +103,18 @@ Pravidlá spárovania predstavujú súbory podmienok. Na spárovanie entít pod�
 
 > [!NOTE]
 > Na poradí pravidiel záleží. Algoritmus priraďovania sa pokúša zhodovať na základe vášho prvého pravidla a na druhé pravidlo pokračuje, iba ak s prvým pravidlom neboli identifikované žiadne zhody.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Zmeňte poradie entít v pravidlách zhody
+
+Môžete zmeniť poradie entít pre pravidlá zhody, aby ste zmenili poradie, v akom sú spracované. Pravidlá, ktoré sú v rozpore so zmeneným poradím, budú odstránené. Odstránené pravidlá musíte znova vytvoriť v aktualizovanej konfigurácii.
+
+1. Prejdite do ponuky **Údaje** > **Zjednotiť** > **Spárovanie** a stlačte možnosť **Upraviť**.
+
+1. Na table **Upraviť pravidlo** stlačte ovládací prvok **Pohyb hore/dole** alebo presúvaním entít môžete meniť poradie.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Možnosti zmeny, v akom poradí sa entity spracovávajú vo fáze spárovania.":::
+
+1. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definovanie deduplikácie na priradenej entite
 

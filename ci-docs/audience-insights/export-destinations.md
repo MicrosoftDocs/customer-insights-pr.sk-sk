@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896162"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016655"
 ---
 # <a name="exports-preview-overview"></a>Prehľad exportov (verzia Preview)
 
 Stránka **Exporty** zobrazuje všetky nakonfigurované exporty. Exporty zdieľajú konkrétne údaje s rôznymi aplikáciami. Môžu obsahovať zákaznícke profily alebo entity, schémy a podrobnosti mapovania. Každý export vyžaduje [pripojenie, nastavenie zo strany správcu na správu autentifikácie a prístupu](connections.md).
-
-> [!NOTE]
-> Až do marca 2021 vytvoril export pripojenie k príslušnej službe automaticky. Export teraz vyžaduje [pripojenie, vytvorené a zdieľané správcom](connections.md) skôr ako ich vytvoríte.
 
 Prejdite do ponuky **Údaje** > **Exporty** a zobrazte si stránku s exportmi. Všetky používateľské roly majú prístup na zobrazenie nakonfigurovaných exportov. Pomocou vyhľadávacieho poľa na paneli príkazov môžete vyhľadať exporty podľa ich názvu, názvu pripojenia alebo typu pripojenia.
 

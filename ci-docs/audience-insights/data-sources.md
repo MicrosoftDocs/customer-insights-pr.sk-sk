@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887913"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085549"
 ---
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
@@ -36,11 +36,9 @@ Zdroj údajov môžete pridať tromi hlavnými spôsobmi:
 
 Na základe je podporované prijímanie údajov z lokálnych zdrojov údajov v prehľadoch cieľovej skupiny tokov údajov Power Platform. Toky údajov je možné v nástroji Customer Insights povoliť používateľom [poskytuje adresu URL prostredia Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) pri nastavovaní prostredia.
 
-Zdroje údajov, ktoré sa predvolene vytvoria po priradení a prostredí Dataverse s nástrojom Customer Insights [Toky údajov Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Odstrániť a znovu vytvoriť zdroje údajov, ktoré existovali pred prostredím Dataverse bolo spojené s používaním lokálnych dátových brán.
+Zdroje údajov, ktoré sa predvolene vytvoria po priradení a prostredí Dataverse s nástrojom Customer Insights [Toky údajov Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Odstrániť a znovu vytvoriť zdroje údajov, ktoré existovali pred prostredím Dataverse bolo spojené s [používaním lokálnych dátových brán](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Dátové brány z existujúceho prostredia Power BI alebo Power Apps bude viditeľné a môžete ho znova použiť v nástroji Customer Insights. Na stránke zdrojov údajov sú zobrazené odkazy, pomocou ktorých môžete prejsť do prostredia Power Platform, kde môžete zobraziť a nakonfigurovať lokálne dátové brány.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Snímka obrazovky zo stránky zdrojov údajov zobrazujúci odkazy smerujúce do prostredia Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Kontrola prijatých údajov
 

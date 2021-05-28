@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887959"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049269"
 ---
 # <a name="define-and-manage-measures"></a>Definovanie a spravovanie mier
 
@@ -34,7 +34,7 @@ Táto sekcia vás prevedie vytvorením novej miery od nuly. Môžete vytvoriť m
 
 1. Vyberte **Upraviť názov** a zadajte **Názov** miery. 
    > [!NOTE]
-   > Ak má vaša nová konfigurácia mier iba dve polia, napríklad CustomerID a jeden výpočet, výstup sa pridá ako nový stĺpec do systémovo generovanej entity s názvom Customer_Measure. Hodnotu miery uvidíte v zjednotenom profile zákazníka. Ostatné miery vytvoria svoje vlastné entity.
+   > Ak má vaša nová konfigurácia opatrení iba dve polia, napríklad CustomerID a jeden výpočet, výstup sa pridá ako nový stĺpec do systémovo generovanej entity s názvom Customer_Measure. Hodnotu miery uvidíte v zjednotenom profile zákazníka. Ostatné miery vytvoria svoje vlastné entity.
 
 1. V konfiguračnej oblasti vyberte agregačnú funkciu z rozbaľovacej ponuky **Vyberte funkciu**. Medzi agregačné funkcie patria: 
    - **Sum**

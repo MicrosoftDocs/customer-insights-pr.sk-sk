@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759840"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059335"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Export segmentov do Marketo (ukážka)
 
@@ -44,7 +44,7 @@ Marketo umožňuje export zjednotených profilov zákazníkov s cieľom vytvára
 
 1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Zadajte svoje **[ID klienta Marketo, tajný kľúč klienta a názov hostiteľa koncového bodu REST](https://developers.marketo.com/rest-api/authentication/)**.
+1. Zadajte svoje **[ID klienta Marketo, tajný kľúč klienta a názov hostiteľa koncového bodu REST](https://developers.marketo.com/rest-api/authentication/)**. Názov hostiteľa koncového bodu REST je iba názov hostiteľa bez `https://`. Príklad: `xyz-abc-123.mktorest.com`. 
 
 1. Výberom položky **Súhlasím** potvrďte **Ochranu osobných údajov a dodržiavanie súladu s nariadeniami** a vyberte položku **Pripojiť** na inicializáciu pripojenia k službe Marketo.
 
@@ -62,7 +62,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. V poli **Pripojenie na export** vyberte pripojenie v časti Marketo. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
 
-1. Zadajte svoje **[ID zoznamu Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. Zadajte svoje **[ID zoznamu Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID zoznamu je čisto číselná hodnota. Napríklad, ak je vaše ID v zozname Marketo ST12345A7, odstráňte znak pred a za číslicami a zadajte `12345`. 
 
 1. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. 
 
@@ -74,7 +74,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 Uloženie exportu nespustí export okamžite.
 
-Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). V službe Marketo teraz nájdete svoje segmenty v sekcii [Zoznamy Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). V službe Marketo teraz nájdete svoje segmenty v sekcii [Zoznamy Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami

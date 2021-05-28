@@ -1,7 +1,7 @@
 ---
 title: Zlučovanie entít pri zjednotení údajov
 description: Zlučujte entity na účely vytvorenia jednotných profilov zákazníkov.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,61 +9,100 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896530"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085595"
 ---
 # <a name="merge-entities"></a>Zlúčenie entít
 
 Fáza zlúčenia je posledná fáza v procese zjednocovania údajov. Jeho účelom je zosúladenie protichodných údajov. Medzi príklady konfliktných údajov môže patriť meno zákazníka, ktoré sa nachádza v dvoch vašich množinách údajov, ale v každom sa zobrazuje trochu inak („Grant Marshall“ verzus „Grant Marshal“), alebo telefónne číslo, ktoré sa líši vo formáte (617-803-091X verzus 617803091X). Zlúčenie týchto kolidujúcich údajových bodov sa vykonáva na základe atribútov.
 
+:::image type="content" source="media/merge-fields-page.png" alt-text="Stránka zlúčenia v procese zjednotenia údajov zobrazujúca tabuľku so zlúčenými poľami, ktoré definujú zjednotený profil zákazníka.":::
+
 Po dokončení [porovnávacej fázy](match-entities.md) môžete začať fázu zlúčenia výberom dlaždice **Zlúčiť** na stránke **Zjednotiť**.
 
 ## <a name="review-system-recommendations"></a>Kontrola systémových odporúčaní
 
-Na stránke **Zlúčiť** môžete vybrať a vylúčiť atribúty, ktoré sa majú zlúčiť v rámci jednotnej entity profilu zákazníka (výsledok procesu konfigurácie). Niektoré atribúty sú zlúčené systémom automaticky.
+V časti **Údaje** > **Zjednotiť** > **Zlúčiť** vyberáte a vylučujete atribúty, ktoré sa majú zlúčiť v rámci vašej entity zjednoteného profilu zákazníka. Zjednotený profil zákazníka je výsledkom procesu zjednotenia údajov. Niektoré atribúty sú zlúčené systémom automaticky.
 
-### <a name="view-merged-attributes"></a>Zobrazenie zlúčených atribútov
+Ak chcete zobraziť atribúty, ktoré sú obsiahnuté v jednom z vašich automaticky zlúčených atribútov, vyberte tento zlúčený atribút na karte **Zákaznícke polia** tabuľky. Dva atribúty, ktoré tvoria zlúčený atribút, sa zobrazia v dvoch nových riadkoch pod zlúčeným atribútom.
 
-Ak chcete zobraziť atribúty, ktoré sú súčasťou jedného z automaticky zlúčených atribútov, vyberte tento zlúčený atribút. Dva atribúty, ktoré tvoria zlúčený atribút, sa zobrazia v dvoch nových riadkoch pod zlúčeným atribútom.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Zlúčené polia môžete oddeľovať, premenovávať, vylučovať a upravovať
 
-> [!div class="mx-imgBorder"]
-> ![Výber zlúčeného atribútu](media/configure-data-merge-profile-attributes.png "Výber zlúčeného atribútu")
+Môžete zmeniť spôsob, akým systém spracováva zlúčené atribúty, aby sa vytvoril jednotný profil zákazníka. Stlačte možnosť **Zobraziť viac** a vyberte, čo chcete zmeniť.
 
-### <a name="separate-merged-attributes"></a>Oddelenie zlúčených atribútov
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Možnosti v rozbaľovacej ponuke Zobraziť viac na správu zlúčených atribútov.":::
 
-Ak chcete oddeliť alebo zrušiť zlúčenie všetkých automaticky zlúčených atribútov, vyhľadajte tento atribút v tabuľke **Atribúty profilu**.
+Ďalšie informácie nájdete v nasledovných sekciách.
 
-1. Stlačte tlačidlo troch bodiek (...).
+## <a name="separate-merged-fields"></a>Oddelenie zlúčených polí
+
+Ak chcete oddeliť zlúčené polia, vyhľadajte atribút v tabuľke. Oddelené polia sa zobrazujú ako jednotlivé údajové body v zjednotenom profile zákazníka. 
+
+1. Vybrať zlúčené polia.
   
-2. V rozbaľovacej ponuke vyberte položku **Oddeliť polia**.
+1. Stlačte možnosť **Zobraziť viac** a stlačte možnosť **Oddeliť polia**.
+ 
+1. Potvrďte oddelenie.
 
-### <a name="remove-merged-attributes"></a>Odstránenie zlúčených atribútov
+1. Stlačte možnosť **Uložiť** a **Spustiť** na spracovanie zmien.
 
-Ak chcete vylúčiť atribút z entity profilu konečného zákazníka, nájdite ho v tabuľke **Atribúty profilu**.
+## <a name="rename-merged-fields"></a>Premenovať zlúčené polia
 
-1. Stlačte tlačidlo troch bodiek (...).
+Zmeňte zobrazovaný názov zlúčených atribútov. Názov výstupnej entity nemožno zmeniť.
+
+1. Vybrať zlúčené polia.
   
-2. V rozbaľovacom zozname vyberte položku **Nezlúčiť**.
+1. Stlačte možnosť **Zobraziť viac** a stlačte možnosť **Premenovať**.
 
-   Atribút sa presunie do sekcie **Odstránené zo záznamu zákazníka**.
+1. Potvrďte zmenený zobrazovaný názov. 
 
-## <a name="manually-add-a-merged-attribute"></a>Ručné pridanie zlúčeného atribútu
+1. Stlačte možnosť **Uložiť** a **Spustiť** na spracovanie zmien.
 
-Ak chcete pridať zlúčený atribút, prejdite na stránku **Zlúčiť**.
+## <a name="exclude-merged-fields"></a>Vylúčiť zlúčené polia
 
-1. Vyberte **Pridať zlúčený atribút**.
+Vylúčte atribút z jednotného profilu zákazníka. Ak sa pole používa v iných procesoch, napríklad v segmente, pred vylúčením z profilu zákazníka ho z týchto procesov odstráňte. 
 
-2. Zadajte **Názov** jeho neskoršiu identifikáciu na stránke **Zlúčiť**.
+1. Vybrať zlúčené polia.
+  
+1. Stlačte možnosť **Zobraziť viac** a stlačte možnosť **Vylúčiť**.
 
-3. Voliteľne uveďte **Zobrazované meno**, ktoré sa objaví v zjednotenej entite Profil zákazníka.
+1. Potvrďte vylúčenie.
 
-4. Nakonfigurujte **Výber duplicitných atribútov** na výber atribútov, ktoré chcete zlúčiť zo zosúladených entít. Môžete tiež hľadať atribúty.
+1. Stlačte možnosť **Uložiť** a **Spustiť** na spracovanie zmien. 
 
-5. Nastavte **Zoradiť podľa dôležitosti** na uprednostnenie jedného atribútu pred ostatnými. Napríklad, ak entita *WebAccountCSV* obsahuje najpresnejšie údaje o atribúte *Celé mená*, mali by ste uprednostniť túto entitu pred *ContactCSV* výberom *WebAccountCSV*. Ako výsledok, *WebAccountCSV* prejde na prvú prioritu, zatiaľ čo *ContactCSV* prejde na druhú prioritu pri posúvaní hodnôt pre atribút *Celé meno*.
+Na stránke **Zlúčiť** zvoľte možnosť **Vylúčené polia** a zobrazte si zoznam všetkých vylúčených polí. Táto tabla vám umožňuje pridať vylúčené polia späť.
+
+## <a name="manually-combine-fields"></a>Ručne spojené polia
+
+Zadajte zlúčený atribút manuálne. 
+
+1. Na stránke **Zlúčiť** stlačte možnosť **Kombinovať polia**.
+
+1. Zadajte **Názov** a **Názov výstupného poľa**.
+
+1. Zvoľte si pole na pridanie. Stlačte možnosť **Pridať polia** a skombinujte ďalšie polia.
+
+1. Potvrďte vylúčenie.
+
+1. Stlačte možnosť **Uložiť** a **Spustiť** na spracovanie zmien. 
+
+## <a name="change-the-order-of-fields"></a>Zmena poradia polí
+
+Niektoré entity obsahujú viac podrobností ako iné. Ak entita obsahuje najnovšie údaje o poli, môžete ju pri zlučovaní hodnôt uprednostniť pred inými entitami.
+
+1. Vybrať zlúčené polia.
+  
+1. Stlačte možnosť **Zobraziť viac** a stlačte možnosť **Upraviť**.
+
+1. Na table **Kombinovať polia** stlačte možnosť **Premiestniť nahor/nadol** a nastavte poradie alebo ich presuňte na požadované miesto.
+
+1. Potvrďte zmenu.
+
+1. Stlačte možnosť **Uložiť** a **Spustiť** na spracovanie zmien.
 
 ## <a name="run-your-merge"></a>Spustenie zlúčenia
 
@@ -72,11 +111,11 @@ Ak chcete pridať zlúčený atribút, prejdite na stránku **Zlúčiť**.
 > [!div class="mx-imgBorder"]
 > ![Uloženie a spustenie zlúčenia údajov](media/configure-data-merge-save-run.png "Uloženie a spustenie zlúčenia údajov")
 
-Ak chcete vykonať ďalšie zmeny a zopakovať krok, môžete zrušiť prebiehajúcu zlúčenie. Vyberte **Obnovuje sa…** a vyberte **Zrušiť úlohu** na zobrazenej bočnej table.
+Stlačte možnosť **Zlúčiť položky určené len na spustenie** ak chcete iba vidieť výstup odrážajúci sa v jednotnej entite zákazníka. Následné procesy sa obnovia ako [definované v rozvrhu obnovy](system.md#schedule-tab).
 
-Keď sa text **Obnovuje sa…** zmení na **Úspešný**, zlúčenie bolo dokončené a vyriešilo rozpory vo vašich údajoch podľa pravidiel, ktoré ste definovali. Zlúčené a nezlúčené atribúty sú zahrnuté v entite zjednoteného profilu. Vylúčené atribúty nie sú zahrnuté v entite zjednoteného profilu.
+Stlačte možnosť **Spustiť procesy zlučovania a tie, ktoré prebiehajú zo servera ku klientovi**, aby ste obnovili systém svojimi zmenami. Všetky procesy vrátane obohatenia, segmentov a opatrení sa znova spustia automaticky. Po dokončení všetkých následných procesov budú profily zákazníkov odrážať všetky vykonané zmeny.
 
-Ak to nebolo prvýkrát, keď ste úspešne vykonali zlúčenie, všetky následné procesy vrátane obohatenia, segmentácie a mier, sa automaticky znovu spustia. Po opätovnom spustení všetkých následných procesov profily zákazníkov odrážajú všetky zmeny, ktoré ste vykonali.
+Ak chcete vykonať ďalšie zmeny a znova krok zopakovať, môžete zrušiť prebiehajúce zlúčenie. Vyberte **Obnovuje sa…** a vyberte **Zrušiť úlohu** na zobrazenej bočnej table.
 
 > [!TIP]
 > Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
@@ -85,9 +124,6 @@ Ak to nebolo prvýkrát, keď ste úspešne vykonali zlúčenie, všetky násled
 
 Konfigurujte [Aktivity](activities.md), [Obohatenie](enrichment-hub.md) alebo [Vzťahy](relationships.md) a získajte viac informácií o svojich zákazníkoch.
 
-Ak ste už nakonfigurovali činnosti, obohatenie alebo vzťahy alebo ak ste zadefinovali segmenty, automaticky sa spracujú, aby sa použili najnovšie údaje o zákazníkoch.
-
-
-
+Ak ste už nakonfigurovali aktivity, obohatenie alebo segmenty, budú automaticky spracované, aby sa použili najnovšie údaje o zákazníkoch.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

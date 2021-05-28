@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595828"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954598"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predikcia hodnoty životnosti zákazníka (CLV) (verzia Preview)
 
@@ -38,11 +38,11 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
 - Identifikátor zákazníka: Jedinečný identifikátor na priradenie transakcií k jednotlivému zákazníkovi
 
 - História transakcií: Historický protokol transakcií so schémou sémantických údajov nižšie
-    - ID transakcie: Jedinečný identifikátor každej transakcie
-    - Dátum transakcie: Dátum, najlepšie časová pečiatka každej transakcie
-    - Suma transakcie: Peňažná hodnota (napríklad výnos alebo rentabilita tržieb) každej transakcie
-    - Označenie priradené k návratkám (voliteľné): Boolovská hodnota označujúca, či je transakcia návratom 
-    - ID produktu (voliteľné): ID produktu zahrnutého do transakcie
+    - **ID transakcie**: Jedinečný identifikátor každej transakcie
+    - **Dátum transakcie**: Dátum, najlepšie časová pečiatka každej transakcie
+    - **Suma transakcie**: Peňažná hodnota (napríklad výnos alebo rentabilita tržieb) každej transakcie
+    - **Označenie priradené k návratkám** (voliteľné): Boolovská hodnota označujúca, či je transakcia návratom 
+    - **ID produktu** (voliteľné): ID produktu zahrnutého do transakcie
 
 - Dodatočné údaje (voliteľné), napríklad
     - Webové aktivity: história návštev webových stránok, história e-mailov
@@ -53,10 +53,20 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
     - Identifikátory zákazníka na mapovanie aktivít vašich zákazníkov
     - Informácie o činnosti obsahujúce názov a dátum aktivity
     - Schéma sémantických údajov pre aktivity obsahuje: 
-        - Primárny kľúč: Jedinečný identifikátor aktivity
-        - Časová značka: Dátum a čas udalosti identifikovaný primárnym kľúčom
-        - Udalosť (názov aktivity): Názov udalosti, ktorý chcete použiť
-        - Podrobnosti (suma alebo hodnota): Podrobnosti o aktivite zákazníka
+        - **Primárny kľúč:** Jedinečný identifikátor aktivity.
+        - **Časová značka**: Dátum a čas udalosti identifikovaný primárnym kľúčom.
+        - **Udalosť (názov aktivity)**: Názov udalosti, ktorý chcete použiť
+        - **Podrobnosti (suma alebo hodnota)**: Podrobnosti o aktivite zákazníka
+
+- Navrhované charakteristiky údajov:
+    - Dostatočné historické údaje: Aspoň jeden rok transakčných údajov. Najlepšie je dva až tri roky transakčných údajov na predpovedanie CLV na jeden rok.
+    - Viacnásobné nákupy na zákazníka: V ideálnom prípade minimálne dve až tri transakcie na jedno ID zákazníka, najlepšie vo viacerých dátumoch.
+    - Počet zákazníkov: Minimálne 100 jedinečných zákazníkov, najlepšie viac ako 10 000 zákazníkov. Model zlyhá s menej ako 100 zákazníkmi a nedostatkom historických údajov.
+    - Úplnosť údajov: Menej ako 20 % chýbajúcich hodnôt v povinných poliach vstupných údajov   
+
+> [!NOTE]
+> - Tento model vyžaduje históriu transakcií vašich zákazníkov. Aktuálne je možné nakonfigurovať iba jednu entitu histórie transakcií. Ak existuje viac entít nákupu/transakcie, pred prijatím údajov ich zjednoťte v Power Query.
+> - Pre ďalšie údaje o aktivite zákazníkov (voliteľné) však môžete pridať toľko entít aktivity zákazníkov, koľko by ste chceli, aby ich model zvážil.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Vytvorenie predikcie hodnoty životnosti zákazníka
 
@@ -76,7 +86,7 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
    Štandardne je jednotka nastavená na mesiace. Môžete to zmeniť na roky, aby ste sa v budúcnosti pozerali ďalej.
 
    > [!TIP]
-   > Ak chcete presne predpovedať CLV pre vami nastavené časové obdobie, potrebujete porovnateľné obdobie historických údajov. Napríklad ak chcete predikovať nasledujúcich 12 mesiacov, odporúča sa mať k dispozícii minimálne 18 – 24 mesiacov historických údajov.
+   > Ak chcete presne predpovedať CLV pre vami nastavené časové obdobie, potrebujete porovnateľné obdobie historických údajov. Napríklad ak chcete predikovať CLV nasledujúcich 12 mesiacov, odporúča sa mať k dispozícii minimálne 18 – 24 mesiacov historických údajov.
 
 1. Uveďte, čím sú pri vašom podnikaní charakterizovaní **Aktívni zákazníci**. Nastavte časový rámec, v ktorom musí zákazník mať najmenej jednu transakciu, aby sa mohol považovať za aktívneho. Model bude predpovedať CLV iba pre aktívnych zákazníkov. 
    - **Nechajte vypočítať nákupný interval prostredníctvom modelu (odporúča sa)**: Model analyzuje vaše údaje a určuje časové obdobie na základe historických nákupov.
@@ -181,14 +191,14 @@ Na stránke s výsledkami sú tri základné sekcie údajov.
   Pomocou definície zákazníkov s vysokou hodnotou, ktorú ste zadali pri konfigurácii predikcie, systém vyhodnotí, aký výkon dosiahol model AI pri predikovaní zákazníkov s vysokou hodnotou v porovnaní so základným modelom.    
 
   Klasifikácie sa určujú na základe nasledujúcich pravidiel:
-  - A Keď model presne predikoval najmenej o 5 % viac zákazníkov s vysokou hodnotou v porovnaní so základným modelom.
-  - B Keď model presne predikoval o 0 až 5 % viac zákazníkov s vysokou hodnotou v porovnaní so základným modelom.
-  - C Keď model presne predikoval menej zákazníkov s vysokou hodnotou v porovnaní so základným modelom.
+  - **A** Keď model presne predikoval najmenej o 5 % viac zákazníkov s vysokou hodnotou v porovnaní so základným modelom.
+  - **B** Keď model presne predikoval o 0 až 5 % viac zákazníkov s vysokou hodnotou v porovnaní so základným modelom.
+  - **C** Keď model presne predikoval menej zákazníkov s vysokou hodnotou v porovnaní so základným modelom.
 
   Tabla **Hodnotenie modelu** zobrazuje ďalšie podrobnosti o výkone modelu AI a základnom modeli. Základný model využíva prístup, ktorý nie je založený na umelej inteligencii, na výpočet hodnoty životnosti zákazníka predovšetkým na základe historických nákupov uskutočnených zákazníkmi.     
   Štandardný vzorec použitý na výpočet CLV podľa základného modelu:    
 
-  *CLV pre každého zákazníka = Priemerný mesačný nákup uskutočnený zákazníkom v aktívnom okne pre zákazníka × Počet mesiacov v období CLV predikcie × Celková miera udržania všetkých zákazníkov*
+  _**CLV pre každého zákazníka** = Priemerný mesačný nákup uskutočnený zákazníkom v aktívnom okne pre zákazníka * Počet mesiacov v období CLV predikcie * Celková miera udržania všetkých zákazníkov*_
 
   Model AI sa porovnáva so základným modelom na základe dvoch metrík výkonu modelu.
   

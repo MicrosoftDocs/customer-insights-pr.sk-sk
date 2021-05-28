@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596426"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049413"
 ---
 # <a name="entities-in-audience-insights"></a>Entity v prehľadoch cieľových skupín
 
@@ -35,14 +35,14 @@ Stránka **Entity** uvádza entity a obsahuje niekoľko stĺpcov:
 Vyberte entitu a preskúmajte rôzne polia a záznamy zahrnuté v tejto entite.
 
 > [!div class="mx-imgBorder"]
-> ![Vyberte entitu](media/data-manager-entities-data.png "Vyberte entitu")
+> ![Výber entity](media/data-manager-entities-data.png "Vyberte entitu")
 
-- Karta **Údaje** je predvolene vybratá a zobrazuje tabuľku so zoznamom podrobností o jednotlivých záznamoch entity.
+- Karta **Údaje** zobrazuje tabuľku s podrobnosťami o jednotlivých záznamoch entity.
 
 > [!div class="mx-imgBorder"]
 > ![Tabuľka Polia](media/data-manager-entities-fields.PNG "Tabuľka Polia")
 
-- Karta **Polia** zobrazuje tabuľku na kontrolu podrobností vybratej entity, ako sú napríklad názvy polí, typy údajov a typy. Stĺpec **Typ** zobrazuje typy asociované s modelom Common Data Model, ktoré sú buď automaticky identifikované systémom alebo [manuálne priradené](map-entities.md) používateľmi. Ide o sémantické typy, ktoré sa môžu odlišovať od typov údajov atribútov, napríklad pole *E-mail* nižšie má typ údajov *Text*, ale jeho (sémantický) typ modelu Common Data Model môže byť *E-mail* alebo *EmailAddress*.
+- Karta **Atribúty** je predvolene vybratá a zobrazuje tabuľku na kontrolu podrobností o vybranej entite, ako sú názvy polí, typy údajov a typy. Stĺpec **Typ** zobrazuje typy asociované s modelom Common Data Model, ktoré sú buď automaticky identifikované systémom alebo [manuálne priradené](map-entities.md) používateľmi. Ide o sémantické typy, ktoré sa môžu odlišovať od typov údajov atribútov, napríklad pole *E-mail* nižšie má typ údajov *Text*, ale jeho (sémantický) typ modelu Common Data Model môže byť *E-mail* alebo *EmailAddress*.
 
 > [!NOTE]
 > Obidve tabuľky zobrazujú iba vzorku údajov entity. Ak chcete zobraziť celú množinu údajov, prejdite na stránku **Zdroje údajov**, vyberte entitu, vyberte položku **Upraviť** a potom zobrazte údaje tejto entity pomocou editora Power Query, ako je vysvetlené v [zdrojoch údajov](data-sources.md).
