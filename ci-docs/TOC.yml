@@ -66,6 +66,8 @@
           href: audience-insights/enrichment-hub.md
         - name: Afinity značiek a záujmov
           href: audience-insights/enrichment-microsoft.md
+        - name: Vylepšené adresy
+          href: audience-insights/enrichment-enhanced-addresses.md
         - name: Obohatenie údajov so spoločnosťou HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Obohatenie pomocou Leadspace
@@ -76,14 +78,20 @@
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmenty a miery
       items:
-        - name: Vytvárajte segmenty a skupiny zákazníkov
+        - name: Prehľad segmentov
           href: audience-insights/segments.md
+        - name: Vytvárajte segmenty a skupiny zákazníkov
+          href: audience-insights/segment-builder.md
+        - name: Segmenty navrhované na základe opatrení
+          href: audience-insights/suggested-segments.md
+        - name: Segmenty navrhované na základe aktivity
+          href: audience-insights/suggested-segments-activity.md
         - name: Získajte informácie o segmentoch
           href: audience-insights/segment-insights.md
-        - name: Pozrite navrhované segmenty
-          href: audience-insights/suggested-segments.md
         - name: Nájsť podobných zákazníkov
           href: audience-insights/find-similar-customer-segments.md
+    - name: Miery
+      items:
         - name: Definujte opatrenia a kľúčové ukazovateľ výkonnosti
           href: audience-insights/measures.md
     - name: Predikcie
@@ -116,7 +124,7 @@
       items:
         - name: Exporty
           items:
-            - name: Prehľad exportov (verzia Preview)
+            - name: Prehľad exportov
               href: audience-insights/export-destinations.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
@@ -126,6 +134,8 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
+            - name: "Analýzy v\_rámci služby Azure Synapse"
+              href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Platforma Adobe Experience
@@ -160,9 +170,7 @@
               href: audience-insights/export-sftp.md
         - name: Iné použitia
           items:
-            - name: "Dynamics\_365 Customer Service (doplnok)"
-              href: audience-insights/customer-card-add-in.md
-            - name: Centrum predaja Dynamics 365 (doplnok)
+            - name: Doplnok Customer Card pre Dynamics 365
               href: audience-insights/customer-card-add-in.md
             - name: Microsoft Teams (bot)
               href: audience-insights/export-teams-bot.md
@@ -178,7 +186,7 @@
           href: audience-insights/system.md
         - name: Priradenie používateľských povolení
           href: audience-insights/permissions.md
-        - name: Prehľad pripojení (ukážka)
+        - name: Prehľad pripojení
           href: audience-insights/connections.md
         - name: Správa viacerých prostredí
           href: audience-insights/manage-environments.md
