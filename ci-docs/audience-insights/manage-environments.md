@@ -1,7 +1,7 @@
 ---
 title: Slúži na vytvorenie a spravovanie prostredí
 description: Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5888005"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259118"
 ---
 # <a name="manage-environments"></a>Správa prostredí
 
@@ -76,9 +76,9 @@ Vytvorenie prostredia:
    > Podporujeme iba účty ukladacieho priestoru Azure Data Lake Gen2 z rovnakej oblasti Azure, ktorú ste vybrali pri vytváraní prostredia.
    > Podporujeme iba účty úložísk s povoleným hierarchickým názvom priestoru (HNS) Azure Data Lake Gen2.
 
-   - V prípade možnosti Azure Data Lake Storage Gen2 si môžete vybrať medzi použitím možnosti založenej na zdrojoch a možnosti založenej na predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Názov **kontajnera** sa nedá zmeniť a bude znieť „customerinsights“.
+   - V prípade možnosti Azure Data Lake Storage Gen2 si môžete vybrať medzi použitím možnosti založenej na zdrojoch a možnosti založenej na predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Názov **kontajnera** sa nedá zmeniť a bude `customerinsights`.
    
-   - Ak chcete použiť [predikcie](predictions.md), nakonfigurovať zdieľanie údajov s aplikáciami a riešeniami založenými na Microsoft Dataverse, alebo povoliť príjem údajov z lokálnych zdrojov údajov, uveďte adresu URL Microsoft Dataverse prostredia v časti **Konfigurácia zdieľania zdieľanie s Microsoft Dataverse a aktivujte ďalšie funkcie**. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s so spravovaným Microsoft Dataverse Data Lake.
+   - Ak chcete použiť [predikcie](predictions.md), nakonfigurovať zdieľanie údajov s Microsoft Dataverse, alebo povoliť príjem údajov z lokálnych zdrojov údajov, uveďte adresu URL prostredia Microsoft Dataverse v časti **Konfigurácia zdieľania údajov s Microsoft Dataverse a aktivujte ďalšie funkcie**. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s so spravovaným Microsoft Dataverse Data Lake.
 
      > [!NOTE]
      > - Zdieľanie údajov so spravovaným Microsoft Dataverse Data Lake nie je momentálne podporované, keď ukladáte všetky údaje do svojho Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Vytvorenie prostredia:
      > [!div class="mx-imgBorder"]
      > ![Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Keď spustíte procesy, ako je napríklad príjem údajov alebo vytváranie segmentov, vo vyššie uvedenom účte úložiska sa vytvoria zodpovedajúce priečinky. Dátové súbory a súbory model.json sa vytvoria a pridajú do príslušných podpriečinkov na základe spusteného procesu.
+   Keď spustíte procesy, ako je napríklad príjem údajov alebo vytváranie segmentov, vo vyššie uvedenom účte úložiska sa vytvoria zodpovedajúce priečinky. Dátové súbory a súbory model.json sa vytvoria a pridajú do priečinkov na základe názvu procesu.
 
    Ak vytvoríte viac prostredí služby Customer Insights a rozhodnete sa uložiť výstupné entity z týchto prostredí do svojho účtu úložiska, pre každé prostredie sa vytvoria samostatné priečinky s výrazom ci_<environmentid> v kontajneri.
 
@@ -146,7 +146,7 @@ Môžete upraviť niektoré podrobnosti o existujúcich prostrediach.
    > - Zdieľanie údajov so spravovaným Microsoft Dataverse Data Lake nie je momentálne podporované, keď ukladáte všetky údaje do svojho Azure Data Lake Storage.
    > - [Predikcia chýbajúcich hodnôt v entite](predictions.md), keď v súčasnosti povolíte zdieľanie údajov s Data Lake pod správou Microsoft Dataverse.
 
-   Po aktivácii zdieľania údajov cez Microsoft Dataverse dôjde k spusteniu úplného obnovenia vašich zdrojov údajov a ďalších procesov. Ak sú procesy momentálne spustené a sú v poradí, neuvidíte možnosť povoliť zdieľanie údajov s Microsoft Dataverse. Môžete počkať, kým sa tieto procesy dokončia, alebo ich zrušiť, aby ste povolili zdieľanie údajov. 
+   Po povolení zdieľania údajov cez Microsoft Dataverse dôjde k spusteniu úplného obnovenia vašich zdrojov údajov a ďalších procesov. Ak sú procesy momentálne spustené, neuvidíte možnosť povoliť zdieľanie údajov s Microsoft Dataverse. Počkajte, kým sa tieto procesy nedokončia, alebo ich zrušte, aby ste povolili zdieľanie údajov. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse.":::
    

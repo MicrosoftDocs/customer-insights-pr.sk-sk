@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954598"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095529"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predikcia hodnoty životnosti zákazníka (CLV) (verzia Preview)
 
@@ -149,7 +149,6 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
 
 1. Vyberte **Ďalej**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Skontrolujte a spustite konfiguráciu modelu
 
 1. V kroku **Kontrola podrobností o modeli** overte konfiguráciu predikcie. Výberom položky **Upraviť** pod zobrazenou hodnotu sa môžete vrátiť späť do ktorejkoľvek časti konfigurácie predikcie. Krok konfigurácie môžete zvoliť aj z indikátora priebehu.
@@ -170,11 +169,10 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
 - **Stav**: Stav spustenia predikcie.
     - **Vo fronte**: Predikcia čaká na dokončenie ďalších procesov.
     - **Obnovuje sa**: Predikcia momentálne beží, aby vytvárala výsledky, ktoré budú prúdiť do výstupnej entity.
-    - **Zlyhanie**: Spustenie predikcie zlyhalo. Viac informácií získate [kontrolou záznamov](#troubleshoot-a-failed-prediction).
+    - **Zlyhanie**: Spustenie predikcie zlyhalo. Viac informácií získate [kontrolou záznamov](manage-predictions.md#troubleshoot-a-failed-prediction).
     - **Úspech**: Predikcia prebehla úspešne. Vyberte **Zobraziť** pod zvislými troma bodkami, aby ste skontrolovali výsledky predikcie.
 - **Upravené**: Dátum zmeny konfigurácie pre predikciu sa zmenil.
 - **Posledná aktualizácia**: Dátum obnovenia výsledkov predikcie vo výstupnej entite.
-
 
 ### <a name="review-prediction-results"></a>Výsledky stavu predikcie
 
@@ -216,28 +214,8 @@ Na stránke s výsledkami sú tri základné sekcie údajov.
 
 - **Najvplyvnejšie faktory**: Pri vytváraní vašej predikcie CLV sa zohľadňujú rôzne faktory na základe vstupných údajov poskytnutých modelu AI. Každý z faktorov má svoju dôležitosť vypočítanú pre agregované predikcie, ktoré model vytvára. Tieto faktory môžete použiť na overenie výsledkov svojich predikcií. Tieto faktory tiež poskytujú lepší prehľad o najvplyvnejších faktoroch, ktoré prispeli k predikcii CLV u všetkých vašich zákazníkov.
 
-## <a name="refresh-a-prediction"></a>Obnovenie predikcie
+## <a name="manage-predictions"></a>Spravovanie predikcií
 
-Predikcie sa automaticky obnovujú podľa rovnakého [plánu, ako sa obnovujú údaje](system.md#schedule-tab), ako je nakonfigurované v nastaveniach. Môžete ich tiež obnoviť ručne.
-
-1. Prejdite do ponuky **Analýza** > **Predikcie** a vyberte kartu **Moje predikcie**.
-2. Vyberte zvislé tri bodky vedľa predikcie, ktorú chcete obnoviť.
-3. Vyberte **Obnoviť**.
-
-## <a name="delete-a-prediction"></a>Odstránenie predikcie
-
-Odstránenie predikcie tiež odstráni jeho výstupnú entitu.
-
-1. Prejdite do ponuky **Analýza** > **Predikcie** a vyberte kartu **Moje predikcie**.
-2. Vyberte zvislé tri bodky vedľa predikcie, ktorú chcete odstrániť.
-3. Vyberte **Odstrániť**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Riešenie problémov so zlyhaním predikcie
-
-1. Prejdite do ponuky **Analýza** > **Predikcie** a vyberte kartu **Moje predikcie**.
-2. Vyberte zvislé tri bodky vedľa predikcie, pre ktorú chcete zobraziť protokoly chýb.
-3. Vyberte **Záznamy**.
-4. Skontrolujte všetky chyby. Môže sa vyskytnúť niekoľko typov chýb, ktoré popisujú, ktorý stav chybu spôsobil. Napríklad chyba, že nie je dostatok údajov na presnú predikciu, sa zvyčajne vyrieši načítaním ďalších údajov do prehľadov cieľových skupín.
-
+Je možné optimalizovať, odstraňovať problémy, obnovovať alebo mazať predikcie. V prehľade použiteľnosti vstupných údajov nájdete informácie o tom, ako urobiť predikciu rýchlejšou a spoľahlivejšou. Ďalšie informácie nájdete v článku [Spravovanie predikcií](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

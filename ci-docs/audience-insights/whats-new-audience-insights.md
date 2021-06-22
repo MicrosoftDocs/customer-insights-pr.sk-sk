@@ -1,7 +1,7 @@
 ---
 title: Nové a prichádzajúce funkcie
 description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988939"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263270"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
@@ -26,6 +26,37 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Aktualizácie z mája 2021
+
+Aktualizácie z mája 2021 obsahujú niekoľko funkcií, vylepšenia výkonu a opravy chýb.
+
+### <a name="data-ingestion"></a>Prijímanie údajov
+
+- **Prezeranie alebo úprava metaúdajov alebo definície entity pri pripájaní údajov z Azure Data Lake Storage** Teraz môžete zobraziť a upraviť metaúdaje alebo definíciu entity v prehľadoch cieľovej skupiny, keď pripájate údaje z priečinka Common Data Model vo vašom Azure Data Lake Storage. Táto funkcia poskytuje odozvu v reálnom čase, validáciu modelu a kontrolu chýb. Umožňuje vám to bezproblémovo upravovať model.json aj manifest.json.
+
+### <a name="extensibility"></a>Rozšíriteľnosť
+
+- **Vylepšené exporty segmentov, vlastný rozvrh a duplikácia** Teraz môžete [zobraziť všetky exporty pre konkrétny segment](export-destinations.md#view-exports-and-export-details) v zozname. Toto nové zobrazenie pomáha riadiť, ako sa konkrétny segment používa, a prispôsobiť existujúce alebo vytvoriť nové exporty.    
+  Môžete [definovať vlastné plány obnovenia](export-destinations.md#schedule-and-run-exports) pre jednotlivé exporty alebo niekoľko exportov naraz. Doteraz sa všetky exporty spúšťali s každou aktualizáciou systému.    
+  Namiesto vytvárania nového exportu úplne od začiatku môžete ušetriť čas a začať na základe existujúceho exportu.
+
+- **Export segmentov do Microsoft Advertising** Naše cieľové miesta exportu sme rozšírili o Microsoft Advertising. Vytvárajte cieľové skupiny súladu so zákazníkmi v Microsoft Advertising pomocou zjednotených údajov profilov zákazníkov a používajte tieto cieľové skupiny pre svoje reklamné kampane. Viac informácií nájdete v článku [Export segmentov do služby Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Export segmentov do LinkedIn Ads** Rozšírili sme naše cieľové miesta exportu tak, aby obsahovali LinkedIn Ads a umožnili vám odomknúť zacielenie na kontakty aj na spoločnosť prostredníctvom LinkedIn prostredníctvom exportu vašich údajov zjednoteného profilu zákazníka. Viac informácií nájdete v článku [Export segmentov do služby LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Export segmentov do Omnisend** Naše cieľové miesta exportu sme rozšírili o Omnisend. Omnisend umožňuje pomocou segmentov vytvorených v prehľadoch cieľových skupín vytvárať kampane, poskytovať e-mailový marketing a využívať konkrétne skupiny zákazníkov. Viac informácií nájdete v článku [Export segmentov do služby Omnisend](export-omnisend.md).
+
+### <a name="predictions"></a>Predikcie
+
+- **Zostava o použiteľnosti vstupných údajov** Zostava o použiteľnosti vstupných údajov poskytuje konsolidovaný prehľad o chybách a varovaniach, ktoré môžu generovať vaše vopred pripravené predikcie. Poskytuje tiež odporúčania, ako zlepšiť výkon modelu.    
+  Zostava je k dispozícii po dokončení tréningového procesu modelu. Je vytvorený pre každý model zvlášť, bez ohľadu na to, či bol úspešne dokončený alebo nie.
+  V súčasnosti je táto funkcia k dispozícii iba pre model úbytku transakcií. Viac informácií nájdete v články [Zostava o použiteľnosti vstupných údajov](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Vzťahy 
+
+- **Vizualizér vzťahov** Zobrazenie vizualizátora vzťahov vám umožňuje zobraziť všetky existujúce vzťahy medzi entitami a ich kardinalitu. Vzťahy sú teraz usporiadané do skupín: vzťahy vytvorené používateľom, systémom a zdedené vzťahy. Zobrazenie môžete tiež exportovať ako obrázok. Ďalšie informácie nájdete v téme [Zobrazenie vzťahov](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Aktualizácie pre apríl 2021
 

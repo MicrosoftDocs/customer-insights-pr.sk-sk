@@ -1,7 +1,7 @@
 ---
 title: Exportujte údaje z Customer Insights
 description: Spravujte exporty do zdieľania údajov.
-ms.date: 03/25/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
+ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016655"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6253059"
 ---
 # <a name="exports-preview-overview"></a>Prehľad exportov (verzia Preview)
 
@@ -26,51 +26,89 @@ Prejdite do ponuky **Údaje** > **Exporty** a zobrazte si stránku s exportmi. V
 
 Ak chcete nastaviť alebo upraviť export, musíte mať k dispozícii pripojenia. Pripojenia závisia od vašej [roly používateľa](permissions.md):
 - Správcovia majú prístup ku všetkým pripojeniam. Môžu tiež vytvárať nové pripojenia pri nastavovaní exportu.
-- Prispievatelia môžu mať prístup ku konkrétnym pripojeniam. Závisia od správcov, ktorí konfigurujú a zdieľajú pripojenia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Prispievatelia môžu mať prístup ku konkrétnym pripojeniam. Závisia od správcov, ktorí konfigurujú a zdieľajú pripojenia. Zoznam exportov zobrazuje prispievateľov, či môžu upravovať alebo len zobraziť export v stĺpci **Vaše povolenia**. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 - Diváci môžu iba prezerať existujúce exporty, ale nemôžu ich vytvárať.
+
+### <a name="define-a-new-export"></a>Definovanie nového exportu
 
 1. Prejdite na **Údaje** > **Exporty**.
 
-1. Stlačte možnosť **Pridať export** na vytvorenie nového cieľového umiestnenia exportu.
+1. Vyberte **Pridať export** na vytvorenie nového exportu.
 
 1. V table **Nastaviť export** zvoľte, ktoré pripojenie sa má použiť. [Pripojenia](connections.md) sú spravované správcami. 
 
 1. Zadajte požadované podrobnosti a stlačte možnosť **Uložiť**, čím si vytvoríte export.
 
+### <a name="define-a-new-export-based-on-an-existing-export"></a>Definujte nový export na základe existujúceho exportu
+
+1. Prejdite na **Údaje** > **Exporty**.
+
+1. V zozname exportov vyberte export, ktorý chcete duplikovať.
+
+1. Vyberte **Vytvoriť duplikát** na paneli príkazov na otvorenie tably **Nastaviť export** s podrobnosťami vybratého exportu.
+
+1. Skontrolujte a prispôsobte export a vyberte **Uložiť** na vytvorenie nového exportu.
+
 ### <a name="edit-an-export"></a>Upraviť export
 
-1. Vyberte zvislé tri bodky pri cieli exportu, ktorý chcete upraviť.
+1. Prejdite na **Údaje** > **Exporty**.
 
-1. V rozbaľovacej ponuke stlačte možnosť **Upraviť**.
+1. V zozname exportov vyberte export, ktorý chcete upraviť.
+
+1. Na paneli príkazov vyberte **Upraviť**.
 
 1. Zmeňte hodnoty, ktoré chcete aktualizovať, a stlačte možnosť **Uložiť**.
 
-## <a name="view-exports-and-export-details"></a>Zobraziť exporty a podrobnosti exportu
+## <a name="view-exports-and-export-details"></a>Zobrazenie exportov a podrobností exportu
 
-Po vytvorení exportných cieľov sa uvedú v časti **Údaje** > **Exporty**. Všetci používatelia môžu vidieť, ktoré údaje sú zdieľané, a ich najnovší stav.
+Po vytvorení cieľov exportu sa tieto uvedú v časti **Údaje** > **Exporty**. Všetci používatelia môžu vidieť, ktoré údaje sú zdieľané, a ich najnovší stav.
 
 1. Prejdite na **Údaje** > **Exporty**.
 
 1. Používatelia bez oprávnení na úpravy zvoľte možnosť **Zobraziť** namiesto **Upraviť** a zobrazte si podrobnosti exportu.
 
-1. Táto bočná tabla zobrazuje nastavenie tohto exportu. Bez povolení na úpravy nemôžete hodnoty meniť. Stlačte možnosť **Zavrieť** pre návrat na stránku exportu.
+1. Bočná tabla zobrazuje konfiguráciu exportu. Bez povolení na úpravy nemôžete hodnoty meniť. Stlačte možnosť **Zavrieť** pre návrat na stránku exportu.
 
-## <a name="run-exports-on-demand"></a>Spúšťanie exportov na požiadanie
+## <a name="schedule-and-run-exports"></a>Plánovanie a spustenie exportov
 
-Po nakonfigurovaní exportu bude prebiehať s každým [plánované obnovenie](system.md#schedule-tab) pokiaľ má funkčné spojenie.
+Každý export, ktorý nakonfigurujete, má plán obnovenia. Počas obnovenia systém vyhľadá nové alebo aktualizované údaje, ktoré by zahrnul do exportu. Export sa štandardne spúšťa ako súčasť každého [plánovaného obnovenia systému](system.md#schedule-tab). Môžete prispôsobiť plán obnovenia alebo ho vypnúť, aby sa exporty spúšťali manuálne.
 
-Ak chcete exportovať údaje bez čakania na plánované obnovenie, prejdite na **Údaje** > **Exporty**. Máte dve možnosti:
+Plány exportu závisia od stavu vášho prostredia. Ak prebiehajú aktualizácie [závislostí](system.md#refresh-policies), keď by sa mal spustiť plánovaný export, systém najskôr dokončí závislosti a potom spustí export. V stĺpci môžete vidieť, kedy sa export naposledy obnovil v stĺpci **Obnovené**.
 
-- Ak chcete spustiť všetky exporty, stlačte možnosť **Spustiť všetko** na paneli príkazov. 
-- Ak chcete spustiť jeden export, stlačte tri bodky (...) v položke zoznamu a potom stlačte možnosť **Spustiť**.
+### <a name="schedule-exports"></a>Plánovanie exportov
+
+Môžete definovať vlastné plány obnovenia pre jednotlivé exporty alebo niekoľko exportov naraz. Aktuálne definovaný plán je uvedený v stĺpci **Plán** exportného zoznamu. Povolenie na zmenu plánu je rovnaké ako pre [úpravy a definovanie exportov](export-destinations.md#set-up-a-new-export). 
+
+1. Prejdite na **Údaje** > **Exporty**.
+
+1. Vyberte export, ktorý chcete naplánovať.
+
+1. Na paneli príkazov vyberte **Plán**.
+
+1. Na table **Plán exportu** nastavte **Naplánovať spustenie** na **Zap** na spustenie exportu automaticky. Nastavte ho na **Vyp**, ak ho chcete obnovovať ručne.
+
+1. Pre automaticky obnovované exporty zvoľte hodnotu **Opakovanie** a uveďte jej podrobnosti. Definovaný čas platí pre všetky prípady opakovania. Je to čas, kedy by sa mal export začať obnovovať.
+
+1. Použite a aktivujte svoje zmeny výberom možnosti **Uložiť**.
+
+Pri úprave plánu pre niekoľko exportov musíte urobiť výber pod **Ponechať alebo prepísať plány**:
+- **Ponechať jednotlivé plány**: Zachovanie predtým definovaného plánu pre vybrané exporty a iba ich zakázanie alebo povolenie.
+- **Definovať nový plán pre všetky vybraté exporty**: Prepísanie existujúcich plánov vybratých exportov.
+
+### <a name="run-exports-on-demand"></a>Spúšťanie exportov na požiadanie
+
+Ak chcete exportovať údaje bez čakania na plánované obnovenie, prejdite na **Údaje** > **Exporty**.
+
+- Ak chcete spustiť všetky exporty, stlačte možnosť **Spustiť všetko** na paneli príkazov. Táto akcia spustí iba exporty, ktoré majú aktívny plán.
+- Ak chcete spustiť jeden export, vyberte ho v zozname a vyberte **Spustiť** na paneli príkazov. Takto spustíte exporty bez aktívneho plánu. 
 
 ## <a name="remove-an-export"></a>Odstránenie exportu
 
 1. Prejdite na **Údaje** > **Exporty**.
 
-1. Vyberte zvislé tri bodky pri exporte, ktorý chcete odstrániť.
+1. Vyberte export, ktorý chcete odstrániť.
 
-1. Vyberte položku **Odstrániť** z rozbaľovacej ponuky.
+1. Na paneli príkazov vyberte možnosť **Odstrániť**.
 
 1. Odstránenie potvrďte výberom položky **Odstrániť** na obrazovke s potvrdením.
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034031"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111406"
 ---
 # <a name="segments-overview"></a>Prehľad segmentov
 
@@ -32,22 +32,13 @@ Existuje niekoľko spôsobov, ako vytvoriť nový segment:
 - Návrhy založené na AI založené na opatreniach alebo atribútoch: [Navrhované segmenty na zlepšenie opatrení](suggested-segments.md)
 - Návrhy založené na činnostiach: [Navrhované segmenty na základe aktivity zákazníka](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Získajte prehľad o existujúcich segmentoch
-
-Objavte ďalšie informácie o svojich existujúcich segmentoch pomocou [Prehľadov segmentov](segment-insights.md). Zistite, čo odlišuje dva segmenty alebo čo majú spoločné.
-
-## <a name="find-similar-customers"></a>Nájsť podobných zákazníkov
-
-Vyhľadajte pomocou umelej inteligencie zákazníkov, ktorí sú podobní členom vybraného segmentu. Ďalšie informácie nájdete v téme [podobní zákazníci](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Spravovanie existujúcich segmentov
 
 Choďte na stránku **Segmenty** a zobrazte si všetky svoje uložené segmenty a spravujte ich.
 
 Každý segment je reprezentovaný radom, ktorý obsahuje ďalšie informácie o segmente.
 
-> [!div class="mx-imgBorder"]
-> ![Možnosti správy existujúceho segmentu](media/segments-selected-segment.png "Možnosti správy existujúceho segmentu")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Vybratý segment s rozbaľovacím zoznamom možností a dostupnými možnosťami.":::
 
 Po výbere segmentu sú k dispozícii nasledujúce akcie:
 
@@ -59,7 +50,7 @@ Po výbere segmentu sú k dispozícii nasledujúce akcie:
   Prípadne môžete použiť funkciu **Naplánovať neskôr** v rozbaľovacej ponuke **Aktivácia/Deaktivácia** na určenie budúceho dátumu a času aktivácie a deaktivácie konkrétneho segmentu.
 - **Premenovanie** segmentu.
 - **Stiahnutie** zoznam členov ako súbor .CSV.
-- Možnosť **Pridať do** odošle zoznam ID zákazníkov v segmente na spracovanie v inej aplikácii.
+- **Spravujte exporty**, ak chcete zobraziť segmenty súvisiace s exportom a spravovať ich. [Ďalšie informácie o exportoch.](export-destinations.md)
 - **Odstránenie** segmentu.
 
 ## <a name="refresh-segments"></a>Obnovenie segmentov
@@ -68,6 +59,24 @@ Výberom možnosti **Obnoviť všetko** na stránke **Segmenty** môžete obnovi
 
 > [!TIP]
 > Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
+
+## <a name="export-segments"></a>Segmenty exportu
+
+Segment môžete exportovať zo stránky so segmentmi alebo zo [stránky s exportom](export-destinations.md). 
+
+1. Prejdite na stránku **Segmenty**.
+
+1. Vyberte **Zobraziť viac [...]** pre segment, ktorý chcete exportovať.
+
+1. Vyberte **Spravovať exporty** z rozbaľovacieho zoznamu akcií.
+
+1. Otvorí sa stránka **Exporty (verzia Preview) pre segment**. Všetky nakonfigurované exporty môžete vidieť zoskupené podľa exportov, ktoré obsahujú aktuálny segment alebo ho neobsahujú.
+
+   1. Ak chcete pridať vybratý segment do exportu, vyberte export v zozname a zvoľte **Pridať segment**.
+
+   1. Ak chcete vytvoriť nový export s vybraným segmentom, vyberte **Pridať export**. Ďalšie informácie o vytváraní exportu nájdete v článku [Nastavenie nového exportu](export-destinations.md#set-up-a-new-export).
+
+1. Vyberte **Späť** na návrat na hlavnú stránku pre segmenty.
 
 ## <a name="view-processing-history-and-segment-members"></a>Zobrazenie histórie spracovania a členov segmentu
 

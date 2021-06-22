@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895978"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124384"
 ---
-# <a name="export-segment-lists-to-adroll-preview"></a>Exportovanie zoznamov segmentov do AdRoll (ukážka)
+# <a name="export-segments-to-adroll-preview"></a>Export segmentov do AdRoll (verzia Preview)
 
 Exportujte segmenty zjednotených profilov zákazníkov do služby AdRoll a použite ich na reklamu. 
 

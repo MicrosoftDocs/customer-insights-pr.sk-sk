@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906875"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095621"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predikcia odchodov založená na transakciách (ukážka)
 
@@ -144,7 +144,7 @@ Predikcia odchodov založená na transakciách pomáha predvídať, že zákazn�
    - **Stav:** Stav spustenia predikcie.
         - **Vo fronte:** Predikcia čaká na spustenie ďalších procesov.
         - **Obnovuje sa:** Predikcia momentálne beží, aby produkovala výsledky, ktoré budú prúdiť do výstupnej entity.
-        - **Zlyhanie:** Spustenie predikcie zlyhalo. Viac informácií získate [kontrolou záznamov](#troubleshoot-a-failed-prediction).
+        - **Zlyhanie:** Spustenie predikcie zlyhalo. Viac informácií získate [kontrolou záznamov](manage-predictions.md#troubleshoot-a-failed-prediction).
         - **Úspech:** Predikcia prebehla úspešne. Vyberte **Zobrazenie** pod zvislými troma bokami na kontrolu predikcie
    - **Upravené:** Dátum zmeny konfigurácie pre predikciu sa zmenil.
    - **Posledná aktualizácia:** Dátum obnovenia výsledkov predikcie vo výstupnej entite.
@@ -168,35 +168,9 @@ Predikcia odchodov založená na transakciách pomáha predvídať, že zákazn�
        
     1. **Najvýznamnejšie faktory:** Pri vytváraní vašej predikcie sa zohľadňuje veľa faktorov. Každý z faktorov má svoju dôležitosť vypočítanú pre agregované predpovede, ktoré model vytvára. Tieto faktory môžete použiť na overenie výsledkov svojich predikcií. Alebo môžete tieto informácie použiť neskôr na [vytváranie segmentov](segments.md), ktoré by mohli pomôcť ovplyvniť riziko straty zákazníkov.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Riešenie problémov so zlyhaním predikcie
+## <a name="manage-predictions"></a>Spravovanie predikcií
 
-1. Prejdite do ponuky **Analýza** > **Predikcie** a vyberte kartu **Moje predikcie**.
-
-1. Vyberte zvislé tri bodky vedľa predikcie, pre ktorú chcete zobraziť protokoly chýb.
-
-1. Vyberte **Záznamy**.
-
-1. Skontrolujte všetky chyby. Môže sa vyskytnúť niekoľko typov chýb, ktoré popisujú, ktorý stav chybu spôsobil. Napríklad chyba, že nie je dostatok údajov na presnú predikciu, sa zvyčajne vyrieši načítaním ďalších údajov do Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Obnovenie predikcie
-
-Predikcie sa automaticky obnovujú v rovnakom [harmonogram, ako vaše údaje](system.md#schedule-tab), ako je nakonfigurované v nastaveniach. Môžete ich tiež obnoviť ručne.
-
-1. Prejdite do ponuky **Analýza** > **Predikcie** a vyberte kartu **Moje predikcie**.
-
-1. Vyberte zvislé tri bodky vedľa predikcie, ktorú chcete obnoviť.
-
-1. Vyberte **Obnoviť**.
-
-## <a name="delete-a-prediction"></a>Odstránenie predikcie
-
-Odstránenie predikcie tiež odstráni jeho výstupnú entitu.
-
-1. Prejdite do ponuky **Analýza** > **Predikcie** a vyberte kartu **Moje predikcie**.
-
-1. Vyberte zvislé tri bodky vedľa predikcie, ktorú chcete odstrániť.
-
-1. Vyberte **Odstrániť**.
+Je možné optimalizovať, odstraňovať problémy, obnovovať alebo mazať predikcie. V prehľade použiteľnosti vstupných údajov nájdete informácie o tom, ako urobiť predikciu rýchlejšou a spoľahlivejšou. Ďalšie informácie nájdete v článku [Spravovanie predikcií](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

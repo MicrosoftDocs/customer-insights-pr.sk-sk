@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595292"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129918"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Predikcia odporúčaní produktov (ukážka) – vzorový sprievodca
 
@@ -22,7 +22,7 @@ Prejdeme si podrobný príklad predikcie odporúčaní produktov pomocou nižši
 
 ## <a name="scenario"></a>Scenár
 
-Contoso je spoločnosť, ktorá vyrába vysokokvalitnú kávu a kávovary, ktoré predávajú prostredníctvom svojich webových stránok Contoso Coffee. Ich cieľom je pochopiť, ktoré produkty by mali odporúčať svojim opakujúcim sa zákazníkom. Ak budete vedieť, čo si zákazníci s **väčšou pravdepodobnosťou kúpia**, môže vám to pomôcť ušetriť marketingové úsilie zameraním na konkrétne položky.
+Contoso je spoločnosť, ktorá vyrába vysoko kvalitnú kávu a kávovary, ktoré predávajú prostredníctvom svojej webovej stránky Contoso Coffee. Ich cieľom je pochopiť, ktoré produkty by mali odporúčať svojim opakujúcim sa zákazníkom. Ak budete vedieť, čo si zákazníci s **väčšou pravdepodobnosťou kúpia**, môže vám to pomôcť ušetriť marketingové úsilie zameraním na konkrétne položky.
 
 ## <a name="prerequisites"></a>Predpoklady
 
@@ -65,7 +65,7 @@ Prečítajte si články [o príjme údajov](data-sources.md) a konkrétne o [im
 
 1. V poli **Názov** na bočnej table premenujte svoj zdroj údajov z **Dotaz** na **eCommercePurchases**.
 
-1. Uložte zdroj údajov.
+1. **Uložte** zdroj údajov.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Príjem údaje o zákazníkoch z vernostnej schémy
@@ -83,11 +83,11 @@ Prečítajte si články [o príjme údajov](data-sources.md) a konkrétne o [im
 
 1. V poli **Názov** na pravej table premenujte svoj zdroj údajov z **Dotaz** na **loyCustomers**.
 
-1. Uložte zdroj údajov.
+1. **Uložte** zdroj údajov.
 
 ## <a name="task-2---data-unification"></a>Úloha 2 – Zjednotenie údajov
 
-Po prijatí údajov teraz začíname proces **Mapovanie, párovanie, zlúčenie** na vytvorenie zjednoteného profilu zákazníka. Ďalšie informácie nájdete v téme [Zjednotenie údajov](data-unification.md).
+Po prijatí údajov teraz začneme proces zjednocovania údajov, aby sme vytvorili jednotný profil zákazníka. Ďalšie informácie nájdete v téme [Zjednotenie údajov](data-unification.md).
 
 ### <a name="map"></a>Priradenie
 
@@ -156,7 +156,7 @@ Po zavedení zjednotených profilov zákazníkov môžeme teraz spustiť predikc
 
    - **Počet produktov**: Nastavte túto hodnotu na **5**. Toto nastavenie definuje, koľko produktov chcete odporučiť zákazníkom.
 
-   - **Chcete navrhnúť produkty, ktoré si zákazníci nedávno zakúpili?**: Vyberte **Áno** na označenie, že chcete zahrnúť produkty do odporúčania, ktoré si vaši zákazníci predtým kúpili.
+   - **Očakávané opakované nákupy**: Vyberte **Áno** na označenie, že chcete zahrnúť produkty do odporúčania, ktoré si vaši zákazníci predtým kúpili.
 
    - **Dĺžka spätného zobrazenia:** Vyberte minimálne **365 dní**. Toto nastavenie definuje, ako ďaleko do minulosti bude model pozerať na aktivitu zákazníka, aby ju použil ako vstup jeho odporúčania.
    

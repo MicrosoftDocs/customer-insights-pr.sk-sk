@@ -1,7 +1,7 @@
 ---
 title: Obohaťte profily zákazníkov o údaje od spoločnosti Microsoft
 description: Na obohatenie svojich zákazníckych údajov o záujmy značiek a záujmov použite patentované údaje spoločnosti Microsoft.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064910"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245726"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte profily zákazníkov o značky a záujmy (ukážka)
 
@@ -69,12 +69,10 @@ Prehliadka so sprievodcom vám pomôže pri konfigurácii obohatení.
 
 ### <a name="define-your-brands-or-interests"></a>Definujte svoje značky alebo záujmy
 
-Vyberte jednu z nasledujúcich možností:
+Vyberte si až päť značiek alebo záujmov pomocou jednej alebo oboch z týchto možností:
 
-- **Odvetvie**: Systém identifikuje top značky alebo záujmy relevantné pre vaše odvetvie a obohacuje o nich vaše zákaznícke údaje.
-- **Vyberte svoje vlastné**: Vyberte až päť položiek zo zoznamu značiek alebo záujmov, ktoré sú pre vašu organizáciu najrelevantnejšie.
-
-Ak chcete pridať značku alebo záujem, zadajte ich do vstupnej oblasti a získajte návrhy na základe zhodných výrazov. Ak neuvedieme hľadanú značku alebo záujem, pošlite nám svoje pripomienky pomocou odkazu **Navrhnúť**.
+- **Priemysel**: Z rozbaľovacieho zoznamu vyberte svoje odvetvie a potom vyberte z top značiek alebo záujmov pre dané odvetvie.
+- **Vyberte svoje vlastné**: Zadajte značku alebo záujem, ktorý je relevantný pre vašu organizáciu, a potom si vyberte zodpovedajúce návrhy. Ak neuvedieme hľadanú značku alebo záujem, pošlite nám svoje pripomienky pomocou odkazu **Navrhnúť**.
 
 ### <a name="review-enrichment-preferences"></a>Kontrola predvolieb obohacovania
 

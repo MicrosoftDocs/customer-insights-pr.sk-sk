@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906921"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095667"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikcia rizika straty predplatného (ukážka)
 
@@ -147,30 +147,9 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
        > [!div class="mx-imgBorder"]
        > ![Zoznam ukazujúci vplyvné faktory a ich dôležitosť pri predikcii výsledkov rizika straty](media/subscription-churn-influentialfactors.PNG "Zoznam ukazujúci vplyvné faktory a ich dôležitosť pri predikcii výsledkov rizika straty")
 
-## <a name="fix-a-failed-prediction"></a>Oprava neúspešnej predpovede
+## <a name="manage-predictions"></a>Spravovanie predikcií
 
-1. Prejdite na kartu **Moje predikcie** na **Inteligencia** > **Predikcie**.
-1. Vyberte predikciu, pre ktorú chcete zobraziť denníky chýb, a vyberte **Denníky**.
-   > [!div class="mx-imgBorder"]
-   > ![Zobrazenie panela s ponukami výsledkov vrátane tlačidiel na zatvorenie, úpravu modelu a protokolov](media/subscription-churn-logsbutton.PNG "Zobrazenie panela s ponukami výsledkov vrátane tlačidiel na zatvorenie, úpravu modelu a protokolov")
-1. Skontrolujte všetky chyby. Môže sa vyskytnúť niekoľko typov chýb, ktoré popisujú, ktorý stav chybu spôsobil. Napríklad chyba, že nie je dostatok údajov na presnú predikciu, sa zvyčajne vyrieši načítaním ďalších údajov.
-
-## <a name="refresh-a-prediction"></a>Obnovenie predikcie
-
-Predikcie sa automaticky obnovujú v rovnakom [harmonogram, ako vaše údaje](system.md#schedule-tab), ako je nakonfigurované v nastaveniach.
-
-1. Prejdite na kartu **Moje predikcie** na **Inteligencia** > **Predikcie**.
-1. Vyberte zvislé tri bodky vedľa predikcie, ktorú chcete obnoviť.
-1. Vyberte **Obnoviť**.
-
-## <a name="delete-a-prediction"></a>Odstránenie predikcie
-
-1. Prejdite na kartu **Moje predikcie** na **Inteligencia** > **Predikcie**.
-1. Vyberte zvislé tri bodky vedľa predikcie, ktorú chcete odstrániť.
-1. Vyberte **Odstrániť**.
-
-> [!NOTE]
-> Odstránenie predikcie odstráni jeho výstupnú entitu.
+Je možné optimalizovať, odstraňovať problémy, obnovovať alebo mazať predikcie. V prehľade použiteľnosti vstupných údajov nájdete informácie o tom, ako urobiť predikciu rýchlejšou a spoľahlivejšou. Ďalšie informácie nájdete v článku [Spravovanie predikcií](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

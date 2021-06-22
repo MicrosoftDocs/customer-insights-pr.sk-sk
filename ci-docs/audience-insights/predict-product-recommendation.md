@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906783"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095575"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predikcia odporúčania produktov (verzia Preview)
 
@@ -205,33 +205,9 @@ Niekedy sú pre určitý typ predikcie prospešné alebo vhodné iba určité pr
        > [!div class="mx-imgBorder"]
        > ![Zoznam zobrazujúci návrhy vysokej dôveryhodnosti pre vybranú skupinu individuálnych zákazníkov](media/product-recommendation-highconfidence.PNG "Zoznam zobrazujúci návrhy vysokej dôveryhodnosti pre vybranú skupinu individuálnych zákazníkov")
 
-## <a name="fix-a-failed-prediction"></a>Oprava neúspešnej predpovede
+## <a name="manage-predictions"></a>Spravovanie predikcií
 
-1. Prejdite na kartu **Moje predikcie** na **Inteligencia** > **Predikcie**.
-
-1. Vyberte predikciu, pre ktorú chcete zobraziť denníky chýb, a vyberte **Denníky**.
-
-1. Skontrolujte všetky chyby. Môže sa vyskytnúť niekoľko typov chýb, ktoré popisujú, ktorý stav chybu spôsobil. Napríklad chyba, že nie je dostatok údajov na presnú predikciu, sa zvyčajne vyrieši načítaním ďalších údajov do služby Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Obnovenie predikcie
-
-Predikcie sa automaticky obnovujú podľa rovnakého [plánu, ako sa obnovujú údaje](system.md#schedule-tab), ako je nakonfigurované v nastaveniach.
-
-1. Prejdite na kartu **Moje predikcie** na **Inteligencia** > **Predikcie**.
-
-1. Vyberte zvislé tri bodky vedľa predikcie, ktorú chcete obnoviť.
-
-1. Vyberte **Obnoviť**.
-
-## <a name="delete-a-prediction"></a>Odstránenie predikcie
-
-Odstránenie predikcie tiež odstráni jeho výstupnú entitu.
-
-1. Prejdite na kartu **Moje predikcie** na **Inteligencia** > **Predikcie**.
-
-1. Vyberte zvislé tri bodky vedľa predikcie, ktorú chcete odstrániť.
-
-1. Vyberte **Odstrániť**.
+Je možné optimalizovať, odstraňovať problémy, obnovovať alebo mazať predikcie. V prehľade použiteľnosti vstupných údajov nájdete informácie o tom, ako urobiť predikciu rýchlejšou a spoľahlivejšou. Ďalšie informácie nájdete v článku [Spravovanie predikcií](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
