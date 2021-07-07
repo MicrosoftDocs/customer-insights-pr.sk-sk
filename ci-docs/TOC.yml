@@ -72,7 +72,7 @@
           href: audience-insights/enrichment-here.md
         - name: Obohatenie pomocou Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Obohatenie pomocou spoločnosti Experian
+        - name: Obohatiť o Experian
           href: audience-insights/enrichment-experian.md
         - name: Obohatenie pomocou vlastného importu SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -136,6 +136,8 @@
           items:
             - name: Prehľad exportov
               href: audience-insights/export-destinations.md
+            - name: Aktívna kampaň
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -144,7 +146,7 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: "Analýzy v\_rámci služby Azure Synapse"
+            - name: Azure Synapse Analytics
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -240,15 +246,15 @@
           href: engagement-insights/get-started.md
         - name: Vytvorenie pracovného priestoru
           href: engagement-insights/create-workspace.md
-        - name: Vybavenie vašej stránky nástrojmi
-          href: engagement-insights/instrument-website.md
+        - name: Zachytávajte udalosti z webových lokalít a mobilných aplikácií
+          href: engagement-insights/developer-resources.md
         - name: Koncepty a terminológia
           href: engagement-insights/glossary.md
     - name: Udalosti
       items:
         - name: Vytváranie a úprava udalostí
           href: engagement-insights/refined-events.md
-        - name: Export udalostí
+        - name: Exportovať udalosti
           href: engagement-insights/export-events.md
     - name: Zostavy
       items:
@@ -272,10 +278,18 @@
       items:
         - name: Prehľad zdrojov pre vývojárov
           href: engagement-insights/developer-resources.md
-        - name: Kurz pre webové rozhranie SDK
+        - name: Kurz pre webovú súpravu SDK
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Ukážka webového rozhrania SDK
           href: engagement-insights/websdk-sample.md
+        - name: Kurz pre súpravu Android SDK
+          href: engagement-insights/get-started-android.md
+        - name: Ukážka súpravy Android SDK
+          href: engagement-insights/androidsdk-sample.md
+        - name: Návod k súprave iOS SDK
+          href: engagement-insights/get-started-ios.md
+        - name: Ukážka súpravy iOS SDK
+          href: engagement-insights/iossdk-sample.md
     - name: Správa
       items:
         - name: "Roly a\_povolenia"
