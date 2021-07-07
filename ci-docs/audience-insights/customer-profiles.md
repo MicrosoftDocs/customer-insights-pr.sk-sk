@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896346"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304623"
 ---
 # <a name="customer-profiles"></a>Profily zákazníkov
 
@@ -57,13 +57,13 @@ Vyberte ktorúkoľvek z dlaždíc zákazníka a otvorte **stránku s podrobnosť
 
 Podrobnosti o zákazníkovi zahŕňajú tieto údaje:
 
--   **Dlaždica profilu zákazníka:** Táto dlaždica ukazuje rôzne hodnoty z entity zjednoteného profilu zákazníka. Tieto podrobnosti môžu zahŕňať e-mailovú adresu, meno, mesto atď. 
+-   **Dlaždica profilu zákazníka**: Táto dlaždica ukazuje rôzne hodnoty z entity zjednoteného profilu zákazníka. Tieto podrobnosti môžu zahŕňať e-mailovú adresu, meno, mesto atď. 
 
--   **Potenciálne záujmy, potenciálne značky:** Ukazuje, či ste nakonfigurovali obohatenie prvej strany. Predstavuje potenciálne záujmy a príbuznosti značiek, ktoré môže mať zákazník s podobným profilom ako tento zákazník. Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft.md).
+-   **Potenciálne záujmy, potenciálne značky**: Ukazuje, či ste nakonfigurovali obohatenie prvej strany. Predstavuje potenciálne záujmy a príbuznosti značiek, ktoré môže mať zákazník s podobným profilom ako tento zákazník. Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft.md).
 
--   **Miery:** Ukazuje, či ste nakonfigurovali jednu alebo viac mier konkrétneho typu: miery atribútov zákazníka. Tie zahŕňajú vypočítané KPI v súvislosti s vašimi zákazníkmi na úrovni jednotlivých zákazníkov. Ďalšie informácie nájdete v sekcii [Definovanie a správa mier](measures.md).
+-   **Miery**: Ukazuje, či ste nakonfigurovali jednu alebo viac mier konkrétneho typu: miery atribútov zákazníka. Tie zahŕňajú vypočítané KPI v súvislosti s vašimi zákazníkmi na úrovni jednotlivých zákazníkov. Ďalšie informácie nájdete v sekcii [Definovanie a správa mier](measures.md).
 
--   **Časová os aktivít:** Zobrazuje, či máte nakonfigurované aktivity. Zobrazenie na časovej osi obsahuje chronologicky zoradené aktivity tohto zákazníka, počnúc najnovšou aktivitou. Ďalšie informácie nájdete v článku [Aktivity zákazníka](activities.md).
+-   **Časová os aktivít**: Zobrazuje, či máte nakonfigurované aktivity. Zobrazenie na časovej osi obsahuje chronologicky zoradené aktivity tohto zákazníka, počnúc najnovšou aktivitou. Ďalšie informácie nájdete v článku [Aktivity zákazníka](activities.md).
 
 Výberom položky **Späť k zákazníkom** sa vrátite na stránku vyhľadávania zákazníkov.
 

@@ -1,6 +1,6 @@
 ---
 title: Exportujte údaje Customer Insights do aplikácie Adobe Experience Platform
-description: Naučte sa, ako používať segmenty štatistík publika v aplikácii Adobe Experience Platform.
+description: Naučte sa, ako používať segmenty prehľadov cieľových skupín na platforme Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760120"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305543"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Naučte sa, ako používať segmenty Customer Insights v Adobe Experience Platform (ukážka)
 
-Ako používateľ štatistík cieľovej skupiny pre Dynamics 365 Customer Insights ste možno vytvorili segmenty na zefektívnenie svojich marketingových kampaní zacielením na relevantné publikum. Ak chcete použiť segment z prehľadov cieľovej skupiny v platforme Adobe Experience Platform a aplikáciách, ako je Adobe Campaign Standard, musíte postupovať podľa niekoľkých krokov uvedených v tomto článku.
+Ako používateľ prehľadov interakcií v službe Dynamics 365 Customer Insights ste možno vytvorili segmenty na zefektívnenie svojich marketingových kampaní tak, že ste ich zacielili na relevantné publikum. Ak chcete použiť segment z prehľadov cieľovej skupiny v platforme Adobe Experience Platform a aplikáciách, ako je Adobe Campaign Standard, musíte postupovať podľa niekoľkých krokov uvedených v tomto článku.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Schéma postupu krokov uvedených v tomto článku.":::
 
@@ -55,19 +55,19 @@ Po identifikácii nášho cieľového publika môžeme nakonfigurovať export z 
 
 1. Prejdite do časti **Správca** > **Pripojenia**.
 
-1. Stlačte možnosť **Pridať pripojenie** a stlačte možnosť **Azure Blob Storage** alebo stlačte **Nastaviť** v dlaždici **Azure Blob Storage**:
+1. Vyberte **Pridať pripojenie** a zvoľte možnosť **Azure Blob Storage** alebo vyberte možnosť **Nastaviť** na dlaždici **Azure Blob Storage** na konfiguráciu pripojenia.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfiguračná dlaždica pre úložisko Azure Blob."::: na konfiguráciu pripojenia.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfiguračná dlaždica pre úložisko Azure Blob."::: 
 
 1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
 
 1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Zadajte znak **Názov účtu**, **Kľúč účtu** a **Kontajner** pre váš účet úložiska Blob, kam chcete exportovať segment.  
+1. Zadajte znak **Názov účtu**, **Kľúč účtu** a **Kontajner** pre váš účet úložiska Blob Storage, kam chcete exportovať segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Snímka obrazovky konfigurácií účtu úložiska."::: 
    
-    - Ak sa chcete dozvedieť viac o názve a kľúči účtu úložiska Blob, prečítajte si časť [Správa nastavení účtu v portáli Azure](/azure/storage/common/storage-account-manage).
+    - Ak sa chcete dozvedieť viac o názve a kľúči účtu úložiska Blob Storage, prečítajte si časť [Správa nastavení účtu v portáli Azure](/azure/storage/common/storage-account-manage).
     - Informácie o tom, ako vytvoriť kontajner, nájdete v časti [Vytvorenie kontajnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Stlačte možnosť **Uložiť** a dokončite pripojenie. 
@@ -80,7 +80,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Na vytvorenie nového exportu stlačte možnosť **Pridať export**.
 
-1. V poli **Pripojenie na export** vyberte pripojenie v časti úložiska Azure Blob. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
+1. V poli **Pripojenie na export** vyberte pripojenie v časti úložiska Azure Blob. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne pripojenia tohto typu.
 
 1. Vyberte segment, ktorý chcete exportovať. V tomto príklade ide o **ChurnProneCustomers**.
 
@@ -95,7 +95,7 @@ Teraz môžete [exportovať segment na požiadanie](export-destinations.md#run-e
 > [!NOTE]
 > Zaistite, aby počet záznamov v exportovanom segmente bol v rámci povoleného limitu vašej licencie Adobe Campaign Standard.
 
-Exportované údaje sú uložené v kontajneri úložiska Azure Blob, ktorý ste nakonfigurovali vyššie. Vo vašom kontajneri sa automaticky vytvorí nasledujúca cesta k priečinku:
+Exportované údaje sú uložené v kontajneri úložiska Azure Blob Storage, ktorý ste nakonfigurovali vyššie. Vo vašom kontajneri sa automaticky vytvorí nasledujúca cesta k priečinku:
 
 *%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
 
@@ -121,9 +121,10 @@ Po definovaní zdrojového pripojenia [nakonfigurujte tok údajov](https://exper
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Vytvorte cieľovú skupinu v službe Adobe Campaign Standard
 
-Na odoslanie e-mailu s touto kampaňou použijeme program Adobe Campaign Standard. Po importe údajov do platformy Adobe Experience Platform musíme [vytvoriť cieľovú skupinu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) v Adobe Campaign Standard s využitím údajov v Adobe Experience Platform.
+Na odoslanie e-mailu pre túto kampaň použijeme program Adobe Campaign Standard. Po importe údajov do platformy Adobe Experience Platform musíme [vytvoriť cieľovú skupinu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) v Adobe Campaign Standard s využitím údajov v Adobe Experience Platform.
 
-Zistite, ako [používať nástroj na tvorbu segmentov](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) v Adobe Campaign Standard na definovanie cieľovej skupiny na základe údajov v Adobe Experience Platform.
+
+Zistite, ako [používať nástroj na tvorbu segmentov](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) v Adobe Campaign Standard na definovanie cieľovej skupiny na základe údajov v Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Vytvorte a odošlite e-mail pomocou aplikácie Adobe Campaign Standard
 

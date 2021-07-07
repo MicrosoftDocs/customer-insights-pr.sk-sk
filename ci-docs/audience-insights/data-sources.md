@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085549"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304715"
 ---
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
@@ -30,15 +30,15 @@ Zdroj údajov môžete pridať tromi hlavnými spôsobmi:
 
 - [Prostredníctvom množstva konektorov Power Query](connect-power-query.md)
 - [Z priečinka Common Data Model](connect-common-data-model.md)
-- [Z jazera Common Data Service](connect-common-data-service-lake.md)
+- [Z jazera Microsoft Dataverse](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Pridajte údaje z lokálny zdrojov údajov
 
-Na základe je podporované prijímanie údajov z lokálnych zdrojov údajov v prehľadoch cieľovej skupiny tokov údajov Power Platform. Toky údajov je možné v nástroji Customer Insights povoliť používateľom [poskytuje adresu URL prostredia Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) pri nastavovaní prostredia.
+Na základe je podporované prijímanie údajov z lokálnych zdrojov údajov v prehľadoch cieľovej skupiny tokov údajov Microsoft Power Platform. Toky údajov je možné v nástroji Customer Insights povoliť používateľom [poskytuje adresu URL prostredia Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) pri nastavovaní prostredia.
 
-Zdroje údajov, ktoré sa predvolene vytvoria po priradení a prostredí Dataverse s nástrojom Customer Insights [Toky údajov Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Odstrániť a znovu vytvoriť zdroje údajov, ktoré existovali pred prostredím Dataverse bolo spojené s [používaním lokálnych dátových brán](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Zdroje údajov, ktoré sa predvolene vytvoria po priradení a prostredí Dataverse s nástrojom Customer Insights [Toky údajov Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Odstrániť a znovu vytvoriť zdroje údajov, ktoré existovali pred prostredím Dataverse bolo spojené s [používaním lokálnych dátových brán](/data-integration/gateway/service-gateway-app.md).
 
-Dátové brány z existujúceho prostredia Power BI alebo Power Apps bude viditeľné a môžete ho znova použiť v nástroji Customer Insights. Na stránke zdrojov údajov sú zobrazené odkazy, pomocou ktorých môžete prejsť do prostredia Power Platform, kde môžete zobraziť a nakonfigurovať lokálne dátové brány.
+Dátové brány z existujúceho prostredia Power BI alebo Power Apps bude viditeľné a môžete ho znova použiť v nástroji Customer Insights. Na stránke zdrojov údajov sú zobrazené odkazy smerujúce do prostredia Microsoft Power Platform, v ktorom si môžete prezerať a konfigurovať lokálne brány údajov.
 
 ## <a name="review-ingested-data"></a>Kontrola prijatých údajov
 
@@ -66,9 +66,9 @@ Prejdite na časť **Správca** > **Systém** > [**Plánovať**](system.md#sched
 
 Ak chcete obnoviť zdroj údajov na požiadanie, postupujte takto:
 
-1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zdroje údajov**
+1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zdroje údajov**.
 
-2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete obnoviť, a vyberte položku **Obnoviť** z rozbaľovacieho zoznamu.
+2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete obnoviť, a z rozbaľovacieho zoznamu vyberte položku **Obnoviť**.
 
 3. Zdroj údajov je teraz spustený na účely manuálneho obnovenia. Obnovením zdroja údajov sa aktualizuje schéma entity aj údaje pre všetky entity uvedené v zdroji údajov.
 
@@ -78,7 +78,7 @@ Ak chcete obnoviť zdroj údajov na požiadanie, postupujte takto:
 
 1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zdroje údajov**.
 
-2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete odstrániť, a vyberte **Odstrániť** z rozbaľovacej ponuky.
+2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete odstrániť, a z rozbaľovacieho zoznamu vyberte položku **Odstrániť**.
 
 3. Potvrďte odstránenie.
 

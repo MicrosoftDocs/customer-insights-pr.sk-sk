@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976337"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305359"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportovať segmenty do služby Google Ads (ukážka)
 
-Exportujte segmenty zjednotených profilov zákazníkov do zoznamu cieľových skupín v Reklamách Google a použite ich na inzerciu v službách Vyhľadávanie Google, Gmail, YouTube a Obsahová sieť Google. 
+Exportujte segmenty zjednotených profilov zákazníkov do zoznamu cieľových skupín pre Google Ads a použite ich na inzerciu v rámci služby Vyhľadávanie Google, Gmail, YouTube a Google Display Network. 
 
 ## <a name="prerequisites-for-connection"></a>Predpoklad na pripojenie
 
 -   Máte [účet Reklám Google](https://ads.google.com/) a zodpovedajúce poverenia správcu.
--   Máte [schválený token vývojára Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Spĺňate požiadavky [pravidiel pre priradenie zákazníkov](https://support.google.com/adspolicy/answer/6299717)
--   Spĺňate požiadavky [veľkostí remarketingového zoznamu](https://support.google.com/google-ads/answer/7558048) 
-
+-   Máte [schválený token vývojára pre Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Spĺňate požiadavky [pravidiel pre priradenie zákazníkov](https://support.google.com/adspolicy/answer/6299717).
+-   Spĺňate požiadavky [veľkostí remarketingového zoznamu](https://support.google.com/google-ads/answer/7558048).
 -   V Reklamách Google a zodpovedajúcich ID existujú cieľové skupiny. Ďalšie informácie nájdete v časti [Cieľové skupiny Reklám Google](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Máte [nakonfigurované segmenty](segments.md)
--   Zjednotené profily zákazníkov v exportovaných segmentoch obsahujú polia predstavujúce e-mailovú adresu, krstné meno a priezvisko
+-   Máte [nakonfigurované segmenty](segments.md).
+-   Zjednotené profily zákazníkov v exportovaných segmentoch obsahujú polia predstavujúce e-mailovú adresu, krstné meno a priezvisko.
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
@@ -68,7 +67,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Na vytvorenie nového exportu stlačte možnosť **Pridať cieľ**.
 
-1. V poli **Pripojenie na export** vyberte pripojenie v časti Google Ads. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
+1. V poli **Pripojenie na export** vyberte pripojenie v časti Google Ads. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne pripojenia tohto typu.
 
 1. Zadajte vaše **[ID cieľovej skupiny Reklám Google](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** a vyberte položku **Pripojiť** na inicializáciu pripojenia k Reklamám Google.
 
@@ -78,7 +77,9 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 Uloženie exportu nespustí export okamžite.
 
-Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
+Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). 
+
+Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 

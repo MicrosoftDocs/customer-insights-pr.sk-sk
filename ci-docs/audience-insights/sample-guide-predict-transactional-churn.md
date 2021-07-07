@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595445"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306139"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Predikcia odchodov založená na transakciách (ukážka) – vzorový sprievodca
 
-Táto príručka vám vysvetlí podrobný príklad predikcie odchodov založených na transakciách v nástroji Customer Insights pomocou nižšie uvedených údajov. Všetky údaje použité v tejto príručke nie sú skutočnými údajmi o zákazníkoch. Sú súčasťou súboru údajov Contoso, ktorý sa nachádza v *ukážkovom* prostredí v rámci vášho predplatného Customer Insights.
+Táto príručka vám vysvetlí podrobný príklad predikcie odchodov založených na transakciách v nástroji Customer Insights pomocou nižšie uvedených údajov. Všetky údaje použité v tejto príručke nie sú skutočnými údajmi o zákazníkoch a sú súčasťou množiny údajov Contoso, ktorá sa nachádza v prostredí *Ukážka* v rámci vášho predplatného služby Customer Insights.
 
 ## <a name="scenario"></a>Scenár
 
-Contoso je spoločnosť, ktorá vyrába vysokokvalitnú kávu a kávovary, ktoré predávajú prostredníctvom svojich webových stránok Contoso Coffee. Ich cieľom je zistiť, ktorí zákazníci, ktorí si zvyčajne nakupujú svoje produkty pravidelne, prestanú byť aktívnymi zákazníkmi v nasledujúcich 60 dňoch. Poznatok, ktorý z ich zákazníkov **pravdepodobne odíde**, im môže im pomôcť ušetriť marketingové úsilie zameraním na ich udržanie.
+Contoso je spoločnosť, ktorá vyrába vysoko kvalitnú kávu a kávovary, ktoré predávajú prostredníctvom svojej webovej stránky Contoso Coffee. Ich cieľom je zistiť, ktorí zákazníci, ktorí si zvyčajne nakupujú svoje produkty pravidelne, prestanú byť aktívnymi zákazníkmi v nasledujúcich 60 dňoch. Poznatok, ktorý z ich zákazníkov **pravdepodobne odíde**, im môže im pomôcť ušetriť marketingové úsilie zameraním na ich udržanie.
 
 ## <a name="prerequisites"></a>Predpoklady
 
@@ -109,9 +109,9 @@ Po prijatí údajov teraz začíname proces **Mapovanie, párovanie, zlúčenie*
 
 1. Prejdite na kartu **Spárovanie** a vyberte **Nastaviť poradie**.
 
-1. V rozbaľovacom zozname **Primárny** vyberte **eCommerceContacts: eCommerce** ako primárny zdroj a zahrňte všetky záznamy.
+1. V **primárnom** rozbaľovacom zozname si vyberte možnosť **eCommerceContacts: eCommerce** ako primárny zdroj a zahrňte do nej všetky záznamy.
 
-1. V rozbaľovacom zozname **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všetky záznamy.
+1. V rozbaľovacom zozname **Entita 2** vyberte možnosť **loyCustomers: LoyaltyScheme** a zahrňte do nej všetky záznamy.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Zjednotenie zosúladenia eCommerce a Loyalty.":::
 
@@ -119,16 +119,16 @@ Po prijatí údajov teraz začíname proces **Mapovanie, párovanie, zlúčenie*
 
 1. Pridajte svoju prvú podmienku pomocou FullName.
 
-   * Pre eCommerceContacts vyberte v rozbaľovacej ponuke **FullName**.
-   * Pre loyCustomers vyberte v rozbaľovacej ponuke **FullName**.
+   * V prípade eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **FullName**.
+   * V prípade loyCustomers vyberte z rozbaľovacieho zoznamu položku **FullName**.
    * Vyberte rozbaľovací zoznam **Normalizovať** a vyberte **Typ (Telefón, Meno, Adresa, ...)**.
    * Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
 
 1. Zadajte meno **FullName, E-mail** pre nové pravidlo.
 
    * Vyberte druhú podmienku pre e-mailovú adresu výberom možnosti **Pridať podmienku**
-   * Pre entitu eCommerceContacts vyberte v rozbaľovacej ponuke **E-mail**.
-   * Pre entitu loyCustomers vyberte v rozbaľovacej ponuke **E-mail**. 
+   * Pri entite eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **EMail**.
+   * Pri entite loyCustomers vyberte z rozbaľovacieho zoznamu položku **EMail**. 
    * Pole Normalizovať nechajte prázdne. 
    * Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
 

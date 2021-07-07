@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129918"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306185"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Predikcia odporúčaní produktov (ukážka) – vzorový sprievodca
 
@@ -105,9 +105,9 @@ Po prijatí údajov teraz začneme proces zjednocovania údajov, aby sme vytvori
 
 1. Prejdite na kartu **Spárovanie** a vyberte **Nastaviť poradie**.
 
-2. V rozbaľovacom zozname **Primárny** vyberte **eCommerceContacts: eCommerce** ako primárny zdroj a zahrňte všetky záznamy.
+2. V **primárnom** rozbaľovacom zozname si vyberte možnosť **eCommerceContacts: eCommerce** ako primárny zdroj a zahrňte do nej všetky záznamy.
 
-3. V rozbaľovacom zozname **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všetky záznamy.
+3. V rozbaľovacom zozname **Entita 2** vyberte možnosť **loyCustomers: LoyaltyScheme** a zahrňte do nej všetky záznamy.
 
    ![Zjednotenie zosúladenia eCommerce a Loyalty.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Po prijatí údajov teraz začneme proces zjednocovania údajov, aby sme vytvori
 
 5. Pridajte svoju prvú podmienku pomocou FullName.
 
-   - Pre eCommerceContacts vyberte v rozbaľovacej ponuke **FullName**.
-   - Pre loyCustomers vyberte v rozbaľovacej ponuke **FullName**.
+   - V prípade eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **FullName**.
+   - V prípade loyCustomers vyberte z rozbaľovacieho zoznamu položku **FullName**.
    - Vyberte rozbaľovací zoznam **Normalizovať** a vyberte **Typ (Telefón, Meno, Adresa, ...)**.
    - Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
 
 6. Zadajte meno **FullName, E-mail** pre nové pravidlo.
 
    - Vyberte druhú podmienku pre e-mailovú adresu výberom možnosti **Pridať podmienku**
-   - Pre entitu eCommerceContacts vyberte v rozbaľovacej ponuke **E-mail**.
-   - Pre entitu loyCustomers vyberte v rozbaľovacej ponuke **E-mail**.
+   - Pri entite eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **EMail**.
+   - Pri entite loyCustomers vyberte z rozbaľovacieho zoznamu položku **EMail**.
    - Pole Normalizovať nechajte prázdne.
    - Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
 

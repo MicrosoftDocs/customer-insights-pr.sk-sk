@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049269"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304824"
 ---
 # <a name="define-and-manage-measures"></a>Definovanie a spravovanie mier
 
-Opatrenia vám pomôžu lepšie pochopiť správanie zákazníkov a výkonnosť podniku. Pozerajú sa na príslušné hodnoty zo [zjednotených profilov](data-unification.md). Napríklad firma chce vidieť *celkové výdavky na zákazníka*, aby mala prehľad o histórii alebo miere nákupu jednotlivých zákazníkov, prípadne si môžu odmerať *celkový predaj spoločnosti* a oboznámiť s s agregovaným výnosom pre celý podnik.  
+Opatrenia vám pomôžu lepšie pochopiť správanie zákazníkov a výkonnosť podniku. Pozerajú sa na príslušné hodnoty zo [zjednotených profilov](data-unification.md). Firma chce napríklad vidieť *celkové výdavky na zákazníka*, aby pochopila históriu nákupov tohto zákazníka alebo zistila *celkové predaje spoločnosti* s cieľom porozumieť agregovaným výnosom v celej firme.  
 
 Miery sa vytvárajú pomocou nástroja na tvorbu mier, platformy na dotazovanie údajov s rôznymi operátormi a jednoduchými možnosťami mapovania. Umožňujú vám filtrovať údaje, zoskupovať výsledky, zisťovať [cesty vzťahov medzi entitami](relationships.md) a zobrazovať ukážku výstupu.
 
@@ -34,9 +34,9 @@ Táto sekcia vás prevedie vytvorením novej miery od nuly. Môžete vytvoriť m
 
 1. Vyberte **Upraviť názov** a zadajte **Názov** miery. 
    > [!NOTE]
-   > Ak má vaša nová konfigurácia opatrení iba dve polia, napríklad CustomerID a jeden výpočet, výstup sa pridá ako nový stĺpec do systémovo generovanej entity s názvom Customer_Measure. Hodnotu miery uvidíte v zjednotenom profile zákazníka. Ostatné miery vytvoria svoje vlastné entity.
+   > Ak má vaša nová konfigurácia opatrení iba dve polia – napríklad CustomerID a jeden výpočet –, výstup sa pridá ako nový stĺpec do systémovo generovanej entity s názvom Customer_Measure. Hodnotu miery uvidíte v zjednotenom profile zákazníka. Ostatné miery vytvoria svoje vlastné entity.
 
-1. V konfiguračnej oblasti vyberte agregačnú funkciu z rozbaľovacej ponuky **Vyberte funkciu**. Medzi agregačné funkcie patria: 
+1. V konfiguračnej oblasti vyberte agregačnú funkciu z rozbaľovacej ponuky **Vybrať funkciu**. Medzi agregačné funkcie patria: 
    - **Sum**
    - **Priemer**
    - **Obchodný vzťah**
@@ -64,17 +64,19 @@ Táto sekcia vás prevedie vytvorením novej miery od nuly. Môžete vytvoriť m
 
 1. Ak chcete pridať filtre, vyberte **Filtrovať** v konfiguračnej oblasti. 
   
-   1. V sekcii **Pridať atribút** tably **Filtre** vyberte atribút, ktorý chcete použiť na vytvorenie filtrov.
+   1. V sekcii **Pridať atribút** na table **Filtre** vyberte atribút, ktorý chcete použiť na vytvorenie filtrov.
    1. Nastavte operátory filtra tak, aby definovali filter pre každý vybraný atribút.
    1. Vyberte **Použiť** na pridanie filtrov k miere.
 
 1. Ak chcete pridať dimenzie, vyberte **Dimenzie** v konfiguračnej oblasti. Dimenzie sa zobrazia ako stĺpce v entite výstupu miery.
+ 
    1. Vyberte **Upraviť dimenzie**, ak chcete pridať atribúty údajov, podľa ktorých chcete zoskupiť namerané hodnoty. Napríklad mesto alebo pohlavie. V predvolenom nastavení je vybraná dimenzia *CustomerID* na vytvorenie *mier na úrovni zákazníka*. Ak chcete vytvoriť *miery na úrovni podniku*, môžete odstrániť predvolenú dimenziu.
    1. Vyberte **Hotovo** na pridanie dimenzie k miere.
 
-1. Ak sú vo vašich údajoch hodnoty, ktoré musíte vymeniť napríklad celým číslom, nahraďte ich príznakom *null* s *0*, a stlačte možnosť **Pravidlá**. Nakonfigurujte pravidlo a uistite sa, že ste ako náhradu vybrali iba celé čísla.
+1. Ak sú vo vašich údajoch hodnoty, ktoré musíte nahradiť celým číslom – nahraďte ich napríklad príznakom *null* s *0* – a stlačte možnosť **Pravidlá**. Nakonfigurujte pravidlo a uistite sa, že ste ako náhradu vybrali iba celé čísla.
 
 1. Ak existuje viac postupov medzi dátovou entitou, ktorú ste mapovali, a entitou *zákazníka*, musíte zvoliť jednu z identifikovaných [postupov vzťahov medzi entitami](relationships.md). Výsledky mier sa môžu líšiť v závislosti od zvoleného postupu. 
+   
    1. Vyberte **Predvoľby údajov** a vyberte postup entity, ktorý by sa mal použiť na identifikáciu vašej miery. Ak existuje iba jedna cesta k entite *Zákazník*, tento ovládací prvok sa nezobrazí.
    1. Výberom možnosti **Hotovo** použite svoj výber. 
 
@@ -113,7 +115,7 @@ Nasledujúci postup popisuje kroky na vytvorenie nového opatrenia pomocou šabl
 
 1. Stlačte **Nový** a stlačte **Výber šablóny**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Snímka obrazovky z rozbaľovacej ponuky pri vytváraní nového opatrenia so zvýraznením šablóny.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Snímka obrazovky s rozbaľovacou ponukou pri vytváraní nového opatrenia so zvýraznením šablóny.":::
 
 1. Nájdite šablónu, ktorá vyhovuje vašim potrebám, a stlačte možnosť **Vybrať šablónu**.
 
@@ -123,7 +125,7 @@ Nasledujúci postup popisuje kroky na vytvorenie nového opatrenia pomocou šabl
 
 1. Vyberte položku **Hotovo**.
 
-1. V časti **Nastaviť časové obdobie** definujte časový rámec údajov, ktoré sa majú použiť. Vyberte, či chcete, aby nové opatrenie pokrylo celú množinu údajov výberom **Vždy**. Alebo ak chcete, aby sa opatrenie zameralo na **Konkrétne časové obdobie**.
+1. V časti **Nastaviť časové obdobie** definujte časový rámec údajov, ktoré sa majú použiť. Vyberte, či chcete, aby nové opatrenie pokrylo celú množinu údajov tak, že vyberiete možnosť **Celkovo**, alebo či chcete, aby sa opatrenie zameralo na **Konkrétne časové obdobie**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Snímka obrazovky zobrazujúca sekciu časového obdobia pri konfigurácii merania zo šablóny.":::
 
@@ -142,12 +144,12 @@ Nasledujúci postup popisuje kroky na vytvorenie nového opatrenia pomocou šabl
 
 Zoznam opatrení nájdete na stránke **Miery**.
 
-Nájdete informácie o type miery, jej tvorcovi, dátume vytvorenia, statuse a stave. Keď vyberiete mieru zo zoznamu, môžete si pozrieť ukážku výstupu a stiahnuť súbor .CSV.
+Nájdete informácie o type miery, jej tvorcovi, dátume vytvorenia, statuse a stave. Keď vyberiete opatrenie zo zoznamu, môžete si pozrieť verziu Preview výstupu a stiahnuť súbor vo formáte CSV.
 
 Ak chcete obnoviť všetky svoje miery naraz, vyberte položku **Obnoviť všetko** bez výberu konkrétnej miery.
 
 > [!div class="mx-imgBorder"]
-> ![Akcie na spravovanie jednotlivých mier](media/measure-actions.png "Akcie na spravovanie jednotlivých mier")
+> ![Akcie na spravovanie jednotlivých opatrení.](media/measure-actions.png "Akcie na spravovanie jednotlivých opatrení.")
 
 Vyberte mieru zo zoznamu a zobrazte nasledujúce možnosti:
 
@@ -159,11 +161,11 @@ Vyberte mieru zo zoznamu a zobrazte nasledujúce možnosti:
 - **Aktivujte** alebo **Deaktivujte**. Neaktívne miery sa počas [plánovaného obnovenia](system.md#schedule-tab) neobnovujú.
 
 > [!TIP]
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
+> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere možnosti **Zobraziť podrobnosti** pre jednu z pracovných úloh nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s danou úlohou.
 
 ## <a name="next-step"></a>Nasledujúci krok
 
-Môžete použiť existujúce miery na vytvorenie [vlastného segmentu](segments.md).
+Existujúce opatrenia môžete použiť na vytvorenie [zákazníckeho segmentu](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

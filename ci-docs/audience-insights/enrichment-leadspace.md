@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895932"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305221"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obohatenie profilov spoločnosti pomocou Leadspace (náhľad)
 
@@ -36,7 +36,7 @@ Na konfiguráciu Leadspace musia byť splnené nasledujúce predpoklady:
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Snímka obrazovky dlaždice Leadspace.":::
 
-1. V rozbaľovacej ponuke stlačte možnosť [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie** a zvoľte možnosť **Leadspace**. 
+1. Vyberte si z rozbaľovacieho zoznamu [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie** a zvoľte možnosť **Leadspace**. 
 
 1. Vyberte **Pripojiť sa k Leadspace** na potvrdenie zvoleného spojenia.
 
@@ -57,13 +57,13 @@ Na konfiguráciu Leadspace musia byť splnené nasledujúce predpoklady:
 
 Na konfiguráciu pripojení musíte byť administrátor. Stlačte možnosť **Pridať pripojenie** pri konfigurácii obohatenia *alebo* prejdite na **Správca** > **Pripojenia** a vyberte **Nastaviť** na dlaždici Leadspace.
 
-1. Vyberte položku **Začíname** 
+1. Vyberte položku **Začíname**. 
 
 1. Zadajte názov pripojenia do boxu **Zobrazovaný názov**.
 
 1. Poskytnite platný token Leadspace.
 
-1. Skontrolujte a poskytnite svoj súhlas pre **Ochrana osobných údajov a dodržiavanie súladu s nariadeniami** označením začiarkavacieho políčka **Súhlasím**.
+1. Skontrolujte a poskytnite svoj súhlas pre **Ochranu osobných údajov a dodržiavanie súladu s nariadeniami** výberom možnosti **Súhlasím**.
 
 1. Stlačte **Overiť** na overenie konfigurácie.
 
@@ -81,7 +81,7 @@ Môžete získať podrobné zobrazenie každého obohateného profilu výberom *
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
-Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md), [miery](measures.md) a dokonca [exportujte údaje](export-destinations.md) na poskytovanie prispôsobenej používateľskej skúsenosti svojim zákazníkom.
+Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md) a [opatrenia](measures.md), a dokonca [exportujte údaje](export-destinations.md), aby ste mohli poskytovať svojim zákazníkom zážitky šité na mieru.
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 

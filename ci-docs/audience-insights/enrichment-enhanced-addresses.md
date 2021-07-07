@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965597"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305451"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obohatenie zákazníckych profilov vylepšenými adresami
 
@@ -22,11 +22,11 @@ Adresy vo vašich údajoch môžu byť neštruktúrované, neúplné alebo nespr
 
 ## <a name="how-we-enhance-addresses"></a>Ako vylepšujeme adresy
 
-Náš model prechádza vylepšením adresy v dvoch krokoch. Najskôr analyzuje adresu, aby identifikovala jej súčasti, a umiestni ich do štruktúrovaného formátu. Potom pomocou umelej inteligencie opravíme, doplníme a štandardizujeme hodnoty v adrese.
+Náš model prechádza vylepšením adresy v dvoch krokoch. Najskôr analyzuje adresu, aby identifikovala jej súčasti, a umiestni ich do štruktúrovaného formátu. Potom pomocou AI opravíme, doplníme a štandardizujeme hodnoty v adrese.
 
 ### <a name="example"></a>Príklad
 
-Informácie o adrese môžu byť v neštandardnom formáte a obsahovať pravopisné chyby. Model dokáže tieto problémy vyriešiť a vytvoriť jednotné adresy v zjednotených profiloch zákazníkov.
+Informácie o adrese môžu byť uvedené v neštandardnom formáte a môžu obsahovať pravopisné chyby. Model dokáže tieto problémy vyriešiť a vytvoriť jednotné adresy v zjednotených profiloch zákazníkov.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Vylepšené adresy fungujú iba s hodnotami, ktoré už existujú v údajoch o p
 2. Overte si platnosť niektorej z hodnôt, ako sú PSČ alebo názvy ulíc.
 3. Zmeňte hodnoty, ktoré nerozpozná.
 
-Model používa na vylepšenie adries techniky založené na strojovom učení. Aj keď pri zmene modelu vstupnej hodnoty použijeme vysoký prah spoľahlivosti, rovnako ako pri iných modeloch založených na ML, nie je zaručená 100 % presnosť.
+Model používa na vylepšenie adries techniky založené na strojovom učení. Aj keď pri zmene vstupnej hodnoty modelu použijeme vysoký prah spoľahlivosti, rovnako ako u iných modelov založených na strojovom učení nie je možné zaručiť 100-percentnú presnosť.
 
 ## <a name="supported-countries-or-regions"></a>Podporované krajiny alebo regióny
 
@@ -76,7 +76,7 @@ Adresy musia obsahovať hodnotu krajiny alebo regiónu. Nespracovávame adresy p
 1. Vyberte spôsob formátovania adries vo svojich množinách údajov. Stlačte možnosť **Adresa s jedným atribútom** ak adresy vo vašich údajoch používajú jedno pole. Stlačte možnosť **Adresa s viacerými atribútmi** ak adresy vo vašich údajoch používajú viac než jedno údajové pole.
 
    > [!NOTE]
-   > Krajina alebo oblasť je povinná v adrese s jedným atribútom aj s viacerými atribútmi. Adresy, ktoré neobsahujú platné alebo podporované hodnoty krajín alebo oblastí, nebudú obohatené
+   > Štát/oblasť je povinný údaj v adresách s jedným atribútom aj s viacerými atribútmi. Adresy, ktoré neobsahujú platné alebo podporované hodnoty krajín alebo oblastí, nebudú obohatené.
 
 1.  Mapujte polia adresy od svojej zjednotenej zákazníckej entity.
 
@@ -98,6 +98,6 @@ Môžete získať podrobné zobrazenie každého obohateného profilu výberom *
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
-Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md), [miery](measures.md) a dokonca [exportujte údaje](export-destinations.md) na poskytovanie prispôsobenej používateľskej skúsenosti svojim zákazníkom.
+Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md) a [opatrenia](measures.md), a dokonca [exportujte údaje](export-destinations.md), aby ste mohli poskytovať svojim zákazníkom zážitky šité na mieru.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

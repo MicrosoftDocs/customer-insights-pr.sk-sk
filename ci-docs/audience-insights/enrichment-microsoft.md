@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245726"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305175"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte profily zákazníkov o značky a záujmy (ukážka)
 
-Na obohatenie svojich zákazníckych údajov o záujmy značiek a záujmov použite patentované údaje spoločnosti Microsoft. Tieto afinity sa určujú na základe údajov od ľudí s podobnou demografiou ako vaši zákazníci. Tieto informácie vám pomôžu lepšie porozumieť a segmentovať vašich zákazníkov na základe ich príslušnosti k určitým značkám a záujmom.
+Na obohatenie svojich zákazníckych údajov o záujmy značiek a záujmov použite patentované údaje spoločnosti Microsoft. Tieto afinity vychádzajú z údajov od ľudí pochádzajúcich z podobnej demografickej oblasti ako vaši zákazníci. Tieto informácie vám pomôžu lepšie porozumieť a segmentovať vašich zákazníkov na základe ich príslušnosti k určitým značkám a záujmom.
 
 V prehľadoch cieľových skupín prejdite na **Údaje** > **Obohatenie** na [konfiguráciu a zobrazenie obohatení](enrichment-hub.md).
 
@@ -27,7 +27,7 @@ Ak chcete nakonfigurovať obohatenie o afinity značiek, prejdite na stránku **
 Ak chcete nakonfigurovať obohatenie o afinity záujmov, prejdite na stránku **Objavovať** a vyberte **Obohatiť moje údaje** na dlaždici **Záujmy**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice Značky a záujmy](media/BrandsInterest-tile-Hub.png "Dlaždice Značky a záujmy")
+   > ![Dlaždice značiek a záujmov](media/BrandsInterest-tile-Hub.png "Dlaždice značiek a záujmov")
 
 ## <a name="how-we-determine-affinities"></a>Ako určujeme príbuznosti
 
@@ -35,7 +35,7 @@ Ak chcete nakonfigurovať obohatenie o afinity záujmov, prejdite na stránku **
 
 ## <a name="affinity-level-and-score"></a>Úroveň afinity a skóre
 
-V každom obohatenom profile zákazníka poskytujeme dve súvisiace hodnoty – úroveň afinity a skóre afinity. Tieto hodnoty vám pomôžu určiť, aká silná je afinita k demografickému segmentu daného profilu, k značke alebo záujmu v porovnaní s ostatnými demografickými segmentmi.
+V každom obohatenom profile zákazníka poskytujeme dve súvisiace hodnoty: úroveň afinity a skóre afinity. Tieto hodnoty vám pomôžu určiť, aká silná je afinita k demografickému segmentu daného profilu, k značke alebo záujmu v porovnaní s ostatnými demografickými segmentmi.
 
 *Úroveň afinity* pozostáva zo štyroch úrovní a *skóre afinity* sa počíta na 100-bodovej stupnici, ktorá sa mapuje na úrovne afinity.
 
@@ -53,7 +53,7 @@ V závislosti od podrobností, ktoré chcete pri meraní afinity, môžete použ
 
 V súčasnosti podporujeme možnosti nasledujúcich krajín/regiónov: Austrália, Kanada (angličtina), Francúzsko, Nemecko, Spojené kráľovstvo alebo Spojené štáty (angličtina).
 
-Ak chcete vybrať krajinu, otvorte **Obohatenie značiek** alebo **Obohatenie záujmov** a vyberte **Zmeniť** vedľa **Krajiny/regiónu**. Na table **Nastavenia krajiny/regiónu** vyberte možnosť a následne položku **Použiť**.
+Ak chcete zvoliť krajinu alebo región, otvorte stránku **Obohatenie značiek** alebo **Obohatenie záujmov** a vyberte položku **Zmeniť** vedľa položky **Krajina/región**. Na table **Nastavenia krajiny/regiónu** vyberte možnosť a následne položku **Použiť**.
 
 ### <a name="implications-related-to-country-selection"></a>Dôsledky týkajúce sa výberu krajiny
 
@@ -61,7 +61,7 @@ Ak chcete vybrať krajinu, otvorte **Obohatenie značiek** alebo **Obohatenie z�
 
 - Pri [výbere odvetvia](#define-your-brands-or-interests) získate najrelevantnejšie značky alebo záujmy na základe vybranej krajiny alebo regiónu.
 
-- Pri [obohacovaní profilov](#refresh-enrichment) obohatíme všetky profily zákazníkov, pre ktoré získame údaje o vybraných značkách a záujmoch. Zahrnutie profilov, ktoré sa nenachádzajú vo vybranej krajine alebo oblasti. Napríklad ak ste vybrali Nemecko, obohatíme profily nachádzajúce sa v USA, ak máme k dispozícii údaje o vybraných značkách a záujmoch v USA.
+- Pri [obohacovaní profilov](#refresh-enrichment) obohatíme všetky profily zákazníkov, pre ktoré získame údaje o vybraných značkách a záujmoch, vrátane profilov, ktoré sa nenachádzajú vo vybranej krajine alebo regióne. Napríklad ak ste vybrali Nemecko, obohatíme profily nachádzajúce sa v USA, ak máme k dispozícii údaje o vybraných značkách a záujmoch v USA.
 
 ## <a name="configure-enrichment"></a>Konfigurácia obohatenia
 
@@ -71,7 +71,7 @@ Prehliadka so sprievodcom vám pomôže pri konfigurácii obohatení.
 
 Vyberte si až päť značiek alebo záujmov pomocou jednej alebo oboch z týchto možností:
 
-- **Priemysel**: Z rozbaľovacieho zoznamu vyberte svoje odvetvie a potom vyberte z top značiek alebo záujmov pre dané odvetvie.
+- **Odvetvie**: Z rozbaľovacieho zoznamu vyberte svoje odvetvie a potom si vyberte z top značiek alebo záujmov pre dané odvetvie.
 - **Vyberte svoje vlastné**: Zadajte značku alebo záujem, ktorý je relevantný pre vašu organizáciu, a potom si vyberte zodpovedajúce návrhy. Ak neuvedieme hľadanú značku alebo záujem, pošlite nám svoje pripomienky pomocou odkazu **Navrhnúť**.
 
 ### <a name="review-enrichment-preferences"></a>Kontrola predvolieb obohacovania
@@ -88,13 +88,13 @@ Stlačte možnosť **Obohatená entita** a vyberte množinu údajov, ktorú chce
 
 Mapujte polia z vašej zjednotenej entity zákazníka a definujte demografický segment, ktorý má systém používať na obohatenie vašich údajov o zákazníkoch. Mapujte krajinu/región a minimálne atribúty Dátum narodenia alebo Pohlavie. Okrem toho musíte namapovať aspoň jedno mesto (a štát/kraj) alebo PSČ. Zvoľte možnosť **Upraviť** na definovanie mapovania polí a keď to dokončíte, stlačte možnosť **Použiť**. Vyberte **Uložiť** na dokončenie mapovania polí.
 
-Podporované sú nasledujúce formáty a hodnoty, hodnoty nerozlišujú veľké a malé písmená:
+Podporované sú nasledujúce formáty a hodnoty (hodnoty nerozlišujú veľké a malé písmená):
 
-- **Dátum narodenia**: Počas prijímania údajov vám odporúčame previesť dátum narodenia na typ DateTime. Alternatívne to môže byť reťazec vo formáte [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) „rrrr-MM-dd“ alebo „rrrr-MM-ddTHH: mm: ssZ“.
-- **Pohlavie**: muž, žena, neznáme
-- **Poštové smerovacie číslo**: Päťmiestne PSČ pre USA, štandardné poštové smerovacie číslo všade inde
-- **Mesto**: Názov mesta v angličtine
-- **Štát/provincia**: Dvojpísmenová skratka pre USA a Kanadu. Dvoj- alebo trojpísmenná skratka pre Austráliu. Nevzťahuje sa na Francúzsko, Nemecko ani Spojené kráľovstvo.
+- **Dátum narodenia**: Počas prijímania údajov vám odporúčame previesť dátum narodenia na typ DateTime. Prípadne to môže byť reťazec vo formáte [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) „rrrr-MM-dd“ alebo „rrrr-MM-ddTHH:mm:ss“.
+- **Pohlavie**: muž, žena, neznáme.
+- **Poštové smerovacie číslo**: Päťmiestne PSČ pre Spojené štáty, štandardné poštové smerovacie číslo v ostatných štátoch.
+- **Mesto**: názov mesta v angličtine.
+- **Štát/provincia**: Dvojpísmenová skratka pre USA a Kanadu. Dvoj- alebo trojpísmenková skratka pre Austráliu. Nevzťahuje sa na Francúzsko, Nemecko ani Spojené kráľovstvo.
 - **Krajina/oblasť**:
 
   - USA: Spojené štáty americké, Spojené štáty, USA, US, Amerika
@@ -113,10 +113,11 @@ Nakoniec si prečítate informácie a uvediete názov obohatenia.
 ## <a name="refresh-enrichment"></a>Obnovenie obohatenia
 
 Spustite obohatenie po nakonfigurovaní značiek, záujmov a mapovania terénu pre demografické údaje. Ak chcete proces spustiť, vyberte položku **Spustiť** na stránke konfigurácie značky alebo záujmu. Okrem toho môžete nechať systém, aby obohatenie spustil automaticky ako súčasť plánovanej obnovy.
+
 V závislosti od veľkosti vašich zákazníckych údajov môže dokončenie procesu obohatenia trvať niekoľko minút.
 
 > [!TIP]
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
+> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere možnosti **Zobraziť podrobnosti** pre jednu z pracovných úloh nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s danou úlohou.
 
 ## <a name="enrichment-results"></a>Výsledky obohatenia
 
@@ -134,7 +135,7 @@ Značky a záujmy môžu byť zobrazené aj na jednotlivých zákazníckych kart
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
-Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md), [merania](measures.md) a dokonca [exportujte údaje](export-destinations.md) na poskytovanie prispôsobenej používateľskej skúsenosti svojim zákazníkom.
+Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md) a [opatrenia](measures.md), a dokonca [exportujte údaje](export-destinations.md), aby ste mohli poskytovať svojim zákazníkom zážitky šité na mieru.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

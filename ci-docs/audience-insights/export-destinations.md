@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253059"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305497"
 ---
 # <a name="exports-preview-overview"></a>Prehľad exportov (verzia Preview)
 
 Stránka **Exporty** zobrazuje všetky nakonfigurované exporty. Exporty zdieľajú konkrétne údaje s rôznymi aplikáciami. Môžu obsahovať zákaznícke profily alebo entity, schémy a podrobnosti mapovania. Každý export vyžaduje [pripojenie, nastavenie zo strany správcu na správu autentifikácie a prístupu](connections.md).
 
-Prejdite do ponuky **Údaje** > **Exporty** a zobrazte si stránku s exportmi. Všetky používateľské roly majú prístup na zobrazenie nakonfigurovaných exportov. Pomocou vyhľadávacieho poľa na paneli príkazov môžete vyhľadať exporty podľa ich názvu, názvu pripojenia alebo typu pripojenia.
+Prejdite do ponuky **Údaje** > **Exporty** a zobrazte si stránku s exportmi. Všetky roly používateľov môžu zobrazovať nakonfigurované exporty. Pomocou vyhľadávacieho poľa na paneli príkazov vyhľadajte exporty podľa názvu, názvu pripojenia alebo typu pripojenia.
 
 ## <a name="set-up-a-new-export"></a>Nastavenie nového exportu
 
@@ -65,7 +65,7 @@ Po vytvorení cieľov exportu sa tieto uvedú v časti **Údaje** > **Exporty**.
 
 1. Prejdite na **Údaje** > **Exporty**.
 
-1. Používatelia bez oprávnení na úpravy zvoľte možnosť **Zobraziť** namiesto **Upraviť** a zobrazte si podrobnosti exportu.
+1. Používatelia bez povolení na úpravy vyberú možnosť **Zobraziť** namiesto možnosti **Upraviť** na zobrazenie podrobností o exporte.
 
 1. Bočná tabla zobrazuje konfiguráciu exportu. Bez povolení na úpravy nemôžete hodnoty meniť. Stlačte možnosť **Zavrieť** pre návrat na stránku exportu.
 
@@ -73,7 +73,7 @@ Po vytvorení cieľov exportu sa tieto uvedú v časti **Údaje** > **Exporty**.
 
 Každý export, ktorý nakonfigurujete, má plán obnovenia. Počas obnovenia systém vyhľadá nové alebo aktualizované údaje, ktoré by zahrnul do exportu. Export sa štandardne spúšťa ako súčasť každého [plánovaného obnovenia systému](system.md#schedule-tab). Môžete prispôsobiť plán obnovenia alebo ho vypnúť, aby sa exporty spúšťali manuálne.
 
-Plány exportu závisia od stavu vášho prostredia. Ak prebiehajú aktualizácie [závislostí](system.md#refresh-policies), keď by sa mal spustiť plánovaný export, systém najskôr dokončí závislosti a potom spustí export. V stĺpci môžete vidieť, kedy sa export naposledy obnovil v stĺpci **Obnovené**.
+Plány exportu závisia od stavu vášho prostredia. Ak prebiehajú aktualizácie v rámci [závislostí](system.md#refresh-policies), keď sa má spustiť plánovaný export, systém najskôr dokončí aktualizácie a potom spustí export. V stĺpci môžete vidieť, kedy sa export naposledy obnovil v stĺpci **Obnovené**.
 
 ### <a name="schedule-exports"></a>Plánovanie exportov
 

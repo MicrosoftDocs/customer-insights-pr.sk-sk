@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700687"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305669"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastné modely strojového učenia
 
@@ -72,7 +72,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
       > [!div class="mx-imgBorder"]
       > ![Tabla parametrov modelového výstupu](media/intelligence-screen3-outputparameters.png "Tabla parametrov modelového výstupu")
 
-1. Vyberte zodpovedajúci atribút z rozbaľovacieho zoznamu **ID zákazníka vo výsledkoch**, ktorý identifikuje zákazníkov, a vyberte položku **Uložiť**.
+1. Vyberte zodpovedajúci atribút z rozbaľovacieho zoznamu **ID zákazníka vo výsledkoch**, ktorý identifikuje zákazníkov, a vyberte možnosť **Uložiť**.
 
    > [!div class="mx-imgBorder"]
    > ![Spárovanie výsledkov s tablou údajov o zákazníkoch](media/intelligence-screen4-relatetocustomer.png "Spárovanie výsledkov s tablou údajov o zákazníkoch")
@@ -100,7 +100,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
       1. Vyberte položku **Názov parametra ukladacieho priestoru výstupných údajov** pre váš testovací kanál.
       1. Vyberte položku **Názov parametra ukladacieho priestoru postupu** pre váš testovací kanál.
 
-1. Vyberte zodpovedajúci atribút z rozbaľovacieho zoznamu **ID zákazníka vo výsledkoch**, ktorý identifikuje zákazníkov, a vyberte položku **Uložiť**.
+1. Vyberte zodpovedajúci atribút z rozbaľovacieho zoznamu **ID zákazníka vo výsledkoch**, ktorý identifikuje zákazníkov, a vyberte možnosť **Uložiť**.
    Zvoľte si atribút z výstupu predikcie s hodnotami podobnými ako v stĺpci ID zákazníka v rámci entity Zákazník. Ak takýto stĺpec vo svojej množine údajov nemáte, vyberte atribút, ktorý jednoznačne identifikuje daný riadok.
 
 ## <a name="run-a-workflow"></a>Spustenie pracovného postupu

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124384"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304853"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Export segmentov do AdRoll (verzia Preview)
 
@@ -28,11 +28,11 @@ Exportujte segmenty zjednotených profilov zákazníkov do služby AdRoll a pou�
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Do služby AdRoll môžete exportovať spolu až 250 000 profilov na export.
+- Do AdRoll môžete exportovať až 250 000 profilov súčasne.
 - Do služby AdRoll nemôžete exportovať segmenty s menej ako 100 profilmi. 
 - Export do AdRoll je obmedzený na segmenty.
 - Export až 250 000 profilov do služby AdRoll môže trvať až 10 minút. 
-- Počet profilov, ktoré môžete exportovať do AdRoll, závisí a je obmedzený vašou zmluvou so spoločnosťou AdRoll.
+- Počet profilov, ktoré môžete exportovať do AdRoll, závisí od vašej zmluvy s AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Nastavenie pripojenia k AdRoll
 
@@ -62,9 +62,9 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Na vytvorenie nového exportu stlačte možnosť **Pridať cieľ**.
 
-1. V poli **Pripojenie na export** vyberte pripojenie v časti AdRoll. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
+1. V poli **Pripojenie na export** vyberte pripojenie v časti AdRoll. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne pripojenia tohto typu.
 
-1. Zadajte svoje **ID inzerenta AdRoll** Viac informácií nájdete v časti [Profily inzerentov AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Zadajte svoje **ID zadávateľa reklamy v službe AdRoll**. Ďalšie informácie nájdete v sekcii [Profily zadávateľov reklamy v službe AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Je potrebné exportovať segmenty do služby AdRoll.
 
@@ -74,7 +74,9 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 Uloženie exportu nespustí export okamžite.
 
-Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
+Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). 
+
+Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami

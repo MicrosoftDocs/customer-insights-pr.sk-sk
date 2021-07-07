@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129964"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306368"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Predikcie hodnoty životnosti zákazníka (CLV) – vzorový sprievodca
 
@@ -123,9 +123,9 @@ Po prijatí údajov teraz začneme proces zjednocovania údajov, aby sme vytvori
 
 1. Prejdite na kartu **Spárovanie** a vyberte **Nastaviť poradie**.
 
-1. V rozbaľovacom zozname **Primárny** vyberte **eCommerceContacts: eCommerce** ako primárny zdroj a zahrňte všetky záznamy.
+1. V **primárnom** rozbaľovacom zozname si vyberte možnosť **eCommerceContacts: eCommerce** ako primárny zdroj a zahrňte do nej všetky záznamy.
 
-1. V rozbaľovacom zozname **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všetky záznamy.
+1. V rozbaľovacom zozname **Entita 2** vyberte možnosť **loyCustomers: LoyaltyScheme** a zahrňte do nej všetky záznamy.
 
    ![Zjednotenie zosúladenia eCommerce a Loyalty.](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ Po prijatí údajov teraz začneme proces zjednocovania údajov, aby sme vytvori
 
 1. Pridajte svoju prvú podmienku pomocou FullName.
 
-   - Pre eCommerceContacts vyberte v rozbaľovacej ponuke **FullName**.
-   - Pre loyCustomers vyberte v rozbaľovacej ponuke **FullName**.
-   - Vyberte rozbaľovací zoznam **Normalizovať** a vyberte **Typ (Telefón, Meno, Adresa, …)**.
+   - V prípade eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **FullName**.
+   - V prípade loyCustomers vyberte z rozbaľovacieho zoznamu položku **FullName**.
+   - Vyberte si položku **Normalizovať** z rozbaľovacieho zoznamu a vyberte možnosť **Typ (telefón, meno, adresa, ...)**.
    - Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
 
 1. Zadajte meno **FullName, E-mail** pre nové pravidlo.
 
    - Vyberte druhú podmienku pre e-mailovú adresu výberom možnosti **Pridať podmienku**
-   - Pre entitu eCommerceContacts vyberte v rozbaľovacej ponuke **E-mail**.
-   - Pre entitu loyCustomers vyberte v rozbaľovacej ponuke **E-mail**.
+   - Pri entite eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **EMail**.
+   - Pri entite loyCustomers vyberte z rozbaľovacieho zoznamu položku **EMail**.
    - Pole Normalizovať nechajte prázdne.
    - Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
 

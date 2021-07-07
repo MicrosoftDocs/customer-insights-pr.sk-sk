@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954506"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305267"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obohacovanie profilov zákazníkov (ukážka)
 
@@ -22,7 +22,8 @@ Na obohatenie údajov o zákazníkoch použite údaje zo zdrojov ako Microsoft a
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Stránka centra obohatenia":::
 
-V prehľadoch cieľových skupín prejdite na **Údaje** > **Obohatenie**, aby ste mohli pracovať s možnosťami obohacovania.    
+V prehľadoch cieľových skupín prejdite na **Údaje** > **Obohatenie**, aby ste mohli pracovať s možnosťami obohacovania.  
+
 Ak chcete vytvárať alebo upravovať obohatenia, musíte mať oprávnenie prispievateľa alebo správcu. Ďalšie informácie nájdete v časti [Povolenia](permissions.md).
 
 Na internete **Objavovať** nájdete nasledujúce obohatenia:
@@ -31,7 +32,7 @@ Na internete **Objavovať** nájdete nasledujúce obohatenia:
 - [Záujmy](enrichment-microsoft.md) od spoločnosti Microsoft
 - [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft
 - [Údaje o spoločnosti](enrichment-leadspace.md) poskytované spoločnosťou Leadspace
-- [Demografické údaje](enrichment-experian.md) poskytované spoločnosťou Experian
+- [Demografické údaje](enrichment-experian.md), ktoré poskytuje Experian
 - [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies
 - [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol)
 
@@ -39,7 +40,7 @@ Na karte **Moje obohatenia** môžete vidieť obohatenia, ktoré ste nakonfiguro
 
 ## <a name="manage-existing-enrichments"></a>Spravovanie existujúcich obohatení
 
-Prejdite do **Moje obohatenia**, aby ste videli všetky nakonfigurované obohatenia. Každé obohatenie je predstavované ako riadok, ktorý obsahuje ďalšie informácie o obohatení.
+Prejdite na kartu **Moje obohatenia**, kde nájdete všetky nakonfigurované obohatenia. Každé obohatenie je predstavované ako riadok, ktorý obsahuje ďalšie informácie o obohatení.
 
 Vyberte obohatenie a zobrazia sa dostupné možnosti. Možnosti môžete zobraziť aj tak, že stlačíte tri bodky (...) v položke zoznamu.
 
@@ -59,6 +60,6 @@ Obohatenia tretích strán sa konfigurujú pomocou [spojení](connections.md), k
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Viacnásobné obohatenie rovnakého typu
 
-Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia, ktorá umožňuje obohatiť iba podmnožinu vašich profilov. V prípade obohaťte údaje iba o konkrétny segment. Môžete nakonfigurovať niekoľko obohatení rovnakého typu a znova použiť to isté pripojenie. Niektoré obohatenia budú mať obmedzený počet obohatení rovnakého typu, ktoré je možné vytvoriť. Limity a súčasné použitie sú uvedené na stránke **Obohatenie**.
+Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia, ktorá umožňuje obohatiť iba podmnožinu vašich profilov. Môžete napríklad obohatiť údaje iba v konkrétnom segmente. Môžete nakonfigurovať niekoľko obohatení rovnakého typu a znova použiť to isté pripojenie. Niektoré obohatenia budú mať obmedzený počet obohatení rovnakého typu, ktoré je možné vytvoriť. Limity a súčasné použitie sú uvedené na stránke **Obohatenie**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

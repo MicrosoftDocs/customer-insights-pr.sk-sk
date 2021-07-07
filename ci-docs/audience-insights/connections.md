@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896116"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304991"
 ---
 # <a name="connections-preview-overview"></a>Prehľad pripojení (ukážka)
 
@@ -42,7 +42,7 @@ Ak chcete pridať pripojenia, musíte mať [oprávnenia správcu](permissions.md
 
 1. Prejdite na kartu **Pripojenia**.
 
-1. Ak chcete vytvoriť nové pripojenie, vyberte **Pridať pripojenie**. Z rozbaľovacej ponuky vyberte, aký typ pripojenia chcete vytvoriť.
+1. Ak chcete vytvoriť nové pripojenie, vyberte **Pridať pripojenie**. Z rozbaľovacej ponuky si vyberte, aký typ pripojenia chcete vytvoriť.
 
 1. V table **Nastaviť pripojenie** zadajte požadované podrobnosti. 
    1. **Zobrazovaný názov** a typ spojenia popisujú spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
@@ -74,7 +74,9 @@ Pri nastavovaní alebo úprave exportného pripojenia si vyberáte, ktorí použ
 
 ## <a name="remove-a-connection"></a>Odstrániť pripojenie
 
-Ak je pripojenie, ktoré odstraňujete, obohatené alebo exportované, musíte ich najskôr odpojiť alebo odstrániť. Dialógové okno odstránenia vás prevedie príslušným obohatením alebo exportom. Oddelené obohatenia a exporty sa stanú neaktívnymi. Znova ich aktivujete pridaním ďalšieho spojenia na ne na stránke [Obohatenia](enrichment-hub.md) alebo[Exporty](export-destinations.md).
+Ak je pripojenie, ktoré odstraňujete, obohatené alebo exportované, musíte ich najskôr odpojiť alebo odstrániť. Dialógové okno odstránenia vás prevedie príslušným obohatením alebo exportom. 
+
+Oddelené obohatenia a exporty sa stanú neaktívnymi. Znova ich aktivujete pridaním ďalšieho spojenia na ne na stránke [Obohatenia](enrichment-hub.md) alebo [Exporty](export-destinations.md).
 
 1. Prejdite do časti **Správca** > **Pripojenia (ukážka)**.
 
@@ -89,5 +91,5 @@ Ak je pripojenie, ktoré odstraňujete, obohatené alebo exportované, musíte i
       - **Obohatenia:** Môžete si vybrať, či chcete odstrániť alebo deaktivovať obohatenia, aby ste mohli pripojenie odstrániť. 
    1. Keď už pripojenie nemá žiadne ďalšie závislosti, vráťte sa späť na časť **Správca** > **Pripojenia** a skúste pripojenie znova odstrániť.
 
-1. Na potvrdenie odstránenia stlačte možnosť **Odstrániť**.
+1. Na potvrdenie odstránenia vyberte možnosť **Odstrániť**.
 

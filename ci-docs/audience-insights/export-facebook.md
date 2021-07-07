@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976061"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305129"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Export zoznamu segmentov do Facebook Ads Manager (verzia Preview)
 
@@ -22,12 +22,12 @@ Export segmentov zjednotených zákazníckych profilov do Správcu reklám Faceb
 
 ## <a name="prerequisites-for-connection"></a>Predpoklad na pripojenie
 
-- Musíte mať [konto **Facebook Ad**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), ktoré zahŕňa [Obchodné konto **Facebook**](https://business.facebook.com/).
-- Na počítači musíte byť správcom [**Reklamného účtu Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Musíte mať [**reklamné konto Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), ktoré zahŕňa [**obchodné konto Facebook**](https://business.facebook.com/).
+- Musíte byť správca [**reklamného konta Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Až 10 miliónov profilov zákazníkov na jeden export do Facebook Ads Manager.
+- Až 10 miliónov profilov zákazníkov na jeden export do Správcu reklám Facebook.
 - Export do Facebook Ads Manager je obmedzený na segmenty.
 - Vytvárajte alebo aktualizujte iba vlastné cieľové skupiny v službe Facebook typu *zoznam zákazníkov*.
 - Export segmentov s celkovým počtom 10 miliónov profilov môže trvať až 90 minút.
@@ -42,19 +42,19 @@ Predtým, ako budú môcť používatelia vytvoriť export, musí správca nakon
 
 1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
 
-1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude **Správcovia**. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Overenie pomocou služby Facebook Ads: 
 
-   1. Vyberte **Pokračovať s Facebook** a prihláste sa do svojho reklamného účtu Facebook.
+   1. Výberom možnosti **Pokračovať cez Facebook** sa prihlásite do svojho reklamného konta Facebook.
 
    1. Povoľte povolenie **ads_management** po vykonaní overenia cez Facebook.
 
    1. Zvoľte **Reklamný účet Facebook**, s ktorým chcete pracovať.
 
-   1. Vyberte ikonu **Existujúce vlastné publikum** z rozbaľovacieho zoznamu alebo vytvorte a **Nové vlastné publikum**. Viac informácií nájdete v časti [**Publiká v Správcovi reklám Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+   1. Vyberte si z rozbaľovacieho zoznamu možnosť **Existujúca vlastná cieľová skupina** alebo si vytvorte **novú vlastnú cieľovú skupinu**. Viac informácií nájdete v časti [**Publiká v Správcovi reklám Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
-      > Vlastné publiká môžete vytvárať alebo aktualizovať iba v službe Facebook typu *zoznam zákazníkov* s týmto exportom. V niektorých prípadoch sa v rozbaľovacom zozname zobrazia cieľové skupiny rôznych typov. Výber iného typu *zoznamu zákazníkov* bude mať za následok zlyhanie exportu. 
+      > Vlastné publiká môžete vytvárať alebo aktualizovať iba v službe Facebook typu *zoznam zákazníkov* s týmto exportom. V niektorých prípadoch sa v rozbaľovacom zozname zobrazia vlastné cieľové skupiny rôznych typov. Výber iného typu *zoznamu zákazníkov* bude mať za následok zlyhanie exportu. 
 
 1. Prečítajte si časť **Ochrana osobných údajov a ich dodržiavanie** a stlačte možnosť **Súhlasím**.
 
@@ -68,16 +68,17 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Na vytvorenie nového exportu stlačte možnosť **Pridať cieľ**. 
 
-1. V poli **Pripojenie na export** vyberte pripojenie v časti **Facebook Ads Manager**. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
+1. V poli **Pripojenie na export** vyberte pripojenie v časti **Facebook Ads Manager**. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne pripojenia tohto typu.
 
 1. V časti **Vyberte pole identifikátora kľúča** vyberte **E-mail**, **Meno a adresa** alebo **Telefón** na odoslanie so Správcu reklám Facebook. 
 
 1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia.
 
 1. Priraďte zodpovedajúce atribúty z vašej zjednotenej entity zákazníka na vybratý identifikátor kľúča.
-   > [TIP] Najlepšie šance na zabezpečenie súladu nastanú, ak vyberiete ako kľúčový identifikátor **E-mail**. Pridanie ďalších identifikátorov môže zlepšiť zosúladenie.
+   > [!TIP]
+   > Najlepšie šance na zabezpečenie súladu nastanú, ak vyberiete ako kľúčový identifikátor **E-mail**. Pridanie ďalších identifikátorov môže zlepšiť zosúladenie.
 
-1. Vyberte **Pridať atribút** na mapovanie ďalších atribútov na odoslanie do Facebook Ads Manager. Atribúty z Facebook Ads Manager sú mapované pomocou nasledovných používateľských názvov: **FN** = **Krstné meno**, **LN** = **Priezvisko**, **FI** = **Prvé písmeno**, **PHONE** = **Telefón**, **GEN** = **Pohlavie**, **DOB** = **Dátum narodenia**, **ST** = **Stav**, **CT** = **Mesto**, **ZIP** = **PSČ**, **COUNTRY** = **Krajina/oblasť**
+1. Vyberte **Pridať atribút** na mapovanie ďalších atribútov na odoslanie do Facebook Ads Manager. Atribúty z Facebook Ads Manager sú mapované pomocou nasledovných používateľských názvov: **FN** = **Krstné meno**, **LN** = **Priezvisko**, **FI** = **Prvé písmeno**, **PHONE** = **Telefón**, **GEN** = **Pohlavie**, **DOB** = **Dátum narodenia**, **ST** = **Stav**, **CT** = **Mesto**, **ZIP** = **PSČ**, **COUNTRY** = **Štát/oblasť**
 
 1. Vyberte segmenty, ktoré chcete exportovať.
 
@@ -85,7 +86,9 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 Uloženie exportu nespustí export okamžite.
 
-Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
+Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). 
+
+Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 

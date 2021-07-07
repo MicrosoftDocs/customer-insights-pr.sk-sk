@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595399"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305729"
 ---
 # <a name="system-configuration"></a>Konfigurácia systému
 
@@ -94,7 +94,7 @@ Zmeny potvrďte výberom položky **Uložiť**.
 
 ## <a name="api-usage-tab"></a>Karta použitia rozhrania API
 
-Nájdite podrobnosti o použití API v reálnom čase a uvidíte, ktoré udalosti sa stali v danom časovom rámci. Časový rámec si zvolíte v rozbaľovacej ponuke **Vyberte časový rámec**. 
+Nájdite podrobnosti o použití API v reálnom čase a uvidíte, ktoré udalosti sa stali v danom časovom rámci. Časový rámec si zvolíte z položky rozbaľovacieho zoznamu **Vyberte časový rámec**. 
 
 **Využitie API** obsahuje tri časti: 
 - **Volania API** – graf, ktorý vizualizuje agregovaný počet volaní API vo vybranom časovom rámci.

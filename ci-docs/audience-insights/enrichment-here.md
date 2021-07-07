@@ -1,5 +1,5 @@
 ---
-title: Obohatenie pomocou obohatenia tretej strany HERE Technologies
+title: Obohatenie pomocou tretej strany HERE Technologies
 description: Všeobecné informácie o obohatení pomocou obohatenia tretej stranou HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896070"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305313"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obohatenie profilov zákazníkov s pomocou HERE Technologies (ukážka)
 
@@ -26,7 +26,7 @@ Ak chcete nakonfigurovať obohatenia od HERE Technologies, musíte splniť nasle
 
 - Musíte mať aktívne predplatné HERE Technologies. Predplatné môžete získať tak, že [sa zaregistrujete tu](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) alebo že priamo [kontaktujete HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Ďalšie informácie o obohacovaní lokalizačných údajov od HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Existuje HERE [spojenie](connections.md) k dispozícii *alebo* máte povolenia [správcu](permissions.md#administrator) a kľúč API technológie HERE Technologies.
+- Je k dispozícii [pripojenie](connections.md) HERE *alebo* máte povolania [správcu](permissions.md#administrator) a kľúč rozhrania API pre HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 
@@ -37,7 +37,7 @@ Ak chcete nakonfigurovať obohatenia od HERE Technologies, musíte splniť nasle
    > [!div class="mx-imgBorder"]
    > ![Dlaždica HERE Technologies](media/HERE-tile.png "Dlaždica HERE Technologies")
 
-1. V rozbaľovacej ponuke stlačte možnosť [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie**. V rozbaľovacom ponuke stlačte možnosť **HERE Technologies**. 
+1. Vyberte si z rozbaľovacieho zoznamu [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie**. Vyberte si z rozbaľovacieho zoznamu možnosť **HERE Technologies**. 
 
 1. Vyberte **Pripojiť k HERE Technologies** na potvrdenie zvoleného spojenia.
 
@@ -66,13 +66,13 @@ Na konfiguráciu pripojení musíte byť administrátor. Stlačte možnosť **Pr
 
 1. Zadajte platný kľúč API technológie HERE Technologies.
 
-1. Skontrolujte a poskytnite svoj súhlas pre **Ochrana osobných údajov a dodržiavanie súladu s nariadeniami** označením začiarkavacieho políčka **Súhlasím**.
+1. Skontrolujte a poskytnite svoj súhlas pre **Ochranu osobných údajov a dodržiavanie súladu s nariadeniami** výberom možnosti **Súhlasím**.
 
 1. Stlačte **Overiť** na overenie konfigurácie.
 
 1. Po dokončení overenia stlačte možnosť **Uložiť**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Konfiguračná stránka pripojenia HERE Technologies](media/enrichment-HERE-connection.png "Konfiguračná stránka pripojenia HERE Technologies")
 
 ## <a name="enrichment-results"></a>Výsledky obohatenia
@@ -85,7 +85,7 @@ Môžete získať podrobné zobrazenie každého obohateného profilu výberom *
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
-Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md), [miery](measures.md) a dokonca [exportujte údaje](export-destinations.md) na poskytovanie prispôsobenej používateľskej skúsenosti svojim zákazníkom.
+Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md) a [opatrenia](measures.md), a dokonca [exportujte údaje](export-destinations.md), aby ste mohli poskytovať svojim zákazníkom zážitky šité na mieru.
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 

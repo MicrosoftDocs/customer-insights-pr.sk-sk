@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085641"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306047"
 ---
 # <a name="match-entities"></a>Priradenie entít
 
@@ -209,7 +209,7 @@ Vyskúšajte rôzne prahové hodnoty presnosti za určitých podmienok, aby ste 
 
 Väčšinu parametrov zhody môžete prekonfigurovať a doladiť.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Snímka obrazovky rozbaľovacej ponuky s možnosťami pravidla spárovania.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Snímka obrazovky s rozbaľovacou ponukou s možnosťami pravidla zhody.":::
 
 - Ak ste definovali viacero pravidiel, **zmeňte poradie vašich pravidiel**. Môžete zmeniť poradie pravidiel spárovania stlačením položky **Posunúť nahor** a **Posunúť nadol** alebo pretiahnutím.
 
@@ -247,7 +247,7 @@ Môžete určiť podmienky, aby sa niektoré záznamy zosúladili vždy alebo ni
 
 1. Prejdite na **Údaje** > **Zdroje údajov** a prijmite súbory šablón ako nové entity. Po príprave ich môžete použiť na určenie konfigurácie zosúladenia.
 
-1. Po nahratí súborov a entít k dispozícii, vyberte znova možnosť **Vlastné zosúladenie**. Zobrazia sa možnosti na určenie entít, ktoré chcete zahrnúť. Z rozbaľovacej ponuky vyberte požadované entity.
+1. Po nahratí súborov a entít k dispozícii, vyberte znova možnosť **Vlastné zosúladenie**. Zobrazia sa možnosti na určenie entít, ktoré chcete zahrnúť. Z rozbaľovacej ponuky si vyberte požadované entity.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Snímka obrazovky dialógového okna na výber prepísania pre vlastný scenár zhody.":::
 

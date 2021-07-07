@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595353"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306093"
 ---
 # <a name="segment-insights-preview"></a>Prehľady segmentov (ukážka)
 
@@ -50,7 +50,7 @@ Ak chcete zobraziť výsledky analýzy, vyberte prehľad:
 
 - Počet členov prekrývajúcich segmenty vybrané na analýzu.
 - Počet členov zahrnutých v jednom zo segmentov, ale nie v ostatných segmentoch.
-- Ak ste pri konfigurácii analýzy prekrývania vybrali polia, nájdete ich na príslušných kartách. Pomocou rozbaľovacej ponuky filtra môžete vybrať ľubovoľnú požadovanú úroveň atribútu a tabuľka dole zobrazuje príslušné údaje.
+- Ak ste pri konfigurácii analýzy prekrývania vybrali polia, nájdete ich na príslušných kartách. Pomocou rozbaľovacej ponuky filtra si môžete vybrať ľubovoľnú úroveň atribútu, ktorá vás zaujíma, pričom tabuľka v dolnej časti obsahuje príslušné údaje.
 
 ## <a name="segment-differentiators"></a>Diferenciátory segmentov
 
