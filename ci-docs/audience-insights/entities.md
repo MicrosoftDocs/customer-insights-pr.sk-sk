@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049413"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553994"
 ---
 # <a name="entities-in-audience-insights"></a>Entity v prehľadoch cieľových skupín
 
@@ -30,19 +30,19 @@ Stránka **Entity** uvádza entity a obsahuje niekoľko stĺpcov:
 - **Naposledy aktualizované**: Dátum a čas poslednej aktualizácie entity
 - **Posledné obnovenie**: Dátum a čas posledného obnovenia údajov
 
-## <a name="exploring-a-specific-entitys-data"></a>Skúmanie údajov konkrétnej entity
+## <a name="explore-a-specific-entitys-data"></a>Preskúmanie údajov konkrétnej entity
 
 Vyberte entitu a preskúmajte rôzne polia a záznamy zahrnuté v tejto entite.
 
 > [!div class="mx-imgBorder"]
-> ![Výber entity](media/data-manager-entities-data.png "Vyberte entitu")
+> ![Vyberte entitu.](media/data-manager-entities-data.png "Výber entity")
 
 - Karta **Údaje** zobrazuje tabuľku s podrobnosťami o jednotlivých záznamoch entity.
 
 > [!div class="mx-imgBorder"]
-> ![Tabuľka Polia](media/data-manager-entities-fields.PNG "Tabuľka Polia")
+> ![Tabuľka Polia.](media/data-manager-entities-fields.PNG "Tabuľka Polia")
 
-- Karta **Atribúty** je predvolene vybratá a zobrazuje tabuľku na kontrolu podrobností o vybranej entite, ako sú názvy polí, typy údajov a typy. Stĺpec **Typ** zobrazuje typy asociované s modelom Common Data Model, ktoré sú buď automaticky identifikované systémom alebo [manuálne priradené](map-entities.md) používateľmi. Ide o sémantické typy, ktoré sa môžu odlišovať od typov údajov atribútov, napríklad pole *E-mail* nižšie má typ údajov *Text*, ale jeho (sémantický) typ modelu Common Data Model môže byť *E-mail* alebo *EmailAddress*.
+- Karta **Atribúty** je predvolene vybratá a zobrazuje tabuľku na kontrolu podrobností o vybranej entite, ako sú názvy polí, typy údajov a typy. Stĺpec **Typ** zobrazuje typy asociované s modelom Common Data Model, ktoré sú buď automaticky identifikované systémom alebo [manuálne priradené](map-entities.md) používateľmi. Tieto typy sú sémantické typy, ktoré sa môžu líšiť od dátových typov atribútov. Napríklad pole *E-mail* dole má typ údajov *Text*, ale jeho (sémantický) typ dátového modelu Common Data Model môže byť *E-mail* alebo *E-mailová adresa*.
 
 > [!NOTE]
 > Obidve tabuľky zobrazujú iba vzorku údajov entity. Ak chcete zobraziť celú množinu údajov, prejdite na stránku **Zdroje údajov**, vyberte entitu, vyberte položku **Upraviť** a potom zobrazte údaje tejto entity pomocou editora Power Query, ako je vysvetlené v [zdrojoch údajov](data-sources.md).
@@ -52,11 +52,28 @@ Ak sa chcete dozvedieť viac o údajoch prijatých v entite, stĺpec **Súhrn** 
 Ak chcete zobraziť súhrn údajov, vyberte ikonu grafu.
 
 > [!div class="mx-imgBorder"]
-> ![Súhrnný symbol](media/data-manager-entities-summary.png "Tabuľka so zhrnutím údajov")
+> ![Súhrnný symbol.](media/data-manager-entities-summary.png "Tabuľka so zhrnutím údajov")
 
-### <a name="next-step"></a>Nasledujúci krok
+## <a name="entity-specific-information"></a>Informácie konkrétnej entity
 
-Pozrite si tému [Zjednotenie](data-unification.md), kde sa dozviete ,ako *mapovať*, *zosúladiť* a *zlúčiť* prijaté údaje.
+Nasledujúca časť uvádza údaje o niektorých systémom vytvorených entitách.
+
+### <a name="corrupted-data-sources"></a>Zdroje údajov sú poškodené
+
+Polia z prijatého zdroja údajov možno obsahujú poškodené údaje. Záznamy s poškodenými poľami sú vystavené v entitách vytvorených systémom. Znalosť poškodených záznamov vám pomôže identifikovať, ktoré údaje je treba overiť a aktualizovať v zdrojovom systéme. Po ďalšom obnovení zdroja údajov sa opravené záznamy prijmú v nástroji Customer Insights a odošlú sa do následných procesov. 
+
+V stĺpci „deň narodenia“ je napríklad nastavený dátový typ ako „dátum“. Záznam zákazníka má dátum narodenia zapísaný ako „01/01/19777“. Systém označí tento záznam ako poškodený. Niekto môže teraz zmeniť deň narodenia v zdrojovom systéme na „1977“. Po automatickom obnovení zdrojov údajov má pole teraz platný formát a záznam sa z poškodeného subjektu odstráni. 
+
+Prejdite k položke **Údaje** > **Entity** a vyhľadajte poškodené entity v časti **Systém**. Schéma pomenovania poškodených entít: „DataSourceName_EntityName_corrupt“.
+
+Služba Customer Insights stále spracúva poškodené záznamy. Pri práci s jednotnými údajmi však môžu spôsobovať problémy.
+
+Nasledujúce kontroly overujú prijaté údaje, či neobsahujú poškodené záznamy: 
+
+- Hodnota poľa sa nezhoduje s dátovým typom jeho stĺpca.
+- Polia obsahujú znaky, pre ktoré sa stĺpce nezhodujú s očakávanou schémou. Príklad: nesprávne formátované úvodzovky, neukončené úvodzovky alebo znaky nového riadku.
+- Ak existujú stĺpce dátum a čas/dátum/posun dátumu a času, ich formát je potrebné zadať v modeli, pokiaľ sa nedodržiava štandardný formát ISO.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095667"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556326"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikcia rizika straty predplatného (ukážka)
 
@@ -63,9 +63,9 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
 1. V prehľadoch cieľových skupín prejdite na **Analýza** > **Predikcie**.
 1. Vyberte dlaždicu **Model rizika straty predplatného (ukážka)** a vyberte **Použiť tento model**.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždica modelu rizika straty predplatného s tlačidlom Použiť tento model](media/subscription-churn-usethismodel.PNG "Dlaždica modelu rizika straty predplatného s tlačidlom Použiť tento model")
+   > ![Dlaždica modelu rizika zrusenia predplatného zákazníkmi s tlačidlom Použiť tento model.](media/subscription-churn-usethismodel.PNG "Dlaždica modelu rizika straty predplatného s tlačidlom Použiť tento model")
 
-### <a name="name-model"></a>Pomenujte model
+### <a name="name-model"></a>Názov modelu
 
 1. Zadajte názov modelu, ktorý ho odlíši od ostatných modelov.
 1. Zadajte názov výstupnej entity iba pomocou písmen a číslic, bez medzier. Toto je názov, ktorý bude používať modelová entita. Potom vyberte položku **Ďalej**.
@@ -86,11 +86,11 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
     1. Vyberte **Entitu zákazníka**, ktorá sa zhoduje s vašou primárnou entitou zákazníka.
     1. Zadajte názov, ktoré opisuje vzťah.
        > [!div class="mx-imgBorder"]
-       > ![Stránka histórie predplatného, ktorá ukazuje vytvorenie vzťahu so zákazníkom](media/subscription-churn-subscriptionhistoryrelationship.PNG "Stránka histórie predplatného, ktorá ukazuje vytvorenie vzťahu so zákazníkom")
+       > ![Stránka histórie predplatného, ktorá ukazuje vytvorenie vzťahu so zákazníkom.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Stránka histórie predplatného, ktorá ukazuje vytvorenie vzťahu so zákazníkom")
 1. Vyberte **Ďalej**.
 1. Mapujte sémantické polia na atribúty v rámci entity histórie predplatného a vyberte položku **Uložiť**. Pre popis polí sa pozrite na [požiadavky](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Stránka histórie predplatného, ktorá zobrazuje sémantické atribúty, ktoré sú mapované do polí vo vybratej entite histórie predplatného](media/subscription-churn-subscriptionhistorymapping.PNG "Stránka histórie predplatného, ktorá zobrazuje sémantické atribúty, ktoré sú mapované do polí vo vybratej entite histórie predplatného")
+   > ![Stránka histórie predplatného, ktorá zobrazuje sémantické atribúty, ktoré sú mapované do polí vo vybratej entite histórie predplatného.](media/subscription-churn-subscriptionhistorymapping.PNG "Stránka histórie predplatného, ktorá zobrazuje sémantické atribúty, ktoré sú mapované do polí vo vybratej entite histórie predplatného")
 1. Vyberte **Pridať údaje** pre **Aktivity zákazníka** a vyberte entitu, ktorá poskytuje informácie o aktivite zákazníka, ako je opísané v požiadavkách.
 1. Vyberte typ aktivity, ktorý sa zhoduje s typom aktivity zákazníka, ktorú konfigurujete.  Vyberte **Vytvoriť nový** a uveďte meno, ak nevidíte možnosť, ktorá sa zhoduje s typom aktivity, ktorú potrebujete.
 1. Budete musieť nakonfigurovať vzťah medzi vašou entitou aktivity zákazníka a entitou Zákazník.
@@ -101,7 +101,7 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
 1. Mapujte sémantické polia na atribúty v rámci entity aktivity zákazníka a vyberte položku **Uložiť**. Pre popis polí sa pozrite na [požiadavky](#prerequisites).
 1. (Voliteľné) Ak máte akékoľvek ďalšie aktivity zákazníka, ktoré chcete zahrnúť, zopakujte vyššie uvedené kroky.
    > [!div class="mx-imgBorder"]
-   > ![Definovanie vzťahu entity](media/subscription-churn-customeractivitiesmapping.PNG "Stránka aktivít zákazníkov, ktorá zobrazuje sémantické atribúty, ktoré sú mapované do polí vo vybratej entite aktivity zákazníka")
+   > ![Definovanie vzťahu entity.](media/subscription-churn-customeractivitiesmapping.PNG "Stránka aktivít zákazníkov, ktorá zobrazuje sémantické atribúty, ktoré sú mapované do polí vo vybratej entite aktivity zákazníka")
 1. Vyberte **Ďalej**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Nastavenie plánu a kontrola konfigurácie
@@ -115,7 +115,7 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
 
 1. Prejdite na kartu **Moje predikcie** na **Inteligencia** > **Predikcie**.
    > [!div class="mx-imgBorder"]
-   > ![Zobrazenie stránky Moje predikcie](media/subscription-churn-mypredictions.PNG "Zobrazenie stránky Moje predikcie")
+   > ![Zobrazenie stránky Moje predikcie.](media/subscription-churn-mypredictions.PNG "Zobrazenie stránky Moje predikcie")
 1. Vyberte predikciu, ktorú chcete skontrolovať.
    - **Názov predikcie:** Názov predikcie uvedený pri jej vytváraní.
    - **Typ predikcie:** Typ modelu použitého na predikciu
@@ -131,7 +131,7 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
    - **Posledná aktualizácia:** Dátum obnovenia výsledkov predikcie vo výstupnej entite.
 1. Vyberte zvislé tri bodky vedľa predikcie, pre ktorú chcete skontrolovať výsledky, a vyberte **Zobraziť**.
    > [!div class="mx-imgBorder"]
-   > ![Zobrazenie možností v ponuke vertikálnych troch bodiek pre predikciu vrátane úprav, obnovenia, zobrazenia, protokolov a odstránenia](media/subscription-churn-verticalellipses.PNG "Zobrazenie možností v ponuke vertikálnych troch bodiek pre predikciu vrátane úprav, obnovenia, zobrazenia, protokolov a odstránenia")
+   > ![Zobrazenie možností v ponuke vertikálnych troch bodiek pre predikciu vrátane úprav, obnovenia, zobrazenia, protokolov a odstránenia.](media/subscription-churn-verticalellipses.PNG "Zobrazenie možností v ponuke vertikálnych troch bodiek pre predikciu vrátane úprav, obnovenia, zobrazenia, protokolov a odstránenia")
 1. Na stránke s výsledkami sú tri základné sekcie údajov:
     1. **Výkon tréningového modelu:** A, B alebo C sú možné skóre. Toto skóre označuje výkon predikcie a môže vám pomôcť pri rozhodovaní o použití výsledkov uložených vo výstupnej entite.
         - Skóre sa určujú na základe nasledujúcich pravidiel:
@@ -139,13 +139,13 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
             - **B** Keď model presne predpovedal najmenej 50 % celkových predpovedí a keď percentuálny podiel presných predpovedí pre zákazníkov, ktorí odišli, je až o 10 % väčší ako historická priemerná miera odchodu najmenej historickej priemernej miery odchodu.
             - **C** Keď model presne predpovedal menej ako 50 % celkových predpovedí, alebo keď percento presných predpovedí pre zákazníkov, ktorí odišli, je nižšie ako historická priemerná miera odchodu.
                > [!div class="mx-imgBorder"]
-               > ![Zobrazenie výsledku výkonnosti modelu](media/subscription-churn-modelperformance.PNG "Zobrazenie výsledku výkonnosti modelu")
+               > ![Zobrazenie výsledku výkonnosti modelu.](media/subscription-churn-modelperformance.PNG "Zobrazenie výsledku výkonnosti modelu")
     1. **Pravdepodobnosť straty (počet zákazníkov):** Skupiny zákazníkov na základe ich predpokladaného rizika straty. Tieto údaje vám môžu pomôcť neskôr, ak chcete vytvoriť segment zákazníkov s vysokým rizikom straty. Takéto segmenty pomáhajú pochopiť, kde by malo byť vaše obmedzenie pre členstvo v segmente.
        > [!div class="mx-imgBorder"]
-       > ![Graf znázorňujúci distribúciu výsledkov rizika straty, rozdelený do intervalov od 0 do 100 %](media/subscription-churn-resultdistribution.PNG "Graf znázorňujúci distribúciu výsledkov rizika straty, rozdelený do intervalov od 0 do 100 %")
+       > ![Graf znázorňujúci distribúciu výsledkov rizika straty, rozdelený do intervalov od 0 do 100 %.](media/subscription-churn-resultdistribution.PNG "Graf znázorňujúci distribúciu výsledkov rizika straty, rozdelený do intervalov od 0 do 100 %")
     1. **Najvýznamnejšie faktory:** Pri vytváraní vašej predikcie sa zohľadňuje veľa faktorov. Každý z faktorov má svoju dôležitosť vypočítanú pre agregované predikcie, ktoré model vytvára. Tieto faktory môžete použiť na overenie výsledkov svojich predikcií. Alebo môžete tieto informácie použiť neskôr na [vytváranie segmentov](segments.md), ktoré by mohli pomôcť ovplyvniť riziko straty zákazníkov.
        > [!div class="mx-imgBorder"]
-       > ![Zoznam ukazujúci vplyvné faktory a ich dôležitosť pri predikcii výsledkov rizika straty](media/subscription-churn-influentialfactors.PNG "Zoznam ukazujúci vplyvné faktory a ich dôležitosť pri predikcii výsledkov rizika straty")
+       > ![Zoznam ukazujúci vplyvné faktory a ich dôležitosť pri predikcii výsledkov rizika straty.](media/subscription-churn-influentialfactors.PNG "Zoznam ukazujúci vplyvné faktory a ich dôležitosť pri predikcii výsledkov rizika straty")
 
 ## <a name="manage-predictions"></a>Spravovanie predikcií
 

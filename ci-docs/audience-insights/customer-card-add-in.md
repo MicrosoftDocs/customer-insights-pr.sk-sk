@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059607"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692224"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplnok Karta zákazníka (ukážka)
 
@@ -25,7 +25,7 @@ Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dyn
 ## <a name="prerequisites"></a>Predpoklady
 
 - Doplnok funguje iba s aplikáciami Dynamics 365 riadenými modelmi, ako sú napríklad Sales alebo Customer Service, verzia 9.0 a novšia.
-- Aby sa vaše údaje Dynamics 365 mohli namapovať do profilov cieľovej skupiny, musia byť [prijaté z aplikácie Dynamics 365 pomocou konektora Common Data Service](connect-power-query.md).
+- Aby sa vaše údaje Dynamics 365 mohli namapovať do profilov cieľovej skupiny, musia byť [prijaté z aplikácie Dynamics 365 pomocou konektora Microsoft Dataverse](connect-power-query.md).
 - Všetci používatelia Dynamics 365 doplnku Customer Card musia byť [pridaní ako používatelia](permissions.md) v prehľade cieľových skupín, aby mohli vidieť údaje.
 - [Konfigurované možnosti vyhľadávania a filtrovania](search-filter-index.md) v prehľadoch cieľovej skupiny sú nevyhnutné na fungovanie vyhľadávania údajov.
 - Každá kontrola doplnku sa spolieha na konkrétne údaje vo prehľadoch cieľovej skupiny:
@@ -50,7 +50,7 @@ Môže to trvať nejaký čas, kým sa riešenie nainštaluje do vášho prostre
 1. Vyberte odkaz **Zobrazovaný názov** pre riešenie **Doplnok Karta zákazníka Dynamics 365 Customer Insights (ukážka)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Výber zobrazovaného názvu](media/select-display-name.png "Výber zobrazovaného názvu")
+   > ![Výber zobrazovaného názvu.](media/select-display-name.png "Výber zobrazovaného názvu")
 
 1. Vyberte **Prihlásiť sa** a zadajte prihlasovacie údaje pre účet správcu, ktorý používate na konfiguráciu Customer Insights.
 
@@ -64,7 +64,7 @@ Môže to trvať nejaký čas, kým sa riešenie nainštaluje do vášho prostre
    - Na mapovanie k obchodnému vzťahu vyberte pole v entite Zákazník, ktoré sa zhoduje s ID entity vášho obchodného vzťahu.
 
    > [!div class="mx-imgBorder"]
-   > ![Pole ID kontaktu](media/contact-id-field.png "Pole ID kontaktu")
+   > ![Pole ID kontaktu.](media/contact-id-field.png "Pole ID kontaktu")
 
 1. Stlačením možnosti **Uložiť konfiguráciu** uložte nastavenia.
 
@@ -83,7 +83,7 @@ Môže to trvať nejaký čas, kým sa riešenie nainštaluje do vášho prostre
 1. Vyberte formulár kontaktu, do ktorého chcete pridať ovládacie prvky Karty zákazníka.
 
     > [!div class="mx-imgBorder"]
-    > ![Výber formulára kontaktu](media/contact-active-forms.png "Výber formulára kontaktu")
+    > ![Výber formulára kontaktu.](media/contact-active-forms.png "Výber formulára kontaktu")
 
 1. Ak chcete pridať ovládací prvok, v editore formulárov presuňte ľubovoľné pole z **Prieskumníka polí** na miesto, kde sa má zobraziť ovládací prvok.
 
@@ -110,7 +110,7 @@ Doplnok Karta zákazníka sa neaktualizuje automaticky. Pri inovácii na najnov�
 
 1. Vyberte **Aplikovať inováciu riešenia** v lište akcií.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Inovujte riešenie v oblasti Prispôsobenie aplikácií Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Inovujte riešenie v oblasti Prispôsobenie aplikácií Dynamics 365.":::
 
 1. Po spustení procesu inovácie sa vám bude zobrazovať indikátor načítania, kým sa aktualizácia nedokončí. Ak nie je k dispozícii novšia verzia, pri inovácii sa zobrazí chybové hlásenie.
 

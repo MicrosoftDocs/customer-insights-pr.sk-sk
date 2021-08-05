@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597438"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554454"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Používajte modely založené na strojovom učení platformy Azure
 
@@ -52,7 +52,7 @@ Musíte vytvoriť množiny údajov, aby ste mohli používať údaje entít zo s
      V návrhárovi otvorte sekciu **Vybrať stĺpce v množine údajov** a vyberte položku **Nastaviť ako parameter kanála**, kde zadáte názov parametra.
 
      > [!div class="mx-imgBorder"]
-     > ![Parametrizácia množiny údajov v návrhárovi](media/intelligence-designer-dataset-parameters.png "Parametrizácia množiny údajov v návrhárovi")
+     > ![Parametrizácia množiny údajov v návrhárovi.](media/intelligence-designer-dataset-parameters.png "Parametrizácia množiny údajov v návrhárovi")
    
 * Parameter množiny údajov v súprave SDK (Python)
    
@@ -78,7 +78,7 @@ Musíte vytvoriť množiny údajov, aby ste mohli používať údaje entít zo s
 
 * Návrhár poskytuje [Modul Export údajov](/azure/machine-learning/algorithm-module-reference/export-data), ktorý umožňuje export výstupu kanála do ukladacieho priestoru Azure. V súčasnosti musí modul používať typ údajového súboru **Úložisko Azure Blob** a parametrizovať **Údajový súbor** a relatívny **Postup**. Customer Insights prepíše oba tieto parametre počas vykonávania kanála na dátový súbor a postup, ktoré sú pre produkt prístupné.
    > [!div class="mx-imgBorder"]
-   > ![Konfigurácia modulu Export údajov](media/intelligence-designer-importdata.png "Konfigurácia modulu Export údajov")
+   > ![Konfigurácia modulu Export údajov.](media/intelligence-designer-importdata.png "Konfigurácia modulu Export údajov")
    
 * Pri zápise predikcie pomocou kódu môžete nahrať výstup do postupu v rámci *registrovaného údajového súboru* v pracovnom priestore. Ak je postup a údajový súbor parametrizovaný v rámci kanála, Customer Insights bude môcť načítať a importovať výstup predikcie. V súčasnosti je podporovaný jeden tabuľkový výstup vo formáte .csv. Postup musí obsahovať adresár a názov súboru.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124246"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362528"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Export segmentov do Mailchimp (verzia Preview)
 
@@ -38,7 +38,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do služby Mailchimp a v
 
 1. Prejdite do časti **Správca** > **Pripojenia**.
 
-1. Stlačte možnosť **Pridať pripojenie** a stlačením možnosti **Autopilot** nakonfigurujte pripojenie.
+1. Vyberte možnosť **Pridať pripojenie** a výberom položky **Mailchimp** nakonfigurujte pripojenie.
 
 1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306047"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650337"
 ---
 # <a name="match-entities"></a>Priradenie entít
 
@@ -138,7 +138,7 @@ Zadávanie pravidiel deduplikácie nie je povinné. Ak nie sú nakonfigurované 
    - **Najstaršie**: Identifikuje víťazný záznam na základe najmenšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
  
    > [!div class="mx-imgBorder"]
-   > ![Krok 1 pri pravidlách deduplikácie](media/match-selfconflation.png "Krok 1 pri pravidlách deduplikácie")
+   > ![Krok 1 pri pravidlách deduplikácie.](media/match-selfconflation.png "Krok 1 pri pravidlách deduplikácie")
  
 1. Po výbere entít a nastavení predvoľby zlúčenia vyberte položku **Pridať pravidlo** a definujte pravidlá deduplikácie na úrovni entity.
    - Možnosť **Vybrať pole** vypíše všetky dostupné polia od tejto entity. Vyberte pole, v ktorom chcete skontrolovať duplikáty. Vyberte polia, ktoré sú pravdepodobne jedinečné pre každého zákazníka. Napríklad e-mailová adresa alebo kombinácia mena, mesta a telefónneho čísla.
@@ -146,7 +146,7 @@ Zadávanie pravidiel deduplikácie nie je povinné. Ak nie sú nakonfigurované 
    - Definujte ďalšie podmienky výberom položky **Pridať podmienku**.
  
    > [!div class="mx-imgBorder"]
-   > ![Krok 2 pri pravidlách deduplikácie](media/match-selfconflation-rules.png "Krok 2 pri pravidlách deduplikácie")
+   > ![Krok 2 pri pravidlách deduplikácie.](media/match-selfconflation-rules.png "Krok 2 pri pravidlách deduplikácie")
 
   Pre entitu môžete vytvoriť viacero pravidiel deduplikácie. 
 
@@ -179,7 +179,9 @@ Prejdite do časti **Údaje** > **Zjednotiť** > **Spárovať** a vyberte **Spus
 Výsledok úspešného spustenia, entita zjednoteného profilu zákazníka, nájdete na stránke **Entity**. Vaša zjednotená entita zákazníka sa nazývala **Zákazníci** v časti **Profily**. Prvé úspešné spustenie priradenia vytvára zjednotenú entitu *Zákazník*. Všetky nasledujúce spustenia zhôd túto entitu rozširujú.
 
 > [!TIP]
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
+> Po spustení procesu nájdenia zhody vyberaním stavu procesu otvoríte tablu **Podrobnosti úlohy**. Ponúka prehľad o čase a dátume posledného spracovania a všetkých chybách a varovaniach spojených s touto úlohou. Označením položky **Zobraziť podrobnosti** môžete zistiť, ktoré entity sa zúčastnili na procese zhody, ktoré pravidlá sa na ne vzťahovali a či boli aktualizácie úspešne publikované.  
+> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Vnorte sa do tejto cesty, aby ste získali prístup k podrobnostiam procesu z odkazu na stav úlohy.":::
 
 ## <a name="review-and-validate-your-matches"></a>Kontrola a potvrdenie zosúladených výsledkov
 

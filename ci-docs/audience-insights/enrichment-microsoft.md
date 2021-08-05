@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305175"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555510"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte profily zákazníkov o značky a záujmy (ukážka)
 
@@ -27,7 +27,7 @@ Ak chcete nakonfigurovať obohatenie o afinity značiek, prejdite na stránku **
 Ak chcete nakonfigurovať obohatenie o afinity záujmov, prejdite na stránku **Objavovať** a vyberte **Obohatiť moje údaje** na dlaždici **Záujmy**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice značiek a záujmov](media/BrandsInterest-tile-Hub.png "Dlaždice značiek a záujmov")
+   > ![Dlaždice značiek a záujmov.](media/BrandsInterest-tile-Hub.png "Dlaždice značiek a záujmov")
 
 ## <a name="how-we-determine-affinities"></a>Ako určujeme príbuznosti
 
@@ -123,7 +123,7 @@ V závislosti od veľkosti vašich zákazníckych údajov môže dokončenie pro
 
 Po dokončení procesu obohacovania prejdite na **Moje obohatenia** a skontrolujte celkový počet obohatených zákazníkov a prehľad značiek a záujmov v obohatených profiloch zákazníkov.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Ukážka výsledkov po spustení procesu obohacovania":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Ukážka výsledkov po spustení procesu obohacovania.":::
 
 Vyberte obohatené údaje výberom **Zobraziť obohatené údaje** v tabuľke. Obohatené údaje o značkách prejdú do entity **BrandAffinityFromMicrosoft**. Údaje o záujmoch sú v entite **InterestAffinityFromMicrosoft**. Tieto entity nájdete uvedené aj v skupine **Obohatenie** v časti **Údaje** > **Entity**.
 
@@ -131,7 +131,7 @@ Vyberte obohatené údaje výberom **Zobraziť obohatené údaje** v tabuľke. O
 
 Značky a záujmy môžu byť zobrazené aj na jednotlivých zákazníckych kartách. Prejdite na možnosť **Zákazníci** a zvoľte si profil zákazníka. Na zákazníckej karte nájdete grafy značiek alebo záujmov, ku ktorým majú ľudia v demografickom profile daného zákazníka afinitu.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Karta zákazníka s obohatenými údajmi":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Karta zákazníka s obohatenými údajmi.":::
 
 ## <a name="next-steps"></a>Ďalšie kroky
 

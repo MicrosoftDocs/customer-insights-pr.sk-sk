@@ -1,7 +1,7 @@
 ---
 title: Konektor služby Power BI
 description: Informácie o používaní konektora Dynamics 365 Customer Insights v Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596058"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661121"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor pre Power BI (ukážka)
 
@@ -39,7 +39,7 @@ Vytvorte vizualizácie svojich údajov cez Power BI Desktop. Vytvárajte ďalši
 
 1. V dialógovom okne **Navigátor**. zobrazí zoznam všetkých prostredí, ku ktorým máte prístup. Rozbaľte prostredie a otvorte ktorýkoľvek z priečinkov (entity, miery, segmenty, obohatenia). Napríklad otvorte priečinok **Entity**, aby ste videli všetky entity, ktoré môžete importovať.
 
-   ![Navigátor konektora Power BI](media/power-bi-navigator.png "Navigátor konektora Power BI")
+   ![Navigátor konektora Power BI.](media/power-bi-navigator.png "Navigátor konektora Power BI")
 
 1. Začiarknite políčka vedľa entít, ktoré chcete zahrnúť, a vyberte **Načítať**. Môžete zvoliť viacero entít z viacerých prostredí.
 
@@ -68,5 +68,11 @@ Môžete identifikovať a odstrániť duplicitné vzťahy.
 3. Odstráňte všetky zistené duplicitné vzťahy.
 
 Po odstránení duplicitných vzťahov sa pokúste konektor Power BI nakonfigurovať znova. Prostredie by malo byť dostupné hneď.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Pri načítaní entít do aplikácie Power BI Desktop sa vyskytli chyby v poliach dátumu
+
+Pri načítavaní entít obsahujúcich polia s formátom dátumu, ako je MM/DD/RRRR, sa môžu vyskytnúť chyby v dôsledku nezhodných formátov miestnych nastavení. Tento nesúlad nastane vtedy, keď súbor aplikácie Power BI Desktop bol nastavený na iné miestne nastavenie ako je angličtina (USA), pretože polia dátumu v prehľadoch cieľovej skupiny sú uložené v americkom formáte.
+
+Súbor aplikácie Power BI Desktop má jedno miestne nastavenie, ktoré sa používa pri získavaní údajov. Ak chcete, aby boli tieto polia dátumu interpretované správne, nastavte miestne nastavenie súboru .BPI na angličtinu (Spojené štáty americké). [Zistite, ako môžete zmeniť miestne nastavenia súboru počítačovej aplikácie Power BI](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

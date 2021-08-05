@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095621"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559424"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predikcia odchodov založená na transakciách (ukážka)
 
@@ -47,7 +47,7 @@ Predikcia odchodov založená na transakciách pomáha predvídať, že zákazn�
         - **Udalosť:** Názov skupiny udalosti, ktorú chcete použiť. Napríklad pole s názvom „UserAction“ v obchode s potravinami môže byť kupónom, ktorý zákazník použije.
         - **Podrobnosti:** Podrobné informácie o udalosti. Hodnota poľa kupónu môže byť napríklad pole s názvom „CouponValue“ v obchode s potravinami.
 - Navrhované charakteristiky údajov:
-    - Dostatočné historické údaje: Údaje o transakcii minimálne na dvojnásobok zvoleného časového okna. Najlepšie dva až tri roky predplatných údajov. 
+    - Dostatočné historické údaje: Údaje o transakcii minimálne na dvojnásobok zvoleného časového okna. Ideálne dva až tri roky histórie transakcií. 
     - Viac nákupov na zákazníka: Ideálne aspoň dve transakcie pre zákazníka.
     - Počet zákazníkov: Minimálne 10 zákazníckych profilov, najlepšie viac ako 1 000 jedinečných zákazníkov. Model zlyhá s menej ako 10 zákazníkmi a nedostatkom historických údajov.
     - Úplnosť údajov: Menej ako 20 % chýbajúcich hodnôt v údajovom poli poskytnutej entity.

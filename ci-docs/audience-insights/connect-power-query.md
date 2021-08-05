@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305910"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554710"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Pripojenie k zdroju údajov Power Query
 
@@ -42,7 +42,7 @@ Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčši
 1. Dialógové okno **Power Query – úprava dopytov** umožňuje skontrolovať a spresniť údaje. Entity, ktoré systémy identifikovali vo vybratých zdrojoch údajov, sa zobrazia na ľavej table.
 
    > [!div class="mx-imgBorder"]
-   > ![Úprava dialógového okna dotazov](media/data-manager-configure-edit-queries.png "Úprava dialógového okna dotazov")
+   > ![Úprava dialógového okna dotazov.](media/data-manager-configure-edit-queries.png "Úprava dialógového okna dotazov")
 
 1. Údaje môžete aj transformovať. Vyberte entitu, ktorú chcete upraviť alebo transformovať. Použite možnosti v okne Power Query na použitie transformácií. Každá transformácia bude uvedená v zozname **Použité kroky**. Power Query poskytuje množstvo vopred pripravených možností transformácie. Ďalšie informácie nájdete v téme [Transformácie Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Konektory so značkou začiarknutia v stĺpci **Customer Insights (toky údajov)
 2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete zmeniť, a z rozbaľovacieho zoznamu vyberte položku **Upraviť**.
 
    > [!div class="mx-imgBorder"]
-   > ![Úprava možnosti](media/edit-option-data-sources.png "Úprava možnosti")
+   > ![Úprava možnosti.](media/edit-option-data-sources.png "Úprava možnosti")
 
 3. Použite svoje zmeny a transformácie v dialógovom okne **Power Query – Upraviť dotazy**, ako je opísané v časti [Vytvorenie nového zdroja údajov](#create-a-new-data-source).
 

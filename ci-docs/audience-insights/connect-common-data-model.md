@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596564"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554913"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Pripojte priečinok Common Data Model použitím účtu Azure Data Lake
 
@@ -45,7 +45,7 @@ Tento článok poskytuje informácie o tom, ako prijímať údaje z Common Data 
 
 1. Na overenie si môžete vybrať medzi použitím možnosti založenej na zdrojoch a možnosti založenej na predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Zadajte informáciu **Kontajner** a vyberte položku **Ďalej**.
    > [!div class="mx-imgBorder"]
-   > ![Dialógové okno na zadanie nových podrobností pripojenia pre Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Dialógové okno na zadanie nových podrobností pripojenia pre Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Aby ste sa mohli pripojiť a vytvoriť zdroj údajov, potrebujete jednu z nasledujúcich rol buď pre kontajner alebo vyššie uvedený účet úložiska:
    >  - Čítačka údajov objektu Blob
@@ -58,11 +58,11 @@ Tento článok poskytuje informácie o tom, ako prijímať údaje z Common Data 
 
 1. Vo vybranom súbore model.json alebo manifest.json získate zoznam dostupných entít. Môžete skontrolovať a vybrať zo zoznamu dostupných entít a vybrať položku **Uložiť**. Všetky vybraté entity sa prijmú z nového zdroja údajov.
    > [!div class="mx-imgBorder"]
-   > ![Dialógové okno so zoznamom entít zo súboru model.json](media/review-entities.png)
+   > ![Dialógové okno so zoznamom entít zo súboru model.json.](media/review-entities.png)
 
 8. Uveďte, pre ktoré údajové entity chcete povoliť profilovanie údajov, a vyberte položku **Uložiť**. Profilovanie údajov umožňuje analýzy a ďalšie funkcie. Môžete vybrať celú entitu, ktorá vyberie všetky atribúty z entity, alebo môžete vybrať určité atribúty podľa vlastného výberu. V predvolenom nastavení nie je pre profilovanie údajov povolená žiadna entita.
    > [!div class="mx-imgBorder"]
-   > ![Dialógové okno zobrazujúce profilovanie údajov](media/dataprofiling-entities.png)
+   > ![Dialógové okno zobrazujúce profilovanie údajov.](media/dataprofiling-entities.png)
 
 9. Po uložení vašich výberov sa otvorí stránka **Zdroje údajov**. Teraz by ste mali vidieť pripojenie priečinka Common Data Model ako zdroja údajov.
 
@@ -81,12 +81,12 @@ Môžete aktualizovať prístupový kľúč pre účet úložiska, ktoré obsahu
 
 4. Prípadne aktualizujte **Prístupový kľúč** a vyberte položku **Ďalej**.
 
-   ![Dialógové okno na úpravu a aktualizáciu prístupového kľúča k existujúcemu zdroju údajov](media/edit-access-key.png)
+   ![Dialógové okno na úpravu a aktualizáciu prístupového kľúča k existujúcemu zdroju údajov.](media/edit-access-key.png)
 
 5. Prípadne môžete aktualizáciu vykonať cez pripojenie kľúča účtu na pripojenie založené na zdrojoch alebo predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Pri aktualizácii pripojenia nemôžete zmeniť informácie o **kontajneri**.
    > [!div class="mx-imgBorder"]
 
-   > ![Dialógové okno na zadanie podrobností pripojenia pre Azure Data Lake k existujúcemu účtu úložiska](media/enter-existing-storage-details.png)
+   > ![Dialógové okno na zadanie podrobností pripojenia pre Azure Data Lake k existujúcemu účtu úložiska.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Aby ste sa mohli pripojiť a vytvoriť zdroj údajov, potrebujete jednu z nasledujúcich rol buď pre kontajner alebo vyššie uvedený účet úložiska:

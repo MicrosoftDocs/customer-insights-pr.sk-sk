@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598358"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555188"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Používajte modely založené na strojovom učení Azure Studio (klasické)
 
@@ -41,7 +41,7 @@ V rámci prvého kroku musíme vytvoriť pracovný priestor a otvoriť Strojové
 
 1. Po vytvorení zdroja sa zobrazí hlavný panel štúdia strojového učenia. Vyberte **Spustiť štúdio strojového učenia**.
 
-   ![Používateľské rozhranie štúdia strojového učenia Azure](media/azure-machine-learning-studio.png)
+   ![Používateľské rozhranie štúdia strojového učenia Azure.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Práca so štúdiom strojového učenia Azure
 
@@ -55,7 +55,7 @@ Teraz môžete vytvoriť nový experiment alebo importovať existujúcu šablón
 
 1. Ak vytvoríte nový experiment alebo použijete šablónu experimentu z galérie, musíte nakonfigurovať vlastnosti **Importovať údaje**. Použite sprievodcu alebo priamo poskytnite údaje na prístup k úložisku Azure Blob, ktoré obsahuje vaše údaje.  
 
-   ![Experiment so štúdiom strojového učenia Azure](media/azure-machine-learning-studio-experiment.png)
+   ![Experiment so štúdiom strojového učenia Azure.](media/azure-machine-learning-studio-experiment.png)
 
 1. Teraz môžete zostaviť vlastný spracovateľský kanál na čistenie a predspracovanie údajov, extrahovanie charakteristických znakov a vyškolenie vhodného modelu.
 
@@ -63,15 +63,15 @@ Teraz môžete vytvoriť nový experiment alebo importovať existujúcu šablón
 
 1. Ak ste spokojní s kvalitou modelu, vyberte položku **Nastaviť webovú službu** > **Prediktívna webová služba**. Táto možnosť importuje vycvičený model a kanál charakterizácie z výcvikového experimentu do prediktívnej služby. Prediktívna služba môže vziať ďalšiu množinu vstupných údajov so schémou použitou vo výcvikovom experimente na vytváranie predikcií.
 
-   ![Konfigurácia prediktívnej webovej služby](media/predictive-webservice-control.png)
+   ![Konfigurácia prediktívnej webovej služby.](media/predictive-webservice-control.png)
 
 1. Keď experiment prediktívnej webovej služby prebehol úspešne, môžete ho nasadiť na automatické plánovanie. Ak chcete, aby webová služba pracovala s Customer Insights, zvoľte **Nasadiť webovú službu** > **Ukážka Nasadiť webovú službu [nová]**. [Ďalšie informácie o nasadení webovej služby](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Nasadenie prediktívnej webovej služby](media/predictive-webservice-deploy.png)
+   ![Nasadenie prediktívnej webovej služby.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Vzorové modely z galérie
 
-Pre modely v tomto článku použijeme fiktívny scenár spoločnosti Contoso Hotel. Contoso Hotel zhromažďuje nasledujúce údaje:
+Pre modely v tomto článku použijeme fiktívny scenár hotela Contoso. Hotel Contoso zhromažďuje tieto údaje:
 
 - CRM údaje pozostávajúce z aktivity pobytov v hoteli. Súbor údajov obsahuje informácie o dátumoch pobytu pre každého registrovaného zákazníka. Obsahuje tiež informácie o rezervácii, typoch izieb, podrobnostiach o útratách atď. Údaje pokrývajú štyri roky, od januára 2014 do januára 2018.
 - Profily zákazníkov hotelových hostí. Tieto profily obsahujú informácie o každom zákazníkovi vrátane jeho mena, dátumu narodenia, poštovej adresy, pohlavia a telefónneho čísla.
@@ -87,13 +87,13 @@ Definícia straty sa môže líšiť v závislosti od scenára. V rámci tohto p
 
 Šablónu pokusu je možné importovať z galérie. Najskôr sa uistite, že ste importovali údaje **Aktivita pobytov v hoteli**, **Údaje o zákazníkovi** a **Údaje o využití služieb** z úložiska Azure Blob.
 
-   ![Import údajov pre model straty](media/import-data-azure-blob-storage.png)
+   ![Import údajov pre model straty.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Charakterizácia
 
 Na základe definície straty najskôr identifikujeme prvotné charakteristické vlastnosti, ktoré budú mať vplyv na označenie. Tieto nespracované charakteristické vlastnosti potom spracujeme do podoby číselnej podoby, ktorú je možné použiť v modeloch strojového učenia. K integrácii údajov dochádza v službe Customer Insights, aby sme sa k týmto tabuľkám mohli pripojiť pomocou *ID zákazníka*.
 
-   ![Pripojenie sa k importovaným údajom](media/join-imported-data.png)
+   ![Pripojenie sa k importovaným údajom.](media/join-imported-data.png)
 
 Charakterizácia pre vytvorenie modelu pri analýze straty môže byť trochu zložitejšia. Dáta sú funkciou času a každý deň sa zaznamenáva nová hotelová aktivita. Počas charakterizácie chceme generovať statické charakteristické vlastnosti z dynamických údajov. V tomto prípade z činnosti hotela generujeme viac charakteristických vlastností s posuvným oknom v trvaní jedného roka. Kategorické charakteristické vlastnosti, ako je typ izby alebo typ rezervácie, tiež rozširujeme na samostatné charakteristické vlastnosti pomocou jednorazového kódovania.  
 
@@ -114,7 +114,7 @@ Teraz musíme zvoliť optimálny algoritmus, ktorý sa má použiť. V tomto pr�
 
 Na nasledujúcom obrázku je znázornený kanál trénovania a vyhodnocovania modelu zo štúdia strojového učenia Azure:
 
-![Model straty v štúdiu strojového učenia Azure](media/azure-machine-learning-model.png)
+![Model odchodu zákazníkov v štúdiu strojového učenia Azure.](media/azure-machine-learning-model.png)
 
 Používame tiež techniku s názvom **Dôležitosť charakteristickej vlastnosti permutácie**, dôležitý aspekt optimalizácie modelu. Vstavané modely majú malý až žiadny prehľad o vplyve akejkoľvek konkrétnej charakteristickej vlastnosti na výslednú predikciu. Kalkulačka dôležitosti funkcie používa vlastný algoritmus na výpočet vplyvu jednotlivých charakteristických vlastností na výsledok konkrétneho modelu. Dôležitosť charakteristickej vlastnosti je normalizovaná medzi +1 a -1. Negatívny vplyv znamená, že zodpovedajúci prvok má kontraintuitívny vplyv na výsledok a mal by sa z modelu odstrániť. Pozitívny vplyv naznačuje, že charakteristická vlastnosť výrazne prispieva k predikcii. Tieto hodnoty nie sú korelačnými koeficientmi, pretože ide o rôzne metriky. Viac informácií nájdete v časti [Dôležitosť charakteristickej vlastnosti permutácie](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Cieľ definujeme ako maximalizáciu objemu využívania služieb v dolároch tý
 
 Podobne ako model straty, sa pripájame k ServiceCustomerID hotela s ID zákazníka, aby sme mohli vytvárať odporúčania konzistentne podľa ID zákazníka.
 
-![Charakterizácia modelu odporúčania](media/azure-machine-learning-model-featurization.png)
+![Charakterizácia modelu odporúčania.](media/azure-machine-learning-model-featurization.png)
 
 Údaje pochádzajú z troch rôznych entít a z nich sú odvodené charakteristické vlastnosti. Charakterizácia problému odporúčania sa v porovnaní so scenármi straty alebo CLTV líši. Model odporúčaní vyžaduje vstupné údaje vo forme troch súborov funkcií.
 
@@ -156,13 +156,13 @@ Podobne ako model straty, sa pripájame k ServiceCustomerID hotela s ID zákazn�
 
 Predikujeme produkty alebo služby pomocou volaného algoritmu s názvom **Train Matchbox Recommender** na školenie modelu odporúčaní.
 
-![Algoritmus odporúčania produktov](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritmus odporúčania produktov.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Tri vstupné porty pre model **Train Matchbox Recommender** sa použijú pri trénovaní údajov o využití služieb, opisu zákazníka (voliteľné) a opisu služby. Existujú tri rôzne spôsoby hodnotenia modelu. Jedna je pre hodnotenie modelu, kde sa skóre NDCG (Normalized Discounted Cumulative Gain) vypočíta tak, aby sa hodnotili hodnotené položky. V tomto experimente máme skóre NDCG vo výške 0,97. Ďalšie dve možnosti sú hodnotenie modelu v celom odporúčanom katalógu služieb alebo hodnotenie iba položiek, ktoré používatelia predtým nepoužili.
 
 Ak sa pozrieme ďalej na distribúciu odporúčaní v celom katalógu služieb, všimneme si, že najlepšie služby, ktoré sa odporúčajú, sú telefón, Wi-Fi a kuriér. Je to v súlade s tým, čo sme zistili z distribúcie údajov o spotrebe služieb:
 
-![Výstup modelu odporúčaní](media/azure-machine-learning-model-output.png)
+![Výstup modelu odporúčaní.](media/azure-machine-learning-model-output.png)
 
 Celý [pokus s odporúčaním produktu je prístupný v galérii Azure AI.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

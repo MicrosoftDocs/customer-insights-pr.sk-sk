@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596518"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692132"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Pripojenie k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure pre prehľady cieľových skupín
 
 Automatizované nástroje, ktoré využívajú služby Azure, by mali mať vždy obmedzené povolenia. Namiesto prihlasovania aplikácií ako plne privilegovaného používateľa ponúka Azure objekty služieb. Čítajte ďalej a dozviete sa, ako prepojiť prehľady cieľových skupín s účtom Azure Data Lake Storage Gen2, ktorý používa objekt služby Azure namiesto kľúčov účtu ukladacieho priestoru. 
 
-Objekt služby môžete použiť na bezpečné [pridanie alebo úpravu priečinka Common Data Model ako zdroj údajov](connect-common-data-model.md) alebo [vytvorenie nového či aktualizáciu existujúceho prostredia](manage-environments.md#create-an-environment-in-an-existing-organization).
+Objekt služby môžete použiť na bezpečné [pridanie alebo úpravu priečinka Common Data Model ako zdroj údajov](connect-common-data-model.md) alebo [vytvorenie nového či aktualizáciu existujúceho prostredia](get-started-paid.md).
 
 > [!IMPORTANT]
 > - Účet úložiska Azure Data Lake Gen2, ktorý chce používať objekt služby, musí mať [povolený Hierarchický menný priestor (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Vyplnenie zmien môže byť dokončené až o 15 minút.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Zadajte ID zdroja Azure alebo podrobnosti o predplatnom služby Azure v prílohe účtu úložiska k Audience Insights.
 
-Pripojte účet úložiska Azure Data Lake v prehľadoch cieľových skupín na [ukladanie výstupných údajov](manage-environments.md) alebo [jeho použitie ako zdroja údajov](connect-common-data-service-lake.md). Výber možnosti Azure Data Lake vám umožní vybrať si medzi prístupom založeným na zdrojoch alebo na predplatnom.
+Pripojte účet úložiska Azure Data Lake v prehľadoch cieľových skupín na [ukladanie výstupných údajov](manage-environments.md) alebo [jeho použitie ako zdroja údajov](connect-dataverse-managed-lake.md). Výber možnosti Azure Data Lake vám umožní vybrať si medzi prístupom založeným na zdrojoch alebo na predplatnom.
 
 Podľa nasledujúcich pokynov uveďte požadované informácie o vybranom prístupe.
 

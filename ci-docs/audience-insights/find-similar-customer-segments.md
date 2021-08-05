@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596794"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554224"
 ---
 # <a name="similar-customers-preview"></a>Podobní zákazníci (ukážka)
 
@@ -50,7 +50,7 @@ Táto funkcia vám umožní nájsť podobných zákazníkov vo vašej zákazníc
 Po spracovaní podobného segmentu nájdete nový segment uvedený na stránke **Segmenty**.
 
 > [!div class="mx-imgBorder"]
-> ![Segment podobných zákazníkov](media/expanded-segment.png "Segment podobných zákazníkov")
+> ![Segment podobných zákazníkov.](media/expanded-segment.png "Segment podobných zákazníkov")
 
 Vyberte **Zobraziť** na paneli akcií na otvorenie podrobností o segmente. Toto zobrazenie obsahuje informácie o distribúcii výsledkov naprieč [skóre podobnosti](#about-similarity-scores). Hodnoty skóre podobnosti nájdete aj v **Ukážke členov segmentu**.
 

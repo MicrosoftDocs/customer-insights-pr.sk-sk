@@ -2,20 +2,20 @@
   href: index.yml
 - name: Prehľad produktu
   href: overview.md
+- name: Vytvoriť skúšobnú inštanciu
+  href: audience-insights/get-started-trial.md
 - name: Prístup k prostrediu
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Audience Insights
+- name: Prehľady cieľových skupín
   items:
     - name: Centrum pomoci
       href: audience-insights/index.yml
     - name: Prehľad funkcií
       href: audience-insights/overview.md
-    - name: Bezplatná skúšobná verzia
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: "Nové a\_aktualizované funkcie"
       href: audience-insights/whats-new-audience-insights.md
     - name: Vytvoriť nové prostredie
-      href: audience-insights/home.md
+      href: audience-insights/get-started-paid.md
     - name: Výuka modulov
       items:
         - name: Príjem údajov
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Pridanie priečinku bežného dátového modelu ako zdroj údajov
           href: audience-insights/connect-common-data-model.md
-        - name: Pridanie dátového jazera spravovaného cez Common Data Service
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Pridanie dátového jazera spravovaného cez Dataverse
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Prírastková obnova pre zdroje údajov
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Prijímanie údajov v reálnom čase
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: Obohatenie pomocou vlastného importu SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmenty a miery
+    - name: Segmenty
       items:
         - name: Prehľad segmentov
           href: audience-insights/segments.md
-        - name: Vytvárajte segmenty a skupiny zákazníkov
+        - name: Vytvorenie segmentov
           href: audience-insights/segment-builder.md
         - name: Segmenty navrhované na základe opatrení
           href: audience-insights/suggested-segments.md
@@ -254,6 +254,8 @@
       items:
         - name: Vytváranie a úprava udalostí
           href: engagement-insights/refined-events.md
+        - name: Odlíšte webové udalosti od predtým overených návštevníkov
+          href: engagement-insights/unknown-to-known.md
         - name: Exportovať udalosti
           href: engagement-insights/export-events.md
     - name: Zostavy
@@ -304,7 +306,9 @@
       items:
         - name: Odstraňovanie a export osobných údajov
           href: engagement-insights/delete-export-personal-data.md
+    - name: Regionálna dostupnosť
+      href: engagement-insights/regional-availability.md
     - name: Obmedzenia služby
       href: engagement-insights/quotas.md
-- name: Obrátiť sa na oddelenie technickej podpory
+- name: Kontaktovať technickú podporu
   href: 'https://admin.powerplatform.microsoft.com/support'

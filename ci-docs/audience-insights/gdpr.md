@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597530"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554370"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žiadosti o práva dotknutých osôb (DSR) podľa GDPR
 
@@ -40,7 +40,7 @@ Správca Customer Insights môže podľa týchto krokov odstrániť zákaznícke
    2. Skontrolujte stav zdroja údajov v časti **Stav**. Začiarknutie znamená, že obnovenie bolo úspešné. Výstražný trojuholník znamená, že sa niečo pokazilo. Ak sa zobrazí výstražný trojuholník, kontaktujte D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Spravovanie žiadostí o vymazanie údajov o zákazníkoch podľa GDPR](media/gdpr-data-sources.png "Spravovanie žiadostí o vymazanie údajov o zákazníkoch podľa GDPR")
+> ![Spravovanie žiadostí o vymazanie údajov o zákazníkoch podľa GDPR.](media/gdpr-data-sources.png "Spravovanie žiadostí o vymazanie údajov o zákazníkoch podľa GDPR")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Spravovanie žiadostí o vymazanie údajov o používateľoch
 
@@ -52,7 +52,7 @@ Správca Customer Insights môže podľa týchto krokov odstrániť používate�
 4. Vyberte možnosť **Odstrániť**.
 
 > [!div class="mx-imgBorder"]
-> ![Vybavovanie žiadostí o vymazanie údajov o používateľoch podľa nariadenia GDPR](media/gdpr-permissions.png "Vybavovanie žiadostí o vymazanie údajov o používateľoch podľa nariadenia GDPR")
+> ![Vybavovanie žiadostí o vymazanie údajov o používateľoch podľa nariadenia GDPR.](media/gdpr-permissions.png "Vybavovanie žiadostí o vymazanie údajov o používateľoch podľa nariadenia GDPR")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Odpovedanie na žiadosti o export dotknutých osôb pre podľa nariadenia GDPR
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305313"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555326"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obohatenie profilov zákazníkov s pomocou HERE Technologies (ukážka)
 
@@ -35,7 +35,7 @@ Ak chcete nakonfigurovať obohatenia od HERE Technologies, musíte splniť nasle
 1. Zvoľte možnosť **Obohatiť moje údaje** na dlaždici HERE Technologies a stlačte možnosť **Začíname**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dlaždica HERE Technologies](media/HERE-tile.png "Dlaždica HERE Technologies")
+   > ![Dlaždica HERE Technologies.](media/HERE-tile.png "Dlaždica HERE Technologies")
 
 1. Vyberte si z rozbaľovacieho zoznamu [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie**. Vyberte si z rozbaľovacieho zoznamu možnosť **HERE Technologies**. 
 
@@ -50,7 +50,7 @@ Ak chcete nakonfigurovať obohatenia od HERE Technologies, musíte splniť nasle
 1. Definujte, ktoré polia z vašich zjednotených profilov sa majú použiť na vyhľadanie zodpovedajúcich údajov o polohe od spoločnosti HERE Technologies. Polia **Ulica 1** a **PSČ** sú povinné pre vybranú primárnu a/alebo sekundárnu adresu. Pre vyššiu presnosť zhody je možné pridať viac polí.
 
    > [!div class="mx-imgBorder"]
-   > ![Stránka konfigurácie obohatenia od HERE Technologies](media/enrichment-HERE-configuration.png "Stránka konfigurácie obohatenia od HERE Technologies")
+   > ![Stránka konfigurácie obohatenia od HERE Technologies.](media/enrichment-HERE-configuration.png "Stránka konfigurácie obohatenia od HERE Technologies")
 
 1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
 
@@ -73,7 +73,7 @@ Na konfiguráciu pripojení musíte byť administrátor. Stlačte možnosť **Pr
 1. Po dokončení overenia stlačte možnosť **Uložiť**.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfiguračná stránka pripojenia HERE Technologies](media/enrichment-HERE-connection.png "Konfiguračná stránka pripojenia HERE Technologies")
+   > ![Konfiguračná stránka pripojenia HERE Technologies.](media/enrichment-HERE-connection.png "Konfiguračná stránka pripojenia HERE Technologies")
 
 ## <a name="enrichment-results"></a>Výsledky obohatenia
 

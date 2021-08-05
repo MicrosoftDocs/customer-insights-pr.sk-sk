@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305669"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554867"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastné modely strojového učenia
 
@@ -42,7 +42,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 1. Do poľa **Názov** zadajte rozpoznateľný názov vlastného modelu.
 
    > [!div class="mx-imgBorder"]
-   > ![Snímka obrazovky tably Nový pracovný postup](media/new-workflowv2.png "Snímka obrazovky tably Nový pracovný postup")
+   > ![Snímka obrazovky tably Nový pracovný postup.](media/new-workflowv2.png "Snímka obrazovky tably Nový pracovný postup")
 
 1. V ponuke **Nájomník, ktorý obsahuje vašu webovú službu**, vyberte organizáciu, ktorá obsahuje webovú službu.
 
@@ -59,7 +59,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
    > Pracovný postup vlastného modelu použije heuristiku na mapovanie vstupných polí webovej služby na atribúty entít na základe názvu a dátového typu poľa. Ak pole webovej služby nemožno priradiť k entite, zobrazí sa chyba.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfigurácia pracovného postupu](media/intelligence-screen2-updated.png "Konfigurácia pracovného postupu")
+   > ![Konfigurácia pracovného postupu.](media/intelligence-screen2-updated.png "Konfigurácia pracovného postupu")
 
 1. V rámci kroku **Parametre modelového výstupu** nastavte nasledujúce vlastnosti:
    - Strojové učenie Studio (klasické)
@@ -70,12 +70,12 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
       1. Vyberte **Názov parametra postupu výstupných údajov** vášho hromadného kanála z rozbaľovacej ponuky.
 
       > [!div class="mx-imgBorder"]
-      > ![Tabla parametrov modelového výstupu](media/intelligence-screen3-outputparameters.png "Tabla parametrov modelového výstupu")
+      > ![Tabla parametrov modelového výstupu.](media/intelligence-screen3-outputparameters.png "Tabla parametrov modelového výstupu")
 
 1. Vyberte zodpovedajúci atribút z rozbaľovacieho zoznamu **ID zákazníka vo výsledkoch**, ktorý identifikuje zákazníkov, a vyberte možnosť **Uložiť**.
 
    > [!div class="mx-imgBorder"]
-   > ![Spárovanie výsledkov s tablou údajov o zákazníkoch](media/intelligence-screen4-relatetocustomer.png "Spárovanie výsledkov s tablou údajov o zákazníkoch")
+   > ![Spárovanie výsledkov s tablou údajov o zákazníkoch.](media/intelligence-screen4-relatetocustomer.png "Spárovanie výsledkov s tablou údajov o zákazníkoch")
 
 1. Zobrazí sa obrazovka **Pracovný postup bol uložený** s podrobnosťami o pracovnom postupe.    
    Ak ste nakonfigurovali pracovný postup pre kanál strojového učenia platformy Azure, prehľady cieľových skupín sa pripoja k pracovnému priestoru, ktorý obsahuje kanál. Prehľady cieľových skupín získajú rolu **Prispievateľ** v pracovnom priestore platformy Azure.

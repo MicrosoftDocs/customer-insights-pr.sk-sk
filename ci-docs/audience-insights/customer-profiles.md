@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304623"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554637"
 ---
 # <a name="customer-profiles"></a>Profily zákazníkov
 
@@ -23,7 +23,7 @@ Na stránke **Zákazníci** je uvedený kombinovaný pohľad na vašich zákazn�
 Zákazníkmi môžu byť jednotlivci alebo organizácie (ukážka). Každý profil zákazníka alebo organizácie je reprezentovaný dlaždicou. Vyberte dlaždicu a zobrazte ďalšie informácie o konkrétnom zákazníkovi alebo organizácii. Ak chcete zobraziť ďalšie záznamy, použite ovládacie prvky stránkovania v dolnej časti stránky.
 
 > [!div class="mx-imgBorder"] 
-> ![Profily zákazníka B2C](media/profiles-customers.png "Profily zákazníka B2C")
+> ![Profily zákazníka B2C.](media/profiles-customers.png "Profily zákazníka B2C")
 
 Organizácie (ukážka)
 > [!div class="mx-imgBorder"] 
@@ -47,7 +47,7 @@ Zákazníkov môžete filtrovať podľa polí entity Profil zákazníka. Podobne
 2. Začiarknite políčka vedľa atribútov, podľa ktorých chcete filtrovať zákazníkov.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profily zákazníkov](media/profiles-customers3.png "Profily zákazníkov")
+   > ![Profily zákazníkov.](media/profiles-customers3.png "Profily zákazníkov")
 
 3. Odstráňte svoje filtre výberom položky **Vymazať filtre** na stránke **Zákazníci**.
 

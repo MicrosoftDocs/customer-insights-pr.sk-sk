@@ -1,7 +1,7 @@
 ---
 title: Nové a prichádzajúce funkcie
 description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263270"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692408"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Aktualizácie z júna 2021
+
+Aktualizácie pre z júna 2021 zahŕňajú niekoľko funkcií, aktualizácií výkonu a opráv chýb.
+
+### <a name="data-ingestion"></a>Prijímanie údajov
+
+- **Vylepšená aktualizácia postupu zjednocovania údajov** Teraz je možné na serveri zobraziť podrobnejšie a vylepšené dynamické aktualizácie stavu v krokoch [proces zjednocovania údajov](data-unification.md). S touto funkciou budete môcť podrobne sledovať postup, rozumieť procesnému toku a urobiť potrebné opatrenia v prípade, že si niektorý z krokov vyžaduje vašu pozornosť.
+
+### <a name="extensibility"></a>Rozšíriteľnosť
+
+- **Exportujte segmenty a ďalšie údaje do služby Salesforce Marketing Cloud** Rozšírili sme naše ciele exportovania o[Salesforce Marketing Cloud](export-salesforce.md). Teraz máte možnosť exportovania segmentov a ďalších typov údajov do aplikácie Salesforce Marketing Cloud pomocou značkového exportu SFTP. Importovať údaje je možné v službe Salesforce plne automatizovať a použiť ich na vytváranie účinnejších marketingových kampaní.  
+ 
+- **Exportujte segmenty do ActiveCampaign** Rozšírili sme naše exportné destinácie o[ aktívnu kampaň ](export-active-campaign.md). Teraz môžete exportovať segmenty a vytvárať kampane, prevádzkovať e-mailový marketing a spolupracovať s konkrétnymi skupinami zákazníkov v programe ActiveCampaign.
+ 
+- **Exportujte segmenty do Sendinblue** Rozšírili sme naše exportné destinácie o [Sendinblue](export-sendinblue.md). Teraz môžete exportovať segmenty a vytvárať kampane, prevádzkovať e-mailový marketing a spolupracovať s konkrétnymi skupinami zákazníkov v programe Sendinblue.
+ 
+### <a name="ux-updates"></a>Aktualizázcie UX 
+
+- **Nová a vylepšená stránka Zákazníci a stránka s podrobnosťami profilu** Stránku Zákazníci a stránky s podrobnosťami profilu sme prepracovali tak, aby sa zlepšil dojem používateľov a zvýšil sa výkon. Vďaka týmto zmenám môžete zobrazovať, triediť, vyhľadávať a filtrovať zákazníkov. V adrese URL sa teraz nachádzajú filtre umožňujúce jednoduché zdieľanie výsledkov vyhľadávania s ostatnými používateľmi. Výsledky vyhľadávania je možné uložiť aj ako segment.    
+  Stránka s podrobnosťami o zákazníckych profiloch teraz obsahuje skupiny údajov v rôznych častiach, ako sú demografické údaje, identifikátory a ďalšie atribúty profilu, s cieľom zlepšiť čitateľnosť. Ostatné časti na stránke podrobností profilu sú teraz interaktívnejšie. Časť aktivít napríklad teraz umožňuje filtrovanie a triedenie.
+
 
 ## <a name="may-2021-updates"></a>Aktualizácie z mája 2021
 
@@ -54,7 +76,7 @@ Aktualizácie z mája 2021 obsahujú niekoľko funkcií, vylepšenia výkonu a o
   Zostava je k dispozícii po dokončení tréningového procesu modelu. Je vytvorený pre každý model zvlášť, bez ohľadu na to, či bol úspešne dokončený alebo nie.
   V súčasnosti je táto funkcia k dispozícii iba pre model úbytku transakcií. Viac informácií nájdete v články [Zostava o použiteľnosti vstupných údajov](manage-predictions.md#input-data-usability-report).
 
-### <a name="relationships"></a>Vzťahy 
+### <a name="relationships"></a>Vzťahy
 
 - **Vizualizér vzťahov** Zobrazenie vizualizátora vzťahov vám umožňuje zobraziť všetky existujúce vzťahy medzi entitami a ich kardinalitu. Vzťahy sú teraz usporiadané do skupín: vzťahy vytvorené používateľom, systémom a zdedené vzťahy. Zobrazenie môžete tiež exportovať ako obrázok. Ďalšie informácie nájdete v téme [Zobrazenie vzťahov](relationships.md#view-relationships). 
 
@@ -170,7 +192,7 @@ Aktualizácie z februára 2021 zahŕňajú niekoľko funkcií, aktualizácií v�
 
 - **Kopírovacie prostredie podporuje viac typov zdrojov údajov**
 
-  Správcovia môžu kopírovať konfigurácie prostredia do nového prostredia v tej istej organizácii. Táto vlastnosť rozširuje funkčnosť prostredia kopírovania pre prípady, v ktorých sa využívajú zdroje údajov založené na data lake Common Data Service alebo priečinku Common Data Model.
+  Správcovia môžu kopírovať konfigurácie prostredia do nového prostredia v tej istej organizácii. Vďaka tejto funkcii máte teraz k dispozícii rozširené funkcie prostredia kopírovania pre prípady, keď sa používajú zdroje údajov založené na spravovanej službe Microsoft Dataverse Data Lake alebo priečinku Common Data Model.
 
 ## <a name="january-2021-updates"></a>Aktualizácie z januára 2021
 

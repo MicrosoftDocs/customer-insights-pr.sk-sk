@@ -1,7 +1,7 @@
 ---
 title: Slúži na vytvorenie a spravovanie segmentov
 description: Vytvorenie segmentov zákazníkov na ich zoskupenie na základe rôznych atribútov.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064956"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685481"
 ---
 # <a name="create-and-manage-segments"></a>Slúži na vytvorenie a spravovanie segmentov
+
+> [!IMPORTANT]
+> V septembri 2021 bude v prostredí vytvárania segmentov zavedených niekoľko zmien: 
+> - Zostavovač segmentov sa bude mierne líšiť vďaka novonavrhnutým prvkov a vylepšenému používateľskému postupu.
+> - V zostavovači segmentov sú zapnuté nové operátory dátumu a času a vylepšený nástroj na výber dátumu.
+> - Budete môcť pridať alebo odstrániť podmienky a pravidlá zo segmentov. 
+> - K dispozícii budú vnorené pravidlá, ktoré sa začínajú podmienkou OR. Na vonkajšej vrstve už nie je potrebná podmienka AND.
+> - Bočná tabla na výber atribútov bude neustále k dispozícii.
+> - Možnosť výberu ciest vyjadrujúcich vzťahy entít.
+> Pokiaľ chcete vyskúšať nový nástroj na tvorbu segmentov, odošlite e-mail s predmetom „Žiadosť o povolenie nového nástroja na tvorbu segmentov“ na adresu cihelp [at] microsoft.com. Uveďte názov svojej organizácie a ID vášho testovacieho prostredia.
 
 Definujte komplexné filtre okolo zjednotenej entity zákazníka a jej súvisiacich entít. Každý segment po spracovaní vytvorí skupinu zákazníckych záznamov, ktoré môžete exportovať a podniknúť kroky. Segmenty sú spravované na stránke **Segmenty**. 
 
@@ -50,7 +60,7 @@ Pri vytváraní segmentu môžete uložiť koncept. Bude uložený ako neaktívn
 1. Vyberte operátora a hodnotu pre vybraného atribútu.
 
    > [!div class="mx-imgBorder"]
-   > ![Filter vlastnej skupiny](media/customer-group-numbers.png "Filter skupiny zákazníkov")
+   > ![Filter vlastnej skupiny.](media/customer-group-numbers.png "Filter skupiny zákazníkov")
 
    |Číslo |Definícia  |
    |---------|---------|
@@ -66,7 +76,7 @@ Pri vytváraní segmentu môžete uložiť koncept. Bude uložený ako neaktívn
       - Operátor **ALEBO**: V rámci procesu segmentácie musí byť splnená jedna z podmienok. Táto voľba je najužitočnejšia, keď definujete viac podmienok pre jednu entitu.
 
       > [!div class="mx-imgBorder"]
-      > ![Operátor ALEBO, ktorý musí splniť ktorúkoľvek z podmienok](media/segmentation-either-condition.png "Operátor ALEBO, ktorý musí splniť ktorúkoľvek z podmienok")
+      > ![Operátor ALEBO, ktorý musí splniť ktorúkoľvek z podmienok.](media/segmentation-either-condition.png "Operátor ALEBO, ktorý musí splniť ktorúkoľvek z podmienok")
 
       V súčasnosti je možné vnoriť operátor **ALEBO** pod operátor **A**, ale nie naopak.
 
@@ -74,12 +84,12 @@ Pri vytváraní segmentu môžete uložiť koncept. Bude uložený ako neaktívn
    Vyberte **Pridať skupinu**.
 
       > [!div class="mx-imgBorder"]
-      > ![Skupina zákazníkov – pridanie skupiny](media/customer-group-add-group.png "Skupina zákazníkov – pridanie skupiny")
+      > ![Skupina zákazníkov – pridanie skupiny.](media/customer-group-add-group.png "Skupina zákazníkov – pridanie skupiny")
 
    1. Vyberte jedného z nastavených operátorov: **Zjednotiť**, **Prienik** alebo **Okrem**.
 
    > [!div class="mx-imgBorder"]
-   > ![Skupina zákazníkov – pridanie zjednotenia](media/customer-group-union.png "Skupina zákazníkov – pridanie zjednotenia")
+   > ![Skupina zákazníkov – pridanie zjednotenia.](media/customer-group-union.png "Skupina zákazníkov – pridanie zjednotenia")
 
    - **Zjednotenie** zjednocuje obe skupiny.
 
@@ -90,7 +100,7 @@ Pri vytváraní segmentu môžete uložiť koncept. Bude uložený ako neaktívn
 1. Ak je entita prepojená so zjednotenou entitou zákazníka prostredníctvom [vzťahov](relationships.md), musíte definovať cestu vzťahov, aby ste vytvorili platný segment. Pridajte entity z cesty vzťahov, kým si nevyberiete entitu **Zákazník: CustomerInsights** z rozbaľovacej ponuky. Potom stlačte možnosť **Všetky záznamy** pre každý krok.
 
    > [!div class="mx-imgBorder"]
-   > ![Cesta vzťahov pri vytváraní segmentov](media/segments-multiple-relationships.png "Cesta vzťahov pri vytváraní segmentov")
+   > ![Cesta vzťahov pri vytváraní segmentov.](media/segments-multiple-relationships.png "Cesta vzťahov pri vytváraní segmentov")
 
 1. V predvolenom nastavení segmenty generujú výstupnú entitu, ktorá obsahuje všetky atribúty profilov zákazníkov, ktoré zodpovedajú definovaným filtrom. Ak je segment založený na iných entitách ako entita *Zákazník*, môžete do výstupnej entity pridať ďalšie atribúty z týchto entít. Stlačte možnosť **Atribúty projektu** na výber atribútov, ktoré sa pripoja k výstupnej entite.  
   
@@ -127,7 +137,7 @@ Rýchle segmenty vám umožňujú rýchlo vytvárať jednoduché segmenty pomoco
 4. Systém vám poskytne **Odhadovanú veľkosť segmentu**. Môžete si vybrať, či chcete vygenerovať segment, ktorý ste definovali, alebo ho znova opraviť, aby ste získali inú veľkosť segmentu.
 
     > [!div class="mx-imgBorder"]
-    > ![Názov a odhad rýchleho segmentu](media/quick-segment-name.png "Názov a odhad rýchleho segmentu")
+    > ![Názov a odhad rýchleho segmentu.](media/quick-segment-name.png "Názov a odhad rýchleho segmentu")
 
 5. Zadajte **Názov** pre svoj segment. Voliteľne zadajte **Zobrazovaný názov**.
 

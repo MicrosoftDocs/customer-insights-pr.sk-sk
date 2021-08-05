@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: b54659f028a141fe8f351645d96e933d47568a39
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124292"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362437"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Export segmentov do Constant Contact (verzia Preview)
 
@@ -47,7 +47,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do Constant Contact a po
 
 1. Stlačte možnosť **Pripojiť** na inicializáciu pripojenia k Constant Contact.
 
-1. Stlačte možnosť **Overenie pomocou služby AdRoll** a zadajte svoje poverenia správcu pre Constant Contact. 
+1. Označte položku **Overiť cez Constant Contact** a poskytnite svoje poverenia správcu pre Constant Contact. 
 
 1. Vyberte položku **Pridať samého seba ako používateľa exportu** a uveďte svoje poverenia pre Customer Insights.
 

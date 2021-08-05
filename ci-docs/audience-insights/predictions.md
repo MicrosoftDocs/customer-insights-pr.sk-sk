@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595920"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692546"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Doplňte svoje predbežné údaje o predikcie
 
@@ -31,11 +31,11 @@ Predikcie vám umožňujú ľahko vytvárať predikované hodnoty, ktoré môžu
 
 Predtým ako bude vaša organizácia môcť používať funkciu predikcií, skontrolujte, či sú splnené nasledujúce predpoklady:
 
-1. Vaša organizácia má nastavenú inštanciu [v Common Data Service](/ai-builder/build-model#prerequisites) a nachádza sa v rovnakej organizácii ako Customer Insights.
+1. Vaša organizácia má inštanciu [vytvorenú v časti Microsoft Dataverse](/ai-builder/build-model#prerequisites) a nachádza sa v rovnakej organizácii ako služba Customer Insights.
 
-2. Vaše prostredie je spojené s vašou inštanciou Common Data Service.
+2. Prostredie vášho prehľadu cieľovej skupiny je prepojené s vašou inštanciou Dataverse.
 
-Keď [vytvárate nové prostredie](manage-environments.md), nakonfigurujte ho v dialógovom okne **Vytvorenie prostredia** a vyberte možnosť **Pokročilé**. Ak ste už vytvorili prostredie, prejdite na jeho nastavenia a vyberte položku **Pokročilé**. V každom prípade v sekcii **Používať predikcie** zadajte adresu URL inštancie Common Data Service, ku ktorej chcete pripojiť svoje prostredie.
+Keď [vytvárate nové prostredie](get-started-paid.md), nakonfigurujte ho v dialógovom okne **Vytvorenie prostredia** a vyberte možnosť **Pokročilé**. Ak ste už vytvorili prostredie, prejdite na jeho nastavenia a vyberte položku **Pokročilé**. V každom prípade v sekcii **Používať predikcie** zadajte adresu URL inštancie Dataverse, ku ktorej chcete pripojiť svoje prostredie.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Vytvorenie predikcie v entite Zákazník
 
@@ -47,17 +47,17 @@ Keď [vytvárate nové prostredie](manage-environments.md), nakonfigurujte ho v 
 
 4. Nájdite názov atribútu, pre ktorý chcete predpovedať hodnoty, a potom vyberte ikonu **Prehľad** v stĺpci **Zhrnutie**.
    > [!div class="mx-imgBorder"]
-   > ![Ikona prehľadu](media/intelligence-overviewicon.png "Ikona prehľadu")
+   > ![Ikona prehľadu.](media/intelligence-overviewicon.png "Ikona prehľadu")
 
 5. Ak existuje vysoký počet chýbajúcich hodnôt pre váš atribút, vyberte položku **Predpovedať chýbajúce hodnoty** a pokračujte v predikcii.
    > [!div class="mx-imgBorder"]
-   > ![Stav prehľadu so zobrazeným tlačidlom predikcie chýbajúcich hodnôt](media/intelligence-overviewpredictmissingvalues.png "Stav prehľadu so zobrazeným tlačidlom predikcie chýbajúcich hodnôt")
+   > ![Stav prehľadu so zobrazeným tlačidlom predikcie chýbajúcich hodnôt.](media/intelligence-overviewpredictmissingvalues.png "Stav prehľadu so zobrazeným tlačidlom predikcie chýbajúcich hodnôt")
 
 6. Uveďte **Zobrazované meno** a **Názov výstupnej entity** pre výsledky predikcie.
 
 7. Zobrazí sa predvyplnený zoznam možností, kde môžete namapovať hodnoty na predikovanú kategóriu. V takom prípade budú vašou jedinou možnosťou kategórie 0 alebo 1, pretože mapujú na pravdivú/nepravdivú alebo binárnu povahu predikcie. V stĺpci Kategória, priraďte hodnoty polí, ktoré chcete nechať klasifikovať ako „0“ v konečnej predikcii, na „0“ a položky, ktoré by ste chceli klasifikovať ako „1“ v konečnej predikcii na „1“.
    > [!div class="mx-imgBorder"]
-   > ![Príklad, ktorý zobrazuje hodnoty mapovaných hodnôt polí do kategórií](media/intelligence-categorymapping.png "Príklad, ktorý zobrazuje hodnoty mapovaných hodnôt polí do kategórií")
+   > ![Príklad, ktorý zobrazuje hodnoty mapovaných hodnôt polí do kategórií.](media/intelligence-categorymapping.png "Príklad, ktorý zobrazuje hodnoty mapovaných hodnôt polí do kategórií")
 
 8. Vyberte **Hotovo** a predikcia sa spracuje. Spracovanie bude nejaký čas trvať, v závislosti od veľkosti a zložitosti údajov. Výsledky budú k dispozícii v novej entite založenej na predikcii **Názve výstupnej entity**, ktorú ste vytvorili.
 
@@ -77,7 +77,7 @@ V rámci tohto toku vyberiete konkrétny atribút, ktorý bude základom vášho
 
 5. Ak segment, ktorý ste vytvorili, obsahuje neúplné údaje v zdrojovom poli, môžete predikovať chýbajúce hodnoty.
    > [!div class="mx-imgBorder"]
-   > ![Tlačidlo predikcie](media/segments-predictoption.png "Tlačidlo predikcie")
+   > ![Tlačidlo predikcie.](media/segments-predictoption.png "Tlačidlo predikcie")
 
 6. Uveďte **Zobrazované meno** a **Názov výstupnej entity** pre výsledky predikcie.
 
@@ -93,7 +93,7 @@ V rámci tohto toku vyberiete konkrétny atribút, ktorý bude základom vášho
 
 4. V zobrazení predikcie sa zobrazí niekoľko údajových bodov.
    > [!div class="mx-imgBorder"]
-   > ![Stránka predikcie](media/intelligence-predictionsviewpage.png "Stránka predikcie")
+   > ![Stránka predikcie.](media/intelligence-predictionsviewpage.png "Stránka predikcie")
 
    - **Hodnoty predikcie** zobrazujú mapovanie, ktoré ste vytvorili počas fázy mapovania hodnoty poľa do kategórie. Toto sú hodnoty vo vašom súbore údajov, ktoré boli mapované do konkrétnej kategórie.
    -**Top vplyvné osoby** sú faktory v rámci vášho súboru údajov, ktoré najpravdepodobnejšie ovplyvnili dôveru v predikciu, že hodnota vášho poľa bude mapovaná na konkrétnu kategóriu.
@@ -139,7 +139,7 @@ Pri ďalšom spustení predikcie sa použije aktualizovaný model, ktorý ste vy
 
 ## <a name="troubleshooting"></a>Riešenie problémov
 
-Ak nemôžete dokončiť proces pripojenia Common Data Service kvôli chybe, môžete skúsiť dokončiť proces ručne. V procese pripájania sa môžu vyskytnúť dva známe problémy:
+Ak nemôžete dokončiť proces pripojenia Dataverse kvôli chybe, môžete skúsiť dokončiť proces ručne. V procese pripájania sa môžu vyskytnúť dva známe problémy:
 
 - Nie je nainštalované riešenie doplnku Karta zákazníka.
     1. Vykonajte pokyny podľa pokynov [nainštalujte a nakonfigurujte riešenie](customer-card-add-in.md).
