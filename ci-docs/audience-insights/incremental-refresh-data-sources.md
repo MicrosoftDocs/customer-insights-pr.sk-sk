@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554178"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377853"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Prírastkové obnovenie pre zdroje údajov založené na Power Query
 
@@ -44,8 +44,7 @@ Prehľady cieľových skupín umožňujú prírastkové obnovenie pre zdroje úd
 
 1. V časti **Nastavenia prírastkového obnovovania** nakonfigurujete prírastkové obnovovanie pre všetky entity, ktoré ste si vybrali pri vytváraní zdroja údajov.
 
-   > [!div class="mx-imgBorder"]
-   > ![Nakonfigurujte entity v zdroj údajov na prírastkové obnovovanie.](media/incremental-refresh-settings.png "Nakonfigurujte entity v zdroj údajov na prírastkové obnovovanie")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Nakonfigurujte entity v zdroj údajov na prírastkové obnovovanie.":::
 
 1. Vyberte entitu a zadajte nasledujúce podrobnosti:
 

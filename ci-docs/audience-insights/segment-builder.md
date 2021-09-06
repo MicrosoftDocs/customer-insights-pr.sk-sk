@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685481"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377807"
 ---
 # <a name="create-and-manage-segments"></a>Slúži na vytvorenie a spravovanie segmentov
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685481"
 > - Bočná tabla na výber atribútov bude neustále k dispozícii.
 > - Možnosť výberu ciest vyjadrujúcich vzťahy entít.
 > Pokiaľ chcete vyskúšať nový nástroj na tvorbu segmentov, odošlite e-mail s predmetom „Žiadosť o povolenie nového nástroja na tvorbu segmentov“ na adresu cihelp [at] microsoft.com. Uveďte názov svojej organizácie a ID vášho testovacieho prostredia.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Prvky zostavovača segmentov." lightbox="media/segment-builder-overview.png":::
+>
+> 1 – Organizujte svoj segment pomocou pravidiel a podskupín. Každé pravidlo alebo čiastkové pravidlo pozostáva z podmienok. Skombinujte podmienky s logickými operátormi
+>
+> 2 – Vyberte položku [postup vzťahu](relationships.md) medzi entitami, ktoré sa vzťahujú na pravidlo. Postup vzťahu určuje, ktoré atribúty je možné použiť v podmienke.
+>
+> 3 – Spravujte pravidlá a čiastkové pravidlá. Zmeňte pozíciu pravidla alebo ho odstráňte.
+>
+> 4 – Pridajte podmienky a vytvorte správnu úroveň vnorenia pomocou podradených pravidiel.
+>
+> 5 – Aplikujte nastavené operácie na prepojené pravidlá.
+>
+> 6 – Pomocou tably atribútov pridajte dostupné atribúty entity alebo vytvorte podmienky na základe atribútov. Tabla zobrazuje zoznam entít a atribútov na základe vybraného postupu vzťahu, ktoré sú k dispozícii pre vybraté pravidlo.
+>
+> 7 – Pridajte podmienky na základe atribútov k existujúcim pravidlám a čiastkovým pravidlám alebo ich pridajte do nového pravidla.
+>
+> 8 – Pri vytváraní segmentu sa zmeny vrátia a znova vykonajú.
 
 Definujte komplexné filtre okolo zjednotenej entity zákazníka a jej súvisiacich entít. Každý segment po spracovaní vytvorí skupinu zákazníckych záznamov, ktoré môžete exportovať a podniknúť kroky. Segmenty sú spravované na stránke **Segmenty**. 
 
@@ -147,6 +164,6 @@ Rýchle segmenty vám umožňujú rýchlo vytvárať jednoduché segmenty pomoco
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
-[Exportujte segment](export-destinations.md) a preskúmajte [kartu zákazníka](customer-card-add-in.md) a [konektory](export-power-bi.md), aby ste získali prehľad o úrovni zákazníka.
+[Exportujte segment](export-destinations.md) a preskúmajte časť [Integrácia karty zákazníka](customer-card-add-in.md) na používanie segmentov v iných aplikáciách.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

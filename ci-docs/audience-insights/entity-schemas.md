@@ -1,7 +1,7 @@
 ---
 title: Schémy entít pre Customer Insights vo formáte Common Data Model
 description: Pracujte s entitami vo formáte Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692324"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380762"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémy entít v modeli Common Data Model
 
@@ -24,7 +24,7 @@ Model [Common Data Model](/common-data-model/) je deklaratívna špecifikácia a
 
 Toto je zdieľaný dátový model, ktorý umožňuje aplikáciám a integrátorom údajom ľahšiu spoluprácu vďaka tomu, že poskytuje jednotnú definíciu údajov. Model Common Data Model obsahuje bohatý systém metaúdajov so štandardnými entitami, vzťahmi, hierarchiami, vlastnosťami a ďalšími. Pochádza z aplikácií systému Dynamics 365 a má otvorený zdroj na serveri GitHub s viac ako 260 štandardnými entitami. Veľký systém interných a externých partnerov prispieva modelu Common Data Model priemyselnými konceptmi.
 
-Common Data Model dnes implementuje viacero systémov a platforiem vrátane tokov údajov v službe Power BI a dátových služieb Azure. Je to už podporované v službe Microsoft Dataverse, Dynamics 365,Power Apps,Power BI a v nadchádzajúcich dátových službách Azure, s priamym získavaním hodnôt smerom k dátovému modelu [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Common Data Model dnes implementuje viacero systémov a platforiem vrátane tokov údajov v službe Power BI a dátových služieb Azure. Je to už podporované v službe Microsoft Dataverse, Dynamics 365,Power Apps,Power BI a v nadchádzajúcich dátových službách Azure, s priamym získavaním hodnôt smerom k dátovému modelu [Open Data Initiative ](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Schémy entít pre Customer Insights
 
@@ -42,7 +42,7 @@ Aby sme získali 360-stupňový pohľad na zákazníka a sprístupnili modely Cu
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Zobrazte entít pomocou Navigátora entít formátu Common Data Model
 
-Entity si môžete pozrieť v sekcii [Navigátor entít vo formáte Common Data Model](https://microsoft.github.io/CDM/). Vyberte položku **Načítať zo služby GitHub!** tlačidlo a prejdite na **foundationCommon** > **crmCommon** > **riešenia** > **customerInsights**, kde nájdete zoznam entít entít pre Customer Insights a ich definície.
+Entity si môžete pozrieť v sekcii [Navigátor entít vo formáte Common Data Model](https://microsoft.github.io/CDM/). Vyberte entitu v sekcii Aplikácia Insights, aby ste získali zoznam entít Customer Insights a ich definície.
 > [!div class="mx-imgBorder"]
 > ![Navigátor entít CDM zobrazuje entitu CustomerActivity.](media/CDM-entity-navigator.png "Navigátor entít CDM zobrazuje entitu CustomerActivity")
 

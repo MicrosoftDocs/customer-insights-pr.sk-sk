@@ -3,21 +3,21 @@ title: Prehľad produktu
 author: m-hartmann
 description: Získajte prehľad o službe Dynamics 365 Customer Insights a jej funkciách.
 ms.author: mhart
-ms.date: 02/16/2021
+ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 1bc75959229fd2ffef9a5fd5617889888eb72e55
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539408"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036530"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Prehľad produktu Dynamics 365 Customer Insights
 
-Dynamics 365 Customer Insights je súčasťou zákazníckej dátovej platformy (CDP) spoločnosti Microsoft, ktorá pomáha poskytovať prispôsobené prostredia pre zákazníkov. Schopnosti platformy poskytujú prehľad o tom, kto sú vaši zákazníci a ako pracujú s platformou. Zjednoťte údaje zákazníkov v rámci viacerých zdrojov a získajte tak jednotný prehľad o zákazníkoch.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je súčasťou zákazníckej dátovej platformy (CDP) spoločnosti Microsoft, ktorá pomáha poskytovať prispôsobené prostredia pre zákazníkov. Schopnosti platformy poskytujú prehľad o tom, kto sú vaši zákazníci a ako pracujú s platformou. Zjednoťte údaje zákazníkov v rámci viacerých zdrojov a získajte tak jednotný prehľad o zákazníkoch.
 
 
 - [Štatistiky cieľovej skupiny](audience-insights/overview.md) vám pomôžu transformovať vaše podnikanie na organizáciu zameranú na zákazníka. Odborníci v oblasti marketingu, predaja a služieb majú poznatky, ktoré potrebujú na prispôsobenie prostredí. Prepojte údaje z transakčných, behaviorálnych a pozorovacích zdrojov a vytvorte kompletný pohľad na zákazníka. S programom CDP navrhnutým tak, aby poskytoval informácie, na ktoré je možné reagovať, uvidíte rýchlejšie výsledky. 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171183"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035250"
 ---
 # <a name="relationships-between-entities"></a>Vzťahy medzi entitami
 
@@ -82,7 +82,7 @@ Táto stránka ponúka súbor možností pre existujúce a nové vzťahy:
 
 ### <a name="explore-the-relationship-visualizer"></a>Preskúmanie vizualizéra vzťahov
 
-Vizualizér vzťahov zobrazuje sieťový diagram existujúcich vzťahov medzi prepojenými entitami a ich kardinalitou.
+Vizualizér vzťahov zobrazuje sieťový diagram existujúcich vzťahov medzi prepojenými entitami a ich kardinalitou. Vizualizuje aj postup vzťahu.
 
 Ak chcete prispôsobiť zobrazenie, môžete zmeniť polohu políčok ich presunutím na plátno.
 
@@ -92,6 +92,20 @@ Dostupné možnosti:
 - **Exportovať ako obrázok**: Uložiť aktuálne zobrazenie ako obrazový súbor.
 - **Zmena na vodorovné/zvislé rozloženie**: Zmena zarovnania entít a vzťahov.
 - **Úprava**: Aktualizujte vlastnosti vlastných vzťahov na paneli úprav a uložte zmeny.
+
+### <a name="relationship-path"></a>Cesta vyjadrujúca vzťah
+
+Postup vzťahu popisuje entity, ktoré sú prepojené so vzťahmi medzi zdrojovou entitou a cieľovou entitou. Používa sa pri vytváraní segmentu alebo miery, ktorá obsahuje iné entity ako entitu zjednoteného profilu, a existuje niekoľko možností, ako dosiahnuť entitu zjednoteného profilu.
+
+Postup vzťahu informuje systém, cez ktorý vzťahy majú pristupovať k entite zjednoteného profilu. Rôzne postupy vzťahov môžu priniesť rôzne výsledky.
+
+Napríklad entita *eCommerce_eCommercePurchases* má s entitou jednotného profilu *Zákazník* nasledujúce vzťahy:
+
+- eCommerce_eCommercePurchases > Zákazník
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Zákazník
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Zákazník 
+
+Cesta k vzťahu určuje, ktoré entity môžete použiť pri vytváraní pravidiel pre miery alebo segmenty. Výber možnosti s najdlhším postupom vzťahu pravdepodobne prinesie menej výsledkov, pretože zodpovedajúce záznamy musia byť súčasťou všetkých entít. V tomto prípade musí mať zákazník zakúpený tovar prostredníctvom elektronického obchodu (eCommerce_eCommercePurchases), v mieste predaja (POS_posPurchases) a zúčastniť sa nášho vernostného programu (loyaltyScheme_loyCustomers). Pri výbere prvej možnosti by ste pravdepodobne získali viac výsledkov, pretože zákazníci musia existovať iba v jednej ďalšej entite.
 
 ## <a name="manage-existing-relationships"></a>Spravovanie existujúcich vzťahov 
 
@@ -105,6 +119,6 @@ Vyberte vzťah a jednu z nasledujúcich možností:
 
 ## <a name="next-step"></a>Nasledujúci krok
 
-Systémové a vlastné vzťahy sa používajú na [vytváranie segmentov](segments.md) založených na viacerých zdrojoch údajov, ktoré už nie sú v silách.
+Systémové a vlastné vzťahy sa používajú na [vytváranie segmentov](segments.md) a [opatrení](measures.md) na základe viacerých zdrojov údajov, ktoré už nie sú vypnuté.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
