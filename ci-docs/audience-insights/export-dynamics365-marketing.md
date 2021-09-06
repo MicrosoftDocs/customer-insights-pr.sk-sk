@@ -1,7 +1,7 @@
 ---
 title: Export údajov služby Customer Insights do Dynamics 365 Marketing
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Dynamics 365 Marketing.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692500"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417224"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Použitie segmentov v Dynamics 365 Marketing (ukážka)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Dynamics 365 Marketing umožňuje pomocou [segmentov](segments.md) generovať kampane a kontaktovať konkrétne skupiny zákazníkov. Viac informácií nájdete v článku [Použitie segmentov z Dynamics 365 Customer Insights s Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
+Dynamics 365 Marketing umožňuje pomocou [segmentov](segments.md) generovať kampane a kontaktovať konkrétne skupiny zákazníkov. Viac informácií nájdete v článku [Použitie segmentov z Dynamics 365 Customer Insights s Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+
+Ak používate nové možnosti Dynamics 365 Marketing na orchestráciu činnosť zákazníka v reálnom čase v organizácii Dataverse, nemusíte vytvárať štandardný export do Dynamics 365 Marketing. Kontakty a segmenty z prehľadov cieľovej skupiny sú k dispozícii priamo v aplikácii Dynamics 365 Marketing po prepojení možností Marketing a Customer Insights. Pred odstránením existujúcich exportov si prečítajte dokumentáciu v časti [ako prepojiť prehľady cieľovej skupiny a orchestráciu činnosť zákazníka Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Predpoklad na pripojenie
 
