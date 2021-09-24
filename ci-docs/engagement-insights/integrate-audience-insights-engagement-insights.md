@@ -1,19 +1,19 @@
 ---
 title: Vytvorte prepojenie medzi prehľadmi cieľových skupín a prehľadmi interakcií
 description: Vytvorte aktívne prepojenie medzi prehľadmi cieľovej skupiny a prehľadmi interakcií a povoľte obojsmerné zdieľanie údajov.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461032"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487126"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Vytvorte prepojenie medzi prehľadmi cieľových skupín a prehľadmi interakcií
 
@@ -26,14 +26,14 @@ Použite zjednotené profily a segmenty z prehľadov cieľovej skupiny na získa
 ## <a name="prerequisites"></a>Predpoklady
 
 - Profily prehľadov cieľovej skupiny musia byť uložené v účte Azure Data Lake Storage, ktorý vlastníte, alebo v spravovanom dátovom jazere [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;. 
-
+- Prostredie vašej cieľovej skupiny by malo mať tiež priradené prostredie Dataverse. A ak toto prostredie taktiež používa Dataverse ako úložisko údajov, určite označte začiarkavacie políčko **Povoliť zdieľanie údajov** v prehľadoch cieľovej skupiny. Ďalšie informácie nájdete v časti [Vytvorte a nakonfigurujte platené prostredie v prehľadoch cieľových skupín](../audience-insights/get-started-paid.md).
 - Na prostredie prehľadov interakcií a prehľadov cieľovej skupiny potrebujete povolenia správcu.
-
 - Prepojené prostredia musia byť v rovnakej geografickej oblasti.
 
 > [!NOTE]
-> - Ak je predplatné vašich prehľadov cieľovej skupiny skúšobné, ktoré používa interne spravované dátové jazero prehľadov cieľovej skupiny, požiadajte o pomoc [pirequest@microsoft.com](mailto:pirequest@microsoft.com). 
-> - Ak vaše prostredie pre prehľady cieľovej skupiny používa vaše vlastné Azure Data Lake Storage na ukladanie údajov, musíte do svojho účtu úložiska pridať objekt služby Azure prehľadov cieľovej skupiny. Podrobnosti nájdete na [Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby Azure pre prehľady cieľovej skupiny](../audience-insights/connect-service-principal.md). Vaše prostredie pre prehľady cieľovej skupiny by malo mať tiež priradené [prostredie Dataverse](../audience-insights/get-started-paid.md). 
+> - Ak je predplatné vašich prehľadov cieľovej skupiny skúšobné, ktoré používa interne spravované data lake prehľadov cieľovej skupiny, požiadajte o pomoc [pirequest@microsoft.com](mailto:pirequest@microsoft.com). 
+> - Ak vaše prostredie pre prehľady cieľovej skupiny používa vaše vlastné Azure Data Lake Storage na ukladanie údajov, musíte do svojho účtu úložiska pridať objekt služby Azure prehľadov cieľovej skupiny. Podrobnosti nájdete na [Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby Azure pre prehľady cieľovej skupiny](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Vytvorenie odkazu na prostredie
 
@@ -49,7 +49,7 @@ Odkaz na prostredie môžete vytvoriť aktualizáciou nastavenia **Správca** > 
 
      :::image type="content" source="media/integrate2.png" alt-text="Výber prostredia s prehľadmi cieľovej skupiny.":::
 
-1. Vyberte prostredie s prehľadmi cieľovej skupiny a potom vyberte ***Ďalej** na dokončenie. Teraz si môžete vybrať voliteľné funkcie pre prepojené prostredia.
+1. Vyberte prostredie s prehľadmi cieľovej skupiny a potom vyberte **Ďalej** na dokončenie. Teraz si môžete vybrať voliteľné funkcie pre prepojené prostredia.
  
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Povoliť atribúty a segmenty prehľadov cieľových skupín zjednotených profilov
 
@@ -75,6 +75,7 @@ Po prepojení prostredí môžete vybrať voliteľné funkcie pre prepojené pro
 
    > [!IMPORTANT]
    > Ak v tomto kroku explicitne nepridáte používateľov, údaje budú pred používateľmi prehľadov interakcií skryté.
+   > Aby sa segmenty prehľadov cieľovej skupiny zobrazovali v prehľadoch interakcií, musíte najskôr [spustiť procesy zlúčenia a nadväzujúce procesy](../audience-insights/merge-entities.md). Následné procesy sú dôležité, pretože generujú jedinečnú tabuľku, ktorá pripravuje segmenty prehľadov cieľovej skupiny na zdieľanie s prehľadmi interakcií. (Ak je naplánovaná aktualizácia systému, bude automaticky zahŕňať následné procesy.)
 
 1. Skontrolujte svoj výber a potom vyberte **Skončiť**.
 

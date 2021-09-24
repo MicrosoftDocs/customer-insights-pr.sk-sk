@@ -4,17 +4,17 @@ description: Ako pomocou lievikových zostáv porozumieť tomu, ako sa cieľová
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032274"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498661"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Vytváranie a správa lievikových zostáv
 
@@ -158,4 +158,21 @@ Môžete zmeniť názov lievikovej zostavy, odstrániť ju alebo upraviť kroky 
 1. Výberom názvu zostavy ju otvorte.
 
 1. Zvoľte krok, ktorý si želáte odstrániť, a potom stlačte možnosť **Odstrániť**.
+
+## <a name="funnel-insights"></a>Lievikové prehľady 
+
+Prehľady interakcií teraz ponúkajú zákazníkom lievikové prehľady. Pomocou lievikových prehľadov získate hlbší prehľad o správaní zákazníkov týkajúcich sa krokov. Po vytvorení a uložení novej lievikovej zostavy sa pre váš prehľad automaticky vytvoria lievikové prehľady. 
+
+Lievikové prehľady si môžete zobraziť v týchto kategóriách, na hlavnej úrovni aj na úrovni krokov: 
+
+ - Miera konverzie 
+ - Čas prechodu 
+ - Čas dokončenia 
+
+Pomocou týchto poznatkov hlbšie preskúmate správanie zákazníkov a lepšie pochopíte body prerušenia a konverzie v lievikovej zostave. 
+
+Lievikové prehľady sa prepočítavajú každých 24 hodín alebo keď **Uložíte** lievikovú zostavu. 
+
+> [!NOTE]
+> Aby ste zobrazili lievikové prehľady, je potrebné uložiť prehľad vždy po vykonaní zmien. 
 

@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: "Nové a\_aktualizované funkcie"
       href: audience-insights/whats-new-audience-insights.md
-    - name: Vytvoriť nové prostredie
-      href: audience-insights/get-started-paid.md
+    - name: Začať
+      items:
+        - name: Príručka rýchlej konfigurácie
+          href: audience-insights/get-started.md
+        - name: Vytvoriť nové prostredie
+          href: audience-insights/get-started-paid.md
+        - name: Preskúmajte prehľady cieľových skupín
+          href: audience-insights/home.md
     - name: Výuka modulov
       items:
         - name: Príjem údajov
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Vylepšené adresy
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Obohatiť o funkcie Azure Maps
+          href: audience-insights/enrichment-azure-maps.md
         - name: Obohatenie údajov so spoločnosťou HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Obohatenie pomocou Leadspace
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: Odkazy na API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Obmedzenia služby
-      href: audience-insights/service-limits.md
-    - name: Žiadosti o DSR podľa GDPR
-      href: audience-insights/gdpr.md
 - name: Prehľady interakcií (Preview)
   items:
     - name: Centrum pomoci
       href: engagement-insights/index.yml
     - name: Prehľad funkcií
       href: engagement-insights/overview.md
-    - name: Bezplatná skúšobná verzia
-      href: 'https://pi.dynamics.com/'
     - name: Začať
       items:
-        - name: Začať
+        - name: Príručka rýchlej konfigurácie
           href: engagement-insights/get-started.md
         - name: Vytvorenie pracovného priestoru
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Spravovanie prostrední a pracovných priestorov
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Konfigurácia pripojení
-          href: engagement-insights/configure-connections.md
         - name: Spravovanie súborov cookie súhlasov používateľa
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: Odstraňovanie a export osobných údajov
-          href: engagement-insights/delete-export-personal-data.md
     - name: Regionálna dostupnosť
       href: engagement-insights/regional-availability.md
-    - name: Obmedzenia služby
-      href: engagement-insights/quotas.md
 - name: Integrujte prehľady cieľovej skupiny a interakcií
   items:
     - name: Prepojte prehľady cieľovej skupiny a prehľady interakcií
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Na rozdelenie údajov o správaní použite demografické dimenzie
       href: engagement-insights/curate-dimensions.md
+- name: Obmedzenia služby
+  href: service-limits.md
+- name: Práva a požiadavky DSR
+  href: dsr-rights-requests.md
 - name: Získanie podpory
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

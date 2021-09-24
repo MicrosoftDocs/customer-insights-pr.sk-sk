@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
+ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461122"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466367"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Na rozdelenie údajov o správaní použite demografické dimenzie
 
@@ -29,7 +29,7 @@ Použitím demografických dimenzií zjednoteného profilu môžu používatelia
 - Prostredie prehľadov interakcií, v ktorom máte údaje o zákazníckych profiloch prepojené s prostredím prehľadov cieľovej skupiny, kde sú vytvárané profily zákazníkov. Ďalšie informácie: [Vytvorte prepojenie medzi prehľadmi cieľových skupín a prehľadmi interakcií](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Keď vytvoríte prepojenie medzi prostrediami prehľadov cieľových skupín a interakcií, možno budete chcieť iba údaje špecifické pre vlastnosti profilu zákazníka, ktoré môžu byť užitočné ako dimenzie v prehľadoch interakcií. Ak chcete získať ďalšie informácie, prejdite na stránku [Povoliť atribúty a segmenty prehľadov cieľových skupín zjednotených profilov](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Keď vytvoríte prepojenie medzi prostrediami prehľadov cieľových skupín a interakcií, možno budete chcieť iba údaje špecifické pre vlastnosti profilu zákazníka, ktoré môžu byť užitočné ako dimenzie v prehľadoch interakcií. Ak chcete získať ďalšie informácie, prejdite na stránku [Povoliť atribúty a segmenty prehľadov cieľových skupín zjednotených profilov](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Vytvoriť novú vlastnú zostavu
 

@@ -4,17 +4,17 @@ description: Ako vytvárať, premenovávať a mazať pracovné priestory a prost
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034061"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486054"
 ---
 # <a name="manage-environments-and-workspaces"></a>Spravovanie prostrední a pracovných priestorov
 
@@ -85,13 +85,11 @@ Odstránením pracovného priestoru sa natrvalo odstráni všetok jeho obsah, ú
 
 1. Stlačte možnosť **Pridať členov**, udeľte prístup a [priraďte roly](user-roles.md). Momentálne je dostupná len **Správca pracovného priestoru**.
 
-1. Ak nastavíte a [pripojenie k Audience Insights](configure-connections.md), môžete stlačiť možnosť **Povoliť prístup k profilovým údajom** a umožniť členovi zobraziť správy založené na [používateľských profiloch](profile-reports.md).
-
 1. Stlačte možnosť **Pridať členov** a pridajte ich do svojho pracovného priestoru.
 
 ## <a name="manage-an-environment"></a>Správa prostredia
 
-Ako správca prostredia máte prístup do prostredia z ľavej navigačnej tably. Môžete konfigurovať nastavenia prostredia, ďalších správcov prostredia, pracovných priestorov a [prepojenie na audience insights](configure-connections.md). Vyberte karty, aby ste sa pohybovali medzi rôznymi oblasťami v centre správcu.
+Ako správca prostredia máte prístup do prostredia z ľavej navigačnej tably. Je možné nakonfigurovať nastavenia prostredia, iných správcov prostredia a pracovné priestory. Vyberte karty, aby ste sa pohybovali medzi rôznymi oblasťami v centre správcu.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centrum spravovania prostredia.":::
 
@@ -123,8 +121,6 @@ Ako správca prostredia máte prístup do prostredia z ľavej navigačnej tably.
 
 1. Stlačte možnosť **Pridať členov** na aktualizáciu členov a [priradenie rol](user-roles.md). Momentálne je dostupná len **Správca prostredia**.
 
-1. Ak nastavíte a [pripojenie k Audience Insights](configure-connections.md), môžete stlačiť možnosť **Povoliť prístup k profilovým údajom** a umožniť členovi zobraziť správy založené na [používateľských profiloch](profile-reports.md).
-
 1. Stlačte možnosť **Pridať členov** a pridajte ich do svojho prostredia.
 
 ### <a name="delete-an-environment"></a>Odstrániť prostredie
@@ -143,7 +139,7 @@ Správcovia prostredí môžu prostredia odstraňovať. Než odstránite prostre
 
 Nadviazanie kontaktov so audience insights vám umožní vidieť prehľady v prehľadoch interakcií na základe zjednotených profilov zákazníkov. 
 
-Ďalšie informácie nájdete v téme [Konfigurácia pripojení](configure-connections.md).
+Ďalšie informácie nájdete v časti [Vytvorte prepojenie medzi prehľadmi cieľových skupín a prehľadmi interakcií](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Správa osobných údajov
 

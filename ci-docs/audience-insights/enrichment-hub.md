@@ -1,7 +1,7 @@
 ---
 title: Obohatenie zjednotených profilov zákazníkov
 description: Využite možnosti na obohatenie údajov vašich zákazníkov.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032547"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7470033"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obohacovanie profilov zákazníkov (ukážka)
 
@@ -29,6 +29,7 @@ Ak chcete vytvárať alebo upravovať obohatenia, musíte mať oprávnenie prisp
 
 Na internete **Objavovať** nájdete nasledujúce obohatenia:
 
+- [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
 - [Značky](enrichment-microsoft.md) od spoločnosti Microsoft
 - [Záujmy](enrichment-microsoft.md) od spoločnosti Microsoft
 - [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft
@@ -62,5 +63,17 @@ Obohatenia tretích strán sa konfigurujú pomocou [spojení](connections.md), k
 ## <a name="multiple-enrichments-of-the-same-type"></a>Viacnásobné obohatenie rovnakého typu
 
 Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia, ktorá umožňuje obohatiť iba podmnožinu vašich profilov. Môžete napríklad obohatiť údaje iba v konkrétnom segmente. Môžete nakonfigurovať niekoľko obohatení rovnakého typu a znova použiť to isté pripojenie. Niektoré obohatenia budú mať obmedzený počet obohatení rovnakého typu, ktoré je možné vytvoriť. Limity a súčasné použitie sú uvedené na stránke **Obohatenie**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Zobrazte priebeh procesu obohacovania
+
+Môžete nájsť detaily spracúvania obohatenia vrátane jeho stavu a možných problémov počas obnovovania či po dokončení obnovenia. Zoznámte sa s procesmi, ktoré sú súčasťou obnovenia obohatenia, a dĺžkou behu týchto procesov. Stav obohatenia je podporovaný pre Experian, Leadspace, HERE Technologies, import SFTP a Azure Maps.
+
+Zobrazenie stavu obohatenia
+
+1. Prejdite na položku **Údaje** > **Obohatenie**. 
+1. Na karte **Moje obohatenia** označte stav obohatenia. Otvorí sa bočná tabla. 
+1. Na table **Podrobnosti o priebehu** rozbaľte časť **Obohatenia**. 
+1. Pod položkou obohatenia, ktoré chcete vidieť, označte položku **Zobraziť podrobnosti**. 
+1. V table **Podrobnosti o úlohe** označením položky **Zobraziť podrobnosti** zobrazíte procesy tvoriace proces aktualizácie obohatenia, a ich stav. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

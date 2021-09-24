@@ -7,12 +7,12 @@ metadata:
   ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
+  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
   ms.translationtype: HT
   ms.contentlocale: sk-SK
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036576"
+  ms.lasthandoff: 09/17/2021
+  ms.locfileid: "7498616"
 title: Dokumentácia k službe Dynamics 365 Customer Insights
 summary: Nájdite užitočné zdroje, s ktorými môžete začať, a získajte informácie o funkciách a možnostiach Customer Insights.
 landingContent:
@@ -26,36 +26,36 @@ landingContent:
       url: /dynamics365-release-plan/
     - text: Objavte CDP
       url: https://dynamics.microsoft.com/ai/customer-insights/
-- title: Začnite so prehľadmi cieľových skupín
+- title: Začíname so službou Customer Insights
   linkLists:
   - linkListType: get-started
     links:
     - text: Registrácia na získanie skúšobnej verzie
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Čo je nové
+    - text: Čo je nové v prehľadoch cieľovej skupiny
       url: audience-insights/whats-new-audience-insights.md
-    - text: Dokumentácia k prehľadom cieľových skupín
-      url: audience-insights/index.yml
+    - text: Čo je nové v prehľadoch interakcií
+      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Buďte v kontakte
   linkLists:
   - linkListType: overview
     links:
     - text: Pripojte sa ku komunite systému Dynamics 365
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-    - text: Podeľte sa o svoje myšlienky
+    - text: Podeľte sa o svoje nápady
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Nahlásiť problém
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Kurzy prehľadov cieľových skupín
+- title: Zdieľajte údaje medzi funkciami
   linkLists:
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
-    - text: Vytvoriť nové prostredie
-      url: audience-insights/home.md
-    - text: Vytvorenie zjednoteného profilu zákazníka
-      url: /learn/modules/unified-customer-profile/
-    - text: Práca s aplikáciou
-      url: /learn/modules/working-with-customer-insights/
+    - text: Vytvárajte prepojenie medzi funkciami
+      url: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - text: Vytvárajte segmenty, ktoré použijete v prehľadoch
+      url: engagement-insights/integrate-audience-insights-segments.md
+    - text: Na interaktívnu analýzu využite vlastnosti profilu
+      url: engagement-insights/curate-dimensions.md
 - title: Export údajov o prehľadoch cieľových skupín
   linkLists:
   - linkListType: how-to-guide

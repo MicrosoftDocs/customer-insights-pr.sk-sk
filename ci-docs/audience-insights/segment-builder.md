@@ -1,7 +1,7 @@
 ---
-title: Slúži na vytvorenie a spravovanie segmentov
+title: Vytvárajte segmenty pomocou zostavovača segmentov
 description: Vytvorenie segmentov zákazníkov na ich zoskupenie na základe rôznych atribútov.
-ms.date: 07/18/2021
+ms.date: 09/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,104 +9,86 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: 7f7bd0e7e581305836287bd503ef273a2d556bff
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377807"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494521"
 ---
-# <a name="create-and-manage-segments"></a>Slúži na vytvorenie a spravovanie segmentov
+# <a name="create-segments"></a>Vytvorenie segmentov
 
-> [!IMPORTANT]
-> V septembri 2021 bude v prostredí vytvárania segmentov zavedených niekoľko zmien: 
-> - Zostavovač segmentov sa bude mierne líšiť vďaka novonavrhnutým prvkov a vylepšenému používateľskému postupu.
-> - V zostavovači segmentov sú zapnuté nové operátory dátumu a času a vylepšený nástroj na výber dátumu.
-> - Budete môcť pridať alebo odstrániť podmienky a pravidlá zo segmentov. 
-> - K dispozícii budú vnorené pravidlá, ktoré sa začínajú podmienkou OR. Na vonkajšej vrstve už nie je potrebná podmienka AND.
-> - Bočná tabla na výber atribútov bude neustále k dispozícii.
-> - Možnosť výberu ciest vyjadrujúcich vzťahy entít.
-> Pokiaľ chcete vyskúšať nový nástroj na tvorbu segmentov, odošlite e-mail s predmetom „Žiadosť o povolenie nového nástroja na tvorbu segmentov“ na adresu cihelp [at] microsoft.com. Uveďte názov svojej organizácie a ID vášho testovacieho prostredia.
-> :::image type="content" source="media/segment-builder-overview.png" alt-text="Prvky zostavovača segmentov." lightbox="media/segment-builder-overview.png":::
->
-> 1 – Organizujte svoj segment pomocou pravidiel a podskupín. Každé pravidlo alebo čiastkové pravidlo pozostáva z podmienok. Skombinujte podmienky s logickými operátormi
->
-> 2 – Vyberte položku [postup vzťahu](relationships.md) medzi entitami, ktoré sa vzťahujú na pravidlo. Postup vzťahu určuje, ktoré atribúty je možné použiť v podmienke.
->
-> 3 – Spravujte pravidlá a čiastkové pravidlá. Zmeňte pozíciu pravidla alebo ho odstráňte.
->
-> 4 – Pridajte podmienky a vytvorte správnu úroveň vnorenia pomocou podradených pravidiel.
->
-> 5 – Aplikujte nastavené operácie na prepojené pravidlá.
->
-> 6 – Pomocou tably atribútov pridajte dostupné atribúty entity alebo vytvorte podmienky na základe atribútov. Tabla zobrazuje zoznam entít a atribútov na základe vybraného postupu vzťahu, ktoré sú k dispozícii pre vybraté pravidlo.
->
-> 7 – Pridajte podmienky na základe atribútov k existujúcim pravidlám a čiastkovým pravidlám alebo ich pridajte do nového pravidla.
->
-> 8 – Pri vytváraní segmentu sa zmeny vrátia a znova vykonajú.
+Definujte komplexné filtre okolo zjednotenej entity zákazníka a jej súvisiacich entít. Každý segment po spracovaní vytvorí skupinu zákazníckych záznamov, ktoré môžete exportovať a podniknúť kroky. Segmenty sú spravované na stránke **Segmenty**. Môžete [vytvárať nové segmenty](#create-a-new-segment) s použitím [zostavovača segmentov](#segment-builder) alebo [vytvárať rýchle segmenty](#quick-segments) z iných oblastí aplikácie.
 
-Definujte komplexné filtre okolo zjednotenej entity zákazníka a jej súvisiacich entít. Každý segment po spracovaní vytvorí skupinu zákazníckych záznamov, ktoré môžete exportovať a podniknúť kroky. Segmenty sú spravované na stránke **Segmenty**. 
+## <a name="segment-builder"></a>Zostavovač segmentov
 
-Nasledujúci príklad ilustruje možnosti segmentácie. Definovali sme segment pre zákazníkov, ktorí za posledných 90 dní objednali tovar aspoň za 500 USD *a* ktorí boli zapojení do hovoru služieb pre zákazníkov, ktorý bol eskalovaný.
+Nasledujúci obrázok ilustruje rôzne aspekty zostavovača segmentov. Zobrazí segment, ktorého výsledkom je skupina zákazníkov. Zákazníci si objednali tovar v konkrétnom časovom rámci a nazbierali množstvo bodov odmeny, alebo minuli isté množstvo peňazí. 
 
-:::image type="content" source="media/segmentation-group1-2.png" alt-text="Snímka obrazovky používateľského rozhrania nástroja na tvorbu segmentov s dvoma skupinami, ktoré určujú segment zákazníka.":::
+:::image type="content" source="media/segment-builder-overview.png" alt-text="Prvky zostavovača segmentov." lightbox="media/segment-builder-overview.png":::
+
+1 – Organizujte svoj segment pomocou pravidiel a podskupín. Každé pravidlo alebo čiastkové pravidlo pozostáva z podmienok. Skombinujte podmienky s logickými operátormi
+
+2 – Vyberte položku [postup vzťahu](relationships.md) medzi entitami, ktoré sa vzťahujú na pravidlo. Postup vzťahu určuje, ktoré atribúty je možné použiť v podmienke.
+
+3 – Spravujte pravidlá a čiastkové pravidlá. Zmeňte pozíciu pravidla alebo ho odstráňte.
+
+4 – Pridajte podmienky a vytvorte správnu úroveň vnorenia pomocou podradených pravidiel.
+
+5 – Aplikujte nastavené operácie na prepojené pravidlá.
+
+6 – Pomocou tably atribútov pridajte dostupné atribúty entity alebo vytvorte podmienky na základe atribútov. Tabla zobrazuje zoznam entít a atribútov na základe vybraného postupu vzťahu, ktoré sú k dispozícii pre vybraté pravidlo.
+
+7 – Pridajte podmienky na základe atribútov k existujúcim pravidlám a čiastkovým pravidlám alebo ich pridajte do nového pravidla.
+
+8 – Pri vytváraní segmentu sa zmeny vrátia a znova vykonajú.
+
+Vyššie uvedený príklad ilustruje schopnosť segmentácie. Definovali sme segment pre zákazníkov, ktorí online kúpili tovar aspoň v hodnote 500 dolárov *a* majú záujem o vývoj softvéru.
 
 ## <a name="create-a-new-segment"></a>Vytvorenie nového segmentu
 
-Existuje niekoľko spôsobov, ako vytvoriť nový segment. Táto časť popisuje, ako vytvoriť *prázdny segment* od začiatku. Môžete tiež vytvoriť *rýchly segment* na základe existujúcich entít alebo využite modely strojového učenia na získanie *navrhovaných segmentov*. Ďalšie informácie: [Prehľad segmentov](segments.md).
+Existuje niekoľko spôsobov, ako vytvoriť nový segment. Táto časť popisuje, ako vytvoriť svoj vlastný segment úplne od začiatku. Môžete tiež vytvoriť *rýchly segment* na základe existujúcich entít alebo využite modely strojového učenia na získanie *navrhovaných segmentov*. Ďalšie informácie: [Prehľad segmentov](segments.md).
 
 Pri vytváraní segmentu môžete uložiť koncept. Bude uložený ako neaktívny segment a nemožno ho aktivovať, pretože je dokončený s platnou konfiguráciou.
 
 1. Prejdite na stránku **Segmenty**.
 
-1. Vyberte **Nový** > **Prázdny segment**.
+1. Vyberte položku **Nový** > **Vytvorte si vlastný**.
 
-1. Na table **Nový segment** vyberte typ segmentu:
+1. Na stránke zostavovača segmentov definujete prvé pravidlo. Pravidlo je tvorené jednou alebo viacerými podmienkami a definuje množinu zákazníkov.
 
-   - **Dynamické segmenty** [sa obnovujú](segments.md#refresh-segments) podľa opakujúceho sa harmonogramu.
-   - **Statické segmenty** sa spustia raz po vytvorení.
+1. V časti **Pravidlo 1** vyberte atribút entity, podľa ktorej chcete filtrovať zákazníkov. Existujú dva spôsoby výberu atribútov: 
+   - Pozrite si zoznam dostupných entít a atribútov na table **Pridať k pravidlu** a označte **+** ikonu vedľa atribútu, ktorý chcete pridať. Určte, či chcete atribút pridať k existujúcemu pravidlu, alebo ho použijete na vytvorenie nového pravidla.
+   - Návrhy na zhodu zobrazíte zadaním názvu atribútu do sekcie pravidiel.
 
-1. Uveďte **Názov výstupnej entity** pre daný segment. Voliteľne uveďte zobrazovaný názov a popis, ktorý pomôže identifikovať segment.
+1. Vyberte operátory a určte príslušné hodnoty podmienky. Atribút môže mať ako hodnotu jeden zo štyroch dátových typov: číselný, reťazcový, dátumový alebo boolovský. Podľa typu údajov atribútu sú na určenie podmienky k dispozícii rôzne operátory. 
 
-1. Vyberte **Ďalšie** a prejdite na stránku **Tvorca segmentov**, kde definujete skupinu. Skupina je množina zákazníkov.
+1. Vybraním možnosti **Pridať podmienku** pridáte do pravidla ďalšie podmienky. Ak chcete vytvoriť pravidlo podľa aktuálneho pravidla, vyberte položku **Pridajte čiastkové pravidlo**.
 
-1. Vyberte entity, ktorá obsahuje atribút, podľa ktorého chcete segmentovať.
+1. Ak pravidlo používa iné entity než *Zákazník*, je potrebné nastaviť cestu vzťahu. Cesta vzťahu je potrebná na to, aby informovala systém, cez ktoré vzťahy majú pristupovať k zjednotenej entite zákazníka. Označte možnosť **Nastaviť cestu vzťahu** na mapovanie vybranej entity pre zjednotenú entitu zákazníka. Ak pre vzťah existuje iba jedna možná cesta, systém ju vyberie automaticky. Rôzne postupy vzťahov môžu priniesť rôzne výsledky. Každé pravidlo môže mať pre vzťah vlastnú cestu.
 
-1. Vyberte atribút pre segment podľa. Tento atribút môže mať jeden zo štyroch typov hodnôt: číselný, reťazec, dátum alebo logický.
+   :::image type="content" source="media/relationship-path.png" alt-text="Cesta potenciálneho vzťahu pri vytváraní pravidla na základe entity mapovanej na zjednotenú entitu zákazníka.":::
 
-1. Vyberte operátora a hodnotu pre vybraného atribútu.
+   Napríklad entita *eCommerce_eCommercePurchases* na snímkach obrazovky má pre mapovanie entity *Zákazník* štyri možnosti: 
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Zákazník
+   - eCommerce_eCommercePurchases > Zákazník
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Zákazník
+   - eCommerce_eCommercePurchases> eCommerce_eCommerceContacts> POS_posPurchases> loyaltyScheme_loyCustomers> Zákazník Pri výbere poslednej možnosti je možné do podmienok pravidla vložiť atribúty zo všetkých uvedených entít. Pravdepodobne získame menej výsledkov, pretože príslušné záznamy o zákazníkoch musia byť súčasťou všetkých entít. V tomto prípade si zakúpili tovar prostredníctvom elektronického obchodu (*eCommerce_eCommercePurchases*), v mieste predaja (*POS_posPurchases*) a zúčastňujú sa nášho vernostného programu (*loyaltyScheme_loyCustomers*). Pri výbere druhej možnosti môžeme vybrať iba atribúty z entity *eCommerce_eCommerce_eCommercePurchases* a *Zákazník*. Vo výsledku dostaneme pravdepodobne viac výsledných zákazníckych profilov.
 
-   > [!div class="mx-imgBorder"]
-   > ![Filter vlastnej skupiny.](media/customer-group-numbers.png "Filter skupiny zákazníkov")
+1. Ak máte v pravidle viac podmienok, môžete si vybrať, aký logický operátor ich má spájať.
 
-   |Číslo |Definícia  |
-   |---------|---------|
-   |1     |Entity          |
-   |2     |Atribút          |
-   |3    |Operátor         |
-   |4    |Hodnota         |
+   - **A** operátor: Na zaradenie záznamu do segmentu musia byť splnené všetky podmienky. Táto voľba je najužitočnejšia, keď definujete podmienky pre rôzne entity.
 
-   1. Na pridanie ďalších podmienok do skupiny môžete použiť dva logické operátory:
+   - **ALEBO** operátor: Na zaradenie záznamu do segmentu musí byť splnená aspoň jedna podmienka. Táto voľba je najužitočnejšia, keď definujete viac podmienok pre jednu entitu.
 
-      - Operátor **A**: Obe podmienky musia byť splnené ako súčasť procesu segmentácie. Táto voľba je najužitočnejšia, keď definujete podmienky pre rôzne entity.
+   :::image type="content" source="media/segmentation-either-condition.png" alt-text="Pravidlo s dvomi podmienkami A.":::
 
-      - Operátor **ALEBO**: V rámci procesu segmentácie musí byť splnená jedna z podmienok. Táto voľba je najužitočnejšia, keď definujete viac podmienok pre jednu entitu.
+   Ak použijete operátor ALEBO, je potrebné, aby byť všetky podmienky boli založené na entitách zahrnutých v ceste vzťahu.
 
-      > [!div class="mx-imgBorder"]
-      > ![Operátor ALEBO, ktorý musí splniť ktorúkoľvek z podmienok.](media/segmentation-either-condition.png "Operátor ALEBO, ktorý musí splniť ktorúkoľvek z podmienok")
+   1. Je možné vytvoriť viac pravidiel a vytvoriť tak rôzne súpravy záznamov o zákazníkoch. Skupiny môžete skombinovať tak, aby zahŕňali zákazníkov požadovaných pre váš obchodný prípad. Ak chcete vytvoriť nové pravidlo, vyberte možnosť **Pridať pravidlo**. Konkrétne, ak nie je možné zahrnúť entitu do pravidla pre zadanú cestu vzťahu, je potrebné vytvoriť nové pravidlo na výber atribútov z neho.
 
-      V súčasnosti je možné vnoriť operátor **ALEBO** pod operátor **A**, ale nie naopak.
-
-   1. Každá skupina zodpovedá skupine zákazníkov. Skupiny môžete skombinovať tak, aby zahŕňali zákazníkov požadovaných pre váš obchodný prípad.    
-   Vyberte **Pridať skupinu**.
-
-      > [!div class="mx-imgBorder"]
-      > ![Skupina zákazníkov – pridanie skupiny.](media/customer-group-add-group.png "Skupina zákazníkov – pridanie skupiny")
+      :::image type="content" source="media/segment-rule-grouping.png" alt-text="Pridajte nové pravidlo do segmentu a vyberte nastavený operátor.":::
 
    1. Vyberte jedného z nastavených operátorov: **Zjednotiť**, **Prienik** alebo **Okrem**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Skupina zákazníkov – pridanie zjednotenia.](media/customer-group-union.png "Skupina zákazníkov – pridanie zjednotenia")
 
    - **Zjednotenie** zjednocuje obe skupiny.
 
@@ -114,25 +96,29 @@ Pri vytváraní segmentu môžete uložiť koncept. Bude uložený ako neaktívn
 
    - Možnosť **Okrem** kombinuje dve skupiny. Zachovajú sa iba údaje v skupine A, ktoré *nie sú spoločné* s údajmi v skupine B.
 
-1. Ak je entita prepojená so zjednotenou entitou zákazníka prostredníctvom [vzťahov](relationships.md), musíte definovať cestu vzťahov, aby ste vytvorili platný segment. Pridajte entity z cesty vzťahov, kým si nevyberiete entitu **Zákazník: CustomerInsights** z rozbaľovacej ponuky. Potom stlačte možnosť **Všetky záznamy** pre každý krok.
+1. Predvolene segmenty vytvoria výstupnú entitu, ktorá obsahuje všetky atribúty profilov zákazníkov zodpovedajúcich definovaným filtrom. Ak je segment založený na iných entitách ako entita *Zákazník*, môžete do výstupnej entity pridať ďalšie atribúty z týchto entít. Stlačte možnosť **Atribúty projektu** na výber atribútov, ktoré sa pripoja k výstupnej entite.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Cesta vzťahov pri vytváraní segmentov.](media/segments-multiple-relationships.png "Cesta vzťahov pri vytváraní segmentov")
-
-1. V predvolenom nastavení segmenty generujú výstupnú entitu, ktorá obsahuje všetky atribúty profilov zákazníkov, ktoré zodpovedajú definovaným filtrom. Ak je segment založený na iných entitách ako entita *Zákazník*, môžete do výstupnej entity pridať ďalšie atribúty z týchto entít. Stlačte možnosť **Atribúty projektu** na výber atribútov, ktoré sa pripoja k výstupnej entite.  
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Príklad projektovaných atribútov vybratých na bočnej table, ktoré sa majú pridať do výstupnej entity.":::
   
-   Príklad: Segment je založený na entite, ktorá obsahuje údaje o činnosti zákazníkov súvisiace s entitou *Zákazník*. Segment vyhľadáva všetkých zákazníkov, ktorí zavolali na technickú podporu za posledných 60 dní. Môžete sa rozhodnúť pridať trvanie hovoru a počet hovorov ku všetkým zodpovedajúcim záznamom zákazníka vo výstupnej entite. Tieto informácie môžu byť užitočné pri zasielaní e-mailov s užitočnými odkazmi na články online pomoci a časté otázky zákazníkom, ktorí často volali.
+   Príklad: Segment je založený na entite obsahujúcej údaje o nákupoch, ktoré sa týkajú entity *Zákazník*. Segment vyhľadá všetkých zákazníkov zo Španielska, ktorí v aktuálnom roku nakúpili tovar. Môžete sa rozhodnúť, či pripojíte atribúty ako cena tovaru alebo dátum nákupu ku všetkým príslušným záznamom zákazníkov vo výslednej entite. Tieto údaje môžu byť užitočné, ak chcete analyzovať sezónne korelácie s celkovými výdavkami.
 
    > [!NOTE]
    > - Projektované atribúty fungujú iba pre entity, ktoré majú vzťah typu jedna k mnohým so entitou zákazníka. Napríklad jeden zákazník môže mať viac predplatných.
-   > - Atribúty môžete projektovať iba z entity, ktorá sa používa v každej skupine segmentových dotazov, ktoré zostavujete.
+   > - Atribúty môžete premietať iba z entity, ktorá sa používa v každom pravidle vytváraného segmentového dotazu.
    > - Pri použití množinových operátorov sa zohľadňujú projektované atribúty.
 
-1. Segment uložte výberom položky **Uložiť**. Váš segment bude uložený a spracovaný, ak budú splnené všetky požiadavky. V opačnom prípade sa uloží ako koncept.
+1. Pred uložením a spustením segmentu vyberte položku **Upraviť podrobnosti** vedľa názvu segmentu. Zadajte názov pre segment a aktualizujte navrhovaný **Názov výstupnej entity** pre daný segment. K segmentu môžete pridať aj popis.
+
+1. Označením položky **Spustiť** uložíte a spracujete svoj segment, pokiaľ sú validované všetky požiadavky. V opačnom prípade sa uloží ako neaktívny koncept segmentu.
 
 1. Ak sa chcete vrátiť späť na stránku **Segmenty**, vyberte **Späť na segmenty**.
 
-
+> [!TIP]
+> - Pri nastavovaní operátorov pre podmienky zostavovač segmentov nenavrhne platné hodnoty z entít. Môžete prejsť do časti **Údaje** > **Entity** a stiahnuť si údaje entity, aby ste zistili, ktoré hodnoty sú dostupné.
+> - Podmienky založené na dátumoch vám umožnia prepínať sa medzi pevnými dátumami a pohyblivým rozsahom dátumov.
+> - Ak máte pre svoj segment viacero pravidiel, pri pravidle, ktoré upravujete, nájdete modrý pruh.
+> - Pravidlá a podmienky môžete presunúť na iné miesta v definícii segmentu. Vyberte [...] vedľa pravidla alebo podmienky a určte, ako a kam ho chcete presunúť.
+> - Ovládacie prvky **Vrátiť späť** a **Opakovať** na paneli príkazov vám umožňujú vrátiť späť zmeny.
 
 ## <a name="quick-segments"></a>Rýchle segmenty
 
@@ -146,7 +132,7 @@ Rýchle segmenty vám umožňujú rýchlo vytvárať jednoduché segmenty pomoco
 
 2. V dialógovom okne **Nový rýchly segment** vyberte atribút z rozbaľovacej ponuky **Pole**.
 
-3. Systém poskytne niektoré ďalšie informácie, ktoré vám pomôžu vytvoriť lepšie segmenty vašich zákazníkov.
+3. Systém poskytne viac pohľadov, ktoré vám pomôžu vytvoriť lepšie segmenty vašich zákazníkov.
    - Pre kategorické polia zobrazíme 10 najvyšších počtov zákazníkov. Vyberte **Hodnota** a potom **Skontrolovať**.
 
    - Pokiaľ ide o číselný atribút, systém ukáže, ktorá hodnota atribútu spadá pod percentil každého zákazníka. Vyberte **Operátor** a **Hodnota**, potom vyberte **Skontrolovať**.

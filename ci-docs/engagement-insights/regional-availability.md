@@ -1,31 +1,34 @@
 ---
-title: Oblasti prehľadov dostupnosti zapojenia
+title: Regióny dostupnosti služby Dynamics 365 Customer Insights
 description: Zoznámte sa s regiónmi a geografickými oblasťami, do ktorých sa služba nasadí.
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 07/15/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: engagement-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: ca7a921e1ea2f612949c1243a3dc5ee0f4f3c3974305af344c77b870db3e00a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036212"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483316"
 ---
-# <a name="regional-availability-for-engagement-insights"></a>Regionálna dostupnsoť pre prehľady zapojenia
+# <a name="regional-availability-for-dynamics-365-customer-insights"></a>Regionálna dostupnosť pre službu Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Prehľady zapojenia, schopnosť služby Dynamics 365 Customer Insights postupne zavádzať nové regióny, v ktorých si zákazníci môžu ukladať svoje údaje. Správcovia si môžu vybrať oblasť pri [vytváraní nového prostredia](manage-environments-workspaces.md#create-an-environment). Keď organizácia prvýkrát nastaví prehľady zapojenia, vyberie si oblasť počas [prvého spustenia vedeného sprievodcom ](quickstart.md). Neskôr každé nové prostredie umožní vybranie oblasti, kam sa údaje uložia.
+Prehľady zapojenia, funkcia služby Dynamics 365 Customer Insights postupne zavádza nové regióny, v ktorých si zákazníci môžu ukladať svoje údaje. Správcovia si môžu vybrať oblasť pri [vytváraní nového prostredia](manage-environments-workspaces.md#create-an-environment). 
 
-Počas verejnej verzie Preview existujú dve geografické oblasti: USA a Európa. Používatelia si môžu zvoliť medzi regiónmi Západ USA a regiónom Severná Európa.
+Keď prvýkrát nastavíte prehľady interakcií, môžete zvoliť oblasť počas [prvého spustenia vedeného sprievodcom ](quickstart.md). Neskôr každé nové prostredie umožní vybranie oblasti, kam sa údaje uložia.
+
+Aktuálne existujú dve geografické oblasti: USA a Európa. Používatelia si môžu zvoliť medzi regiónmi Západ USA a regiónom Severná Európa.
 
 Organizácia má možnosť udržiavať prostredia v rôznych oblastiach. Príklad: prostredie A ukladá svoje údaje na západe USA a prostredie B v severnej Európe.
 
-> [!TIP]
+> [!NOTE]
 > Po tom, ako pri vytváraní prostredia zvolíte oblasť, nebudete môcť toto nastavenie zmeniť. Aby ste zmenili oblasť, je potrebné, aby správca prostredia [odstránil prostredie](manage-environments-workspaces.md#delete-an-environment) a vytvoril nové s aktualizovaným nastavením oblasti.
 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

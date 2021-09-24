@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Možnosti prehľadov interakcií (verzia Preview) v Dynamics 365 Customer Insights
+title: Funkcia Prehľady interakcií v produkte Dynamics 365 Customer Insights (verzia Preview)
 summary: Zhromažďujte údaje pre svoje webové stránky. Interaktívne sa oboznámte s interakciami so zákazníkmi a používaním naprieč vašimi lokalitami. Využite hlbokú integráciu medzi prehľadom interakcií a prehľadom publika, aby ste obohatili svoje analýzy správania v reálnom čase o prehľady profilov zákazníkov. Obohaťte profily zákazníkov webovými aktivitami, aby ste popri relevantných údajoch o zákazníkoch získali aj údaje o správaní v reálnom čase. Transformujte svoje podnikanie a získajte okamžitú hodnotu z vašich zákazníckych údajov.
 metadata:
   title: Dokumentácia k prehľadom interakcií (verzia Preview)
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: sk-SK
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036257"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494203"
 landingContent:
 - title: Informácie
   linkLists:
   - linkListType: overview
     links:
-    - text: Prehľad funkcií
+    - text: Výhody funkcií
       url: overview.md
-    - text: Podmienky a koncepcie
+    - text: Slovník výrazov
       url: glossary.md
-    - text: Objaviť prehľady interakcií
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Nové a aktualizované funkcie
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Zaradenie
   linkLists:
   - linkListType: how-to-guide
@@ -38,33 +38,35 @@ landingContent:
       url: create-workspace.md
     - text: Vybavenie vašej stránky nástrojmi
       url: instrument-website.md
-- title: Zostavy
+- title: Zobrazenie a filtrovanie zostáv
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Zobraziť zostavy
       url: view-reports.md
-    - text: Vytvorenie vlastných zostáv
-      url: custom-reports.md
     - text: Zobrazenie zostavy zjednotených profilov
       url: profile-reports.md
-    - text: Vytvorenie lievikových zostáv
-      url: funnel-reports.md
-- title: Udalosti
+    - text: Ak chcete filtrovať zostavy, použite segmenty cieľovej skupiny
+      url: integrate-audience-insights-segments.md
+- title: Analyzovať
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Vytvorenie lievikových zostáv
+      url: funnel-reports.md
+    - text: Analýza údajov o správaní
+      url: curate-dimensions.md
+    - text: Vytvorenie vlastných zostáv
+      url: custom-reports.md
     - text: Vytvoriť spresnené udalosti
       url: refined-events.md
     - text: Exportovať udalosti
       url: export-events.md
-    - text: Odstraňovanie a export osobných údajov
-      url: delete-export-personal-data.md
-- title: Zdroje informácií pre vývojárov
+- title: Zdroje pre vývojárov
   linkLists:
   - linkListType: reference
     links:
-    - text: Zdroje informácií pre vývojárov
+    - text: Zdroje pre vývojárov
       url: developer-resources.md
     - text: Ukážka WebSDK
       url: websdk-sample.md
@@ -81,6 +83,10 @@ landingContent:
     - text: Spravovanie prostrední a pracovných priestorov
       url: manage-environments-workspaces.md
     - text: Pripojenie k prehľadom cieľových skupín
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Spravovanie súborov cookie súhlasov používateľa
       url: user-consent-storage.md
+    - text: Odstraňovanie a export osobných údajov
+      url: delete-export-personal-data.md
+    - text: Obmedzenia služby
+      url: ../service-limits.md
