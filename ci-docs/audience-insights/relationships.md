@@ -1,20 +1,20 @@
 ---
 title: Vzťahy medzi entitami a cestami entít
 description: Vytvárajte a spravujte vzťahy medzi entitami z viacerých zdrojov údajov.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035250"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557371"
 ---
 # <a name="relationships-between-entities"></a>Vzťahy medzi entitami
 
@@ -93,11 +93,11 @@ Dostupné možnosti:
 - **Zmena na vodorovné/zvislé rozloženie**: Zmena zarovnania entít a vzťahov.
 - **Úprava**: Aktualizujte vlastnosti vlastných vzťahov na paneli úprav a uložte zmeny.
 
-### <a name="relationship-path"></a>Cesta vyjadrujúca vzťah
+## <a name="relationship-paths"></a>Cesty vyjadrujúce vzťah
 
-Postup vzťahu popisuje entity, ktoré sú prepojené so vzťahmi medzi zdrojovou entitou a cieľovou entitou. Používa sa pri vytváraní segmentu alebo miery, ktorá obsahuje iné entity ako entitu zjednoteného profilu, a existuje niekoľko možností, ako dosiahnuť entitu zjednoteného profilu.
+Cesta vyjadrujúca vzťah popisuje entity, ktoré sú prepojené so vzťahmi medzi zdrojovou entitou a cieľovou entitou. Používa sa pri vytváraní segmentu alebo miery, ktorá obsahuje iné entity ako entitu zjednoteného profilu, a existuje niekoľko možností, ako dosiahnuť entitu zjednoteného profilu. 
 
-Postup vzťahu informuje systém, cez ktorý vzťahy majú pristupovať k entite zjednoteného profilu. Rôzne postupy vzťahov môžu priniesť rôzne výsledky.
+Cesta vyjadrujúca vzťah informuje systém, cez ktorý vzťah má pristupovať k entite zjednoteného profilu. Rôzne postupy vzťahov môžu priniesť rôzne výsledky.
 
 Napríklad entita *eCommerce_eCommercePurchases* má s entitou jednotného profilu *Zákazník* nasledujúce vzťahy:
 
@@ -105,7 +105,43 @@ Napríklad entita *eCommerce_eCommercePurchases* má s entitou jednotného profi
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Zákazník
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Zákazník 
 
-Cesta k vzťahu určuje, ktoré entity môžete použiť pri vytváraní pravidiel pre miery alebo segmenty. Výber možnosti s najdlhším postupom vzťahu pravdepodobne prinesie menej výsledkov, pretože zodpovedajúce záznamy musia byť súčasťou všetkých entít. V tomto prípade musí mať zákazník zakúpený tovar prostredníctvom elektronického obchodu (eCommerce_eCommercePurchases), v mieste predaja (POS_posPurchases) a zúčastniť sa nášho vernostného programu (loyaltyScheme_loyCustomers). Pri výbere prvej možnosti by ste pravdepodobne získali viac výsledkov, pretože zákazníci musia existovať iba v jednej ďalšej entite.
+Cesta vyjadrujúca vzťah určuje, ktoré entity môžete použiť pri vytváraní pravidiel pre miery alebo segmenty. Výber možnosti s najdlhším postupom vzťahu pravdepodobne prinesie menej výsledkov, pretože zodpovedajúce záznamy musia byť súčasťou všetkých entít. V tomto prípade musí mať zákazník zakúpený tovar prostredníctvom elektronického obchodu (eCommerce_eCommercePurchases), v mieste predaja (POS_posPurchases) a zúčastniť sa nášho vernostného programu (loyaltyScheme_loyCustomers). Pri výbere prvej možnosti by ste pravdepodobne získali viac výsledkov, pretože zákazníci musia existovať iba v jednej ďalšej entite.
+
+### <a name="direct-relationship"></a>Priamy vzťah
+
+Vzťah je klasifikovaný ako a **priamy vzťah** keď sa zdrojová entita týka cieľovej entity iba s jedným vzťahom.
+
+Ak sa napríklad entita aktivity s názvom *eCommerce_eCommercePurchases* pripája k cieľovej entite *eCommerce_eCommerceContacts* iba prostredníctvom *ContactId*, ide o priamy vzťah.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Zdrojová entita sa pripája priamo k cieľovej entite.":::
+
+#### <a name="multi-path-relationship"></a>Vzťah s viacerými postupmi
+
+**Vzťah s viacerými postupmi** je špeciálny typ priameho vzťahu, ktorý spája zdrojovú entitu s viac ako jednou cieľovou entitou.
+
+Ak sa napríklad entita aktivity s názvom *eCommerce_eCommercePurchases* týka dvoch cieľových entít, *eCommerce_eCommerceContacts* a *loyaltyScheme_loyCustomers*, ide o vzťah s viacerými postupmi.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Zdrojová entita sa viackrát prepojí priamo s viac ako jednou cieľovou entitou prostredníctvom viacskokového vzťahu.":::
+
+### <a name="indirect-relationship"></a>Nepriamy vzťah
+
+Vzťah je klasifikovaný ako **nepriamy vzťah**, keď sa zdrojová entita týka jednej alebo viacerých ďalších entít predtým, ako sa týka cieľovej entity.
+
+#### <a name="multi-hop-relationship"></a>Viacskokový vzťah
+
+*Viacskokový vzťah* je *nepriamy vzťah*, ktorý umožňuje pripojiť zdrojovú entitu k cieľovej entite prostredníctvom jednej alebo viacerých ďalších sprostredkovateľských entít.
+
+Ak sa napríklad entita aktivity s názvom *eCommerce_eCommercePurchasesWest* pripája k sprostretkovateľskej entite s názvom *eCommerce_eCommercePurchasesEast* a potom sa pripojí k cieľovej entite s názvom *eCommerce_eCommerceContacts*, ide o viacskokový vzťah.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Zdrojová entita sa pripája priamo k cieľovej entite so sprostretkovateľskou entitou.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Viacskokový vzťah, vzťah s viacerými postupmi
+
+Viacskokový vzťah a vzťah s viacerými postupmi je možné použiť spoločne na vytvorenie **viacskokového vzťahu, vzťahu s viacerými postupmi**. Tento špeciálny typ kombinuje funkcie **viacskokového vzťahu** a **vzťahu s viacerými postupmi**. Umožňuje pripojiť sa k viac ako jednej cieľovej entite pri použití sprostredkovateľských entít.
+
+Ak sa napríklad entita aktivity s názvom *eCommerce_eCommercePurchasesWest* pripája k sprostretkovateľskej entite s názvom *eCommerce_eCommercePurchasesEast* a potom sa pripojí k dvom cieľovým entitám *eCommerce_eCommerceContacts* a *loyaltyScheme_loyCustomers*, ide o viacskokový vzťah, vzťah s viacerými postupmi.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Zdrojová entita sa pripája priamo k jednej cieľovej entite a pripája sa k inej cieľovej entite prostredníctvom sprostredkovateľskej entity.":::
 
 ## <a name="manage-existing-relationships"></a>Spravovanie existujúcich vzťahov 
 

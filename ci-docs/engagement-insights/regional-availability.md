@@ -4,16 +4,16 @@ description: Zoznámte sa s regiónmi a geografickými oblasťami, do ktorých s
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: d4ae7a085ba68c482372868e75376b6f769325d7
+ms.sourcegitcommit: ce2c011f06999dba2e886b8804d3439fbf67074d
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483316"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "7564613"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Regionálna dostupnosť pre službu Dynamics 365 Customer Insights
 
@@ -21,9 +21,9 @@ ms.locfileid: "7483316"
 
 Prehľady zapojenia, funkcia služby Dynamics 365 Customer Insights postupne zavádza nové regióny, v ktorých si zákazníci môžu ukladať svoje údaje. Správcovia si môžu vybrať oblasť pri [vytváraní nového prostredia](manage-environments-workspaces.md#create-an-environment). 
 
-Keď prvýkrát nastavíte prehľady interakcií, môžete zvoliť oblasť počas [prvého spustenia vedeného sprievodcom ](quickstart.md). Neskôr každé nové prostredie umožní vybranie oblasti, kam sa údaje uložia.
+Keď prvýkrát nastavíte prehľady interakcií, môžete zvoliť oblasť počas [prvého spustenia vedeného sprievodcom ](quickstart.md). Neskôr vám každé nové prostredie umožní vybrať oblasť, v ktorej budú údaje uložené.
 
-Aktuálne existujú dve geografické oblasti: USA a Európa. Používatelia si môžu zvoliť medzi regiónmi Západ USA a regiónom Severná Európa.
+V súčasnej dobe podporujeme geografie USA a Európy. Používatelia si môžu vybrať z týchto oblastí: Západ USA, Východ USA, Európa – sever a Európa – západ.
 
 Organizácia má možnosť udržiavať prostredia v rôznych oblastiach. Príklad: prostredie A ukladá svoje údaje na západe USA a prostredie B v severnej Európe.
 

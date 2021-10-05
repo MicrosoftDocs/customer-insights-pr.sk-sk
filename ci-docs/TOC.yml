@@ -242,7 +242,7 @@
   items:
     - name: Centrum pomoci
       href: engagement-insights/index.yml
-    - name: Prehľad funkcií
+    - name: Udaje o prehľadoch interakcií
       href: engagement-insights/overview.md
     - name: Začať
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Regionálna dostupnosť
       href: engagement-insights/regional-availability.md
-- name: Integrujte prehľady cieľovej skupiny a interakcií
+- name: Zdieľajte údaje medzi funkciami
   items:
     - name: Prepojte prehľady cieľovej skupiny a prehľady interakcií
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Práva a požiadavky DSR
   href: dsr-rights-requests.md
-- name: Získanie podpory
-  href: 'https://dynamics.microsoft.com/support/'
