@@ -1,7 +1,7 @@
 ---
 title: Obohatenie zjednotených profilov zákazníkov
 description: Využite možnosti na obohatenie údajov vašich zákazníkov.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470033"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617574"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obohacovanie profilov zákazníkov (ukážka)
 
@@ -27,16 +27,26 @@ V prehľadoch cieľových skupín prejdite na **Údaje** > **Obohatenie**, aby s
 
 Ak chcete vytvárať alebo upravovať obohatenia, musíte mať oprávnenie prispievateľa alebo správcu. Ďalšie informácie nájdete v časti [Povolenia](permissions.md).
 
-Na internete **Objavovať** nájdete nasledujúce obohatenia:
+Na karte **Objavovať** nájdete všetky podporované možnosti obohatenia.
 
-- [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
+# <a name="individual-customers-b2c"></a>[Individuálni zákazníci (B2C)](#tab/b2c)
+
 - [Značky](enrichment-microsoft.md) od spoločnosti Microsoft
 - [Záujmy](enrichment-microsoft.md) od spoločnosti Microsoft
-- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft
-- [Údaje o spoločnosti](enrichment-leadspace.md) poskytované spoločnosťou Leadspace
+- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft 
 - [Demografické údaje](enrichment-experian.md), ktoré poskytuje Experian
-- [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies
-- [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol)
+- [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
+- [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
+
+# <a name="business-accounts-b2b"></a>[Firemné obchodné vzťahy (B2B)](#tab/b2b)
+
+- [Údaje o spoločnosti](enrichment-leadspace.md) poskytované spoločnosťou Leadspace
+- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft 
+- [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies 
+- [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
+- [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
+
+---
 
 Na karte **Moje obohatenia** môžete vidieť obohatenia, ktoré ste nakonfigurovali, a upraviť ich vlastnosti.
 
@@ -58,7 +68,7 @@ Spusťte alebo vypnite viacero obohatení súčasne tak, že ich označíte v zo
 
 ## <a name="enrichments-and-connections"></a>Obohatenia a pripojenia
 
-Obohatenia tretích strán sa konfigurujú pomocou [spojení](connections.md), ktorý správca zriadi pomocou prihlasovacích údajov a poskytne súhlas na prenos údajov. Pripojenie môžu správcovia a prispievatelia použiť na konfiguráciu obohatení.  
+Obohatenia tretích strán sa konfigurujú pomocou [spojení](connections.md), ktorý správca zriadi pomocou prihlasovacích údajov a poskytne súhlas na prenos údajov. Pripojenia môžu používať správcovia a prispievatelia na konfiguráciu obohatení.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Viacnásobné obohatenie rovnakého typu
 

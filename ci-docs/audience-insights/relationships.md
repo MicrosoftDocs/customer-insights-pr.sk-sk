@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557371"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623188"
 ---
 # <a name="relationships-between-entities"></a>Vzťahy medzi entitami
 
@@ -68,6 +68,20 @@ Vzťah pozostáva zo *zdrojovej entity*, ktorá obsahuje cudzí kľúč a z *cie
 
 4. Výberom položky **Uložiť** vytvorte vlastný vzťah.
 
+## <a name="set-up-account-hierarchies"></a>Nastavenie hierarchií obchodných vzťahov
+
+Prostredia, ktoré sú nakonfigurované na používanie firemných obchodných vzťahov ako primárnej cieľovej skupiny môžu konfigurovať hierarchie obchodných vzťahov pre súvisiace obchodné podnikové vzťahy. Napríklad spoločnosť, ktorá má oddelené obchodné jednotky. 
+
+Organizácie vytvárajú hierarchie obchodných vzťahov, aby lepšie spravovali obchodné vzťahy a ich vzájomné vzťahy. Funkcia prehľadov cieľových skupín podporuje hierarchie obchodných vzťahov nadradený/podradený, ktoré už v prijatých údajoch o zákazníkoch existujú. Napríklad obchodné vzťahy z Dynamics 365 Sales. Tieto hierarchie je možné nakonfigurovať na stránke **Vzťahy** v prehľadoch publika na karte hierarchia obchodného vzťahu.
+
+1. Prejdite na **Údaje** > **Vzťahy**.
+1. Vyberte kartu **Hierarchia obchodných vzťahov**.
+1. Vyberte **Nová hierarchia obchodných vzťahov**. 
+1. Na table **Hierarchia obchodných vzťahov** zadajte názov hierarchie. Systém vytvorí názov pre výstupnú entitu. Môžete zmeniť názov entity názvu výstupu.
+1. Vyberte entitu, ktorá obsahuje hierarchiu vášho obchodného vzťahu. Obvykle je to v tej istej entite, ktorá obsahuje obchodné vzťahy.
+1. Vyberte položku **ID obchodného vzťahu** a **ID nadradeného obchodného vzťahu** z vybranej entity 
+1. Vyberte **Uložiť**, použite nastavenia a dokončite hierarchiu obchodného vzťahu.
+
 ## <a name="view-relationships"></a>Zobrazenie vzťahov
 
 Na stránke Vzťahy sú uvedené všetky vzťahy, ktoré boli vytvorené. Každý riadok predstavuje vzťah, ktorý obsahuje aj podrobnosti o zdrojovej entite, cieľovej entite a kardinalite. 
@@ -105,7 +119,7 @@ Napríklad entita *eCommerce_eCommercePurchases* má s entitou jednotného profi
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Zákazník
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Zákazník 
 
-Cesta vyjadrujúca vzťah určuje, ktoré entity môžete použiť pri vytváraní pravidiel pre miery alebo segmenty. Výber možnosti s najdlhším postupom vzťahu pravdepodobne prinesie menej výsledkov, pretože zodpovedajúce záznamy musia byť súčasťou všetkých entít. V tomto prípade musí mať zákazník zakúpený tovar prostredníctvom elektronického obchodu (eCommerce_eCommercePurchases), v mieste predaja (POS_posPurchases) a zúčastniť sa nášho vernostného programu (loyaltyScheme_loyCustomers). Pri výbere prvej možnosti by ste pravdepodobne získali viac výsledkov, pretože zákazníci musia existovať iba v jednej ďalšej entite.
+Cesta vyjadrujúca vzťah určuje, ktoré entity môžete použiť pri vytváraní pravidiel pre miery alebo segmenty. Výber možnosti s najdlhším postupom vzťahu pravdepodobne prinesie menej výsledkov, pretože zodpovedajúce záznamy musia byť súčasťou všetkých entít. V tomto prípade musí mať zákazník zakúpený tovar prostredníctvom elektronického obchodu (eCommerce_eCommercePurchases) v mieste predaja (POS_posPurchases) a zúčastniť sa nášho vernostného programu (loyaltyScheme_loyCustomers). Pri výbere prvej možnosti by ste pravdepodobne získali viac výsledkov, pretože zákazníci musia existovať iba v jednej ďalšej entite.
 
 ### <a name="direct-relationship"></a>Priamy vzťah
 

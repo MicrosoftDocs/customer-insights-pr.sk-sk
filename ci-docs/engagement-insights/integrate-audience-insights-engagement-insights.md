@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559037"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645601"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Vytvorte prepojenie medzi prehľadmi cieľových skupín a prehľadmi interakcií
 
@@ -26,7 +26,7 @@ Použite zjednotené profily a segmenty z prehľadov cieľovej skupiny na získa
 ## <a name="prerequisites"></a>Predpoklady
 
 - Profily prehľadov cieľovej skupiny musia byť uložené v účte Azure Data Lake Storage, ktorý vlastníte, alebo v spravovanom dátovom jazere [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;. 
-- Prostredie vašej cieľovej skupiny by malo mať tiež priradené prostredie Dataverse. A ak toto prostredie taktiež používa Dataverse ako úložisko údajov, určite označte začiarkavacie políčko **Povoliť zdieľanie údajov** v prehľadoch cieľovej skupiny. Ďalšie informácie nájdete v časti [Vytvorte a nakonfigurujte platené prostredie v prehľadoch cieľových skupín](../audience-insights/get-started-paid.md).
+- Prostredie vašej cieľovej skupiny by malo mať tiež priradené prostredie Dataverse. A ak toto prostredie taktiež používa Dataverse ako úložisko údajov, určite označte začiarkavacie políčko **Povoliť zdieľanie údajov** v prehľadoch cieľovej skupiny. Ďalšie informácie nájdete v časti [Vytvorenie a konfigurácia prostredia v prehľadoch cieľových skupín](../audience-insights/create-environment.md).
 - Na prostredie prehľadov interakcií a prehľadov cieľovej skupiny potrebujete povolenia správcu.
 - Prepojené prostredia musia byť v rovnakej geografickej oblasti.
 

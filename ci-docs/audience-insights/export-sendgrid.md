@@ -1,7 +1,7 @@
 ---
 title: Export údajov služby Customer Insights do SendGrid
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do SendGrid.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: da3da5ea68d178deab3b9ab31dd810dee610f607
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036120"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617850"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Export segmentov do SendGrid (ukážka)
 
@@ -29,10 +29,10 @@ Exportujte segmenty zjednotených profilov zákazníkov do zoznamov kontaktov Se
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Až 100 000 profilov celkovo do služby SendGrid.
+- Až 100 000 profilov zákazníkov celkom do SendGrid.
 - Export do SendGrid je obmedzený na segmenty.
-- Export až 100 000 profilov do služby SendGrid môže trvať až niekoľko hodín. 
-- Počet profilov, ktoré môžete exportovať do SendGrid, závisí a je obmedzený vašou zmluvou so spoločnosťou SendGrid.
+- Export až 100 000 profilov zákazníkov do služby SendGrid môže trvať niekoľko hodín. 
+- Počet profilov zákazníkov, ktoré môžete exportovať do služby SendGrid, závisí od vašej zmluvy so spoločnosťou SendGrid a je obmedzený.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Nastavenie pripojenia k SendGrid
 
@@ -66,7 +66,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Zadajte svoje **[ID zoznamu SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
 
-1. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Rovnaký postup zopakujte pri ďalších voliteľných poliach, ako je **Krstné meno**, **Priezvisko**, **Krajina/región**, **Štát**, **Mesto** a **PSČ**.
+1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Rovnaký postup zopakujte pri ďalších voliteľných poliach, ako je **Krstné meno**, **Priezvisko**, **Krajina/región**, **Štát**, **Mesto** a **PSČ**.
 
 1. Vyberte segmenty, ktoré chcete exportovať. Dôrazne **odporúčame neexportovať celkovo viac ako 100 000 profilov zákazníkov** do SendGrid. 
 

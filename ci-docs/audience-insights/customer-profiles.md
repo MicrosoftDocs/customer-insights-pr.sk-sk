@@ -1,75 +1,71 @@
 ---
 title: Zobrazenie profilov zákazníkov
 description: Získajte kombinovaný pohľad na vaše zjednotené údaje o zákazníkoch.
-ms.date: 12/01/2020
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 07d2206372f89cd7dcd9df84c87024a6f87d5eac
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032823"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623288"
 ---
 # <a name="customer-profiles"></a>Profily zákazníkov
 
-Na stránke **Zákazníci** je uvedený kombinovaný pohľad na vašich zákazníkov na základe údajov z profilu získaných z [všetkých zdrojov údajov](data-sources.md). Profily zákazníkov sú k dispozícii, keď [vytvoríte zjednotenú entitu Zákazník](data-unification.md). Uistite sa, že ste dokončili proces zjednotenia údajov, aby ste získali bohatší prehľad o svojich zákazníkoch. Táto stránka tiež umožňuje vyhľadávať zákazníkov.
+Stránka **Zákazníci** zobrazuje kombinovaný pohľad na vaše zjednotené profily zákazníkov. Profily zákazníkov budú k dispozícii, keď [vytvoríte zjednotenú entitu Zákazník](data-unification.md). Táto stránka vám umožňuje vyhľadávať zákazníkov a definovať index pre toto vyhľadávanie.
 
-Zákazníkmi môžu byť jednotlivci alebo organizácie (ukážka). Každý profil zákazníka alebo organizácie je reprezentovaný dlaždicou. Vyberte dlaždicu a zobrazte ďalšie informácie o konkrétnom zákazníkovi alebo organizácii. Ak chcete zobraziť ďalšie záznamy, použite ovládacie prvky stránkovania v dolnej časti stránky.
+Zákazníkmi môžu byť jednotlivci alebo organizácie. Každý profil zákazníka je reprezentovaný dlaždicou. Na získanie ďalších záznamov použite ovládacie prvky stránkovania. Karta zobrazuje polia z entity *Zákazník*, ako bolo definované v **Indexe vyhľadávania a filtrovania**. Vyberte dlaždicu, aby ste zobrazili údaje pre vybraného zákazníka na vyhradenej stránke s názvom [Stránka s podrobnosťami o zákazníkovi](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
-> ![Profily zákazníka B2C.](media/profiles-customers.png "Profily zákazníka B2C")
-
-Organizácie (ukážka)
-> [!div class="mx-imgBorder"] 
-> ![Profily zákazníka B2B](media/profile-customers-b2b.png "Profily zákazníka B2B")
+> ![Stránka Zákazníci, ktorá zobrazuje dlaždice s výsledkami](media/customers-page-result-tiles-B2C.png "Stránka Zákazníci, ktorá zobrazuje dlaždice s výsledkami")
 
 > [!NOTE]
-> Ak nevidíte dlaždice, keď vyberiete **Zákazníci** v navigácii, musí váš správca [definovať aspoň jeden prehľadávateľný atribút](search-filter-index.md) na stránke **Index vyhľadávania a filtrovania**.
+> Ak pri výbere možnosti **Zákazníci** pri navigácii nevidíte dlaždice, musí váš správca [definovať aspoň jeden atribút, ktorý je možné vyhľadávať](search-filter-index.md) v položke **Index vyhľadávania a filtrovania**.
 
 ## <a name="search-for-customers"></a>Vyhľadávanie zákazníkov
 
-Vyhľadajte zákazníkov zadaním mena alebo iného atribútu do vyhľadávacieho poľa. Vyhľadávanie funguje iba v rámci entity Profil zákazníka vytvorenej počas procesu zjednotenia údajov.
+Vyhľadajte zákazníkov zadaním mena alebo iného atribútu do vyhľadávacieho poľa. Vyhľadávanie funguje iba v rámci entity _Zákazník_ vytvorenej počas procesu zjednocovania údajov.
 
-Ako správca môžete konfigurovať vyhľadávané atribúty pomocou stránky **Index vyhľadávania a filtrovania**. Viac informácií nájdete v článku [Spravujte index vyhľadávania a filtrovania](search-filter-index.md).
+Ako správca môžete konfigurovať vyhľadávané atribúty pomocou stránky **Index vyhľadávania a filtrovania**. Ak chcete získať ďalšie informácie, navštívte stránku [Spravovať index vyhľadávania a filtrovania](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filtrovanie zákazníkov
 
-Zákazníkov môžete filtrovať podľa polí entity Profil zákazníka. Podobne ako pri vyhľadávaní aj váš správca musí najprv definovať polia ako filtrovateľné pomocou stránky **Index vyhľadávania a filtrovania**.
+Zákazníkov môžete filtrovať podľa polí entity _Zákazník_. Podobne ako pri vyhľadávaní aj váš správca musí najprv definovať polia ako filtrovateľné pomocou stránky **Index vyhľadávania a filtrovania**.
 
-1. Vyberte položku **Filtrovať** na stránke **Zákazníci**.
+1. Vyberte **Zobraziť filtre** na stránke **Zákazníci**.
 
-2. Začiarknite políčka vedľa atribútov, podľa ktorých chcete filtrovať zákazníkov.
+1. Začiarknite políčka vedľa atribútov, podľa ktorých chcete filtrovať zákazníkov.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Profily zákazníkov.](media/profiles-customers3.png "Profily zákazníkov")
+1. Odstráňte svoje filtre výberom položky **Vymazať filtre** na stránke **Zákazníci**.
 
-3. Odstráňte svoje filtre výberom položky **Vymazať filtre** na stránke **Zákazníci**.
+## <a name="customer-details-page"></a>Stránka s podrobnosťami o zákazníkovi
 
-##  <a name="customer-details-page"></a>Stránka s podrobnosťami o zákazníkovi
+Vyberte ktorúkoľvek z dlaždíc zákazníka a otvorte **stránku s podrobnosťami o zákazníkovi**. Toto zobrazenie obsahuje zjednotené informácie o vybranom zákazníkovi. Podrobnosti o zákazníkovi obsahujú nasledujúci obsah:
 
-Vyberte ktorúkoľvek z dlaždíc zákazníka a otvorte **stránku s podrobnosťami o zákazníkovi**. Toto zobrazenie obsahuje zjednotené informácie o vybranom zákazníkovi.
+**Dlaždica profilu zákazníka**: Táto dlaždica zobrazuje hodnoty, ktoré sa líšia od entity _Zákazník_. Ak pole pre vybratý profil zákazníka nemá žiadnu hodnotu, nezobrazí sa. Dlaždica je štruktúrovaná do sekcií:  
+  - Prvá sekcia zobrazuje vopred definovanú množinu polí, za ktorou nasledujú všetky polia, ktoré sú súčasťou indexu vyhľadávania a filtrovania. Ak profil obsahuje tieto polia, všetky polia súvisiace s adresou sa spoja do jedného riadka. 
+  - **Kontakty na tohto zákazníka**: V prostrediach pre firemné obchodné vzťahy uvidíte všetky súvisiace kontakty na tohto zákazníka ako druhú sekciu. Každý kontakt je zobrazený s jeho poľami. Prázdne polia sú skryté.
+  - **Ďalšie polia**: Zobrazuje zostávajúce polia vybratého zákazníka s výnimkou IDs. 
+  - **IDs**: Uvádza všetky identifikátory pod ich zodpovedajúcim názvom entity. Polia sú identifikované ako IDs svojou sémantikou, ktorá ich ako taká kategorizuje.
 
-Podrobnosti o zákazníkovi zahŕňajú tieto údaje:
+**Časová os aktivity**: Zobrazuje údaje, ak máte nakonfigurované aktivity. Zobrazenie časovej osi obsahuje chronologicky zoradené aktivity vybraného zákazníka, počnúc najnovšou aktivitou. Ďalšie informácie získate v časti [Aktivity zákazníkov](activities.md).
 
--   **Dlaždica profilu zákazníka**: Táto dlaždica ukazuje rôzne hodnoty z entity zjednoteného profilu zákazníka. Tieto podrobnosti môžu zahŕňať e-mailovú adresu, meno, mesto atď. 
+**Prehľady**:  
+  - **Miery**: Zobrazuje, či ste nakonfigurovali jednu alebo viac mier meraní atribútov zákazníka. Tie zahŕňajú vypočítané KPI v súvislosti s vašimi zákazníkmi na úrovni jednotlivých zákazníkov. Ak chcete získať ďalšie informácie, navštívte stránku [Definícia a spravovanie mier](measures.md).
 
--   **Potenciálne záujmy, potenciálne značky**: Ukazuje, či ste nakonfigurovali obohatenie prvej strany. Predstavuje potenciálne záujmy a príbuznosti značiek, ktoré môže mať zákazník s podobným profilom ako tento zákazník. Ďalšie informácie nájdete v sekcii [Obohatenie profilov zákazníkov o značky a záujmy](enrichment-microsoft.md).
+  - **Potenciálne záujmy, potenciálne značky**: Zobrazí, či ste nakonfigurovali obohatenie afinity k značke alebo záujmom. Predstavuje potenciálne záujmy a afinity pre značky založené na iných zákazníkoch, ktorých profil je podobný zvolenému zákazníckemu profilu. Ak chcete získať ďalšie informácie, navštívte stránku [Obohatenie profilov zákazníkov o afinity k značke a záujmom](enrichment-microsoft.md).
 
--   **Miery**: Ukazuje, či ste nakonfigurovali jednu alebo viac mier konkrétneho typu: miery atribútov zákazníka. Tie zahŕňajú vypočítané KPI v súvislosti s vašimi zákazníkmi na úrovni jednotlivých zákazníkov. Ďalšie informácie nájdete v sekcii [Definovanie a správa mier](measures.md).
-
--   **Časová os aktivít**: Zobrazuje, či máte nakonfigurované aktivity. Zobrazenie na časovej osi obsahuje chronologicky zoradené aktivity tohto zákazníka, počnúc najnovšou aktivitou. Ďalšie informácie nájdete v článku [Aktivity zákazníka](activities.md).
-
-Výberom položky **Späť k zákazníkom** sa vrátite na stránku vyhľadávania zákazníkov.
+Ak sa chcete vrátiť na stránku vyhľadávania zákazníkov, vyberte **Späť na stránku Zákazníci**.
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
-[Pridajte ďalšie zdroje údajov](data-sources.md), [obohaťte zjednotené profily](enrichment-hub.md) alebo [vytvárajte segmenty](segments.md) na prácu so zjednotenými profilmi v iných aplikáciách.
+[Pridajte ďalšie zdroje údajov](data-sources.md), [obohaťte zjednotené profily](enrichment-hub.md) alebo [vytvárajte segmenty](segments.md) na prácu so zjednotenými profilmi zákazníkov v iných aplikáciách.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

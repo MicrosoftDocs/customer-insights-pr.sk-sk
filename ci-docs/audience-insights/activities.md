@@ -1,7 +1,7 @@
 ---
 title: Aktivity zákazníkov
 description: Definujte zákaznícke aktivity a zobrazte ich na časovej osi v zákazníckych profiloch.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494430"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617988"
 ---
 # <a name="customer-activities"></a>Aktivity zákazníkov
 
@@ -24,8 +24,7 @@ Spojte aktivity zákazníkov z [rôznych zdrojov údajov](data-sources.md) v Dyn
 
 Vaše zdroje údajov môžu zahŕňať entity s údajmi o transakciách a aktivitách z viacerých zdrojov údajov. Identifikujte tieto entity a vyberte aktivity, ktoré chcete zobraziť na časovej osi zákazníka. Vyberte entitu, ktorá obsahuje vašu cieľovú aktivitu alebo aktivity.
 
-> [!NOTE]
-> Entita musí mať aspoň jeden atribút typu **Dátum**, aby ste boli zahrnutí do časovej osi zákazníka a bez polí **Dátum** nemôžete pridávať entity. Ovládací prvok **Pridať aktivitu** nie je povolená, ak takáto entita nie je nájdená.
+Entita musí mať aspoň jeden atribút typu **Dátum**, aby ste boli zahrnutí do časovej osi zákazníka a bez polí **Dátum** nemôžete pridávať entity. Ovládací prvok **Pridať aktivitu** nie je povolená, ak takáto entita nie je nájdená.
 
 1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Aktivity**.
 
@@ -41,13 +40,16 @@ Vaše zdroje údajov môžu zahŕňať entity s údajmi o transakciách a aktivi
 
 1. Stlačte možnosť **Ďalej** a prejdite na ďalší krok.
 
-1. V kroku **Vzťah** nakonfigurujte podrobnosti na pripojenie údajov o svojej aktivite k príslušnému zákazníkovi. Tento krok vizualizuje spojenie medzi entitami.  
+1. V kroku **Vzťah** nakonfigurujte podrobnosti tak, aby boli údaje o vašej aktivite prepojené s príslušným záznamom zákazníka. Tento krok vizualizuje spojenie medzi entitami.  
 
    - **Prvé**: Cudzie pole vo vašej entite aktivity, ktoré sa použije na nadviazanie vzťahu s inou entitou.
    - **Druhé**: Zodpovedajúca zdrojová entita zákazníka, s ktorou bude vaša entita aktivity vo vzťahu. Môžete sa týkať iba zdrojových entít zákazníka, ktoré sa používajú v procese zjednotenia údajov.
    - **Tretie**: Ak vzťah medzi touto entitou aktivity a vybranou entitou zdrojového zákazníka už existuje, názov vzťahu bude v režime iba na čítanie. Ak taký vzťah neexistuje, vytvorí sa nový vzťah s menom, ktoré uvediete v tomto poli.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definovanie vzťahu entity.":::
+
+   > [!TIP]
+   > V prostrediach B2B si môžete vyberať medzi entitami obchodných vzťahov a inými entitami. Ak vyberiete entitu obchodného vzťahu, cesta vzťahu sa nastaví automaticky. Pre ostatné entity musíte definovať cestu vzťahu cez jednu alebo viac medziľahlých entít, kým sa nedostanete k entite obchodného vzťahu.
 
 1. Stlačte možnosť **Ďalej** a prejdite na ďalší krok. 
 
@@ -95,5 +97,34 @@ Po výbere aktivity sú k dispozícii nasledujúce akcie.
 - **Premenovať**: Otvorí dialógové okno, kde môžete zadať iný názov pre vybratú aktivitu. Zmeny vykonajte výberom položky **Uložiť**.
 
 - **Odstrániť**: Otvorí sa dialógové okno na potvrdenie odstránenia vybratej aktivity. Môžete tiež odstrániť viac ako jednu aktivitu súčasne výberom aktivít a následným výberom ikony odstránenia. Vyberte možnosť **Odstrániť** a potvrďte odstránenie.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Zobrazte časové harmonogramy aktivít v profiloch zákazníkov
+
+Po nakonfigurovaní aktivít zákazníkov vyberte **Zobraziť na časovej osi aktivity** v konfigurácii aktivít na vyhľadanie všetkých aktivít vašich zákazníkov vo svojom zákazníckom profile.
+
+Ak chcete zákazníkovi otvoriť časovú os, prejdite na **Zákazníci** a vyberte profil zákazníka, ktorý chcete zobraziť.
+
+Ak sa zákazník zúčastnil aktivity, ktorú ste nakonfigurovali, nájdete ho v sekcii **Časová os aktivity**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Zobrazte nakonfigurované aktivity v profiloch zákazníkov.":::
+
+Existuje niekoľko spôsobov, ako filtrovať aktivity na časovej osi aktivít:
+
+- Môžete vybrať jednu alebo viac ikon aktivít a spresniť výsledky tak, aby zahŕňali iba vybrané typy.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrujte aktivity podľa typu pomocou ikon.":::
+
+- Môžete si vybrať **Filter** a otvoriť panel filtra na konfiguráciu filtrov časovej osi.
+
+   1. Môžete filtrovať podľa *Typu aktivity* a *Dátumu*
+   1. Vyberte **Použiť** a použite filtre na časovej osi aktivít.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Na konfiguráciu podmienok filtra použite panel filtra.":::
+
+Ak chcete filtre odstrániť, vyberte položku **x** vedľa každého filtra použitého na časovej osi alebo vyberte **Vymazať filtre**.
+
+
+> [!NOTE]
+> Filtre aktivít sa odstránia, keď opustíte profil zákazníka. Musíte ich použiť pri každom otvorení v profile zákazníka.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

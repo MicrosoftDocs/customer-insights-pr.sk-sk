@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033237"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605968"
 ---
 # <a name="connections-preview-overview"></a>Prehľad pripojení (ukážka)
 
@@ -47,6 +47,7 @@ Ak chcete pridať pripojenia, musíte mať [oprávnenia správcu](permissions.md
 1. V table **Nastaviť pripojenie** zadajte požadované podrobnosti. 
    1. **Zobrazovaný názov** a typ spojenia popisujú spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
    1. Presné polia závisia od toho, ku ktorej službe sa pripájate. V článku o cieľovej službe sa môžete dozvedieť viac podrobností o konkrétnom type pripojenia.
+   1. Ak [použijete svoj vlastný Key Vault](use-azure-key-vault.md) na uloženie tajomstiev, aktivujte **Použiť Key Vault** a vyberte tajomstvo zo zoznamu.
 
 1. Na vytvorenie pripojenia stlačte možnosť **Uložiť**.
 
@@ -93,3 +94,6 @@ Oddelené obohatenia a exporty sa stanú neaktívnymi. Znova ich aktivujete prid
 
 1. Na potvrdenie odstránenia vyberte možnosť **Odstrániť**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Nastavte si pripojenia pomocou tajomstiev, ktoré spravuje váš vlastný Key Vault
+
+Niektoré pripojenia vyžadujú tajomstvá, ako sú kľúče API alebo heslá. Niektoré pripojenia podporujú tajomstvá uložené vo vašom vlastnom Key Vault. Prečítajte si viac o podporovaných pripojeniach a o tom, ako ich nastaviť [vo svojom vlastnom Key Vault pre prehľady cieľových skupín](use-azure-key-vault.md).

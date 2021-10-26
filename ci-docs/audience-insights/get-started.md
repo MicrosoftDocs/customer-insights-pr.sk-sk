@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466596"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645283"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Začnite funkciami prehľadov cieľovej skupiny v Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Prehľady cieľových skupín vám môže pomôcť lepšie porozumieť vašim z�
 
 ## <a name="step-1-create-an-environment"></a>Krok 1: Vytvorenie prostredia
 
-Začnite vytvorením prostredia, kde budete pracovať. Ak už vaša organizácia má kúpenú licenciu, prejdite do časti [Začníname pracovať s predplatným ](get-started-paid.md). Ak chcete začať skúšobnou verziou prehľadov cieľovej skupiny, prejdite na časť [Nastavenie skúšobného prostredia](get-started-trial.md). 
+Začnite vytvorením prostredia, kde budete pracovať. Ak si už vaša organizácia kúpila licenciu, pozrite si časť [Vytvorenie prostredia](create-environment.md). Ak chcete začať skúšobnou verziou prehľadov cieľovej skupiny, prejdite na časť [Nastavenie skúšobného prostredia](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Krok 2: Preskúmajte prehľady cieľových skupín
 

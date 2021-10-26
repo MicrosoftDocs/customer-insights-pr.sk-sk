@@ -1,7 +1,7 @@
 ---
 title: Export údajov z Customer Insights do Klaviyo
 description: Zistite, ako nakonfigurovať pripojenie a exportovať do Klaviyo.
-ms.date: 08/13/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
+ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7385807"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619092"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Exportovať zoznamy segmentov do Klaviyo (ukážka)
 
@@ -28,10 +28,10 @@ Exportujte segmenty zjednotených profilov zákazníkov do Klaviyo a použite ic
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Na Klaviyo môžete exportovať až 100 000 profilov na export.
+- Do služby Klaviyo môžete exportovať až 100 000 profilov zákazníkov.
 - Export do Klaviyo je obmedzený na segmenty.
-- Export až 1 milión profilov do služby Klaviyo môže trvať až 20 minút. 
-- Počet profilov, ktoré môžete exportovať do Klaviyo, ovplyvňuje a limituje vaša zmluva so spoločnosťou Klaviyo.
+- Export až 1 milióna profilov zákazníkov do služby Klaviyo môže trvať až 20 minút. 
+- Počet profilov zákazníkov, ktoré môžete exportovať do služby Klaviyo, závisí od vašej zmluvy so spoločnosťou Klaviyo a je obmedzený.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Nastavenie pripojenia k Klaviyo
 
@@ -67,7 +67,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Zadajte svoje [**ID zoznamu aplikácie Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Je to potrebné na export segmentov do Klaviyo.
+3. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Je to potrebné na export segmentov do Klaviyo.
 
 1. Vyberte položku **Uložiť**.
 

@@ -2,8 +2,14 @@
   href: index.yml
 - name: Prehľad produktu
   href: overview.md
-- name: Vytvoriť skúšobnú inštanciu
-  href: audience-insights/get-started-trial.md
+- name: Bezplatná skúšobná verzia
+  items:
+    - name: Registrácia na získanie bezplatnej skúšobnej verzie
+      href: trial-signup.md
+    - name: Skúšobná verzia – najčastejšie otázky
+      href: trial-FAQ.md
+- name: Začnite s platenou licenciou
+  href: paid-license.md
 - name: Prístup k prostrediu
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Prehľady cieľových skupín
@@ -19,9 +25,11 @@
         - name: Príručka rýchlej konfigurácie
           href: audience-insights/get-started.md
         - name: Vytvoriť nové prostredie
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Preskúmajte prehľady cieľových skupín
           href: audience-insights/home.md
+    - name: "Práca s\_firemnými obchodnými vzťahmi"
+      href: audience-insights/work-with-business-accounts.md
     - name: Výuka modulov
       items:
         - name: Príjem údajov
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Vypísať aktivity zákazníka
           href: audience-insights/activities.md
+        - name: Definícia sémantického mapovania
+          href: audience-insights/semantic-mappings.md
     - name: Obohatenie údajov
       items:
         - name: Obohatenie profilov zákazníkov
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Predikcia straty predplatného
               href: audience-insights/predict-subscription-churn.md
-            - name: Predikcia odchodov založených na transakciách
+            - name: Predikcia úbytku transakcií
               href: audience-insights/predict-transactional-churn.md
             - name: Používajte vlastné modely zo strojového učenia Azure
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Vzorový sprievodca – predikcia odchodu predplatiteľov
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Vzorový sprievodca – predikcia odchodov založená na transakciách
+            - name: Ukážkový sprievodca pre predikciu úbytku transakcií
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Predikcia odporúčania produktov – vzorový sprievodca
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Správa viacerých prostredí
           href: audience-insights/manage-environments.md
-        - name: Pripojenie k úložisku ADLS pomocou objektu služby
-          href: audience-insights/connect-service-principal.md
         - name: Podporované jazyky
           href: audience-insights/supported-languages.md
+        - name: Zabezpečenie
+          items:
+            - name: Vlastná služba Key Vault
+              href: audience-insights/use-azure-key-vault.md
+            - name: Pripojenie k úložisku ADLS pomocou objektu služby
+              href: audience-insights/connect-service-principal.md
     - name: Rozšíriteľnosť
       items:
         - name: Integrácia webových údajov z prehľadov o interakcii
@@ -248,6 +262,8 @@
       items:
         - name: Príručka rýchlej konfigurácie
           href: engagement-insights/get-started.md
+        - name: Vytvorenie prostredia
+          href: engagement-insights/create-new-environment.md
         - name: Vytvorenie pracovného priestoru
           href: engagement-insights/create-workspace.md
         - name: Zachytávajte udalosti z webových lokalít a mobilných aplikácií

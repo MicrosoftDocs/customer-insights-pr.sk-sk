@@ -1,7 +1,7 @@
 ---
 title: Domovská stránka v prehľadoch cieľových skupín
 description: Začnite prezerať aplikáciu na stránke Domov.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470032"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617713"
 ---
 # <a name="explore-audience-insights"></a>Preskúmajte prehľady cieľových skupín
 
@@ -23,7 +23,7 @@ Môžete [získať prístup k prehľadom o cieľových skupinách z Dynamics 365
 
 :::image type="content" source="media/home-page.png" alt-text="Snímka domovskej obrazovky s ukážkou vzorových prehľadov.":::
 
-1 – prepínanie medzi funkciami Customer Insights 2 – Pomocou ľavej tably sa navigujte medzi rôznymi oblasťami 3 – Nájdite, v akom prostredí pracujete, a spravujte prostredia ako správca 4 – určte osobné nastavenia pre funkciu Customer Insights
+1 – Prepínanie medzi funkciami Customer Insights 2 – Na ľavej table sa pohybujte medzi rôznymi oblasťami a vyberáte primárne cieľové publikum 3 – Zistite, v akom prostredí pracujete, a spravujte prostredia ako správca 4 – Zadajte osobné nastavenia pre Customer Insights
 
 Pod **Posledné segmenty** uvidíte skupiny zákazníkov na základe demografických, behaviorálnych alebo transakčných atribútov, ktoré ste definovali. [Vytváranie segmentov](segments.md) vám pomôže zoskupiť zákaznícku základňu a lepšie zacieliť vaše obchodné aktivity.
 

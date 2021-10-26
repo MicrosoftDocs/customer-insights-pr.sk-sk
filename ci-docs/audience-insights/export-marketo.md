@@ -1,7 +1,7 @@
 ---
 title: Export údajov služby Customer Insights do Marketo
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033512"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619184"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Export segmentov do Marketo (ukážka)
 
@@ -29,10 +29,10 @@ Marketo umožňuje export zjednotených profilov zákazníkov s cieľom vytvára
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Až 1 milión profilov na export do Marketo.
+- Až 1 milión profilov zákazníkov na export do služby Marketo.
 - Export do Marketo je obmedzený na segmenty.
-- Export segmentov s celkovým počtom 1 miliónov profilov môže trvať až 3 hodiny. 
-- Počet profilov, ktoré môžete exportovať do Marketo, závisí a je obmedzený vašou zmluvou so spoločnosťou Marketo.
+- Export segmentov s celkovo 1 miliónom profilov zákazníkov môže trvať až 3 hodiny. 
+- Počet profilov zákazníkov, ktoré môžete exportovať do služby Marketo, závisí od vašej zmluvy so spoločnosťou Marketo a je obmedzený.
 
 ## <a name="set-up-connection-to-marketo"></a>Nastavenie pripojenia k Marketo
 
@@ -64,7 +64,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Zadajte svoje **[ID zoznamu Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID zoznamu je čisto číselná hodnota. Napríklad, ak je vaše ID v zozname Marketo ST12345A7, odstráňte znak pred a za číslicami a zadajte `12345`. 
 
-1. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. 
+1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. 
 
 1. Voliteľné možno exportovať **Meno**, **Priezvisko**, **Mesto**, **Štát** a **Krajina/oblasť** a vytvorte si viac prispôsobené e-maily. Výberom položky **Pridať atribút** namapujete tieto polia.
 

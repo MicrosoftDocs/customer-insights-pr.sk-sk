@@ -1,7 +1,7 @@
 ---
 title: Zlučovanie entít pri zjednotení údajov
 description: Zlučujte entity na účely vytvorenia jednotných profilov zákazníkov.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494338"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648273"
 ---
 # <a name="merge-entities"></a>Zlúčenie entít
 
@@ -89,7 +91,7 @@ Na stránke **Zlúčiť** zvoľte možnosť **Vylúčené polia** a zobrazte si 
     :::image type="content" source="media/recency-merge-option.png" alt-text="Možnosť aktuálnosti v dialógovom okne zlúčenia polí.":::
     - **Najstaršie** : Určuje výslednú hodnotu na základe zastaranosti. Aby bolo možné definovať aktuálnosť, je potrebné dátumové alebo numerické pole pre všetky zúčastnené entity v rozsahu zlúčenia polí.
 
-1.  Do zlučovania je možné aj pridanie ďalších polí.
+1.  Do procesu zlúčenia môžete pridať ďalšie polia.
 
 1.  Je možné zmeniť názov zlúčeného poľa.
 
@@ -131,7 +133,7 @@ Niektoré entity obsahujú viac podrobností ako iné. Ak entita obsahuje najnov
 
 Po nakonfigurovaní polí zlúčenia je možné definovať, ako generovať hodnoty CustomerId, jedinečné identifikátory profilov zákazníkov. Krok zlúčenia pri zjednocovaní vytvára jedinečný identifikátor zákazníckeho profilu. Tento identifikátor je CustomerId v entite *Zákazník*, ktorá je výsledok zjednotených údajov. 
 
-CustomerId v entite Customer je založený na hodnote hash prvej hodnoty nenulových primárnych výsledných kľúčov. Tieto kľúče sú z entít, ktoré sa použili vo fáze párovania a zlúčenia, a ktoré sú dané poradím zhody.Vytvorený CustomerID sa preto môže zmeniť, ak sa zmení hodnota primárneho kľúča v primárnej entite poradia zhody. Hodnota primárneho kľúča preto nemusí vždy reprezentovať toho istého zákazníka.
+CustomerId v entite Customer je založený na hodnote hash prvej hodnoty nenulových primárnych výsledných kľúčov. Tieto kľúče sú z entít, ktoré sa použili vo fáze párovania a zlúčenia, a ktoré sú dané poradím zhody.Vytvorený CustomerID sa preto môže zmeniť, ak sa zmení hodnota primárneho kľúča v primárnej entite poradia zhody. Hodnota primárneho kľúča teda nemusí vždy predstavovať rovnakého zákazníka.
 
 Konfiguráciou stabilného ID zákazníka sa vyhnete takémuto správaniu.
 
@@ -139,7 +141,7 @@ Konfiguráciou stabilného ID zákazníka sa vyhnete takémuto správaniu.
 
 1. Prejdite do položky **Zjednotiť** > **Zlúčiť**.
 
-1. Na stránke **Zlúčiť** vyberte kartu **Kľúče**. 
+1. Vyberte kartu **Kľúče**. 
 
 1. Umiestnite kurzor na riadok **CustomerId** a vyberte možnosť **Konfigurovať**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Ovládací prvok na prispôsobenie vytvárania ID.":::
@@ -147,6 +149,30 @@ Konfiguráciou stabilného ID zákazníka sa vyhnete takémuto správaniu.
 1. Označte najviac päť polí, ktoré budú obsahovať ID zákazníka, a budú mať vyššiu stabilitu. Záznamy, ktoré sa nezhodujú s vašou konfiguráciou, namiesto toho použijú ID nakonfigurované systémom.  
 
 1. Vyberte položku **Hotovo** a spusťte zlučovanie, aby sa použili vami vykonané zmeny.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Zoskupte profily do domácností alebo klastrov
+
+V rámci procesu konfigurácie generovania profilu zákazníka môžete definovať pravidlá pre zoskupenie príbuzných profilov do klastra. V súčasnosti sú k dispozícii dva typy klastrov – domácnosti a vlastné klastre. Systém automaticky vyberie domácnosť s preddefinovanými pravidlami, ak entita *Zákazník* obsahuje sémantické polia *Person.LastName* a *Location.Address*. Môžete tiež vytvoriť klaster s vlastnými pravidlami a podmienkami podobný [pravidlám zhody](match-entities.md#define-rules-for-match-pairs).
+
+**Definícia domácnosti alebo klastra**
+
+1. Prejdite do položky **Zjednotiť** > **Zlúčiť**.
+
+1. Na karte **Zlúčiť** vyberte **Pokročilé** > **Vytvoriť klaster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Ovládací prvok na vytvorenie nového klastra.":::
+
+1. Vyberte si medzi klastrom **Domácnosť** alebo **Vlastný**. Ak sémantické polia *Person.LastName* a *Location.Address* existujú v entite *Zákazník*, automaticky sa vyberie domácnosť.
+
+1. Zadajte názov klastra a vyberte **Hotovo**.
+
+1. Vyberte kartu **Klastre** a vyhľadajte klaster, ktorý ste vytvorili.
+
+1. Zadajte pravidlá a podmienky na definovanie klastra.
+
+1. Vyberte **Spustiť** a spustite proces zlúčenia a vytvorte klaster.
+
+Po spustení procesu zlúčenia sa identifikátory klastra pridajú ako nové polia do entity *Zákazník*.
 
 ## <a name="run-your-merge"></a>Spustenie zlúčenia
 

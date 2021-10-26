@@ -1,7 +1,7 @@
 ---
 title: Export údajov služby Customer Insights do Mailchimp
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033558"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618633"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Export segmentov do Mailchimp (verzia Preview)
 
@@ -29,10 +29,10 @@ Exportujte segmenty zjednotených profilov zákazníkov do služby Mailchimp a v
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Až 1 milión profilov na export do Mailchimp.
+- Až 1 milión profilov zákazníkov na export do služby Mailchimp.
 - Export do Mailchimp je obmedzený na segmenty.
-- Export segmentov s miliónom profilov môže trvať až tri hodiny. 
-- Počet profilov, ktoré môžete exportovať do Mailchimp, závisí a je obmedzený vašou zmluvou so spoločnosťou Mailchimp.
+- Export segmentov s celkovo 1 miliónom profilov zákazníkov môže trvať až tri hodiny. 
+- Počet profilov zákazníkov, ktoré môžete exportovať do služby Mailchimp, závisí od vašej zmluvy so spoločnosťou Mailchimp a je obmedzený.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Nastavenie pripojenia k Mailchimp
 
@@ -66,7 +66,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Zadajte svoj **[identifikátor cieľovej skupiny Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. 
+1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. 
 
 1. Voliteľné možno exportovať **Krstné meno** a **Priezvisko** a vytvorte si viac prispôsobené e-maily. Výberom položky **Pridať atribút** namapujete tieto polia.
 

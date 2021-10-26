@@ -4,17 +4,17 @@ description: Naučte sa, ako prispôsobiť a spustiť ukážku webovej súpravy 
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 545f4a7e9660e339dee1070ad727d5d398eb6254
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036622"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606270"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Spustite ukážku webovej SDK pre možnosť prehľadu interakcií Dynamics 365 Customer Insights
 
@@ -26,7 +26,7 @@ Knižnica webovej súpravy na sledovanie interakcií je knižnica JavaScript so 
 
 - Inštalácia [kódu Visual Studio](https://code.visualstudio.com/).
 - [Nainštalujte si rozšírenie Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) v kóde Visual Studio a oboznámte sa s tým, ako spustiť Live Server.
-- Musíte mať [kľúč prijatia](instrument-website.md).
+- Musíte mať [pracovný priestor s prehľadom interakcií](create-workspace.md).
 
 ## <a name="run-sample"></a>Spustiť vzorku
 
@@ -36,7 +36,11 @@ Knižnica webovej súpravy na sledovanie interakcií je knižnica JavaScript so 
 
 1. Otvorte rozbalený priečinok v kóde Visual Studio.
 
-1. V súbore `ei_websdk_sample.html` nahraďte reťazec „INGESTION_KEY“ kľúčom na príjem z portálu schopností prehľadu interakcií a reťazec „NAME“ globálnym názvom, v ktorom chcete vytvoriť inštanciu súpravy SDK. Uistite sa, že ste nahradili všetky výskyty.
+1. Prejdite na portál prehľadu interakcií pre váš pracovný priestor. Vyberte **Správca** > **Pracovný priestor** a potom **Návod na inštaláciu**. Postupujte podľa prvej možnosti a vyberte **Kopírovať kód** na kopírovanie úryvku kódu JavaScript.
+
+1. V súbore `ei_websdk_sample.html` vložte pod tento riadok úryvok kódu, ktorý ste práve skopírovali:
+
+   - <-- VLOŽTE ÚRYVOK KÓDU JAVASCRIPT Z PORTÁLU PREHĽADY INTERAKCIÍ SEM POD TENTO RIADOK -->
 
 1. Otvorte súbor `ei_websdk_sample.html` pomocou Live Server v kóde Visual Studio stlačením možnosti **Aktivovať** v stavovom riadku.
 

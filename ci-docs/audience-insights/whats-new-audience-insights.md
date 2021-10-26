@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465224"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606131"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Aktualizácie zo septembra 2021
+
+Aktualizácie v septembri 2021 obsahujú nové funkcie, vylepšenia výkonu a opravy chýb.
+
+### <a name="activities"></a>Aktivity
+
+- **Vylepšenia časovej osi aktivity** V profiloch zákazníkov sme rozšírili filtre pre časovú os aktivít. Okrem toho môžete použiť novú tablu filtra použiť na filtrovanie podľa typu aktivity a podľa dátumu. Dátumy je možné filtrovať za rôznych podmienok. Ďalšie informácie nájdete v časti [Zobrazte časové harmonogramy aktivít v profiloch zákazníkov](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Vzťahy 
+
+- **Podpora viacskokových vzťahov** Pri konfigurácii aktivít a definovaní vzťahov medzi entitami používajte viacskokové vzťahy. Viacskokové vzťahy používajú medziľahlú entitu na prepojenie dvoch entít. Pri konfigurácii aktivity môžete použiť viacskokový vzťah na prepojenie entity aktivity s medziľahlou entitou a potom so zákazníckou entitou. Viacskokové vzťahy môžete kombinovať so vzťahmi s viacerými cestami. Ďalšie informácie nájdete v téme [Viacskokové vzťahy](relationships.md#multi-hop-relationship).
+
+- **Podpora vzťahov s viacerými cestami** Pri konfigurácii aktivít a definovaní vzťahov medzi entitami používajte vzťahy s viacerými cestami. Vzťahy s viacerými cestami viažu zdrojovú entitu k viac ako jednej entite. Pri konfigurácii aktivity môžete použiť vzťah s viacerými cestami na prepojenie vašej entity aktivity s viac ako jednou zákazníckou entitou. Vzťahy s viacerými cestami môžete kombinovať s viacskokovými vzťahmi. Ďalšie informácie nájdete v téme [Vzťahy s viacerými cestami](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Aktualizácie z augusta 2021
 

@@ -1,7 +1,7 @@
 ---
 title: Exportujte údaje z Customer Insights
 description: Spravujte exporty do zdieľania údajov.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034701"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623152"
 ---
 # <a name="exports-preview-overview"></a>Prehľad exportov (verzia Preview)
 
-Stránka **Exporty** zobrazuje všetky nakonfigurované exporty. Exporty zdieľajú konkrétne údaje s rôznymi aplikáciami. Môžu obsahovať zákaznícke profily alebo entity, schémy a podrobnosti mapovania. Každý export vyžaduje [pripojenie, nastavenie zo strany správcu na správu autentifikácie a prístupu](connections.md).
+Stránka **Exporty** zobrazuje všetky nakonfigurované exporty. Exporty zdieľajú konkrétne údaje s rôznymi aplikáciami. Môžu zahŕňať profily zákazníkov, entity, schémy a podrobnosti o mapovaní. Každý export vyžaduje [pripojenie, nastavenie zo strany správcu na správu autentifikácie a prístupu](connections.md).
 
 Prejdite do ponuky **Údaje** > **Exporty** a zobrazte si stránku s exportmi. Všetky roly používateľov môžu zobrazovať nakonfigurované exporty. Pomocou vyhľadávacieho poľa na paneli príkazov vyhľadajte exporty podľa názvu, názvu pripojenia alebo typu pripojenia.
 
-## <a name="set-up-a-new-export"></a>Nastavenie nového exportu
+## <a name="export-types"></a>Typy exportu
 
+Existujú dva hlavné typy exportov:  
+
+- **Exporty údajov** vám umožnia exportovať akýkoľvek typ entity, ktorá je k dispozícii v prehľadoch cieľových skupín. Entity, ktoré vyberiete na export, sa exportujú so všetkými údajovými poľami, metadátami, schémami a podrobnosťami mapovania. 
+- **Exporty segmentov** vám umožnia exportovať entity segmentov z prehľadov cieľových skupín. Segmenty predstavujú zoznam profilov zákazníkov. Pri konfigurácii exportu vyberiete zahrnuté údajové polia v závislosti od cieľového systému, do ktorého exportujete údaje. 
+
+### <a name="export-segments"></a>Segmenty exportu
+
+**Export segmentov v prostrediach pre firemné obchodné vzťahy (B2B) alebo individuálnych zákazníkov (B2C)**  
+Väčšina možností exportu podporuje oba typy prostredí. Export segmentov do rôznych cieľových systémov má špecifické požiadavky. Člen segmentu, profil zákazníka spravidla obsahuje kontaktné informácie. Aj keď to zvyčajne platí pre segmenty postavené na individuálnych zákazníkoch (B2C), nemusí to nevyhnutne platiť pre segmenty založené na firemných obchodných vzťahoch (B2B). 
+
+**Prostredia exportu segmentov pre firemné obchodné vzťahy (B2B)**  
+- Segmenty v kontexte prostredí pre firemné obchodné vzťahy sú založené na entite *obchodný vzťah*. Na export segmentov obchodného vzťahu tak, ako sú, musí cieľový systém podporovať čisté segmenty obchodných vzťahov. To je prípad [LinkedIn](export-linkedin-ads.md), keď si vyberiete možnosť **spoločnosť** pri definovaní exportu.
+- Všetky ostatné cieľové systémy vyžadujú polia od entity kontaktu. Aby ste zaistili, že segmenty obchodného vzťahu môžu získavať údaje zo súvisiacich kontaktov, definícia vášho segmentu musí premietať atribúty entity kontaktu. Prečítajte si viac o tom, ako [konfigurovať segmenty a atribúty projektu](segment-builder.md).
+
+**Exporty segmentov v prostrediach pre jednotlivých zákazníkov (B2C)**  
+- Segmenty v kontexte prostredí pre jednotlivých zákazníkov sú založené na entite *zjednotený profil zákazníka*. Exportovať je možné každý segment, ktorý spĺňa požiadavky cieľových systémov (napríklad e -mailová adresa).
+
+**Limity exportu segmentov**  
+- Cieľové systémy tretích strán môžu obmedziť počet zákazníckych profilov, ktoré môžete exportovať. 
+- Pri individuálnych zákazníkoch uvidíte skutočný počet členov segmentu, keď vyberiete segment na export. Ak je segment príliš veľký, zobrazí sa upozornenie. 
+- Pri firemných obchodných vzťahoch uvidíte počet obchodných vzťahov v segmente; počet kontaktov, ktoré je možné projektovať, sa však nezobrazí. V niektorých prípadoch to môže viesť k tomu, že exportovaný segment skutočne obsahuje viac profilov zákazníkov, ako cieľový systém akceptuje. Prekročenie limitov výsledkov cieľových systémov preskočí export. 
+
+## <a name="set-up-a-new-export"></a>Nastavenie nového exportu  
 Ak chcete nastaviť alebo upraviť export, musíte mať k dispozícii pripojenia. Pripojenia závisia od vašej [roly používateľa](permissions.md):
-- Správcovia majú prístup ku všetkým pripojeniam. Môžu tiež vytvárať nové pripojenia pri nastavovaní exportu.
-- Prispievatelia môžu mať prístup ku konkrétnym pripojeniam. Závisia od správcov, ktorí konfigurujú a zdieľajú pripojenia. Zoznam exportov zobrazuje prispievateľov, či môžu upravovať alebo len zobraziť export v stĺpci **Vaše povolenia**. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Diváci môžu iba prezerať existujúce exporty, ale nemôžu ich vytvárať.
+- **Správcovia** majú prístup ku všetkým pripojeniam. Môžu tiež vytvárať nové pripojenia pri nastavovaní exportu.
+- **Prispievatelia** môžu mať prístup ku konkrétnym pripojeniam. Závisia od správcov, ktorí konfigurujú a zdieľajú pripojenia. Zoznam exportov zobrazuje prispievateľov, či môžu upravovať alebo len zobraziť export v stĺpci **Vaše povolenia**. Ak chcete získať ďalšie informácie, navštívte stránku [Povoliť prispievateľom používať pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Diváci** môžu zobrazovať iba existujúce exporty – nie ich vytvárať.
 
 ### <a name="define-a-new-export"></a>Definovanie nového exportu
 

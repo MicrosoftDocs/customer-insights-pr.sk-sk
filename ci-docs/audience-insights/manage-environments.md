@@ -1,7 +1,7 @@
 ---
 title: Slúži na vytvorenie a spravovanie prostredí
 description: Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034196"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645145"
 ---
 # <a name="manage-environments"></a>Správa prostredí
 
@@ -26,7 +26,7 @@ Ak chcete zmeniť prostredie, vyberte ovládací prvok **prostredia** v pravom h
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Snímka obrazovky ovládacieho prvku na prepínanie prostredí.":::
 
-Správcovia môžu [vytvárať](get-started-paid.md) a spravovať prostredia.
+Správcovia môžu [vytvárať](create-environment.md) a spravovať prostredia.
 
 ## <a name="edit-an-existing-environment"></a>Úprava existujúceho prostredia
 
@@ -36,23 +36,9 @@ Môžete upraviť niektoré podrobnosti o existujúcich prostrediach.
 
 2.  Vyberte ikonu **Upraviť**.
 
-3. V poli **Upraviť prostredie** môžete aktualizovať **Zobrazovaný názov** prostredia, ale nemôžete zmeniť **Región** alebo **Typ**.
+3. V poli **Upraviť prostredie** môžete aktualizovať nastavenia prostredia.
 
-4. Ak je prostredie nakonfigurované na ukladanie údajov do Azure Data Lake Storage, môžete aktualizovať **Kľúč účtu**. Nemôžete však zmeniť **Názov účtu** ani názov **Kontajnera**.
-
-5. Prípadne môžete aktualizáciu vykonať cez pripojenie založené na kľúči účtu na pripojenie založené na zdrojoch alebo predplatnom. Po inovácii sa po aktualizácii už nebudete môcť vrátiť ku kľúču účtu. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Pri aktualizácii pripojenia nemôžete zmeniť informácie o **kontajneri**.
-
-6. Voliteľne môžete poskytnúť adresu URL prostredia Microsoft Dataverse v časti **Konfigurácia zdieľania údajov s Microsoft Dataverse a aktivujte ďalšie funkcie**. Tieto schopnosti zahŕňajú zdieľanie údajov s aplikáciami a riešeniami založenými na Microsoft Dataverse, príjem dát z lokálnych zdrojov údajov alebo použitie [predikcií](predictions.md). Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s so spravovaným Microsoft Dataverse Data Lake.
-
-   > [!NOTE]
-   > - Zdieľanie údajov so spravovaným Microsoft Dataverse Data Lake nie je momentálne podporované, keď ukladáte všetky údaje do svojho Azure Data Lake Storage.
-   > - [Predikcia chýbajúcich hodnôt v entite](predictions.md) a správy PowerBI Embedded v prehľadoch cieľovej skupiny (ak sú vo vašom prostredí povolené) nie sú v súčasnosti podporované, ak máte povolené zdieľanie údajov so spravovaným dátovým jazerom Microsoft Dataverse.
-
-   Po povolení zdieľania údajov cez Microsoft Dataverse dôjde k spusteniu úplného obnovenia vašich zdrojov údajov a ďalších procesov. Ak sú procesy momentálne spustené, neuvidíte možnosť povoliť zdieľanie údajov s Microsoft Dataverse. Počkajte, kým sa tieto procesy nedokončia, alebo ich zrušte, aby ste povolili zdieľanie údajov. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse.":::
-   
-   Keď spustíte procesy, ako je napríklad príjem údajov alebo vytváranie segmentov, vo vyššie uvedenom účte úložiska sa vytvoria zodpovedajúce priečinky. Dátové súbory a súbory model.json sa vytvoria a pridajú do príslušných podpriečinkov v závislosti od spusteného procesu.
+Ďalšie informácie o nastaveniach prostredia nájdete v článku [Vytvorenie nového prostredia](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Skopírovať konfiguráciu prostredia
 

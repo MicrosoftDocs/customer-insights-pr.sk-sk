@@ -1,32 +1,32 @@
 ---
 title: Obohatenie profilov spoločností pomocou obohatenia tretej strany Leadspace
 description: Všeobecné informácie o obohatení pomocou obohatenia tretej stranou Leadspace.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031722"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617473"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obohatenie profilov spoločnosti pomocou Leadspace (náhľad)
 
-Leadspace je spoločnosť zaoberajúca dátovou vedou, ktorá poskytuje platformu B2B Customer Data. Umožňuje zákazníkom so zjednotenými zákazníckymi profilmi pre spoločnosti obohacovať svoje údaje. Obohatenia zahŕňajú viaceré atribúty, ako sú veľkosť spoločnosti, umiestnenie, priemysel a ďalšie možnosti.
+Leadspace je spoločnosť zaoberajúca dátovou vedou, ktorá poskytuje platformu B2B Customer Data. Umožňuje prostrediam so zjednotenými profilmi zákazníkov na základe obchodných vzťahov obohatiť ich údaje. Obohaťte *Profily zákazníkov* s atribútmi, ako je veľkosť spoločnosti, umiestnenie alebo odvetvie. Obohaťte *Kontaktné profily* s atribútmi, ako sú titul, osoba alebo overenie e-mailom.
 
 ## <a name="prerequisites"></a>Predpoklady
 
 Na konfiguráciu Leadspace musia byť splnené nasledujúce predpoklady:
 
 - Máte aktívnu licenciu Leadspace.
-- Máte [zjednotené profily zákazníkov](customer-profiles.md) pre spoločnosti.
-- Pripojenie Leadspace už nakonfiguroval správca alebo máte povolenia [správcu](permissions.md#administrator) a „trvalý kľúč” (označovaný ako **Token vedúceho priestoru**). Kontakt [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) priamo pre podrobnosti o ich produkte.
+- Máte [zjednotené profily zákazníkov](customer-profiles.md) založené na obchodných vzťahoch.
+- Pripojenie Leadspace už nakonfiguroval správca alebo máte povolenia [správcu](permissions.md#administrator) a „trvalý kľúč” (označovaný ako **Token vedúceho priestoru**). Kontakt [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) priamo pre podrobnosti o ich produkte.
 
 ## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 
@@ -50,6 +50,10 @@ Na konfiguráciu Leadspace musia byť splnené nasledujúce predpoklady:
 
 1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
 
+1. Začiarknite políčko, ak máte *Kontaktné profily*, ktoré by ste chceli obohatiť. Prehľady cieľových skupín automaticky mapujú požadované polia.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Obohatenie záznamov kontaktov Leadspace.":::
+ 
 1. Zadajte názov obohatenia a vyberte **Uložiť obohatenie** po preskúmaní vašich možností.
 
 
@@ -81,7 +85,8 @@ Môžete získať podrobné zobrazenie každého obohateného profilu výberom *
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
-Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md) a [opatrenia](measures.md), a dokonca [exportujte údaje](export-destinations.md), aby ste mohli poskytovať svojim zákazníkom zážitky šité na mieru.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 
