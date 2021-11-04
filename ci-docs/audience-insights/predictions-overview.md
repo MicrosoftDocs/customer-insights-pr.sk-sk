@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618862"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673981"
 ---
 # <a name="predictions-overview"></a>Prehľad predikcií
 
@@ -25,14 +25,14 @@ Dynamics 365 Customer Insights prichádza s rôznymi možnosťami, ktoré využ�
 
 Najjednoduchší spôsob, ako začať s predikovaním údajov, sú preddefinované modely, ktoré sa často označujú ako vopred pripravené modely. Vyžadujú iba určité údaje a štruktúru na rýchle získanie štatistík. V súčasnosti sú k dispozícii nasledujúce modely: 
 
-# <a name="individual-customers-b2c"></a>[Individuálni zákazníci (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 
 - [Hodnota životnosti zákazníka](predict-customer-lifetime-value.md): Predikuje potenciálne príjmy zákazníka počas celej interakcie s podnikom.
 - [Odporúčanie produktu](predict-product-recommendation.md): Navrhuje množiny prediktívnych odporúčaní produktov na základe nákupného správania a zákazníkov s podobnými nákupnými vzormi.
 - [Odchod predplatiteľov](predict-subscription-churn.md): Predikuje, či hrozí odchod zákazníka, pretože už nebude používať predplatené produkty alebo služby vašej spoločnosti.
 - [Odchod transakcií](predict-transactional-churn.md): Predikujte, či si zákazník už v určitom časovom rámci viac nebude kupovať vaše produkty alebo služby.
 
-# <a name="business-accounts-b2b"></a>[Firemné obchodné vzťahy (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
 - [Odchod transakcií](predict-transactional-churn.md): Predikujte, či si zákazník už v určitom časovom rámci viac nebude kupovať vaše produkty alebo služby.
 

@@ -1,7 +1,7 @@
 ---
 title: Konfigurácia systému v prehľadoch cieľových skupín
 description: Prečítajte si viac informácií o systémových nastaveniach vo funkcii prehľadov o cieľových skupinách v Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035935"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651859"
 ---
 # <a name="system-configuration"></a>Konfigurácia systému
 
@@ -24,9 +24,9 @@ Stránka **Systém** obsahuje nasledujúce karty:
 - [Využitie rozhrania API](#api-usage-tab)
 - [Informácie](#about-tab)
 - [Všeobecné](#general-tab)
+- [Zabezpečenie](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Systémová stránka.](media/system-tabs.png "Systémová stránka")
+:::image type="content" source="media/system-tabs.png" alt-text="Karty nastavení na systémovej stránke.":::
 
 ## <a name="status-tab"></a>Karta stavu
 
@@ -84,9 +84,15 @@ Karta **Informácie** obsahuje **Zobrazovaný názov** vašej organizácie, akt�
 
 ## <a name="general-tab"></a>Karta Všeobecné
 
-Na karte **Všeobecné**, **Jazyk** a **Formát krajiny/regiónu** existujú dve možnosti.
+Jazyk a formát krajiny/regiónu môžete zmeniť na karte **Všeobecné**.
 
-Aplikácia [podporuje rad jazykov](supported-languages.md). Ak chcete zmeniť preferovaný jazyk, vyberte z rozbaľovacej ponuky **Jazyk**.
+Customer Insights [podporuje niekoľko jazykov](/dynamics365/get-started/availability). Aplikácia použije vaše jazykové preferencie na zobrazenie prvkov, ako sú ponuka, text štítkov a systémové správy vo vašom preferovanom jazyku.
+
+Importované údaje a informácie, ktoré ste zadali manuálne, sa neprekladajú.
+
+### <a name="update-the-settings"></a>Aktualizácia nastavení
+
+Ak chcete zmeniť preferovaný jazyk, vyberte z rozbaľovacej ponuky **Jazyk**.
 
 Ak chcete zmeniť preferované formátovanie pre dátumy, čas a čísla, použite rozbaľovaciu ponuku **Formát krajiny alebo oblasti**. Pod týmto poľom sa zobrazí ukážka formátovania. Keď zvolíte nový jazyk, systém automaticky navrhne výber.
 
@@ -105,6 +111,13 @@ Nájdite podrobnosti o použití API v reálnom čase a uvidíte, ktoré udalost
 
    Operácie, ktoré využívajú [príjem údajov v reálnom čase](real-time-data-ingestion.md) obsahujú tlačidlo so symbolom ďalekohľadu na zobrazenie použitia API v reálnom čase. Výberom tohto tlačidla otvoríte bočnú tablu obsahujúcu podrobnosti o použití rozhrania API v reálnom čase v aktuálnom prostredí.   
    Použite políčko **Zoskupiť podľa** na table **Využitie API v reálnom čase** a vyberte, ako najlepšie prezentovať svoje interakcie v reálnom čase. Údaje môžete zoskupiť podľa metódy API, kvalifikovaného názvu entity (prijatá entita), spôsobu vytvorenia (zdroj udalosti), výsledku (úspech alebo zlyhanie) alebo chybových kódov. Dáta sú k dispozícii ako graf histórie a ako tabuľka.
+
+## <a name="security-tab"></a>Karta Zabezpečenie
+
+Karta **Zabezpečenie** vám umožňuje prepojiť a spravovať svoj vlastný [trezor kľúčov Azure](/azure/key-vault/general/basic-concepts) pre prostredie.
+Vyhradený trezor kľúčov je možné použiť na fázovanie a používanie tajomstiev v hraniciach dodržiavania predpisov organizácie. Prehľady publika môžu použiť tajomstvá v Azure Key Vault na [konfiguráciu pripojení](connections.md) do systémov tretích strán.
+
+Viac informácií nájdete v časti [Prineste si vlastný trezor kľúčov Azure](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

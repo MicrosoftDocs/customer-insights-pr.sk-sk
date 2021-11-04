@@ -1,7 +1,7 @@
 ---
 title: Predikcia odchodov založená na transakciách
 description: Predikujte, či bude zákazník ohrozený, keď prestane nakupovať produkty alebo služby vašej spoločnosti.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643430"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673064"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predikcia odchodov založená na transakciách (verzia Preview)
 
@@ -28,6 +28,32 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
 > Vyskúšajte návod na predikciu odchodu založeného na transakciách pomocou vzorových údajov: [Vzorový sprievodca predikciou odchodov založených na transakciách (verzia Preview)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Predpoklady
+
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
+
+- Minimálne [povolenia prispievateľa](permissions.md) v Customer Insights.
+- Obchodné znalosti, aby ste pochopili, čo znamená pre vaše podnikanie riziko straty predplatného. Podporujeme definície odchodov založených na čase, čo znamená, že zákazník sa považuje za odídeného po určitom období bez nákupu.
+- Údaje o vašich transakciách/nákupoch a ich histórii:
+    - Identifikátory transakcií na odlíšenie nákupov/transakcií.
+    - Identifikátory zákazníkov, aby sa transakcie spojili s vašimi zákazníkmi.
+    - Dátumy transakčných udalostí, ktoré určujú dátumy, ku ktorým došlo k transakcii.
+    - Schéma sémantických údajov pre nákupy/transakcie vyžaduje nasledujúce informácie:
+        - **ID transakcie**: Jedinečný identifikátor nákupu alebo transakcie.
+        - **Dátum transakcie**: Dátum nákupu alebo transakcie.
+        - **Hodnota transakcie**: Mena/číselná hodnota čiastky transakcie/položky.
+        - (Voliteľné) **Jedinečné ID produktu**: ID zakúpeného produktu alebo služby, ak sú vaše údaje na úrovni riadkovej položky.
+        - (Voliteľné) **Či bola táto transakcia návratom**: Pole pravda/nepravda, ktoré identifikuje, či transakcia bola návratom alebo nie. Ak je **Hodnota transakcie** negatívna, tieto informácie použijeme tiež na odvodenie návratu.
+- (Nepovinné) Údaje o aktivitách zákazníka:
+    - Identifikátory aktivity na rozlíšenie aktivít rovnakého typu.
+    - Identifikátory zákazníka na mapovanie aktivít vašich zákazníkov.
+    - Informácie o činnosti obsahujúce názov a dátum aktivity.
+    - Schéma sémantických údajov pre aktivity zákazníka obsahuje:
+        - **Primárny kľúč:** Jedinečný identifikátor aktivity. Napríklad návšteva webu alebo záznam o použití, ktorý ukazuje, že zákazník vyskúšal vzorku vášho produktu.
+        - **Časová značka:** Dátum a čas udalosti identifikovaný primárnym kľúčom.
+        - **Udalosť:** Názov skupiny udalosti, ktorú chcete použiť. Napríklad pole s názvom „UserAction“ v obchode s potravinami môže byť kupónom, ktorý zákazník použije.
+        - **Podrobnosti:** Podrobné informácie o udalosti. Hodnota poľa kupónu môže byť napríklad pole s názvom „CouponValue“ v obchode s potravinami.
+
+# <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
 - Minimálne [povolenia prispievateľa](permissions.md) v Customer Insights.
 - Obchodné znalosti, aby ste pochopili, čo znamená pre vaše podnikanie riziko straty predplatného. Podporujeme definície odchodov založených na čase, čo znamená, že zákazník sa považuje za odídeného po určitom období bez nákupu.
@@ -51,7 +77,7 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
         - **Udalosť:** Názov skupiny udalosti, ktorú chcete použiť. Napríklad pole s názvom „UserAction“ v obchode s potravinami môže byť kupónom, ktorý zákazník použije.
         - **Podrobnosti:** Podrobné informácie o udalosti. Hodnota poľa kupónu môže byť napríklad pole s názvom „CouponValue“ v obchode s potravinami.
 - (Voliteľné) Údaje o vašich zákazníkoch:
-    - Tieto údaje by sa mali vyskytovať len zriedka a mali by byť zarovnané so statickejšími atribútmi, aby sa zaistilo, že model bude fungovať najlepšie.
+    - Tieto údaje by mali by byť zarovnané so statickejšími atribútmi, aby sa zaistilo, že model bude fungovať najlepšie.
     - Schéma sémantických údajov pre údaje o zákazníkoch obsahuje:
         - **CustomerID:** Jedinečný identifikátor zákazníka.
         - **Dátum vytvorenia:** Dátum, kedy bol zákazník pôvodne pridaný.
@@ -59,6 +85,9 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
         - **Krajina:** Krajina zákazníka.
         - **Odvetvie:** Typ odvetvia zákazníka. Napríklad pole s názvom „Odvetvie“ u pražiča kávy môže napríklad indikovať, či bol zákazník maloobchodný.
         - **Klasifikácia:** Kategorizácia zákazníka pre vašu firmu. Napríklad pole s názvom „ValueSegment“ u pražiča kávy môže byť vrstvou zákazníka na základe jeho veľkosti.
+
+---
+
 - Navrhované charakteristiky údajov:
     - Dostatočné historické údaje: Údaje o transakcii minimálne na dvojnásobok zvoleného časového okna. Ideálne dva až tri roky histórie transakcií. 
     - Viac nákupov na zákazníka: Ideálne aspoň dve transakcie pre zákazníka.
@@ -114,6 +143,32 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
 
 1. Vyberte **Ďalej**.
 
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Pridanie ďalších údajov (voliteľné)
+
+Nakonfigurujte vzťah medzi entitou aktivity zákazníkov a entitou *Zákazník*.
+
+1. Vyberte pole, ktoré identifikuje zákazníka v tabuľke aktivity zákazníkov. Môže to priamo súvisieť s primárnym ID zákazníka vašej entity *Zákazník*.
+
+1. Vyberte entitu, ktorá je vašou primárnou entitou *Zákazník*.
+
+1. Zadajte názov, ktoré opisuje vzťah.
+
+#### <a name="customer-activities"></a>Aktivity zákazníkov
+
+1. Voliteľne vyberte **Pridať údaje** pre **Aktivity zákazníkov**.
+
+1. Vyberte typ sémantickej aktivity, ktorý obsahuje údaje, ktoré by ste chceli použiť, a potom vyberte jednu alebo viac aktivít v sekcii **Aktivity**.
+
+1. Vyberte typ aktivity, ktorý sa zhoduje s typom aktivity zákazníka, ktorú konfigurujete. Vyberte **Vytvoriť nový** a vyberte dostupný typ aktivity alebo vytvorte nový typ.
+
+1. Vyberte **Ďalej** a potom **Uložiť**.
+
+1. Ak máte v úmysle zahrnúť ďalšie aktivity zákazníkov, zopakujte kroky uvedené vyššie.
+
+# <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Výber úrovne predikcie
 
 Väčšina predikcií sa vytvára na úrovni zákazníkov. V niektorých situáciách to nemusí byť dostatočne podrobné na vyriešenie potrieb vašej firmy. Túto funkciu môžete použiť na predikovanie odchodu napríklad pre pobočku zákazníka, nie pre zákazníka ako celok.
@@ -122,9 +177,9 @@ Väčšina predikcií sa vytvára na úrovni zákazníkov. V niektorých situác
 
 1. Rozbaľte entity, z ktorých by ste chceli vybrať sekundárnu úroveň, alebo použite pole filtra vyhľadávania na filtrovanie vybraných možností.
 
-1. Vyberte atribút, ktorý chcete použiť ako sekundárnu úroveň, a potom vyberte **Pridať**
+1. Vyberte atribút, ktorý chcete použiť ako sekundárnu úroveň, a potom vyberte **Pridať**.
 
-1. Vyberte **Ďalej**
+1. Vyberte **Ďalej**.
 
 > [!NOTE]
 > Entity dostupné v tejto sekcii sa zobrazujú, pretože majú vzťah k entite, ktorú ste vybrali v predchádzajúcej sekcii. Ak nevidíte entitu, ktorú chcete pridať, uistite sa, že má platný vzťah v položke **Vzťahy**. Pre túto konfiguráciu sú platné iba vzťahy typu jeden k jednému alebo mnohé k jednému.
@@ -159,7 +214,7 @@ Nakonfigurujte vzťah medzi entitou aktivity zákazníkov a entitou *Zákazník*
 
 1. Vyberte **Ďalej**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Poskytnite voliteľný zoznam referenčných obchodných vzťahov (iba firemné obchodné vzťahy)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Poskytnite voliteľný zoznam referenčných obchodných vzťahov
 
 Pridajte zoznam svojich firemných zákazníkov a obchodných vzťahov, ktoré chcete použiť ako referenčné hodnoty. Dostanete [podrobnosti pre tieto referenčné obchodné vzťahy](#review-a-prediction-status-and-results) vrátane skóre ich odchodov a najvplyvnejších vlastností, ktoré ovplyvnili ich predikciu odchodov.
 
@@ -168,6 +223,8 @@ Pridajte zoznam svojich firemných zákazníkov a obchodných vzťahov, ktoré c
 1. Vyberte zákazníkov, ktorí slúžia ako referenční.
 
 1. Na pokračovanie zvoľte možnosť **Ďalej**.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Nastavenie plánu a kontrola konfigurácie
 
@@ -201,6 +258,25 @@ Pridajte zoznam svojich firemných zákazníkov a obchodných vzťahov, ktoré c
 1. Vyberte zvislé tri bodky vedľa predikcie, pre ktorú chcete skontrolovať výsledky, a vyberte **Zobraziť**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Zobrazením ovládacieho prvku zobrazíte výsledky predikcie.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
+
+1. Na stránke s výsledkami sú tri základné sekcie údajov:
+   - **Výkon tréningového modelu**: A, B alebo C sú možné skóre. Toto skóre označuje výkon predikcie a môže vám pomôcť pri rozhodovaní o použití výsledkov uložených vo výstupnej entite. Skóre sa určujú na základe nasledujúcich pravidiel: 
+        - **A** keď model presne predikoval najmenej 50 % celkových predikcií a keď percento presných predikcií pre zákazníkov, ktorí odišli, je väčšie ako základná miera najmenej o 10 %.
+            
+        - **B** keď model presne predikoval najmenej 50 % celkových predikcií a keď percento presných predikcií pre zákazníkov, ktorí odišli, je väčšie ako základná miera o hodnotu do 10 %.
+            
+        - **C** keď model presne predikoval menej ako 50 % celkových predikcií, alebo keď percento presných predikcií pre zákazníkov, ktorí odišli, je menej ako základná miera.
+               
+        - **Základná miera** použije vstup časového rozsahu predikcie pre model (napríklad jeden rok) a model vytvorí rôzne zlomky času tak, že ho bude deliť 2, kým nedosiahne jeden mesiac alebo menej. Pomocou týchto zlomkov vytvára obchodné pravidlo pre zákazníkov, ktorí si v tomto časovom rámci nenakúpili. Títo zákazníci sa považujú za odídených. Ako model základnej miery je vybrané obchodné pravidlo založené na čase s najvyššou schopnosťou predpovedať, kto pravdepodobne odíde.
+            
+    - **Pravdepodobnosť odchodu (počet zákazníkov)**: Skupiny zákazníkov na základe ich predpokladaného rizika odchodu. Tieto údaje vám môžu pomôcť neskôr, ak chcete vytvoriť segment zákazníkov s vysokým rizikom straty. Takéto segmenty pomáhajú pochopiť, kde by malo byť vaše obmedzenie pre členstvo v segmente.
+       
+    - **Najvýznamnejšie faktory**: Pri vytváraní vašej predikcie sa zohľadňuje veľa faktorov. Každý z faktorov má svoju dôležitosť vypočítanú pre agregované predpovede, ktoré model vytvára. Tieto faktory môžete použiť na overenie svojich výsledkov predikcie, alebo tieto informácie môžete použiť neskôr [na vytvorenie segmentov](segments.md), ktoré by mohlo pomôcť ovplyvniť riziko odchodu zákazníkov.
+
+
+# <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
 1. Na stránke s výsledkami sú tri základné sekcie údajov:
    - **Výkon tréningového modelu**: A, B alebo C sú možné skóre. Toto skóre označuje výkon predikcie a môže vám pomôcť pri rozhodovaní o použití výsledkov uložených vo výstupnej entite. Skóre sa určujú na základe nasledujúcich pravidiel: 
@@ -237,6 +313,11 @@ Pridajte zoznam svojich firemných zákazníkov a obchodných vzťahov, ktoré c
        Keď predikujete odchod na úrovni obchodného vzťahu, všetky obchodné vzťahy sa zohľadňujú pri odvodení priemerných hodnôt funkcií pre segmenty odchodu. V prípade predikcií odchodu na sekundárnej úrovni pre každý obchodný vzťah závisí odvodenie segmentov odchodu od sekundárnej úrovne položky vybratej na bočnej table. Ak má napríklad položka sekundárnu úroveň kategórie produktu = kancelárske potreby, potom sa pri odvodzovaní priemerných hodnôt funkcií pre segmenty odchodu zohľadňujú iba položky, ktoré majú ako kategóriu produktov kancelárske potreby. Táto logika sa používa na zaistenie spravodlivého porovnania hodnôt vlastností položky s priemernými hodnotami v segmentoch s nízkym, stredným a vysokým rizikom odchodu.
 
        V niektorých prípadoch je priemerná hodnota segmentov nízkeho, stredného alebo vysokého rizika odchodu prázdna alebo nie je k dispozícii, pretože na základe vyššie uvedenej definície neexistujú žiadne položky, ktoré by patrili do zodpovedajúcich segmentov odchodu.
+       
+       > [!NOTE]
+       > Interpretácia hodnôt v stĺpcoch priemerná nízka, stredná a vysoká je odlišná pre kategorické prvky, ako je krajina alebo odvetvie. Keďže pojem „priemerná“ hodnota funkcie sa nevzťahuje na kategorické funkcie, hodnoty v týchto stĺpcoch predstavujú podiel zákazníkov v segmentoch s nízkou, strednou alebo vysokou mierou odchodu zákazníkov, ktorí majú rovnakú hodnotu kategorickej funkcie v porovnaní s položkou vybranou na bočnom paneli.
+
+---
 
 ## <a name="manage-predictions"></a>Spravovanie predikcií
 

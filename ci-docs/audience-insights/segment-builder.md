@@ -1,7 +1,7 @@
 ---
 title: Vytvárajte segmenty pomocou zostavovača segmentov
 description: Vytvorenie segmentov zákazníkov na ich zoskupenie na základe rôznych atribútov.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623048"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673569"
 ---
 # <a name="create-segments"></a>Vytvorenie segmentov
 
@@ -23,6 +23,7 @@ Definujte komplexné filtre okolo zjednotenej entity zákazníka a jej súvisiac
 > [!TIP]
 > - Rýchle segmenty sú podporované iba v prostrediach pre **individuálnych zákazníkov**.    
 > - Segmenty založené na **individuálnych zákazníkoch** automaticky zahŕňajú dostupné kontaktné informácie pre členov segmentu. V prostrediach pre **firemné obchodné vzťahy** sú segmenty založené na obchodných vzťahoch (spoločnostiach alebo dcérskych spoločnostiach). Ak chcete zahrnúť kontaktné informácie do segmentu, použite funkciu **Atribúty projektu** v nástroji na tvorbu segmentov.
+>    - Uistite sa, že zdroje kontaktných údajov sú [sémanticky mapované na entitu ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Zostavovač segmentov
 
@@ -52,7 +53,7 @@ Vyššie uvedený príklad ilustruje schopnosť segmentácie. Definovali sme seg
 
 Existuje niekoľko spôsobov, ako vytvoriť nový segment. Táto časť popisuje, ako vytvoriť svoj vlastný segment úplne od začiatku. Môžete tiež vytvoriť *rýchly segment* na základe existujúcich entít alebo využite modely strojového učenia na získanie *navrhovaných segmentov*. Ďalšie informácie získate v [prehľade segmentov](segments.md).
 
-Pri vytváraní segmentu môžete uložiť koncept. V štádiu konceptu je segment uložený ako neaktívny segment. Keď dokončíte konfiguráciu segmentu, spustením ho aktivujte. Prípadne môžete **Aktivovať** segment zo stránky *Všetky segmenty*.
+Pri vytváraní segmentu môžete uložiť koncept. V štádiu konceptu je segment uložený ako neaktívny segment. Keď dokončíte konfiguráciu segmentu, spustením ho aktivujte. Môžete tiež **Aktivovať** segment zo stránky **Všetky segmenty**.
 
 1. Prejdite na stránku **Segmenty**.
 
@@ -86,17 +87,25 @@ Pri vytváraní segmentu môžete uložiť koncept. V štádiu konceptu je segme
 
    Ak použijete operátor ALEBO, je potrebné, aby byť všetky podmienky boli založené na entitách zahrnutých v ceste vzťahu.
 
-   - Je možné vytvoriť viac pravidiel a vytvoriť tak rôzne súpravy záznamov o zákazníkoch. Skupiny môžete skombinovať tak, aby zahŕňali zákazníkov požadovaných pre váš obchodný prípad. Ak chcete vytvoriť nové pravidlo, vyberte možnosť **Pridať pravidlo**. Konkrétne, ak nie je možné zahrnúť entitu do pravidla pre zadanú cestu vzťahu, je potrebné vytvoriť nové pravidlo na výber atribútov z neho.
+   - Je možné vytvoriť viac pravidiel a vytvoriť tak rôzne súpravy záznamov o zákazníkoch. Skupiny môžete skombinovať tak, aby zahŕňali zákazníkov požadovaných pre váš obchodný prípad. Ak chcete vytvoriť nové pravidlo, vyberte možnosť **Pridať pravidlo**. Konkrétne, ak nemôžete zahrnúť entitu do pravidla z dôvodu zadanej cesty vzťahu, musíte vytvoriť nové pravidlo, aby ste z neho vybrali atribúty.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Pridajte nové pravidlo do segmentu a vyberte nastavený operátor.":::
 
    - Vyberte jedného z nastavených operátorov: **Zjednotiť**, **Prienik** alebo **Okrem**.
 
       - **Zjednotenie** zjednocuje obe skupiny.
-      - **Prienik** prekrýva obe skupiny. Iba údaje, ktoré *sú spoločné* pre obe skupiny, sa zachovávajú v zjednotenej skupine.
-      - Možnosť **Okrem** kombinuje dve skupiny. Zachovajú sa iba údaje v skupine A, ktoré *nie sú spoločné* s údajmi v skupine B.
+      - **Prienik** prekrýva obe skupiny. Iba údaje, ktoré *sú bežné* pre obe skupiny, zostávajú v zjednotenej skupine.
+      - Možnosť **Okrem** kombinuje dve skupiny. Iba údaje v skupine A, ktoré *nie je bežné* pre údaje v skupine B, sa uchovajú.
 
-1. Predvolene segmenty vytvoria výstupnú entitu, ktorá obsahuje všetky atribúty profilov zákazníkov zodpovedajúcich definovaným filtrom. Ak je segment založený na iných entitách ako entita *Zákazník*, môžete do výstupnej entity pridať ďalšie atribúty z týchto entít. Stlačte možnosť **Atribúty projektu** na výber atribútov, ktoré sa pripoja k výstupnej entite.  
+1. Predvolene segmenty vytvoria výstupnú entitu, ktorá obsahuje všetky atribúty profilov zákazníkov zodpovedajúcich definovaným filtrom. Ak je segment založený na iných entitách ako entita *Zákazník*, môžete do výstupnej entity pridať ďalšie atribúty z týchto entít. Stlačte možnosť **Atribúty projektu** na výber atribútov, ktoré sa pripoja k výstupnej entite. 
+
+   > [!IMPORTANT]
+   > V prípade segmentov založených na firemných obchodných vzťahoch je potrebné do segmentu zahrnúť podrobnosti o jednom alebo viacerých kontaktoch každého obchodného vzťahu z entity *ContactProfile*, aby bolo možné segment aktivovať alebo exportovať do destinácií, ktoré vyžadujú kontaktné informácie. Pre viac informácií o entite *ContactProfile* si prečítajte [Sémantické mapovania](semantic-mappings.md).
+   > Vzorový výstup pre segment založený na obchodných vzťahoch s projektovanými atribútmi kontaktov by mohol vyzerať takto: 
+   >
+   > |Identifikátor  |Názov obchodného vzťahu  |Výnos  |Meno kontaktu  | Rola kontaktu|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100 tis. | [Abbie Moss, Ruth Soto]  | [CEO, manažér pre obstarávanie]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Príklad projektovaných atribútov vybratých na bočnej table, ktoré sa majú pridať do výstupnej entity.":::
   
@@ -107,13 +116,14 @@ Pri vytváraní segmentu môžete uložiť koncept. V štádiu konceptu je segme
    > - Ak je atribút, ktorý chcete premietať, vzdialený viac ako jeden skok od entity *Zákazník*, ako je definované vzťahom, tento atribút by mal byť použitý v každom pravidle dotazu segmentu, ktorý vytvárate. 
    > - Ak je atribút, ktorý chcete premietať, len na jeden skok od entity *Zákazník*, tento atribút nemusí byť prítomný v každom pravidle dotazu segmentu, ktorý vytvárate. 
    > - **Premietané atribúty** sa zohľadňujú pri použití množinových operátorov.
-   > - V prípade segmentov založených na firemných obchodných vzťahoch je potrebné do segmentu zahrnúť podrobnosti o jednom alebo viacerých kontaktoch každého obchodného vzťahu, aby bolo možné segment aktivovať alebo exportovať do destinácií, ktoré vyžadujú kontaktné informácie.
 
 1. Pred uložením a spustením segmentu vyberte položku **Upraviť podrobnosti** vedľa názvu segmentu. Zadajte názov pre segment a aktualizujte navrhovaný **Názov výstupnej entity** pre daný segment. K segmentu môžete pridať aj popis.
 
 1. Vyberte **Spustiť** na uloženie segmentu, aktivujte ho a začnite spracovávať svoj segment na základe všetkých pravidiel a podmienok. V opačnom prípade bude uložený ako neaktívny segment.
-
+   
 1. Ak sa chcete vrátiť späť na stránku **Segmenty**, vyberte **Späť na segmenty**.
+
+1. V predvolenom nastavení je segment vytvorený ako dynamický segment. Znamená to, že segment sa obnovuje počas obnovovania systému. Ak chcete [zastaviť automatické obnovenie](segments.md#manage-existing-segments), vyberte segment a následne možnosť **Nastaviť ako statické**. Statické segmenty je možné [obnoviť manuálne](segments.md#refresh-segments) kedykoľvek.
 
 > [!TIP]
 > - Pri nastavovaní operátorov pre podmienky zostavovač segmentov nenavrhne platné hodnoty z entít. Môžete prejsť do časti **Údaje** > **Entity** a stiahnuť si údaje entity, aby ste zistili, ktoré hodnoty sú dostupné.

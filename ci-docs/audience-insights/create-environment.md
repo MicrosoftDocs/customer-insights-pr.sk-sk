@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645728"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673410"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Vytvorenie prostredia v prehľadoch cieľových skupín
 
@@ -46,7 +46,7 @@ V kroku **Základné informácie** zvoľte, či chcete vytvoriť prostredie od z
 
 Uveďte nasledujúce podrobnosti:
    - **Názov**: Názov tohto prostredia. Toto pole je už vyplnené, ak ste skopírovali existujúce prostredie, ale môžete ho zmeniť.
-   - **Vyberte si svoje podnikanie**: Vyberte primárnu cieľovú skupinu pre nové prostredie. Môžete pracovať s individuálnymi zákazníkmi (B2C) resp. [firemnými obchodnými vzťahmi](work-with-business-accounts.md) (B2B).
+   - **Vyberte si svoje podnikanie**: Vyberte primárnu cieľovú skupinu pre nové prostredie. Môžete pracovať s jednotlivými spotrebiteľmi (firma a spotrebiteľ) resp. s [podnikateľskými obchodnými vzťahmi](work-with-business-accounts.md) (firma a firma).
    - **Typ**: Vyberte, či chcete vytvoriť výrobné alebo testovacie prostredie. Testovacie prostredia neumožňujú plánované obnovenie údajov a sú určené na predbežnú implementáciu a testovanie. Izolované prostredia používajú rovnaké primárne publikum ako produkčné prostredie, ktoré je aktuálne vybraté.
    - **Región**: Región, v ktorom je služba nasadená a hosťovaná.
 
@@ -66,7 +66,7 @@ Uložením údajov do Azure Data Lake Storage súhlasíte s tým, že údaje bud
 > - Účty Azure Data Lake Storage z rovnakej oblasti Azure, ktorú ste vybrali pri vytváraní prostredia.
 > - Účty Azure Data Lake Storage, ktoré majú povolený *hierarchický priestor mien*.
 
-V prípade možnosti Azure Data Lake Storage si môžete vybrať medzi voľbou založenou na zdrojoch a voľbou autentifikácie založenou na predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Názov **kontajnera** bude `customerinsights` a nedá sa zmeniť.
+V prípade možnosti Azure Data Lake Storage si môžete vybrať medzi voľbou založenou na zdrojoch a voľbou autentifikácie založenou na predplatnom. Viac informácií nájdete v časti [Pripojte sa účtu Azure Data Lake Storage pomocou objektu služby Azure](connect-service-principal.md). Názov **kontajnera** bude `customerinsights` a nedá sa zmeniť.
 
 Keď sú systémové procesy, ako napríklad príjem údajov, dokončené, systém vytvorí zodpovedajúce priečinky vo vami zadanom účte úložiska. Vytvoria sa dátové súbory a súbory *model.json*, ktoré sa pridajú do priečinkov podľa názvu procesu.
 
@@ -76,14 +76,14 @@ Ak vytvoríte viacero prostredí Customer Insights a rozhodnete sa uložiť výs
    
 Krok **Microsoft Dataverse** vám umožní prepojiť Customer Insights s vašim prostredím Dataverse.
 
-Ak chcete použiť [pripravené modely predikcie](predictions-overview.md#out-of-box-models), nakonfigurujte zdieľanie údajov s Dataverse. Alebo môžete povoliť príjem údajov z lokálnych zdrojov údajov poskytnutím adresy URL prostredia Microsoft Dataverse, ktoré spravuje vaša organizácia. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s so spravovaným Dataverse Data Lake.
+Ak chcete použiť [pripravené modely predikcie](predictions-overview.md#out-of-box-models), nakonfigurujte zdieľanie údajov s Dataverse. Alebo môžete povoliť príjem údajov z lokálnych zdrojov údajov poskytnutím adresy URL prostredia Microsoft Dataverse, ktoré spravuje vaša organizácia. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s dátovým jazerom spravovaným s Dataverse.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights nepodporuje nasledujúce scenáre zdieľania údajov:
-> - Ak uložíte všetky údaje do vlastného Azure Data Lake Storage, nebudete môcť povoliť zdieľanie údajov pomocou Data Lake spravovaného prostredníctvom Microsoft Dataverse.
-> - Ak povolíte zdieľanie údajov pomocou Data Lake spravovaného prostredníctvom Microsoft Dataverse, nebudete môcť [vytvárať predikované alebo chýbajúce hodnoty v entite](predictions.md).
+> - Ak uložíte všetky údaje do vlastného Azure Data Lake Storage, nebudete môcť povoliť zdieľanie údajov pomocou dátového jazera spravovaného prostredníctvom Dataverse.
+> - Ak povolíte zdieľanie údajov pomocou Dataverse, nebudete môcť [vytvárať predikované ani chýbajúce hodnoty v entite](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Krok č. 4: Dokončenie nastavení
 
@@ -93,10 +93,10 @@ Väčšinu nastavení môžete tiež zmeniť neskôr. Ďalšie informácie nájd
 
 ## <a name="work-with-your-new-environment"></a>Pracujte vo svojom novom prostredí
 
-Prečítajte si nasledujúce články, v ktorých nájdete informácie, ktoré vám môžu pomôcť začať konfigurovať službu Customer Insights. 
+Prečítajte si nasledujúce články, ktoré vám pomôžu začať s konfiguráciou Customer Insights: 
 
 - [Pridajte ďalších používateľov a priraďte povolenia](permissions.md).
 - [Prijmite zdroje údajov](data-sources.md) a spusťte ich prostredníctvom [procesu zjednocovania údajov](data-unification.md), aby ste získali [jednotné zákaznícke profily](customer-profiles.md).
 - [Obohaťte zjednotené zákaznícke profily](enrichment-hub.md) alebo [spusťte prediktívne modely](predictions-overview.md).
-- [Vytvorte segmenty](segments.md) na zoskupenie zákazníkov a KPI na kontrolu [mier](measures.md).
+- [Vytvorte segmenty](segments.md) skupinovým zákazníkom a [miery](measures.md) na kontrolu KPI.
 - [Nastavte spojenia](connections.md) a [exporty](export-destinations.md) na spracovanie podmnožín vašich údajov v iných aplikáciách.

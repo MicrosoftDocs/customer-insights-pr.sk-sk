@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623152"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673342"
 ---
 # <a name="exports-preview-overview"></a>Prehľad exportov (verzia Preview)
 
@@ -32,14 +32,14 @@ Existujú dva hlavné typy exportov:
 
 ### <a name="export-segments"></a>Segmenty exportu
 
-**Export segmentov v prostrediach pre firemné obchodné vzťahy (B2B) alebo individuálnych zákazníkov (B2C)**  
-Väčšina možností exportu podporuje oba typy prostredí. Export segmentov do rôznych cieľových systémov má špecifické požiadavky. Člen segmentu, profil zákazníka spravidla obsahuje kontaktné informácie. Aj keď to zvyčajne platí pre segmenty postavené na individuálnych zákazníkoch (B2C), nemusí to nevyhnutne platiť pre segmenty založené na firemných obchodných vzťahoch (B2B). 
+**Export segmentov v prostrediach pre firemné obchodné vzťahy (firma a firma) alebo individuálnych spotrebiteľov (firma a spotrebiteľ)**  
+Väčšina možností exportu podporuje oba typy prostredí. Export segmentov do rôznych cieľových systémov má špecifické požiadavky. Člen segmentu, profil zákazníka spravidla obsahuje kontaktné informácie. Aj keď to zvyčajne platí pre segmenty postavené na individuálnych spotrebiteľoch (firma a spotrebiteľ), nemusí to nevyhnutne platiť pre segmenty založené na firemných obchodných vzťahoch (firma a firma). 
 
-**Prostredia exportu segmentov pre firemné obchodné vzťahy (B2B)**  
+**Prostredia exportu segmentov pre firemné obchodné vzťahy (firma a firma)**  
 - Segmenty v kontexte prostredí pre firemné obchodné vzťahy sú založené na entite *obchodný vzťah*. Na export segmentov obchodného vzťahu tak, ako sú, musí cieľový systém podporovať čisté segmenty obchodných vzťahov. To je prípad [LinkedIn](export-linkedin-ads.md), keď si vyberiete možnosť **spoločnosť** pri definovaní exportu.
 - Všetky ostatné cieľové systémy vyžadujú polia od entity kontaktu. Aby ste zaistili, že segmenty obchodného vzťahu môžu získavať údaje zo súvisiacich kontaktov, definícia vášho segmentu musí premietať atribúty entity kontaktu. Prečítajte si viac o tom, ako [konfigurovať segmenty a atribúty projektu](segment-builder.md).
 
-**Exporty segmentov v prostrediach pre jednotlivých zákazníkov (B2C)**  
+**Exporty segmentov v prostrediach pre jednotlivých spotrebiteľov (firma a spotrebiteľ)**  
 - Segmenty v kontexte prostredí pre jednotlivých zákazníkov sú založené na entite *zjednotený profil zákazníka*. Exportovať je možné každý segment, ktorý spĺňa požiadavky cieľových systémov (napríklad e -mailová adresa).
 
 **Limity exportu segmentov**  

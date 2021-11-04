@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623051"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673522"
 ---
 # <a name="define-and-manage-measures"></a>Definovanie a spravovanie mier
 
@@ -28,7 +28,7 @@ Použite nástroj na tvorbu mier na plánovanie obchodných aktivít dotazovaní
 
 Táto sekcia vás prevedie vytvorením novej miery od nuly. Mieru môžete vytvoriť pomocou atribútov údajov z údajových entít, ktoré majú nastavený vzťah na prepojenie s entitou zjednoteného profilu zákazníka.
 
-# <a name="individual-customers-b2c"></a>[Individuálni zákazníci (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 
 1. V prehľadoch cieľových skupín prejdite na **Miery**.
 
@@ -92,7 +92,7 @@ Táto sekcia vás prevedie vytvorením novej miery od nuly. Mieru môžete vytvo
 
 1. Prechodom na možnosť **Miery** zobrazíte novovytvorenú mieru v zozname.
 
-# <a name="business-accounts-b2b"></a>[Firemné obchodné vzťahy (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
 1. V prehľadoch cieľových skupín prejdite na **Miery**.
 
@@ -164,7 +164,7 @@ Táto sekcia vás prevedie vytvorením novej miery od nuly. Mieru môžete vytvo
 
 Na ich vytvorenie môžete použiť preddefinované šablóny bežne používaných meraní. Podrobné popisy šablón a sprievodca vám pomôže s efektívnym vytváraním opatrení. Šablóny vychádzajú z mapovaných údajov z entity *Zjednotená aktivita*. Uistite sa teda, že ste nakonfigurovali [aktivity zákazníkov](activities.md) pred vytvorením merania zo šablóny.
 
-# <a name="individual-customers-b2c"></a>[Individuálni zákazníci (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 
 Na ich vytvorenie môžete použiť preddefinované šablóny bežne používaných meraní. Podrobné popisy šablón a sprievodca vám pomôže s efektívnym vytváraním opatrení. Šablóny vychádzajú z mapovaných údajov z entity *Zjednotená aktivita*. Uistite sa teda, že ste nakonfigurovali [aktivity zákazníkov](activities.md) pred vytvorením merania zo šablóny.
 
@@ -212,7 +212,7 @@ Nasledujúci postup popisuje kroky na vytvorenie nového opatrenia pomocou šabl
 
 1. Teraz môžete stlačiť možnosť **Spustiť** na výpočet výsledkov opatrenia. Ak ju chcete neskôr spresniť, stlačte možnosť **Uložiť koncept**.
 
-# <a name="business-accounts-b2b"></a>[Firemné obchodné vzťahy (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
 Táto funkcia je k dispozícii iba pre miery vytvorené v prostrediach s individuálnymi zákazníkmi ako primárnym cieľovým publikom.
 

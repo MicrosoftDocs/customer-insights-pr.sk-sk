@@ -1,7 +1,7 @@
 ---
 title: Segmenty navrhované na základe strojového učenia
 description: Nechajte strojové učenie pomôcť vám nájsť nové a zaujímavé segmenty založené na atribútoch zákazníka.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028379"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673202"
 ---
 # <a name="suggested-segments-preview"></a>Navrhované segmenty (ukážka)
 
@@ -23,7 +23,7 @@ Objavte zaujímavé segmenty svojich zákazníkov pomocou modelu AI. Táto funkc
 > [!NOTE]
 > Funkcia navrhovaných segmentov používa automatizované prostriedky na vyhodnotenie údajov a na vytváranie predikcií na základe týchto údajov, a preto je možné ju použiť ako metódu profilovania, pretože tento pojem je definovaný všeobecným nariadením o ochrane údajov („GDPR“). Vaše použitie tejto funkcie na spracovanie údajov môže podliehať GDPR alebo iným zákonom alebo predpisom. Ste zodpovední za zabezpečenie toho, že vaše používanie služby Dynamics 365 Customer Insights vrátane tejto funkcie bude v súlade so všetkými platnými zákonmi a nariadeniami vrátane zákonov týkajúcich sa ochrany súkromia, osobných údajov, biometrických údajov, ochrany údajov a dôvernosti komunikácií.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Stránka Navrhované segmenty v nástroji Customer Insights, ktorá zobrazuje podrobnosti návrhu na bočnej table.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Stránka s navrhovanými segmentmi, ktorá zobrazuje podrobnosti návrhu na bočnej table.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Navrhované segmenty na zlepšenie vašich KPI
 
@@ -49,7 +49,7 @@ Návrhy segmentov sa líšia, ak ako primárny atribút vyberiete číselný atr
 
 S číselným atribútom ako *ročný príjem* alebo *členské obdobie* ako primárnym atribútom systém navrhuje segmenty, ktoré majú vyššiu alebo nižšiu priemernú hodnotu číselného atribútu v porovnaní so všetkými zákazníkmi.
 
-Kategorický atribút ako *spokojnosť zákazníkov* ako primárny atribút vedie k navrhovaným segmentom, ktoré majú vyššie alebo nižšie percento zákazníkov patriacich do konkrétnej kategórie v porovnaní s percentom všetkých zákazníkov patriacich do tej istej kategórie. Napríklad *spokojnosť zákazníkov* je vybraná ako primárny atribút a skladá sa z troch kategórií (*Nízka*, *Stredná* a *Vysoká*). Pre každú kategóriu sa navrhnú segmenty, ktoré majú výrazne vyššie alebo nižšie percento zákazníkov patriacich do tejto kategórie v porovnaní s podielom všetkých zákazníkov v rovnakej kategórii. Ak má 22 % všetkých zákazníkov *Vysokú* spokojnosť, potom iba segmenty, ktoré majú podstatne vyšší alebo nižší podiel zákazníkov so spokojnosťou *Vysoká* v porovnaní s 22 % budú navrhnuté pre túto kategóriu. Podobne platí, že budú navrhnuté segmenty pre každú z ďalších kategórií (*Nízka* a *Stredná*), ak sú štatisticky významné.
+Kategorický atribút ako *spokojnosť zákazníkov* ako primárny atribút vedie k navrhovaným segmentom, ktoré majú vyššie alebo nižšie percento zákazníkov patriacich do konkrétnej kategórie v porovnaní s percentom všetkých zákazníkov patriacich do tej istej kategórie. Napríklad *spokojnosť zákazníkov* je vybraná ako primárny atribút a skladá sa z troch kategórií (*Nízka*, *Stredná* a *Vysoká*). Pre každú kategóriu budú navrhnuté segmenty, ktoré majú vyššie alebo nižšie percento zákazníkov patriacich do danej kategórie v porovnaní s podielom všetkých zákazníkov v rovnakej kategórii. Ak má 22 % všetkých zákazníkov *Vysokú* spokojnosť, potom len segmenty, ktoré majú vyšší alebo nižší podiel zákazníkov s *Vysokou* spokojnosťou v porovnaní s 22 % budú navrhnuté pre túto kategóriu. Podobne platí, že budú navrhnuté segmenty pre každú z ďalších kategórií (*Nízka* a *Stredná*), ak sú štatisticky významné.
 
 > [!NOTE]
 > V súčasnosti podporujeme iba primárne kategorické atribúty, ktoré majú až 10 kategórií. Ak chcete vidieť návrhy segmentov založené na primárnom atribúte s viac ako 10 kategóriami, odporúčame vám zoskupiť niektoré z kategórií, aby ste znížili počet kategórií na 10 alebo menej. Toto obmedzenie sa vzťahuje iba na primárne atribúty. Na ovplyvnenie kategorických atribútov v súčasnosti podporujeme maximálne 100 kategórií.
@@ -77,7 +77,7 @@ Kategorický atribút ako *spokojnosť zákazníkov* ako primárny atribút vedi
 
 Keď model AI vygeneruje návrhy, nájdete ich uvedené v zozname **Segmenty** > **Návrhy (ukážka)**.
  
-Vyberte navrhovaný segment a prezrite si podrobnosti tohto návrhu vrátane porovnania priemernej hodnoty a počtu členov segmentu. Môžete tiež skontrolovať hodnoty atribútov alebo pravidlá, ktoré sa model AI naučil, aby navrhol vybraný segment.
+Vyberte navrhovaný segment a pozrite si podrobnosti tohto návrhu. Môžete tiež skontrolovať hodnoty atribútov alebo pravidlá, ktoré sa model AI naučil, aby navrhol vybraný segment.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Uloženie návrhu ako segmentu
 

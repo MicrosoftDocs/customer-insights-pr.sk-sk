@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606131"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673883"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
@@ -166,7 +166,7 @@ Aktualizácie z marca 2021 obsahujú niekoľko funkcií, vylepšenia výkonu a o
 - **Export segmentov do Constant Contact** Naše cieľové miesta exportu sme rozšírili o Constant Contact. Teraz môžete exportovať segmenty z Customer Insights do zoznamov Constant Contact do zoznamov monitorov kampaní a použiť ich ako základ pre svoje marketingové kampane.   
    Ďalšie informácie nájdete v článku [Export do Constant Contact](export-constant-contact.md).
 
-- **Export segmentov do RollWorks** Naše cieľové miesta exportu sme rozšírili o RollWorks. Teraz môžete exportovať segmenty z Customer Insights do cieľovej skupiny RollWorks do zoznamov monitorov kampaní a použiť ich ako základ pre svoje reklamy B2B.    
+- **Export segmentov do RollWorks** Naše cieľové miesta exportu sme rozšírili o RollWorks. Teraz môžete exportovať segmenty z Customer Insights do cieľových skupín RollWorks a použiť ich ako základ pre vašu reklamu v rámci scenára „firma a firma“.    
    Ďalšie informácie nájdete v článku [Export do RollWorks](export-rollworks.md).
 
 - **Export segmentov do Snapchat** Naše cieľové miesta exportu sme rozšírili o Snapchat. Teraz môžete exportovať segmenty z Customer Insights do cieľovej skupiny Snapchat do zoznamov monitorov kampaní a použiť ich ako základ pre svoje reklamy.     
