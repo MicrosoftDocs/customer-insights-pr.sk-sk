@@ -1,7 +1,7 @@
 ---
 title: Entity a množiny údajov
 description: Zobrazujte údaje na stránke Entity.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033834"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732100"
 ---
 # <a name="entities-in-audience-insights"></a>Entity v prehľadoch cieľových skupín
 
-Po [nakonfigurovaní zdrojov údajov](data-sources.md) prejdite na stránku **Entity** a vyhodnoťte kvalitu údajov, ktoré boli prijaté. Entity sa považujú za množiny údajov. Ďalšie funkcie služby Dynamics 365 Customer Insights súvisia s týmito entitami. Ich dôkladná revízia vám môže pomôcť overiť výstup týchto funkcií.
+Po [nakonfigurovaní zdrojov údajov](data-sources.md) prejdite na stránku **Entity** a vyhodnoťte kvalitu údajov, ktoré boli prijaté. Entity sa považujú za množiny údajov. Okolo týchto entít je postavených viacero možností Dynamics 365 Customer Insights. Ich dôkladná revízia vám môže pomôcť overiť výstup týchto funkcií.
 
 Stránka **Entity** uvádza entity a obsahuje niekoľko stĺpcov:
 
@@ -26,9 +26,10 @@ Stránka **Entity** uvádza entity a obsahuje niekoľko stĺpcov:
 - **Zdroj**: Typ zdroja údajov, ktorý prijímala entita
 - **Autor**: Meno osoby, ktorá vytvorila entitu
 - **Vytvorené**: Dátum a čas vytvorenia entity
-- **Aktualizoval používateľ**: Meno osoby, ktorá aktualizovala entitu
-- **Naposledy aktualizované**: Dátum a čas poslednej aktualizácie entity
-- **Posledné obnovenie**: Dátum a čas posledného obnovenia údajov
+- **Aktualizované** : Meno osoby, ktorá aktualizovala entitu
+- **Postavenie** : Podrobnosti o poslednej aktualizácii entity
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Preskúmanie údajov konkrétnej entity
 

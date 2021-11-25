@@ -1,7 +1,7 @@
 ---
 title: Vyhľadávanie a filtrovanie profilov zákazníkov
 description: Rýchlo vyhľadajte informácie o zjednotených profiloch zákazníkov a filtrujte konkrétne atribúty.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
-ms.translationtype: HT
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470034"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732053"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profily zákazníkov: Index vyhľadávania a filtrovania
 
 Výsledkom zjednocovanie vašich zákazníckych údajov je entita profilu zákazníka, ktorá poskytuje zjednotený pohľad na celkovú zákaznícku základňu. Ak chcete [rýchlo vyhľadať informácie o konkrétnom zákazníkovi alebo skupine zákazníkov](customer-profiles.md), môžete nakonfigurovať možnosti **vyhľadávania** a **filtrovania** na stránke **zákazníci**. Čítajte ďalej a dozviete sa, ako môžu správcovia upravovať atribúty na stránke **indexu vyhľadávania a filtrovania**, ktoré sú k dispozícii používateľom na vyhľadávanie a filtrovanie.
 
-> [!div class="mx-imgBorder"]
-> ![Filter vyhľadávania.](media/search-filter.png "Filter vyhľadávania")
+   :::image type="content" source="media/search-filter.png" alt-text="Filter vyhľadávania":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Pridanie polí a zadanie atribútov
 
@@ -56,7 +57,7 @@ Ponuka **Filter** na stránke **Zákazníci** môže obsahovať rôzny počet ú
 
 2. Zmeny vykonajte výberom položky **Uložiť**.
 
-3. Vyberte položku **Spustiť**, keď budete pripravení použiť svoje nastavenia. Po spracovaní zmien ich nájdete na[ zákazníckych kartách na stránke Zákazník ](customer-profiles.md). 
+3. Vyberte položku **Spustiť**, keď budete pripravení použiť svoje nastavenia. Po spracovaní zmien ich nájdete na [zákazníckych kartách na stránke Zákazník](customer-profiles.md). 
 
 ## <a name="next-steps"></a>Ďalšie kroky
 

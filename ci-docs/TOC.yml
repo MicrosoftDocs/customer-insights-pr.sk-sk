@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Pridanie priečinku bežného dátového modelu ako zdroj údajov
           href: audience-insights/connect-common-data-model.md
-        - name: Pridanie dátového jazera spravovaného cez Dataverse
+        - name: Pridajte Dataverse spravované dátové jazero
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Prírastková obnova pre zdroje údajov
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,13 +84,15 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Vylepšené adresy
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Vylepšite firemné údaje
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Obohatiť o funkcie Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Obohatenie údajov so spoločnosťou HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Obohatenie pomocou Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Obohatiť o Experian
+        - name: Obohatenie pomocou spoločnosti Experian
           href: audience-insights/enrichment-experian.md
         - name: Obohatenie pomocou vlastného importu SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -168,7 +170,7 @@
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
+            - name: Platforma Adobe Experience
               href: audience-insights/export-adobe-experience-platform.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
@@ -180,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: Správca reklám Facebook
+            - name: Facebook Správca reklám
               href: audience-insights/export-facebook.md
             - name: Reklamy Google
               href: audience-insights/export-google-ads.md
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Kontrola schém entít v Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Údaje riešenia Customer Insights v Dataverse
+        - name: Údaje Customer Insights v Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: "Práca s\_API"
           href: audience-insights/apis.md
         - name: Odkazy na API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Správa súhlasu (ukážka)
+  items:
+    - name: Centrum pomoci
+      href: consent-management/index.yml
+    - name: Prehľad funkcií
+      href: consent-management/overview.md
+    - name: Začať
+      items:
+        - name: Začať
+          href: consent-management/get-started.md
+        - name: Koncepty a terminológia
+          href: consent-management/glossary.md
+    - name: Import údajov o súhlase
+      items:
+        - name: Import údajov o súhlase
+          href: consent-management/import-consent-data.md
+        - name: Nastavte údaje o súhlase a použite predvoľby súhlasu
+          href: consent-management/set-consent-rules.md
+    - name: Spravujte údaje o súhlase
+      items:
+        - name: Povoľte pravidlá súhlasu v štatistikách publika
+          href: audience-insights/activate-consent.md
+        - name: Spravujte predvolené pravidlá súhlasu v segmentoch štatistík publika
+          href: audience-insights/change-default-consent-rules.md
+    - name: Spravujte nastavenia a používateľov
+      items:
+        - name: Nakonfigurujte systémové nastavenia
+          href: consent-management/system-settings.md
+        - name: Spravujte používateľov a povolenia
+          href: consent-management/manage-users.md
+    - name: Použite údaje o súhlase
+      items:
+        - name: Vytvárajte predpovede s údajmi o súhlase
+          href: consent-management/predictions-consent-data.md
 - name: Prehľady interakcií (Preview)
   items:
     - name: Centrum pomoci
@@ -302,9 +338,9 @@
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Ukážka webového rozhrania SDK
           href: engagement-insights/websdk-sample.md
-        - name: Kurz pre súpravu Android SDK
+        - name: Návod k súprave Android SDK
           href: engagement-insights/get-started-android.md
-        - name: Ukážka súpravy Android SDK
+        - name: Android ukážka súpravy SDK
           href: engagement-insights/androidsdk-sample.md
         - name: Návod k súprave iOS SDK
           href: engagement-insights/get-started-ios.md

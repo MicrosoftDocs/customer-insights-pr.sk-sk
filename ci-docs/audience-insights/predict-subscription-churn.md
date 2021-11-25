@@ -9,16 +9,18 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035342"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799746"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikcia rizika straty predplatného (ukážka)
 
 Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, že zákazník prestane používať predplatené produkty alebo služby vašej spoločnosti. Môžete vytvoriť novú predikciu rizika straty predplatného na stránke **Inteligencia** > **Predikcie**. Vyberte **Moje predikcie**, aby ste videli ďalšie predikcie, ktoré ste vytvorili.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Vyskúšajte kurz pre predikciu odchodov predplatiteľov pomocou vzorových údajov: [Predikcia odchodov predplatiteľov – vzorový sprievodca](sample-guide-predict-subscription-churn.md).

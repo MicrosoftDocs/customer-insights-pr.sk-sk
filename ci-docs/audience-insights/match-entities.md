@@ -1,7 +1,7 @@
 ---
 title: Priraďovanie entít na účely zjednotenia údajov
 description: Spárujte entity, aby ste skombinovali množiny údajov a vytvorili zjednotené profily zákazníkov.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648227"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732653"
 ---
 # <a name="match-entities"></a>Priradenie entít
 
@@ -79,7 +79,7 @@ Varovanie **Vyžadujú sa pravidlá** vedľa názvu entity naznačuje, že pre p
 
 1. Zadajte **Názov** pre položku pravidla.
 
-1. [Pridajte ďalšie podmienky](#add-conditions-to-a-rule) alebo stlačte **Hotovo** a dokončite pravidlo.
+1. [Pridajte ďalšie podmienky](#add-conditions-to-a-rule) alebo stlačte [Hotovo](#add-conditions-to-a-rule) a dokončite pravidlo.
 
 1. Voliteľne stlačte možnosť [pridať ďalšie pravidlá](#add-rules-to-a-match-pair).
 
@@ -180,10 +180,7 @@ Prejdite do časti **Údaje** > **Zjednotiť** > **Spárovať** a vyberte **Spus
 
 Výsledok úspešného spustenia, entita zjednoteného profilu zákazníka, nájdete na stránke **Entity**. Vaša zjednotená entita zákazníka sa nazývala **Zákazníci** v časti **Profily**. Prvé úspešné spustenie priradenia vytvára zjednotenú entitu *Zákazník*. Všetky nasledujúce spustenia zhôd túto entitu rozširujú.
 
-> [!TIP]
-> Po spustení procesu nájdenia zhody vyberaním stavu procesu otvoríte tablu **Podrobnosti úlohy**. Ponúka prehľad o čase a dátume posledného spracovania a všetkých chybách a varovaniach spojených s touto úlohou. Označením položky **Zobraziť podrobnosti** môžete zistiť, ktoré entity sa zúčastnili na procese zhody, ktoré pravidlá sa na ne vzťahovali a či boli aktualizácie úspešne publikované.  
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Vnorte sa do tejto cesty, aby ste získali prístup k podrobnostiam procesu z odkazu na stav úlohy.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Kontrola a potvrdenie zosúladených výsledkov
 

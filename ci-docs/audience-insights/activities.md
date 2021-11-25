@@ -1,7 +1,7 @@
 ---
 title: Aktivity zákazníkov
 description: Definujte zákaznícke aktivity a zobrazte ich na časovej osi v zákazníckych profiloch.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673157"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732479"
 ---
 # <a name="customer-activities"></a>Aktivity zákazníkov
 
-Spojte aktivity zákazníkov z [rôznych zdrojov údajov](data-sources.md) v Dynamics 365 Customer Insights a vytvorte časovú os s chronologickým zoznamom aktivít. Zahrňte časovú os do aplikácií Dynamics 365 pomocou [doplnku Zákaznícka karta](customer-card-add-in.md) riešenie, alebo na tabuľu Power BI.
+Skombinujte aktivity zákazníka z [rôzne zdroje údajov](data-sources.md) v Dynamics 365 Customer Insights na vytvorenie časovej osi, ktorá uvádza aktivity chronologicky. Zahrňte časovú os do aplikácií Dynamics 365 s [Doplnok Zákazníckej karty](customer-card-add-in.md) riešenie alebo na Power BI dashboard.
 
 ## <a name="define-an-activity"></a>Definícia aktivity
 
@@ -70,7 +70,7 @@ Entita musí mať aspoň jeden atribút typu **Dátum**, aby ste boli zahrnutí 
 
 1. Výberom tlačidla **Ďalej** prejdete na ďalší krok. Môžete stlačiť možnosť **Dokončiť a skontrolovať** a uložiť aktivitu teraz s typom aktivity nastaveným na **Iné**. 
 
-1. V kroku **Typ aktivity** vyberte typ aktivity a prípadne vyberte, či chcete sémanticky mapovať niektoré typy aktivít pre použitie v iných oblastiach Customer Insights. Aktuálne typy aktivít *Odozva*,*Lojalit*, *SalesOrder*, *SalesOrderLine* a *Predplatné* možno sémanticky mapovať po odsúhlasení mapovania polí. Ak typ aktivity nie je pre novú aktivitu relevantný, môžete stlačiť možnosť *Iné* alebo *Vytvoriť nový* pre vlastný typ aktivity.
+1. V kroku **Typ aktivity** vyberte typ aktivity a prípadne vyberte, či chcete sémanticky mapovať niektoré typy aktivít pre použitie v iných oblastiach Customer Insights. Aktuálne typy aktivít *Odozva*, *·*, *SalesOrder*, *SalesOrderLine* a *Predplatné* možno sémanticky mapovať po odsúhlasení mapovania polí. Ak typ aktivity nie je pre novú aktivitu relevantný, môžete stlačiť možnosť *Iné* alebo *Vytvoriť nový* pre vlastný typ aktivity.
 
 1. Výberom tlačidla **Ďalej** prejdete na ďalší krok. 
 
@@ -82,9 +82,7 @@ Entita musí mať aspoň jeden atribút typu **Dátum**, aby ste boli zahrnutí 
 
 1. Na stránke **Činnosti** stlačte možnosť **Spustiť** na spracovanie činnosti. 
 
-> [!TIP]
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Spravovanie existujúcich činností
 

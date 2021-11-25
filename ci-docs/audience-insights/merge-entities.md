@@ -1,7 +1,7 @@
 ---
 title: Zlučovanie entít pri zjednotení údajov
 description: Zlučujte entity na účely vytvorenia jednotných profilov zákazníkov.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648273"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732791"
 ---
 # <a name="merge-entities"></a>Zlúčenie entít
 
@@ -24,7 +24,7 @@ Fáza zlúčenia je posledná fáza v procese zjednocovania údajov. Jeho účel
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Stránka zlúčenia v procese zjednotenia údajov zobrazujúca tabuľku so zlúčenými poľami, ktoré definujú zjednotený profil zákazníka.":::
 
-Po dokončení [porovnávacej fázy](match-entities.md) môžete začať fázu zlúčenia výberom dlaždice **Zlúčiť** na stránke **Zjednotiť**.
+Po dokončení [porovnávacej fázy](match-entities.md) môžete začať fázu zlúčenia výberom dlaždice [Zlúčiť](match-entities.md) na stránke [Zjednotiť](match-entities.md).
 
 ## <a name="review-system-recommendations"></a>Kontrola systémových odporúčaní
 
@@ -187,10 +187,9 @@ Stlačte možnosť **Spustiť procesy zlučovania a tie, ktoré prebiehajú zo s
 
 Ak chcete vykonať ďalšie zmeny a znova krok zopakovať, môžete zrušiť prebiehajúce zlúčenie. Vyberte **Obnovuje sa…** a vyberte **Zrušiť úlohu** na zobrazenej bočnej table.
 
-> [!TIP]
-> Po spustení procesu zlúčenia vyberaním stavu procesu otvoríte tablu **Podrobnosti úlohy**. Ponúka prehľad o čase a dátume posledného spracovania a všetkých chybách a varovaniach spojených s touto úlohou. Označením položky **Zobraziť podrobnosti** môžete zistiť, ktoré entity sa zúčastnili na procese zhody, či bolo vyriešenie konfliktu úspešné a či boli aktualizácie úspešne publikované.  
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Vnorte sa do tejto cesty, aby ste získali prístup k podrobnostiam procesu z odkazu na stav úlohy.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Vnorte sa do tejto cesty, aby ste získali prístup k podrobnostiam procesu z odkazu na stav úlohy.":::
 
 ## <a name="next-step"></a>Nasledujúci krok
 

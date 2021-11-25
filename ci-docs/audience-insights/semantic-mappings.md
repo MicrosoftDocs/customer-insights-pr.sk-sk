@@ -1,7 +1,7 @@
 ---
 title: Sémantické mapovanie (verzia Preview)
 description: Prehľad sémantických mapovaní a ich použitie.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622954"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731962"
 ---
 # <a name="semantic-mappings"></a>Sémantické mapovania
 
@@ -75,8 +75,7 @@ Sémantické mapovania vám umožňujú mapovať údaje o vašej neaktivite do v
 
 1. Ak chcete sémantické mapovanie spustiť neskôr, vyberte sémantické mapovanie a vyberte **Obnoviť**.
 
-> [!TIP]
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Spravujte existujúce sémantické mapovania
 
@@ -91,5 +90,6 @@ V položke **Údaje** > **Sémantické mapovania (verzia Preview)** si môžete 
 - **Premenovať**: Otvorí dialógové okno, kde môžete zadať iný názov pre vybraté sémantické mapovanie. Zmeny vykonajte výberom položky **Uložiť**.
 
 - **Vymazať**: Otvorí dialógové okno na potvrdenie vymazania vybratého sémantického mapovania. Môžete tiež odstrániť viac ako jedno sémantické mapovanie naraz tak, že vyberiete sémantické mapovania a ikonu odstránenia. Vyberte možnosť **Odstrániť** a potvrďte odstránenie.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

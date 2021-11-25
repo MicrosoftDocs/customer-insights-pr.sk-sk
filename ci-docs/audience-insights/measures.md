@@ -1,7 +1,7 @@
 ---
 title: Vytváranie a spravovanie mier
 description: Definujte miery na analýzu a zobrazovanie výkonnosti vášho podnikania.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673522"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732745"
 ---
 # <a name="define-and-manage-measures"></a>Definovanie a spravovanie mier
 
@@ -238,10 +238,9 @@ Vyberte mieru zo zoznamu a zobrazte nasledujúce možnosti:
 - **Odstráňte** mieru.
 - **Aktivujte** alebo **Deaktivujte**. Neaktívne miery sa počas [plánovaného obnovenia](system.md#schedule-tab) neobnovujú.
 
-> [!TIP]
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere možnosti **Zobraziť podrobnosti** pre jednu z pracovných úloh nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s danou úlohou.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
-## <a name="next-step"></a>Nasledujúci krok
+## <a name="next-step"></a>Ďalší krok
 
 Existujúce opatrenia môžete použiť na vytvorenie [zákazníckeho segmentu](segments.md).
 

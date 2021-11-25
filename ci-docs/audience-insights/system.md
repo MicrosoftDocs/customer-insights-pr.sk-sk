@@ -1,7 +1,7 @@
 ---
 title: Konfigurácia systému v prehľadoch cieľových skupín
-description: Prečítajte si viac informácií o systémových nastaveniach vo funkcii prehľadov o cieľových skupinách v Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
+description: Získajte informácie o systémových nastaveniach v Dynamics 365 Customer Insights funkcii štatistík publika.
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
-ms.translationtype: HT
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651859"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732389"
 ---
 # <a name="system-configuration"></a>Konfigurácia systému
+
+Ak chcete získať prístup ku konfiguráciám systému v štatistikách publika, na ľavom navigačnom paneli vyberte možnosť **Admin** > **systém** na zobrazenie zoznamu systémových úloh a procesov.
 
 Stránka **Systém** obsahuje nasledujúce karty:
 - [Status](#status-tab)
@@ -30,39 +32,55 @@ Stránka **Systém** obsahuje nasledujúce karty:
 
 ## <a name="status-tab"></a>Karta stavu
 
-**Karta Stav** vám umožňuje sledovať postup prijímania údajov, exportu údajov a niekoľko ďalších dôležitých procesov produktu. Skontrolujte informácie na tejto karte a zaistite úplnosť aktívnych procesov.
+The **Karta Stav** umožňuje sledovať priebeh úloh, príjem údajov, export údajov a niekoľko ďalších dôležitých procesov produktu. Skontrolujte informácie na tejto karte, aby ste sa uistili, že vaše aktívne úlohy a procesy sú úplné.
 
-Táto karta obsahuje tabuľky so stavom a informáciami o spracovaní pre rôzne procesy. Každá tabuľka sleduje **Názov** úlohy a jej zodpovedajúcej entity, **Stav** jej posledného spustenia a kedy bola **Naposledy aktualizovaná**.
+Táto karta obsahuje tabuľky so stavom a informáciami o spracovaní pre rôzne procesy. Každá tabuľka sleduje **Názov** úlohy a jej zodpovedajúcej entity, **Stav** jej posledného spustenia a kedy bola **Naposledy aktualizovaná**. Výberom názvu úlohy alebo procesu môžete zobraziť podrobnosti o niekoľkých posledných spusteniach. 
 
-Pozrite si podrobnosti o posledných niekoľkých spusteniach úloh výberom názvu.
+Vyberte stav vedľa úlohy alebo procesu v **Postavenie** stĺpec na otvorenie **Podrobnosti o pokroku** tabuľka.
 
-### <a name="status-types"></a>Typy stavov
+   :::image type="content" source="media/system-progress-details.png" alt-text="Panel s podrobnosťami o priebehu systému":::
 
-Existuje šesť druhov stavov pre úlohy. Nasledujúce typy stavov sa tiež zobrazujú na stránkach *Spárovať*, *Zlúčiť*, *Zdroje údajov*, *Segmenty*, *Miery*, *Obohatenie*, *Aktivity* a *Predikcie*:
+### <a name="status-definitions"></a>Definície stavu
 
-- **Spracovanie:** Úloha práve prebieha. Stav sa môže zmeniť na Úspešné alebo Zlyhanie.
-- **Úspešný:** Úloha bola úspešne dokončená.
-- **Vynechané:** Úloha bola vynechaná. Jeden alebo viac následných procesov, od ktorých závisí táto úloha, zlyháva alebo sú preskočené.
-- **Zlyhanie:** Spracovanie úlohy zlyhalo.
-- **Zrušené:** Spracovanie bolo zrušené používateľom pred jeho dokončením.
-- **Vo fronte:** Spracovanie je vo fronte a začne sa po dokončení všetkých predchádzajúcich úloh. Ďalšie informácie získate v článku [Politiky obnovenia](#refresh-policies).
+Systém používa pre úlohy a procesy nasledujúce stavy:
 
-### <a name="refresh-policies"></a>Politiky obnovenia
+|Status  |Definícia  |
+|---------|---------|
+|Zrušená |Spracovanie bolo zrušené používateľom pred dokončením.   |
+|Zlyhalo   |Pri prijímaní údajov nastali chyby.         |
+|Zlyhanie  |Spracovanie zlyhalo.  |
+|Nespustené   |Zdroj údajov zatiaľ nemá žiadne prijaté údaje alebo je stále v režime konceptu.         |
+|Spracováva sa  |Úloha alebo proces prebieha.  |
+|Obnovuje sa    |Prebieha prijímanie údajov. Túto operáciu môžete zrušiť tak, že v stĺpci **Akcie** vyberiete **Zastaviť obnovovanie**. Zastavenie obnovovania zdroja údajov sa obnoví do posledného stavu obnovenia.       |
+|Vynechané  |Úloha alebo proces boli preskočené. Jeden alebo viac následných procesov, od ktorých závisí táto úloha, zlyháva alebo sú preskočené.|
+|Úspešné  |Úloha alebo proces úspešne dokončený. V prípade zdrojov údajov označuje, že údaje boli úspešne prijaté, ak je v položke uvedený čas **Osviežené** stĺpec.|
+|Vo fronte | Spracovanie je zaradené do frontu a začne sa po dokončení všetkých nadradených úloh a procesov. Ďalšie informácie nájdete v časti [Obnoviť procesy](#refresh-processes).|
 
-Tento zoznam zobrazuje zásady obnovovania pre každý z hlavných procesov:
+### <a name="refresh-processes"></a>Obnoviť procesy
 
-- **Zdroje dát:** Beží podľa [nakonfigurovaného harmonogramu](#schedule-tab). Nezávisí od žiadneho iného procesu. Zhoda závisí od úspešného ukončenia tohto procesu.
-- **Zhoda:** Beží podľa [nakonfigurovaného harmonogramu](#schedule-tab). Závisí od spracovania zdrojov údajov použitých v definícii zhody. Zlúčenie závisí od úspešného ukončenia tohto procesu.
-- **Zlúčenie:** Beží podľa [nakonfigurovaného harmonogramu](#schedule-tab). Závisí od úspešného ukončenia procesu zhody. Segmenty, miery, obohatenie, vyhľadávanie, aktivity, predikcie a príprava dát závisia od úspešného ukončenia tohto procesu.
-- **Segmenty**: Spustí sa manuálne (jednorazové obnovenie) a podľa [nakonfigurovaného harmonogramu](#schedule-tab). Závisí od zlúčenia. Štatistiky závisia od spracovania.
-- **Miery**: Spustí sa manuálne (jednorazové obnovenie) a podľa [nakonfigurovaného harmonogramu](#schedule-tab). Závisí od zlúčenia.
-- **Aktivity**: Spustí sa manuálne (jednorazové obnovenie) a podľa [nakonfigurovaného harmonogramu](#schedule-tab). Závisí od zlúčenia.
-- **Obohatenie**: Spustí sa manuálne (jednorazové obnovenie) a podľa [nakonfigurovaného harmonogramu](#schedule-tab). Závisí od zlúčenia.
-- **Vyhľadávanie**: Spustí sa manuálne (jednorazové obnovenie) a podľa [nakonfigurovaného harmonogramu](#schedule-tab). Závisí od zlúčenia.
-- **Príprava dát:** Beží podľa [nakonfigurovaného harmonogramu](#schedule-tab). Závisí od zlúčenia.
-- **Analýzy**: Spustí sa manuálne (jednorazové obnovenie) a podľa [nakonfigurovaného harmonogramu](#schedule-tab). Závisí od segmentov.
+Obnovenie úloh a procesov prebieha podľa [nakonfigurovaný rozvrh](#schedule-tab). 
 
-Vyberte stav úlohy, ak chcete zobraziť podrobnosti o priebehu celej úlohy, v ktorej bol. Vyššie uvedené pravidlá obnovenia vám môžu pomôcť pochopiť, čo môžete urobiť, aby ste vyriešili úlohu **Vynechané** alebo **Vo fronte**.
+|Spracovať  |Popis  |
+|---------|---------|
+|Aktivita  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. Štatistiky závisia od spracovania.|
+|Prepojenie analýzy |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
+|Príprava analýzy |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
+|Príprava údajov   |Závisí od zlúčenia.   |
+|Zdroje údajov   |Nezávisí od žiadneho iného procesu. Zhoda závisí od úspešného ukončenia tohto procesu.  |
+|Obohatenia   |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. |
+|Vývozné destinácie |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
+|Prehľady |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
+|Analýza   |Závisí od zlúčenia.   |
+|Spárovanie |Závisí od spracovania zdrojov údajov použitých v definícii zhody.      |
+|Miery  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania.  |
+|Zlúčenie   |Závisí od úspešného ukončenia procesu zhody. Segmenty, miery, obohatenie, vyhľadávanie, aktivity, predikcie a príprava dát závisia od úspešného ukončenia tohto procesu.   |
+|Profily   |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. |
+|Vyhľadávať   |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. |
+|Segmenty  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. Štatistiky závisia od spracovania.|
+|Systémové   |Závisí od úspešného ukončenia procesu zhody. Segmenty, miery, obohatenie, vyhľadávanie, aktivity, predikcie a príprava dát závisia od úspešného ukončenia tohto procesu.   |
+|Používateľ  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od subjektov.  |
+
+Výberom stavu procesu zobrazíte podrobnosti o priebehu celej úlohy, v ktorej sa nachádzal. Vyššie uvedené procesy obnovenia vám môžu pomôcť pochopiť, čo môžete urobiť, aby ste vyriešili problém a **Preskočené** alebo **Vo fronte** úloha alebo proces.
 
 ## <a name="schedule-tab"></a>Karta Plán
 
@@ -86,7 +104,7 @@ Karta **Informácie** obsahuje **Zobrazovaný názov** vašej organizácie, akt�
 
 Jazyk a formát krajiny/regiónu môžete zmeniť na karte **Všeobecné**.
 
-Customer Insights [podporuje niekoľko jazykov](/dynamics365/get-started/availability). Aplikácia použije vaše jazykové preferencie na zobrazenie prvkov, ako sú ponuka, text štítkov a systémové správy vo vašom preferovanom jazyku.
+Customer Insights [podporuje mnoho jazykov](/dynamics365/get-started/availability). Aplikácia použije vaše jazykové preferencie na zobrazenie prvkov, ako sú ponuka, text štítkov a systémové správy vo vašom preferovanom jazyku.
 
 Importované údaje a informácie, ktoré ste zadali manuálne, sa neprekladajú.
 
@@ -109,7 +127,7 @@ Nájdite podrobnosti o použití API v reálnom čase a uvidíte, ktoré udalost
 
 -  **Operácie** – tabuľka s riadkami pre každú dostupnú operáciu API a podrobnosťami o použití týchto operácií. Môžete zvoliť názov operácie, a prejsť na [referenčnú príručku rozhrania API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Operácie, ktoré využívajú [príjem údajov v reálnom čase](real-time-data-ingestion.md) obsahujú tlačidlo so symbolom ďalekohľadu na zobrazenie použitia API v reálnom čase. Výberom tohto tlačidla otvoríte bočnú tablu obsahujúcu podrobnosti o použití rozhrania API v reálnom čase v aktuálnom prostredí.   
+   Operácie, ktoré využívajú [prijímanie údajov v reálnom čase](real-time-data-ingestion.md) obsahujú tlačidlo s binokulárnym symbolom na zobrazenie využitia API v reálnom čase. Výberom tohto tlačidla otvoríte bočnú tablu obsahujúcu podrobnosti o použití rozhrania API v reálnom čase v aktuálnom prostredí.   
    Použite políčko **Zoskupiť podľa** na table **Využitie API v reálnom čase** a vyberte, ako najlepšie prezentovať svoje interakcie v reálnom čase. Údaje môžete zoskupiť podľa metódy API, kvalifikovaného názvu entity (prijatá entita), spôsobu vytvorenia (zdroj udalosti), výsledku (úspech alebo zlyhanie) alebo chybových kódov. Dáta sú k dispozícii ako graf histórie a ako tabuľka.
 
 ## <a name="security-tab"></a>Karta Zabezpečenie

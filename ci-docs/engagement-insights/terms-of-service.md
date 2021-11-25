@@ -9,22 +9,22 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: d43d3c49c81ab343db5623ee4f5ebeb100d3b2b7
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
-ms.translationtype: HT
+ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218957"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7774129"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS – Prehľady interakcií (verzia Preview) 
 
-Prehľady interakcií (verzia Preview) sú funkciou ukážky pred vydaním, čo znamená, že má menšie alebo odlišné opatrenia v oblasti zabezpečenia, ochrany osobných údajov a umiestnenia údajov ako funkcie a funkcie, ktoré sú všeobecne dostupné v Dynamics 365 Customer Insights. Prečítajte si podmienky uvedené nižšie a dokumentáciu k produktu a zistite, či sú prehľady interakcií (verzia Preview) vhodné pre vaše údaje.
+Štatistiky zapojenia (ukážka) sú predbežnou funkciou ukážky, čo znamená, že má menšie alebo iné opatrenia na zabezpečenie, súkromie a umiestnenie údajov ako funkcie a možnosti, ktoré sú všeobecne dostupné v Dynamics 365 Customer Insights. Prečítajte si podmienky uvedené nižšie a dokumentáciu k produktu a zistite, či sú prehľady interakcií (verzia Preview) vhodné pre vaše údaje.
 
 ## <a name="preview-terms-of-service"></a>PODMIENKY POUŽÍVANIA VERZIE PREVIEW
 
 POSLEDNÁ AKTUALIZÁCIA OKTÓBER 2020 
 
-Prístupom alebo použitím ukážky služieb Dynamics 365 Customer Insights – prehľady interakcií (spolu s akýmikoľvek zdrojmi údajov poskytnutými spoločnosťou Microsoft, „Služby”), prijímate podmienky tejto zmluvy. Ak ich neprijímate, k službám nepristupujte ani ich nepoužívajte.
+Prístupom alebo používaním ukážky služieb Dynamics 365 Customer Insights – Štatistiky Engagement (spolu s akýmikoľvek zdrojmi údajov poskytovanými spoločnosťou Microsoft, ďalej len „služby“), súhlasíte s podmienkami tejto zmluvy. Ak ich neprijímate, k službám nepristupujte ani ich nepoužívajte.
 
 ## <a name="1-what-this-agreement-covers"></a>1. ČOHO SA TÁTO ZMLUVA TÝKA
 
@@ -154,7 +154,7 @@ V MAXIMÁLNOM ROZSAHU POVOLENOM ZÁKONOM, V ŽIADNOM PRÍPADE SPOLOČNOSŤ MICRO
 
 ### <a name="111-term"></a>11.1. Pojem
 
-Táto zmluva je účinná dňom, keď s ňou prvýkrát súhlasíte. Táto zmluva nahrádza všetky predchádzajúce zmluvy, na základe ktorých ste ich používali Dynamics 365 Product Insights alebo akékoľvek predošlé služby. Táto dohoda sa skončí skôr (i) dňom prvej dostupnosti komerčného vydania Služieb (ak vôbec) alebo podľa toho, čo vám spoločnosť Microsoft poskytne oznámenie o ukončení, podľa toho, čo nastane skôr. Spoločnosť Microsoft môže kedykoľvek z akéhokoľvek dôvodu a podľa vlastného uváženia pozastaviť alebo zrušiť vaše používanie a prístup k celej alebo ktorejkoľvek časti Služieb alebo zrušiť túto zmluvu.
+Táto zmluva je účinná dňom, keď s ňou prvýkrát súhlasíte. Táto zmluva nahrádza akúkoľvek predchádzajúcu zmluvu, na základe ktorej ste používali Dynamics 365 Product Insights alebo akékoľvek predchádzajúce služby. Táto dohoda sa skončí skôr (i) dňom prvej dostupnosti komerčného vydania Služieb (ak vôbec) alebo podľa toho, čo vám spoločnosť Microsoft poskytne oznámenie o ukončení, podľa toho, čo nastane skôr. Spoločnosť Microsoft môže kedykoľvek z akéhokoľvek dôvodu a podľa vlastného uváženia pozastaviť alebo zrušiť vaše používanie a prístup k celej alebo ktorejkoľvek časti Služieb alebo zrušiť túto zmluvu.
 
 ### <a name="112-effect-of-termination"></a>11.2. Účinok ukončenia
 

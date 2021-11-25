@@ -1,7 +1,7 @@
 ---
 title: Príjem údajov prostredníctvom konektora Power Query
 description: Konektory pre zdroje údajov založené na Power Query.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643513"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732237"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Pripojenie k zdroju údajov Power Query
 
-Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčšinu z týchto konektorov podporuje Dynamics 365 Customer Insights. Pri pridávaní zdrojov údajov na základe konektorov Power Query sa všeobecne postupuje podľa krokov uvedených v nasledujúcej časti. V závislosti od použitého konektora sú však potrebné rôzne informácie. Ďalšie informácie nájdete v dokumentácii o jednotlivých konektoroch v časti [Referencia na konektor Power Query](/power-query/connectors/).
+Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčšinu týchto konektorov podporuje Dynamics 365 Customer Insights. Pri pridávaní zdrojov údajov na základe konektorov Power Query sa všeobecne postupuje podľa krokov uvedených v nasledujúcej časti. V závislosti od použitého konektora sú však potrebné rôzne informácie. Ďalšie informácie nájdete v dokumentácii o jednotlivých konektoroch v časti [Referencia na konektor Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -79,6 +79,8 @@ Konektory so značkou začiarknutia v stĺpci **Customer Insights (toky údajov)
    > [!div class="mx-imgBorder"]
    > ![Úprava možnosti.](media/edit-option-data-sources.png "Úprava možnosti")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. Použite svoje zmeny a transformácie v dialógovom okne **Power Query – Upraviť dotazy**, ako je opísané v časti [Vytvorenie nového zdroja údajov](#create-a-new-data-source).
 
 4. Vyberte **Uložiť** v Power Query po dokončení úprav a uložte zmeny.

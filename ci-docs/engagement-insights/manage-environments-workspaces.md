@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645465"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673816"
 ---
 # <a name="manage-environments-and-workspaces"></a>Spravovanie prostrední a pracovných priestorov
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645465"
 
 Táto téma sa zaoberá správou pracovných priestorov a prostredí, keď už boli vytvorené. 
 
-- *Pracovný priestor* je priestor na ukladanie a správu udalostí a zostáv. Na tomto mieste môžete sledovať aktivitu používateľov v reálnom čase. Pri vytváraní pracovného priestoru vyberiete typ údajov, ktoré sa majú odoslať do pracovného priestoru. V súčasnosti sú podporované webové dáta a mobilné aplikácie. Ďalšie informácie nájdete v časti [Vytvorte pracovný priestor a pridajte členov](create-workspace.md).
+- *Pracovný priestor* je priestor na ukladanie a správu udalostí a zostáv. Na tomto mieste môžete sledovať aktivitu používateľov v reálnom čase. Pri vytváraní pracovného priestoru vyberiete typ údajov, ktoré sa majú odoslať do pracovného priestoru. V súčasnosti sú podporované webové dáta a mobilné aplikácie. Ďalšie informácie nájdete v časti [Vytvorte nový pracovný priestor a pridajte členov](create-workspace.md).
 
 - *Prostredie* je priestor, v ktorom spravujete svoje pracovné priestory a pripojenia. Ďalšie informácie nájdete v téme [Vytvorenie nového prostredia](create-new-environment.md).
 
@@ -47,7 +47,7 @@ V prostredí môžete súčasne udržiavať viac pracovných priestorov. Vaša [
 
 ### <a name="delete-a-workspace"></a>Odstránenie pracovného priestoru
 
-Odstránením pracovného priestoru sa natrvalo odstráni všetok jeho obsah, údaje, nastavenia a povolenia. Táto akcia sa nedá vrátiť späť.
+Odstránením pracovného priestoru natrvalo odstránite všetok jeho obsah, údaje, nastavenia a povolenia. Táto akcia sa nedá vrátiť späť.
 
 1. Prejdite na ponuku **Správca** > **Pracovný priestor** a stlačte možnosť **Nastavenia**.
 
@@ -71,19 +71,11 @@ Ako správca prostredia máte prístup do prostredia z ľavej navigačnej tably.
 
 :::image type="content" source="media/environment-edit.png" alt-text="Centrum spravovania prostredia.":::
 
-### <a name="rename-an-environment"></a>Premenovanie prostredia
+### <a name="edit-an-environment-name"></a>Upravte názov prostredia
 
 1. Prejdite na ponuku **Správca** > **Prostredie** a stlačte možnosť **Nastavenia**.
 
 1. Aktualizujte **Názov prostredia** a stačte možnosť **Uložiť**, čím použijete svoje zmeny.
-
-### <a name="manage-environment-members"></a>Správa členov prostredia
-
-1. Prejdite na ponuku **Správca** > **Prostredie** a stlačte možnosť **Členovia**.
-
-1. Stlačte možnosť **Pridať členov** na aktualizáciu členov a [priradenie rol](user-roles.md). Momentálne je dostupná len **Správca prostredia**.
-
-1. Stlačte možnosť **Pridať členov** a pridajte ich do svojho prostredia.
 
 ### <a name="delete-an-environment"></a>Odstrániť prostredie
 
@@ -97,6 +89,14 @@ Správcovia prostredí môžu prostredia odstraňovať. Než odstránite prostre
 
 1. Ak chcete natrvalo odstrániť prostredie, označte položku **Odstrániť**.
 
+### <a name="manage-environment-members"></a>Správa členov prostredia
+
+1. Prejdite na ponuku **Správca** > **Prostredie** a stlačte možnosť **Členovia**.
+
+1. Stlačte možnosť **Pridať členov** na aktualizáciu členov a [priradenie rol](user-roles.md). Momentálne je dostupná len **Správca prostredia**.
+
+1. Stlačte možnosť **Pridať členov** a pridajte ich do svojho prostredia.
+
 ## <a name="manage-connections"></a>Spravovanie pripojení
 
 Nadviazanie kontaktov so audience insights vám umožní vidieť prehľady v prehľadoch interakcií na základe zjednotených profilov zákazníkov. 
@@ -107,7 +107,6 @@ Nadviazanie kontaktov so audience insights vám umožní vidieť prehľady v pre
 
 V záujme ochrany osobných údajov zákazníka môžete vymazať alebo exportovať identifikovateľné údaje koncového používateľa.
 
-Viac informácií nájdete v časti [Odstránenie a export údajov udalosti s obsahom osobných údajov](delete-export-personal-data.md).
-
+Viac informácií nájdete v časti [Odstránenie a export údajov udalosti s obsahom osobných údajov](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033604"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732283"
 ---
 # <a name="work-with-customer-insights-apis"></a>Pracujte s rozhraniami API v službe Customer Insights
 
-Dynamics 365 Customer Insights poskytuje API na vytváranie vlastných aplikácií na základe vašich údajov v službe Customer Insights.
+Dynamics 365 Customer Insights poskytuje rozhrania API na vytváranie vlastných aplikácií na základe vašich údajov v Customer Insights.
 
 > [!IMPORTANT]
 > Podrobnosti o týchto rozhraniach API sú uvedené v [referencii rozhraní API v službe Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Patria sem dodatočné informácie o operáciách, parametroch a reakciách.
@@ -117,25 +117,25 @@ Táto sekcia vám pomôže začať používať knižnice klientov dostupné pre 
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Zistite viac o tom, ako začať používať knižnice klientov C# z NuGet.org. Ďalšie informácie o balíku NuGet nájdete v sekcii [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). V súčasnosti je tento balík zameraný na rámce netstandard2.0 a netcoreapp2.0.
+Zistite, ako začať používať klientske knižnice C# z NuGet.org. Viac informácií o balíku NuGet nájdete na [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). V súčasnosti je tento balík zameraný na rámce netstandard2.0 a netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Pridajte knižnicu klientov C# do projektu C#
 
-1. V nástroji Visual Studio otvorte **Správcu balíkov NuGet** pre váš projekt.
+1. V Visual Studio otvorte súbor **NuGet Správca balíkov** pre váš projekt.
 
 1. Vyhľadajte výraz **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Výberom položky **Inštalovať** pridajte balíček do projektu.
  
-   Prípadne môžete tento príkaz spustiť cez **konzolu Správcu balíka NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Prípadne spustite tento príkaz v **NuGet Konzola správcu balíkov** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Pridajte balík NuGet do projektu nástroja.Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Pridajte balík NuGet do projektu Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Použite knižnicu klientov C#
 
 1. Použite [knižnicu Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview), aby ste získali `AccessToken` pomocou svojej existujúcej [registrácie aplikácie Azure](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Po úspešnom overení a získaní tokenu vytvorte nový alebo použite existujúci `HttpClient` s dodatočným **„oprávnením“ DefaultRequestHeaders** nastavený na **Nosný <access token>** a **Ocp-Apim-Subscription-Key** nastavený na [**kľúč predplatného** z vášho prostredia služby Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Po úspešnom overení a získaní tokenu vytvorte nový alebo použite existujúci`HttpClient` s prídavným **DefaultRequestHeaders "Autorizácia"** nastavený na **Nosič "prístupový token"** a **Ocp-Apim-Subscription-Key** nastaviť na [**predplatiteľský kľúč** z prostredia Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Resetujte hlavičku **Oprávnenie**, ak je to vhodné. Napríklad ak vypršala platnosť tokenu.
 

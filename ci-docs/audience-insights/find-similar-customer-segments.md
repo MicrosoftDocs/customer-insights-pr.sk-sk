@@ -9,19 +9,21 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034562"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799700"
 ---
 # <a name="similar-customers-preview"></a>Podobní zákazníci (ukážka)
 
 Táto funkcia vám umožní nájsť podobných zákazníkov vo vašej zákazníckej základni pomocou umelej inteligencie. Aby ste mohli používať túto funkciu, musíte mať aspoň jeden segment. Rozšírenie kritérií existujúceho segmentu pomôže nájsť zákazníkov, ktorí sú podobní tomuto segmentu.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
+
 > [!NOTE]
-> *Nájdite podobných zákazníkov* využíva automatizované prostriedky na vyhodnotenie údajov a vypracovanie predpovedí na základe týchto údajov, a preto má schopnosť použitia ako metódy profilovania, pretože tento pojem je vymedzený vo všeobecnom nariadení o ochrane údajov („GDPR“). Použitie tejto funkcie zákazníkom na spracovanie údajov môže podliehať GDPR alebo iným zákonom alebo predpisom. Ste zodpovední za zabezpečenie toho, že vaše používanie služby Dynamics 365 Customer Insights vrátane predikcií bude v súlade so všetkými platnými zákonmi a nariadeniami vrátane zákonov týkajúcich sa ochrany súkromia, osobných údajov, biometrických údajov, ochrany údajov a dôvernosti komunikácií.
+> *Nájdite podobných zákazníkov* využíva automatizované prostriedky na vyhodnotenie údajov a vypracovanie predpovedí na základe týchto údajov, a preto má schopnosť použitia ako metódy profilovania, pretože tento pojem je vymedzený vo všeobecnom nariadení o ochrane údajov („GDPR“). Použitie tejto funkcie zákazníkom na spracovanie údajov môže podliehať GDPR alebo iným zákonom alebo predpisom. Zodpovedáte za to, že vaše používanie Dynamics 365 Customer Insights, vrátane predpovedí, bude v súlade so všetkými platnými zákonmi a nariadeniami, vrátane zákonov týkajúcich sa súkromia, osobných údajov, biometrických údajov, ochrany údajov a dôvernosti komunikácie.
 
 ## <a name="finding-similar-customers"></a>Hľadanie podobných zákazníkov
 

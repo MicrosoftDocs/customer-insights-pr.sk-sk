@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645329"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673512"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Vytvorte nový pracovný priestor a pridajte členov
 
@@ -26,17 +26,17 @@ Pri vytváraní pracovného priestoru vyberiete typ údajov, na ktoré sa chcete
 
 ## <a name="create-a-new-workspace"></a>Vytvorenie nového pracovného priestoru
 
-Proces vytvárania pracovného priestoru zahŕňa vytvorenie *prostredia* na usporiadanie pracovného priestoru. Prostredie je priestor, ktorý môže obsahovať jeden alebo viac pracovných priestorov. Prostredie môžete použiť na správu svojich pracovných priestorov a pripojení k možnostiam prehľadov o cieľovej skupine Customer Insights.
+Proces vytvárania pracovného priestoru zahŕňa vytvorenie *prostredia* na usporiadanie pracovného priestoru. Prostredie je priestor, ktorý môže obsahovať jeden alebo viac pracovných priestorov. Prostredie môžete použiť na správu svojich pracovných priestorov a pripojení k funkcii prehľadov publika.
 
-1. Stlačte možnosť **Nový** z prepínača pracovného priestoru.
+1. Vyberte **+ Nové** z prepínača pracovného priestoru.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Stránka Customer insights s popisom na navigačnom paneli a popisom.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Stránka Customer Insights s popisom na navigačnej table a popisom.":::
 
 1. Na table **Pracovný priestor** zadajte **Názov pracovného priestoru**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Zadajte názov pracovného priestoru.":::
 
-1. Vyberte typ platformy (webovú alebo mobilnú), ktorú chcete merať.
+1. Vyberte typ platformy (web alebo mobil), ktorý chcete merať.
 
 1. Vyberte **Ukázať pokročilé nastavenia** a povoľte alebo zakážte tieto voliteľné nastavenia:
 

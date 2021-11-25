@@ -1,7 +1,7 @@
 ---
 title: Slúži na vytvorenie a spravovanie prostredí
 description: Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673763"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799654"
 ---
 # <a name="manage-environments"></a>Správa prostredí
 
@@ -39,6 +39,19 @@ Môžete upraviť niektoré podrobnosti o existujúcich prostrediach.
 3. V poli **Upraviť prostredie** môžete aktualizovať nastavenia prostredia.
 
 Ďalšie informácie o nastaveniach prostredia nájdete v článku [Vytvorenie nového prostredia](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Pripojte sa k Microsoft Dataverse
+   
+The **Microsoft Dataverse** krok vám umožní prepojiť Customer Insights s vaším Dataverse prostredím.
+
+Použit [out-of-box predikcia modely](predictions-overview.md#out-of-box-models), nakonfigurujte zdieľanie údajov pomocou Dataverse. Alebo môžete povoliť príjem údajov zo zdrojov údajov lokálny poskytnutím Microsoft Dataverse adresy URL prostredia, ktoré spravuje vaša organizácia. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s dátovým jazerom spravovaným Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfigurácie na povolenie zdieľania údajov s Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights nepodporuje nasledujúce scenáre zdieľania údajov:
+> - Ak uložíte všetky údaje do svojho vlastného Azure Data Lake Storage, nebudete môcť povoliť zdieľanie údajov s dátovým jazerom spravovaným Dataverse.
+> - Ak povolíte zdieľanie údajov pomocou Dataverse, nebudete môcť [vytvárať predpovedané alebo chýbajúce hodnoty v entite](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Skopírovať konfiguráciu prostredia
 
@@ -68,7 +81,7 @@ Tieto údaje *nebudú* skopírované:
 - Profily zákazníkov.
 - Poverenia zdroja údajov. Budete musieť poskytnúť poverenia pre každý zdroj údajov a ručne obnoviť zdroje údajov.
 
-- Zdroje údajov z priečinka Common Data Model a dátového jazera spravovaného v Dataverse. Tieto zdroje údajov budete musieť vytvoriť ručne s rovnakým názvom ako v zdrojovom prostredí.
+- Zdroje údajov z priečinka Common Data Model a dátového jazera spravovaného Dataverse. Tieto zdroje údajov budete musieť vytvoriť ručne s rovnakým názvom ako v zdrojovom prostredí.
 
 Po skopírovaní prostredia sa zobrazí potvrdzovacia správa o vytvorení nového prostredia. Stlačte možnosť **Prejsť na zdroje údajov**, čím si zobrazíte zoznam zdrojov údajov.
 

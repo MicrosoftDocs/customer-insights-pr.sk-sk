@@ -1,7 +1,7 @@
 ---
 title: Obohatenie zjednotených profilov zákazníkov
 description: Využite možnosti na obohatenie údajov vašich zákazníkov.
-ms.date: 09/30/2021
+ms.date: 11/05/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
+ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673018"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "7770143"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obohacovanie profilov zákazníkov (ukážka)
 
@@ -34,7 +34,7 @@ Na karte **Objavovať** nájdete všetky podporované možnosti obohatenia.
 - [Značky](enrichment-microsoft.md) od spoločnosti Microsoft
 - [Záujmy](enrichment-microsoft.md) od spoločnosti Microsoft
 - [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft 
-- [Demografické údaje](enrichment-experian.md), ktoré poskytuje Experian
+- [Demografické údaje](enrichment-experian.md) poskytované spoločnosťou Experian
 - [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
 - [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
 
@@ -42,6 +42,7 @@ Na karte **Objavovať** nájdete všetky podporované možnosti obohatenia.
 
 - [Údaje o spoločnosti](enrichment-leadspace.md) poskytované spoločnosťou Leadspace
 - [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft 
+- [Vylepšené firemné údaje](enrichment-enhanced-company-data.md) poskytovaná spoločnosťou Microsoft
 - [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies 
 - [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
 - [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
@@ -76,7 +77,7 @@ Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Zobrazte priebeh procesu obohacovania
 
-Môžete nájsť detaily spracúvania obohatenia vrátane jeho stavu a možných problémov počas obnovovania či po dokončení obnovenia. Zoznámte sa s procesmi, ktoré sú súčasťou obnovenia obohatenia, a dĺžkou behu týchto procesov. Stav obohatenia je podporovaný pre Experian, Leadspace, HERE Technologies, import SFTP a Azure Maps.
+Môžete nájsť detaily spracúvania obohatenia vrátane jeho stavu a možných problémov počas obnovovania či po dokončení obnovenia. Zoznámte sa s procesmi, ktoré sú súčasťou obnovenia obohatenia, a dĺžkou behu týchto procesov. Stav obohatenia je podporovaný pre Experian, Leadspace, HERE Technologies, SFTP Import a Azure Maps.
 
 Zobrazenie stavu obohatenia
 
