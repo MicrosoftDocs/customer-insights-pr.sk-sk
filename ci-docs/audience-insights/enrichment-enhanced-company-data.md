@@ -1,7 +1,7 @@
 ---
 title: Vylepšenie firemných údajov
 description: Obohaťte a normalizujte firemné údaje pomocou modelov spoločnosti Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770189"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813936"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obohatenie firemných profilov o vylepšené firemné dáta
 
@@ -51,7 +51,8 @@ Rozšírené údaje majú niekoľko obmedzení. Položky v zozname nižšie nie 
 
 1.  Potvrďte identitu spoločnosti. Neoverujeme, či je vstupom existujúca organizácia alebo či spoločnosť používa výstup ako svoj štandardný názov.
 2.  Komplexne pokrývať spoločnosti po celom svete. Kompilované údaje spoločnosti Microsoft majú globálne pokrytie, ale väčšinu pokrytia ponúkajú v Austrálii, Kanade, Spojenom kráľovstve a Spojených štátoch.
-3.  Zaručiť presnosť alebo aktuálnosť údajov. Keďže obchodné informácie sa často menia, nemôžeme zaručiť, že poskytnuté vylepšené firemné údaje sú vždy presné alebo aktuálne.
+3.  Globálne štandardizujte adresy spoločností. V súčasnosti podporujeme štandardizáciu adries v týchto krajinách alebo regiónoch: Austrália, Kanada, Francúzsko, Nemecko, Taliansko, Japonsko, Spojené kráľovstvo a Spojené štáty americké.
+4.  Zaručiť presnosť alebo aktuálnosť údajov. Keďže obchodné informácie sa často menia, nemôžeme zaručiť, že poskytnuté vylepšené firemné údaje sú vždy presné alebo aktuálne.
 
 ## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 
