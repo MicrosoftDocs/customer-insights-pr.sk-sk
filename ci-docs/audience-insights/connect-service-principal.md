@@ -1,7 +1,7 @@
 ---
 title: Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby
 description: Na pripojenie k vlastnému dátovému jazeru použite objekt služby Azure.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645191"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900294"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby Azure
 
-Automatizované nástroje, ktoré využívajú služby Azure, by mali mať vždy obmedzené povolenia. Namiesto prihlasovania aplikácií ako plne privilegovaného používateľa ponúka Azure objekty služieb. Pokračujte v čítaní, aby ste sa dozvedeli, ako prepojiť Dynamics 365 Customer Insights s Azure Data Lake Storage pomocou objektu služby Azure namiesto kľúčov účtu úložiska. 
+Tento článok popisuje, ako sa pripojiť Dynamics 365 Customer Insights s Azure Data Lake Storage účtu pomocou princípu služby Azure namiesto kľúčov účtov úložiska. 
 
-Objekt služby môžete použiť na bezpečné [pridanie alebo úpravu priečinka Common Data Model ako zdroja údajov](connect-common-data-model.md) alebo [na vytvorenie alebo aktualizáciu prostredia](create-environment.md).
+Automatizované nástroje, ktoré využívajú služby Azure, by mali mať vždy obmedzené povolenia. Namiesto prihlasovania aplikácií ako plne privilegovaného používateľa ponúka Azure objekty služieb. Princípy služieb môžete použiť na zabezpečenie [pridajte alebo upravte priečinok Common Data Model ako zdroj údajov](connect-common-data-model.md) alebo [vytvoriť alebo aktualizovať prostredie](create-environment.md).
 
 > [!IMPORTANT]
 > - Účet Data Lake Storage, ktorý bude používať objekt služby, musí mať [povolený hierarchický priestor názvov](/azure/storage/blobs/data-lake-storage-namespace).
-> - Na vytvorenie objektu služby potrebujete povolenia správcu predplatného Azure.
+> - Na vytvorenie principála služby potrebujete povolenia správcu pre svoje predplatné Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Vytvorte objekt služby Azure pre Customer Insights
 
-Pred vytvorením nového objektu služby pre prehľady cieľovej skupiny alebo prehľady interakcií skontrolujte, či už vo vašej organizácii existuje.
+Pred vytvorením nového principála služby pre Customer Insights skontrolujte, či už vo vašej organizácii existuje.
 
 ### <a name="look-for-an-existing-service-principal"></a>Vyhľadajte existujúci objekt služby
 

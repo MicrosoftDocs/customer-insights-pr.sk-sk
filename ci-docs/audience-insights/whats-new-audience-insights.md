@@ -1,7 +1,7 @@
 ---
 title: Nové a prichádzajúce funkcie
 description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,35 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753136"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884281"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v možnosti štatistiky publika Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Sme radi, že môžeme oznámiť naše najnovšie aktualizácie! Tento článok sumarizuje funkcie verejnej ukážky, vylepšenia všeobecnej dostupnosti a aktualizácie funkcií. Ak chcete vidieť dlhodobé plány funkcií, pozrite sa na [Plány vydania Dynamics 365 a Power Platform](/dynamics365/release-plans/).
+Sme radi, že môžeme oznámiť naše najnovšie aktualizácie! Tento článok sumarizuje funkcie verejnej ukážky, vylepšenia všeobecnej dostupnosti a aktualizácie funkcií. Ak chcete zobraziť dlhodobé plány pre funkcie, pozrite si [Plány vydaní Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
 Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých regiónov sa teda môžu niektoré funkcie dostať skôr než do ostatných. Pokiaľ nie je uvedené inak, nemusíte podniknúť žiadne kroky a my aplikáciu automaticky aktualizujeme bez prestojov.
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Aktualizácie z novembra 2021
+
+Aktualizácie v novembri 2021 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Členstvo v segmente je teraz k dispozícii v Dataverse
+
+Informácie o členstve v segmentoch pre profily zákazníkov sú teraz k dispozícii v Dataverse spolu s profilmi a prehľadmi zákazníkov. Akčné aplikácie Dynamics 365 a aplikácie s podporou modelov môžu tieto údaje použiť na vyhľadávanie podrobností o členstve v segmente pre daného zákazníka.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivity podporujú podrobnosti na úrovni kontaktov pre firemné účty
+
+Teraz môžete konfigurovať, zobrazovať a filtrovať aktivity pre kontakty na časových osách aktivít vášho firemného účtu, aby ste lepšie pochopili, ktoré kontakty účtu sa zúčastnili na konkrétnych aktivitách.
 
 ## <a name="october-2021-updates"></a>Aktualizácie z októbra 2021
 
@@ -37,13 +49,13 @@ Od októbra 2021 môžete v Customer Insights pracovať s firemnými účtami a 
 
 Nasledujúce časti zdôrazňujú niektoré z kľúčových oblastí, ktoré boli prispôsobené na podporu obchodných účtov a individuálnych spotrebiteľov.
 
-#### <a name="export-segments-based-on-business-accounts"></a>Export segmentov na základe podnikateľských účtov
+#### <a name="export-segments-based-on-business-accounts"></a>Export segmentov na základe obchodných účtov
 
 Všetky exporty segmentov v štatistikách publika sú dostupné v kontexte firemných účtov. Väčšina exportov segmentov vyžaduje dodatočnú konfiguráciu a [projektované kontaktné informácie](segment-builder.md#create-a-new-segment) v základných segmentoch, aby boli platné pre podnikateľské účty. Ďalšie informácie nájdete v časti [Export segmentov](export-destinations.md#export-segments).
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Použite export LinkedIn Ads s firemnými účtami
 
-Export reklám LinkedIn je teraz k dispozícii na zacielenie na kontakt a spoločnosť v kontexte obchodných účtov. Pri výbere zacielenia na spoločnosť ako primárneho zamerania exportu LinkedIn môžete exportovať segmenty postavené na obchodných účtoch bez potreby projektovania kontaktných informácií. Ďalšie informácie nájdete v dokumentoch o [Export reklám LinkedIn](export-linkedin-ads.md) a rozdiel medzi [kontaktné cielenie](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) a [zameranie spoločnosti](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+Export reklám LinkedIn je teraz k dispozícii na zacielenie na kontakt a spoločnosť v kontexte obchodných účtov. Pri výbere zacielenia na spoločnosť ako primárneho zamerania exportu LinkedIn môžete exportovať segmenty založené na obchodných účtoch bez potreby projektovania kontaktných informácií. Ďalšie informácie nájdete v dokumentoch o [Export reklám LinkedIn](export-linkedin-ads.md) a rozdiel medzi [kontaktné cielenie](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) a [zameranie spoločnosti](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Vytvárajte miery na základe obchodných účtov a ich hierarchie
 
@@ -59,7 +71,7 @@ Model zákazníckeho churn predikcia teraz podporuje aj firemné účty. Riziko 
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Pozrite si kontakty firemného účtu v zobrazení zákazníka
 
-Ak sú firemné účty namapované na súvisiace účty, aplikácia Customer Insights zobrazuje tieto súvisiace kontakty ako súčasť zobrazenia podrobností o zákazníkovi. Ďalšie informácie nájdete v časti [Profily zákazníkov](customer-profiles.md).
+Ak sú firemné účty namapované na súvisiace účty, aplikácia Customer Insights zobrazí tieto súvisiace kontakty ako súčasť zobrazenia podrobností o zákazníkovi. Ďalšie informácie nájdete v časti [Profily zákazníkov](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>Aktualizácie zo septembra 2021
@@ -95,9 +107,9 @@ Aktualizácie pre z júna 2021 zahŕňajú niekoľko funkcií, aktualizácií v�
 
 ### <a name="extensibility"></a>Rozšíriteľnosť
 
-- **Exportujte segmenty a ďalšie údaje do služby Salesforce Marketing Cloud** Rozšírili sme naše ciele exportovania o [Salesforce Marketing Cloud](export-salesforce.md). Teraz máte možnosť exportovania segmentov a ďalších typov údajov do aplikácie Salesforce Marketing Cloud pomocou značkového exportu SFTP. Importovať údaje je možné v službe Salesforce plne automatizovať a použiť ich na vytváranie účinnejších marketingových kampaní.  
+- **Exportujte segmenty a ďalšie údaje do služby Salesforce Marketing Cloud** Rozšírili sme naše ciele exportovania o[Salesforce Marketing Cloud](export-salesforce.md). Teraz máte možnosť exportovania segmentov a ďalších typov údajov do aplikácie Salesforce Marketing Cloud pomocou značkového exportu SFTP. Importovať údaje je možné v službe Salesforce plne automatizovať a použiť ich na vytváranie účinnejších marketingových kampaní.  
  
-- **Exportujte segmenty do ActiveCampaign** Rozšírili sme naše exportné destinácie o [aktívnu kampaň](export-active-campaign.md). Teraz môžete exportovať segmenty a vytvárať kampane, prevádzkovať e-mailový marketing a spolupracovať s konkrétnymi skupinami zákazníkov v programe ActiveCampaign.
+- **Exportujte segmenty do ActiveCampaign** Rozšírili sme naše exportné destinácie o[ aktívnu kampaň ](export-active-campaign.md). Teraz môžete exportovať segmenty a vytvárať kampane, prevádzkovať e-mailový marketing a spolupracovať s konkrétnymi skupinami zákazníkov v programe ActiveCampaign.
  
 - **Exportujte segmenty do Sendinblue** Rozšírili sme naše exportné destinácie o [Sendinblue](export-sendinblue.md). Teraz môžete exportovať segmenty a vytvárať kampane, prevádzkovať e-mailový marketing a spolupracovať s konkrétnymi skupinami zákazníkov v programe Sendinblue.
  
@@ -113,7 +125,7 @@ Aktualizácie z mája 2021 obsahujú niekoľko funkcií, vylepšenia výkonu a o
 
 ### <a name="data-ingestion"></a>Prijímanie údajov
 
-- **Zobrazte alebo upravte metadáta alebo definíciu entity pri pripájaní údajov z Azure Data Lake Storage** Teraz môžete zobraziť a upraviť metadáta alebo definíciu entity v štatistikách publika pri pripájaní údajov z priečinka Common Data Model v Azure Data Lake Storage. Táto funkcia poskytuje odozvu v reálnom čase, validáciu modelu a kontrolu chýb. Umožňuje vám to bezproblémovo upravovať model.json aj manifest.json.
+- **Prezeranie alebo úprava metaúdajov alebo definície entity pri pripájaní údajov z Azure Data Lake Storage** Teraz môžete zobraziť a upraviť metaúdaje alebo definíciu entity v prehľadoch cieľovej skupiny, keď pripájate údaje z priečinka Common Data Model vo vašom Azure Data Lake Storage. Táto funkcia poskytuje odozvu v reálnom čase, validáciu modelu a kontrolu chýb. Umožňuje vám to bezproblémovo upravovať model.json aj manifest.json.
 
 ### <a name="extensibility"></a>Rozšíriteľnosť
 
@@ -188,7 +200,7 @@ Aktualizácie z marca 2021 obsahujú niekoľko funkcií, vylepšenia výkonu a o
 
 ### <a name="data-ingestion"></a>Prijímanie údajov
 
-- **Pripojte sa k lokálny zdrojom údajov pomocou Power Platform tokov údajov a brán** S potešením oznamujeme ukážku Power Platform dátových tokov a lokálny konektivitu pomocou brán v Customer Insights s pridruženým prostredím Power Platform alebo Dataverse. Akékoľvek nové zdroje údajov vytvorené v prostredí Customer Insights s prepojeným prostredím Dataverse budú predvolene nastavené na toky údajov Power Platform, čo prinesie dátovú konektivitu lokálny a bohatú sadu konektorov a transformačných možností.
+- **Pripojte sa k lokálny zdrojom údajov pomocou tokov údajov a brán Power Platform** S potešením oznamujeme ukážku toku údajov Power Platform a lokálne pripojenie pomocou brán v nástroji Customer Insights s pridruženým prostredím Power Platform alebo Dataverse. Všetky nové zdroje údajov vytvorené v prostredí Customer Insights s prepojením prostredia Dataverse predvolené toky údajov Power Platform prinášajúce lokálny dátové pripojenie a bohatú sadu konektorov a transformačných schopností.
 
 ### <a name="extensibility"></a>Rozšíriteľnosť
 
@@ -250,7 +262,7 @@ Aktualizácie z februára 2021 zahŕňajú niekoľko funkcií, aktualizácií v�
 
 - **Kopírovacie prostredie podporuje viac typov zdrojov údajov**
 
-  Správcovia môžu kopírovať konfigurácie prostredia do nového prostredia v tej istej organizácii. Táto funkcia rozširuje funkčnosť prostredia kopírovania pre prípady, v ktorých sa používajú zdroje údajov založené na Microsoft Dataverse spravovanom dátovom jazere alebo priečinku Common Data Model.
+  Správcovia môžu kopírovať konfigurácie prostredia do nového prostredia v tej istej organizácii. Vďaka tejto funkcii máte teraz k dispozícii rozširené funkcie prostredia kopírovania pre prípady, keď sa používajú zdroje údajov založené na spravovanej službe Microsoft Dataverse Data Lake alebo priečinku Common Data Model.
 
 ## <a name="january-2021-updates"></a>Aktualizácie z januára 2021
 
@@ -276,7 +288,7 @@ Aktualizácie z januára 2021 zahŕňajú niekoľko funkcií, aktualizácií vý
 
 #### <a name="system-administration"></a>Správa systému
 
-- **Bezproblémovo zdieľajte údaje s Microsoft Dataverse** Teraz môžete zdieľať výstup Customer Insights s Microsoft Dataverse aplikáciami pomocou Microsoft Dataverse Managed Data Lake. Keď priradíte Dataverse prostredie k Customer Insights, získate možnosť povoliť zdieľanie údajov.
+- **Bezproblémové zdieľanie údajov do Microsoft Dataverse** Teraz môžete zdieľať výstup zo služby Customer Insights s aplikáciami Microsoft Dataverse využívajúcimi spravované Data Lake Microsoft Dataverse. Keď priradíte prostredie Dataverse s Customer Insights, získate možnosť povoliť zdieľanie údajov.
   Ďalšie informácie nájdete v článku [Správa prostredí](manage-environments.md).
 
 

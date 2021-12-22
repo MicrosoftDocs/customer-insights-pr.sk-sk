@@ -1,7 +1,7 @@
 ---
 title: Vylepšenie firemných údajov
 description: Obohaťte a normalizujte firemné údaje pomocou modelov spoločnosti Microsoft.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813936"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927601"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obohatenie firemných profilov o vylepšené firemné dáta
 
@@ -47,7 +47,7 @@ Microsft
 
 ## <a name="limitations"></a>Obmedzenia
 
-Rozšírené údaje majú niekoľko obmedzení. Položky v zozname nižšie nie sú modelom podporované.
+Rozšírené údaje majú niekoľko obmedzení. Položky v zozname nižšie model nepodporuje.
 
 1.  Potvrďte identitu spoločnosti. Neoverujeme, či je vstupom existujúca organizácia alebo či spoločnosť používa výstup ako svoj štandardný názov.
 2.  Komplexne pokrývať spoločnosti po celom svete. Kompilované údaje spoločnosti Microsoft majú globálne pokrytie, ale väčšinu pokrytia ponúkajú v Austrálii, Kanade, Spojenom kráľovstve a Spojených štátoch.
@@ -64,7 +64,7 @@ Rozšírené údaje majú niekoľko obmedzení. Položky v zozname nižšie nie 
 
 1. Stlačte možnosť **Množina zákazníckych údajov** a vyberte entitu obsahujúcu adresy, ktoré chcete obohatiť. Môžete zvoliť entitu *Zákazník* na obohatenie adries vo všetkých vašich zákazníckych profiloch alebo vyberte entitu segmentu na obohatenie adries iba v profiloch zákazníkov obsiahnutých v danom segmente.
 
-1. Vyberte, ktorý typ polí z vašich firemných profilov sa má použiť na porovnávanie s kompilovanými firemnými údajmi spoločnosti Microsoft. Tento výber ovplyvní mapovacie polia, ku ktorým máte prístup v ďalšom kroku.
+1. Vyberte, ktorý typ polí z profilov vašej spoločnosti sa má použiť na porovnávanie s kompilovanými údajmi spoločnosti Microsoft. Tento výber ovplyvní mapovacie polia, ku ktorým máte prístup v ďalšom kroku.
 
 1.  Namapujte polia spoločnosti z vašej jednotnej zákazníckej entity. Čím viac kľúčových identifikátorov a polí namapujete, tým väčšia je pravdepodobnosť vyššej miery zhody.
 
@@ -83,6 +83,16 @@ Proces obohatenia spustíte výberom položky **Spustiť** z panela príkazov. M
 Po dokončení procesu obohacovania môžete skontrolovať údaje o nových obohatených zákazníckych profiloch v časti **Moje obohatenia**. Ďalej nájdete čas poslednej aktualizácie a počet obohatených profilov.
 
 Môžete získať podrobné zobrazenie každého obohateného profilu výberom **Zobraziť obohatené údaje**.
+
+### <a name="overview-card"></a>Prehľadová karta
+
+Prehľadová karta zobrazuje podrobnosti o pokrytí obohatenia. 
+
+* **Zákazníci spracované a zmenené** : Počet zákazníckych profilov, ktoré boli úspešne obohatené.
+
+* **Zákazníci spracované a nezmenené** : Počet zákazníckych profilov, ktoré boli rozpoznané, ale neboli zmenené. Zvyčajne sa to stane, keď sú vstupné údaje platné a nemožno ich zlepšiť obohatením.
+
+* **Zákazníci nespracovaní a nezmenení** : Počet profilov, ktoré neboli rozpoznané. Zvyčajne pre vstupné údaje, ktoré sú neplatné alebo nie sú podporované obohatením.
 
 ## <a name="next-steps"></a>Ďalšie kroky
 

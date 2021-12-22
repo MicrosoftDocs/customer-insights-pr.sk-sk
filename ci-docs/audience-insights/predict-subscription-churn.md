@@ -1,5 +1,5 @@
 ---
-title: Predikcia straty predplatného
+title: Zrušenie odberu predikcia (Video)
 description: Predikuje, či hrozí riziko, že zákazník prestane používať predplatené produkty alebo služby vašej spoločnosti.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
-ms.translationtype: MT
+ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799746"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904044"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikcia rizika straty predplatného (ukážka)
 

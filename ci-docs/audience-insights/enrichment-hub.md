@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770143"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884235"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obohacovanie profilov zákazníkov (ukážka)
 
@@ -34,7 +34,7 @@ Na karte **Objavovať** nájdete všetky podporované možnosti obohatenia.
 - [Značky](enrichment-microsoft.md) od spoločnosti Microsoft
 - [Záujmy](enrichment-microsoft.md) od spoločnosti Microsoft
 - [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft 
-- [Demografické údaje](enrichment-experian.md) poskytované spoločnosťou Experian
+- [Demografické údaje](enrichment-experian.md), ktoré poskytuje Experian
 - [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
 - [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
 
@@ -46,6 +46,7 @@ Na karte **Objavovať** nájdete všetky podporované možnosti obohatenia.
 - [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies 
 - [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
 - [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
+- [Údaje o interakcii účtu](enrichment-office.md) poskytovaná spoločnosťou Microsoft
 
 ---
 
@@ -77,7 +78,7 @@ Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Zobrazte priebeh procesu obohacovania
 
-Môžete nájsť detaily spracúvania obohatenia vrátane jeho stavu a možných problémov počas obnovovania či po dokončení obnovenia. Zoznámte sa s procesmi, ktoré sú súčasťou obnovenia obohatenia, a dĺžkou behu týchto procesov. Stav obohatenia je podporovaný pre Experian, Leadspace, HERE Technologies, SFTP Import a Azure Maps.
+Môžete nájsť detaily spracúvania obohatenia vrátane jeho stavu a možných problémov počas obnovovania či po dokončení obnovenia. Zoznámte sa s procesmi, ktoré sú súčasťou obnovenia obohatenia, a dĺžkou behu týchto procesov. Stav obohatenia je podporovaný pre Experian, Leadspace, HERE Technologies, import SFTP a Azure Maps.
 
 Zobrazenie stavu obohatenia
 

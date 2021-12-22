@@ -1,7 +1,7 @@
 ---
-title: Príjem údajov prostredníctvom konektora Power Query
+title: Prijímanie údajov cez konektor Power Query (video)
 description: Konektory pre zdroje údajov založené na Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732237"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903859"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Pripojenie k zdroju údajov Power Query
 
-Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčšinu týchto konektorov podporuje Dynamics 365 Customer Insights. Pri pridávaní zdrojov údajov na základe konektorov Power Query sa všeobecne postupuje podľa krokov uvedených v nasledujúcej časti. V závislosti od použitého konektora sú však potrebné rôzne informácie. Ďalšie informácie nájdete v dokumentácii o jednotlivých konektoroch v časti [Referencia na konektor Power Query](/power-query/connectors/).
+Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčšinu z týchto konektorov podporuje Dynamics 365 Customer Insights. 
+
+Pridávanie zdrojov údajov na základe Power Query konektorov sa vo všeobecnosti riadi krokmi uvedenými v tejto časti. V závislosti od použitého konektora sú však potrebné rôzne informácie. Ak sa chcete dozvedieť viac, pozrite si dokumentáciu o jednotlivých konektoroch v [Power Query odkaz na konektor](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčši
 
 1. Vyberte položku **Pridať zdroj údajov**.
 
-1. Vyberte metódu **Import údajov** a **Ďalej**.
+1. Vyberte **Microsoft Power Query** a potom vyberte **Ďalšie**.
 
-1. Zadajte **Názov** pre zdroj údajov a vyberte **Ďalej** na vytvorenie zdroja údajov. Pokyny týkajúce sa pomenovania: 
-   - Začnite písmenom.
-   - Používajte iba písmená a číslice. Nie je povolené zadávanie špeciálnych znakov a medzier.
-   - Použite 3 až 64 znakov.
+1. Zadajte **Názov** pre zdroj údajov a vyberte **Ďalej** na vytvorenie zdroja údajov.
 
-1. Vyberte jeden z [dostupných konektorov](#available-power-query-data-sources). Pre tento príklad vyberieme konektor **Text/CSV**.
+1. Vyberte jeden z [dostupných konektorov](#available-power-query-data-sources). V tomto príklade vyberieme **Text/CSV** konektor.
 
 1. Zadajte požadované údaje v časti **Nastavenia spojenia** pre vybraný konektor a vyberte **Ďalej** na zobrazenie ukážky údajov.
 
@@ -50,7 +49,7 @@ Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčši
 
 1. Do zdroja údajov môžete pridať ďalšie entity výberom položky **Získať údaje** v dialógovom okne **Upraviť dotazy**.
 
-   Tieto transformácie sú vysoko odporúčané:
+   Odporúčame vám použiť nasledujúce transformácie:
 
    - Ak prijímate údaje zo súboru CSV, prvý riadok často obsahuje hlavičky. Prejdite do časti **Transformovať tabuľku** a vyberte **Ako prvý riadok použiť hlavičky**.
    - Zaistite, aby bol dátový typ nastavený správne.
@@ -61,7 +60,7 @@ Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčši
 
 ## <a name="available-power-query-data-sources"></a>Dostupné zdroje údajov pre Power Query
 
-V časti [Referencia na konektor Power Query](/power-query/connectors/) si môžete pozrieť aktuálny zoznam konektorov, ktoré môžete zvoliť na import údajov do Customer Insights. 
+Pozrite si [Power Query odkaz na konektor](/power-query/connectors/) nájdete zoznam konektorov, ktoré môžete použiť na import údajov do Customer Insights. 
 
 Konektory so značkou začiarknutia v stĺpci **Customer Insights (toky údajov)** sú k dispozícii na vytvorenie nových zdrojov údajov na základe Power Query. V dokumentácii konkrétneho konektora sa dozviete viac o jeho požiadavkách, obmedzeniach a ďalších podrobnostiach.
 
@@ -70,7 +69,7 @@ Konektory so značkou začiarknutia v stĺpci **Customer Insights (toky údajov)
 > [!NOTE]
 > Nemusí byť možné vykonať zmeny zdrojov údajov, ktoré sa momentálne používajú v niektorom z procesov aplikácie (napríklad *segmentácia*, *zosúladenie* alebo *zlúčenie*). 
 >
-> Pomocou stránky **Nastavenia** môžete sledovať priebeh každého aktívneho procesu. Po dokončení procesu sa môžete vrátiť na stránku **Zdroje údajov** a vykonať zmeny.
+> V **nastavenie** môžete sledovať priebeh každého z aktívnych procesov. Po dokončení procesu sa môžete vrátiť na stránku **Zdroje údajov** a vykonať zmeny.
 
 1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zdroje údajov**.
 

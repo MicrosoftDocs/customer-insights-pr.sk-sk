@@ -1,7 +1,7 @@
 ---
 title: Vlastné modely strojového učenia | Dokumentácia spoločnosti Microsoft
 description: Práca s vlastnými modelmi zo strojového učenia platformy Azure v systéme Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032961"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881803"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastné modely strojového učenia
+
+> [!NOTE]
+> Podpora pre strojové učenie Studio (klasické) sa skončí 31. augusta 2024. Odporúčame vám prejsť na [Azure strojové učenie](/azure/machine-learning/overview-what-is-azure-machine-learning) do tohto dátumu.
+>
+> Od 1. decembra 2021 nebudete môcť vytvárať nové zdroje strojové učenie Studio (klasické). Do 31. augusta 2024 môžete naďalej používať existujúce zdroje strojové učenie Studio (klasické). Ďalšie informácie nájdete v časti [Migrujte do Azure strojové učenie](/azure/machine-learning/migrate-overview).
+
 
 **Inteligencia** > **Vlastné modely** umožňuje spravovať pracovné postupy založené na modeloch strojového učenia Azure. Pracovné postupy vám pomôžu vybrať údaje, z ktorých chcete generovať prehľady, a namapovať výsledky na vaše zjednotené údaje o zákazníkoch. Ďalšie informácie o vytváraní vlastných modelov ML nájdete v sekcii [Používajte modely založené na strojovom učení platformy Azure](azure-machine-learning-experiments.md).
 
@@ -24,9 +30,9 @@ ms.locfileid: "7032961"
 
 Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostredí, zlepšovanie obchodných schopností a prehľadov o výnosoch. Dôrazne odporúčame, aby ste vyvážili hodnotu svojej predikcie vo vzťahu k jej vplyvu a nedostatkom, ktoré môžu vzniknúť etickým spôsobom. Zistite viac o tom, ako sa spoločnosť Microsoft [rieši zodpovednú AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Môžete sa tiež dozvedieť o [technikách a procesoch pre zodpovedné strojové učenie](/azure/machine-learning/concept-responsible-ml) špecifických pre strojové učenie platformy Azure.
 
-## <a name="prerequisites"></a>Predpoklady
+## <a name="prerequisites"></a>Požiadavky
 
-- Táto funkcia v súčasnosti podporuje webové služby publikované cez [strojové učenie Studio (klasické)](https://studio.azureml.net) a [hromadné kanály strojového učenia platformy Azure](/azure/machine-learning/concept-ml-pipelines).
+- Táto funkcia podporuje webové služby publikované prostredníctvom [Dávkové potrubia Azure strojové učenie](/azure/machine-learning/concept-ml-pipelines).
 
 - Ak chcete používať túto funkciu, potrebujete účet ukladacieho priestoru Azure Data Lake Gen2 spojený s inštanciou platformy Azure Studio. Ďalšie informácie nájdete v časti [Vytvorenie účtu úložiska Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 
 1. Ak je vaše predplatné strojového učenia platformy Azure u iného nájomníka ako Customer Insights, vyberte položku **Prihlásiť sa** s vašimi povereniami pre vybratú organizáciu.
 
-1. Vyberte **Pracovné priestory** spojené s vašou webovou službou. Uvedené sú dve sekcie, jedna pre strojové učenie platformy Azure v1 (strojové učenie Studio (klasická)) a jedna pre strojové učenie platformy Azure v2 (strojové učenie platformy Azure). Ak si nie ste istí, ktorý pracovný priestor je ten pravý pre vašu webovú službu strojového učenia Studio (klasického), vyberte položku **Ľubovoľné**.
+1. Vyberte **Pracovné priestory** spojené s vašou webovou službou. 
 
-1. Vyberte webovú službu strojového učenia Studio (klasického) alebo kanál strojového učenia platformy Azure v rozbaľovacej ponuke **Webová služba, ktorá obsahuje váš model**. Potom vyberte položku **Ďalej**.
-   - Zistite viac o [publikovaní webovej služby v strojovom učení Studio (klasickom)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Zistite viac o [publikovaní kanálu v strojovom učení platformy Azure pomocou návrhára](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) alebo [súpravy SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Váš kanál musí byť zverejnený pod [koncovým bodom kanála](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Vyberte potrubie strojové učenie Azure v **Webová služba, ktorá obsahuje váš model** rozbaľovacia ponuka. Potom vyberte položku **Ďalej**.    
+   Zistite viac o [publikovaní kanálu v strojovom učení platformy Azure pomocou návrhára](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) alebo [súpravy SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Váš kanál musí byť zverejnený pod [koncovým bodom kanála](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Pre každý **Vstup webovej služby** vyberte zhodnú položku **Entita** v rámci prehľadov cieľových skupín a vyberte položku **Ďalej**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
    > ![Konfigurácia pracovného postupu.](media/intelligence-screen2-updated.png "Konfigurácia pracovného postupu")
 
 1. V rámci kroku **Parametre modelového výstupu** nastavte nasledujúce vlastnosti:
-   - Strojové učenie Studio (klasické)
-      1. Zadajte **Názov entity** výstupu, do ktorého majú prúdiť výsledky výstupu webových služieb.
-   - Strojové učenie platformy Azure
       1. Zadajte **Názov entity** výstupu, do ktorého majú prúdiť výsledky výstupu kanálov.
       1. Vyberte **Názov parametra ukladacieho priestoru výstupných údajov** vášho hromadného kanála z rozbaľovacej ponuky.
       1. Vyberte **Názov parametra postupu výstupných údajov** vášho hromadného kanála z rozbaľovacej ponuky.
@@ -93,9 +95,6 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 1. Pre každý **Vstup webovej služby** môžete aktualizovať zhodnú položku **Entita** v rámci prehľadov cieľových skupín. Potom vyberte položku **Ďalej**.
 
 1. V rámci kroku **Parametre modelového výstupu** nastavte nasledujúce vlastnosti:
-   - Strojové učenie Studio (klasické)
-      1. Zadajte **Názov entity** výstupu, do ktorého majú prúdiť výsledky výstupu webových služieb.
-   - Strojové učenie platformy Azure
       1. Zadajte **Názov entity** výstupu, do ktorého majú prúdiť výsledky výstupu kanálov.
       1. Vyberte položku **Názov parametra ukladacieho priestoru výstupných údajov** pre váš testovací kanál.
       1. Vyberte položku **Názov parametra ukladacieho priestoru postupu** pre váš testovací kanál.

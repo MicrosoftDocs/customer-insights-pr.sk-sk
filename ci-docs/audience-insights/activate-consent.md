@@ -1,7 +1,7 @@
 ---
 title: Aktivujte pravidlá súhlasu pre segmenty
 description: Ak chcete prepojiť údaje o súhlase a aktivovať kontroly súhlasu v štatistikách publika, postupujte podľa týchto krokov. Správca môže tiež zakázať kontroly súhlasu.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790794"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884093"
 ---
 # <a name="activate-consent-rules"></a>Aktivujte pravidlá súhlasu
 
@@ -49,3 +49,6 @@ Ak chcete prestať používať údaje o súhlase v štatistikách publika, spr
 1. Vyberte **Súhlas (ukážka)** tab.
 
 1. V **Povoliť kontroly súhlasu** sekciu, nastavte prepínač na **Vypnuté**.
+
+> [!TIP]
+> Ak chcete prestať používať funkciu správy súhlasu, pozrite si časť [Systémové nastavenia v Centre súhlasu (ukážka)](../consent-management/system-settings.md).

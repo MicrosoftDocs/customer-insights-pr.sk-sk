@@ -1,7 +1,7 @@
 ---
 title: Používanie zdrojov údajov na príjem údajov
 description: Prečítajte si, ako importovať údaje z rôznych zdrojov.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,36 +10,39 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732174"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900398"
 ---
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Funkcia štatistík publika v Dynamics 365 Customer Insights sa pripája k údajom zo širokej škály zdrojov. Pripojenie k zdroju údajov sa často označuje ako proces *prijímania údajov*. Po prijatí údajov ich môžete [zjednotiť](data-unification.md) a podniknúť s nimi kroky.
+Funkcia prehľadov cieľových skupín v službe Dynamics 365 Customer Insights sa pripája sa k údajom zo širokej množiny zdrojov. Pripojenie k zdroju údajov sa často označuje ako proces *prijímania údajov*. Po prijatí údajov ich môžete [zjednotiť](data-unification.md) a podniknúť s nimi kroky.
 
 ## <a name="add-a-data-source"></a>Pridať zdroj údajov
 
-Prečítajte si podrobné články o tom, ako pridať zdroj údajov, podľa toho, ktorú možnosť si vyberiete.
+V podrobných článkoch nájdete informácie o tom, ako pridať zdroj údajov v závislosti od zvolenej možnosti.
 
-Zdroj údajov môžete pridať tromi hlavnými spôsobmi:
+Môžete pridať nasledujúce zdroje údajov:
 
-- [Prostredníctvom množstva konektorov Power Query](connect-power-query.md)
-- [Z priečinka Common Data Model](connect-common-data-model.md)
-- [Z vlastného jazera Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [Power Query konektory](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse jazero](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Ak používate skúšobnú verziu, sekcia metód importu obsahuje a **Knižnica údajov Customer Insights** možnosť. Túto možnosť vyberte, ak chcete vybrať vzorovú množinu údajov dostupnú pre rôzne odvetvia. Ďalšie informácie nájdete v časti [Dynamics 365 Customer Insights súdny proces](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Pridajte údaje z lokálny zdrojov údajov
 
-Prijímanie údajov z lokálny zdrojov údajov v štatistikách publika je podporované na základe Microsoft Power Platform tokov údajov. Dátové toky je možné povoliť v Customer Insights pomocou [poskytnutie adresy URL prostredia Microsoft Dataverse](create-environment.md) pri nastavovaní prostredia.
+Na základe je podporované prijímanie údajov z lokálnych zdrojov údajov v prehľadoch cieľovej skupiny tokov údajov Microsoft Power Platform. Dátové toky môžete povoliť v Customer Insights pomocou [poskytovanie Microsoft Dataverse URL prostredia](create-environment.md) pri nastavovaní prostredia.
 
-Zdroje údajov, ktoré sa vytvoria po priradení Dataverse prostredia k Customer Insights, budú používať [Power Platform toky údajov](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) predvolene. Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Odstráňte a znova vytvorte zdroje údajov, ktoré existovali pred pridružením prostredia Dataverse [použite dátové brány lokálny](/data-integration/gateway/service-gateway-app).
+Zdroje údajov, ktoré sa vytvoria po priradení a Dataverse prostredie s využitím Customer Insights [Power Platform dátové toky](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) predvolene. Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Môžete odstrániť a znovu vytvoriť zdroje údajov, ktoré existovali pred a Dataverse prostredie bolo spojené [pomocou dátových brán lokálny](/data-integration/gateway/service-gateway-app).
 
-Dátové brány z existujúceho prostredia Power BI alebo Power Apps budú viditeľné a môžete ich znova použiť v Customer Insights. Stránka zdrojov údajov zobrazuje prepojenia na prechod do prostredia Microsoft Power Platform, kde si môžete zobraziť a nakonfigurovať brány údajov lokálny.
+Dátové brány z existujúceho prostredia Power BI alebo Power Apps bude viditeľné a môžete ho znova použiť v nástroji Customer Insights. Na stránke zdrojov údajov sú zobrazené odkazy smerujúce do prostredia Microsoft Power Platform, v ktorom si môžete prezerať a konfigurovať lokálne brány údajov.
 
 ## <a name="review-ingested-data"></a>Kontrola prijatých údajov
 

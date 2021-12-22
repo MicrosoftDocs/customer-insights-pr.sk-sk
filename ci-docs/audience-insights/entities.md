@@ -1,7 +1,7 @@
 ---
 title: Entity a množiny údajov
 description: Zobrazujte údaje na stránke Entity.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,51 +9,57 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732100"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900446"
 ---
 # <a name="entities-in-audience-insights"></a>Entity v prehľadoch cieľových skupín
 
-Po [nakonfigurovaní zdrojov údajov](data-sources.md) prejdite na stránku **Entity** a vyhodnoťte kvalitu údajov, ktoré boli prijaté. Entity sa považujú za množiny údajov. Okolo týchto entít je postavených viacero možností Dynamics 365 Customer Insights. Ich dôkladná revízia vám môže pomôcť overiť výstup týchto funkcií.
+Po [nakonfigurovaní zdrojov údajov](data-sources.md) prejdite na stránku **Entity** a vyhodnoťte kvalitu údajov, ktoré boli prijaté. Entity sa považujú za množiny údajov. Ďalšie funkcie služby Dynamics 365 Customer Insights súvisia s týmito entitami. Ich dôkladná revízia vám môže pomôcť overiť výstup týchto funkcií.
 
-Stránka **Entity** uvádza entity a obsahuje niekoľko stĺpcov:
+The **entity** stránka obsahuje entity a obsahuje tieto stĺpce:
 
-- **Názov**: Názov entity údajov. Ak sa vedľa názvu entity zobrazí výstražný symbol, znamená to, že údaje pre danú entitu sa nenačítali úspešne.
-- **Zdroj**: Typ zdroja údajov, ktorý prijímala entita
-- **Autor**: Meno osoby, ktorá vytvorila entitu
-- **Vytvorené**: Dátum a čas vytvorenia entity
-- **Aktualizované** : Meno osoby, ktorá aktualizovala entitu
-- **Postavenie** : Podrobnosti o poslednej aktualizácii entity
+- **názov** : Názov dátovej entity. Ak sa vedľa názvu entity zobrazí výstražný symbol, znamená to, že údaje pre danú entitu sa nenačítali úspešne.
+- **Zdroj** : Typ zdroj údajov, ktorý prijal entitu.
+- **Aktualizované** : Čas poslednej aktualizácie entity.
+- **Postavenie** : Podrobnosti o poslednej aktualizácii entity.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Preskúmanie údajov konkrétnej entity
 
-Vyberte entitu a preskúmajte rôzne polia a záznamy zahrnuté v tejto entite.
+1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Entity**.
+1. Od **entity** vyberte entitu na otvorenie stránky s podrobnosťami.  
+1. Preskúmajte rôzne polia a záznamy zahrnuté pre túto entitu.
 
-> [!div class="mx-imgBorder"]
-> ![Vyberte entitu.](media/data-manager-entities-data.png "Výber entity")
-
-- Karta **Údaje** zobrazuje tabuľku s podrobnosťami o jednotlivých záznamoch entity.
+- Karta **Atribúty** je predvolene vybratá a zobrazuje tabuľku na kontrolu podrobností o vybranej entite, ako sú názvy polí, typy údajov a typy. Stĺpec **Typ** zobrazuje typy asociované s modelom Common Data Model, ktoré sú buď automaticky identifikované systémom alebo [manuálne priradené](map-entities.md) používateľmi. Tieto typy sú sémantické typy, ktoré sa môžu líšiť od dátových typov atribútov. Napríklad pole *E-mail* dole má typ údajov *Text*, ale jeho (sémantický) typ dátového modelu Common Data Model môže byť *E-mail* alebo *E-mailová adresa*.
 
 > [!div class="mx-imgBorder"]
 > ![Tabuľka Polia.](media/data-manager-entities-fields.PNG "Tabuľka Polia")
 
-- Karta **Atribúty** je predvolene vybratá a zobrazuje tabuľku na kontrolu podrobností o vybranej entite, ako sú názvy polí, typy údajov a typy. Stĺpec **Typ** zobrazuje typy asociované s modelom Common Data Model, ktoré sú buď automaticky identifikované systémom alebo [manuálne priradené](map-entities.md) používateľmi. Tieto typy sú sémantické typy, ktoré sa môžu líšiť od dátových typov atribútov. Napríklad pole *E-mail* dole má typ údajov *Text*, ale jeho (sémantický) typ dátového modelu Common Data Model môže byť *E-mail* alebo *E-mailová adresa*.
-
 > [!NOTE]
-> Obidve tabuľky zobrazujú iba vzorku údajov entity. Ak chcete zobraziť celú množinu údajov, prejdite na stránku **Zdroje údajov**, vyberte entitu, vyberte položku **Upraviť** a potom zobrazte údaje tejto entity pomocou editora Power Query, ako je vysvetlené v [zdrojoch údajov](data-sources.md).
+> Táto stránka zobrazuje iba vzorku údajov vašej entity. Ak chcete zobraziť celú množinu údajov, prejdite na stránku **Zdroje údajov**, vyberte entitu, vyberte položku **Upraviť** a potom zobrazte údaje tejto entity pomocou editora Power Query, ako je vysvetlené v [zdrojoch údajov](data-sources.md).
 
-Ak sa chcete dozvedieť viac o údajoch prijatých v entite, stĺpec **Súhrn** vám poskytuje niektoré dôležité vlastnosti údajov, ako sú napríklad hodnoty null, chýbajúce údaje, jedinečné hodnoty, počty a rozdelenia, ktoré sa vzťahujú na vaše dáta.
-
-Ak chcete zobraziť súhrn údajov, vyberte ikonu grafu.
+Ak sa chcete dozvedieť viac o údajoch prijatých v entite, stĺpec **Súhrn** vám poskytuje niektoré dôležité vlastnosti údajov, ako sú napríklad hodnoty null, chýbajúce údaje, jedinečné hodnoty, počty a rozdelenia, ktoré sa vzťahujú na vaše dáta. Ak chcete zobraziť súhrn údajov, vyberte ikonu grafu.
 
 > [!div class="mx-imgBorder"]
 > ![Súhrnný symbol.](media/data-manager-entities-summary.png "Tabuľka so zhrnutím údajov")
+
+- Karta **Údaje** zobrazuje tabuľku s podrobnosťami o jednotlivých záznamoch entity. Uvedené podrobnosti závisia od typu údajov entity.
+
+> [!div class="mx-imgBorder"]
+> ![Vyberte entitu.](media/data-manager-entities-data.png "Výber entity")
+
+- The **Správy** karta (dostupná pre niektoré entity) vám umožňuje vizualizovať údaje vytvorením zostavy a obsahuje tieto stĺpce:
+
+  - **Názov prehľadu** : Názov prehľadu.
+  - **Vytvoril** : Meno osoby, ktorá vytvorila entitu.
+  - **Vytvorené** : Dátum a čas vytvorenia entity.
+  - **Upravil** : Meno osoby, ktorá entitu upravila.
+  - **Upravené** : Dátum a čas úpravy entity. 
 
 ## <a name="entity-specific-information"></a>Informácie konkrétnej entity
 
@@ -73,8 +79,7 @@ Nasledujúce kontroly overujú prijaté údaje, či neobsahujú poškodené záz
 
 - Hodnota poľa sa nezhoduje s dátovým typom jeho stĺpca.
 - Polia obsahujú znaky, pre ktoré sa stĺpce nezhodujú s očakávanou schémou. Príklad: nesprávne formátované úvodzovky, neukončené úvodzovky alebo znaky nového riadku.
-- Ak existujú stĺpce dátum a čas/dátum/posun dátumu a času, ich formát je potrebné zadať v modeli, pokiaľ sa nedodržiava štandardný formát ISO.
-
+- Ak existujú stĺpce dátum/dátum/odstup dátumu a času, ich formát musí byť špecifikovaný v modeli, ak nezodpovedá štandardnému formátu ISO.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

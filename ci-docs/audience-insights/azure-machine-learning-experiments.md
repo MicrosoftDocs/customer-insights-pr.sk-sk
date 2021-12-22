@@ -1,7 +1,7 @@
 ---
 title: Pokusy so službou strojového učenia platformy Azure
 description: Používajte modely založené na strojovom učení platformy Azure v službe Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033191"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881757"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Používajte modely založené na strojovom učení platformy Azure
 
-Zjednotené údaje v službe Dynamics 365 Customer Insights sú zdrojom pre vytváranie modelov strojového učenia, ktoré môžu generovať ďalšie obchodné prehľady. Customer Insights sa integruje do služby strojového učenia Studio (klasickej) a do služby strojového učenia platformy Azure, aby ste mohli používať svoje vlastné modely. V sekcii [Pokusy so službou strojového učenia Studio (klasickou)](machine-learning-studio-experiments.md) nájdete príklady pokusov postavených na službe strojového učenia Studio (klasickej). 
+Zjednotené údaje v službe Dynamics 365 Customer Insights sú zdrojom pre vytváranie modelov strojového učenia, ktoré môžu generovať ďalšie obchodné prehľady. Customer Insights sa integrujú do služby strojového učenia Azure, aby ste mohli používať svoje vlastné modely.
 
 ## <a name="prerequisites"></a>Predpoklady
 
@@ -35,7 +35,7 @@ Zjednotené údaje v službe Dynamics 365 Customer Insights sú zdrojom pre vytv
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Spolupracujte s návrhárom služby strojového učenia platformy Azure
 
-Návrhár služby strojového učenia platformy Azure poskytne vizuálne plátno, do ktorého môžete presúvať množiny údajov a moduly, podobne ako pri službe strojového učenia Studio (klasickú). Hromadný kanál vytvorený návrhárom možno integrovať do služby Customer Insights, ak je zodpovedajúcim spôsobom nakonfigurovaný. 
+Návrhár Azure strojové učenie poskytuje vizuálne plátno, kde môžete presúvať množiny údajov a moduly. Hromadný kanál vytvorený návrhárom možno integrovať do služby Customer Insights, ak je zodpovedajúcim spôsobom nakonfigurovaný. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Práca so súpravou SDK služby strojového učenia platformy Azure
 

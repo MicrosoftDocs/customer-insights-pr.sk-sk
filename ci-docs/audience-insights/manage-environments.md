@@ -1,7 +1,7 @@
 ---
 title: Slúži na vytvorenie a spravovanie prostredí
 description: Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799654"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892403"
 ---
 # <a name="manage-environments"></a>Správa prostredí
 
@@ -40,18 +40,21 @@ Môžete upraviť niektoré podrobnosti o existujúcich prostrediach.
 
 Ďalšie informácie o nastaveniach prostredia nájdete v článku [Vytvorenie nového prostredia](create-environment.md).
 
-## <a name="connect-to-microsoft-dataverse"></a>Pripojte sa k Microsoft Dataverse
+## <a name="connect-to-microsoft-dataverse"></a>Pripojiť k systému Microsoft Dataverse
    
-The **Microsoft Dataverse** krok vám umožní prepojiť Customer Insights s vaším Dataverse prostredím.
+Krok **Microsoft Dataverse** vám umožní prepojiť Customer Insights s vašim prostredím Dataverse.
 
-Použit [out-of-box predikcia modely](predictions-overview.md#out-of-box-models), nakonfigurujte zdieľanie údajov pomocou Dataverse. Alebo môžete povoliť príjem údajov zo zdrojov údajov lokálny poskytnutím Microsoft Dataverse adresy URL prostredia, ktoré spravuje vaša organizácia. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s dátovým jazerom spravovaným Dataverse.
+Ak chcete použiť [pripravené modely predikcie](predictions-overview.md#out-of-box-models), nakonfigurujte zdieľanie údajov s Dataverse. Alebo môžete povoliť príjem údajov z lokálnych zdrojov údajov poskytnutím adresy URL prostredia Microsoft Dataverse, ktoré spravuje vaša organizácia. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s dátovým jazerom spravovaným s Dataverse.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfigurácie na povolenie zdieľania údajov s Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Štatistiky zákazníkov a Dataverse musia byť v rovnakej oblasti, aby bolo možné zdieľať údaje.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights nepodporuje nasledujúce scenáre zdieľania údajov:
-> - Ak uložíte všetky údaje do svojho vlastného Azure Data Lake Storage, nebudete môcť povoliť zdieľanie údajov s dátovým jazerom spravovaným Dataverse.
-> - Ak povolíte zdieľanie údajov pomocou Dataverse, nebudete môcť [vytvárať predpovedané alebo chýbajúce hodnoty v entite](predictions.md).
+> - Ak uložíte všetky údaje do vlastného Azure Data Lake Storage, nebudete môcť povoliť zdieľanie údajov pomocou dátového jazera spravovaného prostredníctvom Dataverse.
+> - Ak povolíte zdieľanie údajov pomocou Dataverse, nebudete môcť [vytvárať predikované ani chýbajúce hodnoty v entite](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Skopírovať konfiguráciu prostredia
 
@@ -81,7 +84,7 @@ Tieto údaje *nebudú* skopírované:
 - Profily zákazníkov.
 - Poverenia zdroja údajov. Budete musieť poskytnúť poverenia pre každý zdroj údajov a ručne obnoviť zdroje údajov.
 
-- Zdroje údajov z priečinka Common Data Model a dátového jazera spravovaného Dataverse. Tieto zdroje údajov budete musieť vytvoriť ručne s rovnakým názvom ako v zdrojovom prostredí.
+- Zdroje údajov z priečinka Common Data Model a dátového jazera spravovaného v Dataverse. Tieto zdroje údajov budete musieť vytvoriť ručne s rovnakým názvom ako v zdrojovom prostredí.
 
 Po skopírovaní prostredia sa zobrazí potvrdzovacia správa o vytvorení nového prostredia. Stlačte možnosť **Prejsť na zdroje údajov**, čím si zobrazíte zoznam zdrojov údajov.
 

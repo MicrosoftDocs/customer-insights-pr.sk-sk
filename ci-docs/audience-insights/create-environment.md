@@ -1,7 +1,7 @@
 ---
 title: Vytváranie prostredí v Customer Insights
 description: Kroky na vytvorenie prostredí s licencovaným predplatným pre Dynamics 365 Customer Insights.
-ms.date: 10/14/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673410"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892357"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Vytvorenie prostredia v prehľadoch cieľových skupín
 
@@ -77,6 +77,9 @@ Ak vytvoríte viacero prostredí Customer Insights a rozhodnete sa uložiť výs
 Krok **Microsoft Dataverse** vám umožní prepojiť Customer Insights s vašim prostredím Dataverse.
 
 Ak chcete použiť [pripravené modely predikcie](predictions-overview.md#out-of-box-models), nakonfigurujte zdieľanie údajov s Dataverse. Alebo môžete povoliť príjem údajov z lokálnych zdrojov údajov poskytnutím adresy URL prostredia Microsoft Dataverse, ktoré spravuje vaša organizácia. Vyberte **Povoliť zdieľanie údajov** na zdieľanie výstupných údajov Customer Insights s dátovým jazerom spravovaným s Dataverse.
+
+> [!IMPORTANT]
+> Štatistiky zákazníkov a Dataverse musia byť v rovnakej oblasti, aby bolo možné zdieľať údaje.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse.":::
 

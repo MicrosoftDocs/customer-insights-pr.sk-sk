@@ -1,7 +1,7 @@
 ---
 title: Pripojiť sa k tabuľkám v doplnku Microsoft Dataverse
 description: Import údajov zo spravovaného data lake Microsoft Dataverse.
-ms.date: 07/23/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,22 +9,25 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: ffeccffd0e353cb5490b537552d585c184ad672f9c806e673bd04743214ad068
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033099"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900170"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Pripojenie k údajom v dátovom jazere spravovanom cez Microsoft Dataverse
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Tento článok popisuje spôsob,, ako sa používatelia nástroja Dataverse môžu rýchlo pripojiť k svojim analytickým entitám v spravovanom jazere Dataverse. Musíte byť správcom organizácie Dataverse, aby ste mohli pokračovať a pozrieť si zoznam entít dostupných v spravovanom jazere.
+Tento článok poskytuje informácie o tom, ako Dataverse používatelia sa môžu rýchlo pripojiť k analytickým entitám v a Microsoft Dataverse spravované jazero. 
+
+> [!NOTE]
+> Musíte byť správcom na Dataverse organizáciu pokračovať a zobraziť zoznam subjektov dostupných v spravovanom jazere.
 
 ## <a name="important-considerations"></a>Dôležité aspekty
 
-Údaje uložené v online službách, ako napríklad Azure Data Lake Storage, môžu byť uložené na inom mieste, ako je miesto, kde sa údaje spracúvajú alebo ukladajú v rámci Dynamics 365 Customer Insights.Importovaním alebo pripojením sa k údajom uloženým v online službách súhlasíte s tým, že údaje je možné prenášať a ukladať pomocou Dynamics 365 Customer Insights.  [Ďalšie informácie nájdete v Centre dôveryhodnosti spoločnosti Microsoft.](https://www.microsoft.com/trust-center)
+Údaje uložené v online službách, ako napríklad Azure Data Lake Storage, môžu byť uložené na inom mieste, ako je miesto, kde sa údaje spracúvajú alebo ukladajú v rámci Dynamics 365 Customer Insights.Importovaním údajov uložených v online službách alebo ich pripojením k nim súhlasíte s tým, že údaje možno preniesť a uložiť Dynamics 365 Customer Insights . [Ďalšie informácie nájdete v Centre dôveryhodnosti spoločnosti Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Pripojte sa k spravovanému fondu Dataverse
 
@@ -32,12 +35,9 @@ Tento článok popisuje spôsob,, ako sa používatelia nástroja Dataverse mô�
 
 2. Vyberte položku **Pridať zdroj údajov**.
 
-3. Označte položku **Pripojiť k spravovanému jazeru Microsoft Dataverse** a potom položku **Ďalšie**.
+3. Vyberte **Microsoft Dataverse** a vyberte **Ďalšie**.
 
-4. Zadajte **Názov** zdroja údajov a následne vyberte položku **Ďalej**. Pokyny týkajúce sa pomenovania: 
-   - Začnite písmenom.
-   - Používajte iba písmená a číslice. Nie je povolené zadávanie špeciálnych znakov a medzier.
-   - Použite 3 až 64 znakov.
+4. Zadajte **Názov** zdroja údajov a následne vyberte položku **Ďalej**. 
 
 5. Poskytnite údaj **Adresa servera** pre organizáciu Dataverse a označte položku **Prihlásiť sa**.
 

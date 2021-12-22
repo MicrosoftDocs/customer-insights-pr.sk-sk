@@ -1,7 +1,7 @@
 ---
 title: Prírastkové obnovenie pre zdroje údajov založené na doplnku Power Query
 description: Obnovenie nových a aktualizovaných údajov pre veľké zdroje údajov na základe Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377853"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900304"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Prírastkové obnovenie pre zdroje údajov založené na Power Query
+
+Tento článok popisuje, ako nakonfigurovať prírastkové obnovenie pre zdroje údajov na základe Power Query.
 
 Prírastkové obnovenie pre zdroje údajov poskytuje nasledujúce výhody:
 
@@ -30,9 +32,9 @@ Prehľady cieľových skupín umožňujú prírastkové obnovenie pre zdroje úd
 
 1. [Vytvorenie nového zdroja údajov na základe Power Query](connect-power-query.md).
 
-1. Zadajte názov pre zdroj údajov.
+1. Poskytnúť **názov** pre zdroj údajov.
 
-1. Vyberte zdroj údajov, ktorý podporuje postupné obnovovanie, ako je napríklad databáza Azure SQL.
+1. Vyberte zdroj údajov, ktorý podporuje prírastkové obnovenie, ako napr [SQL databáza Azure](/power-query/connectors/azuresqldatabase).
 
 1. Vyberte entity alebo tabuľky, ktoré chcete prijať.
 
