@@ -1,7 +1,7 @@
 ---
-title: Ukončenie transakcie predikcia (Video)
+title: Ukončenie transakcie predikcia (obsahuje video)
 description: Predikujte, či bude zákazník ohrozený, keď prestane nakupovať produkty alebo služby vašej spoločnosti.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904091"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967766"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predikcia odchodov založená na transakciách (verzia Preview)
 
@@ -103,10 +103,10 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
 
 1. Vyberte ikonu **Model odchodu zákazníkov (ukážka)** a vyberte **Použiť tento model**.
 
-1. Na table **Model odchodu zákazníkov** vyberte **Transakcia** a vyberte **Začíname**.
+1. V **Model odchodu zákazníkov (ukážka)** panel, vyberte si **Transakcia** a vyberte **Začať**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Snímka obrazovky s vybratou možnosťou transakcie na table modelu Odchod zákazníkov.":::
-
+ 
 ### <a name="name-model"></a>Názov modelu
 
 1. Zadajte názov modelu, ktorý ho odlíši od ostatných modelov.
@@ -117,11 +117,11 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
 
 ### <a name="define-customer-churn"></a>Definujte odídených zákazníkov
 
-1. Nastavte časový interval v dňoch na predikovanie odchodu v poli **Identifikujte zákazníkov, ktorí môžu odísť v priebehu nasledujúcich:**. Napríklad predikujte riziko odchodu zákazníkov počas nasledujúcich 90 dní, aby ste sa prispôsobili svojmu marketingovému úsiliu o udržanie. Predikcia rizika odchodu pre dlhšie alebo kratšie obdobie môže sťažiť riešenie faktorov vo vašom profile rizika odchodov, ale záleží to na vašich konkrétnych obchodných požiadavkách.
+1. Nastaviť **predikcia okno**. Napríklad predikujte riziko odchodu zákazníkov počas nasledujúcich 90 dní, aby ste sa prispôsobili svojmu marketingovému úsiliu o udržanie. Predikcia rizika odchodu pre dlhšie alebo kratšie obdobie môže sťažiť riešenie faktorov vo vašom profile rizika odchodov, ale záleží to na vašich konkrétnych obchodných požiadavkách.
    >[!TIP]
-   > Môžete si vybrať **Uložiť a zavrieť** kedykoľvek a predikciu uložiť ako koncept. Draft predikcie nájdete na karte **Moje predikcie**, kde môžete pokračovať.
+   > Môžete si vybrať **Uložiť koncept** kedykoľvek uložiť predikcia ako koncept. Draft predikcie nájdete na karte **Moje predikcie**, kde môžete pokračovať.
 
-1. Zadajte počet dní na definovanie odchodu v poli **Zákazník sa považuje za odídeného, ak neuskutočnil žiadne nákupy v priebehu:**. Ak napríklad zákazník za posledných 30 dní neuskutočnil žiadne nákupy, môže sa považovať pre vašu firmu za odídeného. 
+1. Zadajte počet dní na definovanie odchodu do **Definícia míňania** lúka. Ak napríklad zákazník za posledných 30 dní neuskutočnil žiadne nákupy, môže sa považovať pre vašu firmu za odídeného. 
 
 1. Na pokračovanie zvoľte možnosť **Ďalej**.
 
@@ -129,19 +129,16 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
 
 1. Označte položku **Pridať údaje** a na bočnej tabli označte typ aktivity obsahujúci požadované údaje o histórii transakcií alebo nákupov.
 
-1. Pod položkou **Vyberte aktivity** označte dané aktivity z vybratej činnosti, ktorej sa chcete pri výpočte venovať.
+1. Pod **Vyberte aktivity**, vyberte konkrétne aktivity z vybraného typu aktivity, na ktoré sa má výpočet zamerať.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Bočná tabla zobrazujúca výber daných činností v rámci sémantického typu.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Bočná tabla zobrazujúca výber daných činností v rámci sémantického typu.":::
 
-1. Pokiaľ ste aktivitu ešte nenamapovali na sémantický typ, označte položku **Upraviť** a spravte to teraz. Budete prevedení procesom mapovania sémantických činnosti. Namapujte svoje údaje na príslušné polia vo vybranom type aktivity.
+   Pokiaľ ste aktivitu ešte nenamapovali na sémantický typ, označte položku **Upraviť** a spravte to teraz. Budete prevedení procesom mapovania sémantických činnosti. Namapujte svoje údaje na príslušné polia vo vybranom type aktivity.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Typ aktivity nastavenia stránky.":::
+1. Namapujte atribúty sémantiky na polia, ktoré sú nutné na to, aby sa model spustil. Ak polia uvedené nižšie nie sú vyplnené, nakonfigurujte vzťah medzi entitou histórie nákupov a entitou *Zákazník*. Vyberte **Uložiť**.
 
-1. Po namapovaní aktivity na príslušný sémantický typ pokračujte označením položky **Ďalej**
+1. V **Pridajte požadované údaje** krok, vyberte **Ďalšie** pokračovať, ak nechcete pridať ďalšie aktivity.
 
-1. Namapujte atribúty sémantiky na polia, ktoré sú nutné na to, aby sa model spustil. Ak polia uvedené nižšie nie sú vyplnené, nakonfigurujte vzťah medzi entitou histórie nákupov a entitou *Zákazník*.
-
-1. Vyberte **Ďalej**.
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 

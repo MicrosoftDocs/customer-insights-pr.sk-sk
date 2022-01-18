@@ -1,26 +1,27 @@
 ---
-title: Začnite s Android SDK
+title: Začíname so súpravou Android SDK
 description: Zistite, ako prispôsobiť a spustiť Android SDK
 author: britl
 ms.reviewer: mhart
+ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
-ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
+ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7655361"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977594"
 ---
-# <a name="get-started-with-the-android-sdk"></a>Začnite s Android SDK
+# <a name="get-started-with-the-android-sdk"></a>Začíname so súpravou Android SDK
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Tento návod vás prevedie procesom inštrumentovania vašej Android aplikácie pomocou Dynamics 365 Customer Insights súpravy SDK na analýzu interakcií. Udalosti na svojom portáli uvidíte až o päť minút alebo skôr.
+Tento kurz vás prevedie procesom inštrumentácie aplikácie Android pomocou súpravy SDK prehľadov interakcií Dynamics 365 Customer Insights. Udalosti na svojom portáli uvidíte až o päť minút alebo skôr.
 
 ## <a name="configuration-options"></a>Možnosti konfigurácie
 Nasledujúce možnosti konfigurácie je možné odovzdať súprave SDK:
@@ -31,12 +32,12 @@ Nasledujúce možnosti konfigurácie je možné odovzdať súprave SDK:
 
 - Android Studio
 
-- Minimálna Android úroveň API: 16 (Jelly Bean)
+- Minimálna úroveň rozhrania API pre Android: 16 (Jelly Bean)
 
 - Kľúč prijatia (získate ho podľa pokynov uvedených nižšie)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>Integrácia súpravy SDK do vašej aplikácie
-Začnite proces výberom pracovného priestoru, výberom Android mobilnej platformy a stiahnutím Android SDK.
+Proces začnite výberom pracovného priestoru, v ktorom chcete pracovať, výberom mobilnej platformy Android a stiahnutím súpravy Android SDK.
 
 - Pomocou prepínača pracovného priestoru na ľavej navigačnej table vyberte svoj pracovný priestor.
 
@@ -46,7 +47,7 @@ Začnite proces výberom pracovného priestoru, výberom Android mobilnej platfo
 
 ## <a name="configure-the-sdk"></a>Konfigurácia súpravy SDK
 
-Po stiahnutí súpravy SDK s ňou môžete pracovať v Android Studio a povoliť a definovať udalosti. Existujú dva spôsoby, ako na to:
+Po stiahnutí súpravy SDK s ňou môžete pracovať v Android Studio, kde môžete povoliť a definovať udalosti. Existujú dva spôsoby, ako na to:
 ### <a name="option-1-use-jitpack-recommended"></a>Možnosť 1: Použite JitPack (odporúča sa)
 1. Do koreňového adresára `build.gradle` pridajte odkladací priestor JitPack:
     ```gradle
@@ -67,7 +68,7 @@ Po stiahnutí súpravy SDK s ňou môžete pracovať v Android Studio a povoliť
     ```
 
 ### <a name="option-2-use-download-link"></a>Možnosť 2: Použite odkaz na stiahnutie
-1. Stiahnite si [štatistiky interakcie Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) a umiestnite`eiandroidsdk-debug.aar` súbor v`libs` priečinok.
+1. Stiahnite si [prehľady interakcií súpravy Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) a umiestnite súbor `eiandroidsdk-debug.aar` do priečinka `libs`.
 
 1. Otvorte súbor `build.gradle` na úrovni projektu a pridajte nasledujúce úryvky:
     ```gradle

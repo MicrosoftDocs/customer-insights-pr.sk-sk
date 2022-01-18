@@ -5,21 +5,21 @@ description: Zoznámte sa s prvotným spustením Dynamics 365 Customer Insights 
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673492"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977691"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Začíname po zakúpení Customer Insights
 
 Tento článok vysvetľuje, ako vykonať prvé kroky v Dynamics 365 Customer Insights potom, čo si vaša organizácia zakúpila predplatné. Ak si chcete kúpiť službu Customer Insights, naše kontaktné informácie sú uvedené na webovej lokalite [Dynamics 365 Customer Insights ](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Po zakúpení licencie na predplatné služby Customer Insights dostane globálny správca nájomníka Microsoft 365 e-mail s pozvánkou na vytvorenie prostredia. 
+Po zakúpení predplatiteľskej licencie pre Customer Insights, globálny správca Microsoft 365 nájomník dostane e-mail, ktorý ho pozýva na vytvorenie prostredia. 
 
 Customer Insights je licencovaná na nájomníka a obsahuje viacero možností. Môžete si kúpiť väčšiu kapacitu a licencie na zvýšenie predvolenej kvóty. 
 - [Prehľad cien](https://dynamics.microsoft.com/ai/customer-insights/pricing/)

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881803"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967674"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastné modely strojového učenia
 
@@ -41,6 +41,8 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
    > [!NOTE]
    > Údaje sa prenášajú medzi vašimi inštanciami Customer Insights a vybranými webovými službami alebo kanálmi Azure v pracovnom postupe. Pri prenose údajov do služby Azure sa ubezpečte, že služba je nakonfigurovaná tak, aby spracovávala údaje takým spôsobom a na takom mieste, ktoré sú potrebné na dodržanie súladu so všetkými právnymi alebo regulačnými požiadavkami vzťahujúcimi sa na tieto údaje a vašu organizáciu.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
+
 ## <a name="add-a-new-workflow"></a>Pridajte nový pracovný postup
 
 1. Prejdite do ponuky **Analýza** > **Vlastné modely** a vyberte **Nový pracovný postup**.
@@ -56,7 +58,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 
 1. Vyberte **Pracovné priestory** spojené s vašou webovou službou. 
 
-1. Vyberte potrubie strojové učenie Azure v **Webová služba, ktorá obsahuje váš model** rozbaľovacia ponuka. Potom vyberte položku **Ďalej**.    
+1. Vyberte si potrubie strojové učenie Azure v **Webová služba, ktorá obsahuje váš model** rozbaľovacia ponuka. Potom vyberte položku **Ďalej**.    
    Zistite viac o [publikovaní kanálu v strojovom učení platformy Azure pomocou návrhára](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) alebo [súpravy SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Váš kanál musí byť zverejnený pod [koncovým bodom kanála](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Pre každý **Vstup webovej služby** vyberte zhodnú položku **Entita** v rámci prehľadov cieľových skupín a vyberte položku **Ďalej**.

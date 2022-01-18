@@ -1,5 +1,5 @@
 ---
-title: Prijímanie údajov cez konektor Power Query (video)
+title: Spracovanie údajov prostredníctvom a Power Query konektor (obsahuje video)
 description: Konektory pre zdroje údajov založené na Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903859"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934997"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Pripojenie k zdroju údajov Power Query
+# <a name="connect-to-a-power-query-data-source"></a>Pripojte sa k a Power Query zdroj údajov
 
 Power Query ponúka širokú škálu konektorov na prijímanie údajov. Väčšinu z týchto konektorov podporuje Dynamics 365 Customer Insights. 
 
-Pridávanie zdrojov údajov na základe Power Query konektorov sa vo všeobecnosti riadi krokmi uvedenými v tejto časti. V závislosti od použitého konektora sú však potrebné rôzne informácie. Ak sa chcete dozvedieť viac, pozrite si dokumentáciu o jednotlivých konektoroch v [Power Query odkaz na konektor](/power-query/connectors/).
+Pridávanie zdrojov údajov na základe Power Query konektory sa vo všeobecnosti riadia krokmi uvedenými v tejto časti. V závislosti od použitého konektora sú však potrebné rôzne informácie. Ak sa chcete dozvedieť viac, pozrite si dokumentáciu o jednotlivých konektoroch v [Power Query odkaz na konektor](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -40,12 +40,12 @@ Pridávanie zdrojov údajov na základe Power Query konektorov sa vo všeobecnos
 
 1. Vyberte **Zmena údajov**. V tomto kroku pridáte entity do zdroja údajov. Entity sú súbory údajov. Ak máte databázu, ktorá obsahuje viacero množín údajov, každá množina údajov je jej vlastná entita.
 
-1. Dialógové okno **Power Query – úprava dopytov** umožňuje skontrolovať a spresniť údaje. Entity, ktoré systémy identifikovali vo vybratých zdrojoch údajov, sa zobrazia na ľavej table.
+1. The **Power Query - Upraviť otázky** dialógové okno vám umožňuje kontrolovať a upravovať údaje. Entity, ktoré systémy identifikovali vo vybratých zdrojoch údajov, sa zobrazia na ľavej table.
 
    > [!div class="mx-imgBorder"]
    > ![Úprava dialógového okna dotazov.](media/data-manager-configure-edit-queries.png "Úprava dialógového okna dotazov")
 
-1. Údaje môžete aj transformovať. Vyberte entitu, ktorú chcete upraviť alebo transformovať. Použite možnosti v okne Power Query na použitie transformácií. Každá transformácia bude uvedená v zozname **Použité kroky**. Power Query poskytuje množstvo vopred pripravených možností transformácie. Ďalšie informácie nájdete v téme [Transformácie Power Query](/power-query/power-query-what-is-power-query#transformations).
+1. Údaje môžete aj transformovať. Vyberte entitu, ktorú chcete upraviť alebo transformovať. Použite možnosti v Power Query okno na použitie transformácií. Každá transformácia bude uvedená v zozname **Použité kroky**. Power Query poskytuje množstvo vopred pripravených možností transformácie. Ďalšie informácie nájdete v časti [Power Query Premeny](/power-query/power-query-what-is-power-query#transformations).
 
 1. Do zdroja údajov môžete pridať ďalšie entity výberom položky **Získať údaje** v dialógovom okne **Upraviť dotazy**.
 
@@ -54,17 +54,17 @@ Pridávanie zdrojov údajov na základe Power Query konektorov sa vo všeobecnos
    - Ak prijímate údaje zo súboru CSV, prvý riadok často obsahuje hlavičky. Prejdite do časti **Transformovať tabuľku** a vyberte **Ako prvý riadok použiť hlavičky**.
    - Zaistite, aby bol dátový typ nastavený správne.
 
-1. Výberom tlačidla **Uložiť** v spodnej časti okna Power Query uložte transformácie. Po uložení nájdete zdroj údajov v časti **Údaje** > **Zdroje údajov**.
+1. Vyberte **Uložiť** v spodnej časti Power Query okno na uloženie transformácií. Po uložení nájdete zdroj údajov v časti **Údaje** > **Zdroje údajov**.
 
 1. Na stránke **Zdroje údajov** si všimnete, že je tu nový zdroj údajov v stave **Obnovuje sa**.
 
-## <a name="available-power-query-data-sources"></a>Dostupné zdroje údajov pre Power Query
+## <a name="available-power-query-data-sources"></a>K dispozícii Power Query zdroje dát
 
 Pozrite si [Power Query odkaz na konektor](/power-query/connectors/) nájdete zoznam konektorov, ktoré môžete použiť na import údajov do Customer Insights. 
 
-Konektory so značkou začiarknutia v stĺpci **Customer Insights (toky údajov)** sú k dispozícii na vytvorenie nových zdrojov údajov na základe Power Query. V dokumentácii konkrétneho konektora sa dozviete viac o jeho požiadavkách, obmedzeniach a ďalších podrobnostiach.
+Konektory so začiarknutím v **Customer Insights (údajové toky)** sú k dispozícii na vytvorenie nových zdrojov údajov na základe Power Query. V dokumentácii konkrétneho konektora sa dozviete viac o jeho požiadavkách, obmedzeniach a ďalších podrobnostiach.
 
-## <a name="edit-power-query-data-sources"></a>Úprava zdrojov údajov pre Power Query
+## <a name="edit-power-query-data-sources"></a>Upraviť Power Query zdroje dát
 
 > [!NOTE]
 > Nemusí byť možné vykonať zmeny zdrojov údajov, ktoré sa momentálne používajú v niektorom z procesov aplikácie (napríklad *segmentácia*, *zosúladenie* alebo *zlúčenie*). 
@@ -80,9 +80,9 @@ Konektory so značkou začiarknutia v stĺpci **Customer Insights (toky údajov)
 
    [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
    
-3. Použite svoje zmeny a transformácie v dialógovom okne **Power Query – Upraviť dotazy**, ako je opísané v časti [Vytvorenie nového zdroja údajov](#create-a-new-data-source).
+3. Aplikujte svoje zmeny a transformácie v **Power Query - Upraviť otázky** dialóg, ako je popísané v [Vytvorte nový zdroj údajov](#create-a-new-data-source) oddiele.
 
-4. Vyberte **Uložiť** v Power Query po dokončení úprav a uložte zmeny.
+4. Vyberte **Uložiť** v Power Query po dokončení úprav uložte zmeny.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

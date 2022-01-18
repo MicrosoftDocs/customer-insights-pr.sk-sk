@@ -1,5 +1,5 @@
 ---
-title: Zrušenie odberu predikcia (Video)
+title: Zrušenie odberu predikcia (obsahuje video)
 description: Predikuje, či hrozí riziko, že zákazník prestane používať predplatené produkty alebo služby vašej spoločnosti.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904044"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967720"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikcia rizika straty predplatného (ukážka)
 
@@ -77,7 +77,7 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
 1. Zadajte číslo **Dni od skončenia predplatného**, po ktorých bude vaša firma považovať zákazníka za strateného. Toto obdobie je zvyčajne určené pre obchodné aktivity, ako sú ponuky alebo iné marketingové úsilie, ktoré sa snažia zabrániť strate zákazníka.
 1. Zadajte počet **Dni skúmania budúcnosti na predpovedanie odchodu** na nastavenie okna, pre ktoré chcete predpovedať odchod. Ak chcete napríklad predpovedať riziko odchodu zákazníkov počas nasledujúcich 90 dní, aby ste sa prispôsobili svojmu marketingovému úsiliu o udržanie. Predpovedanie rizika churn na dlhšie alebo kratšie časové obdobia môže sťažiť riešenie faktorov vo vašom profile rizika churn, v závislosti od vašich konkrétnych obchodných požiadaviek. Na pokračovanie zvoľte možnosť **Ďalej**
    >[!TIP]
-   > Môžete si vybrať **Uložiť a zavrieť** kedykoľvek a predikciu uložiť ako koncept. Draft predikcie nájdete na karte **Moje predikcie**, kde môžete pokračovať.
+   > Môžete si vybrať **Uložiť koncept** kedykoľvek uložiť predikcia ako koncept. Draft predikcie nájdete na karte **Moje predikcie**, kde môžete pokračovať.
 
 ### <a name="add-required-data"></a>Pridanie požadovaných údajov
 

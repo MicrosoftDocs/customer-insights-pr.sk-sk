@@ -44,7 +44,7 @@
       items:
         - name: Prehľad zdrojov údajov
           href: audience-insights/data-sources.md
-        - name: Pridanie zdrojov údajov prostredníctvom konektorov Power Query
+        - name: Pridajte zdroje údajov cez Power Query konektory
           href: audience-insights/connect-power-query.md
         - name: Pridanie priečinku bežného dátového modelu ako zdroj údajov
           href: audience-insights/connect-common-data-model.md
@@ -80,11 +80,11 @@
       items:
         - name: Obohatenie profilov zákazníkov
           href: audience-insights/enrichment-hub.md
-        - name: Afinity značiek a záujmov
+        - name: Značky a záujmy
           href: audience-insights/enrichment-microsoft.md
         - name: Vylepšené adresy
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Vylepšené údaje o spoločnosti
+        - name: Rozšírené firemné údaje
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Obohatiť o funkcie Azure Maps
           href: audience-insights/enrichment-azure-maps.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Predikcia úbytku transakcií
               href: audience-insights/predict-transactional-churn.md
+            - name: Analyzujte sentiment v spätnej väzbe zákazníkov
+              href: audience-insights/sentiment-analysis.md
             - name: Používajte vlastné modely zo strojového učenia Azure
               href: audience-insights/custom-models.md
             - name: Vyplňte čiastočne chýbajúce údaje

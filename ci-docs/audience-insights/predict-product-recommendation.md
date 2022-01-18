@@ -1,7 +1,7 @@
 ---
 title: Predikcia odporúčania produktov
 description: Predikujte produkty, ktoré si zákazník pravdepodobne kúpi alebo ktoré bude chcieť použiť.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494558"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967858"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predikcia odporúčania produktov (verzia Preview)
 
@@ -54,7 +54,7 @@ Ak máte záujem vyskúšať túto funkciu, ale nemáte údaje na splnenie poži
 
 > [!NOTE]
 > - Tento model vyžaduje históriu transakcií vašich zákazníkov. Definícia transakcie je dosť flexibilná. Ako vstup môžu slúžiť všetky údaje, ktoré popisujú interakciu používateľa a produktu. Napríklad nákup produktu, absolvovanie kurzu alebo účasť na udalosti.
-> - Aktuálne je možné nakonfigurovať iba jednu entitu histórie transakcií. Ak existuje viac entít nákupu, pred prijatím údajov ich zjednoťte v Power Query.
+> - Aktuálne je možné nakonfigurovať iba jednu entitu histórie transakcií. Ak existuje viacero nákupných subjektov, spojte ich Power Query pred prijímaním údajov.
 > - Ak sú objednávka a podrobnosti objednávky odlišné entity, pred použitím v modeli ich spojte. Model v entite nefunguje iba s ID objednávky alebo príjmovým dokladom.
 
 
@@ -79,11 +79,11 @@ Ak máte záujem vyskúšať túto funkciu, ale nemáte údaje na splnenie poži
 1. Nastavte **Počet produktov**, ktoré chcete odporučiť zákazníkovi. Táto hodnota závisí od toho, ako váš spôsob doručenia vyplní údaje. Ak môžete odporučiť tri produkty, nastavte túto hodnotu zodpovedajúcim spôsobom.
    
    >[!TIP]
-   > Môžete si vybrať **Uložiť a zavrieť** kedykoľvek a predikciu uložiť ako koncept. Koncept predikcie nájdete na karte **Moje predikcie**.
+   > Môžete si vybrať **Uložiť koncept** kedykoľvek uložiť predikcia ako koncept. Koncept predikcie nájdete na karte **Moje predikcie**.
 
-1. Vyberte, ak chcete **Navrhnúť produkty, ktoré si zákazníci nedávno zakúpili**.
+1. Vyberte, či chcete zahrnúť produkty, ktoré si zákazníci nedávno zakúpili **Očakávajú sa opakované nákupy** lúka.
 
-1. Ak ste sa rozhodli *neodporúčať* nedávno zakúpené produkty, nastavte **Dĺžka spätného zobrazenia**. Toto nastavenie určuje časový rámec, ktorý model zváži pred opätovným odporúčaním produktu používateľovi. Napríklad uveďte, že zákazník si kúpi notebook každé dva roky. Toto okno sa zameriava na históriu nákupov za posledné dva roky a ak nájdu položku, položka sa odfiltruje z odporúčaní.
+1. Nastaviť **Pohľad späť okno**. Toto nastavenie určuje časový rámec, ktorý model zváži pred opätovným odporúčaním produktu používateľovi. Napríklad uveďte, že zákazník si kúpi notebook každé dva roky. Toto okno sa zameriava na históriu nákupov za posledné dva roky a ak nájdu položku, položka sa odfiltruje z odporúčaní.
 
 1. Vyberte **Ďalej**
 

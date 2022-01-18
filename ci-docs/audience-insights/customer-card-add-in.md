@@ -1,7 +1,7 @@
 ---
-title: Doplnok zákazníckej karty pre aplikácie Dynamics 365 (video)
+title: Doplnok zákazníckej karty pre aplikácie Dynamics 365 (obsahuje video)
 description: Pomocou tohto doplnku zobrazujte údaje z prehľadov cieľovej skupiny v aplikáciách Dynamics 365.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921884"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945446"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplnok Karta zákazníka (ukážka)
 
@@ -27,7 +27,7 @@ Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dyn
 ## <a name="prerequisites"></a>Predpoklady
 
 - Doplnok funguje iba s aplikáciami Dynamics 365 riadenými modelmi, ako sú napríklad Sales alebo Customer Service, verzia 9.0 a novšia.
-- Aby sa vaše údaje Dynamics 365 mohli namapovať do profilov cieľovej skupiny, musia byť [prijaté z aplikácie Dynamics 365 pomocou konektora Microsoft Dataverse](connect-power-query.md).
+- Odporúčame vám to, aby sa vaše údaje Dynamics 365 namapovali na profily zákazníkov so štatistikami publika [prijaté z aplikácie Dynamics 365 pomocou Microsoft Dataverse konektor](connect-power-query.md). Ak na prijímanie kontaktov (alebo účtov) Dynamics 365 používate inú metódu, musíte sa uistiť`contactid` (alebo`accountid`) je nastavené ako [primárny kľúč pre tento zdroj údajov v kroku mapy procesu zjednotenia údajov](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Všetci používatelia Dynamics 365 doplnku Customer Card musia byť [pridaní ako používatelia](permissions.md) v prehľade cieľových skupín, aby mohli vidieť údaje.
 - [Konfigurované možnosti vyhľadávania a filtrovania](search-filter-index.md) v prehľadoch cieľovej skupiny sú nevyhnutné na fungovanie vyhľadávania údajov.
 - Každá kontrola doplnku sa spolieha na konkrétne údaje vo prehľadoch cieľovej skupiny. Niektoré údaje a ovládacie prvky sú k dispozícii iba v prostrediach špecifických typov. Konfigurácia doplnku vás bude informovať, ak ovládací prvok nie je k dispozícii z dôvodu zvoleného typu prostredia. Ďalšie informácie o [prípadoch použitia prostredia](work-with-business-accounts.md).

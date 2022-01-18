@@ -1,21 +1,20 @@
 ---
 title: Prehľad podporovaných scenárov predikcie
 description: Scenáre predikcie a možnosti, ktoré pokrýva aplikácia Dynamics 365 Customer Insights.
-ms.date: 09/06/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673981"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7978032"
 ---
 # <a name="predictions-overview"></a>Prehľad predikcií
 
@@ -31,6 +30,7 @@ Najjednoduchší spôsob, ako začať s predikovaním údajov, sú preddefinovan
 - [Odporúčanie produktu](predict-product-recommendation.md): Navrhuje množiny prediktívnych odporúčaní produktov na základe nákupného správania a zákazníkov s podobnými nákupnými vzormi.
 - [Odchod predplatiteľov](predict-subscription-churn.md): Predikuje, či hrozí odchod zákazníka, pretože už nebude používať predplatené produkty alebo služby vašej spoločnosti.
 - [Odchod transakcií](predict-transactional-churn.md): Predikujte, či si zákazník už v určitom časovom rámci viac nebude kupovať vaše produkty alebo služby.
+- [Analýza sentimentu](sentiment-analysis.md) : Analyzujte pocity spätnej väzby od zákazníkov a identifikujte obchodné aspekty, ktoré sa často spomínajú.
 
 # <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
@@ -43,6 +43,6 @@ Najjednoduchší spôsob, ako začať s predikovaním údajov, sú preddefinovan
 
 Ak organizácia už používa scenáre strojového učenia založené na experimentoch strojového učenia Azure, funkcia vlastných modelov v Customer Insights pomôže tieto body spojiť. Vytvorte pracovné postupy, ktoré vám pomôžu vybrať údaje, z ktorých chcete generovať štatistiky, a výsledky namapovať do svojich zjednotených profilov zákazníkov. Viac informácií nájdete v časti [Vlastné modely strojového učenia](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>Predikcia nástroja AI Builder
+## <a name="ai-builder-prediction"></a>AI Builder predikcia
 
 Množiny údajov niekedy nie sú úplné a niektoré hodnoty chýbajú. Customer Insights môže pomôcť predikovať chýbajúce hodnoty pre entitu a segmenty zákazníka. Viac informácií nájdete v časti [Doplňte svoje čiastkové údaje o predikcie](predictions.md).
