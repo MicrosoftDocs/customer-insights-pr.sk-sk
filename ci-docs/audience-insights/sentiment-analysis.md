@@ -1,6 +1,6 @@
 ---
-title: Sémantická analýza pre spätnú väzbu od zákazníkov
-description: Naučte sa, ako používať model analýzy sentimentu na spätnú väzbu od zákazníkov v Dynamics 365 Customer Insights.
+title: Analýza sentimentu pre spätnú väzbu od zákazníkov
+description: 'Naučte sa, ako používať model analýzy sentimentu na spätnú väzbu od zákazníkov v Dynamics 365 Customer Insights.'
 ms.date: 12/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: MT
-ms.contentlocale: sk-SK
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951118"
 ---
+
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analýza sentimentu v spätnej väzbe od zákazníkov (ukážka)
 
 Zákazníci v dnešnej dobe očakávajú vysokú kvalitu produktov, služieb a skúseností. Najmä zákazníci, ktorí zdieľajú svoju spätnú väzbu. Pre organizácie je veľmi náročné analyzovať rastúci objem údajov bez zníženia presnosti a vyšších nákladov na pracovnú silu. Dynamics 365 Customer Insights ponúka model analýzy sentimentu pre spätnú väzbu od zákazníkov, ktorý umožňuje organizáciám analyzovať ich údaje presnejšie a pri nižších nákladoch.
@@ -38,7 +33,7 @@ Aby ste sa uistili, že výsledkom modelov môžete dôverovať, poskytujeme tra
 
 Používame dve **Modely spracovania prirodzeného jazyka (NLP).** : Prvá priradí každému komentáru spätnej väzby skóre sentimentu. Druhý model spája každú spätnú väzbu so všetkými platnými obchodnými aspektmi. Modely sú trénované na verejných údajoch zo zdrojov zo sociálnych médií, maloobchodu, reštaurácií, spotrebných produktov a automobilového priemyslu.    
   
-- Vopred definované obchodné aspekty pre model, ktoré sa majú spojiť s údajmi spätnej väzby, zahŕňajú:
+Vopred definované obchodné aspekty pre model, ktoré sa majú spojiť s údajmi spätnej väzby, zahŕňajú:
 -   Správa kont
 -   Pokladňa a platba
 -   Zákaznícka podpora
@@ -54,7 +49,7 @@ Používame dve **Modely spracovania prirodzeného jazyka (NLP).** : Prvá prira
 -   Kvalita webovej lokality/aplikácie
 
 > [!NOTE]
-> V súčasnosti podporujeme analýzu sentimentu iba pri spätnej väzbe anglických zákazníkov. V budúcnosti bude podporovaných viac jazykov. Ak odošlete spätnú väzbu v iných jazykoch, model bude stále vracať výsledky. Tieto výsledky však nebudú presné. 
+> V súčasnosti podporujeme len analýzu sentimentu na základe spätnej väzby od zákazníkov v angličtine. V budúcnosti bude podporovaných viac jazykov. Ak odošlete spätnú väzbu v iných jazykoch, model bude stále vracať výsledky. Tieto výsledky však nebudú presné. 
 
 ## <a name="prerequisites"></a>Požiadavky
 

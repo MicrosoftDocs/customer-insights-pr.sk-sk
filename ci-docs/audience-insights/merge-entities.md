@@ -1,7 +1,7 @@
 ---
 title: Zlučovanie entít pri zjednotení údajov
 description: Zlučujte entity na účely vytvorenia jednotných profilov zákazníkov.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,21 +10,16 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: sk-SK
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732791"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Zlúčenie entít
 
 Fáza zlúčenia je posledná fáza v procese zjednocovania údajov. Jeho účelom je zosúladenie protichodných údajov. Medzi príklady konfliktných údajov môže patriť meno zákazníka, ktoré sa nachádza v dvoch vašich množinách údajov, ale v každom sa zobrazuje trochu inak („Grant Marshall“ verzus „Grant Marshal“), alebo telefónne číslo, ktoré sa líši vo formáte (617-803-091X verzus 617803091X). Zlúčenie týchto kolidujúcich údajových bodov sa vykonáva na základe atribútov.
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Stránka zlúčenia v procese zjednotenia údajov zobrazujúca tabuľku so zlúčenými poľami, ktoré definujú zjednotený profil zákazníka.":::
 
-Po dokončení [porovnávacej fázy](match-entities.md) môžete začať fázu zlúčenia výberom dlaždice [Zlúčiť](match-entities.md) na stránke [Zjednotiť](match-entities.md).
+Po dokončení [porovnávacej fázy](match-entities.md) môžete začať fázu zlúčenia výberom dlaždice **Zlúčiť** na stránke **Zjednotiť**.
 
 ## <a name="review-system-recommendations"></a>Kontrola systémových odporúčaní
 
@@ -99,11 +94,13 @@ Na stránke **Zlúčiť** zvoľte možnosť **Vylúčené polia** a zobrazte si 
 
 1. Stlačte možnosť **Uložiť** a **Spustiť** na spracovanie zmien. 
 
-## <a name="manually-combine-fields"></a>Ručne spojené polia
+## <a name="combine-fields-manually"></a>Skombinujte polia ručne
 
-Zadajte zlúčený atribút manuálne. 
+Zadajte zlúčený atribút manuálne.
 
-1. Na stránke **Zlúčiť** stlačte možnosť **Kombinovať polia**.
+1. Na **Zlúčiť** stránku, vyberte **Skombinujte**.
+
+1. Vyber **Polia** možnosť.
 
 1. V rozbaľovacom zozname **Skombinovať polia podľa** určte zásady pre výslednú hodnotu.
 
@@ -114,6 +111,26 @@ Zadajte zlúčený atribút manuálne.
 1. Ak chcete zmeny použiť, vyberte položku **Hotovo**.
 
 1. Stlačte možnosť **Uložiť** a **Spustiť** na spracovanie zmien. 
+
+## <a name="combine-a-group-of-fields"></a>Skombinujte skupinu polí
+
+So skupinou polí zaobchádzajte ako s jednou jednotkou. Napríklad, ak naše záznamy obsahujú polia Adresa1, Adresa2, Mesto, Štát a PSČ. Pravdepodobne sa nechceme zlúčiť do adresy2 iného záznamu, pretože si myslíme, že by to urobilo naše údaje úplnejšími
+
+1. Na **Zlúčiť** stránku, vyberte **Skombinujte**.
+
+1. Vyber **Skupina polí** možnosť.
+
+1. Zadajte politiku víťaza zlúčenia v **Zoradiť skupiny podľa** rozbaľovacia ponuka.
+
+1. Vyberte **Pridať** a vyberte, či chcete do polí pridať ďalšie polia alebo ďalšie skupiny.
+
+1. Poskytnúť **názov** a **Názov výstupu** pre každý kombinovaný odbor.
+
+1. Poskytnúť **názov** pre skupinu polí. 
+
+1. Ak chcete zmeny použiť, vyberte položku **Hotovo**.
+
+1. Stlačte možnosť **Uložiť** a **Spustiť** na spracovanie zmien.
 
 ## <a name="change-the-order-of-fields"></a>Zmena poradia polí
 

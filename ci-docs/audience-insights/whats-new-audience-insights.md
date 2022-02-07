@@ -1,7 +1,7 @@
 ---
-title: Nové a prichádzajúce funkcie
-description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 12/02/2021
+title: "Nové a\_prichádzajúce funkcie"
+description: 'Informácie o nových funkciách, vylepšeniach a opravách chýb.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: MT
-ms.contentlocale: sk-SK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884281"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Sme radi, že môžeme oznámiť naše najnovšie aktualizácie! Tento článok sumarizuje funkcie verejnej ukážky, vylepšenia všeobecnej dostupnosti a aktualizácie funkcií. Ak chcete zobraziť dlhodobé plány pre funkcie, pozrite si [Plány vydaní Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Aktualizácie systému z decembra 2021
+
+Aktualizácie v decembri 2021 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Preposielajte denníky Customer Insights do Azure Monitor
+
+Customer Insights poskytuje priamu integráciu s Azure Monitor. Táto funkcia zahŕňa udalosti auditu a prevádzkové udalosti. Denníky prostriedkov Azure Monitor vám umožňujú monitorovať a odosielať denníky do Azure Storage, Azure Log Analytics alebo ich streamovať do Azure Event Hubs.
+
+Ďalšie informácie nájdete v časti [Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Obohaťte profily zákazníkov o údaje o interakciách
+
+Použiť údaje z Microsoft Office 365 obohatiť profily svojich zákazníckych účtov o informácie o interakciách prostredníctvom Office 365 aplikácie. Údaje o interakciách pozostávajú z e-mailov a aktivít na stretnutiach, ktoré sú agregované na úrovni účtu. Napríklad počet e-mailov z obchodného účtu alebo počet stretnutí s účtom. Nezdieľajú sa žiadne údaje o jednotlivých používateľoch. Toto obohatenie je dostupné v nasledujúcich regiónoch: Spojené kráľovstvo, Európa, Severná Amerika.
+
+Ďalšie informácie nájdete v časti [Obohaťte profily zákazníkov o údaje o interakciách (ukážka)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Pokročilé funkcie zjednotenia údajov
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Povoľte politiky riešenia konfliktov na úrovni jednotlivých atribútov
+
+Pri deduplikácii záznamov zákazníkov v rámci entity možno nebudete chcieť, aby ste ako víťaza museli vybrať úplný záznam. Teraz vám umožňujeme zlúčiť najlepšie polia z rôznych záznamov na základe pravidiel pre každý atribút. Môžete sa napríklad rozhodnúť ponechať najnovší e-mail A najkompletnejšiu adresu z rôznych záznamov. 
+
+Teraz môžete definovať samostatné pravidlá zlučovania pre jednotlivé atribúty pri deduplikácii a zlučovaní záznamov v rámci jednej entity. Predtým sme vám umožnili vybrať iba jedno pravidlo zlúčenia (uchovávanie záznamov na základe úplnosti údajov o aktuálnosti) a toto pravidlo sa aplikovalo na úrovni záznamu na všetky atribúty. To nie je ideálne, keď sa niektoré údaje, ktoré si chcete ponechať, nachádzajú v zázname A a iné dobré údaje v zázname B.
+
+Viac informácií nájdete v časti [Definícia deduplikácie v entite párovania](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Vlastné pravidlá pre párovanie
+
+Sú chvíle, keď potrebujete špecifikovať výnimku zo všeobecných pravidiel, aby sa NEPREHODOVALI záznamy. To sa môže stať, keď viacerí jednotlivci zdieľajú dostatok informácií, aby ich systém priradil ako jedného jednotlivca. Napríklad dvojčatá s rovnakým priezvisko, ktoré žijú v rovnakom meste a zdieľajú dátum narodenia.
+
+Výnimky zabezpečujú, že nesprávne zjednotenie údajov bude možné riešiť v pravidlách zjednotenia. K pravidlu môžete pridať viacero výnimiek.
+
+Ďalšie informácie nájdete v časti [Pridajte do pravidla výnimky](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Poskytnite ďalšie politiky riešenia konfliktov a povoľte zoskupovanie atribútov
+
+Táto funkcia vám umožňuje zaobchádzať so skupinou polí ako s jednou jednotkou. Napríklad, ak naše záznamy obsahujú polia Adresa1, Adresa2, Mesto, Štát a PSČ. Pravdepodobne sa nechceme zlúčiť do adresy2 iného záznamu, pretože si myslíme, že by to urobilo naše údaje úplnejšími.
+
+Teraz môžete skombinovať skupinu súvisiacich polí a použiť na skupinu jednu politiku zlúčenia. 
+
+Ďalšie informácie nájdete v časti [Skombinujte skupinu polí](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Aktualizácie z novembra 2021
 
@@ -55,7 +94,7 @@ Všetky exporty segmentov v štatistikách publika sú dostupné v kontexte fire
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Použite export LinkedIn Ads s firemnými účtami
 
-Export reklám LinkedIn je teraz k dispozícii na zacielenie na kontakt a spoločnosť v kontexte obchodných účtov. Pri výbere zacielenia na spoločnosť ako primárneho zamerania exportu LinkedIn môžete exportovať segmenty založené na obchodných účtoch bez potreby projektovania kontaktných informácií. Ďalšie informácie nájdete v dokumentoch o [Export reklám LinkedIn](export-linkedin-ads.md) a rozdiel medzi [kontaktné cielenie](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) a [zameranie spoločnosti](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+Export reklám LinkedIn je teraz k dispozícii na zacielenie na kontakt a spoločnosť v kontexte obchodných účtov. Pri výbere zacielenia na spoločnosť ako primárneho zamerania exportu LinkedIn môžete exportovať segmenty postavené na obchodných účtoch bez potreby projektovania kontaktných informácií. Ďalšie informácie nájdete v dokumentoch o [Export reklám LinkedIn](export-linkedin-ads.md) a rozdiel medzi [kontaktné cielenie](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) a [zameranie spoločnosti](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Vytvárajte miery na základe obchodných účtov a ich hierarchie
 
@@ -71,7 +110,7 @@ Model zákazníckeho churn predikcia teraz podporuje aj firemné účty. Riziko 
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Pozrite si kontakty firemného účtu v zobrazení zákazníka
 
-Ak sú firemné účty namapované na súvisiace účty, aplikácia Customer Insights zobrazí tieto súvisiace kontakty ako súčasť zobrazenia podrobností o zákazníkovi. Ďalšie informácie nájdete v časti [Profily zákazníkov](customer-profiles.md).
+Ak sú firemné účty namapované na súvisiace účty, aplikácia Customer Insights zobrazuje tieto súvisiace kontakty ako súčasť zobrazenia podrobností o zákazníkovi. Ďalšie informácie nájdete v časti [Profily zákazníkov](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>Aktualizácie zo septembra 2021

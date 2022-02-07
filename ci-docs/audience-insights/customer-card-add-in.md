@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: MT
-ms.contentlocale: sk-SK
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945446"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Doplnok Karta zákazníka (ukážka)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dynamics 365. Keď je v podporovanej aplikácii Dynamics 365 nainštalovaný doplnok karty zákazníka, môžete sa rozhodnúť zobrazovať polia profilu zákazníka, prehľady a časovú os aktivít. Doplnok načíta údaje z Customer Insights bez ovplyvnenia údajov v pripojenej aplikácii Dynamics 365.
 

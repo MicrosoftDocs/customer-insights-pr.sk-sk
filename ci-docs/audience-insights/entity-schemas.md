@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: sk-SK
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380762"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Schémy entít v modeli Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Model [Common Data Model](/common-data-model/) je deklaratívna špecifikácia a definícia štandardných entít, ktoré predstavujú bežne používané koncepcie a aktivity v rôznych podnikových a produkčných aplikáciách. Tento model sa rozširuje aj na pozorovacie a analytické údaje. Model Common Data Model poskytuje jasne definované, modulárne a rozšíriteľné obchodné entity, ako napríklad Obchodný vzťah, Obchodná jednotka, Prípad, Kontakt, Potenciálny zákazník, Príležitosť a Produkt, ako aj interakcie s dodávateľmi, pracovníkmi a klientami, ako napríklad aktivity a zmluvy o úrovni služieb. Ktokoľvek môže budovať a rozširovať definície formátu Common Data Model s cieľom zaznamenávať ďalšie konkrétne obchodné nápady.
 

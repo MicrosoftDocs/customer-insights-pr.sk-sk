@@ -1,6 +1,6 @@
 ---
 title: Používanie zdrojov údajov na príjem údajov
-description: Prečítajte si, ako importovať údaje z rôznych zdrojov.
+description: 'Prečítajte si, ako importovať údaje z rôznych zdrojov.'
 ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: MT
-ms.contentlocale: sk-SK
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977848"
 ---
+
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Funkcia prehľadov cieľových skupín v službe Dynamics 365 Customer Insights sa pripája sa k údajom zo širokej množiny zdrojov. Pripojenie k zdroju údajov sa často označuje ako proces *prijímania údajov*. Po prijatí údajov ich môžete [zjednotiť](data-unification.md) a podniknúť s nimi kroky.
 

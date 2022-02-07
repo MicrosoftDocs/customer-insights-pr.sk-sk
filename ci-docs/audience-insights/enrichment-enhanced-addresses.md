@@ -1,7 +1,7 @@
 ---
 title: Obohatenie vylepšenia adresy (obsahuje video)
 description: Obohaťte a normalizujte informácie o adrese profilov zákazníkov pomocou modelov spoločnosti Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
-ms.translationtype: MT
-ms.contentlocale: sk-SK
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934942"
 ---
+
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obohatenie zákazníckych profilov vylepšenými adresami
 
 Adresy vo vašich údajoch môžu byť neštruktúrované, neúplné alebo nesprávne. Použite modely spoločnosti Microsoft na normalizáciu a obohatenie vašich adries do [formátu Common Data Model](/common-data-model/schema/core/applicationcommon/address), aby bola zaistená lepšia presnosť a prehľad.
@@ -100,17 +95,17 @@ Proces obohatenia spustíte výberom položky **Spustiť** z panela príkazov. M
 
 Po dokončení procesu obohacovania môžete skontrolovať údaje o nových obohatených zákazníckych profiloch v časti **Moje obohatenia**. Ďalej nájdete čas poslednej aktualizácie a počet obohatených profilov.
 
-Môžete získať podrobné zobrazenie každého obohateného profilu výberom **Zobraziť obohatené údaje**.
+Ukážku obohatených údajov môžete vidieť v **Ukážka obohatených zákazníkov** dlaždica. Vyberte **Pozrieť viac** a vyberte **Údaje** získate prístup k podrobnému zobrazeniu každého obohateného profilu.
 
 ### <a name="overview-card"></a>Prehľadová karta
 
 Prehľadová karta zobrazuje podrobnosti o pokrytí obohatenia. 
 
-* **Zákazníci spracované a zmenené** : Počet zákazníckych profilov, ktoré boli úspešne obohatené.
+* **Adresy spracované a zmenené** : Počet zákazníckych profilov s adresami, ktoré boli úspešne obohatené.
 
-* **Zákazníci spracované a nezmenené** : Počet zákazníckych profilov, ktoré boli rozpoznané, ale neboli zmenené. Zvyčajne sa to stane, keď sú vstupné údaje platné a nemožno ich zlepšiť obohatením.
+* **Adresy spracované a nezmenené** : Počet zákazníckych profilov s adresami, ktoré boli rozpoznané, ale neboli zmenené. Zvyčajne sa to stane, keď sú vstupné údaje platné a nemožno ich zlepšiť obohatením.
 
-* **Zákazníci nespracovaní a nezmenení** : Počet profilov, ktoré neboli rozpoznané. Zvyčajne pre vstupné údaje, ktoré sú neplatné alebo nie sú podporované obohatením.
+* **Adresy neboli spracované a nezmenené** : Počet profilov s adresami, ktoré neboli rozpoznané. Zvyčajne pre vstupné údaje, ktoré sú neplatné alebo nie sú podporované obohatením.
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
