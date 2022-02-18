@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900294"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088166"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby Azure
 
@@ -23,7 +23,7 @@ Tento článok popisuje, ako sa pripojiť Dynamics 365 Customer Insights s Azure
 Automatizované nástroje, ktoré využívajú služby Azure, by mali mať vždy obmedzené povolenia. Namiesto prihlasovania aplikácií ako plne privilegovaného používateľa ponúka Azure objekty služieb. Princípy služieb môžete použiť na zabezpečenie [pridajte alebo upravte priečinok Common Data Model ako zdroj údajov](connect-common-data-model.md) alebo [vytvoriť alebo aktualizovať prostredie](create-environment.md).
 
 > [!IMPORTANT]
-> - Účet Data Lake Storage, ktorý bude používať objekt služby, musí mať [povolený hierarchický priestor názvov](/azure/storage/blobs/data-lake-storage-namespace).
+> - Účet Data Lake Storage, ktorý bude používať principál služby, musí byť Gen2 a musí mať [hierarchický menný priestor povolený](/azure/storage/blobs/data-lake-storage-namespace). Účty úložiska Azure Data Lake Gen1 nie sú podporované.
 > - Na vytvorenie principála služby potrebujete povolenia správcu pre svoje predplatné Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Vytvorte objekt služby Azure pre Customer Insights

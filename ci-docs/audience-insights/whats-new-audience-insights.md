@@ -1,7 +1,7 @@
 ---
-title: "Nové a\_prichádzajúce funkcie"
-description: 'Informácie o nových funkciách, vylepšeniach a opravách chýb.'
-ms.date: 01/27/2022
+title: Nové a prichádzajúce funkcie
+description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: sk-SK
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088304"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Aktualizácie z januára 2022
+
+Aktualizácie v januári 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analýza sentimentu spätnej väzby vášho zákazníka
+
+Customer Insights poskytuje novú funkciu poháňanú umelou inteligenciou, ktorá syntetizuje sentiment zákazníkov a identifikuje špecifické obchodné aspekty ako príležitosti na cielené zlepšenia. Analýzou písomnej spätnej väzby vašich zákazníkov môžete získať presné informácie pri nízkych nákladoch. Analýza sentimentu založená na modeloch spracovania prirodzeného jazyka (NLP), ktoré generujú dva odvodené štatistiky pre každé ID zákazníka. Skóre sentimentu (od –5 do 5) a zoznam príslušných obchodných aspektov. 
+
+Ďalšie informácie nájdete v časti [Analyzujte sentiment v spätnej väzbe zákazníkov (ukážka)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Aktualizácie systému z decembra 2021
@@ -37,7 +53,7 @@ Customer Insights poskytuje priamu integráciu s Azure Monitor. Táto funkcia za
 
 Použiť údaje z Microsoft Office 365 obohatiť profily svojich zákazníckych účtov o informácie o interakciách prostredníctvom Office 365 aplikácie. Údaje o interakciách pozostávajú z e-mailov a aktivít na stretnutiach, ktoré sú agregované na úrovni účtu. Napríklad počet e-mailov z obchodného účtu alebo počet stretnutí s účtom. Nezdieľajú sa žiadne údaje o jednotlivých používateľoch. Toto obohatenie je dostupné v nasledujúcich regiónoch: Spojené kráľovstvo, Európa, Severná Amerika.
 
-Ďalšie informácie nájdete v časti [Obohaťte profily zákazníkov o údaje o interakciách (ukážka)](enrichment-office.md)
+Ďalšie informácie nájdete v časti [Obohaťte profily zákazníkov o údaje o interakciách (ukážka)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Pokročilé funkcie zjednotenia údajov
 
@@ -106,7 +122,7 @@ Nástroj na tvorbu segmentov vám umožňuje vytvárať segmenty obchodných ú�
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Udržujte svoje obchodné účty s podrobnými informáciami o ich tendencii minúť
 
-Model zákazníckeho churn predikcia teraz podporuje aj firemné účty. Riziko straty môžete vyhodnotiť nielen pre účet, ale aj pre kombináciu účtu a kategórie produktov alebo služieb, ktoré si od vás kúpia. Tento doplnok vám pomôže pochopiť, či je pravdepodobnejšie, že účet prestane od vás nakupovať vo všeobecnosti alebo len pre určitú kategóriu tovaru alebo služieb. Aby sme vám ešte viac pomohli pri používaní tohto modelu AI, sú tu uvedené aj dôvody, prečo je pravdepodobné, že účet zanikne. Ďalšie informácie nájdete v časti [Ukončenie transakcie predikcia (ukážka)](predict-transactional-churn.md).
+Model zákazníckeho churn predikcia teraz podporuje aj firemné účty. Riziko straty môžete vyhodnotiť nielen pre účet, ale aj pre kombináciu účtu a kategórie produktov alebo služieb, ktoré si od vás kúpia. Tento doplnok vám pomôže pochopiť, či je pravdepodobnejšie, že účet prestane od vás nakupovať vo všeobecnosti alebo len pre určitú kategóriu tovaru alebo služieb. Aby sme vám ešte viac pomohli pri používaní tohto modelu AI, sú tu uvedené aj dôvody, prečo je pravdepodobné, že účet zanikne. Ďalšie informácie nájdete v časti [Zrušenie transakcie predikcia (ukážka)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Pozrite si kontakty firemného účtu v zobrazení zákazníka
 

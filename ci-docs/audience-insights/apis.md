@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732283"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100159"
 ---
 # <a name="work-with-customer-insights-apis"></a>Pracujte s rozhraniami API v službe Customer Insights
 
-Dynamics 365 Customer Insights poskytuje rozhrania API na vytváranie vlastných aplikácií na základe vašich údajov v Customer Insights.
+Dynamics 365 Customer Insights poskytuje API na vytváranie vlastných aplikácií na základe vašich údajov v službe Customer Insights.
 
 > [!IMPORTANT]
 > Podrobnosti o týchto rozhraniach API sú uvedené v [referencii rozhraní API v službe Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Patria sem dodatočné informácie o operáciách, parametroch a reakciách.
@@ -35,7 +35,7 @@ Tento článok popisuje, ako získať prístup k rozhraniam API pre Customer Ins
  
    Povolením rozhraní API sa vytvorí primárny a sekundárny kľúč predplatného pre vašu inštanciu, ktorý sa použije pri požiadavkách pre rozhrania API. Kľúče môžete znova vygenerovať výberom položky **Znova vygenerovať primárny** alebo **Znova vygenerovať sekundárny** v časti **Správca** > **Povolenia** > **Rozhrania API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Povoliť rozhrania API v službe Customer Insights.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Výberom položky **Preskúmajte naše rozhrania API** si môžete [rozhrania API vyskúšať](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +49,7 @@ Tento článok popisuje, ako získať prístup k rozhraniam API pre Customer Ins
 
 Odpoveď protokolu HTTP sa čoskoro objaví nižšie.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Ako testovať rozhrania API.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Vytvorte novú registráciu aplikácie na portáli Azure
 
@@ -65,7 +65,7 @@ Tieto kroky vám pomôžu začať s používaním rozhraní API pre Customer Ins
 
 1. Pri novej registrácii aplikácie prejdite na **Povolenia pre API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Ako nastaviť povolenia pre rozhrania API pri registrácii aplikácie.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Vyberte položku **Pridať povolenie** a vyberte položku **Customer Insights** na bočnej table.
 
@@ -77,7 +77,7 @@ Tieto kroky vám pomôžu začať s používaním rozhraní API pre Customer Ins
 
 ID aplikácie/klienta môžete použiť na registráciu tejto aplikácie v knižnici Microsoft Authentication Library (MSAL), aby ste získali nosný token, ktorý sa odošle s vašou požiadavkou pre API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Ako udeliť súhlas správcu.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Ďalšie informácie o MSAL nájdete v sekcii [Prehľad knižnice Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ Informácie o používaní rozhraní API v našich klientskych knižniciach náj
 
 1. Vyberte položku **Udeliť súhlas správcu pre...** na dokončenie registrácie aplikácie.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Ako udeliť súhlas správcu.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Na záver musíme do služby Customer Insights pridať názov registrácie aplikácie ako používateľa.  
    
@@ -117,19 +117,19 @@ Táto sekcia vám pomôže začať používať knižnice klientov dostupné pre 
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Zistite, ako začať používať klientske knižnice C# z NuGet.org. Viac informácií o balíku NuGet nájdete na [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). V súčasnosti je tento balík zameraný na rámce netstandard2.0 a netcoreapp2.0.
+Zistite viac o tom, ako začať používať knižnice klientov C# z NuGet.org. Ďalšie informácie o balíku NuGet nájdete v sekcii [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). V súčasnosti je tento balík zameraný na rámce netstandard2.0 a netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Pridajte knižnicu klientov C# do projektu C#
 
-1. V Visual Studio otvorte súbor **NuGet Správca balíkov** pre váš projekt.
+1. V nástroji Visual Studio otvorte **Správcu balíkov NuGet** pre váš projekt.
 
 1. Vyhľadajte výraz **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Výberom položky **Inštalovať** pridajte balíček do projektu.
  
-   Prípadne spustite tento príkaz v **NuGet Konzola správcu balíkov** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Prípadne môžete tento príkaz spustiť cez **konzolu Správcu balíka NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Pridajte balík NuGet do projektu Visual Studio.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>Použite knižnicu klientov C#
 
@@ -141,7 +141,7 @@ Zistite, ako začať používať klientske knižnice C# z NuGet.org. Viac inform
 
 1. Presuňte tohto klienta `HttpClient` do tvorby klienta `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Ukážka klienta httpclient.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Uskutočňujte hovory s klientom pre „metódy rozšírenia“ – napríklad `GetAllInstancesAsync`. Ak je preferovaný prístup k základnému `Microsoft.Rest.HttpOperationResponse`, použite „metódy správ http“ – napríklad `GetAllInstancesWithHttpMessagesAsync`.
 
