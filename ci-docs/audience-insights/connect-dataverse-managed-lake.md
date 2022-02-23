@@ -1,5 +1,5 @@
 ---
-title: "Pripojiť sa k\_tabuľkám v\_doplnku Microsoft Dataverse"
+title: Pripojiť sa k tabuľkám v doplnku Microsoft Dataverse
 description: Import údajov zo spravovaného data lake Microsoft Dataverse.
 ms.date: 12/06/2021
 ms.service: customer-insights
@@ -9,8 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
+ms.openlocfilehash: 436345d8932820eb4c517a9e9164b1377c1f62d3
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: sk-SK
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046444"
 ---
-
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Pripojenie k údajom v dátovom jazere spravovanom cez Microsoft Dataverse
 
 

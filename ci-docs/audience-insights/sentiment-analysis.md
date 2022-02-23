@@ -1,6 +1,6 @@
 ---
 title: Analýza sentimentu pre spätnú väzbu od zákazníkov
-description: 'Naučte sa, ako používať model analýzy sentimentu na spätnú väzbu od zákazníkov v Dynamics 365 Customer Insights.'
+description: Naučte sa, ako používať model analýzy sentimentu na spätnú väzbu od zákazníkov v Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: sk-SK
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008784"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analýza sentimentu v spätnej väzbe od zákazníkov (ukážka)
 
 Zákazníci v dnešnej dobe očakávajú vysokú kvalitu produktov, služieb a skúseností. Najmä zákazníci, ktorí zdieľajú svoju spätnú väzbu. Pre organizácie je veľmi náročné analyzovať rastúci objem údajov bez zníženia presnosti a vyšších nákladov na pracovnú silu. Dynamics 365 Customer Insights ponúka model analýzy sentimentu pre spätnú väzbu od zákazníkov, ktorý umožňuje organizáciám analyzovať ich údaje presnejšie a pri nižších nákladoch.

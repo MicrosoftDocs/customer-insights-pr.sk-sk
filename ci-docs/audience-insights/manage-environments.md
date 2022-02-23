@@ -1,6 +1,6 @@
 ---
-title: "Slúži na vytvorenie a\_spravovanie prostredí"
-description: 'Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.'
+title: Slúži na vytvorenie a spravovanie prostredí
+description: Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.
 ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
+ms.openlocfilehash: 8251cac9f95455b61eb0300b6c72cd4ab2969591
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: sk-SK
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046352"
 ---
-
 # <a name="manage-environments"></a>Správa prostredí
 
 
