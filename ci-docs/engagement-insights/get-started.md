@@ -4,18 +4,18 @@ description: Prehľad zdrojov pomoci, ktoré vám pomôžu rýchlo začať.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 10/01/2021
+ms.date: 12/21/2020
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: 5ee1567cea834670a16aaa3253912b7957ce26b3
+ms.sourcegitcommit: 86739a3f238162fc96837270b5d184e648fab15c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623696"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "7405377"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Začíname s možnosťou prehľadov interakcií Dynamics 365 Customer Insights (verejná verzia Preview)
 
@@ -25,63 +25,47 @@ Prehľady interakcie je možnosť, ktorá vám umožňuje zhromažďovať a mera
 
 ## <a name="step-1-review-prerequisites"></a>Krok 1: Pozrite si predpoklady
 
-Najprv musíte mať aktívny používateľský účet Microsoft Azure Active Directory (AAD). Potom si prečítajte nasledujúce články pred vytvorením pracovného priestoru prehľadov interakcií.
+Najprv musíte mať aktívny používateľský účet Microsoft Azure Active Directory. Potom si prečítajte nasledujúce články pred vytvorením pracovného priestoru prehľadov interakcií.
 
 - Prečítajte a odsúhlaste [Podmienky používania](terms-of-service.md) spoločnosti Microsoft.  
-- Prečítajte si článok [Správa súborov cookie a súhlas používateľa](user-consent-storage.md). Potom uvážte, či je treba aktualizovať upozornenie na súhlas používateľa. Ak ste predtým nemali „nepodstatné“ súbory cookie, pravdepodobne budete musieť aktualizovať svoje pravidlá pre webové stránky.
+- Prečítajte si článok [Správa súborov cookie a súhlas používateľa](user-consent-storage.md). Po prečítaní tohto článku zvážte, či je potrebné aktualizovať upozornenie na súhlas používateľa. Ak ste predtým nemali „nepodstatné“ súbory cookie, pravdepodobne budete musieť aktualizovať svoje pravidlá pre webové stránky.
 - Prečítajte si [slovník](glossary.md) na rýchly úvod do kľúčových pojmov a konceptov.
 
 ## <a name="step-2-explore-engagement-insights"></a>Krok 2: Preskúmajte prehľady interakcií
 
-Pri prvej návšteve prehľadov interakcií je možné nakonfigurovať nastavenia, skontrolovať zásady a preskúmať funkcie.
+Pri prvej návšteve prehľadov interakcií môžete nakonfigurovať nastavenia, skontrolovať pravidlá a preskúmať produkt.
 
-1. Prihláste sa do [portálu schopností pre prehľad interakcií](https://home.ci.ai.dynamics.com/app/engagement-insights) s použitím vášho používateľského (školského či pracovného) účtu Microsoft AAD.
+1. Prihláste sa do [portálu možností prehľadu interakcií](https://pi.dynamics.com) pomocou svojho používateľského účtu Microsoft Azure Active Directory. (Môže to byť váš školský alebo pracovný účet.)
 
-1. Ak chcete dostávať e-mailové aktualizácie a ponuky, vyberte svoj región a označte začiarkavacie políčko.
+1. Vyberte svoj región a pomocou začiarkavacieho políčka označte, či sa chcete prihlásiť na prijímanie aktualizácií a ponúk e-mailom.
 
-1. Pozrite si **Podmienky používania** a **Vyhlásenie o ochrane osobných údajov** prehľadov interakcie (verzia Preview) a potom vyberte položku **Preskúmať ukážku**, čím prijmete tieto nastavenia.
+1. Prečítajte si **podmienky používania (verzia Preview) prehľadov interakcie** a **Vyhlásenie o ochrane súkromia**. Odsúhlaste ich stlačením možnosti **Pozrieť ukážku**.
 
 1. Preskúmajte produkt pomocou sady vzorových údajov.
 
-##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>Krok 3: Nakonfigurujte si pracovný priestor a vytvorte zostavy
+##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Krok 3: Vytvorte si pracovný priestor a pridajte kód na svoj web
 
-Pracovný priestor je miesto, kde môžete v reálnom čase sledovať aktivitu používateľov a ukladať a spravovať zostavy. Pridajte kód na svoj web a začnite zhromažďovať *udalosti*, údaje o činnosti, ktoré prichádzajú od používateľov.
+Pracovný priestor je miestom, kde môžete zobraziť aktivitu používateľov v reálnom čase a ukladať a spravovať správy. Pridajte kód na svoj web a začnite zhromažďovať *udalosti*, údaje o činnosti, ktoré prichádzajú od používateľov.
 
 1. [Vytvorenie pracovného priestoru](create-workspace.md) a pridanie členov.
 
-1. Pridajte kód do svojej [webovej lokality](instrument-website.md) alebo [mobilnej aplikácie](developer-resources.md#capture-events-from-mobile-apps) a uvidíte aktivitu používateľov prichádzajúcich do vášho pracovného priestoru.
+1. [Pridajte kód do svojej webovej lokality](instrument-website.md) alebo [mobilnej aplikácie](developer-resources.md#capture-events-from-mobile-apps) a uvidíte aktivitu používateľov prichádzajúcich do vášho pracovného priestoru.
 
-1. Zobrazte [správu v reálnom čase](view-reports.md), ktorá zobrazí aktívnych používateľov podľa prehliadača, zariadenia, operačného používaného systému, polohy a jazyka. Môžete tiež vytvárať [vlastné zostavy](custom-reports.md) na vytvorenie vlastných vizualizácií.
-
-1. Vytvorte [dimenzie](dimensions.md) na triedenie návštevníkov podľa nových a vracajúcich sa používateľov, [metriky](metrics.md), ktoré pomôžu lepšie porozumieť správaniu používateľov a [segmenty](segments.md) na identifikáciu podskupín návštevníkov na základe charakteristík alebo interakcií s webovými lokalitami.
+1. Zobrazte si [zostavu v reálnom čase](view-reports.md) s údajmi o aktívnych používateľov podľa prehľadávača, zariadenia, operačného systému, umiestnenia a jazyka. Môžete tiež vytvárať [vlastné zostavy](custom-reports.md) na vytvorenie vlastných vizualizácií.
     
 ## <a name="step-4-export-data-to-other-channels"></a>Krok 4: Exportujte údaje do iných kanálov
 
-Môžete vytvárať *spresnené udalosti* (virtuálne zobrazenie) vašich webových analytických údajov. Potom údaje filtrujte a exportujte do Azure Data Lake Storage. Exportované údaje môžete prijať ako zdroj údajov.
+Môžete vytvárať *spresnené udalosti* (virtuálne zobrazenie) vašich webových analytických údajov. Potom údaje filtrujte a exportujte do Azure Data Lake Storage. Exportované údaje môžete prijať ako zdroj údajov. Ďalšie informácie nájdete v časti [Vytvorte prepojenie medzi prehľadmi cieľových skupín a prehľadmi interakcií](integrate-audience-insights-engagement-insights.md).
 
 1. [Vytvorte spresnené udalosti](refined-events.md) pre export.
 
-1. [Exportujte údaje](export-events.md) do Azure Data Lake Storage.
-
-1. [Vytvorte prepojenie medzi štatistikami cieľovej skupiny a štatistikami interakcií](integrate-audience-insights-engagement-insights.md), a zdieľajte údaje medzi týmito dvomi funkciami.
-
-1. [Rozpoznajte webové udalosti od predtým overených používateľov](unknown-to-known.md) s funkciou **Neznáme na známe**.
+1. [Exportujte údaje](export-events.md) do Data Lake Storage.
 
 1. Zistite, ako [odstrániť a exportovať údaje udalostí s obsahom osobných informácií](delete-export-personal-data.md).
-
-## <a name="step-5-create-and-manage-funnel-reports"></a>Krok 5: Tvorba a správa zostáv lievikov
-
-Lieviková zostava zhromažďuje informácie o krokoch, ktoré sa uskutočnia v rámci činnosti zákazníka prostredníctvom vašej webovej lokality alebo mobilnej aplikácie. Okrem vytvárania pripravených zostáv profilov a vlastných zostáv môžete vytvoriť aj zostavu lievika, ktorá identifikuje trasy, ktorými sa vaši zákazníci vydajú pred nákupom. 
-
-1. [Vytvorte zostavu lievika](funnel-reports.md), aby ste získali informácie o rozhodnutiach a identifikovali oblasti na optimalizáciu a zlepšovanie procesov.
-
-1. Hneď ako vytvoríte svoju mobilnú aplikáciu pomocou prehľadov interakcií [Android SDK](get-started-android.md) alebo [iOS SDK](get-started-ios.md), vytvorte zostavy lievikov naprieč kanálmi.
-
-1. Pomocou [lievikových prehľadov](funnel-reports.md#funnel-insights) získate hlbší prehľad o správaní zákazníkov týkajúcich sa krokov v zostave lievika.
  
-## <a name="step-6-stay-connected"></a>Krok 6: Zostaňte v kontakte
+## <a name="step-5-stay-connected"></a>Krok 5: Zostaňte v kontakte
 
-Ceníme si vašu aktívnu účasť a pri vývoji všetkých vydaní v budúcnosti berieme do úvahy všetku príslušnú spätnú väzbu. Podeľte sa o svoju spätnú väzbu a nahláste problémy jedným z týchto kanálov:
+Vážime si vašu aktívnu účasť a plánujeme vziať do úvahy všetku relevantnú spätnú väzbu pri vývoji budúcich vydaní. Podeľte sa o svoju spätnú väzbu a nahláste problémy jedným z týchto kanálov:
 - [Komunita](https://go.microsoft.com/fwlink/?linkid=2141648)
 - [Poskytnúť pripomienky](https://go.microsoft.com/fwlink/?linkid=2143222)
 - [Požiadať o podporu](https://go.microsoft.com/fwlink/?linkid=2145734) 

@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673661"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648136"
 ---
 # <a name="create-a-new-environment"></a>Vytvoriť nové prostredie 
 
@@ -40,13 +40,13 @@ Prostredie je priestor, v ktorom spravujete svoje pracovné priestory a pripojen
 
 1. Zvoľte položku **Región** a označte **Ďalšie**. 
 
-1. Typ a **Názov pracovného priestoru**, ktorá vám umožňuje zhromažďovať údaje pre konkrétne webové stránky alebo aplikácie. Ďalšie informácie nájdete v téme [Vytvorenie pracovného priestoru](create-workspace.md).
+1. Napíšte **Názov pracovného priestoru**, čo vám umožňuje zbierať údaje pre konkrétne webové stránky alebo aplikácie. Ďalšie informácie nájdete v téme [Vytvorenie pracovného priestoru](create-workspace.md).
 
-1. Vyber **Typ pracovného priestoru** (web alebo mobil), ktorý chcete vytvoriť. 
+1. Vyberte **Typ pracovného priestoru** (webový alebo mobilný), ktorý chcete vytvoriť. 
 
 1. Vyberte **Ukázať pokročilé nastavenia** a povoľte alebo zakážte tieto voliteľné nastavenia:
 
-   - Prepnite **Neznáme na známe** na „povolené“ na priradenie webových udalostí k používateľom, ktorí sa predtým autentifikovali. Ďalšie informácie nájdete v časti [Rozpoznajte webové udalosti od predtým overených návštevníkov](unknown-to-known.md).
+   - Prepnite **Neznáme na známe** na „povolené“ na priradenie webových udalostí k používateľom, ktorí sa predtým autentifikovali. Ďalšie informácie nájdete v časti [Rozpoznajte webové udalosti od predtým overených používateľov](unknown-to-known.md)
    - Prepnite **Filtrovať prenos botov** na „povolené“, aby sa z tohto pracovného priestoru odstránili webovú návštevnosť botov. 
 
 1. Po skončení vyberte možnosť **Dokončiť**. 

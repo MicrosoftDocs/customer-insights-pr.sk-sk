@@ -1,20 +1,20 @@
 ---
 title: Segmenty v prehľade cieľových skupín
 description: Prehľad o segmentoch a o tom, ako ich vytvárať a spravovať.
-ms.date: 11/01/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978078"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617394"
 ---
 # <a name="segments-overview"></a>Prehľad segmentov
 
@@ -26,7 +26,7 @@ Profily zákazníkov, ktoré zodpovedajú filtrom definície segmentu, sa označ
 
 Existuje niekoľko spôsobov, ako vytvoriť nový segment: 
 
-# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
+# <a name="individual-customers-b2c"></a>[Individuálni zákazníci (B2C)](#tab/b2c)
 
 - Komplexný segment s nástrojom na tvorbu segmentov: [Zostavte si vlastný](segment-builder.md#create-a-new-segment) 
 - Jednoduché segmenty s jedným operátorom: [Rýchly segment](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Existuje niekoľko spôsobov, ako vytvoriť nový segment:
 - Návrhy založené na AI založené na opatreniach alebo atribútoch: [Navrhované segmenty na zlepšenie opatrení](suggested-segments.md) 
 - Návrhy založené na činnostiach: [Navrhované segmenty na základe aktivity zákazníka](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
+# <a name="business-accounts-b2b"></a>[Firemné obchodné vzťahy (B2B)](#tab/b2b)
 
 - Komplexný segment s nástrojom na tvorbu segmentov: [Zostavte si vlastný](segment-builder.md#create-a-new-segment)
 
@@ -65,7 +65,8 @@ Po výbere segmentu sú k dispozícii nasledujúce akcie:
 
 Výberom možnosti **Obnoviť všetko** na stránke **Segmenty** môžete obnoviť všetky segmenty naraz alebo môžete jeden alebo viac segmentov, keď ich vyberiete a následne vyberiete **Obnoviť** z možností. Prípadne môžete nakonfigurovať opakujúce sa obnovovanie v ponuke **Správca** > **Systém** > **Plán**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
 
 ## <a name="export-segments"></a>Segmenty exportu
 
@@ -104,6 +105,5 @@ Spodná časť obsahuje zoznam členov segmentu.
 > Polia, ktoré sa nachádzajú v tomto zozname, sú založené na atribútoch entít vášho segmentu.
 >
 >Zoznam predstavuje ukážku zodpovedajúcich členov segmentu a zobrazuje prvých 100 záznamov segmentu, aby ste ho mohli rýchlo vyhodnotiť a podľa potreby skontrolovať jeho definície. Ak chcete zobraziť všetky zodpovedajúce záznamy, musíte [exportovať segment](export-destinations.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

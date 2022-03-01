@@ -1,48 +1,38 @@
 ---
 title: Export údajov služby Customer Insights do Dynamics 365 Sales
-description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Dynamics 365 Sales.
-ms.date: 03/03/2021
-ms.reviewer: mhart
+description: Naučte sa, ako nakonfigurovať pripojenie k Dynamics 365 Sales.
+ms.date: 08/21/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
-ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8090942"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643837"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Použitie segmentov v Dynamics 365 Sales (ukážka)
+# <a name="connector-for-dynamics-365-sales-preview"></a>Konektor pre Dynamics 365 Sales (ukážka)
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Dynamics 365 Sales umožňuje pomocou zákazníckych údajov vytvárať marketingové zoznamy, sledovať pracovné postupy a odosielať propagačné akcie.
 
-## <a name="known-limitations"></a>Známe obmedzenia
+## <a name="prerequisite"></a>Predpoklady
 
-- Exporty do Dynamics 365 Sales sú obmedzené na 100 000 členov na segment.
-- Dokončenie exportov segmentov do Dynamics 365 Sales môže trvať až 3 hodiny. 
+Záznamy kontaktov [z Dynamics 365 Sales prijaté z Common Data Service](connect-power-query.md).
 
-## <a name="prerequisite-for-connection"></a>Predpoklad na pripojenie
+## <a name="configure-the-connector-for-sales"></a>Nakonfigurujte konektor pre Predaj
 
-1. Pred exportom segmentu z Customer Insights do Sales musia byť záznamy kontaktov v Dynamics 365 Sales. Prečítajte si viac o tom, ako prijímať kontakty v [Dynamics 365 Sales pomocou Microsoft Dataverse](connect-power-query.md).
+1. V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.
 
-   > [!NOTE]
-   > Export segmentov z prehľadov cieľových skupín do Sales nevytvorí nové záznamy kontaktov v inštanciách Sales. Záznamy kontaktov zo Sales musia byť obsiahnuté v prehľadoch cieľových skupín a použité ako zdroj údajov. Pred exportom segmentov je ich tiež potrebné ich zahrnúť do zjednotenej entity zákazníka na mapovanie ID zákazníkov na ID kontaktov.
+1. Pod **Dynamics 365 Sales** vyberte **Nastaviť**.
 
-## <a name="set-up-the-connection-to-sales"></a>Nastavenie pripojenia k Sales
-
-1. Prejdite do časti **Správca** > **Pripojenia**.
-
-1. Stlačte možnosť **Pridať pripojenie** a stlačením možnosti **Dynamics 365 Sales** nakonfigurujte pripojenie.
-
-1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
-
-1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa exportu.
 
 1. Zadajte marketingovú adresu Predaj URL svojej organizácie do poľa **Adresa servera**.
 
@@ -50,24 +40,12 @@ Dynamics 365 Sales umožňuje pomocou zákazníckych údajov vytvárať marketin
 
 1. Namapujte pole ID zákazníka k ID kontaktu služby Dynamics 365.
 
-1. Stlačte možnosť **Uložiť** a dokončite pripojenie. 
-
-## <a name="configure-an-export"></a>Nakonfigurujte export
-
-Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
-
-1. Prejdite na **Údaje** > **Exporty**.
-
-1. Na vytvorenie nového exportu stlačte možnosť **Pridať cieľ**.
-
-1. V poli **Pripojenie na export** vyberte pripojenie v časti Dynamics 365 Sales. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
+1. Vyberte **Ďalej**.
 
 1. Vyberte jeden alebo viac segmentov.
 
-1. Stlačte možnosť **Uložiť**
+1. Vyberte položku **Uložiť**.
 
-Uloženie exportu nespustí export okamžite.
+## <a name="export-the-data"></a>Export údajov
 
-Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Môžete [exportovať údaje na vyžiadanie](export-destinations.md). Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).

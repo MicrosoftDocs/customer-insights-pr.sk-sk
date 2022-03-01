@@ -1,7 +1,7 @@
 ---
-title: Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby
-description: Na pripojenie k vlastnému dátovému jazeru použite objekt služby Azure.
-ms.date: 12/06/2021
+title: Pripojenie k účtu Azure Data Lake Storage Gen2 pomocou objektu služby
+description: Použite objekt služby Azure pre prehľady cieľových skupín na pripojenie vlastného Data Lake, keď ho pripájate k prehľadom cieľových skupín.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,63 +9,54 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088166"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692132"
 ---
-# <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby Azure
+# <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Pripojenie k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure pre prehľady cieľových skupín
 
-Tento článok popisuje, ako sa pripojiť Dynamics 365 Customer Insights s Azure Data Lake Storage účtu pomocou princípu služby Azure namiesto kľúčov účtov úložiska. 
+Automatizované nástroje, ktoré využívajú služby Azure, by mali mať vždy obmedzené povolenia. Namiesto prihlasovania aplikácií ako plne privilegovaného používateľa ponúka Azure objekty služieb. Čítajte ďalej a dozviete sa, ako prepojiť prehľady cieľových skupín s účtom Azure Data Lake Storage Gen2, ktorý používa objekt služby Azure namiesto kľúčov účtu ukladacieho priestoru. 
 
-Automatizované nástroje, ktoré využívajú služby Azure, by mali mať vždy obmedzené povolenia. Namiesto prihlasovania aplikácií ako plne privilegovaného používateľa ponúka Azure objekty služieb. Princípy služieb môžete použiť na zabezpečenie [pridajte alebo upravte priečinok Common Data Model ako zdroj údajov](connect-common-data-model.md) alebo [vytvoriť alebo aktualizovať prostredie](create-environment.md).
+Objekt služby môžete použiť na bezpečné [pridanie alebo úpravu priečinka Common Data Model ako zdroj údajov](connect-common-data-model.md) alebo [vytvorenie nového či aktualizáciu existujúceho prostredia](get-started-paid.md).
 
 > [!IMPORTANT]
-> - Účet Data Lake Storage, ktorý bude používať principál služby, musí byť Gen2 a musí mať [hierarchický menný priestor povolený](/azure/storage/blobs/data-lake-storage-namespace). Účty úložiska Azure Data Lake Gen1 nie sú podporované.
-> - Na vytvorenie principála služby potrebujete povolenia správcu pre svoje predplatné Azure.
+> - Účet úložiska Azure Data Lake Gen2, ktorý chce používať objekt služby, musí mať [povolený Hierarchický menný priestor (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
+> - Na vytvorenie objektu služby potrebujete povolenia správcu predplatného Azure.
 
-## <a name="create-an-azure-service-principal-for-customer-insights"></a>Vytvorte objekt služby Azure pre Customer Insights
+## <a name="create-azure-service-principal-for-audience-insights"></a>Vytvorte objekt služby Azure pre prehľady cieľových skupín
 
-Pred vytvorením nového principála služby pre Customer Insights skontrolujte, či už vo vašej organizácii existuje.
+Pred vytvorením nového objektu služby pre prehľady cieľových skupín skontrolujte, či už vo vašej organizácii existuje.
 
 ### <a name="look-for-an-existing-service-principal"></a>Vyhľadajte existujúci objekt služby
 
 1. Prejdite do [portálu spravovania služby Azure](https://portal.azure.com) a prihláste sa do svojej organizácie.
 
-2. V časti **Služby Azure** vyberte možnosť **Azure Active Directory**.
+2. Vyberte položku **Azure Active Directory** zo služieb Azure.
 
 3. V časti **Spravovať** vyberte **Podnikové aplikácie**.
 
-4. Vyhľadajte ID aplikácie Microsoft:
-   - Prehľady cieľových skupín: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` s názvom `Dynamics 365 AI for Customer Insights`
-   - Prehľady interakcií: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` s názvom `Dynamics 365 AI for Customer Insights engagement insights`
+4. Vyhľadajte ID aplikácie prvej strany s prehľadmi cieľových skupín `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` alebo názov `Dynamics 365 AI for Customer Insights`.
 
-5. Ak nájdete zodpovedajúci záznam, znamená to, že objekt služby už existuje. 
+5. Ak nájdete zodpovedajúci záznam, znamená to, že objekt služby pre prehľady cieľových skupín existuje. Nemusíte nič znova vytvárať.
    
-   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Snímka obrazovky zobrazujúca existujúci objekt služby.":::
+   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Snímka obrazovky, ktorá ukazuje existujúci objekt služby.":::
    
 6. Ak sa nevrátia žiadne výsledky, vytvorte nový objekt služby.
 
->[!NOTE]
->Aby ste využili všetky možnosti Dynamics 365 Customer Insights, odporúčame vám pridať obe aplikácie k objektu služby.
-
 ### <a name="create-a-new-service-principal"></a>Vytvorte nový objekt služby
 
-1. Nainštalovať najnovšiu verziu Azure Active Directory PowerShell for Graph. Ak chcete získať ďalšie informácie, prejdite na [Inštalácia Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
-
-   1. Na počítači stlačte kláves Windows a nájdite **Windows PowerShell** a vyberte **Spustiť ako správca**.
+1. Nainštalujte si najnovšiu verziu **Azure Active Directory PowerShell pre Graph**. Ďalšie informácie nájdete v sekcii [Inštalovať Azure Active Directory PowerShell pre Graph](/powershell/azure/active-directory/install-adv2).
+   - Na počítači vyberte kláves Windows na klávesnici a vyhľadajte výraz **Windows PowerShell** a **Spustiť ako správca**.
    
-   1. Do okna PowerShell, ktoré sa otvorí, zadajte výraz `Install-Module AzureAD`.
+   - Do okna PowerShell, ktoré sa otvorí, zadajte výraz `Install-Module AzureAD`.
 
-2. Vytvorte objekt služby pre Customer Insights pomocou modulu Azure AD PowerShell.
-
-   1. Do okna PowerShell zadajte výraz `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Nahraďte *[your tenant ID]* vašim skutočným ID, v ktorom chcete vytvoriť objekt služby. Parameter názvu prostredia, `AzureEnvironmentName`, je voliteľný.
+2. Vytvorte objekt služby pre prehľady cieľových skupín pomocou modulu Azure AD PowerShell.
+   - Do okna PowerShell zadajte výraz `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Nahraďte „ID vášho nájomníka“ skutočným ID vášho nájomníka, v ktorom chcete vytvoriť objekt služby. Parameter názvu prostredia `AzureEnvironmentName` je voliteľný.
   
-   1. Zadajte `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Tento príkaz vytvorí objekt služby pre prehľady cieľových skupín vo vybranom nájomníkovi. 
-
-   1. Zadajte `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Tento príkaz vytvorí objekt služby pre prehľady interakcií pre vybraného nájomníka.
+   - Zadajte `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Tento príkaz vytvorí objekt služby pre prehľady cieľových skupín vo vybranom nájomníkovi.  
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Udeľte povolenia pre objekt služby na prístup k účtu úložiska
 
@@ -75,49 +66,51 @@ Prejdite na portál Azure a udeľte objektu služby povolenia pre účet úloži
 
 1. Otvorte účet úložiska, ku ktorému má mať prístup objekt služby pre prehľady cieľových skupín.
 
-1. Na ľavej table vyberte **Kontrola prístupu (IAM)** a potom vyberte **Pridať** > **Pridať priradenie roly**.
-
-   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Snímka obrazovky zobrazujúca portál Azure pri pridávaní priradenia roly.":::
-
+1. Vyberte položku **Riadenie prístupu (IAM)** na navigačnej table a vyberte položku **Pridať** > **Pridajte priradenie roly**.
+   
+   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Snímka obrazovky, ktorá ukazuje portál Azure pri pridávaní priradenia roly.":::
+   
 1. Na table **Pridať priradenie roly** nastavte nasledujúce vlastnosti:
-   - Rola: **Prispievateľ údajov do objektu BLOB úložiska**
-   - Priradiť prístup k: **Používateľovi, skupine alebo objektu služby**
-   - Vyberte: **Dynamics 365 AI for Customer Insights** a **prehľady interakcií Dynamics 365 AI for Customer Insights** (dva [objekty služieb](#create-a-new-service-principal), ktoré ste vytvorili skôr v tomto postupe)
+   - Rola: *Prispievateľ údajov do objektu BLOB úložiska*
+   - Priradiť prístup k: *Používateľovi, skupine alebo objektu služby*
+   - Vyberte: *Dynamics 365 AI for Customer Insights* ([objekt služby, ktorý ste vytvorili](#create-a-new-service-principal))
 
 1.  Vyberte položku **Uložiť**.
 
 Vyplnenie zmien môže byť dokončené až o 15 minút.
 
-## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Zadajte ID zdroja Azure alebo podrobnosti o predplatnom služby Azure v prílohe účtu úložiska k prehľadom cieľovej skupiny
+## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Zadajte ID zdroja Azure alebo podrobnosti o predplatnom služby Azure v prílohe účtu úložiska k Audience Insights.
 
-Môžete pripojiť účet Data Lake Storage v prehľadoch cieľovej skupiny na [uloženie výstupných údajov](manage-environments.md) alebo [ich použite ako zdroj údajov](connect-common-data-service-lake.md). Táto možnosť vám umožňuje vybrať si z prístupu založeného na zdroji alebo na predplatnom. V závislosti od zvoleného prístupu postupujte podľa postupu v jednej z nasledujúcich sekcií.
+Pripojte účet úložiska Azure Data Lake v prehľadoch cieľových skupín na [ukladanie výstupných údajov](manage-environments.md) alebo [jeho použitie ako zdroja údajov](connect-dataverse-managed-lake.md). Výber možnosti Azure Data Lake vám umožní vybrať si medzi prístupom založeným na zdrojoch alebo na predplatnom.
+
+Podľa nasledujúcich pokynov uveďte požadované informácie o vybranom prístupe.
 
 ### <a name="resource-based-storage-account-connection"></a>Pripojenie účtu úložiska na základe zdrojov
 
 1. Prejdite na [portál spravovania služby Azure](https://portal.azure.com), prihláste sa do predplatného a otvorte účet úložiska.
 
-1. Na ľavej table prejdite na **Nastavenia** > **Vlastnosti**.
+1. Prejdite na časť **Nastavenia** > **Vlastnosti** na navigačnej table.
 
 1. Skopírujte hodnotu ID zdroja účtu úložiska.
 
    :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Skopírujte ID zdroja účtu úložiska.":::
 
-1. Do prehľadov cieľovej skupiny zadajte ID zdroja do poľa zdroja zobrazeného na obrazovke pripojenia k účtu úložiska.
+1. V prehľadoch cieľových skupín vložte ID zdroja do poľa zdroja zobrazeného na obrazovke pripojenia účtu úložiska.
 
    :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Zadajte informácie o ID zdroja účtu úložiska.":::   
-
+   
 1. Pokračujte zvyšnými krokmi v prehľadoch cieľových skupín a pripojte účet úložiska.
 
 ### <a name="subscription-based-storage-account-connection"></a>Pripojenie účtu úložiska na základe predplatného
 
 1. Prejdite na [portál spravovania služby Azure](https://portal.azure.com), prihláste sa do predplatného a otvorte účet úložiska.
 
-1. Na ľavej table prejdite na **Nastavenia** > **Vlastnosti**.
+1. Prejdite na časť **Nastavenia** > **Vlastnosti** na navigačnej table.
 
 1. Skontrolujte **Predplatné**, **Skupinu zdrojov** a **Názov** účtu úložiska, aby ste v prehľadoch cieľových skupín vybrali správne hodnoty.
 
-1. V prehľadoch cieľovej skupiny vyberte pri pripájaní účtu úložiska hodnoty pre zodpovedajúce polia.
-
+1. Pri pripájaní účtu úložiska vyberte v prehľadoch cieľových skupín hodnoty alebo príslušné polia.
+   
 1. Pokračujte zvyšnými krokmi v prehľadoch cieľových skupín a pripojte účet úložiska.
 
 

@@ -1,20 +1,20 @@
 ---
 title: Konektor Power Automate | Dokumentácia spoločnosti Microsoft
-description: Vytvorenie postupov v Microsoft Power Automate z Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
-ms.reviewer: mhart
+description: Vytvárajte toky v Microsoft Power Automate z Dynamics 365 Customer Insights.
+ms.date: 08/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: 95e0fcbfb43f2b3e7e2d0e8a1690dc7ff5a44433402b7ef3d437710eb0efff15
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035618"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406890"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (ukážka)
 
@@ -22,35 +22,28 @@ ms.locfileid: "7035618"
 
 ## <a name="power-automate-triggers"></a>Spúšťače Power Automate
 
-Pomocou spúšťačov môžete vytvárať postupy v cloude a automatizovať opakujúce sa úlohy, napríklad oznámenia alebo pokročilejšie akcie. 
+Môžete použiť rôzne spúšťače, ktoré vám umožňujú vytvárať toky na automatizáciu opakujúcich sa úloh, ako sú upozornenia alebo pokročilejšie akcie. 
 
 - Spúšťač pri zlyhaní obnovenia zdroja údajov. 
 - Spúšťač pri úspešnom obnovení zdroja údajov.
 - Spúšťač pri prekročení prahu v segmente. Spúšťač je obmedzený na prekročenie prahu.
-- Spúšťač pri prekročení prahu vo firemnej miere. Podporované sú len podnikové opatrenia bez dimenzie. Spúšťač je obmedzený na prekročenie prahu.
+- Spúšťač pri prekročení prahu vo firemnej miere. Spúšťač je obmedzený na prekročenie prahu.
 - Spustí sa, keď sa dokončí úplné obnovenie (zdrojov údajov, segmentov, mier, ...).
 - Spustí sa, keď sa dokončí aktualizácia procesu zjednotenia (priradenie, párovanie, zlúčenie).
 
-[Nakonfigurujte svoje spúšťače v službe Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
+[Nakonfigurujte svoje spúšťače v Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Akcie Power Automate
+Konektor Power Automate poskytuje iné akcie ako dostupné spúšťače. Viac informácií nájdete v dokumente [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-Konektor Power Automate poskytuje iné akcie ako dostupné spúšťače. Viac informácií nájdete v dokumente [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
+## <a name="create-a-power-automate-flow-in-audience-insights"></a>Vytvorenie postupu služby Power Automate v prehľadoch cieľových skupín
 
-## <a name="create-a-power-automate-flow"></a>Vytvorte postup Power Automate
+1. V prehľadoch cieľových skupín prejdite na **Správca** > **Systém**.
 
-1. V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.
+1. Na stránke **Systém** vyberte kartu **Stav**.
 
-1. Na dlaždici **Power Automate** vyberte **Nastaviť**.
+1. V sekcii **Zdroje údajov** vyberte **Postupy** a vyberte **Vytvoriť postup** z rozbaľovacieho zoznamu.
+   > [!div class="mx-imgBorder"]
+   > ![Konektor Power Automate zobrazujúci akciu Vytvorenie toku](media/power-automate-connector-create-flow.png "Konektor Power Automate zobrazujúci akciu Vytvorenie toku")
 
-1. Otvorí sa konektor Customer Insights (verzia Preview) v Power Automate. **Prihláste sa** do Power Automate.
-
-1. Vyberte si jeden z dostupných spúšťačov a do nového postupu pridajte ďalšie kroky. Viac informácií nájdete v časti [Vytvorenie postupu v cloude v Power Automate](/power-automate/get-started-logic-flow).
-
-Príklady použitia tokov: 
-- Pošlite správu do kanála Microsoft Teams, ak zlyhá obnovenie zdroja údajov. 
-- Po prekročení prahovej hodnoty v segmente pošlite e-mail vlastníkom údajov.
-
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+1. V Power Automate vyberte jeden z dostupných spúšťačov a vytvorte požadovaný postup. Ak vytvárate svoj prvý tok, musíte sa najprv autentifikovať pomocou konektora Power Automate.

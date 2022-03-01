@@ -1,5 +1,5 @@
 ---
-title: Export údajov Customer Insights do hostiteľov SFTP (obsahuje video)
+title: Export údajov služby Customer Insights do hostiteľov protokolu SFTP
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do umiestnenia SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,18 +9,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934906"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035480"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Export segmentov a ďalších údajov do SFTP (verzia Preview)
 
 Použite svoje údaje o zákazníkoch v aplikáciách tretích strán tak, že ich exportujete do umiestnenia Secure File Transfer Protocol (SFTP).
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Predpoklad na pripojenie
 
@@ -28,7 +26,6 @@ Použite svoje údaje o zákazníkoch v aplikáciách tretích strán tak, že i
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Ciele SFTP za bránami firewall momentálne nie sú podporované. 
 - Čas spustenia exportu závisí od výkonu vášho systému. Ako minimálna konfigurácia vášho servera odporúčame dve jadrá CPU a 1 GB pamäte. 
 - Export entít s až 100 miliónmi zákazníckych profilov môže trvať 90 minút pri použití odporúčanej minimálnej konfigurácie dvoch jadier CPU a 1 GB pamäte. 
 

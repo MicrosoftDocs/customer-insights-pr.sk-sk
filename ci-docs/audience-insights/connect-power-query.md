@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
-ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
+ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8092091"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934997"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Pripojte sa k a Power Query zdroj údajov
 
@@ -30,7 +30,7 @@ Pridávanie zdrojov údajov na základe Power Query konektory sa vo všeobecnost
 
 1. Vyberte položku **Pridať zdroj údajov**.
 
-1. Vybrať **Microsoft Power Query**.
+1. Vyberte **Microsoft Power Query** a potom vyberte **Ďalšie**.
 
 1. Zadajte **Názov** pre zdroj údajov a vyberte **Ďalej** na vytvorenie zdroja údajov.
 
@@ -47,18 +47,18 @@ Pridávanie zdrojov údajov na základe Power Query konektory sa vo všeobecnost
 
 1. Údaje môžete aj transformovať. Vyberte entitu, ktorú chcete upraviť alebo transformovať. Použite možnosti v Power Query okno na použitie transformácií. Každá transformácia bude uvedená v zozname **Použité kroky**. Power Query poskytuje množstvo vopred pripravených možností transformácie. Ďalšie informácie nájdete v časti [Power Query Premeny](/power-query/power-query-what-is-power-query#transformations).
 
+1. Do zdroja údajov môžete pridať ďalšie entity výberom položky **Získať údaje** v dialógovom okne **Upraviť dotazy**.
+
    Odporúčame vám použiť nasledujúce transformácie:
 
-   - Ak prijímate údaje zo súboru CSV, prvý riadok často obsahuje hlavičky. Ísť do **Transformovať** a vyberte **Použite prvý riadok ako hlavičky**.
-   - Zaistite, aby bol dátový typ nastavený správne. Napríklad pre polia dátumu vyberte typ dátumu.
-
-1. Ak chcete pridať ďalšie entity do zdroj údajov v **Upraviť dopyty** dialóg, prejdite na **Domov** a vyberte **Získajte údaje**.
+   - Ak prijímate údaje zo súboru CSV, prvý riadok často obsahuje hlavičky. Prejdite do časti **Transformovať tabuľku** a vyberte **Ako prvý riadok použiť hlavičky**.
+   - Zaistite, aby bol dátový typ nastavený správne.
 
 1. Vyberte **Uložiť** v spodnej časti Power Query okno na uloženie transformácií. Po uložení nájdete zdroj údajov v časti **Údaje** > **Zdroje údajov**.
 
 1. Na stránke **Zdroje údajov** si všimnete, že je tu nový zdroj údajov v stave **Obnovuje sa**.
 
-## <a name="available-power-query-data-sources"></a>Dostupné Power Query zdroje dát
+## <a name="available-power-query-data-sources"></a>K dispozícii Power Query zdroje dát
 
 Pozrite si [Power Query odkaz na konektor](/power-query/connectors/) nájdete zoznam konektorov, ktoré môžete použiť na import údajov do Customer Insights. 
 

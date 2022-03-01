@@ -1,20 +1,20 @@
 ---
 title: Konektor služby Power BI
 description: Informácie o používaní konektora Dynamics 365 Customer Insights v Power BI.
-ms.date: 07/23/2021
-ms.reviewer: mhart
+ms.date: 09/21/2020
+ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: stefanie-msft
-ms.author: sthe
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a0ca431dbea839fe271cf3a512cd3a5dde6d920d396056e91b33bcf7ed84272a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035526"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406895"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor pre Power BI (ukážka)
 
@@ -23,7 +23,7 @@ Vytvorte vizualizácie svojich údajov cez Power BI Desktop. Vytvárajte ďalši
 ## <a name="prerequisites"></a>Predpoklady
 
 - Máte zjednotené profily zákazníkov.
-- Najnovšia verzia [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je nainštalovaná vo vašom počítači. [Ďalšie informácie o Power BI Desktop](/power-bi/desktop-what-is-desktop)
+- Najnovšia verzia [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je nainštalovaná vo vašom počítači. [Ďalšie informácie o Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop)
 
 ## <a name="configure-the-connector-for-power-bi"></a>Nakonfigurujte konektor pre Power BI
 
@@ -31,7 +31,7 @@ Vytvorte vizualizácie svojich údajov cez Power BI Desktop. Vytvárajte ďalši
 
 1. Vyberte **Zobraziť viac** and vyhľadajte **Dynamics 365 Customer Insights**
 
-1. Vyberte možnosť **Pripojiť**.
+1. Vyberte výsledok a položku **Pripojiť**.
 
 1. **Prihláste sa** s účtom tej istej organizácie, ktorý používate pre Customer Insights a vyberte **Pripojiť sa**.
    > [!NOTE]
@@ -39,7 +39,7 @@ Vytvorte vizualizácie svojich údajov cez Power BI Desktop. Vytvárajte ďalši
 
 1. V dialógovom okne **Navigátor**. zobrazí zoznam všetkých prostredí, ku ktorým máte prístup. Rozbaľte prostredie a otvorte ktorýkoľvek z priečinkov (entity, miery, segmenty, obohatenia). Napríklad otvorte priečinok **Entity**, aby ste videli všetky entity, ktoré môžete importovať.
 
-   ![Navigátor konektora Power BI.](media/power-bi-navigator.png "Navigátor konektora Power BI")
+   ![Navigátor konektora Power BI](media/power-bi-navigator.png "Navigátor konektora Power BI")
 
 1. Začiarknite políčka vedľa entít, ktoré chcete zahrnúť, a vyberte **Načítať**. Môžete zvoliť viacero entít z viacerých prostredí.
 
@@ -47,32 +47,8 @@ Vytvorte vizualizácie svojich údajov cez Power BI Desktop. Vytvárajte ďalši
 
 ## <a name="large-data-sets"></a>Veľké množiny údajov
 
-Konektor Customer Insights pre Power BI je navrhnutý tak, aby fungoval pre súbory údajov, ktoré obsahujú až 1 milión profilov zákazníkov. Import väčších množín údajov môže fungovať, ale trvá to dlho. Proces by navyše mohol vypršať kvôli časovému limitu Power BI. Viac informácií nájdete v časti [Power BI: Odporúčania pre veľké množiny údajov](/power-bi/admin/service-premium-what-is#large-datasets). 
+Konektor Customer Insights pre Power BI je navrhnutý tak, aby fungoval pre súbory údajov, ktoré obsahujú až 1 milión profilov zákazníkov. Import väčších množín údajov môže fungovať, ale trvá to dlho. Proces by navyše mohol vypršať kvôli časovému limitu Power BI. Viac informácií nájdete v časti [Power BI: Odporúčania pre veľké množiny údajov](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Práca s podmnožinou údajov
 
 Zvážte prácu s podmnožinou svojich údajov. Môžete napríklad vytvárať [segmenty](segments.md) namiesto exportovania všetkých záznamov zákazníkov do služby Power BI.
-
-## <a name="troubleshooting"></a>Riešenie problémov
-
-### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Prostredie Customer Insights sa nezobrazuje v Power BI
-
-Prostredia, ktoré majú viac ako jeden [vzťah](relationships.md) definovaný medzi dvoma rovnakými entitami v prehľadoch cieľových skupín, nebudú k dispozícii v konektore Power BI.
-
-Môžete identifikovať a odstrániť duplicitné vzťahy.
-
-1. V prehľadoch cieľových skupín choďte na **Údaje** > **Vzťahy** v prostredí, v ktorom vám chýba v Power BI.
-2. Identifikujte duplicitné vzťahy:
-   - Skontrolujte, či je medzi rovnakými dvoma entitami definovaných viac ako jeden vzťah.
-   - Skontrolujte, či existuje vzťah medzi dvoma entitami, ktoré sú obe zahrnuté v procese zjednotenia. Existuje implicitný vzťah definovaný medzi všetkými entitami zahrnutými do procesu zjednotenia.
-3. Odstráňte všetky zistené duplicitné vzťahy.
-
-Po odstránení duplicitných vzťahov sa pokúste konektor Power BI nakonfigurovať znova. Prostredie by malo byť dostupné hneď.
-
-### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Pri načítaní entít do aplikácie Power BI Desktop sa vyskytli chyby v poliach dátumu
-
-Pri načítavaní entít obsahujúcich polia s formátom dátumu, ako je MM/DD/RRRR, sa môžu vyskytnúť chyby v dôsledku nezhodných formátov miestnych nastavení. Tento nesúlad nastane vtedy, keď súbor aplikácie Power BI Desktop bol nastavený na iné miestne nastavenie ako je angličtina (USA), pretože polia dátumu v prehľadoch cieľovej skupiny sú uložené v americkom formáte.
-
-Súbor aplikácie Power BI Desktop má jedno miestne nastavenie, ktoré sa používa pri získavaní údajov. Ak chcete, aby boli tieto polia dátumu interpretované správne, nastavte miestne nastavenie súboru .BPI na angličtinu (Spojené štáty americké). [Zistite, ako môžete zmeniť miestne nastavenia súboru počítačovej aplikácie Power BI](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

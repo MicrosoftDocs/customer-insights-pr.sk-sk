@@ -1,7 +1,7 @@
 ---
 title: Export údajov služby Customer Insights do Microsoft Advertising
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Microsoft Advertising.
-ms.date: 10/08/2021
+ms.date: 05/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618080"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124549"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Export segmentov do služby Microsoft Advertising (verzia Preview)
 
@@ -29,9 +29,9 @@ Exportujte segmenty Customer Insights do služby Microsoft Advertising a vytvort
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Do Microsoft Advertising môžete exportovať až 500 000 profilov zákazníkov.
+- Na jeden export môžete exportovať do Microsoft Advertising až 500 tis. profilov.
 - Exportovanie do Microsoft Advertising je obmedzené na segmenty.
-- Export až 500 000 profilov zákazníkov do Microsoft Advertising môže trvať až 10 minút. 
+- Exportovanie až 500 tis. profilov do aplikácie Microsoft Advertising môže trvať až 10 minút. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Nastavenie pripojenia do Microsoft Advertising
@@ -68,7 +68,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Zadajte svoje **ID zákazníka Microsoft Advertising a ID konta**. ID zákazníka (`cid`) a ID obchodného vzťahu (`aid`) v parametroch adresy URL, keď ste prihlásení do služby Microsoft Advertising.
 
-1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole s e-mailovou adresou zákazníka. Je potrebné exportovať segmenty do Microsoft Advertising.
+1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole vo svojom zjednotenom profile zákazníka s e-mailovou adresou zákazníka. Je potrebné exportovať segmenty do Microsoft Advertising.
 
 1. Vyberte položku **Uložiť**.
 

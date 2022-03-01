@@ -1,7 +1,7 @@
 ---
 title: Obohaťte profily zákazníkov o údaje od spoločnosti Microsoft
-description: Použite vlastné údaje od spoločnosti Microsoft na obohatenie údajov o zákazníkoch o príbuznosť a zdieľanie hlasu.
-ms.date: 11/11/2021
+description: Na obohatenie svojich zákazníckych údajov o záujmy značiek a záujmov použite patentované údaje spoločnosti Microsoft.
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,29 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
-ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "7793722"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305175"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obohaťte zákaznícke profily o afinity a zdieľanie hlasu (ukážka)
+# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte profily zákazníkov o značky a záujmy (ukážka)
 
-Použite vlastné údaje spoločnosti Microsoft na obohatenie svojich zákazníckych údajov o príbuznosť so značkou, záujmovú príbuznosť a podiel hlasu (SoV). Tieto afinity a SoV sú založené na údajoch od ľudí s podobnými demografickými údajmi ako vaši zákazníci. Tieto informácie vám pomôžu lepšie pochopiť a segmentovať vašich zákazníkov na základe ich afinity alebo SoV ku konkrétnym značkám a záujmom.
+Na obohatenie svojich zákazníckych údajov o záujmy značiek a záujmov použite patentované údaje spoločnosti Microsoft. Tieto afinity vychádzajú z údajov od ľudí pochádzajúcich z podobnej demografickej oblasti ako vaši zákazníci. Tieto informácie vám pomôžu lepšie porozumieť a segmentovať vašich zákazníkov na základe ich príslušnosti k určitým značkám a záujmom.
 
 V prehľadoch cieľových skupín prejdite na **Údaje** > **Obohatenie** na [konfiguráciu a zobrazenie obohatení](enrichment-hub.md).
 
-Ak chcete nakonfigurovať afinity k značke a obohatenie SoV, prejdite na stránku **Objavte** kartu a vyberte **Obohaťte moje údaje** na **Značky** dlaždica.
+Ak chcete nakonfigurovať obohatenie o afinity značiek, prejdite na stránku **Objavovať** a vyberte **Obohatiť moje údaje** na dlaždici **Značky**.
 
-Ak chcete nakonfigurovať záujmové afinity a obohatenie SoV, prejdite na stránku **Objavte** kartu a vyberte **Obohaťte moje údaje** na **Záujmy** dlaždica.
+Ak chcete nakonfigurovať obohatenie o afinity záujmov, prejdite na stránku **Objavovať** a vyberte **Obohatiť moje údaje** na dlaždici **Záujmy**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice značiek a záujmov.](media/BrandsInterest-tile-Hub.png "Dlaždice značiek a záujmov")
+   > ![Dlaždice značiek a záujmov](media/BrandsInterest-tile-Hub.png "Dlaždice značiek a záujmov")
 
-## <a name="how-we-determine-affinities-and-sov"></a>Ako určujeme afinity a SoV
+## <a name="how-we-determine-affinities"></a>Ako určujeme príbuznosti
 
-Údaje z online vyhľadávania od spoločnosti Microsoft používame na nájdenie afinity a SoV pre značky a záujmy v rôznych demografických segmentoch (definovaných podľa veku, pohlavia alebo polohy). Online objem vyhľadávania pre značku alebo záujem tvorí základ pre určenie afinity alebo SoV. Každý z nich však poskytuje iný pohľad na pochopenie vašich zákazníkov.
-
-- Afinita predstavuje porovnanie naprieč demografickými segmentmi. Tieto informácie môžete použiť na identifikáciu demografických segmentov, ktoré majú najvyššiu afinitu k danej značke alebo záujmu v porovnaní s inými segmentmi.
-
-- Podiel hlasu predstavuje porovnanie medzi vami vybranými značkami alebo záujmami. Tieto informácie môžete použiť na zistenie, ktorá značka alebo záujem má najvyšší podiel hlasu pre daný demografický segment v porovnaní s inými značkami alebo záujmami, ktoré ste vybrali.
+Údaje o vyhľadávaní online spoločnosti Microsoft používame na to, aby sme zistili príbuznosť značiek a záujmov v rôznych demografických segmentoch (definované podľa veku, pohlavia alebo umiestnenia). Objem online vyhľadávania pre určitú značku alebo záujem určuje, akú príbuznosť má demografický segment v porovnaní s inými segmentmi k tejto značke alebo záujmu.
 
 ## <a name="affinity-level-and-score"></a>Úroveň afinity a skóre
 
@@ -52,10 +48,6 @@ V každom obohatenom profile zákazníka poskytujeme dve súvisiace hodnoty: úr
 |Nízky     | 1 – 34        |
 
 V závislosti od podrobností, ktoré chcete pri meraní afinity, môžete použiť buď úroveň afinity alebo skóre. Skóre afinity vám dáva presnejšiu kontrolu.
-
-## <a name="share-of-voice-sov"></a>Podiel hlasu (SoV)
-
-SoV počítame na 100-bodovej škále. Celková hodnota SoV naprieč všetkými značkami alebo záujmami pre každý rozšírený zákaznícky profil je 100. Na rozdiel od afinity je SoV relatívna k značkám a záujmom, ktoré si vyberiete. Napríklad hodnoty SoV pre 'Microsoft' sa môžu líšiť, ak sú vybraté značky ('Microsoft', 'GitHub') oproti ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Podporované krajiny/regióny
 
@@ -90,7 +82,7 @@ Skontrolujte svoje predvolené predvoľby obohatenia a podľa potreby ich aktual
 
 ### <a name="select-entity-to-enrich"></a>Vyberte entitu na obohatenie
 
-Vyberte **Obohatená entita** a vyberte súbor údajov, ktorý chcete obohatiť o údaje od spoločnosti Microsoft. Môžete zvoliť entitu Zákazník, aby ste obohatili všetky svoje zákaznícke profily, alebo vyberte entitu segmentu, aby ste obohatili iba profily zákazníkov obsiahnuté v danom segmente.
+Stlačte možnosť **Obohatená entita** a vyberte množinu údajov, ktorú chcete obohatiť o údaje spoločnosti od spoločnosti Microsoft. Môžete zvoliť entitu Zákazník, aby ste obohatili všetky svoje zákaznícke profily, alebo vyberte entitu segmentu, aby ste obohatili iba profily zákazníkov obsiahnuté v danom segmente.
 
 ### <a name="map-your-fields"></a>Priraďte svoje polia
 
@@ -124,25 +116,26 @@ Spustite obohatenie po nakonfigurovaní značiek, záujmov a mapovania terénu p
 
 V závislosti od veľkosti vašich zákazníckych údajov môže dokončenie procesu obohatenia trvať niekoľko minút.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere možnosti **Zobraziť podrobnosti** pre jednu z pracovných úloh nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s danou úlohou.
 
 ## <a name="enrichment-results"></a>Výsledky obohatenia
 
 Po dokončení procesu obohacovania prejdite na **Moje obohatenia** a skontrolujte celkový počet obohatených zákazníkov a prehľad značiek a záujmov v obohatených profiloch zákazníkov.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Ukážka výsledkov po spustení procesu obohacovania.":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Ukážka výsledkov po spustení procesu obohacovania":::
 
-Nájdete tu graf s počtom obohatených zákazníckych profilov v priebehu času a náhľadmi obohatených entít. Výberom skontrolujte obohatené údaje **Pozrieť viac** v **Úroveň afinity** alebo **Podiel hlasu** grafy. Obohatené údaje o značkách idú do **BrandAffinity od Microsoftu** a **BrandShareOfVoiceFromMicrosoft** subjektov. Údaje pre záujmy sú v **InterestAffinityFromMicrosoft** a **InterestShareOfVoiceFromMicrosoft** subjektov. Tieto entity nájdete uvedené aj v skupine **Obohatenie** v časti **Údaje** > **Entity**.
+Vyberte obohatené údaje výberom **Zobraziť obohatené údaje** v tabuľke. Obohatené údaje o značkách prejdú do entity **BrandAffinityFromMicrosoft**. Údaje o záujmoch sú v entite **InterestAffinityFromMicrosoft**. Tieto entity nájdete uvedené aj v skupine **Obohatenie** v časti **Údaje** > **Entity**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Pozrite si údaje o obohatení na karte zákazníka
 
-Značku a záujem SoV je možné zobraziť aj na individuálnych zákazníckych kartách. Prejdite na možnosť **Zákazníci** a zvoľte si profil zákazníka. V zákazníckej karte nájdete grafy pre značku alebo záujmovú SoV na základe ľudí v demografickom profile daného zákazníka.
+Značky a záujmy môžu byť zobrazené aj na jednotlivých zákazníckych kartách. Prejdite na možnosť **Zákazníci** a zvoľte si profil zákazníka. Na zákazníckej karte nájdete grafy značiek alebo záujmov, ku ktorým majú ľudia v demografickom profile daného zákazníka afinitu.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Karta zákazníka s obohatenými údajmi.":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Karta zákazníka s obohatenými údajmi":::
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Stavajte na svojich obohatených údajoch o zákazníkoch. Vytvárajte [segmenty](segments.md) a [opatrenia](measures.md), a dokonca [exportujte údaje](export-destinations.md), aby ste mohli poskytovať svojim zákazníkom zážitky šité na mieru.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

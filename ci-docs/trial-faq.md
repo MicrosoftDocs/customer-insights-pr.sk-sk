@@ -3,18 +3,18 @@ title: Najčastejšie otázky o skúšobnej verzii – Dynamics 365 Customer Ins
 description: Riešenia bežných otázok súvisiacich so správou a nastavením skúšobnej verzie Customer Insights. Prečítajte si, ako vyriešiť problémy s platformou a aplikáciou.
 author: m-hartmann
 ms.author: mhart
-ms.date: 02/10/2022
+ms.date: 09/30/2021
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
-ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
+ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
+ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "8115987"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "7642910"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Časté otázky o skúšobnej verzii Dynamics 365 Customer Insights
 
@@ -24,7 +24,7 @@ ms.locfileid: "8115987"
 
 Táto aplikácia je cloudová služba, ktorá okrem aktualizovaného webového prehliadača nevyžaduje žiadny ďalší špeciálny softvér, aj keď platia niektoré obmedzenia. Aby ste dosiahli čo najlepšie výsledky, vyhnite sa prístupu na skúšobnú lokalitu v režime inkognito a vyberte si skúšobnú polohu, ktorá je k vám najbližšie. [Ďalšie informácie o požiadavkách na webovú aplikáciu.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Ako sa môžem prihlásiť na skúšobnú verziu bez a Microsoft 365 nájomník?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Ako sa môžem zaregistrovať do skúšobnej verzie bez nájomníka služby Microsoft 365?
 
 Môžete zadať mimopracovný e-mailový adresu a my vám vytvoríme účet a nájomníka.
 
@@ -43,7 +43,7 @@ Keď sa zaregistrujete na skúšobnú verziu, dostanete e-mail s podrobnosťami 
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Ako do skúšobnej verzie pridám ďalších používateľov?
 
-Ak chcete pridať používateľov, prejdite na stránku [Microsoft 365 centrum spravovania](https://admin.microsoft.com) pomocou skúšobného účtu správcu. Podľa [pokynov centra správcu](/microsoft-365/admin/add-users/add-users) pridajte používateľov do limitu skúšobnej licencie. Ak používateľ, ktorého pridávate, už má a Microsoft 365 účtu, priraďte im príslušné rola zabezpečenia v skúšobnej org. Viac informácií nájdete v časti [Priraďte rola zabezpečenia používateľovi](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Ak chcete pridať používateľov, prejdite do [centra spravovania služby Microsoft 365](https://admin.microsoft.com) pomocou skúšobného konta správcu. Podľa [pokynov centra správcu](/microsoft-365/admin/add-users/add-users) pridajte používateľov do limitu skúšobnej licencie. Ak pridávaný používateľ už má konto Microsoft 365, priraďte mu príslušné roly zabezpečenia v skúšobnej organizácii. Ďalšie informácie nájdete v téme [Priradenie roly zabezpečenia používateľovi](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Koľko používateľov môžem pridať do svojho skúšobného prostredia?
 
@@ -63,7 +63,7 @@ Skúšobnú dobu môžete v aplikácii predĺžiť. Skúšobné obdobie si môž
 
 Vo všeobecnosti odporúčame pri inovácii na platenú verziu služby Customer Insights začať s novými údajmi. 
 
-Voliteľne, ak použijete iba prehľady cieľových skupín, môžete svoje údaje skopírovať zo skúšobného prostredia, ak si zakúpite Customer Insights. Musíte byť správcom skúšobnej verzie Customer Insights a jej globálnym správcom Microsoft 365 nájomník alebo správca Dynamics 365 vo vašej organizácii na migráciu nastavení zo skúšobného prostredia do plateného prostredia. 
+Voliteľne, ak použijete iba prehľady cieľových skupín, môžete svoje údaje skopírovať zo skúšobného prostredia, ak si zakúpite Customer Insights. Ak chcete migrovať nastavenia zo skúšobného prostredia do plateného prostredia, je potrebné, aby ste boli správcom skúšobnej verzie služby Customer Insights a taktiež globálnym správcom vášho nájomníka služby Microsoft 365 alebo správcom služby Dynamics 365 vo vašej organizácii. 
 
 Po prvom prihlásení do platenej inštancie služby Customer Insights sa zobrazí výzva na vytvorenie nového prostredia. Pri tomto procese máte možnosť sa rozhodnúť, či chcete skopírovať konfiguráciu z už existujúceho prostredia a migrovať z neho väčšinu nastavení. Ak máte hore uvedené povolenia, v tomto zozname sa zobrazí dané skúšobné prostredie. Ďalšie údaje nájdete v časti [Skopírujte konfiguráciu prostredia](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,9 +82,8 @@ Po prihlásení sa na skúšobnú verziu sa dostanete na hlavnú obrazovku aplik
 
 Väčšina funkcií Customer Insights je k dispozícii v skúšobnej verzii.
 
-Nasledujúce funkcie sú **nie je k dispozícií**: 
+Nasledujúca funkcia nie je k dispozícii: 
 - Nemôžete vytvárať nové prostredia, ktoré používajú váš vlastný účet Azure Data Lake Storage.
-- Skúšobné prostredie nemôžete odstrániť. 
 
 ### <a name="how-long-does-the-trial-last"></a>Ako dlho trvá skúšobný proces?
 

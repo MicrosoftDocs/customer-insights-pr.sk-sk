@@ -1,7 +1,7 @@
 ---
-title: Údaje Customer Insights v Microsoft Dataverse
-description: Použite entity Customer Insights ako tabuľky v Microsoft Dataverse.
-ms.date: 11/25/2021
+title: Údaje riešenia Customer Insights v Microsoft Dataverse
+description: Entity Customer Insights použite ako tabuľky v Microsoft Dataverse.
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,35 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866953"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645237"
 ---
-# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Pracujte s údajmi Customer Insights v Microsoft Dataverse
+# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práca s údajmi Customer Insights v Microsoft Dataverse
 
-Customer Insights poskytuje možnosť sprístupniť výstupné entity v [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Táto integrácia umožňuje ľahké zdieľanie údajov a vlastný vývoj prostredníctvom prístupu založeného na nízkom alebo žiadnom kóde. Výstupné entity budú dostupné ako tabuľky v Dataverse. Tieto tabuľky umožňujú scenáre ako napr [automatizované pracovné postupy prostredníctvom Power Automate](/power-automate/getting-started),[modelom riadené aplikácie](/powerapps/maker/model-driven-apps/) a [aplikácie na plátne](/powerapps/maker/canvas-apps/) cez Power Apps. Údaje môžete použiť pre akúkoľvek inú aplikáciu, ktorá je založená na Dataverse tabuľkách. Aktuálna implementácia podporuje hlavne vyhľadávania, kde je možné pre dané ID zákazníka načítať údaje z dostupných štatistík publika.
+Customer Insights poskytuje možnosť sprístupniť výstupné entity dostupné v [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Táto integrácia umožňuje ľahké zdieľanie údajov a vlastný vývoj prostredníctvom prístupu založeného na nízkom alebo žiadnom kóde. Výstupné entity budú k dispozícii ako tabuľky v Dataverse. Tieto tabuľky umožňujú scenáre ako [automatizované pracovné postupy cez Power Automate](/power-automate/getting-started), [modelom riadené aplikácie](/powerapps/maker/model-driven-apps/) a [aplikácie plátna](/powerapps/maker/canvas-apps/) cez Power Apps. Údaje môžete použiť pre akúkoľvek inú aplikáciu, ktorá je založená na tabuľkách Dataverse. Aktuálna implementácia podporuje hlavne vyhľadávania, kde je možné pre dané ID zákazníka načítať údaje z dostupných štatistík publika.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Pripojte Dataverse prostredie k Customer Insights
+## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Pripojenie prostredia Dataverse do Customer Insights
 
 **Organizácie s existujúcimi prostrediami Dataverse**
 
-Organizácie, ktoré už používajú Dataverse, môžu [použite jedno z ich existujúcich Dataverse prostredí](create-environment.md) keď správca nastaví štatistiky publika. Poskytnutím adresy URL do prostredia Dataverse sa pripojí k ich novému prostrediu štatistík publika. Na zabezpečenie čo najlepšieho výkonu musia byť prostredia Customer Insights a Dataverse hosťované v rovnakej oblasti.
+Organizácie, ktoré už používajú Dataverse, môžu [použiť jedno z ich existujúcich prostredí Dataverse](create-environment.md) keď správca nastaví prehľady cieľovej skupiny. Poskytnutím adresy URL do prostredia Dataverse sa pripája k ich novému prostrediu prehľadov cieľovej skupiny. Aby sme zaistili čo najlepší výkon, prostredia Customer Insights a Dataverse musia byť hosťované v rovnakom regióne.
 
 **Nová organizácia**
 
-Ak pri nastavovaní Customer Insights vytvoríte novú organizáciu, automaticky získate nové Dataverse prostredie.
+Ak pri nastavovaní Customer Insights vytvoríte novú organizáciu, automaticky získate nové prostredie Dataverse.
 
 > [!NOTE]
-> Ak vaše organizácie už používajú Dataverse vo svojom nájomníkovi, je dôležité si uvedomiť, že [Dataverse vytváranie prostredia je riadené správcom](/power-platform/admin/control-environment-creation.md) . Ak napríklad pomocou účtu organizácie nastavujete nové prostredie štatistík publika a správca zakázal vytváranie Dataverse skúšobných prostredí pre všetkých okrem správcov, nemôžete vytvoriť nové skúšobné prostredie.
+> Ak už vaše organizácie používajú Dataverse v ich nájomníkovi, je dôležité si zapamätať, že [vytvorenie prostredia Dataverse riadi správca](/power-platform/admin/control-environment-creation.md). Napríklad ak vo svojom účte organizácie nastavujete nové prostredie prehľadov cieľovej skupiny a správca zakázal vytváranie skúšobných prostredí Dataverse pre všetkých okrem správcov, nemôžete vytvoriť nové skúšobné prostredie.
 > 
-> Dataverse skúšobné prostredia vytvorené v Customer Insights majú 3 GB úložného priestoru, ktorý sa nezapočítava do celkovej kapacity oprávnenej nájomcom. Platené odbery získavajú Dataverse nárok na 15 GB pre databázu a 20 GB pre ukladanie súborov.
+> Skúšobné prostredia Dataverse vytvorené v Customer Insights majú 3 GB úložného priestoru, ktorý sa nezapočítava do celkovej kapacity, na ktorú má nájomník nárok. Platené predplatné získa oprávnenie Dataverse na 15 GB na databázu a 20 GB na ukladanie súborov.
 
 ## <a name="output-entities"></a>Výstupné entity
 
-Niektoré výstupné entity zo štatistík publika sú dostupné ako tabuľky v Dataverse. Nasledujúce časti popisujú očakávanú schému týchto tabuliek.
+Niektoré výstupné entity z prehľadov cieľovej skupiny sú k dispozícii ako tabuľky v Dataverse. Nasledujúce časti popisujú očakávanú schému týchto tabuliek.
 
 - [CustomerProfile](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -45,7 +45,6 @@ Niektoré výstupné entity zo štatistík publika sú dostupné ako tabuľky v 
 - [CustomerMeasure](#customermeasure)
 - [Obohatenie](#enrichment)
 - [Predikcia](#prediction)
-- [Členstvo v segmente](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -122,16 +121,3 @@ Táto tabuľka obsahuje výstup predikcií modelu.
 | Hodnoty               | Reťazec JSON | Zoznam atribútov získaných modelom |
 | msdynci_predictionid | GUID        | Deterministický GUID vygenerovaný z msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Členstvo v segmente
-
-Táto tabuľka obsahuje informácie o členstve v segmentoch profilov zákazníkov.
-
-| Column        | Type | Description                        |
-|--------------------|--------------|-----------------------------|
-| ID zákazníka        | String       | ID profilu zákazníka        |
-| SegmentProvider      | String       | Aplikácia, ktorá zverejňuje segmenty. Predvolené: Štatistiky publika         |
-| Typ členstva v segmente | String       | Typ záznamu členstva v tomto segmente zákazníka. Podporuje viacero typov, ako napríklad Zákazník, Kontakt alebo Účet. Predvolené: Zákazník  |
-| Segmenty       | Reťazec JSON  | Zoznam jedinečných segmentov, ktorých členom je profil zákazníka      |
-| msdynci_identifier  | String   | Jedinečný identifikátor záznamu členstva v segmente. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministický GUID generovaný z`msdynci_identifier`          |

@@ -4,17 +4,17 @@ description: Použite dostupné zostavy na zobrazenie aktivity na vašej lokalit
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 10/01/2021
+ms.date: 06/18/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
-ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
+ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "7582941"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036667"
 ---
 # <a name="view-reports"></a>Zobraziť zostavy
 
@@ -92,18 +92,12 @@ Mobilné zostavy sú zoskupené do kategórií podľa použitia v reálnom čase
 
 - **Umiestnenia** ukazujú informácie o používateľoch aplikácie podľa štátu, regiónu a mesta.
 
-## <a name="filter-by-time-or-date-range"></a>Filtrovanie podľa času alebo rozsahu dátumov
+## <a name="filter-by-time-or-value"></a>Filtrovať podľa času alebo hodnoty
 
-Môžete vybrať časový rámec alebo rozsah dátumov vo webovej alebo mobilnej zostave, aby ste sa zamerali na hodnotu alebo časové obdobie. 
+Môžete zvoliť časový rámec alebo hodnotu vo webovej alebo mobilnej zostave, aby ste sa zamerali na hodnotu alebo časové obdobie. 
 
-- Ak chcete vybrať časový rámec, v pravom hornom rohu zobrazenia zostavy vyberte hodnotu z rozbaľovacieho zoznamu zostavy. Môžete si tiež vybrať **Pevný rozsah dátumov**. 
+- Ak chcete zvoliť časový rámec, vyberte možnosť **Viac [...]** z rozbaľovacieho zoznamu zostavy. Pre prehľad používania v reálnom čase je výber časového rozsahu zakázaný; časový rozsah pre prehľad používania v reálnom čase je „teraz“.
 
-  :::image type="content" source="media/filter-by-time.png" alt-text="Filtrovanie podľa času alebo rozsahu dátumov.":::   
-
-- Vo väčšine zostáv vyberte hodnotu v grafe alebo zozname, ak chcete zostavu filtrovať.
-
-> [!NOTE]
-> Pre prehľad používania v reálnom čase je výber časového rozsahu zakázaný; časový rozsah pre prehľad používania v reálnom čase je „teraz“.
-
+- Vo väčšine prehľadov vyberte hodnotu v grafe alebo zozname, aby sa prehľad filtroval pre vybratú hodnotu.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

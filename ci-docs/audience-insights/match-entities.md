@@ -1,7 +1,7 @@
 ---
 title: Priraďovanie entít na účely zjednotenia údajov
-description: Priraďujte entity na účely vytvorenia jednotných profilov zákazníkov.
-ms.date: 02/07/2022
+description: Spárujte entity, aby ste skombinovali množiny údajov a vytvorili zjednotené profily zákazníkov.
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098854"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648227"
 ---
 # <a name="match-entities"></a>Priradenie entít
 
@@ -29,7 +29,13 @@ Stránka priraďovania sa skladá z troch častí:
 
 ## <a name="specify-the-match-order"></a>Určenie objednávky zosúladenia
 
-Každá zhoda zjednocuje dve alebo viac entít do jednej konsolidovanej entity. Zároveň vedie jedinečné záznamy o zákazníkoch. Poradie zhody označuje poradie, v ktorom sa systém pokúša priradiť záznamy.
+Prejdite do ponuky **Údaje** > **Zjednotiť** > **Spárovať** a vyberte **Nastaviť poradie** na začatie fázy spárovania.
+
+Každá zhoda zjednocuje dve alebo viac entít do jednej konsolidovanej entity. Zároveň vedie jedinečné záznamy o zákazníkoch. Napríklad sme vybrali dve entity: **eCommerce:eCommerceContacts** ako primárnu entitu a **LoyaltyScheme:loyCustomers** ako druhú entitu. Poradie entít určuje, v akom poradí sa systém pokúsi priradiť záznamy.
+
+:::image type="content" source="media/match-page.png" alt-text="Snímka obrazovky stránky Priradenie v oblasti Zjednotiť procesu zjednotenia údajov.":::
+  
+Primárna entita *eCommerce:eCommerceContacts* sa porovnáva s ďalšou entitou *LoyaltyScheme:loyCustomers*. Ak máte viac ako dve entity, množina údajov, ktorá je výsledkom prvého kroku zhody, sa porovnáva s nasledujúcou entitou.
 
 > [!IMPORTANT]
 > Entita, ktorú vyberiete ako primárnu, bude slúžiť ako základ pre jednotnú množinu údajov profilov. Ďalšie entity, ktoré sú vybraté počas fázy zosúladenia, sa pridajú do tejto entity. To neznamená, že zjednotená entita bude obsahovať *všetky* údaje zahrnuté v tejto entite.
@@ -37,18 +43,9 @@ Každá zhoda zjednocuje dve alebo viac entít do jednej konsolidovanej entity. 
 > Existujú dva aspekty, ktoré vám môžu pomôcť pri výbere hierarchie entít:
 >
 > - Vyberte entitu s najkompletnejšími a najspoľahlivejšími profilovými údajmi o vašich zákazníkoch ako primárnu entitu.
-> - Vyberte entitu, ktorá má niekoľko spoločných atribútov s inými entitami (napríklad meno, telefónne číslo alebo e-mailovú adresu), ako primárnu entitu.
+> - Vyberte entitu, ktorá má niekoľko spoločných atribútov s inými entitami (napríklad meno, telefónne číslo alebo e-mailová adresa) ako primárnu entitu.
 
-1. Prejdite do ponuky **Údaje** > **Zjednotiť** > **Spárovať** a vyberte **Nastaviť poradie** na začatie fázy spárovania.
-1. Vyberte **Objednávka entity**. Napríklad vyberte **Elektronický obchod:Kontakty elektronického obchodu** ako primárny subjekt a **LoyaltyScheme:loyCustomers** ako druhý subjekt. 
-1. Ak chcete, aby každý záznam v entite bol jedinečným zákazníkom a priradený ku každej nasledujúcej entite, vyberte **Zahrňte všetky**.
-1. Vyberte položku **Hotovo**. 
-
-Po zadaní poradia zhody sa definované dvojice zhody zobrazia v **Podrobnosti o zhodných záznamoch** oddiel na **Údaje** > **Zjednotiť** > **Zápas**. Kľúčové metriky sú prázdne, kým sa proces zhody nedokončí.
-
-:::image type="content" source="media/match-page.png" alt-text="Snímka obrazovky stránky Priradenie v oblasti Zjednotiť procesu zjednotenia údajov.":::
-  
-Primárna entita *eCommerce:eCommerceContacts* sa porovnáva s ďalšou entitou *LoyaltyScheme:loyCustomers*. Ak máte viac ako dve entity, množina údajov, ktorá je výsledkom prvého kroku zhody, sa zhoduje s nasledujúcou entitou.
+Po zadaní poradia zhody uvidíte definované páry zhody v časti **Podrobnosti o zhodných záznamoch** v časti **Údaje** > **Zjednotiť** > **Priradiť**. Kľúčové metriky budú prázdne, kým sa proces párovania nedokončí.
 
 ## <a name="define-rules-for-match-pairs"></a>Definujte pravidlá pre dvojice párov
 
@@ -58,7 +55,7 @@ Varovanie **Vyžadujú sa pravidlá** vedľa názvu entity naznačuje, že pre p
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Snímok obrazovky sekcie Podrobnosti o zhodnom zázname s ovládacím prvkom na pridanie zvýraznených pravidiel.":::
 
-1. Vyberte **Pridať pravidlo** pod subjektom v **Podrobnosti o zhodných záznamoch** sekciu na definovanie pravidiel zápasu.
+1. Vyberte **Pridať pravidlá** pod entitou v časti **Podrobnosti o zhodných záznamoch** na definovanie pravidiel zhody.
 
 1. V table **Vytvoriť pravidlo** nakonfigurujte podmienky pravidla.
 
@@ -69,15 +66,15 @@ Varovanie **Vyžadujú sa pravidlá** vedľa názvu entity naznačuje, že pre p
    - **Entita/pole (druhý riadok)**: Vyberte atribút, ktorý sa týka atribútu entity uvedenej v prvom riadku.
 
    - **Normalizovať**: Vyberte si z nasledujúcich možností normalizácie pre vybrané atribúty. 
-     - Číslice: Konvertuje ďalšie číselné systémy, napríklad rímske, na arabské číslice. *VIII* sa stane *8*.
+     - Medzery: Odstráni všetky medzery. *Ahoj svet* sa stáva *HelloWorld*.
      - Symboly: Odstráni všetky symboly a špeciálne znaky. *Head&Shoulder* sa stáva *HeadShoulder*.
      - Text na malé písmená: Konvertuje všetky znaky na malé písmená. *VŠETKY PÍSMENÁ VEĽKÉ a Nadpis* sa stáva *všetky písmená veľké a nadpis*.
-     - Typ (telefón, meno, adresa, organizácia): Štandardizuje mená, tituly, telefónne čísla, adresy atď. 
      - Unicode na ASCII: Konvertuje notáciu Unicode na znaky ASCII. */u00B2* sa stáva *2*.
-     - Medzery: Odstráni všetky medzery. *Ahoj svet* sa stáva *HelloWorld*.
+     - Číslice: Konvertuje ďalšie číselné systémy, napríklad rímske, na arabské číslice. *VIII* sa stane *8*.
+     - Sémantické typy: Štandardizuje mená, tituly, telefónne čísla, adresy atď. 
 
    - **Presnosť**: Nastavte úroveň presnosti, ktorá sa má použiť pre túto podmienku. 
-     - **Základné**: Vyber z možností *Nízka*, *Stredná*, *Vysoká* a *Presná*. Vyberte **Presne** aby sa zhodovali iba záznamy, ktoré sa na 100 percent zhodujú. Vyberte jednu z ďalších úrovní, aby sa zosúladili záznamy, ktoré nie sú na 100 percent identické.
+     - **Základné**: Vyber z možností *Nízka*, *Stredná*, *Vysoká* a *Presná*. Vyberte **presná**, aby sa zosúladili len záznamy, ktoré zodpovedajú na 100 percent. Vyberte jednu z ďalších úrovní, aby sa zosúladili záznamy, ktoré nie sú na 100 percent identické.
      - **Vlastné**: Nastavte percento, ktorému sa musia záznamy zhodovať. Systém bude porovnávať iba záznamy prekračujúce tento limit.
 
 1. Zadajte **Názov** pre položku pravidla.
@@ -100,7 +97,7 @@ Ak chcete priradiť entity, iba ak atribúty spĺňajú viac podmienok, pridajte
 
 ### <a name="add-rules-to-a-match-pair"></a>Pridajte pravidlá k páru
 
-Pravidlá spárovania predstavujú súbory podmienok. Ak chcete priradiť entity podľa podmienok na základe viacerých atribútov, pridajte ďalšie pravidlá.
+Pravidlá spárovania predstavujú súbory podmienok. Na spárovanie entít podľa podmienok na základe viacerých atribútov, priraďte ďalšie pravidlá
 
 1.  Prejdite do časti **Údaje** > **Zjednotiť** > **Priradiť** a vyberte **Pridať pravidlo** pri entite, ku ktorej chcete pridať podmienky.
 
@@ -111,7 +108,7 @@ Pravidlá spárovania predstavujú súbory podmienok. Ak chcete priradiť entity
 
 ### <a name="change-the-entity-order-in-match-rules"></a>Zmeňte poradie entít v pravidlách zhody
 
-Môžete zmeniť poradie entít pre pravidlá zhody, aby ste zmenili poradie, v ktorom sú spracované. Pravidlá, ktoré sú v rozpore so zmeneným poradím, budú odstránené. Odstránené pravidlá musíte znova vytvoriť v aktualizovanej konfigurácii.
+Môžete zmeniť poradie entít pre pravidlá zhody, aby ste zmenili poradie, v akom sú spracované. Pravidlá, ktoré sú v rozpore so zmeneným poradím, budú odstránené. Odstránené pravidlá musíte znova vytvoriť v aktualizovanej konfigurácii.
 
 1. Prejdite do ponuky **Údaje** > **Zjednotiť** > **Spárovanie** a stlačte možnosť **Upraviť**.
 
@@ -125,7 +122,7 @@ Môžete zmeniť poradie entít pre pravidlá zhody, aby ste zmenili poradie, v 
 
 Okrem [pravidlá zhody medzi entitami](#define-rules-for-match-pairs), môžete tiež určiť pravidlá deduplikácie. *Deduplikácia* je ďalší proces pri párovaní záznamov. Identifikuje duplicitné záznamy a zlúčte ich do jedného záznamu. Zdrojové záznamy sa prepoja so zlúčeným záznamom s alternatívnymi ID.
 
-Deduplikované záznamy sa používajú v procese porovnávania medzi entitami. Deduplikácia prebieha na jednotlivých entitách a možno ju nakonfigurovať pre každú entitu používanú v pároch zhody.
+Deduplikované záznamy m sa potom použijú v procese priraďovania medzi entitami. Deduplikácia sa deje na jednotlivých entitách a je možné ju nakonfigurovať pre každú entitu použitú v spárovaní.
 
 Zadávanie pravidiel deduplikácie nie je povinné. Ak nie sú nakonfigurované žiadne takéto pravidlá, použijú sa systémovo definované pravidlá. Kombinujú všetky záznamy do jedného záznamu pred odovzdaním údajov entity do porovnávania medzi entitami na zvýšenie výkonu.
 
@@ -133,21 +130,17 @@ Zadávanie pravidiel deduplikácie nie je povinné. Ak nie sú nakonfigurované 
 
 1. Prejdite na **Údaje** > **Zjednotenie** > **Spárovanie**.
 
-1. V **Podrobnosti o deduplikovaných záznamoch** sekciu, vyberte **Nastaviť entity**. Ak sú pravidlá deduplikácie už vytvorené, vyberte možnosť **Upraviť**.
+1. V sekcii **Zlúčené duplikáty** vyberte položku **Nastaviť entity**. Ak sú pravidlá deduplikácie už vytvorené, vyberte možnosť **Upraviť**.
 
 1. V table **Predvoľby zlúčenia** vyberte entity, na ktoré chcete použiť deduplikáciu.
 
-   1. Uveďte, ako sa majú kombinovať duplicitné záznamy, a vyberte jednu z troch možností zlúčenia:
-      - **Najviac vyplnené**: Identifikuje záznam s najviac vyplnenými poľami atribútov ako víťazný záznam. Toto je predvolená možnosť zlučovania.
-      - **Najnovšie**: Identifikuje víťazný záznam na základe najväčšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
-      - **Najstaršie**: Identifikuje víťazný záznam na základe najmenšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
-
-   1. Voliteľne, ak chcete definovať pravidlá deduplikácie pre jednotlivé atribúty entity, vyberte **Pokročilé**. Môžete sa napríklad rozhodnúť ponechať najnovší e-mail A najkompletnejšiu adresu z rôznych záznamov. Rozbaľte entitu, aby ste videli všetky jej atribúty a definujte, ktorá možnosť sa má použiť pre jednotlivé atribúty. Ak vyberiete možnosť založenú na aktuálnosti, musíte tiež zadať pole dátumu a času, ktoré definuje aktuálnosť. 
+1. Uveďte, ako sa majú kombinovať duplicitné záznamy, a vyberte jednu z troch možností zlúčenia:
+   - **Najviac vyplnené**: Identifikuje záznam s najviac vyplnenými poľami atribútov ako víťazný záznam. Toto je predvolená možnosť zlučovania.
+   - **Najnovšie**: Identifikuje víťazný záznam na základe najväčšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
+   - **Najstaršie**: Identifikuje víťazný záznam na základe najmenšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
  
-      > [!div class="mx-imgBorder"]
-      > ![Krok 1 pri pravidlách deduplikácie.](media/match-selfconflation.png "Krok 1 pri pravidlách deduplikácie")
-
-   1. Vyberte **hotový** na použitie vašich preferencií zlúčenia na deduplikáciu.
+   > [!div class="mx-imgBorder"]
+   > ![Krok 1 pri pravidlách deduplikácie.](media/match-selfconflation.png "Krok 1 pri pravidlách deduplikácie")
  
 1. Po výbere entít a nastavení predvoľby zlúčenia vyberte položku **Pridať pravidlo** a definujte pravidlá deduplikácie na úrovni entity.
    - Možnosť **Vybrať pole** vypíše všetky dostupné polia od tejto entity. Vyberte pole, v ktorom chcete skontrolovať duplikáty. Vyberte polia, ktoré sú pravdepodobne jedinečné pre každého zákazníka. Napríklad e-mailová adresa alebo kombinácia mena, mesta a telefónneho čísla.
@@ -165,7 +158,7 @@ Zadávanie pravidiel deduplikácie nie je povinné. Ak nie sú nakonfigurované 
 
 1. Všetky definované vlastné pravidlá zhody prepíšu pravidlá deduplikácie. Ak pravidlo deduplikácie identifikuje priradené záznamy a ak je nastavené vlastné pravidlo priraďovania, ktoré sa nikdy nebude zhodovať s týmito záznamami, potom sa tieto dva záznamy nezhodujú.
 
-1. Po [spustenie procesu zápasu](#run-the-match-process), uvidíte štatistiky deduplikácie v dlaždiciach kľúčových metrík.
+1. Po [spustení procesu priraďovania](#run-the-match-process) sa zobrazia štatistiky deduplikácie v hlavných dlaždiciach metrík.
 
 ### <a name="deduplication-output-as-an-entity"></a>Výstup deduplikácie ako entita
 
@@ -187,7 +180,10 @@ Prejdite do časti **Údaje** > **Zjednotiť** > **Spárovať** a vyberte **Spus
 
 Výsledok úspešného spustenia, entita zjednoteného profilu zákazníka, nájdete na stránke **Entity**. Vaša zjednotená entita zákazníka sa nazývala **Zákazníci** v časti **Profily**. Prvé úspešné spustenie priradenia vytvára zjednotenú entitu *Zákazník*. Všetky nasledujúce spustenia zhôd túto entitu rozširujú.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Po spustení procesu nájdenia zhody vyberaním stavu procesu otvoríte tablu **Podrobnosti úlohy**. Ponúka prehľad o čase a dátume posledného spracovania a všetkých chybách a varovaniach spojených s touto úlohou. Označením položky **Zobraziť podrobnosti** môžete zistiť, ktoré entity sa zúčastnili na procese zhody, ktoré pravidlá sa na ne vzťahovali a či boli aktualizácie úspešne publikované.  
+> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Vnorte sa do tejto cesty, aby ste získali prístup k podrobnostiam procesu z odkazu na stav úlohy.":::
 
 ## <a name="review-and-validate-your-matches"></a>Kontrola a potvrdenie zosúladených výsledkov
 
@@ -229,42 +225,19 @@ Väčšinu parametrov zhody môžete prekonfigurovať a doladiť.
 
 - **Odstráňte pravidlo** stlačením symbolu **Odstrániť**.
 
-## <a name="advanced-options"></a>Rozšírené možnosti
+## <a name="specify-custom-match-conditions"></a>Zadajte vlastné podmienky spárovania
 
-### <a name="add-exceptions-to-a-rule"></a>Pridajte do pravidla výnimky
-
-Vo väčšine prípadov zhoda entity vedie k jedinečným užívateľským profilom s konsolidovanými údajmi. Ak chcete dynamicky riešiť zriedkavé prípady falošne pozitívnych a falošne negatívnych výsledkov, môžete definovať výnimky pre pravidlo zhody. Výnimky sa uplatňujú po spracovaní pravidiel zhody a vyhýbajú sa zhodovaniu všetkých záznamov, ktoré spĺňajú kritériá výnimky.
-
-Napríklad, ak vaše pravidlo zhody kombinuje priezvisko, mesto a dátum narodenia, systém identifikuje dvojčatá s rovnakým priezvisko, ktoré žijú v rovnakom meste ako rovnaký profil. Môžete zadať výnimku, ktorá sa nezhoduje s profilmi, ak krstné meno v entitách, ktoré kombinujete, nie sú rovnaké.
-
-1. Prejdite do časti **Údaje** > **Zjednotiť** > **Priradiť** a vyberte **Upraviť** pri pravidle, ku ktorému chcete pridať podmienky.
-
-1. V **Upraviť pravidlo** panel, vyberte **Pridať výnimku**.
-
-1. Zadajte kritériá výnimky. 
-
-1. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
-
-### <a name="specify-custom-match-conditions"></a>Zadajte vlastné podmienky spárovania
-
-Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozícii sú štyri možnosti: 
-
-|Možnosť  |Description |Príklad  |
-|---------|---------|---------|
-|Vždy sa zhodovať     | Definuje hodnoty, ktoré sa vždy zhodujú.         |  Vždy sa zhodujú *Mike* a *MikeR*.       |
-|Nikdy sa nezhodovať     | Definuje hodnoty, ktoré sa nikdy nezhodujú.        | Nikdy sa nezhodujte *John* a *Jonathan*.        |
-|Vlastné obídenie     | Definuje hodnoty, ktoré by mal systém vždy ignorovať vo fáze zápasu. |  Ignorujte hodnoty *11111* a *Neznámy* počas zápasu.        |
-|Mapovanie aliasu    | Definovanie hodnôt, ktoré by mal systém považovať za rovnakú hodnotu.         | Zvážte *Joe* byť rovný *Jozefa*.        |
+Môžete určiť podmienky, aby sa niektoré záznamy zosúladili vždy alebo nikdy. Tieto pravidlá je možné nahrať, aby prepísali štandardný proces zhody. Napríklad ak sú v našich záznamoch záznamy John Doe I a John Doe II, systém by ich mohol priradiť ako jednu osobu. Vlastné pravidlá zhody vám umožňujú určiť, že ich profily odkazujú na rôznych ľudí. 
 
 1. Prejdite do časti **Údaje** > **Zjednotiť** > **Spárovanie** a stlačte **Vlastná zhoda** v časti **Podrobnosti o zhodných záznamoch**.
 
-   :::image type="content" source="media/custom-match-create.png" alt-text="Snímok obrazovky sekcie pravidiel spárovania so zvýrazneným vlastným ovládacím prvkom spárovania.":::
+  :::image type="content" source="media/custom-match-create.png" alt-text="Snímok obrazovky sekcie pravidiel spárovania so zvýrazneným vlastným ovládacím prvkom spárovania.":::
 
-1. V **Vlastné** panel, prejdite na **Záznamy** tab.
+1. Ak nemáte nastavené žiadne vlastné pravidlá zhody, zobrazí sa nová tabla **Vlastná zhoda** s ďalšími podrobnosťami.
 
-1. Vyberte možnosť vlastnej zhody z **Vlastný typ** rozbaľovací zoznam a vyberte **Stiahnite si šablónu**. Pre každú možnosť zhody potrebujete samostatnú šablónu.
+1. Vyberte **Vyplniť šablónu**, ak chcete získať súbor šablóny, ktorý môže určovať, ktoré záznamy z ktorých entít sa majú vždy zosúladiť a ktoré sa nemajú zosúladiť nikdy. Budete musieť samostatne vyplniť záznamy „vždy zosúladiť“ a „nikdy nezosúladiť“ v dvoch rôznych súboroch.
 
-1. Otvorte stiahnutý súbor šablóny a vyplňte podrobnosti. Šablóna obsahuje polia na určenie hodnôt entity a primárneho kľúča entity, ktoré sa majú použiť pri vlastnom zosúlaďovaní. Napríklad ak chcete primárny kľúč *12345* od entity *Predaj*, aby sa vždy zhodoval s primárnym kľúčom *34567* od entity *Kontakt*, vyplňte šablónu:
+1. Šablóna obsahuje polia na určenie hodnôt entity a primárneho kľúča entity, ktoré sa majú použiť pri vlastnom zosúlaďovaní. Napríklad ak chcete primárny kľúč *12345* od entity *Predaj*, aby sa vždy zhodoval s primárnym kľúčom *34567* od entity *Kontakt*, vyplňte šablónu:
     - Entity1: Predaj
     - Entity1Key: 12345
     - Entity2: Kontakt
@@ -274,32 +247,26 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
    
    Ak chcete určiť vlastné párovanie pre deduplikáciu entity, zadajte rovnakú entitu pre Entitu1 aj Entitu2 a nastavte rôzne hodnoty primárneho kľúča.
 
-1. Po pridaní všetkých prepísaní uložte súbor šablóny.
+1. Po pridaní všetkých úprav, ktoré chcete použiť, uložte súbor šablóny.
 
-1. Prejdite na **Údaje** > **Zdroje údajov** a prijmite súbory šablón ako nové entity.
+1. Prejdite na **Údaje** > **Zdroje údajov** a prijmite súbory šablón ako nové entity. Po príprave ich môžete použiť na určenie konfigurácie zosúladenia.
 
-1. Po nahratí súborov a entít k dispozícii, vyberte znova možnosť **Vlastné zosúladenie**. Zobrazia sa možnosti na určenie entít, ktoré chcete zahrnúť. Z rozbaľovacej ponuky vyberte požadované entity a vyberte **hotový**.
+1. Po nahratí súborov a entít k dispozícii, vyberte znova možnosť **Vlastné zosúladenie**. Zobrazia sa možnosti na určenie entít, ktoré chcete zahrnúť. Z rozbaľovacej ponuky si vyberte požadované entity.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Snímka obrazovky dialógového okna na výber prepísania pre vlastný scenár zhody.":::
 
-1. Použitie vlastnej zhody závisí od možnosti zhody, ktorú chcete použiť. 
-
-   - Pre **Vždy sa zhodujú** alebo **Nikdy sa nezhodujte**, prejdite na ďalší krok.
-   - Pre **Vlastný bypass** alebo **Mapovanie aliasu**, vyberte **Upraviť** na existujúce pravidlo zhody alebo vytvorte nové pravidlo. V rozbaľovacej ponuke Normalizácie vyberte možnosť **Vlastný bypass** alebo **Mapovanie aliasu** možnosť a vyberte **hotový**.
+1. Vyberte entity, ktoré chcete použiť pre **Vždy zosúladiť** a **Nikdy nezosúladiť**, a vyberte **Hotovo**.
 
 1. Stlačte možnosť **Uložiť** na stránke **Spárovanie** použiť vlastnú konfiguráciu zhody.
 
 1. Stlačte možnosť **Spustiť** na stránke **Zhoda** na spustenie procesu spárovania. Ostatné zadané pravidlá zhody sú prepísané vlastnou konfiguráciou zhody.
 
-#### <a name="known-issues"></a>Známe problémy
+> [!TIP]
+> Prejdite do možnosti **Údaje** > **Entity** a skontrolujte entitu **ConflationMatchPair** na potvrdenie, že došlo k použitiu prepísaných zmien.
 
-- Samokonflácia neukazuje normalizované údaje v deduplikačných entitách. Normalizáciu však aplikuje interne počas deduplikácie. Je navrhnutý pre všetky normalizácie. 
-- Ak je nastavenie sémantického typu odstránené v **Mapa** fázy, keď pravidlo zhody používa mapovanie aliasu alebo vlastné obídenie, normalizácia sa nepoužije. Stáva sa to iba vtedy, ak po konfigurácii normalizácie v pravidle zhody vymažete sémantický typ, pretože sémantický typ bude neznámy.
+## <a name="next-step"></a>Nasledujúci krok
 
-
-## <a name="next-step"></a>Ďalší krok
-
-Po dokončení procesu zápasu pre aspoň jeden zápasový pár pokračujte na [**Zlúčiť**](merge-entities.md) krok.
+Po dokončení procesu zosúladenia pre aspoň jeden pár zosúladenia môžete vyriešiť možné rozpory vo svojich údajoch podľa témy [**Zosúladenie**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Doplnenie čiastkových údajov pomocou predikcií
 description: Použite predikcie na vyplnenie neúplných údajov o zákazníkoch.
-ms.date: 11/01/2021
+ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,34 +9,33 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732449"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692546"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Doplňte svoje čiastočné údaje o predpovede (zastarané)
+# <a name="complete-your-partial-data-with-predictions"></a>Doplňte svoje predbežné údaje o predikcie
 
-> [!IMPORTANT]
-> Táto funkcia bude **zastarané** ku dňu **5. novembra 2021**. Aktuálne implementácie budú fungovať až do odstránenia funkcie, ale pomocou pokynov nižšie nebudete môcť vytvárať nové integrácie.
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Predikcie vám umožňujú ľahko vytvárať predikované hodnoty, ktoré môžu zlepšiť vaše pochopenie zákazníka. Na stránke **Analýza** > **Predikcie** môžete vybrať **Moje predikcie** a zobraziť predikcie, ktoré ste nakonfigurovali v iných častiach štatistík o cieľovej skupine, a môžete ich ďalej prispôsobovať.
 
 > [!NOTE]
 > Túto funkciu nemôžete použiť, ak vaše prostredie používa úložisko Azure Data Lake Gen 2.
 >
-> Funkcia predikcii využíva automatizované prostriedky na vyhodnotenie údajov a predikcie na základe týchto údajov, a preto sa dá použiť ako metóda profilovania, pretože tento pojem je definovaný všeobecným nariadením o ochrane údajov („GDPR“). Použitie tejto funkcie zákazníkom na spracovanie údajov môže podliehať GDPR alebo iným zákonom alebo predpisom. Zodpovedáte za to, že vaše používanie Dynamics 365 Customer Insights, vrátane predpovedí, bude v súlade so všetkými platnými zákonmi a nariadeniami, vrátane zákonov týkajúcich sa súkromia, osobných údajov, biometrických údajov, ochrany údajov a dôvernosti komunikácie.
+> Funkcia predikcii využíva automatizované prostriedky na vyhodnotenie údajov a predikcie na základe týchto údajov, a preto sa dá použiť ako metóda profilovania, pretože tento pojem je definovaný všeobecným nariadením o ochrane údajov („GDPR“). Použitie tejto funkcie zákazníkom na spracovanie údajov môže podliehať GDPR alebo iným zákonom alebo predpisom. Ste zodpovední za zabezpečenie toho, že vaše používanie služby Dynamics 365 Customer Insights vrátane predikcií bude v súlade so všetkými platnými zákonmi a nariadeniami vrátane zákonov týkajúcich sa ochrany súkromia, osobných údajov, biometrických údajov, ochrany údajov a dôvernosti komunikácií.
 
 ## <a name="prerequisites"></a>Predpoklady
 
 Predtým ako bude vaša organizácia môcť používať funkciu predikcií, skontrolujte, či sú splnené nasledujúce predpoklady:
 
-1. Vaša organizácia má inštanciu [nastaviť v Microsoft Dataverse](/ai-builder/build-model#prerequisites) a je v rovnakej organizácii ako Customer Insights.
+1. Vaša organizácia má inštanciu [vytvorenú v časti Microsoft Dataverse](/ai-builder/build-model#prerequisites) a nachádza sa v rovnakej organizácii ako služba Customer Insights.
 
-2. Vaše prostredie štatistík publika je pripojené k vašej Dataverse inštancii.
+2. Prostredie vášho prehľadu cieľovej skupiny je prepojené s vašou inštanciou Dataverse.
 
-Ďalšie informácie nájdete v téme [Vytvorenie nového prostredia](create-environment.md).
+Keď [vytvárate nové prostredie](get-started-paid.md), nakonfigurujte ho v dialógovom okne **Vytvorenie prostredia** a vyberte možnosť **Pokročilé**. Ak ste už vytvorili prostredie, prejdite na jeho nastavenia a vyberte položku **Pokročilé**. V každom prípade v sekcii **Používať predikcie** zadajte adresu URL inštancie Dataverse, ku ktorej chcete pripojiť svoje prostredie.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Vytvorenie predikcie v entite Zákazník
 
@@ -61,8 +60,6 @@ Predtým ako bude vaša organizácia môcť používať funkciu predikcií, skon
    > ![Príklad, ktorý zobrazuje hodnoty mapovaných hodnôt polí do kategórií.](media/intelligence-categorymapping.png "Príklad, ktorý zobrazuje hodnoty mapovaných hodnôt polí do kategórií")
 
 8. Vyberte **Hotovo** a predikcia sa spracuje. Spracovanie bude nejaký čas trvať, v závislosti od veľkosti a zložitosti údajov. Výsledky budú k dispozícii v novej entite založenej na predikcii **Názve výstupnej entity**, ktorú ste vytvorili.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Vytvorenie predikcie pri vytváraní segmentu
 
@@ -142,7 +139,7 @@ Pri ďalšom spustení predikcie sa použije aktualizovaný model, ktorý ste vy
 
 ## <a name="troubleshooting"></a>Riešenie problémov
 
-Ak nemôžete dokončiť proces prílohy Dataverse kvôli chybe, môžete skúsiť dokončiť proces manuálne. V procese pripájania sa môžu vyskytnúť dva známe problémy:
+Ak nemôžete dokončiť proces pripojenia Dataverse kvôli chybe, môžete skúsiť dokončiť proces ručne. V procese pripájania sa môžu vyskytnúť dva známe problémy:
 
 - Nie je nainštalované riešenie doplnku Karta zákazníka.
     1. Vykonajte pokyny podľa pokynov [nainštalujte a nakonfigurujte riešenie](customer-card-add-in.md).

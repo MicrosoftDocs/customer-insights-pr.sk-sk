@@ -1,7 +1,7 @@
 ---
 title: Export údajov Customer Insights do Constant Contact
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Constant Contact.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619138"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124292"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Export segmentov do Constant Contact (verzia Preview)
 
@@ -28,10 +28,10 @@ Exportujte segmenty zjednotených profilov zákazníkov do Constant Contact a po
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Do služby Constant Contact môžete exportovať až 1 milión profilov zákazníkov.
+- Na jeden export do 1 miliónov profilov môžete exportovať až Constant Contact.
 - Exportovanie do Constant Contact je obmedzené na segmenty.
-- Export až 1 milióna profilov zákazníkov do služby Constant Contact môže trvať až 1 hodinu. 
-- Počet profilov zákazníkov, ktoré môžete exportovať do služby Constant Contact, závisí od vašej zmluvy so spoločnosťou Constant Contact a je obmedzený.
+- Exportovanie až 1 milión profilov do aplikácie Constant Contact môže trvať až 1 hodinu. 
+- Počet profilov, ktoré môžete exportovať do Constant Contact, závisí a je obmedzený na vašu zmluvu so spoločnosťou Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Nastavenie pripojenia do Constant Contact
 
@@ -47,7 +47,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do Constant Contact a po
 
 1. Stlačte možnosť **Pripojiť** na inicializáciu pripojenia k Constant Contact.
 
-1. Označte položku **Overiť cez Constant Contact** a poskytnite svoje poverenia správcu pre Constant Contact. 
+1. Stlačte možnosť **Overenie pomocou služby AdRoll** a zadajte svoje poverenia správcu pre Constant Contact. 
 
 1. Vyberte položku **Pridať samého seba ako používateľa exportu** a uveďte svoje poverenia pre Customer Insights.
 
@@ -65,7 +65,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Zadajte [**Identifikátor zoznamu Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Otvorte zoznam v zozname Constant Contact a vyhľadajte identifikátor zoznamu v adrese URL.
 
-1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Je potrebné exportovať segmenty do Constant Contact.
+1. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Je potrebné exportovať segmenty do Constant Contact.
 
 1. Prípadne môžete exportovať Krstné meno a Priezvisko ako dodatočné polia na vytvorenie viac prispôsobených e-mailov. Výberom položky **Pridať atribút** namapujete tieto polia.
 

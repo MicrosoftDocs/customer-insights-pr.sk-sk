@@ -1,6 +1,6 @@
 ---
 title: Žiadosti dotknutých osôb (DSR) podľa GDPR | Dokumentácia spoločnosti Microsoft
-description: Odpovedzte na žiadosti dotknutých osôb o Dynamics 365 Customer Insights funkciu štatistík publika.
+description: Odpovedajte na žiadosti dotknutých osôb pre funkciu prehľadov cieľových skupín v službe Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732699"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483706"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žiadosti o práva dotknutých osôb (DSR) podľa GDPR
 
@@ -24,7 +24,7 @@ Zaviazali sme sa pomôcť našim zákazníkom splniť ich požiadavky v zmysle s
 
 ## <a name="audience-insights"></a>Prehľady cieľových skupín
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Reakcia na žiadosti dotknutej osoby o vymazanie podľa GDPR o možnosť Dynamics 365 Customer Insights získať prehľad o publiku
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Odpovede na žiadosti dotknutých osôb o odstránenie podľa nariadenia GRPR pre funkciu prehľadov cieľových skupín v službe Dynamics 365 Customer Insights
 
 „Právo na vymazanie“ odstránením osobných údajov z údajov o zákazníkoch organizácie je kľúčovou ochranou podľa všeobecného nariadenia o ochrane údajov (GDPR). Odstránenie osobných údajov zahŕňa odstránenie všetkých osobných údajov a protokolov generovaných systémom, okrem informácií z denníkov auditu.
 
@@ -39,7 +39,7 @@ Prehľady cieľových skupín ponúkajú nasledujúce integrované rozhranie na 
 
 Správca Customer Insights môže podľa týchto krokov odstrániť zákaznícke údaje, ktoré boli odstránené v zdroji údajov:
 
-1. Prihláste sa do Dynamics 365 Customer Insights.
+1. Prihlásiť sa do Dynamics 365 Customer Insights.
 2. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zdroje údajov**
 3. Pre každý zdroj údajov v zozname, ktorý obsahuje odstránené údaje o zákazníkoch:
    1. Vyberte (...) a potom možnosť **Obnoviť**.
@@ -52,7 +52,7 @@ Správca Customer Insights môže podľa týchto krokov odstrániť zákaznícke
 
 Správca Customer Insights môže podľa týchto krokov odstrániť používateľské údaje Customer Insights:
 
-1. Prihláste sa do Dynamics 365 Customer Insights.
+1. Prihlásiť sa do Dynamics 365 Customer Insights.
 2. V prehľadoch cieľových skupín prejdite na **Správa** > **Povolenia**.
 3. Začiarknite políčka používateľa, ktorého chcete odstrániť.
 4. Vyberte možnosť **Odstrániť**.
@@ -79,14 +79,7 @@ Správca nájomníka môže exportovať údaje podľa týchto krokov:
 2. Potvrďte potvrdenie na exportovanie údajov pre požadovaného používateľa.
 3. Exportované údaje dostanete prostredníctvom e-mailovej adresy správcu nájomníka.
 
-## <a name="consent-management-preview"></a>Správa súhlasu (ukážka)
-
-Funkcia správy súhlasu nezhromažďuje údaje používateľov priamo. Importuje a spracováva iba údaje o súhlase, ktoré poskytujú používatelia v iných aplikáciách.
-
-Ak chcete odstrániť údaje o súhlase o konkrétnych používateľoch, odstráňte ich zo zdrojov údajov prijatých do funkcie správy súhlasu. Po obnovení zdroj údajov budú odstránené údaje vymazané aj v Centre súhlasu. Aplikácie, ktoré používajú entitu súhlasu, tiež odstránia údaje, ktoré boli odstránené zo zdroja po a [Obnoviť](audience-insights/system.md#refresh-processes). Odporúčame rýchlo obnoviť zdroje údajov po odpovedi na žiadosť dotknutej osoby, aby sa odstránili údaje používateľa zo všetkých ostatných procesov a aplikácií.
-
-
-## <a name="engagement-insights-preview"></a>Prehľady interakcií (Preview)
+## <a name="engagement-insights"></a>Prehľady interakcií
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Vymazanie a export údajov o udalosti obsahujúcich identifikovateľné informácie koncového používateľa
 

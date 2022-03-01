@@ -1,20 +1,20 @@
 ---
 title: Vzťahy medzi entitami a cestami entít
 description: Vytvárajte a spravujte vzťahy medzi entitami z viacerých zdrojov údajov.
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623188"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171183"
 ---
 # <a name="relationships-between-entities"></a>Vzťahy medzi entitami
 
@@ -68,20 +68,6 @@ Vzťah pozostáva zo *zdrojovej entity*, ktorá obsahuje cudzí kľúč a z *cie
 
 4. Výberom položky **Uložiť** vytvorte vlastný vzťah.
 
-## <a name="set-up-account-hierarchies"></a>Nastavenie hierarchií obchodných vzťahov
-
-Prostredia, ktoré sú nakonfigurované na používanie firemných obchodných vzťahov ako primárnej cieľovej skupiny môžu konfigurovať hierarchie obchodných vzťahov pre súvisiace obchodné podnikové vzťahy. Napríklad spoločnosť, ktorá má oddelené obchodné jednotky. 
-
-Organizácie vytvárajú hierarchie obchodných vzťahov, aby lepšie spravovali obchodné vzťahy a ich vzájomné vzťahy. Funkcia prehľadov cieľových skupín podporuje hierarchie obchodných vzťahov nadradený/podradený, ktoré už v prijatých údajoch o zákazníkoch existujú. Napríklad obchodné vzťahy z Dynamics 365 Sales. Tieto hierarchie je možné nakonfigurovať na stránke **Vzťahy** v prehľadoch publika na karte hierarchia obchodného vzťahu.
-
-1. Prejdite na **Údaje** > **Vzťahy**.
-1. Vyberte kartu **Hierarchia obchodných vzťahov**.
-1. Vyberte **Nová hierarchia obchodných vzťahov**. 
-1. Na table **Hierarchia obchodných vzťahov** zadajte názov hierarchie. Systém vytvorí názov pre výstupnú entitu. Môžete zmeniť názov entity názvu výstupu.
-1. Vyberte entitu, ktorá obsahuje hierarchiu vášho obchodného vzťahu. Obvykle je to v tej istej entite, ktorá obsahuje obchodné vzťahy.
-1. Vyberte položku **ID obchodného vzťahu** a **ID nadradeného obchodného vzťahu** z vybranej entity 
-1. Vyberte **Uložiť**, použite nastavenia a dokončite hierarchiu obchodného vzťahu.
-
 ## <a name="view-relationships"></a>Zobrazenie vzťahov
 
 Na stránke Vzťahy sú uvedené všetky vzťahy, ktoré boli vytvorené. Každý riadok predstavuje vzťah, ktorý obsahuje aj podrobnosti o zdrojovej entite, cieľovej entite a kardinalite. 
@@ -96,7 +82,7 @@ Táto stránka ponúka súbor možností pre existujúce a nové vzťahy:
 
 ### <a name="explore-the-relationship-visualizer"></a>Preskúmanie vizualizéra vzťahov
 
-Vizualizér vzťahov zobrazuje sieťový diagram existujúcich vzťahov medzi prepojenými entitami a ich kardinalitou. Vizualizuje aj postup vzťahu.
+Vizualizér vzťahov zobrazuje sieťový diagram existujúcich vzťahov medzi prepojenými entitami a ich kardinalitou.
 
 Ak chcete prispôsobiť zobrazenie, môžete zmeniť polohu políčok ich presunutím na plátno.
 
@@ -106,56 +92,6 @@ Dostupné možnosti:
 - **Exportovať ako obrázok**: Uložiť aktuálne zobrazenie ako obrazový súbor.
 - **Zmena na vodorovné/zvislé rozloženie**: Zmena zarovnania entít a vzťahov.
 - **Úprava**: Aktualizujte vlastnosti vlastných vzťahov na paneli úprav a uložte zmeny.
-
-## <a name="relationship-paths"></a>Cesty vyjadrujúce vzťah
-
-Cesta vyjadrujúca vzťah popisuje entity, ktoré sú prepojené so vzťahmi medzi zdrojovou entitou a cieľovou entitou. Používa sa pri vytváraní segmentu alebo miery, ktorá obsahuje iné entity ako entitu zjednoteného profilu, a existuje niekoľko možností, ako dosiahnuť entitu zjednoteného profilu. 
-
-Cesta vyjadrujúca vzťah informuje systém, cez ktorý vzťah má pristupovať k entite zjednoteného profilu. Rôzne postupy vzťahov môžu priniesť rôzne výsledky.
-
-Napríklad entita *eCommerce_eCommercePurchases* má s entitou jednotného profilu *Zákazník* nasledujúce vzťahy:
-
-- eCommerce_eCommercePurchases > Zákazník
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Zákazník
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Zákazník 
-
-Cesta vyjadrujúca vzťah určuje, ktoré entity môžete použiť pri vytváraní pravidiel pre miery alebo segmenty. Výber možnosti s najdlhším postupom vzťahu pravdepodobne prinesie menej výsledkov, pretože zodpovedajúce záznamy musia byť súčasťou všetkých entít. V tomto prípade musí mať zákazník zakúpený tovar prostredníctvom elektronického obchodu (eCommerce_eCommercePurchases) v mieste predaja (POS_posPurchases) a zúčastniť sa nášho vernostného programu (loyaltyScheme_loyCustomers). Pri výbere prvej možnosti by ste pravdepodobne získali viac výsledkov, pretože zákazníci musia existovať iba v jednej ďalšej entite.
-
-### <a name="direct-relationship"></a>Priamy vzťah
-
-Vzťah je klasifikovaný ako a **priamy vzťah** keď sa zdrojová entita týka cieľovej entity iba s jedným vzťahom.
-
-Ak sa napríklad entita aktivity s názvom *eCommerce_eCommercePurchases* pripája k cieľovej entite *eCommerce_eCommerceContacts* iba prostredníctvom *ContactId*, ide o priamy vzťah.
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="Zdrojová entita sa pripája priamo k cieľovej entite.":::
-
-#### <a name="multi-path-relationship"></a>Vzťah s viacerými postupmi
-
-**Vzťah s viacerými postupmi** je špeciálny typ priameho vzťahu, ktorý spája zdrojovú entitu s viac ako jednou cieľovou entitou.
-
-Ak sa napríklad entita aktivity s názvom *eCommerce_eCommercePurchases* týka dvoch cieľových entít, *eCommerce_eCommerceContacts* a *loyaltyScheme_loyCustomers*, ide o vzťah s viacerými postupmi.
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="Zdrojová entita sa viackrát prepojí priamo s viac ako jednou cieľovou entitou prostredníctvom viacskokového vzťahu.":::
-
-### <a name="indirect-relationship"></a>Nepriamy vzťah
-
-Vzťah je klasifikovaný ako **nepriamy vzťah**, keď sa zdrojová entita týka jednej alebo viacerých ďalších entít predtým, ako sa týka cieľovej entity.
-
-#### <a name="multi-hop-relationship"></a>Viacskokový vzťah
-
-*Viacskokový vzťah* je *nepriamy vzťah*, ktorý umožňuje pripojiť zdrojovú entitu k cieľovej entite prostredníctvom jednej alebo viacerých ďalších sprostredkovateľských entít.
-
-Ak sa napríklad entita aktivity s názvom *eCommerce_eCommercePurchasesWest* pripája k sprostretkovateľskej entite s názvom *eCommerce_eCommercePurchasesEast* a potom sa pripojí k cieľovej entite s názvom *eCommerce_eCommerceContacts*, ide o viacskokový vzťah.
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="Zdrojová entita sa pripája priamo k cieľovej entite so sprostretkovateľskou entitou.":::
-
-### <a name="multi-hop-multi-path-relationship"></a>Viacskokový vzťah, vzťah s viacerými postupmi
-
-Viacskokový vzťah a vzťah s viacerými postupmi je možné použiť spoločne na vytvorenie **viacskokového vzťahu, vzťahu s viacerými postupmi**. Tento špeciálny typ kombinuje funkcie **viacskokového vzťahu** a **vzťahu s viacerými postupmi**. Umožňuje pripojiť sa k viac ako jednej cieľovej entite pri použití sprostredkovateľských entít.
-
-Ak sa napríklad entita aktivity s názvom *eCommerce_eCommercePurchasesWest* pripája k sprostretkovateľskej entite s názvom *eCommerce_eCommercePurchasesEast* a potom sa pripojí k dvom cieľovým entitám *eCommerce_eCommerceContacts* a *loyaltyScheme_loyCustomers*, ide o viacskokový vzťah, vzťah s viacerými postupmi.
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Zdrojová entita sa pripája priamo k jednej cieľovej entite a pripája sa k inej cieľovej entite prostredníctvom sprostredkovateľskej entity.":::
 
 ## <a name="manage-existing-relationships"></a>Spravovanie existujúcich vzťahov 
 
@@ -169,6 +105,6 @@ Vyberte vzťah a jednu z nasledujúcich možností:
 
 ## <a name="next-step"></a>Nasledujúci krok
 
-Systémové a vlastné vzťahy sa používajú na [vytváranie segmentov](segments.md) a [opatrení](measures.md) na základe viacerých zdrojov údajov, ktoré už nie sú vypnuté.
+Systémové a vlastné vzťahy sa používajú na [vytváranie segmentov](segments.md) založených na viacerých zdrojoch údajov, ktoré už nie sú v silách.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
