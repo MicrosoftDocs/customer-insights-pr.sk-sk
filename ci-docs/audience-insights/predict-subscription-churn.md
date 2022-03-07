@@ -3,20 +3,19 @@ title: Zrušenie odberu predikcia (obsahuje video)
 description: Predikuje, či hrozí riziko, že zákazník prestane používať predplatené produkty alebo služby vašej spoločnosti.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967720"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354716"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Predikcia rizika straty predplatného (ukážka)
+# <a name="subscription-churn-prediction"></a>Predikcia straty predplatného
 
 Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, že zákazník prestane používať predplatené produkty alebo služby vašej spoločnosti. Môžete vytvoriť novú predikciu rizika straty predplatného na stránke **Inteligencia** > **Predikcie**. Vyberte **Moje predikcie**, aby ste videli ďalšie predikcie, ktoré ste vytvorili.
 
@@ -63,7 +62,7 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
 ## <a name="create-a-subscription-churn-prediction"></a>Vytvorenie predikcia rizika straty predplatného
 
 1. V prehľadoch cieľových skupín prejdite na **Analýza** > **Predikcie**.
-1. Vyberte dlaždicu **Model rizika straty predplatného (ukážka)** a vyberte **Použiť tento model**.
+1. Vyberte **Model vracania predplatného** dlaždice a vyberte **Použite tento model**.
    > [!div class="mx-imgBorder"]
    > ![Dlaždica modelu rizika zrusenia predplatného zákazníkmi s tlačidlom Použiť tento model.](media/subscription-churn-usethismodel.PNG "Dlaždica modelu rizika straty predplatného s tlačidlom Použiť tento model")
 

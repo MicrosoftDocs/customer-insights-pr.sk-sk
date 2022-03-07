@@ -1,24 +1,26 @@
 ---
-title: Prírastkové obnovenie pre zdroje údajov založené na doplnku Power Query
-description: Obnovenie nových a aktualizovaných údajov pre veľké zdroje údajov na základe Power Query.
+title: Prírastkové obnovenie pre Power Query zdrojov údajov
+description: Obnovte nové a aktualizované údaje pre veľké zdroje údajov založené na Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900304"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353724"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Prírastkové obnovenie pre zdroje údajov založené na Power Query
 
-Tento článok popisuje, ako nakonfigurovať prírastkové obnovenie pre zdroje údajov na základe Power Query.
+Tento článok popisuje, ako nakonfigurovať prírastkové obnovenie pre zdroje údajov založené na Power Query.
 
 Prírastkové obnovenie pre zdroje údajov poskytuje nasledujúce výhody:
 
@@ -28,9 +30,9 @@ Prírastkové obnovenie pre zdroje údajov poskytuje nasledujúce výhody:
 
 ## <a name="configure-incremental-refresh"></a>Konfigurácia prírastkového obnovenia
 
-Prehľady cieľových skupín umožňujú prírastkové obnovenie pre zdroje údajov importované prostredníctvom doplnku Power Query, ktoré podporujú prírastkové prijímanie. Napríklad databázy Azure SQL s poliami dátum a čas, ktoré označujú, kedy boli záznamy údajov naposledy aktualizované.
+Štatistiky publika umožňujú prírastkové obnovenie pre zdroje údajov importované prostredníctvom Power Query ktoré podporujú prírastkové požitie. Napríklad databázy Azure SQL s poliami dátum a čas, ktoré označujú, kedy boli záznamy údajov naposledy aktualizované.
 
-1. [Vytvorenie nového zdroja údajov na základe Power Query](connect-power-query.md).
+1. [Vytvorte nový zdroj údajov založený na Power Query](connect-power-query.md).
 
 1. Poskytnúť **názov** pre zdroj údajov.
 

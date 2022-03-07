@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645283"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353746"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Začnite funkciami prehľadov cieľovej skupiny v Dynamics 365 Customer Insights
 
@@ -37,7 +39,7 @@ Pri prvom prihlásení do prehľadov cieľových skupín môžete konfigurovať 
 
 Zjednotené profily sú základom na získanie prehľadov a vykonávanie akcií týkajúcich sa údajov. Dajte dokopy údaje z rôznych zdrojov a zjednocovanie údajov, aby ste nakombinovali zjednotené profily. Určte vzťahy medzi prijatými entitami a použite funkcie obohatenia, aby ste informácie pridali do profilov. 
 
-1. Prijímajte údaje vytváraním zdrojov údajov z viacerých možností. Vyberte si medzi[ konektormi Power Query](connect-power-query.md), a [ priečinkom Common Data Model](connect-common-data-model.md), alebo [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Prijímajte údaje vytváraním zdrojov údajov z viacerých možností. Vyberte si medzi [Power Query konektory](connect-power-query.md), a [Priečinok Common Data Model](connect-common-data-model.md), alebo [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Spustite [ proces zjednocovania údajov](data-unification.md) tak, že prejdete fázami [ mapovania](map-entities.md),[ zhody](match-entities.md) a[ zlúčenia](merge-entities.md).
 

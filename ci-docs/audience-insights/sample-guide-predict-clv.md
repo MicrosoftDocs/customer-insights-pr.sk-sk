@@ -3,18 +3,17 @@ title: Predikcie hodnoty životnosti zákazníka – vzorový sprievodca
 description: V tomto vzorovom sprievodcovi si môžete vyskúšať model predikcie hodnoty životnosti zákazníka.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306368"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354850"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Predikcie hodnoty životnosti zákazníka (CLV) – vzorový sprievodca
 
@@ -22,7 +21,7 @@ Táto príručka vám podrobne vysvetlí príklad predikcie hodnoty životnosti 
 
 ## <a name="scenario"></a>Scenár
 
-Contoso je spoločnosť, ktorá vyrába vysokokvalitnú kávu a kávovary. Výrobky predávajú prostredníctvom svojej webovej stránky Contoso Coffee. Spoločnosť chce porozumieť hodnote (výnosom), ktorú môžu jej zákazníci vygenerovať počas nasledujúcich 12 mesiacov. Znalosť očakávanej hodnoty ich zákazníkov počas nasledujúcich 12 mesiacoch im pomôže nasmerovať ich marketingové úsilie na vysoko hodnotných zákazníkov.
+Contoso je spoločnosť, ktorá vyrába vysokokvalitnú kávu a kávovary. Produkty predávajú prostredníctvom svojej webovej stránky Contoso Coffee. Spoločnosť chce porozumieť hodnote (výnosom), ktorú môžu jej zákazníci vygenerovať počas nasledujúcich 12 mesiacov. Znalosť očakávanej hodnoty ich zákazníkov počas nasledujúcich 12 mesiacoch im pomôže nasmerovať ich marketingové úsilie na vysoko hodnotných zákazníkov.
 
 ## <a name="prerequisites"></a>Predpoklady
 
@@ -31,7 +30,7 @@ Contoso je spoločnosť, ktorá vyrába vysokokvalitnú kávu a kávovary. Výro
 
 ## <a name="task-1---ingest-data"></a>Úloha 1 – Príjem údajov
 
-Prečítajte si články [o prijímaní údajov](data-sources.md) a [importe zdrojov údajov pomocou konektorov Power Query](connect-power-query.md). Nasledujúce informácie predpokladajú, že ste sa oboznámili s prijímaním údajov vo všeobecnosti.
+Prečítajte si články [o prijímaní údajov](data-sources.md) a [importovanie zdrojov údajov pomocou Power Query konektory](connect-power-query.md). Nasledujúce informácie predpokladajú, že ste sa oboznámili s prijímaním údajov vo všeobecnosti.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Príjem údajov o zákazníkoch z platformy eCommerce
 
@@ -164,7 +163,7 @@ Po prijatí údajov teraz začneme proces zjednocovania údajov, aby sme vytvori
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Úloha 3 – Konfigurácia predikcie hodnoty životnosti zákazníka
 
-Po zavedených zjednotených profiloch zákazníkov môžeme teraz spustiť predikciu hodnoty životnosti zákazníka. Podrobné kroky nájdete v časti [Predikcia hodnoty životnosti zákazníka (verzia Preview)](predict-customer-lifetime-value.md).
+Po zavedených zjednotených profiloch zákazníkov môžeme teraz spustiť predikciu hodnoty životnosti zákazníka. Podrobné kroky nájdete v časti [Doživotná hodnota zákazníka predikcia](predict-customer-lifetime-value.md).
 
 1. Prejdite na **Analýza**  > **Predikcie** a vyberte **Model hodnoty životnosti zákazníka**.
 

@@ -1,22 +1,21 @@
 ---
-title: Export údajov Customer Insights do Azure Synapse Analytics
-description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Azure Synapse Analytics.
-ms.date: 04/12/2021
+title: Export údajov z Customer Insights do Azure Synapse Analytics
+description: Zistite, ako nakonfigurovať pripojenie k Azure Synapse Analytics.
+ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
-ms.translationtype: HT
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977396"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231331"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportovanie údajov do Azure Synapse Analytics (verzia Preview)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportovať údaje do Azure Synapse Analytics (Náhľad)
 
 Azure Synapse je analytická služba, ktorá urýchľuje čas na získanie prehľadu o dátových skladoch a systémoch veľkých údajov. Údaje služby Customer Insights môžete prijímať a používať v aplikácii [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -49,9 +48,11 @@ V Azure:
 
 ### <a name="configure-a-connection"></a>Konfigurácia a pripojenie
 
+Na vytvorenie pripojenia je potrebný principál služby a používateľský účet v Customer Insights **Čitateľ** povolenia na *zdrojová skupina* kde sa nachádza pracovný priestor Synapse Analytics. Okrem toho potrebuje principál služby a používateľ v pracovnom priestore Synapse Analytics **Správca Synapse** povolenia. 
+
 1. Prejdite do časti **Správca** > **Pripojenia**.
 
-1. Stlačte možnosť **Pridať pripojenie** a stlačte **Azure Synapse Analytics**, prípadne stlačte možnosť **Nastaviť** na dlaždici **Azure Synapse Analytics** na konfiguráciu pripojenia.
+1. Vyberte **Pridať pripojenie** a vyberte si **Azure Synapse Analytics** alebo vyberte **Nastaviť** na **Azure Synapse Analytics** dlaždice na konfiguráciu pripojenia.
 
 1. Do poľa Zobrazovaný názov zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
 
@@ -63,23 +64,27 @@ V Azure:
 
 ### <a name="configure-an-export"></a>Nakonfigurujte export
 
-Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
+Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Na konfiguráciu exportu so zdieľaným pripojením potrebujete min **Prispievateľ** povolenia v Customer Insights. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
 
 1. Prejdite na **Údaje** > **Exporty**.
 
 1. Na vytvorenie nového exportu stlačte možnosť **Pridať export**.
 
-1. V poli **Pripojenie na export** vyberte pripojenie v časti **Azure Synapse Analytics**. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne [spojenia](connections.md) tohto typu.
+1. V **Pripojenie na export** vyberte spojenie z poľa **Azure Synapse Analytics** oddiele. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne [spojenia](connections.md) tohto typu.
 
 1. Poskytnite rozoznateľný **Zobrazovaný názov** pre váš export a **Názov databázy**.
 
 1. Vyberte entity, do ktorých chcete exportovať Azure Synapse Analytics.
+   > [!NOTE]
+   > Zdroje údajov založené na [priečinku Common Data Model](connect-common-data-model.md) nie sú podporované.
 
-1. Vyberte položku **Uložiť**.
+2. Vyberte položku **Uložiť**.
 
 Uloženie exportu nespustí export okamžite.
 
 Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand).
+
+Ak chcete dopytovať údaje, ktoré boli exportované do Synapse Analytics, potrebujete **Storage Blob Data Reader** prístup k cieľovému úložisku na pracovnom priestore exportov. 
 
 ### <a name="update-an-export"></a>Aktualizujte export
 

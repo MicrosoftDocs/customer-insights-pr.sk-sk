@@ -3,18 +3,20 @@ title: Prepojenia s inými službami zo služby Customer Insights.
 description: Zdieľajte údaje s inými službami.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304991"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354403"
 ---
 # <a name="connections-preview-overview"></a>Prehľad pripojení (ukážka)
 
@@ -47,6 +49,7 @@ Ak chcete pridať pripojenia, musíte mať [oprávnenia správcu](permissions.md
 1. V table **Nastaviť pripojenie** zadajte požadované podrobnosti. 
    1. **Zobrazovaný názov** a typ spojenia popisujú spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
    1. Presné polia závisia od toho, ku ktorej službe sa pripájate. V článku o cieľovej službe sa môžete dozvedieť viac podrobností o konkrétnom type pripojenia.
+   1. Ak [použijete svoj vlastný Key Vault](use-azure-key-vault.md) na uloženie tajomstiev, aktivujte **Použiť Key Vault** a vyberte tajomstvo zo zoznamu.
 
 1. Na vytvorenie pripojenia stlačte možnosť **Uložiť**.
 
@@ -93,3 +96,6 @@ Oddelené obohatenia a exporty sa stanú neaktívnymi. Znova ich aktivujete prid
 
 1. Na potvrdenie odstránenia vyberte možnosť **Odstrániť**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Nastavte si pripojenia pomocou tajomstiev, ktoré spravuje váš vlastný Key Vault
+
+Niektoré pripojenia vyžadujú tajomstvá, ako sú kľúče API alebo heslá. Niektoré pripojenia podporujú tajomstvá uložené vo vašom vlastnom Key Vault. Prečítajte si viac o podporovaných pripojeniach a o tom, ako ich nastaviť [vo svojom vlastnom Key Vault pre prehľady cieľových skupín](use-azure-key-vault.md).

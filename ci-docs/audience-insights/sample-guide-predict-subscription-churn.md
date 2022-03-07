@@ -3,26 +3,28 @@ title: Predikcia odchodu predplatiteľov – vzorový sprievodca
 description: V tomto vzorovom sprievodcovi môžete vyskúšať vopred pripravený model predikcie odchodu predplatiteľov.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306322"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355632"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Predikcia odchodu predplatiteľov (ukážka) – vzorový sprievodca
+# <a name="subscription-churn-prediction-sample-guide"></a>Predikcia odchodu predplatiteľov – vzorový sprievodca
 
 Prejdeme si podrobný príklad predikcie odchodov predplatiteľov pomocou nižšie uvedených údajov. 
 
 ## <a name="scenario"></a>Scenár
 
-Contoso je spoločnosť, ktorá vyrába vysoko kvalitnú kávu a kávovary, ktoré predávajú prostredníctvom svojej webovej stránky Contoso Coffee. Nedávno začali ponúkať pre svojich zákazníkov možnosť predplatného, aby mohli pravidelne dostávať kávu. Ich cieľom je pochopiť, ktorí zákazníci s predplatným môžu predplatné v najbližších mesiacoch zrušiť. Poznatok, ktorý z ich zákazníkov **pravdepodobne odíde**, im môže im pomôcť ušetriť marketingové úsilie zameraním na ich udržanie.
+Contoso je spoločnosť, ktorá vyrába vysokokvalitnú kávu a kávovary, ktoré predávajú prostredníctvom svojich webových stránok Contoso Coffee. Nedávno začali ponúkať pre svojich zákazníkov možnosť predplatného, aby mohli pravidelne dostávať kávu. Ich cieľom je pochopiť, ktorí zákazníci s predplatným môžu predplatné v najbližších mesiacoch zrušiť. Poznatok, ktorý z ich zákazníkov **pravdepodobne odíde**, im môže im pomôcť ušetriť marketingové úsilie zameraním na ich udržanie.
 
 ## <a name="prerequisites"></a>Predpoklady
 
@@ -31,7 +33,7 @@ Contoso je spoločnosť, ktorá vyrába vysoko kvalitnú kávu a kávovary, ktor
 
 ## <a name="task-1---ingest-data"></a>Úloha 1 – Príjem údajov
 
-Prečítajte si články [o príjme údajov](data-sources.md) a konkrétne o [importe zdrojov údajov pomocou konektorov Power Query](connect-power-query.md). Nasledujúce informácie predpokladajú, že ste sa oboznámili s prijímaním údajov vo všeobecnosti. 
+Prečítajte si články [o prijímaní údajov](data-sources.md) a [importovanie zdrojov údajov pomocou Power Query konektory](connect-power-query.md) konkrétne. Nasledujúce informácie predpokladajú, že ste sa oboznámili s prijímaním údajov vo všeobecnosti. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Príjem údajov o zákazníkoch z platformy eCommerce
 
@@ -168,7 +170,7 @@ Po prijatí údajov teraz začíname proces **Mapovanie, párovanie, zlúčenie*
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Úloha 3 – Konfigurácia predikcie odchodov predplatiteľov
 
-Po zavedení zjednotených profilov zákazníkov môžeme teraz spustiť predikciu odchodu predplatiteľov. Podrobné kroky nájdete v článku [Predikcia odchodu predplatiteľov (ukážka)](predict-subscription-churn.md). 
+Po zavedení zjednotených profilov zákazníkov môžeme teraz spustiť predikciu odchodu predplatiteľov. Podrobné kroky nájdete na [Zrušenie predplatného predikcia](predict-subscription-churn.md) článok. 
 
 1. Prejdite na **Analýza** > **Objavovať** a vyberte použitie **Model odchodu zákazníkov**.
 

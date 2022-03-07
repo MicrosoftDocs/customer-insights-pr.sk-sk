@@ -1,20 +1,23 @@
 ---
-title: Mapovanie entít na účely zjednotenia údajov
-description: Namapujte údaje na účely vytvorenia jednotných profilov zákazníkov.
-ms.date: 09/25/2020
-ms.service: customer-insights
+title: Mapovanie entít a atribútov na zjednotenie údajov
+description: Vyberte entity, atribúty, primárne kľúče a sémantické typy na mapovanie údajov do zjednoteného profilu zákazníka.
+ms.date: 10/18/2020
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+ms.topic: tutorial
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+searchScope:
+- ci-map
+- ci-match
+- customerInsights
+ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406927"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354977"
 ---
 # <a name="map-entities-and-attributes"></a>Mapovanie entít a atribútov
 
@@ -35,14 +38,14 @@ ms.locfileid: "4406927"
 3. Vyberte entity a atribúty, ktoré chcete použiť vo fázach *mapovania* a *zlúčenia*. Požadované atribúty môžete vybrať jednotlivo z entity alebo zahrnúť všetky atribúty z entity výberom začiarkavacieho políčka **Zahrnúť všetky polia** na úrovni entity. Odporúčame vybrať aspoň dve entity, ktoré majú ťažiť z procesu zjednotenia údajov.
 
    > [!div class="mx-imgBorder"]
-   > ![Príklad pridania entít](media/data-manager-configure-map-add-entities-example.png "Príklad pridania entít")
+   > ![Príklad pridania entít.](media/data-manager-configure-map-add-entities-example.png "Príklad pridania entít")
 
    V tomto príklade pridávame entity **eCommerceContacts** a **loyCustomers**. Výberom týchto entít môžete získať informácie o tom, ktorí z online zákazníkov obchodu sú členmi vernostného programu.
    
    Môžete vyhľadávať kľúčové slová vo všetkých atribútoch a entitách a vybrať požadované atribúty, ktoré chcete mapovať.
    
      > [!div class="mx-imgBorder"]
-   > ![Príklad vyhľadávacích polí](media/data-manager-configure-map-search-fields-example.png "Príklad vyhľadávacích polí")
+   > ![Príklad vyhľadávacích polí.](media/data-manager-configure-map-search-fields-example.png "Príklad vyhľadávacích polí")
 
 4. Svoje výbery potvrďte výberom položky **Použiť**.
 
@@ -55,7 +58,7 @@ Po výbere entít zobrazí stránka **Mapovať** vybrané entity na kontrolu. De
 - **Atribút sémantického typu**: Kategórie atribútov, napríklad e-mailová adresa alebo názov. Ak chcete používať modely umelej inteligencie pre inteligentnú predikciu sémantiky, ušetriť čas a zlepšiť presnosť, nastavte **Inteligentné mapovanie** na **ZAP.** Inteligentné mapovanie zdôrazňuje odporúčanie sémantiky založené na AI v poli **Typ**. Ak nastavíte na **VYP.**, uvidíte naše pravidelné odporúčania týkajúce sa mapovania. Z dostupného zoznamu možností môžete vybrať ľubovoľný sémantický typ a navrhovaný výber prepísať.
 
 > [!div class="mx-imgBorder"]
-> ![Typ atribútu a sémantické predikcia](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Typ atribútu a sémantická predikcia")
+> ![Typ atribútu a sémantické predikcia.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Typ atribútu a sémantická predikcia")
 
 Pridanie vlastného sémantického typu je tiež možné. Vyberte pole Typ pre atribút a zadajte názov vlastného sémantického typu. Takýmto spôsobom môžete tiež zmeniť typy atribútov, ktoré identifikoval systém.
 
@@ -64,7 +67,7 @@ Všetky atribúty, pre ktoré sa sémantický typ identifikoval automaticky, sú
 Atribúty, ktoré nie sú automaticky mapované na sémantický typ, sú zoskupené v sekcii **Definícia údajov v nemapovaných poliach**. Vyberte pole sémantického typu pre nemapované atribúty alebo zadajte vlastný názov typu atribútu.
 
 > [!div class="mx-imgBorder"]
-> ![Primárny kľúč a typ atribútu](media/data-manager-configure-map-add-attributes.png "Primárny kľúč a typ atribútu")
+> ![Primárny kľúč a typ atribútu.](media/data-manager-configure-map-add-attributes.png "Primárny kľúč a typ atribútu")
 
 > [!NOTE]
 > Jedno pole by sa malo namapovať na sémantický typ Person.FullName, aby sa vyplnilo meno zákazníka na karte zákazníka. V opačnom prípade sa zákaznícke karty zobrazia bez mena. 
@@ -76,7 +79,7 @@ Atribúty, ktoré nie sú automaticky mapované na sémantický typ, sú zoskupe
 2. Na table **Upraviť polia** môžete pridať alebo odstrániť atribúty a entity. Pomocou vyhľadávania alebo posúvania nájdite a vyberte atribúty a entity, ktoré vás zaujímajú. Atribút alebo entitu nemôžete odstrániť, ak už boli spárované.
 
    > [!div class="mx-imgBorder"]
-   > ![Pridanie alebo odstránenie atribútov](media/configure-data-map-edit.png "Pridanie alebo odstránenie atribútov")
+   > ![Pridanie alebo odstránenie atribútov.](media/configure-data-map-edit.png "Pridanie alebo odstránenie atribútov")
 
 3. Vyberte **Použiť**.
 
@@ -94,11 +97,14 @@ Pokračujte v krokoch zjednotenia a zaistite, aby bol atribút, ktorý obsahuje 
 
 Pre organizácie (ukážka) by mal byť typ atribútu mapovaný k položke „Organization.Name“.
 > [!div class="mx-imgBorder"]
-> ![Primárny kľúč a typ atribútu B2B](media/configure-data-map-edit-b2b.png "Primárny kľúč a typ atribútu B2B")
+> ![Primárny kľúč a typ atribútu „firma a firma“.](media/configure-data-map-edit-b2b.png "Primárny kľúč a typ atribútu „firma a firma“")
 
-## <a name="next-step"></a>Nasledujúci krok
+## <a name="next-step"></a>Ďalší krok
 
 Ako súčasť procesu zjednotenia údajov prejdite na stránku **Zosúladenie**. Navštívte [**Zosúladenie**](match-entities.md), ak sa chcete dozvedieť o tejto fáze.
 
 > [!TIP]
 > Pozrite si nasledujúce video: [Začíname: Vytvorenie zjednoteného profilu zákazníka](https://youtu.be/oBfGEhucAxs).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,68 +1,100 @@
 ---
-title: Export údajov služby Customer Insights do Správcu reklám Facebook
-description: Prečítajte si, ako nakonfigurovať pripojenie s Správcovi reklám Facebook.
-ms.date: 06/05/2020
-ms.reviewer: philk
-ms.service: customer-insights
+title: Exportujte údaje Customer Insights do Facebook Správca reklám (obsahuje video)
+description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Facebook Ads Manager.
+ms.date: 04/15/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
-ms.translationtype: HT
+ms.openlocfilehash: 781cf10e1bb5ddaf82d4a17c7a77e0c43c41a1c2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643702"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226514"
 ---
-# <a name="connector-for-facebook-ads-manager-preview"></a>Konektor pre Správcu reklám Facebook (ukážka)
+# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Export zoznamu segmentov do Facebook Ads Manager (verzia Preview)
 
 Export segmentov zjednotených zákazníckych profilov do Správcu reklám Facebook, na ktorom chcete vytvárať kampane na Facebook a Instagram.
 
-## <a name="prerequisites"></a>Predpoklady
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
-- Musíte mať [**Reklamný účet Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), ktorý zahŕňa [**Firemný účet Facebook**](https://business.facebook.com/) .
-- Na počítači musíte byť správcom [**Reklamného účtu Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+## <a name="prerequisites-for-connection"></a>Predpoklad na pripojenie
 
-## <a name="connect-to-facebook-ads-manager"></a>Pripojenie k Správcovi reklám Facebook
+- Musíte mať [**reklamné konto Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), ktoré zahŕňa [**obchodné konto Facebook**](https://business.facebook.com/).
+- Musíte byť správca [**reklamného konta Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
-1. Prejdite do ponuky **Správca** > **Ciele exportu**.
+## <a name="known-limitations"></a>Známe obmedzenia
 
-1. Pod Správca reklám **Facebook** vyberte **Nastavenie**.
+- Až 10 miliónov profilov zákazníkov na jeden export do Správcu reklám Facebook.
+- Export do Facebook Ads Manager je obmedzený na segmenty.
+- Vytvárajte alebo aktualizujte iba vlastné cieľové skupiny v službe Facebook typu *zoznam zákazníkov*.
+- Export segmentov s celkovo 10 miliónmi profilov zákazníkov môže trvať až 90 minút.
 
-1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa exportu.
+## <a name="set-up-connection-to-facebook-ads-manager"></a>Nastavenie pripojenia do Facebook Ads Manager
 
-1. Vyberte **Pokračovať s Facebook** a prihláste sa do svojho reklamného účtu Facebook.
+Predtým, ako budú môcť používatelia vytvoriť export, musí správca nakonfigurovať pripojenie k službe a umožniť prispievateľom používať pripojenie.
 
-1. Povoľte povolenie **ads_management** po vykonaní overenia cez Facebook.
+1. Prejdite do časti **Správca** > **Pripojenia**.
 
-1. Zvoľte **Reklamný účet Facebook**, s ktorým chcete pracovať.
+1. Stlačte možnosť **Pridať pripojenie** a stlačením možnosti **Facebook Google Ads** nakonfigurujte pripojenie.
 
-1. Vyberte ikonu **Existujúce vlastné publikum** z rozbaľovacieho zoznamu alebo vytvorte a **Nové vlastné publikum**. Viac informácií nájdete v časti [**Publiká v Správcovi reklám Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
 
-1. Vyberte **Súhlasím** na potvrdenie **Ochrany osobných údajov a dodržiavanie súladu s nariadeniami**.
+1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Vyberte **Ďalej** a nakonfigurujte export.
+1. Overenie pomocou služby Facebook Ads: 
 
-## <a name="configure-the-connector"></a>Nakonfigurujte konektor
+   1. Výberom možnosti **Pokračovať cez Facebook** sa prihlásite do svojho reklamného konta Facebook.
 
-1. V časti **Vyberte pole identifikátora kľúča** vyberte **E-mail**, **Meno a adresa** alebo **Telefón** na odoslanie so Správcu reklám Facebook.
+   1. Povoľte povolenie **ads_management** po vykonaní overenia cez Facebook.
+
+   1. Zvoľte **Reklamný účet Facebook**, s ktorým chcete pracovať.
+
+   1. Vyberte si z rozbaľovacieho zoznamu možnosť **Existujúca vlastná cieľová skupina** alebo si vytvorte **novú vlastnú cieľovú skupinu**. Viac informácií nájdete v časti [**Publiká v Správcovi reklám Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+      > [!NOTE]
+      > Vlastné publiká môžete vytvárať alebo aktualizovať iba v službe Facebook typu *zoznam zákazníkov* s týmto exportom. V niektorých prípadoch sa v rozbaľovacom zozname zobrazia vlastné cieľové skupiny rôznych typov. Výber iného typu *zoznamu zákazníkov* bude mať za následok zlyhanie exportu. 
+
+1. Prečítajte si časť **Ochrana osobných údajov a ich dodržiavanie** a stlačte možnosť **Súhlasím**.
+
+1. Stlačte možnosť **Uložiť** a dokončite pripojenie.
+
+## <a name="configure-an-export"></a>Nakonfigurujte export
+
+Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
+
+1. Prejdite na **Údaje** > **Exporty**.
+
+1. Na vytvorenie nového exportu stlačte možnosť **Pridať cieľ**. 
+
+1. V poli **Pripojenie na export** vyberte pripojenie v časti **Facebook Ads Manager**. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne pripojenia tohto typu.
+
+1. V časti **Vyberte pole identifikátora kľúča** vyberte **E-mail**, **Meno a adresa** alebo **Telefón** na odoslanie so Správcu reklám Facebook. 
+
+1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia.
 
 1. Priraďte zodpovedajúce atribúty z vašej zjednotenej entity zákazníka na vybratý identifikátor kľúča.
-   > [TIP] Najlepšie šance na zabezpečenie súladu nastanú, ak vyberiete ako kľúčový identifikátor **E-mail**. Pridanie ďalších identifikátorov môže zlepšiť zosúladenie.
+   > [!TIP]
+   > Najlepšie šance na zabezpečenie súladu nastanú, ak vyberiete ako kľúčový identifikátor **E-mail**. Pridanie ďalších identifikátorov môže zlepšiť zosúladenie.
 
-1. Vyberte **Pridať atribút** na mapovanie ďalších atribútov, ktoré sa majú odoslať do Správcu reklám Facebook. Atribúty zo Správcu reklám Facebook mapujú nasledujúce používateľsky prívetivé mená: **FN** = **Krstné meno**, **LN** = **Priezvisko**, **FI** = **Iniciála krstného mena**, **TELEFÓN** = **Telefón**, **GEN** = **Pohlavie**, **DOB** = **Dátum narodenia**, **ST** = **Štát**, **CT** = **Mesto**, **ZIP** = **PSČ**, **COUNTRY** = **Krajina/región**
+1. Vyberte **Pridať atribút** na mapovanie ďalších atribútov na odoslanie do Facebook Ads Manager. Atribúty z Facebook Ads Manager sú mapované pomocou nasledovných používateľských názvov: **FN** = **Krstné meno**, **LN** = **Priezvisko**, **FI** = **Prvé písmeno**, **PHONE** = **Telefón**, **GEN** = **Pohlavie**, **DOB** = **Dátum narodenia**, **ST** = **Stav**, **CT** = **Mesto**, **ZIP** = **PSČ**, **COUNTRY** = **Štát/oblasť**
 
 1. Vyberte segmenty, ktoré chcete exportovať.
 
 1. Vyberte položku **Uložiť**.
 
-## <a name="export-the-data"></a>Export údajov
+Uloženie exportu nespustí export okamžite.
 
-Môžete [exportovať údaje na vyžiadanie](export-destinations.md). Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).
+Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). 
+
+Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 
 Keď povolíte prenos údajov do Správcu reklám Facebook v službe Dynamics 365 Customer Insights, povoľujete tým prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Spoločnosť Microsoft prenesie tieto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby Reklamy Facebook plnili všetky prípadné povinnosti týkajúce sa ochrany vašich osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Váš správca služby Dynamics 365 Customer Insights môže túto funkciu kedykoľvek prestať používať odstránením tohto cieľového umiestnenia exportu.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

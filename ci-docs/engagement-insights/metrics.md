@@ -4,17 +4,16 @@ description: Ako vytvárať, upravovať a odstraňovať metriky.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 97189168e0f5586aad8be8089a1f9e27893c2115c7e805ddaab1efc00e11b860
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7e8c96f38af74f25080a40fd92e73f05c71320a8
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034288"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229835"
 ---
 # <a name="view-and-create-metrics"></a>Zobrazenie a vytváranie metrík
 
@@ -38,21 +37,24 @@ Tieto systémové metriky sú založené na existujúcich vlastnostiach udalost�
 1. Na ľavej navigačnej table prejdite na **Údaje**. 
 1. Vyberte kartu **Metriky** na zobrazenie zoznamu všetkých metrík v pracovnom priestore. 
    > [!NOTE]
-   > Metriky generované systémom sú iba na čítanie. Nemôžete ich zmeniť ani odstrániť. Môžete iba vytvárať a upravovať vlastné metriky.
+   > Metriky generované systémom sú iba na čítanie. Nemôžete ich aktualizovať ani odstrániť. Môžete iba vytvárať a upravovať vlastné metriky.
 
 ## <a name="create-a-metric"></a>Vytvorenie metriky
 
 Správcovia prostredia a pracovných priestorov môžu vytvárať metriky. Pred vytvorením metriky je potrebné do pracovného priestoru odoslať vlastnosti udalosti. Môžete vytvoriť metriky na základe vlastností udalostí, ktoré sú odosielané základnými udalosťami, alebo použiť webovú SDK na [odoslanie vlastných vlastností udalosti](advanced-SDK-implementation.md).
 
 1. Prejdite na **Údaje** > **Metriky**.
-1. Vyberte **Nová metrika**.
+1. Vyberte **Nová metrika** na otvorenie položky **Knižnica zdrojov** a dialógového okna **Nová metrika bez názvu**.
 
    :::image type="content" source="media/new-metric.png" alt-text="Pridajte k udalosti metriku.":::
 
-1. Ako formát vyberte údajový typ **Integer** alebo **Double**. Integer je celé číslo. Pre Double môžete vybrať jedno až tri desatinné miesta.
-1. Na table **Knižnica zdrojov** vyhľadajte vlastnosť udalosti, na ktorej je založená metrika.
-1. Vyberte **znamienko plus (+)** vedľa vlastnosti, aby sa použilo vo vzorci. Vzorec môžete vytvoriť iba na základe jednej vlastnosti. 
-1. Vyberte jednu z nasledovných funkcií agregácie. 
+1. V dialógovom okne **Nová metrika bez názvu** vyberte **Formát** v rozbaľovacom zozname a vyberte typ údajov **Integer** alebo **Double**. Integer je celé číslo. V prípade Double môžete vybrať jedno a tri desatinné miesta.
+
+   :::image type="content" source="media/create-new-metric.png" alt-text="Vytvorenie novej metriky.":::
+   
+5. Na table **Knižnica zdrojov** vyhľadajte vlastnosť udalosti, na ktorej je založená metrika.
+6. Vyberte **znamienko plus (+)** vedľa vlastnosti, aby sa použilo vo vzorci. Vzorec môžete vytvoriť iba na základe jednej vlastnosti. 
+7. Vyberte jednu z nasledovných funkcií agregácie. 
 
    - Súčet: aritmetický súčet všetkých hodnôt 
    - Priemer: stredný priemer všetkých hodnôt
@@ -68,12 +70,16 @@ Môže to trvať až minútu, kým ju budete môcť použiť na [vytváranie vla
 
 ## <a name="edit-a-metric"></a>Úprava metriky
 
+Môžete upravovať iba vlastné metriky.
+
 1. Prejdite na **Údaje** > **Metriky**.
 1. Vyberte metriku v zozname.
 1. Zmena definície metriky
 1. Vyberte položku **Uložiť**.
 
 ## <a name="change-the-name-of-a-metric"></a>Zmena názvu metriky
+
+Môžete zmeniť iba názov vlastných metrík.
 
 1. Prejdite na **Údaje** > **Metriky**.
 1. Vyberte **Viac [...]** pre metriku a následne **Upraviť názov**.
@@ -82,11 +88,15 @@ Môže to trvať až minútu, kým ju budete môcť použiť na [vytváranie vla
 
 ## <a name="delete-a-metric"></a>Odstránenie metriky
 
+Môžete odstrániť iba vlastné metriky.
+
 1. Prejdite na **Údaje** > **Metriky**.
 1. Vyberte **Viac [...]** pre metriku a následne **Odstrániť**.
 
    :::image type="content" source="media/delete-metric.png" alt-text="Odstránenie metriky pre udalosť.":::
 
 1. Vyberte možnosť **Odstrániť** a potvrďte odstránenie.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

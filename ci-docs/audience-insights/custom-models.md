@@ -3,25 +3,27 @@ title: Vlastné modely strojového učenia | Dokumentácia spoločnosti Microsof
 description: Práca s vlastnými modelmi zo strojového učenia platformy Azure v systéme Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
-ms.translationtype: HT
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881803"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355105"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastné modely strojového učenia
 
 > [!NOTE]
 > Podpora pre strojové učenie Studio (klasické) sa skončí 31. augusta 2024. Odporúčame vám prejsť na [Azure strojové učenie](/azure/machine-learning/overview-what-is-azure-machine-learning) do tohto dátumu.
 >
-> Od 1. decembra 2021 nebudete môcť vytvárať nové zdroje strojové učenie Studio (klasické). Do 31. augusta 2024 môžete naďalej používať existujúce zdroje strojové učenie Studio (klasické). Ďalšie informácie nájdete v časti [Migrujte do Azure strojové učenie](/azure/machine-learning/migrate-overview).
+> Od 1. decembra 2021 nebudete môcť vytvárať nové zdroje strojové učenie Studio (klasické). Do 31. augusta 2024 môžete naďalej používať existujúce (klasické) zdroje strojové učenie Studio. Ďalšie informácie nájdete v časti [Migrujte do Azure strojové učenie](/azure/machine-learning/migrate-overview).
 
 
 **Inteligencia** > **Vlastné modely** umožňuje spravovať pracovné postupy založené na modeloch strojového učenia Azure. Pracovné postupy vám pomôžu vybrať údaje, z ktorých chcete generovať prehľady, a namapovať výsledky na vaše zjednotené údaje o zákazníkoch. Ďalšie informácie o vytváraní vlastných modelov ML nájdete v sekcii [Používajte modely založené na strojovom učení platformy Azure](azure-machine-learning-experiments.md).
@@ -40,6 +42,8 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 
    > [!NOTE]
    > Údaje sa prenášajú medzi vašimi inštanciami Customer Insights a vybranými webovými službami alebo kanálmi Azure v pracovnom postupe. Pri prenose údajov do služby Azure sa ubezpečte, že služba je nakonfigurovaná tak, aby spracovávala údaje takým spôsobom a na takom mieste, ktoré sú potrebné na dodržanie súladu so všetkými právnymi alebo regulačnými požiadavkami vzťahujúcimi sa na tieto údaje a vašu organizáciu.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Pridajte nový pracovný postup
 

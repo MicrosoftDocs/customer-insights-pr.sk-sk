@@ -1,37 +1,38 @@
 ---
 title: Konektor LiveRamp
-description: Naučte sa, ako exportovať údaje do riešenia LiveRamp.
-ms.date: 12/02/2020
-ms.reviewer: kishorem
-ms.service: customer-insights
+description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do LiveRamp.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: kishorem-ms
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 86aa8c66a47ee61741082c95f05d2e5ce3f06f35
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
-ms.translationtype: HT
+ms.openlocfilehash: 4c0f58083e8486d2042d8efcc8b3690020efb1c3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667203"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226371"
 ---
-# <a name="liverampreg-connector-preview"></a>Konektor LiveRamp&reg; (ukážka)
+# <a name="export-segments-to-liverampreg-preview"></a>Export segmentov do LiveRamp&reg; (ukážka)
 
-Aktivujte svoje údaje v riešení LiveRamp a spojte sa s viac ako 500 platformami naprieč digitálnymi, sociálnymi a televíznymi ekosystémami. Spolupracujte s vašimi údajmi v riešení LiveRamp na zacielení, potlačení a prispôsobení reklamných kampaní.
+Aktivujte svoje údaje v službe LiveRamp a spojte sa s viac ako 500 platformami v digitálnych, sociálnych a televíznych zariadeniach. Spolupracujte s vašimi údajmi v riešení LiveRamp na zacielení, potlačení a prispôsobení reklamných kampaní.
 
-## <a name="prerequisites"></a>Predpoklady
+## <a name="prerequisites-for-a-connection"></a>Predpoklad na pripojenie
 
 - Na používanie tohto konektora potrebujete predplatné LiveRamp.
 - Ak chcete získať predplatné, [kontaktujte LiveRamp](https://liveramp.com/contact/) priamo. [Získajte viac informácií o zaradení riešenia LiveRamp](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Pripojenie k riešeniu LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>Nastavenie pripojenia k LiveRamp
 
-1. V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.
+1. Prejdite do časti **Správca** > **Pripojenia**.
 
-1. Na dlaždici **LiveRamp** vyberte položku **Nastaviť**.
+1. Stlačte možnosť **Pridať pripojenie** a stlačením možnosti **LiveRamp** nakonfigurujte pripojenie.
 
-1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov cieľa.
+1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
+
+1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Zadajte **používateľské meno** a **heslo** pre vaše konto LiveRamp Secure FTP (SFTP).
 Tieto poverenia sa môžu líšiť od vašich poverení pre LiveRamp Onboarding.
@@ -40,15 +41,25 @@ Tieto poverenia sa môžu líšiť od vašich poverení pre LiveRamp Onboarding.
 
 1. Po úspešnom overení poskytnite svoj súhlas pre **Ochranu osobných údajov a dodržiavanie súladu s nariadeniami** výberom začiarkavacieho políčka **Súhlasím**.
 
-1. Vyberte **Ďalej** na nastavenie konektora LiveRamp.
+1. Stlačte možnosť **Uložiť** a dokončite pripojenie.
 
-## <a name="configure-the-connector"></a>Nakonfigurujte konektor
+## <a name="configure-an-export"></a>Nakonfigurujte export
+
+Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
+
+1. Prejdite na **Údaje** > **Exporty**.
+
+1. Na vytvorenie nového exportu stlačte možnosť **Pridať cieľ**.
+
+1. V poli **Pripojenie na export** vyberte pripojenie v časti LiveRamp. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
 
 1. V poli **Vyberte identifikátor kľúča** vyberte **E-mail**, **Meno a adresu** alebo **Telefón** na odoslanie do riešenia LiveRamp na rozlíšenie identity.
+   > [!div class="mx-imgBorder"]
+   > ![Konektor LiveRamp s priradením atribútov.](media/export-liveramp-segments.png "Konektor LiveRamp s priradením atribútov")
 
-1. Priraďte zodpovedajúce atribúty z vašej zjednotenej entity zákazníka na vybratý identifikátor kľúča.
+1. Mapujte zodpovedajúce atribúty zo svojej entity *Zákazník* pre vybratý identifikátor kľúča.
 
-1. Vyberte **Pridať atribút** na priradenie ďalších atribútov na odoslanie do LiveRamp.
+1. Vyberte **Pridať atribút** na mapovanie ďalších atribútov na odoslanie do LiveRamp.
 
    > [!TIP]
    > Poslaním ďalších atribútov kľúčového identifikátora do riešenia LiveRamp pravdepodobne získate vyššiu mieru zhody.
@@ -57,15 +68,14 @@ Tieto poverenia sa môžu líšiť od vašich poverení pre LiveRamp Onboarding.
 
 1. Vyberte položku **Uložiť**.
 
-> [!div class="mx-imgBorder"]
-> ![Konektor LiveRamp s priradením atribútov](media/export-liveramp-segments.png "Konektor LiveRamp s priradením atribútov")
+Uloženie exportu nespustí export okamžite.
 
-## <a name="export-the-data"></a>Export údajov
+Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
 
-Export sa začne čoskoro, ak budú splnené všetky predpoklady na export. Export sa spustí aj pri každej [plánovanej obnove](system.md#schedule-tab).
-Po úspešnom dokončení exportu sa môžete prihlásiť do riešenia LiveRamp Onboarding a aktivovať a distribuovať svoje údaje.
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 
 Keď povolíte prenos údajov spoločnosti Liveramp v službe Dynamics 365 Customer Insights, povoľujete tým prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Spoločnosť Microsoft prenesie tieto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby spoločnosť Liveramp plnila všetky prípadné povinnosti týkajúce sa ochrany vašich osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Váš správca služby Dynamics 365 Customer Insights môže túto funkciu kedykoľvek prestať používať odstránením tohto cieľového umiestnenia exportu.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

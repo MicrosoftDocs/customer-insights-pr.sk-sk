@@ -3,18 +3,17 @@ title: Obohaťte zákaznícke profily o údaje z Microsoft Office 365
 description: Použiť proprietárne údaje z Microsoft Office obohatiť svoje profily zákazníkov o údaje o interakciách.
 ms.date: 12/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a30e09b5ed491c8d36019b5f0d35e0a2f7a0199c
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7889785"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228493"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Obohaťte profily zákazníkov o údaje o interakciách (ukážka)
 
@@ -76,7 +75,7 @@ Nájdete tu aj graf s počtom obohatených zákazníkov v priebehu času a náh�
 
 :::image type="content" source="media/enrichment-office-results-overview.png" alt-text="Ukážka výsledkov po spustení procesu obohacovania.":::
 
-Všetky údaje sú agregované až po úroveň účtu. Systém vypočíta skóre zapojenia, ktoré sa pohybuje od 0 do 100, pre každý účet. Skóre zapojenia poskytuje zloženú mieru zapojenia účtu cez e-maily a stretnutia v porovnaní s vašimi ostatnými účtami. Nasledujúci zoznam obsahuje súhrnné údaje, ktoré poskytuje rozšírenie o interakciu s účtom:
+Všetky údaje sú agregované až po úroveň účtu. Systém vypočíta skóre zapojenia, ktoré sa pohybuje od 0 do 100, pre každý účet. Skóre interakcie poskytuje zloženú mieru zapojenia účtu cez e-maily a stretnutia v porovnaní s vašimi ostatnými účtami. Nasledujúci zoznam obsahuje súhrnné údaje, ktoré poskytuje rozšírenie o interakciu s účtom:
 
 
 

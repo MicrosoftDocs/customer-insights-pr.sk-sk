@@ -1,20 +1,22 @@
 ---
 title: Údaje riešenia Customer Insights v Microsoft Dataverse
 description: Entity Customer Insights použite ako tabuľky v Microsoft Dataverse.
-ms.date: 10/14/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645237"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355448"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práca s údajmi Customer Insights v Microsoft Dataverse
 
@@ -45,6 +47,7 @@ Niektoré výstupné entity z prehľadov cieľovej skupiny sú k dispozícii ako
 - [CustomerMeasure](#customermeasure)
 - [Obohatenie](#enrichment)
 - [Predikcia](#prediction)
+- [Členstvo v segmente](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -121,3 +124,16 @@ Táto tabuľka obsahuje výstup predikcií modelu.
 | Hodnoty               | Reťazec JSON | Zoznam atribútov získaných modelom |
 | msdynci_predictionid | GUID        | Deterministický GUID vygenerovaný z msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Členstvo v segmente
+
+Táto tabuľka obsahuje informácie o členstve v segmentoch profilov zákazníkov.
+
+| Column        | Type | Description                        |
+|--------------------|--------------|-----------------------------|
+| ID zákazníka        | String       | ID profilu zákazníka        |
+| SegmentProvider      | String       | Aplikácia, ktorá zverejňuje segmenty. Predvolené: Štatistiky publika         |
+| Typ členstva v segmente | String       | Typ záznamu členstva v tomto segmente zákazníka. Podporuje viacero typov, ako napríklad Zákazník, Kontakt alebo Účet. Predvolené: Zákazník  |
+| Segmenty       | Reťazec JSON  | Zoznam jedinečných segmentov, ktorých členom je profil zákazníka      |
+| msdynci_identifier  | String   | Jedinečný identifikátor záznamu členstva v segmente. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | Deterministický GUID generovaný z`msdynci_identifier`          |

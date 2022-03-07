@@ -2,19 +2,23 @@
 title: Pripojte údaje z Common Data Model k účtu Azure Data Lake
 description: Pracujte s údajmi z Common Data Model cez Azure Data Lake Storage.
 ms.date: 01/25/2022
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a871d65bd79d3246984e23fb52210c8dc7259b8
-ms.sourcegitcommit: 7a99f3490e6582c2bc2b38019ed1898348b0eaba
-ms.translationtype: HT
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- ci-attach-cdm
+- customerInsights
+ms.openlocfilehash: 1e3b28316c06d6a15dd5690837c365b0677a882e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "8027071"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354988"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Pripojte priečinok Common Data Model použitím účtu Azure Data Lake
 
@@ -32,7 +36,7 @@ Tento článok poskytuje informácie o tom, ako prijímať údaje z Common Data 
 
 - Azure Data Lake, ku ktorému sa chcete pripojiť a z ktorého prijímať údaje, musí byť v rovnakej oblasti Azure ako prostredie Dynamics 365 Customer Insights. Pripojenia k priečinku Common Data Model z dátového jazera v inej oblasti Azure nie sú podporované. Ak chcete spoznať oblasť Azure v prostredí, prejdite na časť **Správca** > **Systém** > **Informácie** v prehľadoch o cieľových skupinách.
 
-- Údaje uložené v online službách môžu byť uložené na inom mieste, než kde sa údaje spracúvajú alebo ukladajú Dynamics 365 Customer Insights.Importovaním alebo pripojením k údajom uloženým v online službách súhlasíte s tým, že údaje môžu byť prenesené a uložené s Dynamics 365 Customer Insights . [Ďalšie informácie nájdete v Centre dôveryhodnosti spoločnosti Microsoft](https://www.microsoft.com/trust-center).
+- Údaje uložené v online službách môžu byť uložené na inom mieste, než kde sa údaje spracúvajú alebo ukladajú Dynamics 365 Customer Insights.Importovaním údajov uložených v online službách alebo ich pripojením k nim súhlasíte s tým, že údaje možno preniesť a uložiť Dynamics 365 Customer Insights . [Ďalšie informácie nájdete v Centre dôveryhodnosti spoločnosti Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Pripojiť k priečinku Common Data Model
 

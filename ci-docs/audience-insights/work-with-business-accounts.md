@@ -1,24 +1,28 @@
 ---
 title: Začíname s firemnými obchodnými vzťahmi ako s primárnou cieľovou skupinou
 description: Prečítajte si o firemných obchodných vzťahoch ako o primárnej cieľovej skupine Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
+ms.custom: intro-internal
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 88882dc727c37262c9f204fbc8049abe17bd21a3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645007"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353562"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Pracujte s firemnými obchodnými vzťahmi v prehľadoch cieľových skupín
 
-Funkcia prehľadov cieľových skupín v Dynamics 365 Customer Insights umožňuje konfigurovať prostredie pre rôzne primárne cieľové skupiny: individuálnych zákazníkov (B2C) a firemné obchodné vzťahy (B2B). V scenároch B2C sú údaje sústredené okolo jednotlivcov. V prípade B2B sú primárnou cieľovou skupinou obchodné vzťahy – organizácie alebo spoločnosti – a kontakty. Tento článok vám pomôže začať s prostredím pre firemné obchodné vzťahy. Uvádza rozdiely v oblastiach funkcií v prehľadoch cieľových skupín v závislosti od zamerania vášho prostredia. Ak chcete získať ďalšie informácie o rozdieloch, prečítajte si dokumenty o oblastiach funkcií. 
+Funkcia prehľadov cieľových skupín v Dynamics 365 Customer Insights umožňuje konfigurovať prostredie pre rôzne primárne cieľové skupiny: individuálnych spotrebiteľov (firma a spotrebiteľ) a firemné obchodné vzťahy (firma a firma). V scenároch „firma a spotrebiteľ“ sú údaje sústredené okolo jednotlivcov. Pri scenároch „firma a firma“ sú primárnou cieľovou skupinou obchodné vzťahy – organizácie alebo spoločnosti – a kontakty. Tento článok vám pomôže začať s prostredím pre firemné obchodné vzťahy. Uvádza rozdiely v oblastiach funkcií v prehľadoch cieľových skupín v závislosti od zamerania vášho prostredia. Ak chcete získať ďalšie informácie o rozdieloch, prečítajte si dokumenty o oblastiach funkcií. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Vytvorenie prostredia pre firemné obchodné vzťahy
 
@@ -32,7 +36,7 @@ Po zjednotení údajov [zadajte hierarchie obchodných vzťahov](relationships.m
 
 Ak vaša organizácia spravuje prostredia pre individuálnych zákazníkov a firemné obchodné vzťahy, pomocou prepínača na ľavej table môžete zvoliť primárnu cieľovú skupinu.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Prepínač na zmenu primárnej cieľovej skupiny medzi jednotlivými zákazníkmi a firemnými obchodnými vzťahmi.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Prepínač na zmenu primárnej cieľovej skupiny medzi jednotlivými zákazníkmi a firemnými obchodnými vzťahmi.":::
 
 ## <a name="supported-feature-areas"></a>Podporované oblasti funkcií
 

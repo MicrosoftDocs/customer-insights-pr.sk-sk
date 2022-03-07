@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648136"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225466"
 ---
 # <a name="create-a-new-environment"></a>Vytvoriť nové prostredie 
 
@@ -40,13 +39,13 @@ Prostredie je priestor, v ktorom spravujete svoje pracovné priestory a pripojen
 
 1. Zvoľte položku **Región** a označte **Ďalšie**. 
 
-1. Napíšte **Názov pracovného priestoru**, čo vám umožňuje zbierať údaje pre konkrétne webové stránky alebo aplikácie. Ďalšie informácie nájdete v téme [Vytvorenie pracovného priestoru](create-workspace.md).
+1. Typ a **Názov pracovného priestoru**, ktorá vám umožňuje zhromažďovať údaje pre konkrétne webové stránky alebo aplikácie. Ďalšie informácie nájdete v téme [Vytvorenie pracovného priestoru](create-workspace.md).
 
-1. Vyberte **Typ pracovného priestoru** (webový alebo mobilný), ktorý chcete vytvoriť. 
+1. Vyber **Typ pracovného priestoru** (web alebo mobil), ktorý chcete vytvoriť. 
 
 1. Vyberte **Ukázať pokročilé nastavenia** a povoľte alebo zakážte tieto voliteľné nastavenia:
 
-   - Prepnite **Neznáme na známe** na „povolené“ na priradenie webových udalostí k používateľom, ktorí sa predtým autentifikovali. Ďalšie informácie nájdete v časti [Rozpoznajte webové udalosti od predtým overených používateľov](unknown-to-known.md)
+   - Prepnite **Neznáme na známe** na „povolené“ na priradenie webových udalostí k používateľom, ktorí sa predtým autentifikovali. Ďalšie informácie nájdete v časti [Rozpoznajte webové udalosti od predtým overených návštevníkov](unknown-to-known.md).
    - Prepnite **Filtrovať prenos botov** na „povolené“, aby sa z tohto pracovného priestoru odstránili webovú návštevnosť botov. 
 
 1. Po skončení vyberte možnosť **Dokončiť**. 

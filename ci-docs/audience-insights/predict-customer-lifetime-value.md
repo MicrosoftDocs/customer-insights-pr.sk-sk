@@ -3,20 +3,24 @@ title: Predikcia hodnoty životnosti zákazníka (CLV)
 description: Predpovedajte potenciálny výnos pre aktívnych zákazníkov v budúcnosti.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035388"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355808"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Predikcia hodnoty životnosti zákazníka (CLV) (verzia Preview)
+# <a name="customer-lifetime-value-clv-prediction"></a>Predikcia hodnoty životnosti zákazníka (CLV)
 
 Predikujte potenciálnu hodnotu (výnos), ktorú jednotliví aktívni zákazníci prinesú do vášho podnikania v definovanom budúcom časovom období. Táto funkcia vám môže pomôcť dosiahnuť rôzne ciele: 
 - Identifikovať zákazníkov s vysokou hodnotou a spracovať tento prehľad
@@ -65,7 +69,7 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
     - Úplnosť údajov: Menej ako 20 % chýbajúcich hodnôt v povinných poliach vstupných údajov   
 
 > [!NOTE]
-> - Tento model vyžaduje históriu transakcií vašich zákazníkov. Aktuálne je možné nakonfigurovať iba jednu entitu histórie transakcií. Ak existuje viac entít nákupu/transakcie, pred prijatím údajov ich zjednoťte v Power Query.
+> - Tento model vyžaduje históriu transakcií vašich zákazníkov. Aktuálne je možné nakonfigurovať iba jednu entitu histórie transakcií. Ak existuje viacero nákupných/transakčných subjektov, môžete ich spojiť Power Query pred prijímaním údajov.
 > - Pre ďalšie údaje o aktivite zákazníkov (voliteľné) však môžete pridať toľko entít aktivity zákazníkov, koľko by ste chceli, aby ich model zvážil.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Vytvorenie predikcie hodnoty životnosti zákazníka
@@ -74,7 +78,7 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
 
 1. Vyberte dlaždicu **Hodnota životnosti zákazníka** a následne **Použiť model**. 
 
-1. Na table **Hodnota životnosti zákazníka (verzia Preview)** vyberte **Začíname**.
+1. V **Celoživotná hodnota zákazníka** panel, vyberte **Začať**.
 
 1. **Pomenujte tento model** a **Názov výstupnej entity**, aby ste ich odlíšili od iných modelov alebo entít.
 

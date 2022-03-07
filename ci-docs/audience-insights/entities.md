@@ -3,18 +3,20 @@ title: Entity a množiny údajov
 description: Zobrazujte údaje na stránke Entity.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900446"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355339"
 ---
 # <a name="entities-in-audience-insights"></a>Entity v prehľadoch cieľových skupín
 
@@ -41,7 +43,7 @@ The **entity** stránka obsahuje entity a obsahuje tieto stĺpce:
 > ![Tabuľka Polia.](media/data-manager-entities-fields.PNG "Tabuľka Polia")
 
 > [!NOTE]
-> Táto stránka zobrazuje iba vzorku údajov vašej entity. Ak chcete zobraziť celú množinu údajov, prejdite na stránku **Zdroje údajov**, vyberte entitu, vyberte položku **Upraviť** a potom zobrazte údaje tejto entity pomocou editora Power Query, ako je vysvetlené v [zdrojoch údajov](data-sources.md).
+> Táto stránka zobrazuje iba vzorku údajov vašej entity. Ak chcete zobraziť celý súbor údajov, prejdite na stránku **Zdroje dát** stránka, vyberte entitu, vyberte **Upraviť** a potom zobrazte údaje tejto entity pomocou Power Query editor, ako je vysvetlené v [Zdroje dát](data-sources.md).
 
 Ak sa chcete dozvedieť viac o údajoch prijatých v entite, stĺpec **Súhrn** vám poskytuje niektoré dôležité vlastnosti údajov, ako sú napríklad hodnoty null, chýbajúce údaje, jedinečné hodnoty, počty a rozdelenia, ktoré sa vzťahujú na vaše dáta. Ak chcete zobraziť súhrn údajov, vyberte ikonu grafu.
 
@@ -71,7 +73,9 @@ Polia z prijatého zdroja údajov možno obsahujú poškodené údaje. Záznamy 
 
 V stĺpci „deň narodenia“ je napríklad nastavený dátový typ ako „dátum“. Záznam zákazníka má dátum narodenia zapísaný ako „01/01/19777“. Systém označí tento záznam ako poškodený. Niekto môže teraz zmeniť deň narodenia v zdrojovom systéme na „1977“. Po automatickom obnovení zdrojov údajov má pole teraz platný formát a záznam sa z poškodeného subjektu odstráni. 
 
-Prejdite k položke **Údaje** > **Entity** a vyhľadajte poškodené entity v časti **Systém**. Schéma pomenovania poškodených entít: „DataSourceName_EntityName_corrupt“.
+Prejdite k položke **Údaje** > **Entity** a vyhľadajte poškodené entity v časti **Systém**. Schéma pomenovania poškodených entít: „DataSourceName_EntityName_corrupt“. Vyberte poškodenú entitu, aby ste identifikovali všetky poškodené polia a dôvod na úrovni jednotlivých záznamov.
+> [!div class="mx-imgBorder"]
+> ![Dôvod korupcie.](media/corruption-reason.png "Dôvod korupcie")
 
 Služba Customer Insights stále spracúva poškodené záznamy. Pri práci s jednotnými údajmi však môžu spôsobovať problémy.
 

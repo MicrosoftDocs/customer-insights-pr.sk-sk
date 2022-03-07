@@ -1,20 +1,19 @@
 ---
 title: Vylepšenie firemných údajov
 description: Obohaťte a normalizujte firemné údaje pomocou modelov spoločnosti Microsoft.
-ms.date: 11/15/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813936"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229422"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obohatenie firemných profilov o vylepšené firemné dáta
 
@@ -82,7 +81,17 @@ Proces obohatenia spustíte výberom položky **Spustiť** z panela príkazov. M
 
 Po dokončení procesu obohacovania môžete skontrolovať údaje o nových obohatených zákazníckych profiloch v časti **Moje obohatenia**. Ďalej nájdete čas poslednej aktualizácie a počet obohatených profilov.
 
-Môžete získať podrobné zobrazenie každého obohateného profilu výberom **Zobraziť obohatené údaje**.
+Ukážku obohatených údajov môžete vidieť v **Ukážka obohatených zákazníkov** dlaždica. Vyberte **Pozrieť viac** a vyberte **Údaje** získate prístup k podrobnému zobrazeniu každého obohateného profilu.
+
+### <a name="overview-card"></a>Prehľadová karta
+
+Prehľadová karta zobrazuje podrobnosti o pokrytí obohatenia. 
+
+* **Spoločnosti spracované a zmenené** : Počet zákazníckych firemných profilov, ktoré boli úspešne obohatené.
+
+* **Spoločnosti spracované a nezmenené** : Počet zákazníckych firemných profilov, ktoré boli rozpoznané, ale neboli zmenené. Zvyčajne sa to stane, keď sú vstupné údaje platné a nemožno ich zlepšiť obohatením.
+
+* **Spoločnosti nespracované a nezmenené** : Počet zákazníckych firemných profilov, ktoré neboli rozpoznané. Toto sa zvyčajne stáva pri vstupných údajoch, ktoré sú neplatné alebo nie sú podporované obohatením.
 
 ## <a name="next-steps"></a>Ďalšie kroky
 

@@ -1,22 +1,24 @@
 ---
 title: Sémantické mapovanie (verzia Preview)
 description: Prehľad sémantických mapovaní a ich použitie.
-ms.date: 09/28/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622954"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353976"
 ---
-# <a name="semantic-mappings"></a>Sémantické mapovania
+# <a name="semantic-mappings-preview"></a>Sémantické mapovanie (verzia Preview)
 
 Sémantické mapovania vám umožňujú mapovať údaje o vašej neaktivite do vopred definovaných schém. Tieto schémy pomáhajú prehľadom cieľových skupín lepšie porozumieť vašim atribútom údajov. Sémantické mapovanie a poskytnuté údaje umožňujú nové prehľady a funkcie v prehľadoch cieľových skupín. Ak chcete mapovať údaje o svojej aktivite na schémy, prečítajte si dokumentáciu k [aktivitám](activities.md).
 
@@ -75,8 +77,7 @@ Sémantické mapovania vám umožňujú mapovať údaje o vašej neaktivite do v
 
 1. Ak chcete sémantické mapovanie spustiť neskôr, vyberte sémantické mapovanie a vyberte **Obnoviť**.
 
-> [!TIP]
-> Existuje [šesť druhov stavov](system.md#status-types) pre úlohy/procesy. Okrem toho väčšina procesov [závisí na ďalších nadväzujúcich procesoch](system.md#refresh-policies). Môžete si vybrať stav procesu a zobraziť podrobnosti o priebehu celej úlohy. Po výbere **Pozrieť detaily** pre jednu z úloh úlohy nájdete ďalšie informácie: čas spracovania, posledný dátum spracovania a všetky chyby a varovania spojené s úlohou.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Spravujte existujúce sémantické mapovania
 
@@ -91,5 +92,41 @@ V položke **Údaje** > **Sémantické mapovania (verzia Preview)** si môžete 
 - **Premenovať**: Otvorí dialógové okno, kde môžete zadať iný názov pre vybraté sémantické mapovanie. Zmeny vykonajte výberom položky **Uložiť**.
 
 - **Vymazať**: Otvorí dialógové okno na potvrdenie vymazania vybratého sémantického mapovania. Môžete tiež odstrániť viac ako jedno sémantické mapovanie naraz tak, že vyberiete sémantické mapovania a ikonu odstránenia. Vyberte možnosť **Odstrániť** a potvrďte odstránenie.
+
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Na vytvorenie aktivít na úrovni kontaktu použite mapovanie sémantickej entity ContactProfile
+
+Po vytvorení a *Kontaktný profil* mapovanie sémantických entít, môžete zachytiť aktivity kontaktov. Umožňuje vám vidieť na časovej osi aktivity pre účet, ktorý kontakt bol zodpovedný za jednotlivé aktivity. Väčšina krokov sa riadi typickou konfiguráciou mapovania aktivít.
+
+   > [!NOTE]
+   > Aby aktivity na úrovni kontaktu fungovali, musíte mať oboje **Číslo účtu** a **ContactID** atribúty pre každý záznam v rámci údajov o vašej aktivite.
+
+1. [Definujte a *Kontaktný profil* mapovanie sémantických entít.](#define-a-contactprofile-semantic-entity-mapping) A spustite sémantické mapovanie.
+
+1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Aktivity**.
+
+1. Vyberte **Pridať aktivitu** na vytvorenie novej aktivity.
+
+1. Pomenujte aktivitu, vyberte entitu zdrojovej aktivity a vyberte primárny kľúč entity aktivity.
+
+1. V **Vzťahy** krok, vytvorte nepriamy vzťah medzi vašimi zdrojmi aktivít a účtami pomocou vašich kontaktných údajov ako sprostredkovateľskej entity. Viac informácií nájdete v časti [cesty priamych a nepriamych vzťahov](relationships.md#relationship-paths).
+   - Príklad vzťahu pre aktivitu tzv *Nákupy*:
+      - **Údaje o aktivite zdroja nákupov** > **Kontaktné údaje** na atribúte **ContactID**
+      - **Kontaktné údaje** > **Údaje o účte** na atribúte **Číslo účtu**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Príklad nastavenia vzťahu.":::
+
+1. Po nastavení vzťahov vyberte **Ďalšie** a dokončite konfiguráciu mapovania aktivít. Podrobné kroky na vytvorenie aktivity nájdete v časti [definovať činnosť](activities.md).
+
+1. Spustite svoje mapovania aktivít.
+
+1. Vaše aktivity na úrovni kontaktov budú teraz viditeľné na vašej časovej osi zákazníka.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Konečný výsledok po konfigurácii kontaktných aktivít":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Filtrovanie časovej osi aktivity na úrovni kontaktu
+
+Po nakonfigurovaní mapovania aktivít na úrovni kontaktu a jeho spustení sa časová os aktivít vašich zákazníkov aktualizuje. Zahŕňa ich ID alebo mená, v závislosti od vás *Kontaktný profil* konfiguráciu pre činnosti, v ktorých konali. Aktivity môžete filtrovať podľa kontaktov na časovej osi, aby ste videli konkrétne kontakty, o ktoré máte záujem. Okrem toho môžete výberom vidieť všetky aktivity, ktoré nie sú priradené ku konkrétnemu kontaktu **Aktivity nie sú priradené ku kontaktu**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Dostupné možnosti filtrovania pre aktivity na úrovni kontaktu.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

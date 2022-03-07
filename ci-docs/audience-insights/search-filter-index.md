@@ -3,18 +3,20 @@ title: Vyhľadávanie a filtrovanie profilov zákazníkov
 description: Rýchlo vyhľadajte informácie o zjednotených profiloch zákazníkov a filtrujte konkrétne atribúty.
 ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732053"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354528"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profily zákazníkov: Index vyhľadávania a filtrovania
 
@@ -57,7 +59,7 @@ Ponuka **Filter** na stránke **Zákazníci** môže obsahovať rôzny počet ú
 
 2. Zmeny vykonajte výberom položky **Uložiť**.
 
-3. Vyberte položku **Spustiť**, keď budete pripravení použiť svoje nastavenia. Po spracovaní zmien ich nájdete na [zákazníckych kartách na stránke Zákazník](customer-profiles.md). 
+3. Vyberte položku **Spustiť**, keď budete pripravení použiť svoje nastavenia. Po spracovaní zmien ich nájdete na[ zákazníckych kartách na stránke Zákazník ](customer-profiles.md). 
 
 ## <a name="next-steps"></a>Ďalšie kroky
 

@@ -4,17 +4,16 @@ description: Ako pomocou lievikových zostáv porozumieť tomu, ako sa cieľová
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
-ms.translationtype: HT
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498661"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226280"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Vytváranie a správa lievikových zostáv
 
@@ -163,13 +162,23 @@ Môžete zmeniť názov lievikovej zostavy, odstrániť ju alebo upraviť kroky 
 
 Prehľady interakcií teraz ponúkajú zákazníkom lievikové prehľady. Pomocou lievikových prehľadov získate hlbší prehľad o správaní zákazníkov týkajúcich sa krokov. Po vytvorení a uložení novej lievikovej zostavy sa pre váš prehľad automaticky vytvoria lievikové prehľady. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Lievikové prehľady.":::
+
+> [!NOTE]
+> Lievikové prehľady je možné vytvoriť iba pre kroky lievika, ktoré **neobsahujú** vlastné rozmery. Ak chcete generovať lievikové prehľady pre všetky kroky lievika, vytvorte kroky lievika pomocou pripravených dimenzií prehľadov interakcií. 
+
 Lievikové prehľady si môžete zobraziť v týchto kategóriách, na hlavnej úrovni aj na úrovni krokov: 
 
- - Miera konverzie 
+ - Miera konverzie
+ -    Miera konverzie medzi krokmi Pokladňa a nákup je 22%.
  - Čas prechodu 
+ -    Priemerný čas prechodu medzi krokmi košík a pokladňa je 23 minút. 
  - Čas dokončenia 
+ -    Priemerný čas, ktorý potrebujú zákazníci na dokončenie lievika je 47 minút. 
 
 Pomocou týchto poznatkov hlbšie preskúmate správanie zákazníkov a lepšie pochopíte body prerušenia a konverzie v lievikovej zostave. 
+
+Aby ste porovnali štatistiky v rôznych krokoch, vyberte položku **Pozrieť rozpis krokov** alebo **Porovnať s inými krokmi** z kariet prehľadov. Zobrazí sa stĺpcový graf porovnávajúci metriky pre každý krok lievika. 
 
 Lievikové prehľady sa prepočítavajú každých 24 hodín alebo keď **Uložíte** lievikovú zostavu. 
 

@@ -4,22 +4,21 @@ author: m-hartmann
 description: Zoznámte sa s prvotným spustením Dynamics 365 Customer Insights a preskúmajte jeho možnosti.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645727"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350150"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Začíname po zakúpení Customer Insights
 
 Tento článok vysvetľuje, ako vykonať prvé kroky v Dynamics 365 Customer Insights potom, čo si vaša organizácia zakúpila predplatné. Ak si chcete kúpiť službu Customer Insights, naše kontaktné informácie sú uvedené na webovej lokalite [Dynamics 365 Customer Insights ](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Po zakúpení licencie na predplatné služby Customer Insights dostane globálny správca nájomníka Microsoft 365 e-mail s pozvánkou na vytvorenie prostredia. 
+Po zakúpení predplatiteľskej licencie pre Customer Insights, globálny správca Microsoft 365 nájomník dostane e-mail, ktorý ho pozýva na vytvorenie prostredia. 
 
 Customer Insights je licencovaná na nájomníka a obsahuje viacero možností. Môžete si kúpiť väčšiu kapacitu a licencie na zvýšenie predvolenej kvóty. 
 - [Prehľad cien](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ Prvé spustenie vám pomôže vybrať si prvotné zameranie pomocou Customer Ins
 
 ## <a name="create-your-own-environment"></a>Vytvorte si vlastné prostredie
 
-Po prvom prihlásení sa vám zobrazí prostredie so vzorovými údajmi. Tieto údaje môžete použiť na preskúmanie funkcií a zoznámenie sa s aplikáciou. Ak chcete používať svoje vlastné údaje, musíte vytvoriť prostredie v možnosti, v ktorej chcete pracovať.
-
-- [Vytvorenie prostredia v prehľadoch cieľových skupín.](audience-insights/get-started-paid.md)
-- [Vytvorenie prostredia v prehľadoch interakcií.](engagement-insights/create-new-environment.md) 
+Po prvom prihlásení sa vám zobrazí prostredie so vzorovými údajmi. Tieto údaje môžete použiť na preskúmanie funkcií a zoznámenie sa s aplikáciou. Ak chcete použiť svoje vlastné údaje, musíte [vytvoriť prostredie](audience-insights/get-started-paid.md).
 
 
 

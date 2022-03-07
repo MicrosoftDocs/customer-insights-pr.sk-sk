@@ -1,20 +1,24 @@
 ---
 title: Doplnok zákazníckej karty pre aplikácie Dynamics 365 (obsahuje video)
 description: Pomocou tohto doplnku zobrazujte údaje z prehľadov cieľovej skupiny v aplikáciách Dynamics 365.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 98597600c2a39f8bb707af8461df4736f913e6bc
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-search-filter
+- ci-customer-card
+- customerInsights
+ms.openlocfilehash: d67d8e2cb30cf20de204bfb293bb8ce81c7bb2f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046511"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353884"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplnok Karta zákazníka (ukážka)
 
@@ -118,5 +122,26 @@ Doplnok Karta zákazníka sa neaktualizuje automaticky. Ak chcete aktualizovať 
 
 1. Po spustení procesu inovácie sa vám bude zobrazovať indikátor načítania, kým sa aktualizácia nedokončí. Ak nie je k dispozícii novšia verzia, pri inovácii sa zobrazí chybové hlásenie.
 
+## <a name="troubleshooting"></a>Riešenie problémov
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Ovládacie prvky z doplnku zákazníckej karty nenájdu údaje
+
+**problém:**
+
+Dokonca aj pri správne nakonfigurovaných poliach ID nemôžu ovládacie prvky nájsť údaje pre žiadneho zákazníka.  
+
+**Riešenie:**
+
+1. Uistite sa, že ste nakonfigurovali doplnok karty podľa pokynov: [Nakonfigurujte doplnok Zákaznícka karta](#configure-the-customer-card-add-in) 
+
+1. Skontrolujte konfiguráciu prijímania údajov. Upravte zdroj údajov pre systém Dynamics 365, ktorý obsahuje ID kontaktu GUID. Ak sa ID kontaktu GUID zobrazuje s veľkými písmenami Power Query redaktor, skúste nasledovné: 
+    1. Upravte zdroj údajov a otvorte zdroj údajov v Power Query Editor.
+    1. Vyberte stĺpec ID kontaktu.
+    1. Vyberte **Transformovať** v hlavičke zobrazíte dostupné akcie.
+    1. Vyberte **malými písmenami**. Overte, či sú GUID v tabuľke teraz malé.
+    1. Uložte zdroj údajov.
+    1. Spustite prijímanie údajov, zjednotenie a následné procesy na šírenie zmien do GUID. 
+
+Po dokončení úplného obnovenia by ovládacie prvky doplnku zákazníckej karty mali zobrazovať očakávané údaje. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

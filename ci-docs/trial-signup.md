@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645510"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350242"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Zaregistrujte sa do bezplatnej skúšobnej verzie Dynamics 365 Customer Insights
 
@@ -32,23 +31,12 @@ Načítanie skúšobnej verzie chvíľu trvá, následne môžete začať aplik�
 
 Vaše skúšobné prostredie obsahuje mnoho rovnakých funkcií ako platená verzia. Nižšie uvedené odkazy vás presmerujú cez niektoré kľúčové funkcie.
 
-### <a name="audience-insights"></a>Prehľady cieľových skupín
-
 - [Rýchla konfigurácia pre prehľady cieľovej skupiny.](audience-insights/get-started.md)
 - [Pridajte ďalších používateľov a priraďte povolenia.](audience-insights/permissions.md)
 - [Prijmite zdroje údajov](audience-insights/data-sources.md) a spusťte ich prostredníctvom [procesu zjednocovania údajov](audience-insights/data-unification.md), aby ste získali [jednotné zákaznícke profily](audience-insights/customer-profiles.md).
 - [Obohaťte zjednotené zákaznícke profily](audience-insights/enrichment-hub.md) alebo [spusťte prediktívne modely](audience-insights/predictions-overview.md).
 - Vytvorte [segmenty](audience-insights/segments.md) skupinovým zákazníkom a [miery](audience-insights/measures.md) na kontrolu KPI.
 - Nastavte [spojenia](audience-insights/connections.md) a [exporty](audience-insights/export-destinations.md) na spracovanie podmnožín vašich údajov v iných aplikáciách.
-
-### <a name="engagement-insights"></a>Prehľady interakcií
-
-- [Rýchla konfigurácia pre prehľady interakcií.](engagement-insights/get-started.md)
-- [Vytvorenie pracovného priestoru](engagement-insights/create-workspace.md) a pridanie členov.
-- [Pridajte kód na svoju webovú lokalitu](engagement-insights/instrument-website.md) alebo [mobilnú aplikáciu](engagement-insights/developer-resources.md#capture-events-from-mobile-apps).
-- Prezerajte si [zostavu v reálnom čase](engagement-insights/view-reports.md) alebo vytvárajte [vlastné zostavy](engagement-insights/custom-reports.md).
-- [Vytvorte spresnené udalosti](engagement-insights/refined-events.md) pre export.
-- [Exportujte údaje](engagement-insights/export-events.md) do Azure Data Lake Storage.
 
 ## <a name="additional-resources"></a>Ďalšie zdroje
 

@@ -1,27 +1,26 @@
 ---
 title: Bot pre Microsoft Teams
 description: Vyhľadajte jednotné profily zákazníkov v službe Microsoft Teams pomocou bota.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406923"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232121"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot služby Teams pre Dynamics 365 Customer Insights (ukážka)
 
 Pripojte sa k Microsoft Teams, aby mohol bot vyhľadať jednotné profily zákazníkov v kanáloch služby Teams.
 
 > [!div class="mx-imgBorder"]
-> ![Bot Teams, ktorý zobrazuje záznam zákazníka](media/teams-bot.png "Bot Teams, ktorý zobrazuje záznam zákazníka")
+> ![Bot Teams, ktorý zobrazuje záznam zákazníka.](media/teams-bot.png "Bot Teams, ktorý zobrazuje záznam zákazníka")
 
 ## <a name="prerequisites"></a>Predpoklady
 
@@ -31,7 +30,10 @@ Na nastavenie a konfiguráciu bota musia byť splnené nasledujúce predpoklady:
 - [Proces zjednocovania](data-unification.md) je dokončený.
 - Polia sa pridávajú do [indexu vyhľadávania a filtrovania](search-filter-index.md).
 - Customer Insights a Teams sú v rovnakej organizácii.
+- Vaše prostredie má primárne cieľové publikum nastavené na individuálnych zákazníkov. Firemné obchodné vzťahy nie sú podporované.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Konfigurácia bota
 
 1. V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.
@@ -52,3 +54,6 @@ Bot poskytuje možnosti vyhľadávania pre zjednotené profily zákazníkov.
 - Ak vaša organizácia udržiava viac prostredí služby Customer Insights v tej istej organizácii, môžete otvoriť **switchinstance** a vybrať, ku ktorému prostrediu chcete bota pripojiť.
 
 - Zadajte **pomoc**, aby ste videli zoznam dostupných príkazov pre bota.  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

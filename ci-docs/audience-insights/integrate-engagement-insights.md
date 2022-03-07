@@ -2,21 +2,23 @@
 title: Integrácia webových údajov z prehľadov o interakcii s prehľadmi cieľových skupín
 description: Prineste webové informácie o zákazníkoch z prehľadov o interakcii do prehľadov cieľových skupín.
 ms.date: 06/24/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 76a53a897e90152707a7c1255ed5ed93a5f3b5a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+ms.openlocfilehash: 037e264658bc354618cff56a89645ef7552aeb13
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305037"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350564"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrácia webových údajov z prehľadov o interakcii s prehľadmi cieľových skupín
+
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../engagement-insights/includes/cc-beta-prerelease-disclaimer.md)]
 
 Zákazníci často vykonávajú svoje každodenné transakcie online pomocou webových lokalít. Funkcia prehľadov interakcií (verzia Preview) v službe Dynamics 365 Customer Insights predstavuje užitočné riešenie na integráciu webových údajov ako zdroja. Okrem transakčných, demografických údajov alebo údajov o správaní vidíme aktivity na webe v zjednotených zákazníckych profiloch. Tieto profily môžeme použiť na získanie ďalších prehľadov, ako sú segmenty, miery alebo predikcie aktivácie cieľových skupín.
 

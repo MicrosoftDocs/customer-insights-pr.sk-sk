@@ -3,18 +3,20 @@ title: Audit Dynamics 365 Customer Insights s Azure Monitor
 description: Zistite, ako odosielať denníky na Microsoft Azure Monitor.
 ms.date: 12/14/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: article
 author: brndkfr
 ms.author: bkief
 manager: shellyha
-ms.openlocfilehash: d962c359d70a068fcf939b61e340f86de088b419
-ms.sourcegitcommit: 0c3c473e0220de9ee3c1f1ee1825de0b3b3663c3
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 12/14/2021
-ms.locfileid: "7920877"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354427"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)
 
@@ -23,7 +25,7 @@ Dynamics 365 Customer Insights poskytuje priamu integráciu s Azure Monitor. Pro
 Customer Insights odosiela nasledujúce protokoly udalostí:
 
 - **Udalosti auditu**
-  - **APIEvent** - umožňuje sledovanie zmien pomocou Dynamics 365 Customer Insights UI.
+  - **APIEvent** - umožňuje sledovanie zmien prostredníctvom Dynamics 365 Customer Insights UI.
 - **Prevádzkové udalosti**
   - **WorkflowEvent** - Workflow umožňuje nastaviť [Zdroje dát](data-sources.md),[zjednotiť](data-unification.md) a [obohatiť](enrichment-hub.md) a nakoniec [export](export-destinations.md) údaje do iných systémov. Všetky tieto kroky možno vykonať jednotlivo (napr. spustiť jeden export) alebo usporiadať (napr. obnovenie údajov zo zdrojov údajov, ktoré spustí proces zjednotenia, ktorý prinesie ďalšie obohatenia a po dokončení exportuje údaje do iného systému). Viac podrobností nájdete na [WorkflowEvent Schema](#workflow-event-schema).
   - **APIEvent** - všetky volania API do inštancie zákazníkov Dynamics 365 Customer Insights. Viac podrobností nájdete na [Schéma APIEvent](#api-event-schema).
@@ -129,7 +131,7 @@ Udalosti API a udalosti workflow majú spoločnú štruktúru a detaily, kde sa 
 | `resultType`      | String    | Požaduje sa          | Stav udalosti. `Success`,`ClientError`,`Failure`                                                                                                        |                                                                                                                                                                          |
 | `resultSignature` | String    | Voliteľné          | Stav výsledku udalosti. Ak operácia zodpovedá volaniu Rozhranie REST API, je to stavový kód HTTP.        | `200`             |
 | `durationMs`      | Long      | Voliteľné          | Trvanie operácie v milisekundách.     | `133`     |
-| `callerIpAddress` | String    | Voliteľné          | IP adresa volajúceho, ak operácia zodpovedá volaniu API, ktoré prichádza z verejne dostupnej IP adresy.                                                 | `144.318.99.233`         |
+| `callerIpAddress` | String    | Voliteľné          | IP adresa volajúceho, ak operácia zodpovedá volaniu API, ktoré pochádza z verejne dostupnej IP adresy.                                                 | `144.318.99.233`         |
 | `identity`        | String    | Voliteľné          | Objekt JSON popisujúci identitu používateľa alebo aplikácie, ktorá vykonala operáciu.       | Pozri [identita](#identity-schema) oddiele.     |  |
 | `properties`      | String    | Voliteľné          | Objekt JSON s viacerými vlastnosťami pre konkrétnu kategóriu udalostí.      | Pozri [Vlastnosti](#api-properties-schema) oddiele.    |
 | `level`           | String    | Požaduje sa          | Úroveň závažnosti udalosti.    | `Informational`,`Warning`,`Error`, alebo `Critical`.           |
@@ -228,7 +230,7 @@ Udalosti pracovného toku majú nasledujúce vlastnosti.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Áno      | Áno  | Vždy`WorkflowEvent`, čím sa udalosť označí ako udalosť pracovného toku.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Áno      | Áno  | Identifikátor behu pracovného toku. Všetky udalosti pracovného toku a úloh v rámci vykonávania pracovného toku majú rovnaké `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Áno      | Áno  | Identifikátor operácie, pozri [Typy operácií]. (#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Áno      | Áno  | Identifikátor operácie, pozri [Typy operácií].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Áno      | No   | Iba pracovný postup. Počet úloh, ktoré pracovný tok spúšťa.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Áno      | No   | Voliteľné. Iba udalosti pracovného toku. The Azure Active Directory [objectId používateľa](/azure/marketplace/find-tenant-object-id#find-user-object-id) kto spustil pracovný tok, pozri tiež `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Áno      | No   | `full` alebo`incremental` Obnoviť.                                                                                                                                                                                                                            |

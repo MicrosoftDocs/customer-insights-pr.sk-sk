@@ -3,22 +3,24 @@ title: Export údajov služby Customer Insights do Dynamics 365 Marketing
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Dynamics 365 Marketing.
 ms.date: 08/24/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
-ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
-ms.translationtype: HT
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "7975143"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353930"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Použitie segmentov v Dynamics 365 Marketing (ukážka)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Dynamics 365 Marketing umožňuje pomocou [segmentov](segments.md) generovať kampane a kontaktovať konkrétne skupiny zákazníkov. Viac informácií nájdete v článku [Použitie segmentov z Dynamics 365 Customer Insights s Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
 

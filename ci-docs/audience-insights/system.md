@@ -1,20 +1,26 @@
 ---
 title: Konfigurácia systému v prehľadoch cieľových skupín
-description: Získajte informácie o systémových nastaveniach v Dynamics 365 Customer Insights funkcii štatistík publika.
+description: Prečítajte si viac informácií o systémových nastaveniach vo funkcii prehľadov o cieľových skupinách v Dynamics 365 Customer Insights.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732389"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354252"
 ---
 # <a name="system-configuration"></a>Konfigurácia systému
 
@@ -54,13 +60,13 @@ Systém používa pre úlohy a procesy nasledujúce stavy:
 |Obnovuje sa    |Prebieha prijímanie údajov. Túto operáciu môžete zrušiť tak, že v stĺpci **Akcie** vyberiete **Zastaviť obnovovanie**. Zastavenie obnovovania zdroja údajov sa obnoví do posledného stavu obnovenia.       |
 |Vynechané  |Úloha alebo proces boli preskočené. Jeden alebo viac následných procesov, od ktorých závisí táto úloha, zlyháva alebo sú preskočené.|
 |Úspešné  |Úloha alebo proces úspešne dokončený. V prípade zdrojov údajov označuje, že údaje boli úspešne prijaté, ak je v položke uvedený čas **Osviežené** stĺpec.|
-|Vo fronte | Spracovanie je zaradené do frontu a začne sa po dokončení všetkých nadradených úloh a procesov. Ďalšie informácie nájdete v časti [Obnoviť procesy](#refresh-processes).|
+|Vo fronte | Spracovanie je zaradené do frontu a spustí sa po dokončení všetkých nadradených úloh a procesov. Ďalšie informácie nájdete v časti [Obnoviť procesy](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Obnoviť procesy
 
 Obnovenie úloh a procesov prebieha podľa [nakonfigurovaný rozvrh](#schedule-tab). 
 
-|Spracovať  |Popis  |
+|Spracovať  |Description  |
 |---------|---------|
 |Aktivita  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. Štatistiky závisia od spracovania.|
 |Prepojenie analýzy |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
@@ -70,21 +76,25 @@ Obnovenie úloh a procesov prebieha podľa [nakonfigurovaný rozvrh](#schedule-t
 |Obohatenia   |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. |
 |Vývozné destinácie |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
 |Prehľady |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
-|Analýza   |Závisí od zlúčenia.   |
-|Spárovanie |Závisí od spracovania zdrojov údajov použitých v definícii zhody.      |
+|Inteligencia   |Závisí od zlúčenia.   |
+|Match |Závisí od spracovania zdrojov údajov použitých v definícii zhody.      |
 |Miery  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania.  |
 |Zlúčenie   |Závisí od úspešného ukončenia procesu zhody. Segmenty, miery, obohatenie, vyhľadávanie, aktivity, predikcie a príprava dát závisia od úspešného ukončenia tohto procesu.   |
 |Profily   |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. |
 |Vyhľadávať   |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. |
 |Segmenty  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. Štatistiky závisia od spracovania.|
 |Systémové   |Závisí od úspešného ukončenia procesu zhody. Segmenty, miery, obohatenie, vyhľadávanie, aktivity, predikcie a príprava dát závisia od úspešného ukončenia tohto procesu.   |
-|Používateľ  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od subjektov.  |
+|User  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od subjektov.  |
 
-Výberom stavu procesu zobrazíte podrobnosti o priebehu celej úlohy, v ktorej sa nachádzal. Vyššie uvedené procesy obnovenia vám môžu pomôcť pochopiť, čo môžete urobiť, aby ste vyriešili problém a **Preskočené** alebo **Vo fronte** úloha alebo proces.
+Výberom stavu procesu zobrazíte podrobnosti o priebehu celej úlohy, v ktorej sa nachádzal. Vyššie uvedené procesy obnovy vám môžu pomôcť pochopiť, čo môžete urobiť, aby ste vyriešili a **Preskočené** alebo **Vo fronte** úloha alebo proces.
 
 ## <a name="schedule-tab"></a>Karta Plán
 
 Použite kartu **Plán** na naplánovanie automatického obnovenie všetkých vašich [prijatých zdrojov údajov](data-sources.md). Automatické obnovovanie pomáha zaistiť, aby sa aktualizácie z vašich zdrojov údajov prejavili vo vašich zjednotených profiloch zákazníkov.
+
+> [!NOTE]
+> Vami spravované zdroje údajov sa obnovujú podľa vlastných plánov. Ak chcete naplánovať obnovenie vami spravovaných zdrojov údajov, nakonfigurujte nastavenia obnovenia na tomto konkrétnom zdroj údajov z **Zdroje dát** stránku.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Nastavenia obnovenia toku údajov.":::
 
 1. V prehľadoch cieľových skupín prejdite na **Správca** > **Systém** a vyberte kartu **Plán**.
 

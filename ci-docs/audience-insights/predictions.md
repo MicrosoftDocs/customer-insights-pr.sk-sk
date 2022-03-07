@@ -1,24 +1,28 @@
 ---
 title: Doplnenie čiastkových údajov pomocou predikcií
 description: Použite predikcie na vyplnenie neúplných údajov o zákazníkoch.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692546"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354022"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Doplňte svoje predbežné údaje o predikcie
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Doplňte svoje čiastočné údaje o prognózy (zastarané)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Táto funkcia bude **zastarané** ku dňu **5. novembra 2021**. Aktuálne implementácie budú fungovať až do odstránenia funkcie, ale pomocou pokynov nižšie nebudete môcť vytvárať nové integrácie.
 
 Predikcie vám umožňujú ľahko vytvárať predikované hodnoty, ktoré môžu zlepšiť vaše pochopenie zákazníka. Na stránke **Analýza** > **Predikcie** môžete vybrať **Moje predikcie** a zobraziť predikcie, ktoré ste nakonfigurovali v iných častiach štatistík o cieľovej skupine, a môžete ich ďalej prispôsobovať.
 
@@ -35,7 +39,7 @@ Predtým ako bude vaša organizácia môcť používať funkciu predikcií, skon
 
 2. Prostredie vášho prehľadu cieľovej skupiny je prepojené s vašou inštanciou Dataverse.
 
-Keď [vytvárate nové prostredie](get-started-paid.md), nakonfigurujte ho v dialógovom okne **Vytvorenie prostredia** a vyberte možnosť **Pokročilé**. Ak ste už vytvorili prostredie, prejdite na jeho nastavenia a vyberte položku **Pokročilé**. V každom prípade v sekcii **Používať predikcie** zadajte adresu URL inštancie Dataverse, ku ktorej chcete pripojiť svoje prostredie.
+Ďalšie informácie nájdete v téme [Vytvorenie nového prostredia](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Vytvorenie predikcie v entite Zákazník
 
@@ -60,6 +64,8 @@ Keď [vytvárate nové prostredie](get-started-paid.md), nakonfigurujte ho v dia
    > ![Príklad, ktorý zobrazuje hodnoty mapovaných hodnôt polí do kategórií.](media/intelligence-categorymapping.png "Príklad, ktorý zobrazuje hodnoty mapovaných hodnôt polí do kategórií")
 
 8. Vyberte **Hotovo** a predikcia sa spracuje. Spracovanie bude nejaký čas trvať, v závislosti od veľkosti a zložitosti údajov. Výsledky budú k dispozícii v novej entite založenej na predikcii **Názve výstupnej entity**, ktorú ste vytvorili.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Vytvorenie predikcie pri vytváraní segmentu
 
@@ -110,7 +116,7 @@ V rámci tohto toku vyberiete konkrétny atribút, ktorý bude základom vášho
 
 ## <a name="edit-a-prediction"></a>Úprava predikcie
 
-Po vytvorení predikcie môžete model v nástroji AI Builder prispôsobiť tak, aby sa zvýšila jeho účinnosť.  
+Po vytvorení predikcia si môžete prispôsobiť model v AI Builder na zvýšenie efektivity vášho modelu.  
 
 1. V prehľadoch cieľových skupín prejdite na **Analýza** > **Predikcie** > **Moje predikcie**.
 
@@ -118,14 +124,14 @@ Po vytvorení predikcie môžete model v nástroji AI Builder prispôsobiť tak,
 
 3. Vyberte tri bodky v stĺpci **Akcie** a vyberte **Zobraziť**.
 
-4. Vyberte **Prispôsobiť v nástroji AI Builder**.
+4. Vyberte **Prispôsobiť v AI Builder**.
 
-5. Aktualizujte svoj model v nástroji AI Builder. [Prečítajte si viac informácií o správe modelov v nástroji AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Aktualizujte svoj model v AI Builder. [Prečítajte si viac informácií o správe modelov v nástroji AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Pri ďalšom spustení predikcie sa použije aktualizovaný model, ktorý ste vytvorili.
 
 > [!NOTE]
-> Nové modely vytvorené v aplikácii AI Builder sa nebudú zobrazovať v štatistikách publika, pokiaľ nebol model vytvorený z vyššie uvedených prostredí.
+> Nové modely vytvorené v r AI Builder sa nebudú zobrazovať v štatistikách publika, pokiaľ model nebol vytvorený na základe skúseností uvedených vyššie.
 
 ## <a name="remove-a-prediction"></a>Odstránenie predikcie
 
