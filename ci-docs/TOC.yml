@@ -2,64 +2,40 @@
   href: index.yml
 - name: Prehľad produktu
   href: overview.md
-- name: Katalóg Learning
-  items:
-    - name: Začať
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: Príjem údajov
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: Vytvorenie zjednoteného profilu zákazníka
-      href: /learn/modules/unified-customer-profile/
-    - name: Pracujte so štatistikami publika
-      href: /learn/modules/working-with-customer-insights/
-    - name: Obohacujte údaje a vytvárajte predpovede
-      href: /learn/modules/enrich-data/
-    - name: Spravujte externé pripojenia
-      href: /learn/modules/configure-third-party-connections/
-    - name: Správa Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
-- name: Bezplatná skúšobná verzia
-  items:
-    - name: Registrácia na získanie bezplatnej skúšobnej verzie
-      href: trial-signup.md
-    - name: Skúšobná verzia – najčastejšie otázky
-      href: trial-FAQ.md
-- name: Začnite s platenou licenciou
-  href: paid-license.md
 - name: Prístup k prostrediu
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Prehľady cieľových skupín
+- name: Audience Insights
   items:
     - name: Centrum pomoci
       href: audience-insights/index.yml
     - name: Prehľad funkcií
       href: audience-insights/overview.md
+    - name: Bezplatná skúšobná verzia
+      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: "Nové a\_aktualizované funkcie"
       href: audience-insights/whats-new-audience-insights.md
-    - name: Začať
+    - name: Vytvoriť nové prostredie
+      href: audience-insights/home.md
+    - name: Výuka modulov
       items:
-        - name: Príručka rýchlej konfigurácie
-          href: audience-insights/get-started.md
-        - name: Vytvoriť nové prostredie
-          href: audience-insights/create-environment.md
-        - name: Preskúmajte prehľady cieľových skupín
-          href: audience-insights/home.md
-    - name: "Práca s\_firemnými obchodnými vzťahmi"
-      href: audience-insights/work-with-business-accounts.md
+        - name: Príjem údajov
+          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+        - name: Vytvorenie zjednoteného profilu zákazníka
+          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+        - name: "Práca s\_aplikáciou"
+          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+        - name: Obohatenie údajov a predikcií
+          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
     - name: Zdroje údajov
       items:
         - name: Prehľad zdrojov údajov
           href: audience-insights/data-sources.md
-        - name: Pridajte zdroje údajov cez Power Query konektory
+        - name: Pridanie zdrojov údajov prostredníctvom konektorov Power Query
           href: audience-insights/connect-power-query.md
         - name: Pridanie priečinku bežného dátového modelu ako zdroj údajov
           href: audience-insights/connect-common-data-model.md
-        - name: Pridanie dátového jazera spravovaného cez Dataverse
-          href: audience-insights/connect-dataverse-managed-lake.md
-        - name: Pridanie služby Azure Synapse Analytics
-          href: audience-insights/connect-synapse.md
-        - name: Obohatenie pre zdroje údajov
-          href: audience-insights/data-sources-enrichment.md
+        - name: Pridanie dátového jazera spravovaného cez Common Data Service
+          href: audience-insights/connect-common-data-service-lake.md
         - name: Prírastková obnova pre zdroje údajov
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Prijímanie údajov v reálnom čase
@@ -84,231 +60,179 @@
           href: audience-insights/relationships.md
         - name: Vypísať aktivity zákazníka
           href: audience-insights/activities.md
-        - name: Definícia sémantického mapovania
-          href: audience-insights/semantic-mappings.md
     - name: Obohatenie údajov
       items:
         - name: Obohatenie profilov zákazníkov
           href: audience-insights/enrichment-hub.md
-        - name: Značky a záujmy
-          href: audience-insights/enrichment-microsoft.md
-        - name: Vylepšené adresy
-          href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Rozšírené firemné údaje
-          href: audience-insights/enrichment-enhanced-company-data.md
-        - name: Obohatiť o funkcie Azure Maps
-          href: audience-insights/enrichment-azure-maps.md
+        - name: Afinity značiek a záujmov
+          href: audience-insights/enrichment-microsoft-graph.md
         - name: Obohatenie údajov so spoločnosťou HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Obohatenie pomocou Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Obohaťte pomocou LiveRamp
-          href: audience-insights/enrichment-liveramp.md
-        - name: Obohatiť o Experian
+        - name: Obohatenie pomocou spoločnosti Experian
           href: audience-insights/enrichment-experian.md
-        - name: Obohatiť o Office 365 údajov
-          href: audience-insights/enrichment-office.md
         - name: Obohatenie pomocou vlastného importu SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmenty
+    - name: Segmenty a miery
       items:
-        - name: Prehľad segmentov
+        - name: Vytvárajte segmenty a skupiny zákazníkov
           href: audience-insights/segments.md
-        - name: Vytvorenie segmentov
-          href: audience-insights/segment-builder.md
-        - name: Segmenty navrhované na základe opatrení
-          href: audience-insights/suggested-segments.md
-        - name: Segmenty navrhované na základe aktivity
-          href: audience-insights/suggested-segments-activity.md
         - name: Získajte informácie o segmentoch
           href: audience-insights/segment-insights.md
+        - name: Pozrite navrhované segmenty
+          href: audience-insights/suggested-segments.md
         - name: Nájsť podobných zákazníkov
           href: audience-insights/find-similar-customer-segments.md
-    - name: Miery
-      items:
-        - name: Prehľad opatrení
+        - name: Definujte opatrenia a kľúčové ukazovateľ výkonnosti
           href: audience-insights/measures.md
-        - name: Vytvorte nové opatrenie
-          href: audience-insights/measure-builder.md
-        - name: Použite šablónu merania
-          href: audience-insights/measure-templates.md
     - name: Predikcie
       items:
-        - name: Predikujte údaje pomocou AI
-          items:
-            - name: Prehľad modelov predikcie
-              href: audience-insights/predictions-overview.md
-            - name: Predikcia hodnoty životnosti zákazníka (CLV)
-              href: audience-insights/predict-customer-lifetime-value.md
-            - name: Predikcia odporúčaní produktov
-              href: audience-insights/predict-product-recommendation.md
-            - name: Predikcia straty predplatného
-              href: audience-insights/predict-subscription-churn.md
-            - name: Predikcia úbytku transakcií
-              href: audience-insights/predict-transactional-churn.md
-            - name: Analyzujte sentiment v spätnej väzbe zákazníkov
-              href: audience-insights/sentiment-analysis.md
-            - name: Používajte vlastné modely zo strojového učenia Azure
-              href: audience-insights/custom-models.md
-            - name: Vyplňte čiastočne chýbajúce údaje
-              href: audience-insights/predictions.md
-        - name: Ukážkoví sprievodcovia
-          items:
-            - name: Ukážkový sprievodca pre predikciu CLV
-              href: audience-insights/sample-guide-predict-clv.md
-            - name: Vzorový sprievodca – predikcia odchodu predplatiteľov
-              href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Ukážkový sprievodca pre predikciu úbytku transakcií
-              href: audience-insights/sample-guide-predict-transactional-churn.md
-            - name: Predikcia odporúčania produktov – vzorový sprievodca
-              href: audience-insights/sample-guide-predict-product-recommendation.md
-            - name: Pokusy so strojovým učením Azure
-              href: audience-insights/azure-machine-learning-experiments.md
-        - name: Spravovanie predikcií
-          href: audience-insights/manage-predictions.md
-        - name: Vytvorenie segmentov na základe predikcií
-          href: audience-insights/prediction-based-segment.md
+        - name: Vyplňte údaje pomocou predikcií hodnôt
+          href: audience-insights/predictions.md
+        - name: Predikcia straty predplatného
+          href: audience-insights/predict-subscription-churn.md
+        - name: Vzorový sprievodca – predikcia odchodu predplatiteľov
+          href: audience-insights/sample-guide-predict-subscription-churn.md
+        - name: Predikcia odchodov založených na transakciách
+          href: audience-insights/predict-transactional-churn.md
+        - name: Vzorový sprievodca – predikcia odchodov založená na transakciách
+          href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Predikcia hodnoty životnosti zákazníka (CLV)
+          href: audience-insights/predict-customer-lifetime-value.md
+        - name: Predikcia odporúčaní produktov
+          href: audience-insights/predict-product-recommendation.md
+        - name: Predikcia odporúčania produktov – vzorový sprievodca
+          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Implementujte vlastné modely strojového učenia
+          href: audience-insights/custom-models.md
+        - name: Pokusy so strojovým učením Azure
+          href: audience-insights/azure-machine-learning-experiments.md
+        - name: Experimenty so štúdiom strojového učenia platformy Azure
+          href: audience-insights/machine-learning-studio-experiments.md
     - name: Možnosti exportu
       items:
-        - name: Exporty
-          items:
-            - name: Prehľad exportov
-              href: audience-insights/export-destinations.md
-            - name: Aktívna kampaň
-              href: audience-insights/export-active-campaign.md
-            - name: AdRoll
-              href: audience-insights/export-adroll.md
-            - name: Autopilot
-              href: audience-insights/export-autopilot.md
-            - name: Úložisko Azure Blob
-              href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
-              href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
-              href: audience-insights/export-azure-synapse-analytics.md
-            - name: Adobe Campaign Standard
-              href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
-              href: audience-insights/export-adobe-experience-platform.md
-            - name: Campaign Monitor
-              href: audience-insights/export-campaign-monitor.md
-            - name: Constant Contact
-              href: audience-insights/export-constant-contact.md
-            - name: DotDigital
-              href: audience-insights/export-dotdigital.md
-            - name: "Dynamics\_365 Marketing"
-              href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 Sales
-              href: audience-insights/export-dynamics365-sales.md
-            - name: Správca reklám Facebook
-              href: audience-insights/export-facebook.md
-            - name: Reklamy Google
-              href: audience-insights/export-google-ads.md
-            - name: Klaviyo
-              href: audience-insights/export-klaviyo.md
-            - name: LinkedIn Ads
-              href: audience-insights/export-linkedin-ads.md
-            - name: LiveRamp
-              href: audience-insights/export-liveramp.md
-            - name: Mailchimp
-              href: audience-insights/export-mailchimp.md
-            - name: Marketo
-              href: audience-insights/export-marketo.md
-            - name: Microsoft Advertising
-              href: audience-insights/export-microsoft-advertising.md
-            - name: Omnisend
-              href: audience-insights/export-omnisend.md
-            - name: RollWorks
-              href: audience-insights/export-rollworks.md
-            - name: Salesforce Marketing Cloud
-              href: audience-insights/export-salesforce.md
-            - name: SendGrid
-              href: audience-insights/export-sendgrid.md
-            - name: SendInBlue
-              href: audience-insights/export-sendinblue.md
-            - name: Snapchat
-              href: audience-insights/export-snapchat.md
-            - name: SFTP
-              href: audience-insights/export-sftp.md
-        - name: Iné použitia
-          items:
-            - name: Doplnok Customer Card pre Dynamics 365
-              href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (bot)
-              href: audience-insights/export-teams-bot.md
-            - name: Power Apps
-              href: audience-insights/export-power-apps.md
-            - name: Power Automate
-              href: audience-insights/export-power-automate.md
-            - name: Power BI
-              href: audience-insights/export-power-bi.md
+        - name: Prehľad cieľov exportu
+          href: audience-insights/export-destinations.md
+        - name: Autopilot
+          href: audience-insights/export-autopilot.md
+        - name: Azure Blob Storage
+          href: audience-insights/export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: audience-insights/export-azure-data-lake-storage-gen2.md
+        - name: DotDigital
+          href: audience-insights/export-dotdigital.md
+        - name: "Dynamics\_365 Customer Service (doplnok)"
+          href: audience-insights/customer-card-add-in.md
+        - name: "Dynamics\_365 Marketing"
+          href: audience-insights/export-dynamics365-marketing.md
+        - name: Dynamics 365 for Sales
+          href: audience-insights/export-dynamics365-sales.md
+        - name: Centrum predaja Dynamics 365 (doplnok)
+          href: audience-insights/customer-card-add-in.md
+        - name: Správca reklám Facebook
+          href: audience-insights/export-facebook.md
+        - name: Reklamy Google
+          href: audience-insights/export-google-ads.md
+        - name: LiveRamp
+          href: audience-insights/export-liveramp.md
+        - name: Mailchimp
+          href: audience-insights/export-mailchimp.md
+        - name: Microsoft Teams (bot)
+          href: audience-insights/export-teams-bot.md
+        - name: Marketo
+          href: audience-insights/export-marketo.md
+        - name: Power BI
+          href: audience-insights/export-power-bi.md
+        - name: Power Apps
+          href: audience-insights/export-power-apps.md
+        - name: Power Automate
+          href: audience-insights/export-power-automate.md
+        - name: SendGrid
+          href: audience-insights/export-sendgrid.md
+        - name: SFTP
+          href: audience-insights/export-sftp.md
     - name: Správa
       items:
         - name: Nastavte konfiguráciu systému
           href: audience-insights/system.md
         - name: Priradenie používateľských povolení
           href: audience-insights/permissions.md
-        - name: Prehľad pripojení
-          href: audience-insights/connections.md
         - name: Správa viacerých prostredí
           href: audience-insights/manage-environments.md
-        - name: Zabezpečenie
-          items:
-            - name: Vlastná služba Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: Pripojenie k úložisku ADLS pomocou objektu služby
-              href: audience-insights/connect-service-principal.md
-            - name: Exportujte diagnostické protokoly
-              href: audience-insights/diagnostics.md
+        - name: Pripojenie k úložisku ADLS pomocou objektu služby
+          href: audience-insights/connect-service-principal.md
+        - name: Podporované jazyky
+          href: audience-insights/supported-languages.md
     - name: Rozšíriteľnosť
       items:
+        - name: Integrácia webových údajov z prehľadov o interakcii
+          href: audience-insights/integrate-engagement-insights.md
         - name: Kontrola schém entít v Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Údaje riešenia Customer Insights v Dataverse
-          href: audience-insights/customer-insights-dataverse.md
         - name: "Práca s\_API"
           href: audience-insights/apis.md
         - name: Odkazy na API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Správa súhlasu (ukážka)
+    - name: Obmedzenia služby
+      href: audience-insights/service-limits.md
+    - name: Žiadosti o DSR podľa GDPR
+      href: audience-insights/gdpr.md
+- name: Prehľady interakcií (Preview)
   items:
     - name: Centrum pomoci
-      href: consent-management/index.yml
+      href: engagement-insights/index.yml
     - name: Prehľad funkcií
-      href: consent-management/overview.md
+      href: engagement-insights/overview.md
+    - name: Bezplatná skúšobná verzia
+      href: 'https://pi.dynamics.com/'
     - name: Začať
       items:
         - name: Začať
-          href: consent-management/get-started.md
+          href: engagement-insights/get-started.md
+        - name: Vytvorenie pracovného priestoru
+          href: engagement-insights/create-workspace.md
+        - name: Vybavenie vašej stránky nástrojmi
+          href: engagement-insights/instrument-website.md
         - name: Koncepty a terminológia
-          href: consent-management/glossary.md
-    - name: Import údajov o súhlase
+          href: engagement-insights/glossary.md
+    - name: Udalosti
       items:
-        - name: Import údajov o súhlase
-          href: consent-management/import-consent-data.md
-        - name: Nastavte údaje o súhlase a použite predvoľby súhlasu
-          href: consent-management/set-consent-rules.md
-    - name: Spravujte údaje o súhlase
+        - name: Vytváranie a úprava udalostí
+          href: engagement-insights/refined-events.md
+        - name: Export udalostí
+          href: engagement-insights/export-events.md
+    - name: Zostavy
       items:
-        - name: Povoľte pravidlá súhlasu v štatistikách publika
-          href: audience-insights/activate-consent.md
-        - name: Spravujte predvolené pravidlá súhlasu v segmentoch štatistík publika
-          href: audience-insights/change-default-consent-rules.md
-    - name: Spravujte nastavenia a používateľov
+        - name: Zobraziť zostavy
+          href: engagement-insights/view-reports.md
+        - name: Vytváranie vlastných zostáv
+          href: engagement-insights/custom-reports.md
+        - name: Vytváranie jednotných zostáv profilov
+          href: engagement-insights/profile-reports.md
+    - name: Zdroje pre vývojárov
       items:
-        - name: Nakonfigurujte systémové nastavenia
-          href: consent-management/system-settings.md
-        - name: Spravujte používateľov a povolenia
-          href: consent-management/manage-users.md
-    - name: Použite údaje o súhlase
+        - name: Prehľad zdrojov pre vývojárov
+          href: engagement-insights/developer-resources.md
+        - name: Kurz pre webové rozhranie SDK
+          href: engagement-insights/advanced-SDK-implementation.md
+        - name: Ukážka webového rozhrania SDK
+          href: engagement-insights/websdk-sample.md
+    - name: Správa
       items:
-        - name: Vytvárajte predpovede s údajmi o súhlase
-          href: consent-management/predictions-consent-data.md
-- name: Prehľady interakcií (Preview)
-  href: engagement-insights/overview.md
-- name: Obmedzenia služby
-  href: service-limits.md
-- name: Práva a požiadavky DSR
-  href: dsr-rights-requests.md
-- name: Získanie podpory
-  href: /power-platform/admin/get-help-support
+        - name: "Roly a\_povolenia"
+          href: engagement-insights/user-roles.md
+        - name: Spravovanie prostrední a pracovných priestorov
+          href: engagement-insights/manage-environments-workspaces.md
+        - name: Konfigurácia pripojení
+          href: engagement-insights/configure-connections.md
+        - name: Spravovanie súborov cookie súhlasov používateľa
+          href: engagement-insights/user-consent-storage.md
+    - name: GDPR
+      items:
+        - name: Odstraňovanie a export osobných údajov
+          href: engagement-insights/delete-export-personal-data.md
+    - name: Obmedzenia služby
+      href: engagement-insights/quotas.md
+- name: Obrátiť sa na oddelenie technickej podpory
+  href: 'https://admin.powerplatform.microsoft.com/support'

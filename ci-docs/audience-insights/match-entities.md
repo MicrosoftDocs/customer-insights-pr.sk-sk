@@ -2,6 +2,7 @@
 title: Priraďovanie entít na účely zjednotenia údajov
 description: Priraďujte entity na účely vytvorenia jednotných profilov zákazníkov.
 ms.date: 02/07/2022
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
@@ -10,15 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-- ci-merge
-- ci-map
-- customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372646"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098854"
 ---
 # <a name="match-entities"></a>Priradenie entít
 
@@ -79,7 +77,7 @@ Varovanie **Vyžadujú sa pravidlá** vedľa názvu entity naznačuje, že pre p
      - Medzery: Odstráni všetky medzery. *Ahoj svet* sa stáva *HelloWorld*.
 
    - **Presnosť**: Nastavte úroveň presnosti, ktorá sa má použiť pre túto podmienku. 
-     - **Základné**: Vyber z možností *Nízka*, *Stredná*, *Vysoká* a *Presná*. Vyberte **Presne** aby sa zhodovali iba záznamy, ktoré sa stopercentne zhodujú. Vyberte jednu z ďalších úrovní, aby sa zosúladili záznamy, ktoré nie sú na 100 percent identické.
+     - **Základné**: Vyber z možností *Nízka*, *Stredná*, *Vysoká* a *Presná*. Vyberte **Presne** aby sa zhodovali iba záznamy, ktoré sa na 100 percent zhodujú. Vyberte jednu z ďalších úrovní, aby sa zosúladili záznamy, ktoré nie sú na 100 percent identické.
      - **Vlastné**: Nastavte percento, ktorému sa musia záznamy zhodovať. Systém bude porovnávať iba záznamy prekračujúce tento limit.
 
 1. Zadajte **Názov** pre položku pravidla.
@@ -180,17 +178,7 @@ Entita deduplikovaného výstupu obsahuje nasledujúce informácie:
   - Deduplication_WinnerId: Toto pole obsahuje ID víťaza z identifikovaných skupín alebo klastrov. Ak je hodnota Deduplication_WinnerId rovnaká ako hodnota primárneho kľúča pre záznam, znamená to, že záznam je víťazným záznamom.
 - Polia používané na definovanie pravidiel deduplikácie.
 - Polia Pravidlo a Skóre označujú, ktoré z pravidiel deduplikácie sa použili a skóre vrátené algoritmom párovania.
- 
-## <a name="include-enriched-entities-preview"></a>Zahrnúť obohatené entity (ukážka)
-
-Ak ste obohatili entity na úrovni zdroj údajov, vyberte ich pred spustením procesu zhody. Obohatené entity môžu zlepšiť vaše výsledky zjednotenia. Viac informácií nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md). 
-
-1. Ísť do **Údaje** > **Zjednotiť** > **Zápas** a vyberte **Použite obohatené entity** v hornej časti stránky.
-
-1. Od **Použite obohatené entity** vyberte jednu alebo viacero obohatených entít.
-
-1. Vyberte položku **Hotovo**. Kdekoľvek sa použije zdrojová entita (napríklad poradie alebo pravidlá zhody), automaticky sa zmení na obohatenú entitu.
-  
+   
 ## <a name="run-the-match-process"></a>Spustenie procesu spárovania
 
 Po konfigurovaní pravidiel priraďovania vrátane pravidiel priradenia medzi entitami a pravidiel deduplikácie môžete spustiť proces priraďovania. 
@@ -264,7 +252,7 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
 |Možnosť  |Description |Príklad  |
 |---------|---------|---------|
 |Vždy sa zhodovať     | Definuje hodnoty, ktoré sa vždy zhodujú.         |  Vždy sa zhodujú *Mike* a *MikeR*.       |
-|Nikdy sa nezhodovať     | Definuje hodnoty, ktoré sa nikdy nezhodujú.        | Nikdy sa nezhodujú *John* a *Jonathan*.        |
+|Nikdy sa nezhodovať     | Definuje hodnoty, ktoré sa nikdy nezhodujú.        | Nikdy sa nezhodujte *John* a *Jonathan*.        |
 |Vlastné obídenie     | Definuje hodnoty, ktoré by mal systém vždy ignorovať vo fáze zápasu. |  Ignorujte hodnoty *11111* a *Neznámy* počas zápasu.        |
 |Mapovanie aliasu    | Definovanie hodnôt, ktoré by mal systém považovať za rovnakú hodnotu.         | Zvážte *Joe* byť rovný *Jozefa*.        |
 

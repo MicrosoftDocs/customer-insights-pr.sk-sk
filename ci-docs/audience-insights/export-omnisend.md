@@ -1,19 +1,20 @@
 ---
 title: Export údajov Customer Insights do Omnisend
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Omnisend.
-ms.date: 10/08/2021
+ms.date: 05/21/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 15fc6fc2426ad3958268e5bcc200b8eb2b0fd13a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226793"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124550"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Export segmentov do Omnisend (verzia Preview)
 
@@ -27,9 +28,9 @@ Exportujte segmenty zjednotených profilov zákazníkov do Omnisend a použite i
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Môžete exportovať až 1 milión profilov zákazníkov na export do služby Omnisend, čo môže trvať až 4 hodiny.
+- Pri jednom exporte do Omnisend môžete exportovať až 1 milión profilov a jeho dokončenie môže trvať až 4 hodiny.
 - Exportovanie do Omnisend je obmedzené na segmenty.
-- Počet profilov zákazníkov, ktoré môžete exportovať do služby Omnisend, závisí od vašej zmluvy so spoločnosťou Omnisend.
+- Počet profilov, ktoré môžete exportovať do Omnisend, závisí od vašej zmluvy s Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Nastavenie pripojenia k Omnisend
 
@@ -61,7 +62,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. V poli **Pripojenie na export** vyberte pripojenie v časti Omnisend. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
 
-1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Je potrebné exportovať segmenty do Omnisend. Voliteľne možno exportovať Meno, Priezvisko, Adresu, Krajinu/oblasť, Štát, Mesto a PSČ a vytvoriť si viac prispôsobené e-maily. Výberom položky **Pridať atribút** namapujete tieto polia.
+1. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Je potrebné exportovať segmenty do Omnisend. Voliteľne možno exportovať Meno, Priezvisko, Adresu, Krajinu/oblasť, Štát, Mesto a PSČ a vytvoriť si viac prispôsobené e-maily. Výberom položky **Pridať atribút** namapujete tieto polia.
 
 1. Vyberte položku **Uložiť**.
 

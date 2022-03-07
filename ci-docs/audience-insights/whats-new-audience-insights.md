@@ -1,23 +1,24 @@
 ---
 title: Nové a prichádzajúce funkcie
 description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 03/02/2022
+ms.date: 07/19/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232723"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035982"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Sme radi, že môžeme oznámiť naše najnovšie aktualizácie! Tento článok sumarizuje funkcie verejnej ukážky, vylepšenia všeobecnej dostupnosti a aktualizácie funkcií. Ak chcete zobraziť dlhodobé plány pre funkcie, pozrite si [Plány vydaní Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
@@ -25,131 +26,6 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
-
-
-## <a name="january-2022-updates"></a>Aktualizácie z januára 2022
-
-Aktualizácie v januári 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
-
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analýza sentimentu spätnej väzby vášho zákazníka
-
-Customer Insights poskytuje novú funkciu poháňanú umelou inteligenciou, ktorá syntetizuje sentiment zákazníkov a identifikuje špecifické obchodné aspekty ako príležitosti na cielené zlepšenia. Analýzou písomnej spätnej väzby vašich zákazníkov môžete získať presné informácie pri nízkych nákladoch. Analýza sentimentu založená na modeloch spracovania prirodzeného jazyka (NLP), ktoré generujú dva odvodené štatistiky pre každé ID zákazníka. Skóre sentimentu (od –5 do 5) a zoznam príslušných obchodných aspektov. 
-
-Ďalšie informácie nájdete v časti [Analyzujte sentiment v spätnej väzbe zákazníkov (ukážka)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>Aktualizácie systému z decembra 2021
-
-Aktualizácie v decembri 2021 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Preposielajte denníky Customer Insights do Azure Monitor
-
-Customer Insights poskytuje priamu integráciu s Azure Monitor. Táto funkcia zahŕňa udalosti auditu a prevádzkové udalosti. Denníky prostriedkov Azure Monitor vám umožňujú monitorovať a odosielať denníky do Azure Storage, Azure Log Analytics alebo ich streamovať do Azure Event Hubs.
-
-Ďalšie informácie nájdete v časti [Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Obohaťte profily zákazníkov o údaje o interakciách
-
-Použiť údaje z Microsoft Office 365 obohatiť profily svojich zákazníckych účtov o informácie o interakciách prostredníctvom Office 365 aplikácie. Údaje o interakciách pozostávajú z e-mailov a aktivít na stretnutiach, ktoré sú agregované na úrovni účtu. Napríklad počet e-mailov z obchodného účtu alebo počet stretnutí s účtom. Nezdieľajú sa žiadne údaje o jednotlivých používateľoch. Toto obohatenie je dostupné v nasledujúcich regiónoch: Spojené kráľovstvo, Európa, Severná Amerika.
-
-Ďalšie informácie nájdete v časti [Obohaťte profily zákazníkov o údaje o interakciách (ukážka)](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Pokročilé funkcie zjednotenia údajov
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Povoľte politiky riešenia konfliktov na úrovni jednotlivých atribútov
-
-Pri deduplikácii záznamov zákazníkov v rámci entity možno nebudete chcieť, aby ste ako víťaza museli vybrať úplný záznam. Teraz vám umožňujeme zlúčiť najlepšie polia z rôznych záznamov na základe pravidiel pre každý atribút. Môžete sa napríklad rozhodnúť ponechať najnovší e-mail A najkompletnejšiu adresu z rôznych záznamov. 
-
-Teraz môžete definovať samostatné pravidlá zlučovania pre jednotlivé atribúty pri deduplikácii a zlučovaní záznamov v rámci jednej entity. Predtým sme vám umožnili vybrať iba jedno pravidlo zlúčenia (uchovávanie záznamov na základe úplnosti údajov o aktuálnosti) a toto pravidlo sa aplikovalo na úrovni záznamu na všetky atribúty. To nie je ideálne, keď sa niektoré údaje, ktoré si chcete ponechať, nachádzajú v zázname A a iné dobré údaje v zázname B.
-
-Viac informácií nájdete v časti [Definícia deduplikácie v entite párovania](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Vlastné pravidlá pre párovanie
-
-Sú chvíle, keď potrebujete špecifikovať výnimku zo všeobecných pravidiel, aby sa NEPREHODOVALI záznamy. To sa môže stať, keď viacerí jednotlivci zdieľajú dostatok informácií, aby ich systém priradil ako jedného jednotlivca. Napríklad dvojčatá s rovnakým priezvisko, ktoré žijú v rovnakom meste a zdieľajú dátum narodenia.
-
-Výnimky zabezpečujú, že nesprávne zjednotenie údajov bude možné riešiť v pravidlách zjednotenia. K pravidlu môžete pridať viacero výnimiek.
-
-Ďalšie informácie nájdete v časti [Pridajte do pravidla výnimky](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Poskytnite ďalšie politiky riešenia konfliktov a povoľte zoskupovanie atribútov
-
-Táto funkcia vám umožňuje zaobchádzať so skupinou polí ako s jednou jednotkou. Napríklad, ak naše záznamy obsahujú polia Adresa1, Adresa2, Mesto, Štát a PSČ. Pravdepodobne sa nechceme zlúčiť do adresy2 iného záznamu, pretože si myslíme, že by to urobilo naše údaje úplnejšími.
-
-Teraz môžete skombinovať skupinu súvisiacich polí a použiť na skupinu jednu politiku zlúčenia. 
-
-Ďalšie informácie nájdete v časti [Skombinujte skupinu polí](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>Aktualizácie z novembra 2021
-
-Aktualizácie v novembri 2021 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>Členstvo v segmente je teraz k dispozícii v Dataverse
-
-Informácie o členstve v segmentoch pre profily zákazníkov sú teraz k dispozícii v Dataverse spolu s profilmi a prehľadmi zákazníkov. Akčné aplikácie Dynamics 365 a aplikácie s podporou modelov môžu tieto údaje použiť na vyhľadávanie podrobností o členstve v segmente pre daného zákazníka.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivity podporujú podrobnosti na úrovni kontaktov pre firemné účty
-
-Teraz môžete konfigurovať, zobrazovať a filtrovať aktivity pre kontakty na časových osách aktivít vášho firemného účtu, aby ste lepšie pochopili, ktoré kontakty účtu sa zúčastnili na konkrétnych aktivitách.
-
-## <a name="october-2021-updates"></a>Aktualizácie z októbra 2021
-
-Aktualizácie v októbri 2021 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
-
-### <a name="b-to-b"></a>B-to-B
-
-Od októbra 2021 môžete v Customer Insights pracovať s firemnými účtami a ich súvisiacimi kontaktmi. Predtým bola aplikácia väčšinou prispôsobená individuálnym spotrebiteľom. Niekoľko oblastí funkcií bolo aktualizovaných tak, aby podporovali scenáre B-to-B nad rámec nového typu prostredia. Prehľad podporovaných funkcií B-to-B nájdete v časti [Pracujte s firemnými účtami v štatistikách publika](work-with-business-accounts.md).
-
-Nasledujúce časti zdôrazňujú niektoré z kľúčových oblastí, ktoré boli prispôsobené na podporu obchodných účtov a individuálnych spotrebiteľov.
-
-#### <a name="export-segments-based-on-business-accounts"></a>Export segmentov na základe obchodných účtov
-
-Všetky exporty segmentov v štatistikách publika sú dostupné v kontexte firemných účtov. Väčšina exportov segmentov vyžaduje dodatočnú konfiguráciu a [projektované kontaktné informácie](segment-builder.md#create-a-new-segment) v základných segmentoch, aby boli platné pre podnikateľské účty. Ďalšie informácie nájdete v časti [Export segmentov](export-destinations.md#export-segments).
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Použite export LinkedIn Ads s firemnými účtami
-
-Export reklám LinkedIn je teraz k dispozícii na zacielenie na kontakt a spoločnosť v kontexte obchodných účtov. Pri výbere zacielenia na spoločnosť ako primárneho zamerania exportu LinkedIn môžete exportovať segmenty postavené na obchodných účtoch bez potreby projektovania kontaktných informácií. Ďalšie informácie nájdete v dokumentoch o [Export reklám LinkedIn](export-linkedin-ads.md) a rozdiel medzi [kontaktné cielenie](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) a [zameranie spoločnosti](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Vytvárajte miery na základe obchodných účtov a ich hierarchie
-
-Nástroj na tvorbu opatrení vám umožňuje vytvárať miery okolo obchodných účtov a voliteľne použiť informácie o hierarchii. Informácie o hierarchii sa používajú na zhrnutie výpočtu miery v rámci účtu a všetkých súvisiacich podúčtov. Môžete napríklad vytvoriť miery, ako je celkový príjem pre každú skupinu obchodných účtov identifikovaných podľa ich hierarchie. Ďalšie informácie nájdete v sekcii [Definovanie a správa mier](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Vytvorte segmenty na základe obchodných účtov a ich hierarchie
-
-Nástroj na tvorbu segmentov vám umožňuje vytvárať segmenty obchodných účtov, ktoré voliteľne obsahujú kontaktné informácie pre každý účet v segmente. Ak máte nastavenú hierarchiu účtu, pri vytváraní segmentu môžete použiť informácie o hierarchii účtu. Ďalšie informácie nájdete v časti [Vytvorte nový segment](segment-builder.md#create-a-new-segment).
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Udržujte svoje obchodné účty s podrobnými informáciami o ich tendencii minúť
-
-Model zákazníckeho churn predikcia teraz podporuje aj firemné účty. Riziko straty môžete vyhodnotiť nielen pre účet, ale aj pre kombináciu účtu a kategórie produktov alebo služieb, ktoré si od vás kúpia. Tento doplnok vám pomôže pochopiť, či je pravdepodobnejšie, že účet prestane od vás nakupovať vo všeobecnosti alebo len pre určitú kategóriu tovaru alebo služieb. Aby sme vám ešte viac pomohli pri používaní tohto modelu AI, sú tu uvedené aj dôvody, prečo je pravdepodobné, že účet zanikne. Ďalšie informácie nájdete v časti [Zrušenie transakcie predikcia (ukážka)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Pozrite si kontakty firemného účtu v zobrazení zákazníka
-
-Ak sú firemné účty namapované na súvisiace účty, aplikácia Customer Insights zobrazuje tieto súvisiace kontakty ako súčasť zobrazenia podrobností o zákazníkovi. Ďalšie informácie nájdete v časti [Profily zákazníkov](customer-profiles.md).
-
-
-## <a name="september-2021-updates"></a>Aktualizácie zo septembra 2021
-
-Aktualizácie v septembri 2021 obsahujú nové funkcie, vylepšenia výkonu a opravy chýb.
-
-### <a name="activities"></a>Aktivity
-
-- **Vylepšenia časovej osi aktivity** V profiloch zákazníkov sme rozšírili filtre pre časovú os aktivít. Okrem toho môžete použiť novú tablu filtra použiť na filtrovanie podľa typu aktivity a podľa dátumu. Dátumy je možné filtrovať za rôznych podmienok. Ďalšie informácie nájdete v časti [Zobrazte časové harmonogramy aktivít v profiloch zákazníkov](activities.md#view-activity-timelines-on-customer-profiles).
-
-### <a name="relationships"></a>Vzťahy 
-
-- **Podpora viacskokových vzťahov** Pri konfigurácii aktivít a definovaní vzťahov medzi entitami používajte viacskokové vzťahy. Viacskokové vzťahy používajú medziľahlú entitu na prepojenie dvoch entít. Pri konfigurácii aktivity môžete použiť viacskokový vzťah na prepojenie entity aktivity s medziľahlou entitou a potom so zákazníckou entitou. Viacskokové vzťahy môžete kombinovať so vzťahmi s viacerými cestami. Ďalšie informácie nájdete v téme [Viacskokové vzťahy](relationships.md#multi-hop-relationship).
-
-- **Podpora vzťahov s viacerými cestami** Pri konfigurácii aktivít a definovaní vzťahov medzi entitami používajte vzťahy s viacerými cestami. Vzťahy s viacerými cestami viažu zdrojovú entitu k viac ako jednej entite. Pri konfigurácii aktivity môžete použiť vzťah s viacerými cestami na prepojenie vašej entity aktivity s viac ako jednou zákazníckou entitou. Vzťahy s viacerými cestami môžete kombinovať s viacskokovými vzťahmi. Ďalšie informácie nájdete v téme [Vzťahy s viacerými cestami](relationships.md#multi-path-relationship).
-
-## <a name="august-2021-updates"></a>Aktualizácie z augusta 2021
-
-Aktualizácie v júli a auguste 2021 obsahujú novú funkciu, vylepšenia výkonu a opravy chýb.
-
-### <a name="extensibility"></a>Rozšíriteľnosť
-
-- **Exportujte segmenty do Klaviyo** Rozšírili sme naše [exportné destinácie o Klaviyo](export-klaviyo.md). Teraz môžete exportovať segmenty a vytvárať kampane, prevádzkovať e-mailový marketing a používať konkrétne skupiny zákazníkov v programe Klaviyo. 
-
 
 ## <a name="june-2021-updates"></a>Aktualizácie z júna 2021
 
@@ -267,7 +143,7 @@ Aktualizácie z marca 2021 obsahujú niekoľko funkcií, vylepšenia výkonu a o
 - **Export segmentov do Constant Contact** Naše cieľové miesta exportu sme rozšírili o Constant Contact. Teraz môžete exportovať segmenty z Customer Insights do zoznamov Constant Contact do zoznamov monitorov kampaní a použiť ich ako základ pre svoje marketingové kampane.   
    Ďalšie informácie nájdete v článku [Export do Constant Contact](export-constant-contact.md).
 
-- **Export segmentov do RollWorks** Naše cieľové miesta exportu sme rozšírili o RollWorks. Teraz môžete exportovať segmenty z Customer Insights do cieľových skupín RollWorks a použiť ich ako základ pre vašu reklamu v rámci scenára „firma a firma“.    
+- **Export segmentov do RollWorks** Naše cieľové miesta exportu sme rozšírili o RollWorks. Teraz môžete exportovať segmenty z Customer Insights do cieľovej skupiny RollWorks do zoznamov monitorov kampaní a použiť ich ako základ pre svoje reklamy B2B.    
    Ďalšie informácie nájdete v článku [Export do RollWorks](export-rollworks.md).
 
 - **Export segmentov do Snapchat** Naše cieľové miesta exportu sme rozšírili o Snapchat. Teraz môžete exportovať segmenty z Customer Insights do cieľovej skupiny Snapchat do zoznamov monitorov kampaní a použiť ich ako základ pre svoje reklamy.     

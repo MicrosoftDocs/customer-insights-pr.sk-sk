@@ -3,20 +3,18 @@ title: Práca s API
 description: Používajte rozhrania API a pochopte ich obmedzenia.
 ms.date: 05/10/2021
 ms.reviewer: wimohabb
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-searchScope:
-- ci-system-api-usage
-- customerInsights
-ms.openlocfilehash: b1e022f8afb8b7dbb707636009b6a25ee242a4e0
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354804"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304761"
 ---
 # <a name="work-with-customer-insights-apis"></a>Pracujte s rozhraniami API v službe Customer Insights
 
@@ -37,7 +35,7 @@ Tento článok popisuje, ako získať prístup k rozhraniam API pre Customer Ins
  
    Povolením rozhraní API sa vytvorí primárny a sekundárny kľúč predplatného pre vašu inštanciu, ktorý sa použije pri požiadavkách pre rozhrania API. Kľúče môžete znova vygenerovať výberom položky **Znova vygenerovať primárny** alebo **Znova vygenerovať sekundárny** v časti **Správca** > **Povolenia** > **Rozhrania API**.
 
-<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
+   :::image type="content" source="media/enable-apis.gif" alt-text="Povoliť rozhrania API v službe Customer Insights":::
 
 1. Výberom položky **Preskúmajte naše rozhrania API** si môžete [rozhrania API vyskúšať](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -51,7 +49,7 @@ Tento článok popisuje, ako získať prístup k rozhraniam API pre Customer Ins
 
 Odpoveď protokolu HTTP sa čoskoro objaví nižšie.
 
-<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
+   :::image type="content" source="media/try-apis.gif" alt-text="Ako testovať rozhrania API.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Vytvorte novú registráciu aplikácie na portáli Azure
 
@@ -67,7 +65,7 @@ Tieto kroky vám pomôžu začať s používaním rozhraní API pre Customer Ins
 
 1. Pri novej registrácii aplikácie prejdite na **Povolenia pre API**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Ako nastaviť povolenia pre rozhrania API pri registrácii aplikácie.":::
 
 1. Vyberte položku **Pridať povolenie** a vyberte položku **Customer Insights** na bočnej table.
 
@@ -79,7 +77,7 @@ Tieto kroky vám pomôžu začať s používaním rozhraní API pre Customer Ins
 
 ID aplikácie/klienta môžete použiť na registráciu tejto aplikácie v knižnici Microsoft Authentication Library (MSAL), aby ste získali nosný token, ktorý sa odošle s vašou požiadavkou pre API.
 
-<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Ako udeliť súhlas správcu.":::
 
 Ďalšie informácie o MSAL nájdete v sekcii [Prehľad knižnice Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -105,7 +103,7 @@ Informácie o používaní rozhraní API v našich klientskych knižniciach náj
 
 1. Vyberte položku **Udeliť súhlas správcu pre...** na dokončenie registrácie aplikácie.
 
- <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Ako udeliť súhlas správcu.":::
 
 1. Na záver musíme do služby Customer Insights pridať názov registrácie aplikácie ako používateľa.  
    
@@ -131,19 +129,19 @@ Zistite viac o tom, ako začať používať knižnice klientov C# z NuGet.org. �
  
    Prípadne môžete tento príkaz spustiť cez **konzolu Správcu balíka NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
- <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Pridajte balík NuGet do projektu nástroja Visual Studio":::
 
 #### <a name="use-the-c-client-library"></a>Použite knižnicu klientov C#
 
 1. Použite [knižnicu Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview), aby ste získali `AccessToken` pomocou svojej existujúcej [registrácie aplikácie Azure](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Po úspešnom overení a získaní tokenu vytvorte nový alebo použite existujúci`HttpClient` s prídavným **DefaultRequestHeaders "Autorizácia"** nastavený na **Nosič "prístupový token"** a **Ocp-Apim-Subscription-Key** nastaviť na [**predplatiteľský kľúč** z prostredia Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Po úspešnom overení a získaní tokenu vytvorte nový alebo použite existujúci `HttpClient` s dodatočným **„oprávnením“ DefaultRequestHeaders** nastavený na **Nosný <access token>** a **Ocp-Apim-Subscription-Key** nastavený na [**kľúč predplatného** z vášho prostredia služby Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Resetujte hlavičku **Oprávnenie**, ak je to vhodné. Napríklad ak vypršala platnosť tokenu.
 
 1. Presuňte tohto klienta `HttpClient` do tvorby klienta `CustomerInsights`.
 
-<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Ukážka klienta httpclient":::
 
 1. Uskutočňujte hovory s klientom pre „metódy rozšírenia“ – napríklad `GetAllInstancesAsync`. Ak je preferovaný prístup k základnému `Microsoft.Rest.HttpOperationResponse`, použite „metódy správ http“ – napríklad `GetAllInstancesWithHttpMessagesAsync`.
 

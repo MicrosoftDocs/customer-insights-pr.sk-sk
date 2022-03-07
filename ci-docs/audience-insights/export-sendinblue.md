@@ -1,19 +1,20 @@
 ---
 title: Export údajov z Customer Insights do Sendinblue
 description: Zistite, ako nakonfigurovať pripojenie a exportovať do Sendinblue.
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8d870ff31ce2d441e619ac18899c4d1b6c69ca41
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231438"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036074"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Export segmentov do Sendinblue (verzia Preview)
 
@@ -28,10 +29,10 @@ Sendinblue umožňuje export segmentov zjednotených zákazníkov na tvorbu kamp
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Až 1 milión profilov zákazníkov na export do služby Sendinblue.
+- Až 1 milión profilov na jeden export do Sendinblue.
 - Export do Sendinblue je obmedzený na segmenty.
-- Export segmentov s celkovo 1 miliónom profilov zákazníkov môže trvať až 90 minút. 
-- Počet profilov zákazníkov, ktoré môžete exportovať do služby Sendinblue, závisí od vašej zmluvy so spoločnosťou Sendinblue a je obmedzený.
+- Export segmentov s celkovým počtom 1 miliónov profilov môže trvať do 90 minút. 
+- Počet profilov, ktoré môžete exportovať do Sendinblue, ovplyvňuje a limituje vaša zmluva so spoločnosťou Sendinblue.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Nastavenie pripojenia k Sendinblue
 
@@ -63,7 +64,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Zadajte svoje **ID zoznamu aplikácie Sendinblue** 
 
-1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. 
+1. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. 
 
 1. Prípadne môžete aj exportovať **krstné meno**, **priezvisko** a **telefón**, a vytvoriť tak prispôsobenejšie e-maily. Výberom položky **Pridať atribút** namapujete tieto polia.
 

@@ -1,23 +1,20 @@
 ---
 title: Správa povolení používateľov
 description: Ďalšie informácie povoleniach a rolách používateľov.
-ms.date: 03/25/2021
-ms.reviewer: mhart
+ms.date: 10/27/2020
+ms.reviewer: nimagen
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-permissions
-- ci-system-security
-- customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: f7fcecdea8dc49666dd5c45bf4109c205993f326
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355956"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268429"
 ---
 # <a name="user-permissions"></a>Povolenia používateľa
 
@@ -34,7 +31,7 @@ Existujú tri typy rol:
 - Zobrazte si a preskúmajte stránku **Rozšírenie**.
 - Preskúmajte a exportujte entity pomocou stránky **Entity**.
 - Zobrazte stav systémových procesov pomocou stránky **Systém**.
-- Zobrazenie exportov na stránke **Exporty**.
+- Exportujte segmenty zo stránky **Segmenty**.
 - Nainštalujte a používajte tabuľu **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Prispievateľ
@@ -46,7 +43,6 @@ Existujú tri typy rol:
 - Vytvárajte segmenty pomocou stránky **Segmenty**.
 - Vytvárajte miery pomocou stránky **Miery**.
 - Spravujte konfiguráciu a obohacujte profily zákazníkov zo stránky **Obohatenie** (iba pre obohatenie prvej strany).
-- Spravujte a vytvárajte exporty na základe pripojení zdieľaných s prispievateľmi. [Získajte viac informácií o tom, ako správcovia umožňujú prispievateľom používať pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Správca
 
@@ -54,9 +50,8 @@ Existujú tri typy rol:
 - Zmeňte nastavenia na stránke **Systém** vrátane pracovného jazyka a plánov obnovy pre vaše systémové procesy.
 - Zobrazujte a pridávajte povolenia pomocou stránky **Povolenia**.
 - Nastavte definície vyhľadávania a filtrovania pre stránku Zákazníci pomocou stránky **Index vyhľadávania a filtrovania**(prístupná cez stránku **Zákazníci**).
-- Spravujte pripojenia a povoľte ich pre ďalšie roly používateľov na stránke **Pripojenia**.
+- Definujte ciele segmentu predaja Dynamics 365 Sales pomocou stránky **Ciele exportu**.
 - Spravujte konfiguráciu a obohacujte profily zákazníkov zo stránky **Obohatenie** (pre všetky obohatenia).
-- Spravujte a vytvárajte exporty na stránke **Exporty**.
 - Inštalácia a používanie **doplnku Karta zákazníka**.
 - Pridajte a použite **konektor Power Apps**.
 - Povoľte použitie [rozhraní rozhrania API v službe Customer Insights](apis.md).

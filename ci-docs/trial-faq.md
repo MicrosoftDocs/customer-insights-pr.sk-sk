@@ -5,15 +5,16 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 02/10/2022
 ms.topic: get-started
+ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229514"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115987"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Časté otázky o skúšobnej verzii Dynamics 365 Customer Insights
 
@@ -42,7 +43,7 @@ Keď sa zaregistrujete na skúšobnú verziu, dostanete e-mail s podrobnosťami 
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Ako do skúšobnej verzie pridám ďalších používateľov?
 
-Ak chcete pridať používateľov, prejdite do [Centra spravovania služby Microsoft 365](https://admin.microsoft.com) pomocou konta správcu skúšobnej verzie. Podľa [pokynov centra správcu](/microsoft-365/admin/add-users/add-users) pridajte používateľov do limitu skúšobnej licencie. Ak používateľ, ktorého pridávate, už má a Microsoft 365 účtu, priraďte im príslušné rola zabezpečenia v skúšobnej org. Ďalšie informácie nájdete v časti [Priraďte rola zabezpečenia používateľovi](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Ak chcete pridať používateľov, prejdite na stránku [Microsoft 365 centrum spravovania](https://admin.microsoft.com) pomocou skúšobného účtu správcu. Podľa [pokynov centra správcu](/microsoft-365/admin/add-users/add-users) pridajte používateľov do limitu skúšobnej licencie. Ak používateľ, ktorého pridávate, už má a Microsoft 365 účtu, priraďte im príslušné rola zabezpečenia v skúšobnej org. Viac informácií nájdete v časti [Priraďte rola zabezpečenia používateľovi](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Koľko používateľov môžem pridať do svojho skúšobného prostredia?
 
