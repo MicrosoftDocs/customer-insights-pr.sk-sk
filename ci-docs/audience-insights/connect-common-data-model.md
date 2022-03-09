@@ -1,20 +1,24 @@
 ---
 title: Pripojte údaje z Common Data Model k účtu Azure Data Lake
 description: Pracujte s údajmi z Common Data Model cez Azure Data Lake Storage.
-ms.date: 05/29/2020
-ms.service: customer-insights
+ms.date: 01/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- ci-attach-cdm
+- customerInsights
+ms.openlocfilehash: 1e3b28316c06d6a15dd5690837c365b0677a882e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033145"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354988"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Pripojte priečinok Common Data Model použitím účtu Azure Data Lake
 
@@ -26,11 +30,13 @@ Tento článok poskytuje informácie o tom, ako prijímať údaje z Common Data 
 
 - Príjem údajov podporuje výhradne účty ukladacieho priestoru Azure Data Lake *Gen2*. Na príjem údajov nemôžete použiť účty ukladacieho priestoru Azure Data Lake Gen1.
 
+- Účet úložiska Azure Data Lake musí mať [hierarchický menný priestor povolený](/azure/storage/blobs/data-lake-storage-namespace).
+
 - Ak chcete vykonať overenie pomocou objektu služby Azure, uistite sa, že je nakonfigurovaný vo vašom nájomníkovi. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md).
 
 - Azure Data Lake, ku ktorému sa chcete pripojiť a z ktorého prijímať údaje, musí byť v rovnakej oblasti Azure ako prostredie Dynamics 365 Customer Insights. Pripojenia k priečinku Common Data Model z dátového jazera v inej oblasti Azure nie sú podporované. Ak chcete spoznať oblasť Azure v prostredí, prejdite na časť **Správca** > **Systém** > **Informácie** v prehľadoch o cieľových skupinách.
 
-- Údaje uložené v online službách sa môžu ukladať na inom mieste ako tam, kde sa údaje spracúvajú alebo ukladajú v rámci služby Dynamics 365 Customer Insights.Importovaním alebo pripojením sa k údajom uloženým v online službách súhlasíte s tým, že údaje je možné prenášať a ukladať pomocou Dynamics 365 Customer Insights.  [Ďalšie informácie nájdete v Centre dôveryhodnosti spoločnosti Microsoft.](https://www.microsoft.com/trust-center)
+- Údaje uložené v online službách môžu byť uložené na inom mieste, než kde sa údaje spracúvajú alebo ukladajú Dynamics 365 Customer Insights.Importovaním údajov uložených v online službách alebo ich pripojením k nim súhlasíte s tým, že údaje možno preniesť a uložiť Dynamics 365 Customer Insights . [Ďalšie informácie nájdete v Centre dôveryhodnosti spoločnosti Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Pripojiť k priečinku Common Data Model
 
@@ -38,12 +44,11 @@ Tento článok poskytuje informácie o tom, ako prijímať údaje z Common Data 
 
 1. Vyberte položku **Pridať zdroj údajov**.
 
-1. Vyberte položku **Pripojiť k priečinku Common Data Model**, zadajte **Názov** zdroja údajov a vyberte položku **Ďalej**. Pokyny týkajúce sa pomenovania: 
-   - Začnite písmenom.
-   - Používajte iba písmená a číslice. Nie je povolené zadávanie špeciálnych znakov a medzier.
-   - Použite 3 až 64 znakov.
+1. Vyberte **Úložisko dátového jazera Azure**, zadajte a **názov** pre zdroj údajov, potom vyberte **Ďalšie**.
 
-1. Na overenie si môžete vybrať medzi použitím možnosti založenej na zdrojoch a možnosti založenej na predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Zadajte informáciu **Kontajner** a vyberte položku **Ďalej**.
+   - Ak sa zobrazí výzva, vyberte jednu zo vzorových množín údajov, ktoré sa týkajú vášho odvetvia, a potom vyberte **Ďalšie**. 
+
+1. Na overenie si môžete vybrať medzi použitím možnosti založenej na zdrojoch a možnosti založenej na predplatnom. Ďalšie informácie sa dozviete v článku [Pripojenie prehľadov cieľových skupín k účtu Azure Data Lake Storage Gen2 pomocou objektu služby Azure](connect-service-principal.md). Zadajte **Adresa servera**, vyberte **Prihlásiť sa** a potom vyberte **Ďalšie**.
    > [!div class="mx-imgBorder"]
    > ![Dialógové okno na zadanie nových podrobností pripojenia pre Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +61,11 @@ Tento článok poskytuje informácie o tom, ako prijímať údaje z Common Data 
    > [!NOTE]
    > Žiadny súbor model.json ani manifest.json spojený s iným zdrojom údajov v prostredí sa v zozname nezobrazí.
 
-1. Vo vybranom súbore model.json alebo manifest.json získate zoznam dostupných entít. Môžete skontrolovať a vybrať zo zoznamu dostupných entít a vybrať položku **Uložiť**. Všetky vybraté entity sa prijmú z nového zdroja údajov.
+1. Vo vybratom súbore model.json alebo manifest.json sa zobrazí zoznam dostupných entít. Skontrolujte a vyberte zo zoznamu dostupných entít, potom vyberte **Uložiť**. Všetky vybraté entity sa prijmú z nového zdroja údajov.
    > [!div class="mx-imgBorder"]
    > ![Dialógové okno so zoznamom entít zo súboru model.json.](media/review-entities.png)
 
-8. Uveďte, pre ktoré údajové entity chcete povoliť profilovanie údajov, a vyberte položku **Uložiť**. Profilovanie údajov umožňuje analýzy a ďalšie funkcie. Môžete vybrať celú entitu, ktorá vyberie všetky atribúty z entity, alebo môžete vybrať určité atribúty podľa vlastného výberu. V predvolenom nastavení nie je pre profilovanie údajov povolená žiadna entita.
+8. Označte, ktoré údajové entity chcete povoliť profilovanie údajov, a potom vyberte **Uložiť**. Profilovanie údajov umožňuje analýzy a ďalšie funkcie. Môžete vybrať celú entitu, ktorá vyberie všetky atribúty z entity, alebo môžete vybrať určité atribúty podľa vlastného výberu. V predvolenom nastavení nie je pre profilovanie údajov povolená žiadna entita.
    > [!div class="mx-imgBorder"]
    > ![Dialógové okno zobrazujúce profilovanie údajov.](media/dataprofiling-entities.png)
 

@@ -1,60 +1,60 @@
 ---
 title: Používanie zdrojov údajov na príjem údajov
 description: Prečítajte si, ako importovať údaje z rôznych zdrojov.
-ms.date: 04/12/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
-ms.translationtype: HT
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- customerInsights
+ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085549"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354068"
 ---
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Funkcia prehľadov cieľových skupín v službe Dynamics 365 Customer Insights sa pripája sa k údajom zo širokej množiny zdrojov. Pripojenie k zdroju údajov sa často označuje ako proces *prijímania údajov*. Po prijatí údajov ich môžete [zjednotiť](data-unification.md) a podniknúť s nimi kroky.
 
 ## <a name="add-a-data-source"></a>Pridať zdroj údajov
 
-Prečítajte si podrobné články o tom, ako pridať zdroj údajov, podľa toho, ktorú možnosť si vyberiete.
+V podrobných článkoch nájdete informácie o tom, ako pridať zdroj údajov v závislosti od zvolenej možnosti.
 
-Zdroj údajov môžete pridať tromi hlavnými spôsobmi:
+Môžete pridať nasledujúce zdroje údajov:
 
-- [Prostredníctvom množstva konektorov Power Query](connect-power-query.md)
+- [Cez desiatky Power Query konektory](connect-power-query.md)
 - [Z priečinka Common Data Model](connect-common-data-model.md)
-- [Z jazera Common Data Service](connect-common-data-service-lake.md)
+- [Z jazera Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [Od an Azure Synapse Analytics databázy](connect-synapse.md)
+
+> [!NOTE]
+> Ak používate skúšobnú verziu, sekcia metód importu obsahuje a **Knižnica údajov Customer Insights** možnosť. Túto možnosť vyberte, ak chcete vybrať vzorovú množinu údajov dostupnú pre rôzne odvetvia. Ďalšie informácie nájdete v časti [Dynamics 365 Customer Insights súdny proces](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Pridajte údaje z lokálny zdrojov údajov
 
-Na základe je podporované prijímanie údajov z lokálnych zdrojov údajov v prehľadoch cieľovej skupiny tokov údajov Power Platform. Toky údajov je možné v nástroji Customer Insights povoliť používateľom [poskytuje adresu URL prostredia Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) pri nastavovaní prostredia.
+Na základe je podporované prijímanie údajov z lokálnych zdrojov údajov v prehľadoch cieľovej skupiny tokov údajov Microsoft Power Platform. Dátové toky môžete povoliť v Customer Insights pomocou [poskytovanie Microsoft Dataverse URL prostredia](create-environment.md) pri nastavovaní prostredia.
 
-Zdroje údajov, ktoré sa predvolene vytvoria po priradení a prostredí Dataverse s nástrojom Customer Insights [Toky údajov Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Odstrániť a znovu vytvoriť zdroje údajov, ktoré existovali pred prostredím Dataverse bolo spojené s [používaním lokálnych dátových brán](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Zdroje údajov, ktoré sa vytvoria po priradení a Dataverse prostredie s využitím Customer Insights [Power Platform dátové toky](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) predvolene. Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Môžete odstrániť a znova vytvoriť zdroje údajov, ktoré existovali pred a Dataverse prostredie bolo spojené [pomocou dátových brán lokálny](/data-integration/gateway/service-gateway-app).
 
-Dátové brány z existujúceho prostredia Power BI alebo Power Apps bude viditeľné a môžete ho znova použiť v nástroji Customer Insights. Na stránke zdrojov údajov sú zobrazené odkazy, pomocou ktorých môžete prejsť do prostredia Power Platform, kde môžete zobraziť a nakonfigurovať lokálne dátové brány.
+Dátové brány z existujúceho prostredia Power BI alebo Power Apps bude viditeľné a môžete ho znova použiť v nástroji Customer Insights. Na stránke zdrojov údajov sú zobrazené odkazy smerujúce do prostredia Microsoft Power Platform, v ktorom si môžete prezerať a konfigurovať lokálne brány údajov.
 
 ## <a name="review-ingested-data"></a>Kontrola prijatých údajov
 
 Uvidíte názov každého prijatého zdroj údajov, jeho stav a poslednú aktualizáciu údajov pre tento zdroj. Zoznam zdrojov údajov môžete zoradiť podľa každého stĺpca.
 
 > [!div class="mx-imgBorder"]
-> ![Pridaný zdroj údajov](media/configure-data-datasource-added.png "Pridaný zdroj údajov")
+> ![Pridaný zdroj údajov.](media/configure-data-datasource-added.png "Pridaný zdroj údajov")
 
-|Status  |Popis  |
-|---------|---------|
-|Úspešné   |Zdroj údajov bol úspešne prijatý, ak je v stĺpci **Obnovené** uvedený čas.
-|Nespustené   |Zdroj údajov zatiaľ nemá žiadne prijaté údaje alebo je stále v režime konceptu.         |
-|Obnovuje sa    |Prebieha prijímanie údajov. Túto operáciu môžete zrušiť tak, že v stĺpci **Akcie** vyberiete **Zastaviť obnovovanie**. Zastavenie obnovovania zdroja údajov sa obnoví do posledného stavu obnovenia.       |
-|Zlyhalo     |Pri prijímaní údajov nastali chyby.         |
-
-Vyberte hodnotu v stĺpci **Stav** ľubovoľného zdroja údajov, aby ste skontrolovali ďalšie podrobnosti. V table **Podrobnosti o postupe** rozbaľte **Zdroje údajov**. Výberom položky **Zobraziť podrobnosti** zobrazíte viac informácií o stave obnovenia vrátane podrobností o chybách a následných aktualizáciách procesu.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 Načítanie údajov môže chvíľu trvať. Po úspešnom obnovení môžu byť prijaté údaje preskúmané na stránke **Entity**. Ďalšie informácie nájdete v časti [Entity](entities.md).
 
@@ -66,9 +66,9 @@ Prejdite na časť **Správca** > **Systém** > [**Plánovať**](system.md#sched
 
 Ak chcete obnoviť zdroj údajov na požiadanie, postupujte takto:
 
-1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zdroje údajov**
+1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zdroje údajov**.
 
-2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete obnoviť, a vyberte položku **Obnoviť** z rozbaľovacieho zoznamu.
+2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete obnoviť, a z rozbaľovacieho zoznamu vyberte položku **Obnoviť**.
 
 3. Zdroj údajov je teraz spustený na účely manuálneho obnovenia. Obnovením zdroja údajov sa aktualizuje schéma entity aj údaje pre všetky entity uvedené v zdroji údajov.
 
@@ -78,7 +78,7 @@ Ak chcete obnoviť zdroj údajov na požiadanie, postupujte takto:
 
 1. V prehľadoch cieľových skupín prejdite na **Údaje** > **Zdroje údajov**.
 
-2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete odstrániť, a vyberte **Odstrániť** z rozbaľovacej ponuky.
+2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete odstrániť, a z rozbaľovacieho zoznamu vyberte položku **Odstrániť**.
 
 3. Potvrďte odstránenie.
 

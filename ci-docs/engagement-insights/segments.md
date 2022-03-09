@@ -4,17 +4,16 @@ description: Ako vytvárať, upravovať a mazať segmenty a kde ich používať.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e99c04e6c92d8ca16c2d69957e0f5b7dba0ac757
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036167"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225395"
 ---
 # <a name="view-and-create-segments"></a>Zobrazenie a vytváranie segmentov
 
@@ -44,22 +43,27 @@ Táto časť popisuje, ako vytvoriť *prázdny segment* od začiatku.
 
 1. Vyberte **Nový segment**.
 
-1. V možnosti **Knižnica zdrojov** vyberte atribút, podľa ktorého chcete filtrovať. V súčasnosti môžete segmenty vytvárať iba na základe dimenzií.
+1. V **Knižnici zdrojov** vyberte (+) vedľa atribútu, podľa ktorého chcete filtrovať. V súčasnosti môžete segmenty vytvárať iba na základe dimenzií.
 
-1. Vyberte operátora a hodnotu pre vybraného atribútu. Nasledujúce operácie nie sú podporované.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Vytvorenie nového segmentu.":::
+
+1. V sekcii **Pravidlo** vyberte operátor a hodnotu pre vybratý atribút. Nasledujúce operácie nie sú podporované.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Vyberte si operátora pre svoj nový segment.":::
+
    - **je**: vyžaduje presnú zhodu na zahrnutie hodnôt. Používa **rovná sa** pre jednu hodnotu alebo **ktorýkoľvek z** na zahrnutie viac hodnôt.
    - **nie je**: vyžaduje presnú zhodu na vylúčenie hodnôt. Používa **rovná sa** pre jednu hodnotu alebo **ktorýkoľvek z** na zahrnutie viac hodnôt.
    - **začína s**: reťazec, ktorým zodpovedajúce hodnoty začínajú.
    - **končí sa na**: reťazec, ktorým zodpovedajúce hodnoty končia.
    - **obsahuje**: reťazec obsiahnutý v zodpovedajúcich hodnotách.
 
-1. Na pridanie ďalších podmienok do skupiny môžete použiť dva logické operátory. Pri použití množinových operátorov sa zohľadňujú projektované atribúty.
+1. Ak chcete do skupiny pridať ďalšie podmienky, môžete použiť logické operátory. Pri použití množinových operátorov sa zohľadňujú projektované atribúty.
    - Operátor **A**: Obe podmienky musia byť splnené ako súčasť procesu segmentácie. Táto voľba je najužitočnejšia, keď definujete podmienky pre rôzne entity.
    - Operátor **ALEBO**: V rámci procesu segmentácie musí byť splnená jedna z podmienok. Táto voľba je najužitočnejšia, keď definujete viac podmienok pre jednu entitu.
 
 1. Vyberte **Uložiť** a pomenujte segment. 
 
-Segment bude uvedený na stránke Segmenty a môžete ho použiť na všetky zostavy a lieviky v pracovnom priestore.
+Segment bude uvedený na stránke **Segmenty** a môžete ho použiť na všetky zostavy a lieviky v pracovnom priestore.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Použitie segmentu v zostave alebo lieviku
 
@@ -67,7 +71,7 @@ Môžete použiť segmenty na výkaz alebo lievik a filtrovať ich na základe p
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Zostava zobrazení stránky s rozšíreným rozbaľovacím zoznamom, v ktorom môžete zvoliť, ktoré segmenty sa majú použiť.":::
 
-Ak chcete použiť segment, otvorte zostavy alebo lievik. Vyberte **Pridať podmienku** a následne **Filtrovať podľa segmentu**. Zo zoznamu vyberte segment, ktorý chcete použiť. Segment sa použije na zostavu. Ak graf nepodporuje segment, zobrazí sa chyba.
+Ak chcete použiť segment, otvorte zostavy alebo lievik. Vyberte **+ Pridať podmienku** a následne **Filtrovať podľa segmentu**. Zo zoznamu vyberte segment, ktorý chcete použiť. Segment sa použije na zostavu. Ak graf nepodporuje segment, zobrazí sa chyba. Ďalšie informácie nájdete v téme [Tvorba a správa zostáv lievikov](funnel-reports.md).
  
 Môžete použiť *až do troch segmentov* na zostavu alebo lievik.
 
@@ -91,5 +95,7 @@ Môžete použiť *až do troch segmentov* na zostavu alebo lievik.
 1. V zozname segmentov vyberte **Viac [...]**. 
 1. Z rozbaľovacieho zoznamu si vyberte možnosť **Odstrániť**.
 1. Na potvrdenie vyberte položku **Odstrániť**.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

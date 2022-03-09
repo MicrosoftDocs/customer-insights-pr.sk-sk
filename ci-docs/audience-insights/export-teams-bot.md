@@ -1,20 +1,19 @@
 ---
 title: Bot pre Microsoft Teams
 description: Vyhľadajte jednotné profily zákazníkov v službe Microsoft Teams pomocou bota.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 9bf401124b0ffb21b046954056141e7703386d4911f89f34ffc0fcb84bf0f4be
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032501"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232121"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot služby Teams pre Dynamics 365 Customer Insights (ukážka)
 
@@ -31,7 +30,10 @@ Na nastavenie a konfiguráciu bota musia byť splnené nasledujúce predpoklady:
 - [Proces zjednocovania](data-unification.md) je dokončený.
 - Polia sa pridávajú do [indexu vyhľadávania a filtrovania](search-filter-index.md).
 - Customer Insights a Teams sú v rovnakej organizácii.
+- Vaše prostredie má primárne cieľové publikum nastavené na individuálnych zákazníkov. Firemné obchodné vzťahy nie sú podporované.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Konfigurácia bota
 
 1. V prehľadoch cieľových skupín prejdite na **Správca** > **Ciele exportu**.

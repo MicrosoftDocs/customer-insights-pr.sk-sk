@@ -1,21 +1,25 @@
 ---
 title: Obohatenie zjednotených profilov zákazníkov
 description: Využite možnosti na obohatenie údajov vašich zákazníkov.
-ms.date: 09/30/2021
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617574"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372738"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obohacovanie profilov zákazníkov (ukážka)
 
@@ -29,7 +33,7 @@ Ak chcete vytvárať alebo upravovať obohatenia, musíte mať oprávnenie prisp
 
 Na karte **Objavovať** nájdete všetky podporované možnosti obohatenia.
 
-# <a name="individual-customers-b2c"></a>[Individuálni zákazníci (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 
 - [Značky](enrichment-microsoft.md) od spoločnosti Microsoft
 - [Záujmy](enrichment-microsoft.md) od spoločnosti Microsoft
@@ -37,14 +41,18 @@ Na karte **Objavovať** nájdete všetky podporované možnosti obohatenia.
 - [Demografické údaje](enrichment-experian.md), ktoré poskytuje Experian
 - [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
 - [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
+- [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies 
+- [identita](enrichment-liveramp.md) poskytuje LiveRamp AbiliTec
 
-# <a name="business-accounts-b2b"></a>[Firemné obchodné vzťahy (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
 - [Údaje o spoločnosti](enrichment-leadspace.md) poskytované spoločnosťou Leadspace
 - [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft 
+- [Vylepšené firemné údaje](enrichment-enhanced-company-data.md) poskytovaná spoločnosťou Microsoft
 - [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies 
 - [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
 - [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
+- [Údaje o interakcii účtu](enrichment-office.md) poskytovaná spoločnosťou Microsoft
 
 ---
 
@@ -73,6 +81,10 @@ Obohatenia tretích strán sa konfigurujú pomocou [spojení](connections.md), k
 ## <a name="multiple-enrichments-of-the-same-type"></a>Viacnásobné obohatenie rovnakého typu
 
 Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia, ktorá umožňuje obohatiť iba podmnožinu vašich profilov. Môžete napríklad obohatiť údaje iba v konkrétnom segmente. Môžete nakonfigurovať niekoľko obohatení rovnakého typu a znova použiť to isté pripojenie. Niektoré obohatenia budú mať obmedzený počet obohatení rovnakého typu, ktoré je možné vytvoriť. Limity a súčasné použitie sú uvedené na stránke **Obohatenie**.
+
+## <a name="enrich-data-sources-before-unification"></a>Obohaťte zdroje údajov pred zjednotením
+
+Pred zjednotením údajov môžete obohatiť údaje o svojich zákazníkoch, aby ste zvýšili kvalitu zhody údajov. Viac informácií nájdete v časti [zdroj údajov obohatenie](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Zobrazte priebeh procesu obohacovania
 

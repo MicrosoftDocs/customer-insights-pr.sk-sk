@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466596"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353746"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Začnite funkciami prehľadov cieľovej skupiny v Dynamics 365 Customer Insights
 
@@ -23,7 +25,7 @@ Prehľady cieľových skupín vám môže pomôcť lepšie porozumieť vašim z�
 
 ## <a name="step-1-create-an-environment"></a>Krok 1: Vytvorenie prostredia
 
-Začnite vytvorením prostredia, kde budete pracovať. Ak už vaša organizácia má kúpenú licenciu, prejdite do časti [Začníname pracovať s predplatným ](get-started-paid.md). Ak chcete začať skúšobnou verziou prehľadov cieľovej skupiny, prejdite na časť [Nastavenie skúšobného prostredia](get-started-trial.md). 
+Začnite vytvorením prostredia, kde budete pracovať. Ak si už vaša organizácia kúpila licenciu, pozrite si časť [Vytvorenie prostredia](create-environment.md). Ak chcete začať skúšobnou verziou prehľadov cieľovej skupiny, prejdite na časť [Nastavenie skúšobného prostredia](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Krok 2: Preskúmajte prehľady cieľových skupín
 
@@ -37,7 +39,7 @@ Pri prvom prihlásení do prehľadov cieľových skupín môžete konfigurovať 
 
 Zjednotené profily sú základom na získanie prehľadov a vykonávanie akcií týkajúcich sa údajov. Dajte dokopy údaje z rôznych zdrojov a zjednocovanie údajov, aby ste nakombinovali zjednotené profily. Určte vzťahy medzi prijatými entitami a použite funkcie obohatenia, aby ste informácie pridali do profilov. 
 
-1. Prijímajte údaje vytváraním zdrojov údajov z viacerých možností. Vyberte si medzi[ konektormi Power Query](connect-power-query.md), a [ priečinkom Common Data Model](connect-common-data-model.md), alebo [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Prijímajte údaje vytváraním zdrojov údajov z viacerých možností. Vyberte si medzi [Power Query konektory](connect-power-query.md), a [Priečinok Common Data Model](connect-common-data-model.md), alebo [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Spustite [ proces zjednocovania údajov](data-unification.md) tak, že prejdete fázami [ mapovania](map-entities.md),[ zhody](match-entities.md) a[ zlúčenia](merge-entities.md).
 

@@ -3,20 +3,19 @@ title: Predikcia odporúčania produktov
 description: Predikujte produkty, ktoré si zákazník pravdepodobne kúpi alebo ktoré bude chcieť použiť.
 ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
-ms.translationtype: HT
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967858"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355770"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Predikcia odporúčania produktov (verzia Preview)
+# <a name="product-recommendation-prediction"></a>Predikcia odporúčania produktov
 
 Model odporúčaní produktov vytvára súbory prediktívnych odporúčaní produktov. Odporúčania vychádzajú z predchádzajúceho nákupného správania a zákazníkov s podobnými vzormi nákupov. Na stránke **Analýza** > **Predikcie** môžete vytvoriť nové predikcie odporúčaní produktov. Vyberte **Moje predikcie**, aby ste videli ďalšie predikcie, ktoré ste vytvorili.
 
@@ -54,7 +53,7 @@ Ak máte záujem vyskúšať túto funkciu, ale nemáte údaje na splnenie poži
 
 > [!NOTE]
 > - Tento model vyžaduje históriu transakcií vašich zákazníkov. Definícia transakcie je dosť flexibilná. Ako vstup môžu slúžiť všetky údaje, ktoré popisujú interakciu používateľa a produktu. Napríklad nákup produktu, absolvovanie kurzu alebo účasť na udalosti.
-> - Aktuálne je možné nakonfigurovať iba jednu entitu histórie transakcií. Ak existuje viacero nákupných subjektov, spojte ich Power Query pred prijímaním údajov.
+> - Aktuálne je možné nakonfigurovať iba jednu entitu histórie transakcií. Ak existuje viacero nákupných subjektov, spojte ich Power Query pred prijatím údajov.
 > - Ak sú objednávka a podrobnosti objednávky odlišné entity, pred použitím v modeli ich spojte. Model v entite nefunguje iba s ID objednávky alebo príjmovým dokladom.
 
 
@@ -62,7 +61,7 @@ Ak máte záujem vyskúšať túto funkciu, ale nemáte údaje na splnenie poži
 
 1. V Customer Insights prejdite na stránku **Analýza** > **Predikcie**.
 
-1. Vyberte dlaždicu **Model produktových odporúčaní (verzia Preview)** a vyberte **Použiť tento model**.
+1. Vyberte **Model odporúčaní produktov** dlaždice a vyberte **Použite tento model**.
    > [!div class="mx-imgBorder"]
    > ![Dlaždica Model odporúčaní produktov s tlačidlom Použiť tento model.](media/product-recommendation-usethismodel.PNG "Dlaždica Model odporúčaní produktov s tlačidlom Použiť tento model")
 

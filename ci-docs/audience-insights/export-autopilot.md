@@ -1,20 +1,19 @@
 ---
 title: Export údajov služby Customer Insights do Autopilot
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Autopilot.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e320a48d5b7c35b530e3a38567b226b804879e4e
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
-ms.translationtype: HT
+ms.openlocfilehash: 7a7a67a52fcf39da8d50bd95817d25470fc90b6f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760162"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227685"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Export segmentov do Autopilot (ukážka)
 
@@ -28,10 +27,10 @@ Exportujte segmenty zjednotených profilov zákazníkov do služby Autopilot a p
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Do služby Autopilot môžete exportovať spolu až 100 000 profilov.
+- Do služby Autopilot môžete celkovo až 100 000 profilov zákazníkov.
 - Export do Autopilot je obmedzený na segmenty.
-- Export až 100 000 profilov do služby Autopilot môže trvať až niekoľko hodín. 
-- Počet profilov, ktoré môžete exportovať do Autopilot, závisí a je obmedzený vašou zmluvou so spoločnosťou Autopilot.
+- Export až 100 000 profilov zákazníkov do služby Autopilot môže trvať niekoľko hodín. 
+- Počet profilov zákazníkov, ktoré môžete exportovať do služby Autopilot, závisí od vašej zmluvy so spoločnosťou Autopilot a je obmedzený.
 
 ## <a name="set-up-connection-to-autopilot"></a>Nastavenie pripojenia k Autopilot
 
@@ -43,7 +42,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do služby Autopilot a p
 
 1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-3. Zadajte svoj [kľúč API Autopilot](https://autopilot.docs.apiary.io/#).
+1. Zadajte svoj [kľúč API Autopilot](https://autopilot.docs.apiary.io/#).
 
 1. Vyberte **Súhlasím** na potvrdenie **Ochrany osobných údajov a dodržiavanie súladu s nariadeniami**.
 
@@ -63,7 +62,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. V poli **Pripojenie na export** vyberte pripojenie v časti Autopilot. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
 
-3. V sekcii **Párovanie údajov** v poli **E-mail** do svojho zjednoteného profilu zákazníka vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Rovnaký postup zopakujte pri ďalších voliteľných poliach, ako je **Krstné meno** a **Priezvisko**.
+1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. Rovnaký postup zopakujte pri ďalších voliteľných poliach, ako je **Krstné meno** a **Priezvisko**.
 
 1. Vyberte segmenty, ktoré chcete exportovať. Dôrazne **odporúčame neexportovať celkovo viac ako 100 000 profilov zákazníkov** do Autopilot. 
 
