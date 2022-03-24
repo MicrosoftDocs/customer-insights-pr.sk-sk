@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355910"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376527"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Prineste si vlastný trezor kľúčov Azure (verzia Preview)
 
@@ -31,7 +31,7 @@ Ak chcete nakonfigurovať trezor kľúčov v prehľadoch cieľovej skupiny, musi
 
 - Musíte mať aktívne predplatné Azure.
 
-- Máte rolu [Správca](permissions.md#administrator) v prehľadoch cieľovej skupiny. Prečítajte si viac o [povoleniach používateľov v prehľadoch cieľovej skupiny](permissions.md#assign-roles-and-permissions).
+- Máte rolu [Správca](permissions.md#admin) v prehľadoch cieľovej skupiny. Prečítajte si viac o [povoleniach používateľov v prehľadoch cieľovej skupiny](permissions.md#assign-roles-and-permissions).
 
 - Máte roly [Prispievateľ](/azure/role-based-access-control/built-in-roles#contributor) a [Správca prístupu používateľov](/azure/role-based-access-control/built-in-roles#user-access-administrator) v trezore kľúčov alebo v skupine zdrojov, do ktorej trezor kľúčov patrí. Ak chcete získať ďalšie informácie, navštívte stránku [Pridajte alebo odstráňte priradenia rolí Azure pomocou portálu Azure](/azure/role-based-access-control/role-assignments-portal). Ak v trezore kľúčov nemáte rolu Správca prístupu používateľov, musíte nastaviť oprávnenia riadenia prístupu na základe rolí pre objekt služby Azure pre Dynamics 365 Customer Insights oddelene. Postupujte podľa pokynov [na použitie objektu služby Azure](connect-service-principal.md) pre trezor kľúčov, ktorý by mal byť prepojený.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229988"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376711"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obohaťte profily zákazníkov o demografické údaje od spoločnosti Experian (verzia Preview)
 
@@ -25,7 +25,7 @@ Ak chcete nakonfigurovať Experian, musia byť splnené nasledujúce podmienky:
 
 - Mať aktívne predplatné služby Experian. Ak chcete získať predplatné, [kontaktujte priamo spoločnosť Experian](https://www.experian.com/marketing-services/contact). [Získajte ďalšie informácie obohatení údajov Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Pripojenie Experian už nakonfiguroval správca *alebo* máte povolenia [správcu](permissions.md#administrator). Potrebujete tiež ID používateľa, ID strany a číslo modelu pre svoj účet Secure Transport (ST) s povoleným SSH, ktoré vám Experian vytvorí.
+- Pripojenie Experian už nakonfiguroval správca *alebo* máte povolenia [správcu](permissions.md#admin). Potrebujete tiež ID používateľa, ID strany a číslo modelu pre svoj účet Secure Transport (ST) s povoleným SSH, ktoré vám Experian vytvorí.
 
 ## <a name="supported-countriesregions"></a>Podporované krajiny/regióny
 

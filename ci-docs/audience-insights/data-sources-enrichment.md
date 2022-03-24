@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: eebaaf18795e80dd1ba16a15a23844d685c94c6e
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8373082"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376598"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obohatenie pre zdroje údajov (ukážka)
 
@@ -40,7 +40,7 @@ Na vytváranie alebo úpravu obohatení musíte mať oprávnenia prispievateľa 
 Pre zdroje údajov sú v súčasnosti k dispozícii nasledujúce rozšírenia. Pozrite si podrobné kroky pre obohatenie, aby ste sa naučili, ako ho nakonfigurovať.
 
 - [Vylepšené adresy](enrichment-enhanced-addresses.md)
-- [Údaje o identite z LiveRamp](enrichment-liveramp.md)
+- [Rozšírené firemné údaje](enrichment-enhanced-company-data.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Spravujte existujúce zdroj údajov obohatenia
 

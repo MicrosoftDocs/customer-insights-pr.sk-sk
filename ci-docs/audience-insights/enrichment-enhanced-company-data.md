@@ -8,16 +8,18 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: e9cf93f28ba6918c72039670e42d26c8aaa7f922
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229422"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376373"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obohatenie firemných profilov o vylepšené firemné dáta
 
 Na opravu, doplnenie a štandardizáciu profilov vašej spoločnosti použite modely a skompilované údaje spoločnosti Microsoft. Použijeme [Formát Common Data Model](/common-data-model/schema/core/applicationcommon/account) pre lepšiu presnosť a prehľad.
+
+Môžete tiež [zlepšiť firemné údaje o zdrojoch údajov](data-sources-enrichment.md) zlepšiť presnosť zhody v procese zjednotenia údajov. 
 
 ## <a name="how-we-enhance-company-data"></a>Ako zlepšujeme firemné údaje
 

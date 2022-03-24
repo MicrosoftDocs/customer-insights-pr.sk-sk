@@ -1,7 +1,7 @@
 ---
 title: Správa povolení používateľov
 description: Ďalšie informácie povoleniach a rolách používateľov.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355956"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376757"
 ---
 # <a name="user-permissions"></a>Povolenia používateľa
 
@@ -48,7 +48,7 @@ Existujú tri typy rol:
 - Spravujte konfiguráciu a obohacujte profily zákazníkov zo stránky **Obohatenie** (iba pre obohatenie prvej strany).
 - Spravujte a vytvárajte exporty na základe pripojení zdieľaných s prispievateľmi. [Získajte viac informácií o tom, ako správcovia umožňujú prispievateľom používať pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Správca
+## <a name="admin"></a>Správca
 
 - Všetky povolenia, ktoré má Prispievateľ k dispozícii.
 - Zmeňte nastavenia na stránke **Systém** vrátane pracovného jazyka a plánov obnovy pre vaše systémové procesy.
@@ -60,6 +60,12 @@ Existujú tri typy rol:
 - Inštalácia a používanie **doplnku Karta zákazníka**.
 - Pridajte a použite **konektor Power Apps**.
 - Povoľte použitie [rozhraní rozhrania API v službe Customer Insights](apis.md).
+- [Priraďte vlastníctvo prostredia](manage-environments.md#change-the-owner-of-an-environment) inému správcovi.
+
+## <a name="admin-owner"></a>Správca (majiteľ)
+
+- Všetky povolenia dostupné pre správcu.
+- [Obnoviť a odstrániť](manage-environments.md#reset-an-existing-environment) prostredie.
 
 ## <a name="assign-roles-and-permissions"></a>Priradenie rolí a povolení
 

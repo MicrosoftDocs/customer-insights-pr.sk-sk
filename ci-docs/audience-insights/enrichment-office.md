@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228493"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376849"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Obohaťte profily zákazníkov o údaje o interakciách (ukážka)
 
@@ -28,7 +28,7 @@ Ak chcete nakonfigurovať obohatenie, musia byť splnené nasledujúce predpokla
 - Máte aktívny Office 365 cloudová licencia.
 - Máš [jednotné profily zákazníkov](customer-profiles.md) založené na [podnikateľské účty](work-with-business-accounts.md).
 - Vaše prostredie Customer Insights musí mať a [Microsoft Dataverse pripojená organizácia](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- Máš [správca](permissions.md#administrator) povolenia.
+- Máš [správca](permissions.md#admin) povolenia.
 - Máte alebo môžete získať súhlas od svojho Office 365 správca nájomcu použiť Office 365 údaje poskytnúť **Prehľady pre organizáciu** v rámci aplikácií Dynamics 365.
 
 ## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
@@ -57,13 +57,13 @@ Súhlas od an Office 365 nájomca správca je povinný aktivovať obohatenie. E-
 
 ## <a name="running-the-enrichment-for-the-first-time"></a>Spustenie obohatenia po prvýkrát
 
-Keď sa obohacovanie začne po prvýkrát, po Office 365 správca nájomcu udelil súhlas, sťahovanie údajov z Office 365 začína. Tento proces trvá určitý čas. Prvý cyklus obohacovania bude naplánovaný so šesťhodinovým oneskorením. Počet dní, ktoré údaje pokrývajú, môžete vidieť na stránke prehľadu interakcií s účtom po dokončení rozšírenia. Pri veľkom objeme dát spustite obohatenie znova po niekoľkých dňoch. Zaisťuje kompletnosť údajov za celé časové okno, čo je jeden rok.
+Keď sa obohacovanie začne po prvýkrát, po Office 365 správca nájomcu udelil súhlas, sťahovanie údajov z Office 365 začína. Tento proces trvá určitý čas. Prvý cyklus obohacovania bude naplánovaný so šesťhodinovým oneskorením. Počet dní, ktoré pokrývajú údaje, môžete vidieť na stránke prehľadu interakcií s účtom po dokončení rozšírenia. Pri veľkom objeme dát spustite obohatenie znova po niekoľkých dňoch. Zaisťuje kompletnosť údajov za celé časové okno, čo je jeden rok.
 
 Ak chcete spustiť proces, vyberte **Bežať** na stránke konfigurácie interakcie s účtom. Okrem toho môžete nechať systém spustiť obohatenie automaticky ako súčasť a [plánované obnovenie](system.md#schedule-tab). Obohacovanie štandardne prebieha raz za týždeň.
 
 V závislosti od veľkosti údajov balíka Office môže dokončenie procesu obohatenia trvať niekoľko hodín.
 
-Keď spustíte obohatenie, spoločnosť Microsoft spracuje údaje v rámci Office 365 hranicu súladu, aby ste vytvorili súhrnné štatistiky, ktoré sa potom pridajú do vášho prostredia Customer Insights. Používateľom Customer Insights nebudú k dispozícii žiadne údaje na individuálnej úrovni (napríklad telo akéhokoľvek e-mailu alebo pozvánky v kalendári). 
+Keď spustíte obohatenie, spoločnosť Microsoft spracuje údaje v rámci Office 365 hranicu súladu na vytvorenie súhrnných štatistík, ktoré sa potom pridajú do vášho prostredia Customer Insights. Používateľom Customer Insights nebudú k dispozícii žiadne údaje na individuálnej úrovni (napríklad telo akéhokoľvek e-mailu alebo pozvánky v kalendári). 
 
 [!INCLUDE [progress-details-pane](../includes/progress-details-pane.md)]
 
@@ -75,7 +75,7 @@ Nájdete tu aj graf s počtom obohatených zákazníkov v priebehu času a náh�
 
 :::image type="content" source="media/enrichment-office-results-overview.png" alt-text="Ukážka výsledkov po spustení procesu obohacovania.":::
 
-Všetky údaje sú agregované až po úroveň účtu. Systém vypočíta skóre zapojenia, ktoré sa pohybuje od 0 do 100, pre každý účet. Skóre interakcie poskytuje zloženú mieru zapojenia účtu cez e-maily a stretnutia v porovnaní s vašimi ostatnými účtami. Nasledujúci zoznam obsahuje súhrnné údaje, ktoré poskytuje rozšírenie o interakciu s účtom:
+Všetky údaje sú agregované až po úroveň účtu. Systém vypočíta skóre zapojenia, ktoré sa pohybuje od 0 do 100, pre každý účet. Skóre zapojenia poskytuje zloženú mieru zapojenia účtu cez e-maily a stretnutia v porovnaní s vašimi ostatnými účtami. Nasledujúci zoznam obsahuje súhrnné údaje, ktoré poskytuje rozšírenie o interakciu s účtom:
 
 
 

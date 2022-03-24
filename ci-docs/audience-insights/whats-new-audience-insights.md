@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232723"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376481"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Čo je nové v oblasti prehľadov cieľových skupín v Dynamics 365 Customer Insights
-
-
 
 Sme radi, že môžeme oznámiť naše najnovšie aktualizácie! Tento článok sumarizuje funkcie verejnej ukážky, vylepšenia všeobecnej dostupnosti a aktualizácie funkcií. Ak chcete zobraziť dlhodobé plány pre funkcie, pozrite si [Plány vydaní Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
@@ -27,6 +25,62 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
 
+## <a name="february-2022-updates"></a>Aktualizácie z februára 2022
+
+Aktualizácie vo februári 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
+
+### <a name="general-availability-for-prediction-models"></a>Všeobecná dostupnosť pre modely predikcia
+
+Rozbalené predikcia modely vrátane **predplatné churn**, **churn** a **celoživotná hodnota zákazníka (CLV)** budú všeobecne dostupné ako súčasť Customer Insights. 
+
+Viac informácií nájdete v časti [Prehľad predpovedí](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nové zdroj údajov: Integrácia s Azure Synapse Analytics (Náhľad)
+
+Azure Synapse Analytics je podniková analytická služba, ktorá urýchľuje čas potrebný na získanie prehľadov naprieč dátovými skladmi a veľkými dátovými systémami.
+
+Ak vaša organizácia už používa pokročilé možnosti analýzy Azure Synapse Analytics a ukladá výstup do databáz Data Lake, môžete tieto údaje jednoducho preniesť do Customer Insights. Viac informácií nájdete v časti [Pripojte Azure Synapse zdroj údajov (ukážka)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>LiveRamp obohatenie (ukážka)
+
+LiveRamp poskytuje deterministické offline rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Môžete mapovať osobné identifikátory vo svojich zákazníckych údajoch do grafu identity AbiliTec a prijímať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
+
+Ďalšie informácie nájdete v časti [Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Obohatenie pre zdroje údajov (ukážka)
+
+Použite údaje zo zdrojov, ako je Microsoft a ďalší partneri, na obohatenie údajov o zákazníkoch pred zjednotením údajov. Zdroj údajov obohatenia pomáhajú produkovať vyššiu úplnosť a kvalitu údajov, ktoré môžu pomôcť dosiahnuť lepšie výsledky, keď svoje údaje zjednotíte.
+
+Viac informácií nájdete v časti [Obohatenie pre zdroje údajov (ukážka)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Zmeniť vlastníka prostredia
+
+Aj keď v Customer Insights môže mať niekoľko používateľov povolenia správcu, vlastníkom prostredia je iba jeden používateľ. Vylepšené prostredie vám umožňuje zmeniť vlastníkov prostredia a nárokovať si vlastníctvo, ak bývalý vlastník opustil organizáciu. 
+
+Viac informácií nájdete v časti [Zmeňte vlastníka prostredia](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Proces prípravy údajov uvádza dôvod poškodenia pre poškodené záznamy
+
+Proces prípravy údajov teraz ukazuje dôvod poškodenia pre všetky polia s poškodenými údajmi na úrovni jednotlivých záznamov pre ľahkú identifikáciu. 
+
+Ďalšie informácie nájdete v časti [Poškodené zdroje údajov](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Koniec ukážky pre funkcie vytvárania prehľadov v funkcii štatistík interakcií
+
+The Dynamics 365 Customer Insights Ukážka možnosti interakcií sa skončila 15. februára 2022.  
+Táto zmena znamená, že skúšobná verzia Customer Insights už nezahŕňa možnosť vytvárať zúženia ani iné funkcie vytvárania prehľadov.
+
+Pozývame vás, aby ste preskúmali a zhodnotili mnohé ďalšie funkcie [Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/), platforma zákazníckych údajov spoločnosti Microsoft (CDP).    
+ 
+Počas prechodného obdobia majú existujúci účastníci ukážky stále prístup k niektorým možnostiam a funkciám ukážky:
+
+- Získanie kódu na inštrumentáciu webovej lokality alebo mobilnej aplikácie 
+- Pozrite si udalosti a vlastnosti udalosti 
+- Vylepšite zjednotené profily pomocou prijatých a spresnených udalostí, aby ste mohli využívať plnú hodnotu údajov o svojich zákazníkoch
+  
+Počas prechodného obdobia sa zachytené udalosti stále streamujú do pripojeného Data Lake. Po vypnutí tejto funkcie sa zastaví zdieľanie údajov medzi štatistikami interakcií a štatistikami publika a do pripojeného úložiska sa nebudú odosielať žiadne nové udalosti.
+Ak máte otázky týkajúce sa konca ukážky funkcií, kontaktujte priamo svoj tím pre konto Microsoft. Váš účtovný tím vás bude informovať o pripravovaných spusteniach. 
+
 ## <a name="january-2022-updates"></a>Aktualizácie z januára 2022
 
 Aktualizácie v januári 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
@@ -35,7 +89,7 @@ Aktualizácie v januári 2022 zahŕňajú nové funkcie, vylepšenia výkonu a o
 
 Customer Insights poskytuje novú funkciu poháňanú umelou inteligenciou, ktorá syntetizuje sentiment zákazníkov a identifikuje špecifické obchodné aspekty ako príležitosti na cielené zlepšenia. Analýzou písomnej spätnej väzby vašich zákazníkov môžete získať presné informácie pri nízkych nákladoch. Analýza sentimentu založená na modeloch spracovania prirodzeného jazyka (NLP), ktoré generujú dva odvodené štatistiky pre každé ID zákazníka. Skóre sentimentu (od –5 do 5) a zoznam príslušných obchodných aspektov. 
 
-Ďalšie informácie nájdete v časti [Analyzujte sentiment v spätnej väzbe zákazníkov (ukážka)](sentiment-analysis.md).
+Ďalšie informácie nájdete v časti [Analýza sentimentu v spätnej väzbe od zákazníkov (ukážka)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Aktualizácie systému z decembra 2021
@@ -66,7 +120,7 @@ Viac informácií nájdete v časti [Definícia deduplikácie v entite párovani
 
 #### <a name="custom-rules-for-matching"></a>Vlastné pravidlá pre párovanie
 
-Sú chvíle, keď potrebujete špecifikovať výnimku zo všeobecných pravidiel, aby sa NEPREHODOVALI záznamy. To sa môže stať, keď viacerí jednotlivci zdieľajú dostatok informácií, aby ich systém priradil ako jedného jednotlivca. Napríklad dvojčatá s rovnakým priezvisko, ktoré žijú v rovnakom meste a zdieľajú dátum narodenia.
+Sú chvíle, keď je potrebné špecifikovať výnimku zo všeobecných pravidiel, aby sa NEPOROVNALI záznamy. To sa môže stať, keď viacerí jednotlivci zdieľajú dostatok informácií, aby ich systém priradil ako jedného jednotlivca. Napríklad dvojčatá s rovnakým priezvisko, ktoré žijú v rovnakom meste a zdieľajú dátum narodenia.
 
 Výnimky zabezpečujú, že nesprávne zjednotenie údajov bude možné riešiť v pravidlách zjednotenia. K pravidlu môžete pridať viacero výnimiek.
 
@@ -74,7 +128,7 @@ Výnimky zabezpečujú, že nesprávne zjednotenie údajov bude možné riešiť
 
 #### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Poskytnite ďalšie politiky riešenia konfliktov a povoľte zoskupovanie atribútov
 
-Táto funkcia vám umožňuje zaobchádzať so skupinou polí ako s jednou jednotkou. Napríklad, ak naše záznamy obsahujú polia Adresa1, Adresa2, Mesto, Štát a PSČ. Pravdepodobne sa nechceme zlúčiť do adresy2 iného záznamu, pretože si myslíme, že by to urobilo naše údaje úplnejšími.
+Táto funkcia vám umožňuje zaobchádzať so skupinou polí ako s jednou jednotkou. Napríklad, ak naše záznamy obsahujú polia Adresa1, Adresa2, Mesto, Štát a PSČ. Pravdepodobne sa nechceme zlúčiť s adresou2 iného záznamu, pretože si myslíme, že by to urobilo naše údaje úplnejšími.
 
 Teraz môžete skombinovať skupinu súvisiacich polí a použiť na skupinu jednu politiku zlúčenia. 
 
@@ -87,7 +141,7 @@ Aktualizácie v novembri 2021 zahŕňajú nové funkcie, vylepšenia výkonu a o
 
 ### <a name="segment-membership-now-available-in-dataverse"></a>Členstvo v segmente je teraz k dispozícii v Dataverse
 
-Informácie o členstve v segmentoch pre profily zákazníkov sú teraz k dispozícii v Dataverse spolu s profilmi a prehľadmi zákazníkov. Akčné aplikácie Dynamics 365 a aplikácie s podporou modelov môžu tieto údaje použiť na vyhľadávanie podrobností o členstve v segmente pre daného zákazníka.
+Informácie o členstve v segmentoch pre profily zákazníkov sú teraz k dispozícii v Dataverse spolu s profilmi a prehľadmi zákazníkov. Akčné aplikácie Dynamics 365 a aplikácie s podporou modelov môžu tieto údaje použiť na vyhľadanie podrobností o členstve v segmente pre daného zákazníka.
 
 ### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivity podporujú podrobnosti na úrovni kontaktov pre firemné účty
 
@@ -109,7 +163,7 @@ Všetky exporty segmentov v štatistikách publika sú dostupné v kontexte fire
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Použite export LinkedIn Ads s firemnými účtami
 
-Export reklám LinkedIn je teraz k dispozícii na zacielenie na kontakt a spoločnosť v kontexte obchodných účtov. Pri výbere zacielenia na spoločnosť ako primárneho zamerania exportu LinkedIn môžete exportovať segmenty postavené na obchodných účtoch bez potreby projektovania kontaktných informácií. Ďalšie informácie nájdete v dokumentoch o [Export reklám LinkedIn](export-linkedin-ads.md) a rozdiel medzi [kontaktné cielenie](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) a [zameranie spoločnosti](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+Export reklám LinkedIn je teraz k dispozícii na zacielenie na kontakty a spoločnosti v kontexte obchodných účtov. Pri výbere zacielenia na spoločnosť ako primárneho zamerania exportu LinkedIn môžete exportovať segmenty postavené na obchodných účtoch bez potreby projektovania kontaktných informácií. Ďalšie informácie nájdete v dokumentoch o [Export reklám LinkedIn](export-linkedin-ads.md) a rozdiel medzi [kontaktné cielenie](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) a [zameranie spoločnosti](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Vytvárajte miery na základe obchodných účtov a ich hierarchie
 
@@ -117,15 +171,15 @@ Nástroj na tvorbu opatrení vám umožňuje vytvárať miery okolo obchodných 
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Vytvorte segmenty na základe obchodných účtov a ich hierarchie
 
-Nástroj na tvorbu segmentov vám umožňuje vytvárať segmenty obchodných účtov, ktoré voliteľne obsahujú kontaktné informácie pre každý účet v segmente. Ak máte nastavenú hierarchiu účtu, pri vytváraní segmentu môžete použiť informácie o hierarchii účtu. Ďalšie informácie nájdete v časti [Vytvorte nový segment](segment-builder.md#create-a-new-segment).
+Nástroj na tvorbu segmentov vám umožňuje vytvárať segmenty obchodných účtov, ktoré voliteľne obsahujú kontaktné informácie pre každý účet v segmente. Ak máte nastavenú hierarchiu účtu, informácie o hierarchii účtu môžete použiť pri vytváraní segmentu. Ďalšie informácie nájdete v časti [Vytvorte nový segment](segment-builder.md#create-a-new-segment).
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Udržujte svoje obchodné účty s podrobnými informáciami o ich tendencii minúť
 
-Model zákazníckeho churn predikcia teraz podporuje aj firemné účty. Riziko straty môžete vyhodnotiť nielen pre účet, ale aj pre kombináciu účtu a kategórie produktov alebo služieb, ktoré si od vás kúpia. Tento doplnok vám pomôže pochopiť, či je pravdepodobnejšie, že účet prestane od vás nakupovať vo všeobecnosti alebo len pre určitú kategóriu tovaru alebo služieb. Aby sme vám ešte viac pomohli pri používaní tohto modelu AI, sú tu uvedené aj dôvody, prečo je pravdepodobné, že účet zanikne. Ďalšie informácie nájdete v časti [Zrušenie transakcie predikcia (ukážka)](predict-transactional-churn.md).
+Model zákazníckeho churn predikcia teraz podporuje aj firemné účty. Riziko straty môžete vyhodnotiť nielen pre účet, ale aj pre kombináciu účtu a kategórie produktov alebo služieb, ktoré si od vás kúpia. Tento doplnok vám pomôže pochopiť, či je pravdepodobnejšie, že účet prestane od vás nakupovať vo všeobecnosti alebo len pre určitú kategóriu tovaru alebo služieb. Aby sme vám ešte viac pomohli pri používaní tohto modelu AI, sú tu uvedené aj dôvody, prečo je pravdepodobné, že účet zanikne. Ďalšie informácie nájdete v časti [Ukončenie transakcie predikcia (ukážka)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Pozrite si kontakty firemného účtu v zobrazení zákazníka
 
-Ak sú firemné účty namapované na súvisiace účty, aplikácia Customer Insights zobrazuje tieto súvisiace kontakty ako súčasť zobrazenia podrobností o zákazníkovi. Ďalšie informácie nájdete v časti [Profily zákazníkov](customer-profiles.md).
+Ak sú firemné účty namapované na súvisiace účty, aplikácia Customer Insights zobrazí tieto súvisiace kontakty ako súčasť zobrazenia podrobností o zákazníkovi. Ďalšie informácie nájdete v časti [Profily zákazníkov](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>Aktualizácie zo septembra 2021

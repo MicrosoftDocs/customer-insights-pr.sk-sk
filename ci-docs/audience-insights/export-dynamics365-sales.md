@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355048"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455881"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Použitie segmentov v Dynamics 365 Sales (ukážka)
 
@@ -31,7 +31,7 @@ Dynamics 365 Sales umožňuje pomocou zákazníckych údajov vytvárať marketin
 
 ## <a name="prerequisite-for-connection"></a>Predpoklad na pripojenie
 
-1. Pred exportom segmentu z Customer Insights do Sales musia byť záznamy kontaktov v Dynamics 365 Sales. Prečítajte si viac o tom, ako prijímať kontakty v [Dynamics 365 Sales pomocou Microsoft Dataverse](connect-power-query.md).
+1. Pred exportom segmentu z Customer Insights do Sales musia byť záznamy kontaktov v Dynamics 365 Sales. Prečítajte si viac o tom, ako prijímať kontakty z [Dynamics 365 Sales pomocou Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Export segmentov z prehľadov cieľových skupín do Sales nevytvorí nové záznamy kontaktov v inštanciách Sales. Záznamy kontaktov zo Sales musia byť obsiahnuté v prehľadoch cieľových skupín a použité ako zdroj údajov. Pred exportom segmentov je ich tiež potrebné ich zahrnúť do zjednotenej entity zákazníka na mapovanie ID zákazníkov na ID kontaktov.

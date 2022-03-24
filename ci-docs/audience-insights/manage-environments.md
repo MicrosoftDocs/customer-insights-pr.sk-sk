@@ -1,7 +1,7 @@
 ---
 title: Slúži na vytvorenie a spravovanie prostredí
 description: Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354298"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376895"
 ---
 # <a name="manage-environments"></a>Správa prostredí
-
-
 
 ## <a name="switch-environments"></a>Prepnutie prostredí
 
@@ -98,9 +96,29 @@ Po obnovení zdrojov údajov prejdite na stránku **Údaje** > **Zjednotiť**. T
 
 Po dokončení zjednotenia údajov prejdite na stránku **Opatrenia** a **Segmenty**, čím ich tiež obnovíte.
 
+## <a name="change-the-owner-of-an-environment"></a>Zmeňte vlastníka prostredia
+
+Aj keď v Customer Insights môže mať niekoľko používateľov povolenia správcu, vlastníkom prostredia je iba jeden používateľ. V predvolenom nastavení je to správca, ktorý na začiatku vytvára prostredie. Ako správca prostredia môžete prideliť vlastníctvo inému používateľovi s oprávneniami správcu.
+
+1. Vyberte nástroj na výber **Prostredia** v hlavičke aplikácie.
+
+1. Vyberte ikonu **Upraviť**.
+
+1. V **Upraviť prostredie** box, prejdite na **Základné informácie** krok.
+
+1. V **Zmeniť vlastníka prostredia** poľa, vybrať nového vlastníka prostredia.  
+
+1. Vyberte **Skontrolujte a dokončite**, potom **Aktualizovať** aplikujte zmeny. 
+
+## <a name="claim-ownership-of-an-environment"></a>Nárokovať si vlastníctvo prostredia
+
+Ak vlastník prostredia opustí organizáciu alebo sa odstráni jeho používateľský účet, prostredie nebude mať vlastníka. Používateľ s oprávneniami správcu si môže nárokovať vlastníctvo a stať sa novým vlastníkom. Môžu naďalej vlastniť životné prostredie resp [zmeniť vlastníctvo na iného správcu](#change-the-owner-of-an-environment). 
+
+Ak si chcete nárokovať vlastníctvo, vyberte **Prevziať vlastníctvo** tlačidlo, ktoré sa zobrazuje v hornej časti každej stránky v Customer Insights, keď pôvodný vlastník opustil organizáciu.
+
 ## <a name="reset-an-existing-environment"></a>Reset existujúceho prostredia
 
-Ako správca môžete prostredie resetovať do prázdneho stavu, ak chcete odstrániť všetky konfigurácie a odobrať prijaté údaje.
+Ako vlastník prostredia môžete resetovať prostredie do prázdneho stavu, ak chcete vymazať všetky konfigurácie a odstrániť prijaté údaje.
 
 1.  Vyberte nástroj na výber **Prostredia** v hlavičke aplikácie. 
 
@@ -112,7 +130,7 @@ Ako správca môžete prostredie resetovať do prázdneho stavu, ak chcete odstr
 
 ## <a name="delete-an-existing-environment"></a>Odstránenie existujúceho prostredia
 
-Ako správca môžete odstrániť prostredie, ktoré spravujete.
+Ako vlastník prostredia môžete odstrániť prostredie, ktoré spravujete.
 
 1.  Vyberte nástroj na výber **Prostredia** v hlavičke aplikácie.
 

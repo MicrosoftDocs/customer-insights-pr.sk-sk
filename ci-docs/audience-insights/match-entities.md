@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372646"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376941"
 ---
 # <a name="match-entities"></a>Priradenie entít
 
@@ -31,7 +31,7 @@ Stránka priraďovania sa skladá z troch častí:
 
 ## <a name="specify-the-match-order"></a>Určenie objednávky zosúladenia
 
-Každá zhoda zjednocuje dve alebo viac entít do jednej konsolidovanej entity. Zároveň vedie jedinečné záznamy o zákazníkoch. Poradie zhody označuje poradie, v ktorom sa systém pokúša priradiť záznamy.
+Každá zhoda zjednocuje dve alebo viac entít do jednej konsolidovanej entity. Zároveň vedie jedinečné záznamy o zákazníkoch. Poradie zhody označuje poradie, v ktorom sa systém pokúša zladiť záznamy.
 
 > [!IMPORTANT]
 > Entita, ktorú vyberiete ako primárnu, bude slúžiť ako základ pre jednotnú množinu údajov profilov. Ďalšie entity, ktoré sú vybraté počas fázy zosúladenia, sa pridajú do tejto entity. To neznamená, že zjednotená entita bude obsahovať *všetky* údaje zahrnuté v tejto entite.
@@ -79,7 +79,7 @@ Varovanie **Vyžadujú sa pravidlá** vedľa názvu entity naznačuje, že pre p
      - Medzery: Odstráni všetky medzery. *Ahoj svet* sa stáva *HelloWorld*.
 
    - **Presnosť**: Nastavte úroveň presnosti, ktorá sa má použiť pre túto podmienku. 
-     - **Základné**: Vyber z možností *Nízka*, *Stredná*, *Vysoká* a *Presná*. Vyberte **Presne** aby sa zhodovali iba záznamy, ktoré sa stopercentne zhodujú. Vyberte jednu z ďalších úrovní, aby sa zosúladili záznamy, ktoré nie sú na 100 percent identické.
+     - **Základné**: Vyber z možností *Nízka*, *Stredná*, *Vysoká* a *Presná*. Vyberte **Presne** aby sa zhodovali iba záznamy, ktoré sa na 100 percent zhodujú. Vyberte jednu z ďalších úrovní, aby sa zosúladili záznamy, ktoré nie sú na 100 percent identické.
      - **Vlastné**: Nastavte percento, ktorému sa musia záznamy zhodovať. Systém bude porovnávať iba záznamy prekračujúce tento limit.
 
 1. Zadajte **Názov** pre položku pravidla.
@@ -185,6 +185,8 @@ Entita deduplikovaného výstupu obsahuje nasledujúce informácie:
 
 Ak ste obohatili entity na úrovni zdroj údajov, vyberte ich pred spustením procesu zhody. Obohatené entity môžu zlepšiť vaše výsledky zjednotenia. Viac informácií nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md). 
 
+Obohatená entita obsahuje pôvodné polia zdroj údajov a obohatené polia. Ak sa teda rozhodnete pracovať s obohatenou entitou, existujúca konfigurácia nebude ovplyvnená. Možno však budete musieť aktualizovať pravidlá zhody, aby ste namiesto toho používali obohatené polia.
+
 1. Ísť do **Údaje** > **Zjednotiť** > **Zápas** a vyberte **Použite obohatené entity** v hornej časti stránky.
 
 1. Od **Použite obohatené entity** vyberte jednu alebo viacero obohatených entít.
@@ -253,7 +255,7 @@ Napríklad, ak vaše pravidlo zhody kombinuje priezvisko, mesto a dátum naroden
 
 1. V **Upraviť pravidlo** panel, vyberte **Pridať výnimku**.
 
-1. Zadajte kritériá výnimky. 
+1. Zadajte kritériá výnimiek. 
 
 1. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
 
@@ -264,7 +266,7 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
 |Možnosť  |Description |Príklad  |
 |---------|---------|---------|
 |Vždy sa zhodovať     | Definuje hodnoty, ktoré sa vždy zhodujú.         |  Vždy sa zhodujú *Mike* a *MikeR*.       |
-|Nikdy sa nezhodovať     | Definuje hodnoty, ktoré sa nikdy nezhodujú.        | Nikdy sa nezhodujú *John* a *Jonathan*.        |
+|Nikdy sa nezhodovať     | Definuje hodnoty, ktoré sa nikdy nezhodujú.        | Nikdy sa nezhodujte *John* a *Jonathan*.        |
 |Vlastné obídenie     | Definuje hodnoty, ktoré by mal systém vždy ignorovať vo fáze zápasu. |  Ignorujte hodnoty *11111* a *Neznámy* počas zápasu.        |
 |Mapovanie aliasu    | Definovanie hodnôt, ktoré by mal systém považovať za rovnakú hodnotu.         | Zvážte *Joe* byť rovný *Jozefa*.        |
 
@@ -305,7 +307,7 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
 
 #### <a name="known-issues"></a>Známe problémy
 
-- Samokonflácia neukazuje normalizované údaje v deduplikačných entitách. Normalizáciu však aplikuje interne počas deduplikácie. Je navrhnutý pre všetky normalizácie. 
+- Vlastná konflácia neukazuje normalizované údaje v deduplikačných entitách. Normalizáciu však aplikuje interne počas deduplikácie. Je to navrhnuté pre všetky normalizácie. 
 - Ak je nastavenie sémantického typu odstránené v **Mapa** fázy, keď pravidlo zhody používa mapovanie aliasu alebo vlastné obídenie, normalizácia sa nepoužije. Stáva sa to iba vtedy, ak po konfigurácii normalizácie v pravidle zhody vymažete sémantický typ, pretože sémantický typ bude neznámy.
 
 
