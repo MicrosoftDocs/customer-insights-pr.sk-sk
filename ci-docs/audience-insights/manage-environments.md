@@ -1,22 +1,22 @@
 ---
 title: Slúži na vytvorenie a spravovanie prostredí
 description: Zistite, ako sa môžete zaregistrovať do služby a spravovať prostredia.
-ms.date: 02/09/2022
+ms.date: 03/28/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
-author: NimrodMagen
-ms.author: nimagen
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
-ms.translationtype: HT
+ms.openlocfilehash: ba29bcd173e615e544bd10e69043f310c009eb47
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376895"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8492023"
 ---
 # <a name="manage-environments"></a>Správa prostredí
 
@@ -42,23 +42,83 @@ Môžete upraviť niektoré podrobnosti o existujúcich prostrediach.
 
 ## <a name="connect-to-microsoft-dataverse"></a>Pripojiť k systému Microsoft Dataverse
    
-Krok **Microsoft Dataverse** vám umožní prepojiť Customer Insights s vašim prostredím Dataverse.
+Krok **Microsoft Dataverse** vám umožní prepojiť Customer Insights s vašim prostredím Dataverse. 
+
+Poskytnite svoje vlastné Microsoft Dataverse prostredie na zdieľanie údajov (profilov a prehľadov) s obchodnými aplikáciami založenými na Dataverse, ako je Dynamics 365 Marketing alebo modelom riadené aplikácie v Power Apps.
 
 Ak chcete použiť [pripravené modely predikcie](predictions-overview.md#out-of-box-models), nakonfigurujte zdieľanie údajov s Dataverse. Alebo môžete povoliť príjem údajov z lokálnych zdrojov údajov poskytnutím adresy URL prostredia Microsoft Dataverse, ktoré spravuje vaša organizácia.
 
+Povolenie zdieľania údajov s Microsoft Dataverse začiarknutím políčka zdieľania údajov spustíte jednorazové úplné obnovenie vašich zdrojov údajov a všetkých ostatných procesov.
+
 > [!IMPORTANT]
-> Štatistiky zákazníkov a Dataverse musia byť v rovnakej oblasti, aby bolo možné zdieľať údaje.
+> 1. Štatistiky zákazníkov a Dataverse musia byť v rovnakej oblasti, aby bolo možné zdieľať údaje.
+> 1. Musíte mať rolu globálneho správcu v Dataverse životné prostredie. Overte si, či toto [Dataverse prostredie je spojené](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) do určitých bezpečnostných skupín a uistite sa, že ste boli pridaní do týchto bezpečnostných skupín.
+> 1. Nie je s tým už spojené žiadne existujúce prostredie Customer Insights Dataverse životné prostredie. Naučiť sa ako [odstrániť existujúce pripojenie k a Dataverse životné prostredie](#remove-an-existing-connection-to-a-dataverse-environment).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-enable-datasharing.png" alt-text="Možnosti konfigurácie, ktoré umožnia zdieľanie údajov s Microsoft Dataverse.":::
 
-> [!NOTE]
-> Customer Insights nepodporuje nasledujúce scenáre zdieľania údajov:
-> - Ak uložíte všetky údaje do vlastného Azure Data Lake Storage, nebudete môcť povoliť zdieľanie údajov pomocou dátového jazera spravovaného prostredníctvom Dataverse.
-> - Ak povolíte zdieľanie údajov pomocou Dataverse, nebudete môcť [vytvárať predikované ani chýbajúce hodnoty v entite](predictions.md).
+### <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Povoliť zdieľanie údajov s Dataverse z vlastného Azure Data Lake Storage (Náhľad)
+
+Ak je vaše prostredie nakonfigurované na používanie vášho vlastného Azure Data Lake Storage na ukladanie údajov Customer Insights, čo umožňuje zdieľanie údajov s Microsoft Dataverse potrebuje nejakú extra konfiguráciu.
+
+1. Vytvorte dve skupiny zabezpečenia vo svojom predplatnom Azure – jednu **Čitateľ** bezpečnostná skupina a jedna **Prispievateľ** bezpečnostnú skupinu a nastavte Microsoft Dataverse ako vlastník pre obe bezpečnostné skupiny.
+2. Spravujte zoznam riadenia prístupu (ACL) v kontajneri CustomerInsights vo svojom účte úložiska prostredníctvom týchto skupín zabezpečenia. Pridajte Microsoft Dataverse servis a akékoľvek Dataverse podnikových aplikácií, ako je Dynamics 365 Marketing **Čitateľ** bezpečnostná skupina s **iba na čítanie** povolenia. Pridať *iba* aplikáciu Customers Insights na **Prispievateľ** bezpečnostná skupina udeliť oboje **čítaj a píš** povolenia na písanie profilov a prehľadov.
+   
+#### <a name="prerequisites"></a>Požiadavky
+
+Ak chcete spustiť skripty PowerShell, musíte mať importované nasledujúce tri moduly. 
+
+1. Nainštalujte najnovšiu verziu [Azure Active Directory PowerShell pre Graph](/powershell/azure/active-directory/install-adv2).
+   1. Na počítači stlačte kláves Windows a nájdite **Windows PowerShell** a vyberte **Spustiť ako správca**.
+   1. Do okna PowerShell, ktoré sa otvorí, zadajte výraz `Install-Module AzureAD`.
+2. Importujte tri moduly.
+    1. V okne PowerShell zadajte`Install-Module -Name Az.Accounts` a postupujte podľa krokov. 
+    1. Opakujte pre`Install-Module -Name Az.Resources` a `Install-Module -Name Az.Storage`.
+
+#### <a name="configuration-steps"></a>Kroky konfigurácie
+
+1. Stiahnite si dva skripty PowerShell, ktoré potrebujete na spustenie, z nášho inžiniera [Úložisko GitHub](https://github.com/trin-msft/byol).
+    1. `CreateSecurityGroups.ps1`
+       - Potrebuješ *správca nájomcu* povolenia na spustenie tohto skriptu PowerShell. 
+       - Tento skript PowerShell vytvorí dve skupiny zabezpečenia vo vašom predplatnom Azure. Jeden pre skupinu Reader a druhý pre skupinu Contributor and will make Microsoft Dataverse ako vlastník pre obe tieto bezpečnostné skupiny.
+       - Spustite tento skript PowerShell v prostredí Windows PowerShell zadaním ID predplatného Azure, ktoré obsahuje vaše Azure Data Lake Storage. Otvorte skript PowerShell v editore a pozrite si ďalšie informácie a implementovanú logiku.
+       - Uložte obe hodnoty ID bezpečnostnej skupiny vygenerované týmto skriptom, pretože ich použijeme v`ByolSetup.ps1` skript.
+       
+        > [!NOTE]
+        > Vytváranie bezpečnostnej skupiny je možné vo vašom nájomníkovi zakázať. V takom prípade by bolo potrebné manuálne nastavenie a vaše Azure AD admin by musel [povoliť vytvorenie bezpečnostnej skupiny](/azure/active-directory/enterprise-users/groups-self-service-management).
+
+    2. `ByolSetup.ps1`
+        - Potrebuješ *Vlastník údajov objektu Storage Blob* oprávnenia na úrovni účtu úložiska/kontajnera na spustenie tohto skriptu alebo tento skript vytvorí jeden za vás. Po úspešnom spustení skriptu je možné priradenie vašej role manuálne odstrániť.
+        - Tento skript PowerShell pridáva požadované riadenie prístupu na základe tole (RBAC) pre Microsoft Dataverse servis a akékoľvek Dataverse podnikové aplikácie. Aktualizuje tiež zoznam riadenia prístupu (ACL) v kontajneri CustomerInsights pre skupiny zabezpečenia vytvorené pomocou`CreateSecurityGroups.ps1` skript. Skupina prispievateľov bude mať *rwx* a skupina čitateľov bude mať *rx* iba povolenie.
+        - Spustite tento skript PowerShell v prostredí Windows PowerShell zadaním ID predplatného Azure, ktoré obsahuje vaše Azure Data Lake Storage, názov účtu úložiska, názov skupiny prostriedkov a hodnoty ID bezpečnostnej skupiny Reader a Contributor. Otvorte skript PowerShell v editore a pozrite si ďalšie informácie a implementovanú logiku.
+        - Po úspešnom spustení skriptu skopírujte výstupný reťazec. Výstupný reťazec vyzerá takto:`https: //DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+        
+2. Zadajte výstupný reťazec skopírovaný zhora do **Identifikátor povolení** poľa kroku konfigurácie prostredia pre Microsoft Dataverse.
+
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Možnosti konfigurácie umožňujúce zdieľanie údajov z vašich vlastných Azure Data Lake Storage s Microsoft Dataverse .":::
+
+Customer Insights nepodporuje nasledujúce scenáre zdieľania údajov:
+- Ak povolíte zdieľanie údajov pomocou Dataverse, nebudete môcť [vytvárať predikované ani chýbajúce hodnoty v entite](predictions.md).
+- Ak povolíte zdieľanie údajov s Dataverse, nebudete môcť zobraziť žiadne voliteľné zostavy PowerBI Embedded v prostredí Customer Insights.
+
+### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Odstráňte existujúce pripojenie k a Dataverse životné prostredie
+
+Pri pripájaní k a Dataverse prostredia, chybové hlásenie **Táto organizácia CDS je už pripojená k inej inštancii Customer Insights** znamená, že Dataverse sa už používa v prostredí Customer Insights. Existujúce pripojenie môžete odstrániť ako globálny správca na Dataverse životné prostredie. Vyplnenie zmien môže trvať niekoľko hodín.
+
+1. Prejdite do systému [Power Apps](https://make.powerapps.com).
+1. Vyberte prostredie z výberu prostredia.
+1. Ísť do **Riešenia**
+1. Odinštalujte alebo odstráňte pomenované riešenie **Dynamics 365 Customer Insights Doplnok zákazníckej karty (ukážka)**.
+
+OR 
+
+1. Otvor tvoj Dataverse životné prostredie.
+1. Ísť do **Pokročilé nastavenia** > **Riešenia**.
+1. Odinštalujte **CustomerInsightsCustomerCard** Riešenie.
 
 ## <a name="copy-the-environment-configuration"></a>Skopírovať konfiguráciu prostredia
 
-Keď vytvárate nové prostredie, môžete sa rozhodnúť, či chcete skopírovať konfiguráciu z už existujúceho prostredia. 
+Ako správca sa môžete rozhodnúť skopírovať konfiguráciu z existujúceho prostredia, keď vytvoríte nové. 
 
 :::image type="content" source="media/environment-settings-dialog.png" alt-text="Snímka obrazovky s možnosťami nastavení v nastaveniach prostredia.":::
 
@@ -79,12 +139,14 @@ Skopírujú sa nasledujúce konfiguračné nastavenia:
 - Spravovanie modelov
 - Priradenia roly
 
-Tieto údaje *nebudú* skopírované:
+## <a name="set-up-a-copied-environment"></a>Nastavte skopírované prostredie
+
+Pri kopírovaní konfigurácie prostredia sú nasledujúce údaje *nie* skopírované:
 
 - Profily zákazníkov.
 - Poverenia zdroja údajov. Budete musieť poskytnúť poverenia pre každý zdroj údajov a ručne obnoviť zdroje údajov.
-
 - Zdroje údajov z priečinka Common Data Model a dátového jazera spravovaného v Dataverse. Tieto zdroje údajov budete musieť vytvoriť ručne s rovnakým názvom ako v zdrojovom prostredí.
+- Tajomstvá pripojenia, ktoré sa používajú na exporty a obohatenia. Musíte znova overiť pripojenia a potom znova aktivovať obohatenia a exporty. 
 
 Po skopírovaní prostredia sa zobrazí potvrdzovacia správa o vytvorení nového prostredia. Stlačte možnosť **Prejsť na zdroje údajov**, čím si zobrazíte zoznam zdrojov údajov.
 
@@ -95,6 +157,8 @@ Všetky zdroje údajov sa zobrazia so stavom **Vyžadované poverenia**. Upravte
 Po obnovení zdrojov údajov prejdite na stránku **Údaje** > **Zjednotiť**. Tu nájdete nastavenia zo zdrojového prostredia. Upravte ich podľa potreby alebo stlačte možnosť **Spustiť**, čím začnete proces zjednotenia údajov a vytvoríte jednotnú entitu zákazníka.
 
 Po dokončení zjednotenia údajov prejdite na stránku **Opatrenia** a **Segmenty**, čím ich tiež obnovíte.
+
+Pred opätovnou aktiváciou exportov a obohatení prejdite na stránku **Admin** > **Spojenia** na opätovné overenie pripojení vo vašom novom prostredí.
 
 ## <a name="change-the-owner-of-an-environment"></a>Zmeňte vlastníka prostredia
 
@@ -110,7 +174,7 @@ Aj keď v Customer Insights môže mať niekoľko používateľov povolenia spr�
 
 1. Vyberte **Skontrolujte a dokončite**, potom **Aktualizovať** aplikujte zmeny. 
 
-## <a name="claim-ownership-of-an-environment"></a>Nárokovať si vlastníctvo prostredia
+## <a name="claim-ownership-of-an-environment"></a>Nárokujte si vlastníctvo prostredia
 
 Ak vlastník prostredia opustí organizáciu alebo sa odstráni jeho používateľský účet, prostredie nebude mať vlastníka. Používateľ s oprávneniami správcu si môže nárokovať vlastníctvo a stať sa novým vlastníkom. Môžu naďalej vlastniť životné prostredie resp [zmeniť vlastníctvo na iného správcu](#change-the-owner-of-an-environment). 
 
@@ -139,6 +203,9 @@ Ako vlastník prostredia môžete odstrániť prostredie, ktoré spravujete.
 3. Vyberte možnosť **Odstrániť**. 
 
 4.  Odstránenie potvrdíte zadaním názvu prostredia a výberom položky **Odstrániť**.
+
+> [!NOTE]
+> Vymazaním prostredia sa neodstráni priradenie k a Dataverse prostredia.Naučte sa, ako na to [odstrániť existujúce pripojenie k a Dataverse životné prostredie](#remove-an-existing-connection-to-a-dataverse-environment).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354909"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523756"
 ---
 # <a name="customer-profiles"></a>Profily zákazníkov
 
 Stránka **Zákazníci** zobrazuje kombinovaný pohľad na vaše zjednotené profily zákazníkov. Profily zákazníkov budú k dispozícii, keď [vytvoríte zjednotenú entitu Zákazník](data-unification.md). Táto stránka vám umožňuje vyhľadávať zákazníkov a definovať index pre toto vyhľadávanie.
 
-Zákazníkmi môžu byť jednotlivci alebo organizácie. Každý profil zákazníka je reprezentovaný dlaždicou. Na získanie ďalších záznamov použite ovládacie prvky stránkovania. Karta zobrazuje polia z entity *Zákazník*, ako bolo definované v **Indexe vyhľadávania a filtrovania**. Vyberte dlaždicu, aby ste zobrazili údaje pre vybraného zákazníka na vyhradenej stránke s názvom [Stránka s podrobnosťami o zákazníkovi](customer-profiles.md#customer-details-page).
+Zákazníkmi môžu byť jednotlivci alebo organizácie. Každý profil zákazníka je reprezentovaný dlaždicou. Na získanie ďalších záznamov použite ovládacie prvky stránkovania. Karta zobrazuje polia z entity *Zákazník*, ako bolo definované v **Indexe vyhľadávania a filtrovania**. Poradie polí na každej karte vyberie systém.
+
+Vyberte dlaždicu, aby ste zobrazili údaje pre vybraného zákazníka na vyhradenej stránke s názvom [Stránka s podrobnosťami o zákazníkovi](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Stránka Zákazníci, ktorá zobrazuje dlaždice s výsledkami](media/customers-page-result-tiles-B2C.png "Stránka Zákazníci, ktorá zobrazuje dlaždice s výsledkami")

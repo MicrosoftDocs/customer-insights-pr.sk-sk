@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232010"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487534"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Export segmentov do Marketo (ukážka)
 
@@ -63,7 +63,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Zadajte svoje **[ID zoznamu Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID zoznamu je čisto číselná hodnota. Napríklad, ak je vaše ID v zozname Marketo ST12345A7, odstráňte znak pred a za číslicami a zadajte `12345`. 
 
-1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka. 
+1. V **Zhoda údajov** vyberte aspoň jedno pole, ktoré predstavuje e-mailovú adresu zákazníka alebo Marketo ID zákazníka. 
 
 1. Voliteľné možno exportovať **Meno**, **Priezvisko**, **Mesto**, **Štát** a **Krajina/oblasť** a vytvorte si viac prispôsobené e-maily. Výberom položky **Pridať atribút** namapujete tieto polia.
 

@@ -1,7 +1,7 @@
 ---
 title: Obohatenie zjednotených profilov zákazníkov
 description: Využite možnosti na obohatenie údajov vašich zákazníkov.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372738"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491978"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obohacovanie profilov zákazníkov (ukážka)
 
@@ -97,5 +97,19 @@ Zobrazenie stavu obohatenia
 1. Na table **Podrobnosti o priebehu** rozbaľte časť **Obohatenia**. 
 1. Pod položkou obohatenia, ktoré chcete vidieť, označte položku **Zobraziť podrobnosti**. 
 1. V table **Podrobnosti o úlohe** označením položky **Zobraziť podrobnosti** zobrazíte procesy tvoriace proces aktualizácie obohatenia, a ich stav. 
+
+## <a name="enrichment-results"></a>Výsledky obohatenia
+
+Po dokončení cyklu obohatenia si môžete prezrieť výsledky obohatenia.
+
+1. Prejdite na položku **Údaje** > **Obohatenie**. 
+1. Vyberte obohatenie, o ktorom chcete získať informácie.
+
+Všetky obohatenia zobrazujú základné informácie, ako je počet obohatených profilov, náhľad vygenerovanej entity obohatenia a počet obohatených profilov v priebehu času. Ak je k dispozícii, **Počet zákazníkov obohatený o odbor** poskytuje hĺbkovú analýzu pokrytia každého obohateného poľa.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Stránka s výsledkami obohatení.":::
+
+Niektoré obohatenia tiež zobrazujú informácie špecifické pre daný typ obohatenia. Ďalšie informácie nájdete v dokumentácii k príslušnému obohateniu.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

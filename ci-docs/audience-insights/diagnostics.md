@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376435"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523688"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights poskytuje priamu integráciu s Azure Monitor. Pro
 Customer Insights odosiela nasledujúce protokoly udalostí:
 
 - **Udalosti auditu**
-  - **APIEvent** - umožňuje sledovanie zmien pomocou Dynamics 365 Customer Insights UI.
+  - **APIEvent** - umožňuje sledovanie zmien prostredníctvom Dynamics 365 Customer Insights UI.
 - **Prevádzkové udalosti**
   - **WorkflowEvent** - Workflow umožňuje nastaviť [Zdroje dát](data-sources.md),[zjednotiť](data-unification.md) a [obohatiť](enrichment-hub.md) a nakoniec [export](export-destinations.md) údaje do iných systémov. Všetky tieto kroky možno vykonať jednotlivo (napr. spustiť jeden export) alebo usporiadať (napr. obnovenie údajov zo zdrojov údajov, ktoré spustí proces zjednotenia, ktorý prinesie ďalšie obohatenia a po dokončení exportuje údaje do iného systému). Viac podrobností nájdete na [WorkflowEvent Schema](#workflow-event-schema).
   - **APIEvent** - všetky volania API do inštancie zákazníkov Dynamics 365 Customer Insights. Viac podrobností nájdete na [Schéma APIEvent](#api-event-schema).
@@ -38,7 +38,7 @@ Ak chcete nakonfigurovať diagnostiku v Customer Insights, musia byť splnené t
 
 - Máte aktívny [Azure predplatné](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Máš [správca](permissions.md#admin) povolenia v Customer Insights.
-- Máte **Prispievateľ** a **Administrátor prístupu používateľov** rolu na cieľovom prostriedku v Azure. Prostriedkom môže byť účet Azure Storage, centrum udalostí Azure alebo pracovný priestor Azure Log Analytics. Viac informácií nájdete v časti [Pridajte alebo odstráňte priradenia rolí Azure pomocou portálu Azure](/azure/role-based-access-control/role-assignments-portal).
+- Máte **Prispievateľ** a **Administrátor prístupu používateľov** rolu na cieľovom prostriedku v Azure. Prostriedkom môže byť účet Azure Storage, centrum udalostí Azure alebo pracovný priestor Azure Log Analytics. Ďalšie informácie nájdete v časti [Pridajte alebo odstráňte priradenia rolí Azure pomocou portálu Azure](/azure/role-based-access-control/role-assignments-portal).
 - [Požiadavky na destináciu](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pre Azure Storage, Azure Event Hub alebo Azure Log Analytics splnené.
 - Máte aspoň ten **Čitateľ** rolu v skupine prostriedkov, do ktorej prostriedok patrí.
 
@@ -55,7 +55,7 @@ Ak chcete nakonfigurovať diagnostiku v Customer Insights, musia byť splnené t
 
 1. Vyber **Nájomca** predplatného Azure s cieľovým prostriedkom a vyberte **Prihlásiť sa**.
 
-1. Vyberte **Typ zdroja** (Účet úložiska, Event Hub alebo analýza denníkov).
+1. Vyberte **Typ zdroja** (Účet úložiska, centrum udalostí alebo analýzy denníkov).
 
 1. Vyberte **Predplatné** pre cieľový zdroj.
 
@@ -109,7 +109,7 @@ Riaditeľ služby Customer Insights dostane **Vlastník údajov Azure Event Hubs
 
 ### <a name="log-analytics"></a>Log Analytics
 
-Riaditeľ služby Customer Insights dostane **Log Analytics Contributor** povolenie na zdroj. Záznamy budú dostupné pod **Denníky** > **Tabuľky** > **Správa protokolov** vo vybranom pracovnom priestore Log Analytics. Rozbaľte **Správa denníkov** riešenie a nájdite`CIEventsAudit` a`CIEventsOperational` tabuľky.
+Riaditeľ služby Customer Insights dostane **Log Analytics Contributor** povolenie na zdroj. Záznamy budú dostupné pod **Denníky** > **Tabuľky** > **Správa denníkov** vo vybranom pracovnom priestore Log Analytics. Rozbaľte **Správa denníkov** riešenie a nájdite`CIEventsAudit` a`CIEventsOperational` tabuľky.
 
 - `CIEventsAudit` obsahujúce **auditové udalosti**
 - `CIEventsOperational` obsahujúce **prevádzkové udalosti**
@@ -230,7 +230,7 @@ Udalosti pracovného toku majú nasledujúce vlastnosti.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Áno      | Áno  | Vždy`WorkflowEvent`, čím sa udalosť označí ako udalosť pracovného toku.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Áno      | Áno  | Identifikátor behu pracovného toku. Všetky udalosti pracovného toku a úloh v rámci vykonávania pracovného toku majú rovnaké `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Áno      | Áno  | Identifikátor prevádzky, viď[ Typy operácií].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Áno      | Áno  | Identifikátor prevádzky, viď [Typy operácií](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Áno      | No   | Iba pracovný postup. Počet úloh, ktoré pracovný tok spúšťa.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Áno      | No   | Voliteľné. Iba udalosti pracovného toku. The Azure Active Directory [objectId používateľa](/azure/marketplace/find-tenant-object-id#find-user-object-id) kto spustil pracovný tok, pozri tiež `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Áno      | No   | `full` alebo`incremental` Obnoviť.                                                                                                                                                                                                                            |

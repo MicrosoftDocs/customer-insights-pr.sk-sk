@@ -1,7 +1,7 @@
 ---
 title: Používanie zdrojov údajov na príjem údajov
 description: Prečítajte si, ako importovať údaje z rôznych zdrojov.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354068"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464093"
 ---
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
@@ -37,7 +37,7 @@ Môžete pridať nasledujúce zdroje údajov:
 - [Od an Azure Synapse Analytics databázy](connect-synapse.md)
 
 > [!NOTE]
-> Ak používate skúšobnú verziu, sekcia metód importu obsahuje a **Knižnica údajov Customer Insights** možnosť. Túto možnosť vyberte, ak chcete vybrať vzorovú množinu údajov dostupnú pre rôzne odvetvia. Ďalšie informácie nájdete v časti [Dynamics 365 Customer Insights súdny proces](../trial-signup.md).
+> Ak používate skúšobnú verziu, sekcia metód importu obsahuje a **Knižnica údajov Customer Insights** možnosť. Túto možnosť vyberte, ak chcete vybrať vzorovú množinu údajov dostupnú pre rôzne odvetvia. Viac informácií nájdete v časti [Dynamics 365 Customer Insights súdny proces](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Pridajte údaje z lokálny zdrojov údajov
 
@@ -47,7 +47,18 @@ Zdroje údajov, ktoré sa vytvoria po priradení a Dataverse prostredie s využi
 
 Dátové brány z existujúceho prostredia Power BI alebo Power Apps bude viditeľné a môžete ho znova použiť v nástroji Customer Insights. Na stránke zdrojov údajov sú zobrazené odkazy smerujúce do prostredia Microsoft Power Platform, v ktorom si môžete prezerať a konfigurovať lokálne brány údajov.
 
+> [!IMPORTANT]
+> Uistite sa, že sú vaše brány aktualizované na najnovšiu verziu. Môžete nainštalovať aktualizáciu a prekonfigurovať bránu z výzvy zobrazenej na obrazovke brány priamo alebo [stiahnite si najnovšiu verziu](https://powerapps.microsoft.com/downloads/). Ak nepoužívate najnovšiu verziu brány, obnovenie toku údajov zlyhá s chybovými hláseniami, ako napr **Kľúčové slovo nie je podporované: konfiguračné vlastnosti. Názov parametra: kľúčové slovo**.
+
 ## <a name="review-ingested-data"></a>Kontrola prijatých údajov
+Ak vaše prostredie obsahuje Power Platform dátové toky, **Zdroje dát** stránka obsahuje tri sekcie: 
+- **Zdieľané** : Zdroje údajov, ktoré môžu spravovať všetci správcovia Customer Insights. Power BI dátové toky, váš vlastný úložný účet a pripojenie k a Dataverse -managed data lake sú príklady zdieľaných zdrojov údajov.
+- **Spravované mnou** :Power Platform dátové toky vytvorené a môžete ich spravovať iba vy. Ostatní správcovia Customer Insights môžu tieto toky údajov iba zobraziť, ale nemôžu ich upravovať, obnovovať ani odstraňovať.
+- **Spravované inými** :Power Platform dátové toky vytvorené inými správcami. Môžete si ich iba prezerať. Uvádza vlastníka toku údajov, na ktorého sa môžete obrátiť so žiadosťou o pomoc.
+> [!NOTE]
+> Všetky entity môžu prezerať a používať iní používatelia. Používateľský kontext sa vzťahuje iba na zdroje údajov a nie na entity, ktoré sú výsledkom týchto tokov údajov.
+
+Ak nie Power Platform sa používajú toky údajov, neuvidíte žiadne skupiny ani sekcie. The **Zdroje dát** obsahuje iba zoznam všetkých zdrojov údajov.
 
 Uvidíte názov každého prijatého zdroj údajov, jeho stav a poslednú aktualizáciu údajov pre tento zdroj. Zoznam zdrojov údajov môžete zoradiť podľa každého stĺpca.
 
