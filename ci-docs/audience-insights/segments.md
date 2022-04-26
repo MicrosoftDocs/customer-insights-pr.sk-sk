@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508585"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529558"
 ---
 # <a name="segments-overview"></a>Prehľad segmentov
 
@@ -47,24 +47,30 @@ Existuje niekoľko spôsobov, ako vytvoriť nový segment:
 
 ## <a name="manage-existing-segments"></a>Spravovanie existujúcich segmentov
 
-Choďte na stránku **Segmenty** a zobrazte si všetky svoje uložené segmenty a spravujte ich.
+Choďte na **Segmenty** zobrazíte všetky svoje uložené segmenty a spravujete ich.
 
 Každý segment je reprezentovaný radom, ktorý obsahuje ďalšie informácie o segmente.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Vybratý segment s rozbaľovacím zoznamom možností a dostupnými možnosťami.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Vybratý segment s rozbaľovacím zoznamom možností a dostupnými možnosťami." lightbox="media/segments-selected-segment.png":::
 
-Po výbere segmentu sú k dispozícii nasledujúce akcie:
+Keď vyberiete segment, sú k dispozícii nasledujúce akcie:
 
 - **Zobrazenie** podrobností o segmente vrátane trendu počtu členov a ukážky členov segmentu.
+- **Stiahnutie** zoznam členov ako súbor .CSV.
 - **Úprava** segmentu na zmenu jeho vlastností.
 - **Vytvorte duplikát** segmentu. Môžete sa rozhodnúť okamžite upraviť jeho vlastnosti alebo duplikát jednoducho uložiť.
 - **Obnova** segmentu, ktorý obsahuje najnovšie údaje.
-- **Aktivácia** alebo **deaktivácia** segmentu. Segmenty majú dva možné stavy – aktívny alebo neaktívny. Tieto stavy sa hodia pri úprave segmentu. Pre neaktívne segmenty existuje definícia segmentu, zatiaľ však neobsahuje žiadnych zákazníkov. Keď aktivujete segment, jeho stav sa zmení z „neaktívneho“ na „aktívny“ a začne hľadať zákazníkov, ktorí zodpovedajú definícii segmentu. Ak je [plánované obnovenie](system.md#schedule-tab) nakonfigurované, neaktívne segmenty majú **Postavenie** uvedené ako **Preskočené**, čo naznačuje, že k obnoveniu ani nedošlo. Keď je neaktívny segment aktivovaný, obnoví sa a bude zahrnutý do plánovaných aktualizácií.
+- **Aktivácia** alebo **deaktivácia** segmentu. Pre neaktívne segmenty existuje definícia segmentu, zatiaľ však neobsahuje žiadnych zákazníkov. Aktívny segment hľadá zákazníkov, ktorí zodpovedajú definícii segmentu. Ak je [plánované obnovenie](system.md#schedule-tab) nakonfigurované, neaktívne segmenty majú **Postavenie** uvedené ako **Preskočené**, čo naznačuje, že k obnoveniu ani nedošlo. Keď je neaktívny segment aktivovaný, obnoví sa a bude zahrnutý do plánovaných aktualizácií.
   Prípadne môžete použiť funkciu **Naplánovať neskôr** v rozbaľovacej ponuke **Aktivácia/Deaktivácia** na určenie budúceho dátumu a času aktivácie a deaktivácie konkrétneho segmentu.
+- **[Nájdite podobných zákazníkov](find-similar-customer-segments.md)** zo segmentu.
 - **Premenovanie** segmentu.
+- **Tag** do [spravovať značky](work-with-tags-columns.md#manage-tags) pre segment.
 - **Stiahnutie** zoznam členov ako súbor .CSV.
 - **Spravujte exporty**, ak chcete zobraziť segmenty súvisiace s exportom a spravovať ich. [Ďalšie informácie o exportoch.](export-destinations.md)
 - **Odstránenie** segmentu.
+- **Stĺpce** do [prispôsobiť stĺpce](work-with-tags-columns.md#customize-columns) ten displej.
+- **Filter** do [filtrovať podľa značiek](work-with-tags-columns.md#filter-on-tags).
+- **Vyhľadať meno** na vyhľadávanie podľa názvu segmentu.
 
 ## <a name="refresh-segments"></a>Obnovenie segmentov
 

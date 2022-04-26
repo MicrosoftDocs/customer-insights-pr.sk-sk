@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225544"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552075"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor pre Power BI (ukážka)
 
@@ -72,6 +72,6 @@ Po odstránení duplicitných vzťahov sa pokúste konektor Power BI nakonfiguro
 
 Pri načítavaní entít obsahujúcich polia s formátom dátumu, ako je MM/DD/RRRR, sa môžu vyskytnúť chyby v dôsledku nezhodných formátov miestnych nastavení. Tento nesúlad nastane vtedy, keď súbor aplikácie Power BI Desktop bol nastavený na iné miestne nastavenie ako je angličtina (USA), pretože polia dátumu v prehľadoch cieľovej skupiny sú uložené v americkom formáte.
 
-Súbor aplikácie Power BI Desktop má jedno miestne nastavenie, ktoré sa používa pri získavaní údajov. Ak chcete, aby boli tieto polia dátumu interpretované správne, nastavte miestne nastavenie súboru .BPI na angličtinu (Spojené štáty americké). [Zistite, ako môžete zmeniť miestne nastavenia súboru počítačovej aplikácie Power BI](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Súbor aplikácie Power BI Desktop má jedno miestne nastavenie, ktoré sa používa pri získavaní údajov. Ak chcete, aby boli tieto polia dátumu interpretované správne, nastavte miestne nastavenie súboru .BPI na angličtinu (Spojené štáty americké). [Zistite, ako môžete zmeniť miestne nastavenia súboru počítačovej aplikácie Power BI](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

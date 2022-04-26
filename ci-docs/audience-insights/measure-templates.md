@@ -1,28 +1,28 @@
 ---
 title: Vytvorte miery zo šablón
 description: Definujte miery pomocou šablón pre bežné prípady použitia.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359977"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529420"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Na vytvorenie miery použite šablónu
 
 Môžete použiť preddefinované šablóny bežne používaných [Opatrenia](measures.md) na ich vytvorenie. Podrobné popisy šablón a sprievodca vám pomôže s efektívnym vytváraním opatrení. Šablóny vychádzajú z mapovaných údajov z entity *Zjednotená aktivita*. Uistite sa teda, že ste nakonfigurovali [aktivity zákazníkov](activities.md) pred vytvorením merania zo šablóny.
 
-Ak chcete vytvoriť vlastné miery, pozri [Použite nástroj na tvorbu opatrení na vytvorenie mier od začiatku](measure-builder.md).
+Ak chcete vytvoriť vlastné miery, pozrite si [Použite nástroj na tvorbu opatrení na vytvorenie mier od začiatku](measure-builder.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 
@@ -51,7 +51,9 @@ Dostupné šablóny merania:
 
 1. Skontrolujte požadované údaje a vyberte **Začíname**, ak máte všetky údaje uvedené.
 
-1. Na table **Upraviť názov** nastavte názov svojej miery a výstupnú entitu. 
+1. Vyberte **Upraviť podrobnosti** vedľa názvu miery. Zadajte názov opatrenia. Prípadne pridajte [značky](work-with-tags-columns.md#manage-tags) na mieru.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Dialógové okno Upraviť podrobnosti.":::
 
 1. Vyberte položku **Hotovo**.
 
