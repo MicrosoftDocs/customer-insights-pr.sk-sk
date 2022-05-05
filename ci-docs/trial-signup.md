@@ -3,17 +3,17 @@ title: Registrácia na získanie bezplatnej skúšobnej verzie – Dynamics 365 
 description: Zistite, ako sa rýchlo zaregistrovať a spustiť bezplatnú skúšobnú verziu Customer Insights. Preskúmajte aplikáciu a nájdite si ďalšie vzdelávacie zdroje.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 04/12/2022
 ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350242"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641735"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Zaregistrujte sa do bezplatnej skúšobnej verzie Dynamics 365 Customer Insights
 
@@ -21,7 +21,7 @@ Customer Insights ponúka bezplatnú 30-dňovú skúšobnú verziu. Po rýchlej 
 
 **Postup registrácie do skúšobnej verzie**:
 
-1. Prejdite na stránku [prehľadu skúšobnej verzie](https://dynamics.microsoft.com/get-started/?appname=customerinsights) a vyberte **Zaregistrovať sa**.
+1. Choďte na [stránka s prehľadom skúšobných verzií](https://dynamics.microsoft.com/ai/customer-insights/) a vyberte **Vyskúšajte zadarmo Customer Insights**.
 1. Podľa pokynov na obrazovke zadajte [e-mail priradený ku kontu Microsoft](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa) a kontaktné informácie.
 1. Vykonajte výbery a vyberte si, na čo sa chcete zamerať, kým sa nedostanete na úvodnú stránku pre vami zvolenú možnosť.
 
@@ -31,12 +31,12 @@ Načítanie skúšobnej verzie chvíľu trvá, následne môžete začať aplik�
 
 Vaše skúšobné prostredie obsahuje mnoho rovnakých funkcií ako platená verzia. Nižšie uvedené odkazy vás presmerujú cez niektoré kľúčové funkcie.
 
-- [Rýchla konfigurácia pre prehľady cieľovej skupiny.](audience-insights/get-started.md)
-- [Pridajte ďalších používateľov a priraďte povolenia.](audience-insights/permissions.md)
-- [Prijmite zdroje údajov](audience-insights/data-sources.md) a spusťte ich prostredníctvom [procesu zjednocovania údajov](audience-insights/data-unification.md), aby ste získali [jednotné zákaznícke profily](audience-insights/customer-profiles.md).
-- [Obohaťte zjednotené zákaznícke profily](audience-insights/enrichment-hub.md) alebo [spusťte prediktívne modely](audience-insights/predictions-overview.md).
-- Vytvorte [segmenty](audience-insights/segments.md) skupinovým zákazníkom a [miery](audience-insights/measures.md) na kontrolu KPI.
-- Nastavte [spojenia](audience-insights/connections.md) a [exporty](audience-insights/export-destinations.md) na spracovanie podmnožín vašich údajov v iných aplikáciách.
+- [Začnite s Customer Insights.](get-started.md)
+- [Pridajte ďalších používateľov a priraďte povolenia.](permissions.md)
+- [Prijmite zdroje údajov](data-sources.md) a spusťte ich prostredníctvom [procesu zjednocovania údajov](data-unification.md), aby ste získali [jednotné zákaznícke profily](customer-profiles.md).
+- [Obohaťte zjednotené zákaznícke profily](enrichment-hub.md) alebo [spusťte prediktívne modely](predictions-overview.md).
+- Vytvorte [segmenty](segments.md) skupinovým zákazníkom a [miery](measures.md) na kontrolu KPI.
+- Nastavte [spojenia](connections.md) a [exporty](export-destinations.md) na spracovanie podmnožín vašich údajov v iných aplikáciách.
 
 ## <a name="additional-resources"></a>Ďalšie zdroje
 
