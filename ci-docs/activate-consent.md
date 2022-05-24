@@ -1,23 +1,22 @@
 ---
 title: Aktivujte pravidlá súhlasu pre segmenty
 description: Ak chcete prepojiť údaje o súhlase a aktivovať kontroly súhlasu v, postupujte podľa týchto krokov Dynamics 365 Customer Insights. Správca môže tiež zakázať kontroly súhlasu.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643121"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755189"
 ---
 # <a name="activate-consent-rules"></a>Aktivujte pravidlá súhlasu
 
-The [Centrum súhlasu (ukážka)](consent-management/overview.md) vám pomôže zosúladiť údaje o súhlase z rôznych zdrojov. Použite jednotné *Súhlas* subjekt na použitie predvolených kontrol súhlasu. Po importovaní údajov o súhlase do Centra súhlasu a konfigurácii pravidiel pre údaje, *Súhlas* entita sa automaticky synchronizuje s Dynamics 365 Customer Insights.
+The [Centrum súhlasu (ukážka)](consent-management/overview.md) vám pomôže zosúladiť údaje o súhlase z rôznych zdrojov. Použite jednotné *Súhlas* subjekt na použitie predvolených kontrol súhlasu. Po importovaní údajov o súhlase a konfigurácii pravidiel mapy sa *Súhlas* entita sa automaticky synchronizuje s Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Povolenie kontrol súhlasu
 

@@ -66,12 +66,18 @@
   items:
     - name: Prehľad zjednotenia údajov
       href: data-unification.md
-    - name: Mapovanie entít a atribútov
+    - name: Vyberte zdrojové polia
       href: map-entities.md
-    - name: Priradenie entít
+    - name: Odstráňte duplicitné záznamy
+      href: remove-duplicates.md
+    - name: Podmienky zápasu
       href: match-entities.md
-    - name: Zlúčenie entít
+    - name: Zjednotiť zákaznícke polia
       href: merge-entities.md
+    - name: Skontrolujte zjednotenie údajov
+      href: review-unification.md
+    - name: Aktualizujte nastavenia zjednotenia
+      href: data-unification-update.md
 - name: Obohatenie údajov
   items:
     - name: Obohatenie profilov zákazníkov
@@ -282,6 +288,8 @@
       href: apis.md
     - name: Odkazy na API
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Vzorové dopyty OData
+      href: odata-examples.md
 - name: Správa súhlasu (ukážka)
   items:
     - name: Centrum pomoci

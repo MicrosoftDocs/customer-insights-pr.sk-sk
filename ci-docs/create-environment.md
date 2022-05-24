@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643103"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712921"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Vytvorte prostredie v Customer Insights
 
@@ -63,8 +63,7 @@ Budete mať dve možnosti: **Úložisko Customer Insights** (Azure Data Lake spr
 Uložením údajov do Azure Data Lake Storage súhlasíte s tým, že údaje budú prenesené a uložené v príslušnom geografickom umiestnení pre daný účet úložiska Azure. Toto umiestnenie sa môže líšiť od miesta, kde sú uložené údaje Dynamics 365 Customer Insights. Ďalšie informácie nájdete v [centre dôveryhodnosti spoločnosti Microsoft](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights v súčasnosti podporuje nasledujúce:
-> - Prijaté entity z tokov údajov Power BI, ktoré sú uložené v Data Lake spravovanom prostredníctvom Microsoft Dataverse.  
+> Customer Insights v súčasnosti podporuje nasledujúce:  
 > - Účty Azure Data Lake Storage z rovnakej oblasti Azure, ktorú ste vybrali pri vytváraní prostredia.
 > - Azure Data Lake Storage účty, ktoré sú Gen2 a majú *hierarchický menný priestor* povolené. Účty úložiska Azure Data Lake Gen1 nie sú podporované.
 
@@ -78,9 +77,9 @@ Ak vytvoríte viacero prostredí Customer Insights a rozhodnete sa uložiť výs
    
 Krok **Microsoft Dataverse** vám umožní prepojiť Customer Insights s vašim prostredím Dataverse.
 
-Poskytnite svoje vlastné Microsoft Dataverse prostredie na zdieľanie údajov (profilov a prehľadov) s obchodnými aplikáciami založenými na Dataverse, ako je Dynamics 365 Marketing alebo modelom riadené aplikácie v Power Apps. Ak nemáte vlastné, nechajte toto pole prázdne Dataverse prostredie a my vám jeden zabezpečíme.
+Poskytnite svoje vlastné Microsoft Dataverse prostredie na zdieľanie údajov (profilov a prehľadov) s obchodnými aplikáciami založenými na Dataverse, ako je Dynamics 365 Marketing alebo modelom riadené aplikácie v Power Apps. Nechajte toto pole prázdne, ak nemáte vlastné Dataverse prostredie a my vám jeden zabezpečíme.
 
-Pripája sa k vášmu Dataverse prostredie vám to tiež umožňuje [prijímať údaje zo zdrojov údajov lokálny pomocou Power Platform dátové toky a brány](data-sources.md#add-data-from-on-premises-data-sources). Môžete tiež použiť [out-of-box predikcia modely](predictions-overview.md?tabs=b2c#out-of-box-models) pripojením k a Dataverse životné prostredie.
+Pripája sa k vášmu Dataverse prostredie vám to tiež umožňuje [prijímať údaje zo zdrojov údajov lokálny pomocou Power Platform dátové toky a brány](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Štatistiky zákazníkov a Dataverse musia byť v rovnakej oblasti, aby bolo možné zdieľať údaje.

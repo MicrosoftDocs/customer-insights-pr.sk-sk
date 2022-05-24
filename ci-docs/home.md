@@ -1,7 +1,7 @@
 ---
 title: Domovská stránka v Customer Insights
 description: Začnite prezerať aplikáciu na stránke Domov.
-ms.date: 04/12/2022
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,38 +11,55 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: ebc5eb6b2dfaa9b013cfa0c9ce60c8a0a57a065d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
+ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643678"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "8743432"
 ---
 # <a name="explore-customer-insights"></a>Preskúmajte štatistiky zákazníkov
 
-Môžeš [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) na nasledujúcej adrese URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+Môžete pristupovať [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) na nasledujúcej adrese URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-**Domovská** stránka zobrazuje prehľad segmentov, mier a údajov o obohatení (ak sú nakonfigurované) po dokončení [mapovania](map-entities.md), [párovania](match-entities.md) a [zlučovania](merge-entities.md).
+The **Domov** stránka ukazuje vás prevedie procesom konfigurácie pre kľúčové funkcie a poskytuje prehľad segmentov, meraní a údajov o obohatení.
 
 :::image type="content" source="media/home-page.png" alt-text="Snímka domovskej obrazovky s ukážkou vzorových prehľadov.":::
 
-Kľúčové ovládacie prvky v Customer Insights:
+## <a name="left-side-pane"></a>Panel na ľavej strane
 
-- Ľavý panel: Prepínajte medzi primárnym cieľovým publikom, ak máte prostredie B2C a B2B
+Na navigáciu medzi rôznymi oblasťami Customer Insights použite ľavý panel. 
 
-- Ľavý panel: Prechádzajte medzi rôznymi oblasťami a vyberte si primárne cieľové publikum
+Ak pracujete s obchodnými účtami a individuálnymi spotrebiteľmi, môžete si vybrať svoje primárne publikum a podľa toho nastaviť svoje zameranie. 
 
-- Hlavička: Zmeňte prostredie, v ktorom pracujete, a spravujte prostredia ako správca
+## <a name="application-header"></a>Hlavička aplikácie
 
-- Hlavička: Zadajte osobné nastavenia pre Customer Insights a získajte možnosti pomoci
+The **Životné prostredie** výber zobrazuje prostredie, v ktorom pracujete, a umožňuje vám vytvárať alebo spravovať prostredia ako správcovi.
 
-Teraz môžete na domovskej stránke zobraziť nasledujúce sekcie:
+Ikona smajlíka je **Spätná väzba** ovládanie. Vyberte ju, aby ste nám povedali o svojich skúsenostiach s Customer Insights. Aktívne počúvame vašu spätnú väzbu a vopred vám ďakujeme, že ste nám dali vedieť, čo sa vám páči a ako sa môžeme zlepšiť.
 
-- **Nedávne segmenty** zobrazujú skupiny zákazníkov na základe demografických, behaviorálnych alebo transakčných atribútov, ktoré ste definovali. [Vytváranie segmentov](segments.md) vám pomôže zoskupiť zákaznícku základňu a lepšie zacieliť vaše obchodné aktivity.
+The **nastavenie** ovládanie, ktoré predstavuje ikona ozubeného kolieska, vám umožňuje zhromažďovať podrobnosti o relácii pre Customer Insights a konfigurovať globálne nastavenia Microsoft 365 profilu. 
 
-- **Nedávne obchodné opatrenia** zobrazuje dlaždice s [kľúčové ukazovatele výkonnosti (KPI)](measures.md) ktoré ste definovali. Napríklad priemerná pravdepodobnosť odchodu zákazníka alebo priemerné online výdavky na zákazníka.
+**Pomoc** možnosti, zobrazené s ikonou otáznika, poskytujú kontextové odkazy na pomoc a ďalšie užitočné zdroje.
 
-- **Nedávne obohatenia** uvádzajú výsledky nedávno dokončených obohacovacích cyklov. [Obohatenia](enrichment-hub.md) pridávajú informácie o vašej zákazníckej základni. Napríklad porozumením záujmov a značkám, ku ktorým majú vzťah.
+Váš profilový obrázok otvorí **Account manager** pre teba Microsoft 365 profilu. Vyberte **Môj účet** spravovať svoje osobné nastavenia.
+
+## <a name="getting-started-with-customer-insights-section"></a>Začíname so sekciou Customer Insights
+
+Táto časť obsahuje karty, ktoré vám pomôžu prejsť procesom nastavenia prostredia Customer Insights. 
+
+1. The **Pridajte údaje** karta vám pomôže s importom údajov. Podpora Customer Insights [niekoľko možností, ako získať údaje o svojich zákazníkoch](data-sources.md). Vyberte **Pridajte zdroje údajov** začať.
+1. Po úspešnom dokončení úvodného importu údajov môžete použiť **Zjednotiť dáta** kartu na harmonizáciu údajov a [vytvárať jednotné profily zákazníkov](data-unification.md) z rôznych zdrojov. 
+1. So zjednotenými zákazníckymi profilmi je čas na preskúmanie **Analyzujte údaje** možnosti a získajte ďalšie informácie. Skúste to vytvoriť [obchodné opatrenia](measures.md) sledovať KPI, [definovať segmenty](segments.md) osloviť konkrétne publikum, príp [konfigurovať predpovede](predictions-overview.md) s pomocou AI.
+1. Teraz, keď sú vaše údaje o zákazníkoch importované, zjednotené a prehľadne štruktúrované, používate naše [rôzne exportné destinácie](export-destinations.md) podniknúť opatrenia týkajúce sa údajov. Vyberte **Pridajte pripojenia** pre pripojenie vašich obľúbených služieb. Napríklad exportujte údaje do Dynamics 365 Marketing a vytvorte odchádzajúce marketingové kampane alebo vytvorte cesty zákazníkov. 
+
+## <a name="your-customer-insights-section"></a>Vaša sekcia štatistík zákazníkov
+
+- **Segmenty** zobrazuje skupiny zákazníkov na základe demografických, behaviorálnych alebo transakčných atribútov, ktoré ste definovali. [Vytváranie segmentov](segments.md) vám pomôže zoskupiť zákaznícku základňu a lepšie zacieliť vaše obchodné aktivity.
+
+- **Obchodné opatrenia** zobrazuje dlaždice s [kľúčové ukazovatele výkonnosti (KPI)](measures.md) ktoré ste definovali. Napríklad priemerná pravdepodobnosť odchodu zákazníka alebo priemerné online výdavky na zákazníka.
+
+- **Obohatenia** uvádza výsledky nedávno dokončených obohacovacích cyklov. [Obohatenia](enrichment-hub.md) pridávajú informácie o vašej zákazníckej základni. Napríklad porozumením záujmov a značkám, ku ktorým majú vzťah.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

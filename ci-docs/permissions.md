@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653587"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740922"
 ---
 # <a name="user-permissions"></a>Povolenia používateľa
 
@@ -41,7 +41,7 @@ Existujú tri typy rol:
 
 - Všetky povolenia, ktoré má Zobrazovač k dispozícii.
 - Načítanie a transformácia údajov pomocou stránky **Zdroje údajov**.
-- Vyplňte sekcie *Zjednotenie údajov* (**Mapovanie**, **Zosúladenie** a **Zlúčenie**), ktoré vedú k jednotnej entite profilu zákazníka.
+- Dokončiť ***Zjednotenie údajov** ktorých výsledkom je jednotná entita profilu zákazníka.
 - Definujte **Vzťahy** a **Aktivity**.
 - Vytvárajte segmenty pomocou stránky **Segmenty**.
 - Vytvárajte miery pomocou stránky **Miery**.

@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643049"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755705"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obohatenie pre zdroje údajov (ukážka)
 
@@ -26,7 +26,7 @@ Na vytváranie alebo úpravu obohatení musíte mať oprávnenia prispievateľa 
 1. Ísť do **Údaje** > **Zjednotiť**. Vyberte entitu, ktorú chcete obohatiť, a vyberte jeden atribút ako primárny kľúč pre entitu. Viac informácií nájdete v časti [Vyberte primárny kľúč](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Prejdite do **Údaje** > **Zdroje údajov**.
- 
+
 1. Vyberte zvislú elipsu vedľa zdroj údajov, ktorú chcete obohatiť, a vyberte **Obohatiť**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stránka obohatenia zdrojov údajov.":::

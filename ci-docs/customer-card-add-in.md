@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643088"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755655"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplnok Karta zákazníka (ukážka)
-
-
 
 Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dynamics 365. Keď je v podporovanej aplikácii Dynamics 365 nainštalovaný doplnok karty zákazníka, môžete sa rozhodnúť zobrazovať polia profilu zákazníka, prehľady a časovú os aktivít. Doplnok načíta údaje z Customer Insights bez ovplyvnenia údajov v pripojenej aplikácii Dynamics 365.
 
@@ -31,10 +29,10 @@ Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dyn
 ## <a name="prerequisites"></a>Predpoklady
 
 - Doplnok funguje iba s aplikáciami Dynamics 365 riadenými modelmi, ako sú napríklad Sales alebo Customer Service, verzia 9.0 a novšia.
-- Odporúčame vám, aby sa vaše údaje Dynamics 365 namapovali na zákaznícke profily Customer Insights [prijaté z aplikácie Dynamics 365 pomocou Microsoft Dataverse konektor](connect-power-query.md). Ak na prijímanie kontaktov (alebo účtov) Dynamics 365 používate inú metódu, musíte sa uistiť`contactid` (alebo`accountid`) je nastavené ako [primárny kľúč pre tento zdroj údajov v kroku mapy procesu zjednotenia údajov](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Odporúčame vám, aby sa vaše údaje Dynamics 365 namapovali na zákaznícke profily Customer Insights [prijaté z aplikácie Dynamics 365 pomocou Microsoft Dataverse konektor](connect-power-query.md). Ak na prijímanie kontaktov (alebo účtov) Dynamics 365 používate inú metódu, musíte sa uistiť`contactid` (alebo`accountid`) je nastavené ako [primárny kľúč pre tento zdroj údajov v kroku mapy procesu zjednotenia údajov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Všetci používatelia Dynamics 365 doplnku Zákaznícka karta musia byť [pridané ako používatelia](permissions.md) v Customer Insights, aby ste videli údaje.
 - [Konfigurované možnosti vyhľadávania a filtrovania](search-filter-index.md) v Customer Insights sú potrebné na fungovanie vyhľadávania údajov.
-- Každý ovládací prvok doplnku závisí od konkrétnych údajov v Customer Insights. Niektoré údaje a ovládacie prvky sú k dispozícii iba v prostrediach špecifických typov. Konfigurácia doplnku vás bude informovať, ak ovládací prvok nie je k dispozícii z dôvodu zvoleného typu prostredia. Ďalšie informácie o [prípadoch použitia prostredia](work-with-business-accounts.md).
+- Každý ovládací prvok doplnku závisí od konkrétnych údajov v Customer Insights. Niektoré údaje a ovládacie prvky sú k dispozícii iba v prostrediach špecifických typov. Konfigurácia doplnku vás bude informovať, ak ovládací prvok nie je dostupný z dôvodu zvoleného typu prostredia. Ďalšie informácie o [prípadoch použitia prostredia](work-with-business-accounts.md).
   - **Ovládací prvok Miera**: Vyžaduje [nakonfigurované miery](measures.md) typových atribútov zákazníkov.
   - **Kontrola inteligencie** : Vyžaduje údaje generované pomocou [predpovede alebo vlastné modely](predictions-overview.md).
   - **Ovládací prvok Podrobnosti o zákazníkovi**: Všetky polia z profilu sú k dispozícii v zjednotenom profile zákazníka.
@@ -132,16 +130,16 @@ Dokonca aj pri správne nakonfigurovaných poliach ID nemôžu ovládacie prvky 
 
 **Riešenie:**
 
-1. Uistite sa, že ste nakonfigurovali doplnok karty podľa pokynov: [Nakonfigurujte doplnok Zákaznícka karta](#configure-the-customer-card-add-in) 
+1. Uistite sa, že ste nakonfigurovali doplnok karty podľa pokynov: [Nakonfigurujte doplnok Zákaznícka karta](#configure-the-customer-card-add-in)
 
-1. Skontrolujte konfiguráciu prijímania údajov. Upravte zdroj údajov pre systém Dynamics 365, ktorý obsahuje ID kontaktu GUID. Ak sa ID kontaktu GUID zobrazuje s veľkými písmenami Power Query redaktor, skúste nasledovné: 
+1. Skontrolujte konfiguráciu prijímania údajov. Upravte zdroj údajov pre systém Dynamics 365, ktorý obsahuje ID kontaktu GUID. Ak sa ID kontaktu GUID zobrazuje s veľkými písmenami Power Query editor, skúste nasledujúce kroky:
     1. Upravte zdroj údajov a otvorte zdroj údajov v Power Query Editor.
     1. Vyberte stĺpec ID kontaktu.
     1. Vyberte **Transformovať** v hlavičke zobrazíte dostupné akcie.
     1. Vyberte **malými písmenami**. Overte, či sú GUID v tabuľke teraz malé.
     1. Uložte zdroj údajov.
-    1. Spustite prijímanie údajov, zjednotenie a následné procesy na šírenie zmien do GUID. 
+    1. Spustite prijímanie údajov, zjednotenie a následné procesy na šírenie zmien do GUID.
 
-Po dokončení úplného obnovenia by ovládacie prvky doplnku zákazníckej karty mali zobrazovať očakávané údaje. 
+Po dokončení úplného obnovenia systému by ovládacie prvky doplnku zákazníckej karty mali zobrazovať očakávané údaje.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

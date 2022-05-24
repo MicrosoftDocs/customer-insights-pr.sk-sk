@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643268"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755469"
 ---
 # <a name="work-with-customer-insights-apis"></a>Pracujte s rozhraniami API v službe Customer Insights
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights poskytuje API na vytváranie vlastných aplikáci
 > [!IMPORTANT]
 > Podrobnosti o týchto rozhraniach API sú uvedené v [referencii rozhraní API v službe Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Patria sem dodatočné informácie o operáciách, parametroch a reakciách.
 
-Tento článok popisuje, ako získať prístup k rozhraniam API pre Customer Insights, vytvoriť registráciu aplikácií Azure a začať s dostupnými knižnicami klientov.
+Tento článok popisuje, ako získať prístup k rozhraniam API Customer Insights, vytvoriť registráciu aplikácie Azure a ako začať s klientskymi knižnicami.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Začnite skúšať rozhrania API v službe Customer Insights
 
@@ -83,13 +83,13 @@ ID aplikácie/klienta môžete použiť na registráciu tejto aplikácie v kniž
 
 Ďalšie informácie o MSAL nájdete v sekcii [Prehľad knižnice Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Ďalšie informácie o registrácii aplikácií v službe Azure nájdete v sekcii [Registrácia aplikácie](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Ďalšie informácie o registrácii aplikácií v službe Azure nájdete v sekcii [Registrácia aplikácie](/graph/auth-register-app-v2).
 
 Informácie o používaní rozhraní API v našich klientskych knižniciach nájdete v sekcii [Klientske knižnice Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Povolenia pre aplikácie typu server-to-server
 
-[Sekcia registrácie aplikácií](#create-a-new-app-registration-in-the-azure-portal) opisuje, ako si zaregistrovať aplikáciu, ktorá vyžaduje od používateľa prihlásenie na účely overenia. Ďalšie informácie o tom, ako vytvoriť registráciu aplikácie, ktorá nevyžaduje interakciu používateľa a možno ju spustiť na serveri.
+[Sekcia registrácie aplikácií](#create-a-new-app-registration-in-the-azure-portal) opisuje, ako si zaregistrovať aplikáciu, ktorá vyžaduje od používateľa prihlásenie na účely overenia. Zistite, ako vytvoriť registráciu aplikácie, ktorá nevyžaduje zásah používateľa a možno ju spustiť na serveri.
 
 1. Pri registrácii aplikácie na portáli Azure prejdite na **Povolenia pre API**.
 
@@ -112,6 +112,10 @@ Informácie o používaní rozhraní API v našich klientskych knižniciach náj
    Otvorte službu Customer Insights, prejdite na položku **Správca** > **Povolenia** a vyberte položku **Pridať používateľa**.
 
 1. Vyhľadajte názov registrácie aplikácie, vyberte ho z výsledkov vyhľadávania a vyberte položku **Uložiť**.
+
+## <a name="sample-queries"></a>Vzorové otázky
+
+Zostavili sme krátky zoznam vzorových dotazov OData na prácu s rozhraniami API: [Príklady dotazov OData](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Knižnice klientov v službe Customer Insights
 
@@ -137,7 +141,7 @@ Zistite viac o tom, ako začať používať knižnice klientov C# z NuGet.org. �
 
 1. Použite [knižnicu Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview), aby ste získali `AccessToken` pomocou svojej existujúcej [registrácie aplikácie Azure](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Po úspešnom overení a získaní tokenu vytvorte nový alebo použite existujúci`HttpClient` s prídavným **DefaultRequestHeaders "Autorizácia"** nastavený na **Nosič "prístupový token"** a **Ocp-Apim-Subscription-Key** nastaviť na [**predplatiteľský kľúč** z prostredia Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Po úspešnom overení a získaní tokenu vytvorte nový alebo použite existujúci`HttpClient` s **DefaultRequestHeaders "Autorizácia"** nastavený na **Nosič "prístupový token"** a **Ocp-Apim-Subscription-Key** nastaviť na [**predplatiteľský kľúč** z prostredia Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Resetujte hlavičku **Oprávnenie**, ak je to vhodné. Napríklad ak vypršala platnosť tokenu.
 
@@ -147,7 +151,7 @@ Zistite viac o tom, ako začať používať knižnice klientov C# z NuGet.org. �
 
 1. Uskutočňujte hovory s klientom pre „metódy rozšírenia“ – napríklad `GetAllInstancesAsync`. Ak je preferovaný prístup k základnému `Microsoft.Rest.HttpOperationResponse`, použite „metódy správ http“ – napríklad `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Odpoveď bude pravdepodobne typu `object`, pretože metóda môže vrátiť viac typov (napríklad `IList<InstanceInfo>` a `ApiErrorResult`). Ak chcete skontrolovať typ návratu, môžete objekty bezpečne obsadiť do typov odpovedí uvedených na [stránke s podrobnosťami o rozhraní API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pre danú operáciu.    
+1. Odpoveď bude pravdepodobne typu `object`, pretože metóda môže vrátiť viac typov (napríklad `IList<InstanceInfo>` a `ApiErrorResult`). Ak chcete skontrolovať návratový typ, použite objekty v typoch odpovedí špecifikovaných na [Stránka s podrobnosťami o rozhraní API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pre danú operáciu.    
    
    Ak sú potrebné ďalšie informácie o požiadavke, získajte prístup k nespracovanému objektu odpovede cez **metódy správ HTTP**.
 

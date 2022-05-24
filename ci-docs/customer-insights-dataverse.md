@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 85995cbd7f797810bfb6ecdc8a24d56542f0b5a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643084"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741384"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práca s údajmi Customer Insights v Microsoft Dataverse
 
@@ -31,7 +31,7 @@ Správcovia môžu nakonfigurovať Customer Insights na [použiť existujúci Da
 Ak nechcete použiť existujúci Dataverse prostredie, systém vytvorí nové prostredie pre údaje Customer Insights vo vašom nájomníkovi. 
 
 > [!NOTE]
-> Ak vaše organizácie už používajú Dataverse v ich nájomníkovi, je dôležité na to pamätať [Dataverse vytváranie prostredia riadi admin](/power-platform/admin/control-environment-creation) . Ak napríklad nastavujete nové prostredie Customer Insights pomocou účtu organizácie a správca zakázal vytváranie Dataverse skúšobné prostredia pre všetkých okrem správcov, nemôžete vytvoriť nové skúšobné prostredie.
+> Ak vaše organizácie už používajú Dataverse v ich nájomníkovi, je dôležité na to pamätať [Dataverse tvorbu prostredia riadi admin](/power-platform/admin/control-environment-creation) . Ak napríklad nastavujete nové prostredie Customer Insights pomocou účtu organizácie a správca zakázal vytváranie Dataverse skúšobné prostredia pre všetkých okrem správcov, nemôžete vytvoriť nové skúšobné prostredie.
 > 
 > Skúšobné prostredia Dataverse vytvorené v Customer Insights majú 3 GB úložného priestoru, ktorý sa nezapočítava do celkovej kapacity, na ktorú má nájomník nárok. Platené predplatné získa oprávnenie Dataverse na 15 GB na databázu a 20 GB na ukladanie súborov.
 
@@ -54,7 +54,7 @@ Niektoré výstupné entity z Customer Insights sú dostupné ako tabuľky v Dat
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Táto tabuľka obsahuje zjednotený profil zákazníka z nástroja Customer Insights. Schéma pre zjednotený profil zákazníka závisí od entít a atribútov použitých v procese zlučovania. Schéma profilu zákazníka zvyčajne obsahuje podmnožinu atribútov z [Definícia Common Data Model pre CustomerProfile ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Táto tabuľka obsahuje zjednotený profil zákazníka z nástroja Customer Insights. Schéma pre zjednotený zákaznícky profil závisí od entít a atribútov použitých v procese zjednotenia údajov. Schéma profilu zákazníka zvyčajne obsahuje podmnožinu atribútov z [Definícia Common Data Model pre CustomerProfile ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
 
 ### <a name="alternatekey"></a>AlternateKey
 

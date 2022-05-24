@@ -1,25 +1,25 @@
 ---
 title: Predikcia odporúčania produktov
 description: Predikujte produkty, ktoré si zákazník pravdepodobne kúpi alebo ktoré bude chcieť použiť.
-ms.date: 01/13/2022
+ms.date: 05/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fe6c0e8ba8236243682a4105535a0026c4343c3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9b3e60c49d294d031f43ef0594cb69707bb64019
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643838"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762751"
 ---
 # <a name="product-recommendation-prediction"></a>Predikcia odporúčania produktov
 
 Model odporúčaní produktov vytvára súbory prediktívnych odporúčaní produktov. Odporúčania vychádzajú z predchádzajúceho nákupného správania a zákazníkov s podobnými vzormi nákupov. Na stránke **Analýza** > **Predikcie** môžete vytvoriť nové predikcie odporúčaní produktov. Vyberte **Moje predikcie**, aby ste videli ďalšie predikcie, ktoré ste vytvorili.
 
-Na odporúčania výrobkov sa môžu vzťahovať miestne zákony a nariadenia a očakávania zákazníkov, ktorých model nie je zostavený tak, aby zohľadňoval konkrétne požiadavky.  Ako používateľ tejto prediktívnej schopnosti **predtým, ako ich doručíte zákazníkom, musíte si ich prečítať** aby ste sa ubezpečili, že dodržiavate všetky príslušné zákony alebo nariadenia a očakávania zákazníkov týkajúce sa toho, čo môžete odporučiť. 
+Na odporúčania výrobkov sa môžu vzťahovať miestne zákony a nariadenia a očakávania zákazníkov, ktorých model nie je zostavený tak, aby zohľadňoval konkrétne požiadavky.  Ako používateľ tejto prediktívnej schopnosti **predtým, ako ich doručíte zákazníkom, musíte si ich prečítať** aby ste sa ubezpečili, že dodržiavate všetky príslušné zákony alebo nariadenia a očakávania zákazníkov týkajúce sa toho, čo môžete odporučiť.
 
 Výstup tohto modelu vám navyše poskytne odporúčania založené na ID produktu. Váš mechanizmus doručovania bude musieť namapovať predpovedané ID produktu na vhodný obsah pre vašich zákazníkov, aby zohľadnili lokalizáciu, obrazový obsah a ďalší obsah alebo správanie špecifické pre podnikanie.
 
@@ -33,29 +33,31 @@ Ak máte záujem vyskúšať túto funkciu, ale nemáte údaje na splnenie poži
 
 - Znalosti v oblasti obchodu, aby ste pochopili rôzne typy produktov pre vaše podnikanie a to, ako s nimi vaši zákazníci interagujú. Podporujeme odporúčanie produktov, ktoré už vaši zákazníci predtým kúpili, alebo odporúčania pre nové produkty.
 
+- Vaše prostredie musí byť nakonfigurované pre **individuálnych spotrebiteľov** primárna cieľová skupina.
+
 - Údaje o transakciách, nákupoch a ich histórii:
-    - Identifikátory transakcií na odlíšenie nákupov alebo transakcií.
-    - Identifikátory zákazníkov, aby sa transakcie mapovali na vašich zákazníkov.
-    - Dátumy transakčných udalostí, ktoré určujú dátumy, kedy došlo k transakcii.
-    - Informácie o ID produktu pre transakciu.
-    - (Voliteľné) Entita údajových katalógov výrobkov na použitie filtra výrobkov.
-    - (Voliteľné) Či sa dá transakcia vrátiť alebo nie.
-    - Schéma sémantických údajov vyžaduje nasledujúce informácie:
-        - **ID transakcie:** Jedinečný identifikátor nákupu alebo transakcie.
-        - **Dátum transakcie:** Dátum nákupu alebo transakcie.
-        - **Hodnota transakcie:** Číselná hodnota nákupu alebo transakcie.
-        - **Jedinečné ID produktu:** ID zakúpeného produktu alebo služby, ak sú vaše údaje na úrovni riadkovej položky.
-        - (Voliteľné) **Nákup alebo vrátenie:** Logické pole, kde je hodnota *true* identifikuje, že transakcia bola vrátená. Ak nie sú poskytnuté údaje o nákupe alebo vrátení, model a **Hodnota transakcie** sú negatívne, tieto informácie použijeme tiež na odvodenie návratnosti.
+  - Identifikátory transakcií na odlíšenie nákupov alebo transakcií.
+  - Identifikátory zákazníkov, aby sa transakcie mapovali na vašich zákazníkov.
+  - Dátumy transakčných udalostí, ktoré určujú dátumy, kedy došlo k transakcii.
+  - Informácie o ID produktu pre transakciu.
+  - (Voliteľné) Entita údajových katalógov výrobkov na použitie filtra výrobkov.
+  - (Voliteľné) Či sa dá transakcia vrátiť alebo nie.
+  - Schéma sémantických údajov vyžaduje nasledujúce informácie:
+    - **ID transakcie:** Jedinečný identifikátor nákupu alebo transakcie.
+    - **Dátum transakcie:** Dátum nákupu alebo transakcie.
+    - **Hodnota transakcie:** Číselná hodnota nákupu alebo transakcie.
+    - **Jedinečné ID produktu:** ID zakúpeného produktu alebo služby, ak sú vaše údaje na úrovni riadkovej položky.
+    - (Voliteľné) **Nákup alebo vrátenie:** Logické pole, kde je hodnota *true* identifikuje, že transakcia bola vrátená. Ak nie sú poskytnuté údaje o nákupe alebo vrátení, model a **Hodnota transakcie** sú negatívne, tieto informácie použijeme tiež na odvodenie návratnosti.
 - Navrhované charakteristiky údajov:
-    - Dostatočné historické údaje: Aspoň jeden rok transakčných údajov, najlepšie dva až tri roky, aby sa zohľadnila sezónnosť.
-    - Viac nákupov na zákazníka: Tri alebo viac transakcií na ID zákazníka
-    - Počet zákazníkov: Minimálne 100 zákazníkov, najlepšie viac ako 10 000 zákazníkov. Model zlyhá s menej ako 100 zákazníkmi.
+  - Dostatočné historické údaje: Aspoň jeden rok transakčných údajov, najlepšie dva až tri roky, aby sa zohľadnila sezónnosť.
+  - Viac nákupov na zákazníka: Tri alebo viac transakcií na ID zákazníka
+  - Počet zákazníkov: Minimálne 100 zákazníkov, najlepšie viac ako 10 000 zákazníkov. Model zlyhá s menej ako 100 zákazníkmi.
 
 > [!NOTE]
+>
 > - Tento model vyžaduje históriu transakcií vašich zákazníkov. Definícia transakcie je dosť flexibilná. Ako vstup môžu slúžiť všetky údaje, ktoré popisujú interakciu používateľa a produktu. Napríklad nákup produktu, absolvovanie kurzu alebo účasť na udalosti.
 > - Aktuálne je možné nakonfigurovať iba jednu entitu histórie transakcií. Ak existuje viacero nákupných subjektov, spojte ich Power Query pred prijímaním údajov.
 > - Ak sú objednávka a podrobnosti objednávky odlišné entity, pred použitím v modeli ich spojte. Model v entite nefunguje iba s ID objednávky alebo príjmovým dokladom.
-
 
 ## <a name="create-a-product-recommendation-prediction"></a>Vytvorenie predikcie odporúčania produktu
 
@@ -76,7 +78,7 @@ Ak máte záujem vyskúšať túto funkciu, ale nemáte údaje na splnenie poži
 ### <a name="define-product-recommendation-configuration"></a>Definujte konfiguráciu odporúčania produktu
 
 1. Nastavte **Počet produktov**, ktoré chcete odporučiť zákazníkovi. Táto hodnota závisí od toho, ako váš spôsob doručenia vyplní údaje. Ak môžete odporučiť tri produkty, nastavte túto hodnotu zodpovedajúcim spôsobom.
-   
+
    >[!TIP]
    > Môžete si vybrať **Uložiť koncept** kedykoľvek uložiť predikcia ako koncept. Koncept predikcie nájdete na karte **Moje predikcie**.
 
@@ -98,14 +100,13 @@ Ak máte záujem vyskúšať túto funkciu, ale nemáte údaje na splnenie poži
 
    :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Typ aktivity nastavenia stránky.":::
 
-1. Po namapovaní aktivity na príslušný sémantický typ pokračujte označením položky **Ďalej** 
- 
+1. Po namapovaní aktivity na zodpovedajúci sémantický typ vyberte **Ďalšie** pokračovať.
+
 1. Namapujte atribúty sémantiky na polia, ktoré sú nutné na to, aby sa model spustil.
 
 1. Vyberte položku **Uložiť**.
 
 1. Vyberte **Ďalej**.
-
 
 ### <a name="configure-product-filters"></a>Konfigurácia filtrov produktov
 
@@ -113,11 +114,11 @@ Niekedy sú pre určitý typ predikcie prospešné alebo vhodné iba určité pr
 
 1. V kroku **Pridajte informácie o produkte** pridajte katalóg svojich produktov s informáciami o každom produkte. Mapujte požadované informácie vo výbere možnosti **Ďalej**.
 
-3. V kroku **Produktové filtre** vyberte jednu z nasledujúcich možností.
+1. V kroku **Produktové filtre** vyberte jednu z nasledujúcich možností.
 
-   * **Žiadne filtre**: Použite všetky produkty v predikcii odporúčaní produktov.
+   - **Žiadne filtre**: Použite všetky produkty v predikcii odporúčaní produktov.
 
-   * **Definujte konkrétne filtre produktu**: Používajte konkrétne produkty v predikcii odporúčaní produktov.
+   - **Definujte konkrétne filtre produktu**: Používajte konkrétne produkty v predikcii odporúčaní produktov.
 
 1. Vyberte **Ďalej**.
 
@@ -126,7 +127,7 @@ Niekedy sú pre určitý typ predikcie prospešné alebo vhodné iba určité pr
    :::image type="content" source="media/product-filters-sidepane.png" alt-text="Bočný panel zobrazujúci priradené v entite katalógu výrobkov, ktorý sa má vybrať pre filtre výrobkov.":::
 
 1. Vyberte, či chcete aby produktový filter použil **a** alebo **alebo** konektory, ktoré logicky kombinujú váš výber atribútov z katalógu produktov.
-   
+
    :::image type="content" source="media/product-filters-sample.png" alt-text="Ukážka konfigurácie produktových filtrov kombinovaná s logickými konektormi AND.":::
 
 1. Vyberte **Ďalej**.
@@ -150,7 +151,7 @@ Niekedy sú pre určitý typ predikcie prospešné alebo vhodné iba určité pr
 1. Vyberte predikciu, ktorú chcete skontrolovať.
    - **Názov predikcie:** Názov predikcie uvedený pri jej vytváraní.
    - **Typ predikcie:** Typ modelu použitého na predikciu
-   - **Entita Výstup:** Názov entity, do ktorej sa má uložiť výstup predikcie. Entitu s týmto názvom nájdete v časti **Údaje** > **Entity**.    
+   - **Entita Výstup:** Názov entity, do ktorej sa má uložiť výstup predikcie. Entitu s týmto názvom nájdete v časti **Údaje** > **Entity**.
       *Skóre* vo výstupnej entite je kvantitatívne opatrenie odporúčania. Model odporúča produkty s vyšším skóre v porovnaní s produktmi s nižším skóre.
    - **Predpovedané pole:** Toto pole je vyplnené iba pre niektoré typy predpovedí a nepoužíva sa v predikcii odporúčaní produktu.
    - **Postavenie:** Aktuálny stav spustenia predikcie.
@@ -171,28 +172,27 @@ Niekedy sú pre určitý typ predikcie prospešné alebo vhodné iba určité pr
             - **A** Model bude brať do úvahy kvalitu **A**, ak je metrika „Úspech pri K“ minimálne o 10 % vyššia ako základná hodnota. 
             - **B** Model bude brať do úvahy kvalitu **B**, ak je metrika „Úspech pri K“ o 0 až 10 % vyššia ako základná hodnota.
             - **C** Model bude brať do úvahy kvalitu **C**, ak je metrika „Úspech pri K“ o 0 až 10 % menšia ako základná hodnota.
-               
+
                > [!div class="mx-imgBorder"]
                > ![Zobrazenie výsledku výkonnosti modelu.](media/product-recommendation-modelperformance.PNG "Zobrazenie výsledku výkonnosti modelu")
             - **Východisková hodnota**: Model preberá najviac odporúčané produkty podľa počtu nákupov u všetkých zákazníkov a na základe naučených pravidiel identifikovaných v modeli vytvára pre zákazníkov skupinu odporúčaní. Predikcie sa potom porovnajú s najlepšími produktmi vypočítanými podľa počtu zákazníkov, ktorí si produkt kúpili. Ak má zákazník v odporúčaných produktoch aspoň jeden produkt, ktorý sa tiež zobrazil v najpredávanejších produktoch, považuje sa to za súčasť základnej úrovne. Ak by tu bolo 10 z týchto zákazníkov, ktorí si kúpili odporúčaný produkt z celkovo 100 zákazníkov, základná hodnota by bola 10 %.
             - **Úspech pri K**: Pomocou overovacej množiny časového obdobia transakcií sa vytvoria odporúčania pre všetkých zákazníkov a porovnajú sa s overovacou množinou transakcií. Napríklad v období 12 mesiacov môže byť 12. mesiac vyčlenený ako súbor overovacích údajov. Ak model predikuje aspoň jednu vec, ktorú by ste si kúpili v 12. mesiaci, na základe toho, čo sa dozvedel z predchádzajúcich 11 mesiacov, zákazník by zvýšil metriku „Úspech pri K“.
-    
+
     1. **Najčastejšie navrhované produkty (s počítadlom):** Prvých päť produktov, ktoré boli predpovedané pre vašich zákazníkov.
        > [!div class="mx-imgBorder"]
        > ![Graf znázorňujúci 5 najdôležitejších produktov.](media/product-recommendation-topproducts.PNG "Graf znázorňujúci 5 najdôležitejších produktov")
-    
+
     1. **Kľúčové faktory odporúčania:** Model využíva históriu transakcií zákazníkov na vydávanie odporúčaní k produktom. Učí sa vzory založené na minulých nákupoch a zisťuje podobnosti medzi zákazníkmi a produktmi. Tieto podobnosti sa potom používajú na generovanie odporúčaní k produktom.
-    Nasledujú faktory, ktoré by mohli ovplyvniť odporúčanie produktu generované modelom. 
-        - **Minulé transakcie**: Model nákupu v minulosti využíval na generovanie odporúčaní k produktom. Model môže napríklad odporučiť _Myš Surface Arc_ ak si niekto nedávno kúpil _Surface Book 3_ a _pero Surface_. Model sa dozvedel, že historicky si veľa zákazníkov zakúpilo produkt _Myš Surface Arc_ po zakúpení _Surface Book 3_ a _pera Surface_.
-        - **Podobnosť zákazníka** : Odporúčaný produkt historicky kúpili iní zákazníci, ktorí vykazujú podobné vzorce nákupu. Napríklad Jozef dostal odporúčanie _Surface Headphones 2_, pretože Lenka a Robo si nedávno kúpili _Surface Headphones 2_. Tento model verí, že Jozef je podobný Lenke a Robovi, pretože v minulosti mali podobné nákupné vzory.
-        - **Podobnosť produktu**: Odporúčaný produkt je podobný ako u iných produktov, ktoré si zákazník predtým kúpil. Model považuje dva výrobky za podobné, ak ich kúpili spoločne alebo podobní zákazníci. Napríklad niekto dostane odporúčanie na _úložnú jednotku USB_ pretože predtým kúpili _Adaptér USB-C na USB_ a model je presvedčený, že _Úložná jednotka USB_ je podobná _Adaptéru USB-C na USB_ na základe historických nákupných vzorcov.
+    Nasledujú faktory, ktoré by mohli ovplyvniť odporúčanie produktu generované modelom.
+        - **Minulé transakcie**: Model nákupu v minulosti využíval na generovanie odporúčaní k produktom. Model môže napríklad odporučiť *Myš Surface Arc* ak si niekto nedávno kúpil *Surface Book 3* a *pero Surface*. Model sa dozvedel, že historicky si veľa zákazníkov zakúpilo produkt *Myš Surface Arc* po zakúpení *Surface Book 3* a *pera Surface*.
+        - **Podobnosť zákazníka** : Odporúčaný produkt historicky kúpili iní zákazníci, ktorí vykazujú podobné vzorce nákupu. Napríklad Jozef dostal odporúčanie *Surface Headphones 2*, pretože Lenka a Robo si nedávno kúpili *Surface Headphones 2*. Tento model verí, že Jozef je podobný Lenke a Robovi, pretože v minulosti mali podobné nákupné vzory.
+        - **Podobnosť produktu**: Odporúčaný produkt je podobný ako u iných produktov, ktoré si zákazník predtým kúpil. Model považuje dva výrobky za podobné, ak ich kúpili spoločne alebo podobní zákazníci. Napríklad niekto dostane odporúčanie na *úložnú jednotku USB* pretože predtým kúpili *Adaptér USB-C na USB* a model je presvedčený, že *Úložná jednotka USB* je podobná *Adaptéru USB-C na USB* na základe historických nákupných vzorcov.
 
         Každé odporúčanie produktu je ovplyvnené jedným alebo viacerými z týchto faktorov. Percento odporúčaní, v ktorých zohrával úlohu každý ovplyvňujúci faktor, je znázornené v grafe. V nasledujúcom príklade bolo 100 % odporúčaní ovplyvnených minulými transakciami, 60 % podobnosťou zákazníkov a 22 % podobnosťou produktov. Umiestnením kurzora myši na pruhy v grafe zobrazíte presné percento, kam prispeli ovplyvňujúce faktory.
 
         > [!div class="mx-imgBorder"]
         > ![Kľúčové faktory odporúčaní.](media/product-recommendation-keyrecommendationfactors.png "Kľúčové faktory odporúčaní, ktoré sa model naučil pri generovaní odporúčaní produktu")
-       
-     
+
    1. **Štatistika údajov**: Poskytuje prehľad počtu transakcií, zákazníkov a produktov, ktoré model zohľadňuje. Je založený na vstupných údajoch, ktoré boli použité na osvojenie vzorcov a generovanie odporúčaní produktov.
 
       > [!div class="mx-imgBorder"]
@@ -208,6 +208,5 @@ Niekedy sú pre určitý typ predikcie prospešné alebo vhodné iba určité pr
 ## <a name="manage-predictions"></a>Spravovanie predikcií
 
 Je možné optimalizovať, odstraňovať problémy, obnovovať alebo mazať predikcie. V prehľade použiteľnosti vstupných údajov nájdete informácie o tom, ako urobiť predikciu rýchlejšou a spoľahlivejšou. Ďalšie informácie nájdete v článku [Spravovanie predikcií](manage-predictions.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643373"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757451"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémy entít v modeli Common Data Model
 
@@ -23,7 +23,7 @@ Model [Common Data Model](/common-data-model/) je deklaratívna špecifikácia a
 
 Toto je zdieľaný dátový model, ktorý umožňuje aplikáciám a integrátorom údajom ľahšiu spoluprácu vďaka tomu, že poskytuje jednotnú definíciu údajov. Model Common Data Model obsahuje bohatý systém metaúdajov so štandardnými entitami, vzťahmi, hierarchiami, vlastnosťami a ďalšími. Pochádza z aplikácií systému Dynamics 365 a má otvorený zdroj na serveri GitHub s viac ako 260 štandardnými entitami. Veľký systém interných a externých partnerov prispieva modelu Common Data Model priemyselnými konceptmi.
 
-Common Data Model dnes implementuje viacero systémov a platforiem vrátane tokov údajov v službe Power BI a dátových služieb Azure. Je to už podporované v službe Microsoft Dataverse, Dynamics 365,Power Apps,Power BI a v nadchádzajúcich dátových službách Azure, s priamym získavaním hodnôt smerom k dátovému modelu [Open Data Initiative ](https://www.microsoft.com/open-data-initiative).
+Common Data Model dnes implementuje viacero systémov a platforiem vrátane tokov údajov v službe Power BI a dátových služieb Azure. Je to už podporované v službe Microsoft Dataverse, Dynamics 365,Power Apps,Power BI a v nadchádzajúcich dátových službách Azure, s priamym získavaním hodnôt smerom k dátovému modelu [Open Data Initiative ](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Schémy entít pre Customer Insights
 

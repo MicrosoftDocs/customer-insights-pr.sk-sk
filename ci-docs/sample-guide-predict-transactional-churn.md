@@ -1,19 +1,19 @@
 ---
 title: Predikcia odchodov založená na transakciách – vzorový sprievodca
 description: V tomto vzorovom sprievodcovi môžete vyskúšať vopred pripravený model predikcie odchodov založený na transakciách.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643743"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741338"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Predikcia odchodov založená na transakciách – vzorový sprievodca
 
@@ -86,69 +86,13 @@ Prečítajte si články [o prijímaní údajov](data-sources.md) a [importovani
 
 1. Uložte zdroj údajov.
 
-
 ## <a name="task-2---data-unification"></a>Úloha 2 – Zjednotenie údajov
 
-Po prijatí údajov teraz začíname proces **Mapovanie, párovanie, zlúčenie** na vytvorenie zjednoteného profilu zákazníka. Ďalšie informácie nájdete v téme [Zjednotenie údajov](data-unification.md).
-
-### <a name="map"></a>Priradenie
-
-1. Po prijatí údajov namapujte kontakty z údajov eCommerce a Loyalty na bežné typy údajov. Prejdite na **Údaje** > **Zjednotenie** > **Mapovanie**.
-
-1. Vyberte entity, ktoré zastupujú profil zákazníka – **eCommerceContacts** a **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Zjednotenie zdrojov údajov elektronického obchodu a vernostných údajov.":::
-
-1. Vyberte **ContactId** ako primárny kľúč pre **eCommerceContacts** a **LoyaltyID** ako primárny kľúč pre **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Zjednotenie LoyaltyId ako primárny kľúč.":::
-
-### <a name="match"></a>Spárovanie
-
-1. Prejdite na kartu **Spárovanie** a vyberte **Nastaviť poradie**.
-
-1. V **primárnom** rozbaľovacom zozname si vyberte možnosť **eCommerceContacts: eCommerce** ako primárny zdroj a zahrňte do nej všetky záznamy.
-
-1. V rozbaľovacom zozname **Entita 2** vyberte možnosť **loyCustomers: LoyaltyScheme** a zahrňte do nej všetky záznamy.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Zjednotenie zosúladenia eCommerce a Loyalty.":::
-
-1. Vyberte **Vytvoriť nové pravidlo**
-
-1. Pridajte svoju prvú podmienku pomocou FullName.
-
-   * V prípade eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **FullName**.
-   * V prípade loyCustomers vyberte z rozbaľovacieho zoznamu položku **FullName**.
-   * Vyberte rozbaľovací zoznam **Normalizovať** a vyberte **Typ (Telefón, Meno, Adresa, ...)**.
-   * Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
-
-1. Zadajte meno **FullName, E-mail** pre nové pravidlo.
-
-   * Vyberte druhú podmienku pre e-mailovú adresu výberom možnosti **Pridať podmienku**
-   * Pri entite eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **EMail**.
-   * Pri entite loyCustomers vyberte z rozbaľovacieho zoznamu položku **EMail**. 
-   * Pole Normalizovať nechajte prázdne. 
-   * Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Pravidlo zjednotenia zhody pre meno a e-mail.":::
-
-7. Vyberte položku **Uložiť** a **Spustiť**.
-
-### <a name="merge"></a>Zlúčenie
-
-1. Prejdite na kartu **Zlúčiť**.
-
-1. V entite **ContactId** pre **loyCustomers** zmeňte zobrazovaný názov na **ContactIdLOYALTY** na odlíšenie od ostatných prijatých ID.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="premenovanie contactid z loyaltyid.":::
-
-1. Vyberte **Uložiť** a **Spustiť** na začatie procesu zlúčenia.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Úloha 3 - Konfigurácia predikcie odchodov založených na transakciách
 
-Po zavedení zjednotených profilov zákazníkov môžeme teraz spustiť predikciu odchodu predplatiteľov. Podrobné kroky nájdete na [Zrušenie predplatného predikcia](predict-subscription-churn.md) článok. 
+So zjednotenými zákazníckymi profilmi môžeme teraz spustiť transakciu predikcia. Podrobné kroky nájdete na [Zrušenie transakcie predikcia](predict-transactional-churn.md) článok. 
 
 1. Prejdite na **Analýza** > **Objavovať** a vyberte použitie **Model odchodu zákazníkov**.
 
@@ -180,7 +124,7 @@ Po zavedení zjednotených profilov zákazníkov môžeme teraz spustiť predikc
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Úloha 4 – Skontrolujte výsledky modelu a vysvetlenia
 
-Nechajte model absolvovať školenie a skórovanie údajov. Teraz si môžete vysvetlenie modelu odchodu predplatiteľov. Viac informácií nájdete v článku [Kontrola stavu predikcie a výsledkov](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Nechajte model absolvovať školenie a skórovanie údajov. Teraz si môžete pozrieť vysvetlenia modelu vracania. Viac informácií nájdete v článku [Kontrola stavu predikcie a výsledkov](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Úloha 5 – Vytvorenie segmentu zákazníkov s vysokým rizikom odchodu
 
@@ -192,14 +136,12 @@ Nový segment môžete vytvoriť na základe entity vytvorenej modelom.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Vytvorenie segmentu s výstupom modelu.":::
 
-1. Vyberte koncový bod **OOBSubscriptionChurnPrediction** a definujte segment: 
+1. Vyberte **OOBeCommerceChurnPrediction** koncový bod a definujte segment: 
    - Pole: ChurnScore
    - Operátor: je väčšie ako
    - Hodnota: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Nastavenie segmentu odchodu predplatiteľov.":::
 
-Teraz máte segment, ktorý sa dynamicky aktualizuje a ktorý identifikuje vysoko rizikových zákazníkov pre toto predplatné.
+Teraz máte segment, ktorý sa dynamicky aktualizuje a ktorý identifikuje zákazníkov s vysokým rizikom odchodu.
 
 Ďalšie informácie nájdete v téme [Tvorba a správa segmentov](segments.md).
 

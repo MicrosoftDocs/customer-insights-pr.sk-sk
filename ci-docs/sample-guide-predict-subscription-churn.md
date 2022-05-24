@@ -1,8 +1,8 @@
 ---
 title: Predikcia odchodu predplatiteľov – vzorový sprievodca
 description: V tomto vzorovom sprievodcovi môžete vyskúšať vopred pripravený model predikcie odchodu predplatiteľov.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643578"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741430"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Predikcia odchodu predplatiteľov – vzorový sprievodca
 
@@ -112,61 +112,7 @@ Prečítajte si články [o prijímaní údajov](data-sources.md) a [importovani
 
 ## <a name="task-2---data-unification"></a>Úloha 2 – Zjednotenie údajov
 
-Po prijatí údajov teraz začíname proces **Mapovanie, párovanie, zlúčenie** na vytvorenie zjednoteného profilu zákazníka. Ďalšie informácie nájdete v téme [Zjednotenie údajov](data-unification.md).
-
-### <a name="map"></a>Priradenie
-
-1. Po prijatí údajov namapujte kontakty z údajov eCommerce a Loyalty na bežné typy údajov. Prejdite na **Údaje** > **Zjednotenie** > **Mapovanie**.
-
-1. Vyberte entity, ktoré zastupujú profil zákazníka – **eCommerceContacts** a **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Zjednotenie zdrojov údajov elektronického obchodu a vernostných údajov.":::
-
-1. Vyberte **ContactId** ako primárny kľúč pre **eCommerceContacts** a **LoyaltyID** ako primárny kľúč pre **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Zjednotenie LoyaltyId ako primárny kľúč.":::
-
-### <a name="match"></a>Spárovanie
-
-1. Prejdite na kartu **Spárovanie** a vyberte **Nastaviť poradie**.
-
-1. V **primárnom** rozbaľovacom zozname si vyberte možnosť **eCommerceContacts: eCommerce** ako primárny zdroj a zahrňte do nej všetky záznamy.
-
-1. V rozbaľovacom zozname **Entita 2** vyberte možnosť **loyCustomers: LoyaltyScheme** a zahrňte do nej všetky záznamy.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Zjednotenie zosúladenia eCommerce a Loyalty.":::
-
-1. Vyberte **Vytvoriť nové pravidlo**
-
-1. Pridajte svoju prvú podmienku pomocou FullName.
-
-   * V prípade eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **FullName**.
-   * V prípade loyCustomers vyberte z rozbaľovacieho zoznamu položku **FullName**.
-   * Vyberte rozbaľovací zoznam **Normalizovať** a vyberte **Typ (Telefón, Meno, Adresa, ...)**.
-   * Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
-
-1. Zadajte meno **FullName, E-mail** pre nové pravidlo.
-
-   * Vyberte druhú podmienku pre e-mailovú adresu výberom možnosti **Pridať podmienku**
-   * Pri entite eCommerceContacts vyberte z rozbaľovacieho zoznamu položku **EMail**.
-   * Pri entite loyCustomers vyberte z rozbaľovacieho zoznamu položku **EMail**. 
-   * Pole Normalizovať nechajte prázdne. 
-   * Nastavte **Úroveň presnosti**: **Základná** a **Hodnota**: **Vysoká**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Pravidlo zjednotenia zhody pre meno a e-mail.":::
-
-7. Vyberte položku **Uložiť** a **Spustiť**.
-
-### <a name="merge"></a>Zlúčenie
-
-1. Prejdite na kartu **Zlúčiť**.
-
-1. V entite **ContactId** pre **loyCustomers** zmeňte zobrazovaný názov na **ContactIdLOYALTY** na odlíšenie od ostatných prijatých ID.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="premenovanie contactid z loyaltyid.":::
-
-1. Vyberte **Uložiť** a **Spustiť** na začatie procesu zlúčenia.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Úloha 3 – Konfigurácia predikcie odchodov predplatiteľov
 

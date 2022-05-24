@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643618"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741060"
 ---
 # <a name="manage-environments"></a>Správa prostredí
 
@@ -61,7 +61,7 @@ Povolenie zdieľania údajov s Microsoft Dataverse začiarknutím políčka zdie
 
 Ak je vaše prostredie nakonfigurované na používanie vášho vlastného Azure Data Lake Storage na ukladanie údajov Customer Insights, čo umožňuje zdieľanie údajov s Microsoft Dataverse potrebuje nejakú extra konfiguráciu.
 
-1. Vytvorte dve skupiny zabezpečenia vo svojom predplatnom Azure – jednu **Čitateľ** bezpečnostná skupina a jedna **Prispievateľ** bezpečnostnú skupinu a nastavte Microsoft Dataverse ako vlastník pre obe bezpečnostné skupiny.
+1. Vo svojom predplatnom Azure vytvorte dve skupiny zabezpečenia – jednu **Čitateľ** bezpečnostná skupina a jedna **Prispievateľ** bezpečnostnú skupinu a nastavte Microsoft Dataverse ako vlastník pre obe bezpečnostné skupiny.
 2. Spravujte zoznam riadenia prístupu (ACL) v kontajneri CustomerInsights vo svojom účte úložiska prostredníctvom týchto skupín zabezpečenia. Pridajte Microsoft Dataverse servis a akékoľvek Dataverse podnikových aplikácií, ako je Dynamics 365 Marketing **Čitateľ** bezpečnostná skupina s **iba na čítanie** povolenia. Pridať *iba* aplikáciu Customers Insights na **Prispievateľ** bezpečnostná skupina udeliť oboje **čítaj a píš** povolenia na písanie profilov a prehľadov.
    
 #### <a name="prerequisites"></a>Požiadavky
@@ -85,7 +85,7 @@ Ak chcete spustiť skripty PowerShell, musíte mať importované nasledujúce tr
        - Uložte obe hodnoty ID bezpečnostnej skupiny vygenerované týmto skriptom, pretože ich použijeme v`ByolSetup.ps1` skript.
        
         > [!NOTE]
-        > Vytváranie bezpečnostnej skupiny je možné vo vašom nájomníkovi zakázať. V takom prípade by bolo potrebné manuálne nastavenie a vaše Azure AD admin by musel [povoliť vytvorenie bezpečnostnej skupiny](/azure/active-directory/enterprise-users/groups-self-service-management).
+        > Vytvorenie skupiny zabezpečenia môže byť vo vašom nájomníkovi zakázané. V takom prípade by bolo potrebné manuálne nastavenie a vaše Azure AD admin by musel [povoliť vytvorenie bezpečnostnej skupiny](/azure/active-directory/enterprise-users/groups-self-service-management).
 
     2. `ByolSetup.ps1`
         - Potrebuješ *Vlastník údajov objektu Storage Blob* oprávnenia na úrovni účtu úložiska/kontajnera na spustenie tohto skriptu alebo tento skript vytvorí jeden za vás. Po úspešnom spustení skriptu je možné priradenie vašej role manuálne odstrániť.
@@ -127,10 +127,10 @@ Zobrazí sa zoznam všetkých dostupných prostredí vo vašej organizácii, z k
 Skopírujú sa nasledujúce konfiguračné nastavenia:
 
 - Prijaté/importované zdroje údajov
-- Zjednotenie údajov (Mapovanie, Zosúladenie, Zlúčenie)
+- Konfigurácia zjednotenia údajov
 - Segmenty
 - Miery
-- Vzťahy
+- Vzťahy 
 - Aktivity
 - Index vyhľadávania a filtrovania
 - Ciele exportu

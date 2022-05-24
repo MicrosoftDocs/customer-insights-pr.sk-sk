@@ -1,19 +1,19 @@
 ---
 title: Nové a prichádzajúce funkcie
 description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 04/05/2022
+ms.date: 05/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 25c6e2897d836854408871b2c74afa16ecba7435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: HT
+ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
+ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643723"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "8700956"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v službe Dynamics 365 Customer Insights
 
@@ -24,6 +24,28 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="april-2022-updates"></a>Aktualizácie pre apríl 2022
+
+Aktualizácie v apríli 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
+
+### <a name="dun--bradstreet-enrichment-preview"></a>Obohatenie Dun & Bradstreet (ukážka)
+
+Dun & Bradstreet poskytuje firmám komerčné údaje, analýzy a prehľady. Umožňuje zákazníkom so zjednotenými zákazníckymi profilmi pre spoločnosti obohacovať svoje údaje. Obohatenia zahŕňajú atribúty, ako je číslo DUNS, veľkosť spoločnosti, lokalita, odvetvie a ďalšie.
+
+Viac informácií nájdete v časti [Obohatenie firemných profilov o Dun & Bradstreet (Preview)](enrichment-dnb.md).
+
+### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Pri vytváraní novej miery definujte typ miery
+
+Teraz môžete rozlišovať medzi opatreniami pre jednotlivé profily a opatreniami v rámci celého vášho podnikania. Zatiaľ čo obchodné merania sa zobrazujú na domovskej stránke Customer Insights, merania zákazníkov sú vystavené v podrobných zobrazeniach zákazníkov.
+
+Viac informácií nájdete v časti [Použite nástroj na tvorbu opatrení na vytvorenie mier od začiatku](measure-builder.md).
+
+### <a name="consolidation-of-customer-insights-documentation"></a>Konsolidácia dokumentácie Customer Insights
+
+Znova sme prezreli naše články v dokumentácii a odstránili zmienky o možnostiach štatistík interakcií a publika. Keď budeme písať o základných funkciách aplikácie, budeme dôsledne odkazovať na názov produktu Customer Insights. Táto zmena tiež vedie k významnej reštrukturalizácii obsahu, štruktúry URL a ciest k súborom v podkladovom dokumentačnom archíve. Všetky vaše záložky alebo existujúce odkazy budú naďalej fungovať a budú presmerované na aktualizované adresy URL.
+
+Ak nám chcete dať vedieť, ako vnímate túto zmenu alebo si všimnete, že niečo nefunguje podľa očakávania, povedzte nám to [odosielanie spätnej väzby pre túto stránku](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Aktualizácia z marca 2022
 
@@ -79,7 +101,7 @@ Organizácie, ktoré už používajú Azure Synapse Analytics môže tieto údaj
 
 Viac informácií nájdete v časti [Pripojte Azure Synapse zdroj údajov (ukážka)](connect-synapse.md).
 
-### <a name="liveramp-enrichment-preview"></a>Obohatenie LiveRamp (ukážka)
+### <a name="liveramp-enrichment-preview"></a>LiveRamp obohatenie (ukážka)
 
 LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Môžete namapovať osobné identifikátory vo svojich zákazníckych údajoch do grafu identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
 
@@ -117,7 +139,7 @@ Počas prechodného obdobia majú existujúci účastníci ukážky stále prís
 - Vylepšite zjednotené profily pomocou prijatých a spresnených udalostí, aby ste mohli využívať plnú hodnotu údajov o svojich zákazníkoch
   
 Počas prechodného obdobia sa zachytené udalosti stále streamujú do pripojeného Data Lake. Po vypnutí tejto funkcie sa zdieľanie údajov zastaví a do pripojeného úložiska sa nebudú odosielať žiadne nové udalosti.
-Ak máte otázky týkajúce sa konca ukážky funkcií, kontaktujte priamo svoj tím pre konto Microsoft. Váš účtovný tím vás bude informovať o pripravovaných spusteniach. 
+Ak máte otázky týkajúce sa konca ukážky funkcií, kontaktujte priamo svoj tím Microsoft Account. Váš účtovný tím vás bude informovať o pripravovaných spusteniach. 
 
 ## <a name="january-2022-updates"></a>Aktualizácie z januára 2022
 
@@ -127,7 +149,7 @@ Aktualizácie v januári 2022 zahŕňajú nové funkcie, vylepšenia výkonu a o
 
 Customer Insights poskytuje novú funkciu poháňanú umelou inteligenciou, ktorá syntetizuje sentiment zákazníkov a identifikuje špecifické obchodné aspekty ako príležitosti na cielené zlepšenia. Analýzou písomnej spätnej väzby vašich zákazníkov môžete získať presné informácie pri nízkych nákladoch. Analýza sentimentu založená na modeloch spracovania prirodzeného jazyka (NLP), ktoré generujú dva odvodené štatistiky pre každé ID zákazníka. Skóre sentimentu (od –5 do 5) a zoznam príslušných obchodných aspektov. 
 
-Ďalšie informácie nájdete v časti [Analýza sentimentu v spätnej väzbe od zákazníkov (ukážka)](sentiment-analysis.md).
+Viac informácií nájdete v časti [Analyzujte sentiment v spätnej väzbe zákazníkov (ukážka)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

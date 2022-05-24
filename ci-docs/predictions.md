@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643603"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740738"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Doplňte svoje čiastočné údaje o prognózy (zastarané)
 
@@ -37,7 +37,7 @@ Predtým ako bude vaša organizácia môcť používať funkciu predikcií, skon
 
 1. Vaša organizácia má inštanciu [vytvorenú v časti Microsoft Dataverse](/ai-builder/build-model#prerequisites) a nachádza sa v rovnakej organizácii ako služba Customer Insights.
 
-2. Prostredie vášho prehľadu cieľovej skupiny je prepojené s vašou inštanciou Dataverse.
+2. Vaše prostredie Customer Insights je pripojené k vašej inštancii Dataverse.
 
 Ďalšie informácie nájdete v téme [Vytvorenie nového prostredia](create-environment.md).
 

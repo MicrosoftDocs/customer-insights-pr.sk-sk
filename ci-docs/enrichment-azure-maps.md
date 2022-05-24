@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643009"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755373"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Obohatenie zákazníckych profilov o Azure Maps (ukážka)
 
@@ -51,7 +51,7 @@ Ak chcete nakonfigurovať obohatenie údajov služby Azure Maps, je potrebné sp
 
 1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
 
-1. Rozhodnite sa, či chcete upraviť **Pokročilé nastavenia**. Tieto slúžia na poskytnutie maximálnej flexibility pri riešení pokročilých prípadov použitia, no predvolené hodnoty sú postačujúce pre väčšinu prípadov:
+1. Rozhodnite sa, či chcete upraviť **Pokročilé nastavenia**. Tieto nastavenia poskytujú maximálnu flexibilitu pri riešení pokročilých prípadov použitia, ale predvolené hodnoty budú vo väčšine prípadov primerané:
    - **Typ adries**: Predvolené správanie je, že obohatenie vráti tú najlepšiu zhodu adries, aj keď je neúplná. Ak chcete získať iba úplné adresy&mdash; napríklad adresy, ktoré obsahujú popisné číslo&mdash; zrušte začiarknutie všetkých políčok okrem **Adresy bodov**. 
    - **Jazyk** : Adresy sa štandardne vracajú v jazyku oblasti, pre ktorú bola určená adresa. Ak chcete použiť štandardizovaný jazyk adries, vyberte jazyk z rozbaľovacej ponuky. Napríklad výberom možnosti **Angličtina** sa zobrazí text **Kodaň, Dánsko** namiesto **København, Danmark**.
 
@@ -89,7 +89,7 @@ Môžete získať podrobné zobrazenie každého obohateného profilu výberom *
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 
-Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje do Azure Maps, povoľujete tým aj prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Microsoft prenesie tieto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby služba Azure Maps spĺňala všetky záväzky týkajúce sa ochrany vášho súkromia alebo bezpečnosti. Ďalšie informácie nájdete na stránke [Vyhlásenie o ochrane osobných údajov spoločnosti Microsoft ](https://go.microsoft.com/fwlink/?linkid=396732).
+Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje do Azure Maps, povoľujete tým aj prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za to, že Azure Maps spĺňa všetky vaše povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete na stránke [Vyhlásenie o ochrane osobných údajov spoločnosti Microsoft ](https://go.microsoft.com/fwlink/?linkid=396732).
 Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

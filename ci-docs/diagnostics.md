@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643029"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755281"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)
 
@@ -27,8 +27,8 @@ Customer Insights odosiela nasledujúce protokoly udalostí:
 - **Udalosti auditu**
   - **APIEvent** - umožňuje sledovanie zmien pomocou Dynamics 365 Customer Insights UI.
 - **Prevádzkové udalosti**
-  - **WorkflowEvent** - Workflow umožňuje nastaviť [Zdroje dát](data-sources.md),[zjednotiť](data-unification.md) a [obohatiť](enrichment-hub.md) a nakoniec [export](export-destinations.md) údaje do iných systémov. Všetky tieto kroky možno vykonať jednotlivo (napr. spustiť jeden export) alebo usporiadať (napr. obnovenie údajov zo zdrojov údajov, ktoré spustí proces zjednotenia, ktorý prinesie ďalšie obohatenia a po dokončení exportuje údaje do iného systému). Viac podrobností nájdete na [WorkflowEvent Schema](#workflow-event-schema).
-  - **APIEvent** - všetky volania API do inštancie zákazníkov Dynamics 365 Customer Insights. Viac podrobností nájdete na [Schéma APIEvent](#api-event-schema).
+  - **WorkflowEvent** - Pracovný postup vám umožňuje nastaviť [Zdroje dát](data-sources.md),[zjednotiť](data-unification.md),[obohatiť](enrichment-hub.md), a nakoniec [export](export-destinations.md) údaje do iných systémov. Všetky tieto kroky je možné vykonať jednotlivo (napríklad spustiť jeden export). Môže tiež bežať organizovane (napríklad obnova údajov zo zdrojov údajov, ktorá spustí proces zjednotenia, ktorý zavedie obohatenia a po dokončení exportuje údaje do iného systému). Viac informácií nájdete na [WorkflowEvent Schema](#workflow-event-schema).
+  - **APIEvent** - všetky volania API do inštancie zákazníkov Dynamics 365 Customer Insights. Viac informácií nájdete na [Schéma APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Nastavte diagnostické nastavenia
 
@@ -55,7 +55,7 @@ Ak chcete nakonfigurovať diagnostiku v Customer Insights, musia byť splnené t
 
 1. Vyber **Nájomca** predplatného Azure s cieľovým prostriedkom a vyberte **Prihlásiť sa**.
 
-1. Vyberte **Typ zdroja** (Účet úložiska, Event Hub alebo analýza denníkov).
+1. Vyberte **Typ zdroja** (Účet úložiska, centrum udalostí alebo analýza denníkov).
 
 1. Vyberte **Predplatné** pre cieľový zdroj.
 
@@ -182,7 +182,7 @@ The`identity` Objekt JSON má nasledujúcu štruktúru
 
 ### <a name="workflow-event-schema"></a>Schéma udalosti pracovného toku
 
-Pracovný postup obsahuje viacero krokov. [Zdroje údajov príjmu](data-sources.md),[zjednotiť](data-unification.md),[obohatiť](enrichment-hub.md) a [export](export-destinations.md) údajov. Všetky tieto kroky môžu prebiehať jednotlivo alebo organizovane s nasledujúcimi procesmi. 
+Pracovný postup obsahuje viacero krokov. [Zdroje údajov príjmu](data-sources.md),[zjednotiť](data-unification.md),[obohatiť](enrichment-hub.md) a [export](export-destinations.md) údajov. Všetky tieto kroky môžu prebiehať jednotlivo alebo organizovane s nasledujúcimi procesmi.
 
 #### <a name="operation-types"></a>Typy operácií
 
@@ -215,7 +215,7 @@ Pracovný postup obsahuje viacero krokov. [Zdroje údajov príjmu](data-sources.
 | `time`          | Časová pečiatka | Požaduje sa          | Časová pečiatka udalosti (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Požaduje sa          | ResourceId inštancie, ktorá vyvolala udalosť.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Požaduje sa          | Názov operácie reprezentovanej touto udalosťou. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Pozri [Typy operácií](#operation-types) pre referenciu. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Požaduje sa          | Kategória denníka udalosti. Vždy`Operational` pre udalosti pracovného toku                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Požaduje sa          | Kategória denníka udalosti. Vždy`Operational` pre udalosti pracovného toku                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Požaduje sa          | Stav udalosti. `Running`,`Skipped`,`Successful`,`Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Long      | Voliteľné          | Trvanie operácie v milisekundách.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Voliteľné          | Objekt JSON s viacerými vlastnosťami pre konkrétnu kategóriu udalostí.                                                                                        | Pozri podsekciu [Vlastnosti pracovného postupu](#workflow-properties-schema)                                                                                                       |

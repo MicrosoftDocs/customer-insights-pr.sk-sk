@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643283"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755517"
 ---
 # <a name="customer-activities"></a>Aktivity zákazníkov
 
-Spojte aktivity zákazníkov z [rôznych zdrojov údajov](data-sources.md) v Dynamics 365 Customer Insights a vytvorte časovú os s chronologickým zoznamom aktivít. Zahrňte časovú os do aplikácií Dynamics 365 pomocou [doplnku Zákaznícka karta](customer-card-add-in.md) riešenie, alebo na tabuľu Power BI.
+Kombinujte aktivity zákazníkov z [rôznych zdrojov údajov](data-sources.md) v Dynamics 365 Customer Insights. Vytvorte časovú os, ktorá uvádza aktivity chronologicky. Zahrňte časovú os do aplikácií Dynamics 365 s [Doplnok Zákazníckej karty](customer-card-add-in.md) Riešenie.
 
 ## <a name="define-an-activity"></a>Definícia aktivity
 
@@ -78,7 +78,7 @@ Entita musí mať aspoň jeden atribút typu **Dátum**, aby ste boli zahrnutí 
 
 1. Výberom tlačidla **Ďalej** prejdete na ďalší krok. Môžete stlačiť možnosť **Dokončiť a skontrolovať** a uložiť aktivitu teraz s typom aktivity nastaveným na **Iné**. 
 
-1. V kroku **Typ aktivity** vyberte typ aktivity a prípadne vyberte, či chcete sémanticky mapovať niektoré typy aktivít pre použitie v iných oblastiach Customer Insights. Aktuálne typy aktivít *Odozva*,*Lojalit*, *SalesOrder*, *SalesOrderLine* a *Predplatné* možno sémanticky mapovať po odsúhlasení mapovania polí. Ak typ aktivity nie je pre novú aktivitu relevantný, môžete stlačiť možnosť *Iné* alebo *Vytvoriť nový* pre vlastný typ aktivity.
+1. V kroku **Typ aktivity** vyberte typ aktivity a prípadne vyberte, či chcete sémanticky mapovať niektoré typy aktivít pre použitie v iných oblastiach Customer Insights. V súčasnosti *Spätná väzba*, *·*, *objednávky*, *a* *Predplatné* typy aktivít podporujú sémantiku po súhlase s mapovaním polí. Ak typ aktivity nie je pre novú aktivitu relevantný, môžete stlačiť možnosť *Iné* alebo *Vytvoriť nový* pre vlastný typ aktivity.
 
 1. Výberom tlačidla **Ďalej** prejdete na ďalší krok. 
 
@@ -110,7 +110,7 @@ Po nakonfigurovaní aktivít zákazníkov vyberte **Zobraziť na časovej osi ak
 
 Ak chcete zákazníkovi otvoriť časovú os, prejdite na **Zákazníci** a vyberte profil zákazníka, ktorý chcete zobraziť.
 
-Ak sa zákazník zúčastnil aktivity, ktorú ste nakonfigurovali, nájdete ho v sekcii **Časová os aktivity**.
+Ak sa zákazník zúčastnil nakonfigurovanej aktivity, nájdete ju v **Časová os aktivity** oddiele.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Zobrazte nakonfigurované aktivity v profiloch zákazníkov.":::
 

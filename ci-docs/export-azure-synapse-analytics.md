@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643160"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741522"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportovať údaje do Azure Synapse Analytics (Náhľad)
 
@@ -34,9 +34,9 @@ V Azure:
 
 - Aktívne predplatné služieb Azure.
 
-- Ak používate nový Azure Data Lake Storage účet Gen2, *principál služby pre Customer Insights* potreby **Storage Blob Data Contributor** povolenia. Viac informácií nájdete v časti [pripojenie k účtu Azure Data Lake Storage Gen2 s vedúcim služby Azure pre prehľady cieľovej skupiny](connect-service-principal.md). Úložisko Data Lake Storage Gen2 **musí mať** povolenú možnosť [hierarchický názov](/azure/storage/blobs/data-lake-storage-namespace).
+- Ak používate nový Azure Data Lake Storage účet Gen2, *principál služby pre Customer Insights* potreby **Storage Blob Data Contributor** povolenia. Viac sa dozviete na [pripojenie k Azure Data Lake Storage Účet Gen2 s principálom služby Azure pre Customer Insights](connect-service-principal.md). Úložisko Data Lake Storage Gen2 **musí mať** povolenú možnosť [hierarchický názov](/azure/storage/blobs/data-lake-storage-namespace).
 
-- V skupine prostriedkov, kde je Azure Synapse pracovný priestor sa nachádza, *príkazca služby* a *Azure AD používateľ s oprávneniami správcu v Customer Insights* je potrebné prideliť minimálne **Čitateľ** povolenia. Viac informácií nájdete v časti [Priradiť roly Azure pomocou portálu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
+- V skupine prostriedkov, kde je Azure Synapse pracovný priestor sa nachádza, *objednávateľ služby* a *Azure AD používateľ s oprávneniami správcu v Customer Insights* je potrebné prideliť minimálne **Čitateľ** povolenia. Viac informácií nájdete v časti [Priradiť roly Azure pomocou portálu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 
 - The *Azure AD používateľ s oprávneniami správcu v Customer Insights* potreby **Storage Blob Data Contributor** povolenia na Azure Data Lake Storage Účet Gen2, kde sú údaje umiestnené a prepojené s Azure Synapse pracovnom priestore. Prečítajte si viac o [používaní portálu Azure Portal na priradenie roly Azure pre prístup k údajom blob a frontu](/azure/storage/common/storage-auth-aad-rbac-portal) a [Povolenia Prispievateľ údajov do objektu BLOB úložiska](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
