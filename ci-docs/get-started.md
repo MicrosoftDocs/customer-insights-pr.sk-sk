@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: HT
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741152"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833594"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Začíname pracovať so systémom Dynamics 365 Customer Insights
 
@@ -25,21 +25,21 @@ Customer Insights vám môže pomôcť lepšie porozumieť vašim zákazníkom. 
 
 ## <a name="step-1-create-an-environment"></a>Krok 1: Vytvorenie prostredia
 
-Začnite vytvorením prostredia, kde budete pracovať. Ak si už vaša organizácia kúpila licenciu, pozrite si časť [Vytvorenie prostredia](create-environment.md). Ak chcete spustiť skúšobnú verziu Customer Insights, pozrite si časť [Nastavte skúšobné prostredie](trial-signup.md).
+Najprv vytvorte prostredie na prácu. Ak si už vaša organizácia kúpila licenciu, pozrite si časť [Vytvorenie prostredia](create-environment.md). Ak chcete spustiť skúšobnú verziu Customer Insights, pozrite si časť [Nastavte skúšobné prostredie](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>Krok 2: Preskúmajte štatistiky zákazníka
 
-Pri prvom prihlásení do Customer Insights môžete nakonfigurovať nastavenia a preskúmať produkt.
+Pri prvom prihlásení do Customer Insights nakonfigurujte nastavenia a preskúmajte produkt.
 
 1. [prihláste sa do Customer Insights](https://home.ci.ai.dynamics.com) pomocou vášho Microsoft Azure Active Directory (AAD) používateľský účet.
 
-1. [Zmeňte prostredie](manage-environments.md#switch-environments) zobraziť ukážkové údaje a [preskúmať Customer Insights](home.md).
+1. Zmeňte prostredie, aby ste videli demo údaje a [preskúmať Customer Insights](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Krok 3: Prijímajte, zjednoťte a nastavte vzťahy pre svoje údaje
 
-Zjednotené profily sú základom na získanie prehľadov a vykonávanie akcií týkajúcich sa údajov. Dajte dokopy údaje z rôznych zdrojov a zjednocovanie údajov, aby ste nakombinovali zjednotené profily. Určte vzťahy medzi prijatými entitami a použite funkcie obohatenia, aby ste informácie pridali do profilov.
+Zjednotené profily sú základom na získanie prehľadov a vykonávanie akcií týkajúcich sa údajov. Dajte dokopy údaje z rôznych zdrojov a zjednocovanie údajov, aby ste nakombinovali zjednotené profily. Zadajte vzťahy medzi prijatými entitami a použite funkcie obohatenia na pridanie informácií do profilov.
 
-1. Prijímajte údaje vytváraním zdrojov údajov z viacerých možností. Vyberte si medzi [Power Query konektory](connect-power-query.md), a [Priečinok Common Data Model](connect-common-data-model.md), alebo [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Prijímajte údaje vytváraním zdrojov údajov z viacerých možností. Vyberte si medzi [Power Query konektory](connect-power-query.md), a [Priečinok Common Data Model](connect-common-data-model.md), alebo [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. Spustite [proces zjednotenia údajov](data-unification.md) identifikáciou [zdrojové polia](map-entities.md), odstránenie [duplikáty](remove-duplicates.md),[zodpovedajúce podmienky](match-entities.md) a [zjednocujúce polia](merge-entities.md).
 
@@ -47,7 +47,7 @@ Zjednotené profily sú základom na získanie prehľadov a vykonávanie akcií 
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>Krok 4: Vylepšite zjednotené profily predpoveďami, aktivitami a opatreniami
 
-Vďaka nastaveniu zjednotených profilov môžete vylepšiť svoje údaje a ďalej zvýšiť informácie, ktoré poskytujú.
+S nastavením zjednotených profilov vylepšite svoje údaje a ďalej rozšírte informácie, ktoré poskytujú.
 
 1. Vyberte si zo zväčšujúcej sa knižnice poskytovateľov obohatenia a[ obohaťte údaje o svojich zákazníkoch ](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Vďaka nastaveniu zjednotených profilov môžete vylepšiť svoje údaje a ďal
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>Krok 5: Vytvárajte segmenty a aktivujte údaje rôznymi možnosťami exportu
 
-Keď sú teraz vaše údaje kompletné a obsahujú široký rozsah informácií o vašich zákazníkoch, je čas hľadať spôsoby, ako podľa týchto údajov konať.
+Teraz, keď sú vaše údaje úplné a obsahujú širokú škálu informácií o vašich zákazníkoch, hľadajte spôsoby, ako s týmito údajmi podniknúť kroky.
 
 1. [Vytvárajte segmenty](segments.md), podmnožiny vašej zákazníckej základne, aby ste zaistili, že je vaša činnosť relevantná pre cieľových zákazníkov.
 

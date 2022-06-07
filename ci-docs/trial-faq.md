@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641827"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833787"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Časté otázky o skúšobnej verzii Dynamics 365 Customer Insights
 
@@ -62,9 +62,9 @@ Skúšobnú dobu môžete v aplikácii predĺžiť. Skúšobné obdobie si môž
 
 Vo všeobecnosti odporúčame pri inovácii na platenú verziu služby Customer Insights začať s novými údajmi. 
 
-Voliteľne, ak používate iba Customer Insights, môžete skopírovať svoje údaje zo skúšobného prostredia, ak si zakúpite Customer Insights. Musíte byť správcom skúšobnej verzie Customer Insights a jej globálnym správcom Microsoft 365 nájomník alebo správca Dynamics 365 vo vašej organizácii na migráciu nastavení zo skúšobného prostredia do plateného prostredia. 
+Voliteľne, ak používate iba Customer Insights, môžete skopírovať svoje údaje zo skúšobného prostredia, ak si zakúpite Customer Insights. Musíte byť správcom skúšobnej verzie Customer Insights a jej globálnym správcom Microsoft 365 nájomník alebo správca Dynamics 365 vo vašej organizácii na migráciu nastavení zo skúšobného prostredia do plateného prostredia.
 
-Po prvom prihlásení do platenej inštancie služby Customer Insights sa zobrazí výzva na vytvorenie nového prostredia. Pri tomto procese máte možnosť sa rozhodnúť, či chcete skopírovať konfiguráciu z už existujúceho prostredia a migrovať z neho väčšinu nastavení. Ak máte hore uvedené povolenia, v tomto zozname sa zobrazí dané skúšobné prostredie. Ďalšie údaje nájdete v časti [Skopírujte konfiguráciu prostredia](manage-environments.md#copy-the-environment-configuration).
+Po prvom prihlásení do platenej inštancie služby Customer Insights sa zobrazí výzva na vytvorenie nového prostredia. Pri tomto procese máte možnosť sa rozhodnúť, či chcete skopírovať konfiguráciu z už existujúceho prostredia a migrovať z neho väčšinu nastavení. Ak máte hore uvedené povolenia, v tomto zozname sa zobrazí dané skúšobné prostredie. Ďalšie údaje nájdete v časti [Skopírujte konfiguráciu prostredia](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Aké sú limity a kvóty skúšobnej verzie?
 
@@ -81,9 +81,10 @@ Po prihlásení sa na skúšobnú verziu sa dostanete na hlavnú obrazovku aplik
 
 Väčšina funkcií Customer Insights je k dispozícii v skúšobnej verzii.
 
-Nasledujúce funkcie sú **nie je k dispozícií**: 
+Nasledujúce funkcie sú **nie je k dispozícií**:
+
 - Nemôžete vytvárať nové prostredia, ktoré používajú váš vlastný účet Azure Data Lake Storage.
-- Skúšobné prostredie nemôžete odstrániť. 
+- Skúšobné prostredie nemôžete odstrániť.
 
 ### <a name="how-long-does-the-trial-last"></a>Ako dlho trvá skúšobný proces?
 

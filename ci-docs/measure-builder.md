@@ -11,20 +11,20 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643763"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800345"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Použite nástroj na tvorbu opatrení na vytvorenie mier od začiatku
+# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Použite nástroj na tvorbu opatrení na vytvorenie opatrení od začiatku
 
 Tento článok vysvetľuje, ako vytvoriť nový [opatrenie](measures.md) od nuly. Nástroj na tvorbu opatrení vám umožňuje definovať výpočty pomocou matematických operátorov, agregačných funkcií a filtrov. Môžete vytvoriť mieru s atribútmi z entít, ktoré súvisia s jednotným *Zákazník* subjekt.
 
 Vytváranie mier v prostrediach B-to-C a B-to-B funguje rovnakým spôsobom. Avšak, ak ste B-to-B prostredie [používa účty s hierarchiami](relationships.md#set-up-account-hierarchies), môžete sa rozhodnúť agregovať mieru medzi súvisiacimi podúčtami.
 
-Mieru môžete tiež rýchlo vytvoriť výberom zo súboru bežne používaných a preddefinovaných mier. Viac informácií nájdete v časti [Na vytvorenie miery použite šablónu](measure-templates.md).
+Mieru môžete tiež rýchlo vytvoriť výberom zo súboru bežne používaných a preddefinovaných mier. Ďalšie informácie nájdete v časti [Na vytvorenie miery použite šablónu](measure-templates.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 
@@ -32,7 +32,7 @@ Môžete vytvárať miery na úrovni jednotlivých zákazníkov (atribút zákaz
 
 - Atribút zákazníka: Vygeneruje výstup ako nový atribút, ktorý sa uloží ako nový stĺpec v entite vygenerovanej systémom s názvom *Customer_Measure*. Pri obnovovaní atribútu zákazníka sa všetky ostatné atribúty zákazníka v *Customer_Measure* obnovenie entity súčasne. Okrem toho sú atribúty zákazníka zobrazené na karte profilu zákazníka. Po spustení alebo uložení atribútu zákazníka ho nemôžete zmeniť na mieru zákazníka.
 
-- Zákaznícke meranie: Generuje výstup ako svoju vlastnú entitu a po spustení alebo uložení ho nemôžete zmeniť na atribút zákazníka. Merania zákazníka sa nezobrazujú na karte profilu zákazníka.
+- Zákaznícke meranie: Generuje výstup ako svoju vlastnú entitu a po spustení alebo uložení ho nemôžete zmeniť na atribút zákazníka. Zákaznícke miery sa nezobrazujú na karte profilu zákazníka.
 
 - Obchodné meranie: Generuje výstup ako vlastnú entitu a zobrazuje sa na domovskej stránke vášho prostredia Customer Insights.
 
@@ -88,7 +88,7 @@ Môžete vytvárať miery na úrovni jednotlivých zákazníkov (atribút zákaz
 
 1. Ak chcete pridať ďalšie výpočty miery, vyberte položku **Nový výpočet**. Na nové výpočty môžete použiť iba entity v tom istom postupe entity. Ďalšie výpočty sa zobrazia ako nové stĺpce v entite výstupu miery.
 
-1. Vyberte **...** vo výpočte na **Duplikovanie**, **Premenovanie** alebo **Odstránenie** výpočtu z miery.
+1. Vyberte zvislú elipsu (&vellip;) o výpočte na **Duplicitné**, **·**, alebo **Odstrániť** výpočet z opatrenia.
 
 1. V oblasti **Ukážka** uvidíte dátovú schému entity výstupu miery vrátane filtrov a dimenzií. Ukážka dynamicky reaguje na zmeny v konfigurácii.
 
@@ -104,7 +104,7 @@ Môžete vytvárať miery na úrovni jednotlivých zákazníkov (atribút zákaz
 
 Opatrenia môžete vytvárať na úrovni jednotlivých účtov (zákaznícke opatrenie) alebo na úrovni všetkých účtov (obchodné opatrenie).
 
-- Zákaznícke opatrenie: Vytvára výstup ako vlastný subjekt. Merania zákazníka sa nezobrazujú na karte profilu zákazníka.
+- Zákaznícke meranie: Vytvára výstup ako vlastný subjekt. Zákaznícke miery sa nezobrazujú na karte profilu zákazníka.
 
 - Obchodné meranie: Generuje výstup ako vlastnú entitu a zobrazuje sa na domovskej stránke vášho prostredia Customer Insights.
 
@@ -158,7 +158,7 @@ Opatrenia môžete vytvárať na úrovni jednotlivých účtov (zákaznícke opa
    1. Vyberte **Cesta vyjadrujúca vzťah** a vyberte cestu entity, ktorá by mala byť použitá na identifikáciu vašej miery. Ak existuje iba jedna cesta k entite *Zákazník*, tento ovládací prvok sa nezobrazí.
    1. Výberom možnosti **Hotovo** použite svoj výber.
 
-1. Vyberte **...** vo výpočte na **Duplikovanie**, **Premenovanie** alebo **Odstránenie** výpočtu z miery.
+1. Vyberte zvislú elipsu (&vellip;) o výpočte na **Duplicitné**, **·**, alebo **Odstrániť** výpočet z opatrenia.
 
 1. V oblasti **Ukážka** uvidíte dátovú schému entity výstupu miery vrátane filtrov a dimenzií. Ukážka dynamicky reaguje na zmeny v konfigurácii.
 

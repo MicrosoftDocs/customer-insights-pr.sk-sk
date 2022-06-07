@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755281"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807600"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)
 
@@ -38,7 +38,7 @@ Ak chcete nakonfigurovať diagnostiku v Customer Insights, musia byť splnené t
 
 - Máte aktívny [Azure predplatné](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Máš [správca](permissions.md#admin) povolenia v Customer Insights.
-- Máte **Prispievateľ** a **Administrátor prístupu používateľov** rolu na cieľovom prostriedku v Azure. Prostriedkom môže byť účet Azure Storage, centrum udalostí Azure alebo pracovný priestor Azure Log Analytics. Ďalšie informácie nájdete v časti [Pridajte alebo odstráňte priradenia rolí Azure pomocou portálu Azure](/azure/role-based-access-control/role-assignments-portal).
+- Máte **Prispievateľ** a **Administrátor prístupu používateľov** rolu na cieľovom prostriedku v Azure. Zdrojom môže byť Azure Data Lake Storage účet, centrum udalostí Azure alebo pracovný priestor Azure Log Analytics. Ďalšie informácie nájdete v časti [Pridajte alebo odstráňte priradenia rolí Azure pomocou portálu Azure](/azure/role-based-access-control/role-assignments-portal). Toto povolenie je potrebné pri konfigurácii diagnostických nastavení v Customer Insights, po úspešnom nastavení ho možno zmeniť.
 - [Požiadavky na destináciu](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pre Azure Storage, Azure Event Hub alebo Azure Log Analytics splnené.
 - Máte aspoň ten **Čitateľ** rolu v skupine prostriedkov, do ktorej prostriedok patrí.
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755469"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808546"
 ---
 # <a name="work-with-customer-insights-apis"></a>Pracujte s rozhraniami API v službe Customer Insights
 
@@ -31,11 +31,11 @@ Tento článok popisuje, ako získať prístup k rozhraniam API Customer Insight
 
 1. [Prihláste sa](https://home.ci.ai.dynamics.com) do služby Customer Insights. Ak ešte nemáte predplatné, [zaregistrujte sa na skúšobnú verziu Customer Insights](https://aka.ms/tryci).
 
-1. Ak chcete povoliť rozhrania API vo svojom prostredí služby Customer Insights, prejdite na **Správca** > **Povolenia**. Potrebujete na to povolenia správcu.
+1. Ak chcete povoliť rozhrania API vo svojom prostredí Customer Insights, prejdite na stránku **Admin** > **Bezpečnosť**. Potrebujete na to povolenia správcu.
 
 1. Prejdite na kartu **Rozhrania API** a vyberte tlačidlo **Povoliť**.    
  
-   Povolením rozhraní API sa vytvorí primárny a sekundárny kľúč predplatného pre vašu inštanciu, ktorý sa použije pri požiadavkách pre rozhrania API. Kľúče môžete znova vygenerovať výberom položky **Znova vygenerovať primárny** alebo **Znova vygenerovať sekundárny** v časti **Správca** > **Povolenia** > **Rozhrania API**.
+   Povolením rozhraní API sa vytvorí primárny a sekundárny kľúč predplatného pre vašu inštanciu, ktorý sa použije pri požiadavkách pre rozhrania API. Kľúče môžete obnoviť výberom položky **Primárne regenerovať** alebo **Regenerovať sekundárne** na **Admin** > **Bezpečnosť** > **API**.
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Tieto kroky vám pomôžu začať s používaním rozhraní API pre Customer Ins
 1. Vľavo vyberte položku **Registrácie aplikácií**.
 
 1. Vyberte položku **Nová registrácia**, zadajte názov aplikácie a vyberte typ účtu.
- 
+
    Prípadne pridajte adresu URL presmerovania. http://localhost postačí na vývoj aplikácie na vašom lokálnom počítači.
 
 1. Pri novej registrácii aplikácie prejdite na **Povolenia pre API**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Vyberte položku **Pridať povolenie** a vyberte položku **Customer Insights** na bočnej table.
+1. Vyberte **Pridajte povolenie** a vyberte **Dynamics 365 AI pre Customer Insights** v bočnom paneli.
 
 1. Pre **Typ povolenia** vyberte možnosť **Delegované povolenia** a potom vyberte povolenie **user_impersonation**.
 
@@ -109,7 +107,7 @@ Informácie o používaní rozhraní API v našich klientskych knižniciach náj
 
 1. Na záver musíme do služby Customer Insights pridať názov registrácie aplikácie ako používateľa.  
    
-   Otvorte službu Customer Insights, prejdite na položku **Správca** > **Povolenia** a vyberte položku **Pridať používateľa**.
+   Otvorte Customer Insights, prejdite na **Admin** > **Bezpečnosť** a vyberte **Pridať používateľa**.
 
 1. Vyhľadajte názov registrácie aplikácie, vyberte ho z výsledkov vyhľadávania a vyberte položku **Uložiť**.
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643196"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800439"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastné modely strojového učenia
 
@@ -92,7 +92,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 
 ## <a name="edit-a-workflow"></a>Upraviť pracovný postup
 
-1. Na stránke **Vlastné modely** vyberte zvislé tri bodky v stĺpci **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili, a vyberte **Upraviť**.
+1. Na **Vlastné modely** vyberte zvislú elipsu (&vellip;) v **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili, a vyberte ho **Upraviť**.
 
 1. Rozpoznateľný názov svojho pracovného postupu môžete aktualizovať v poli **Zobrazovaný názov**, ale nakonfigurovanú webovú službu alebo kanál nemôžete zmeniť. Vyberte **Ďalej**.
 
@@ -108,7 +108,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 
 ## <a name="run-a-workflow"></a>Spustenie pracovného postupu
 
-1. Na stránke **Vlastné modely** vyberte zvislé tri bodky v stĺpci **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili.
+1. Na **Vlastné modely** vyberte zvislú elipsu (&vellip;) v **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili.
 
 1. Vyberte položku **Spustiť**.
 
@@ -116,7 +116,7 @@ Váš pracovný postup sa tiež spustí automaticky pri každej plánovanej aktu
 
 ## <a name="delete-a-workflow"></a>Odstrániť pracovný postup
 
-1. Na stránke **Vlastné modely** vyberte zvislé tri bodky v stĺpci **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili.
+1. Na **Vlastné modely** vyberte zvislú elipsu (&vellip;) v **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili.
 
 1. Vyberte možnosť **Odstrániť** a odstránenie potvrďte.
 

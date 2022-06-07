@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740738"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800669"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Doplňte svoje čiastočné údaje o prognózy (zastarané)
 
@@ -95,7 +95,7 @@ V rámci tohto toku vyberiete konkrétny atribút, ktorý bude základom vášho
 
 2. Vyberte predikciu, ktorú chcete skontrolovať.
 
-3. Vyberte tri bodky v stĺpci **Akcie** a vyberte **Zobraziť**.
+3. Vyberte zvislú elipsu (&vellip;) v **Akcie** stĺpec a vyberte si **vyhliadka**.
 
 4. V zobrazení predikcie sa zobrazí niekoľko údajových bodov.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Po vytvorení predikcia si môžete prispôsobiť model v AI Builder na zvýšen
 
 2. Vyberte predikciu, ktorú chcete upraviť.
 
-3. Vyberte tri bodky v stĺpci **Akcie** a vyberte **Zobraziť**.
+3. Vyberte zvislú elipsu (&vellip;) v **Akcie** stĺpec a vyberte si **vyhliadka**.
 
 4. Vyberte **Prispôsobiť v AI Builder**.
 
@@ -139,7 +139,7 @@ Pri ďalšom spustení predikcie sa použije aktualizovaný model, ktorý ste vy
 
 2. Vyberte predikciu, ktorú chcete odstrániť.
 
-3. Vyberte tri bodky v stĺpci **Akcie** a vyberte **Odstrániť**.
+3. Vyberte zvislú elipsu (&vellip;) v **Akcie** stĺpec a vyberte si **Odstrániť**.
 
 4. Potvrďte vymazanie.
 
@@ -153,7 +153,7 @@ Ak nemôžete dokončiť proces pripojenia Dataverse kvôli chybe, môžete skú
 - Povolenia aplikácií nie sú udelené.
     1. Prejdite do systému [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Vyberte položku **Prostredia**.
-    1. Vyberte tri bodky vedľa prostredia, do ktorého chcete pridať povolenie, a vyberte **Nastavenia**.
+    1. Vyberte zvislú elipsu (&vellip;) vedľa prostredia, do ktorého chcete pridať povolenie a vybrať ho **nastavenie**.
     1. Rozbaľte **Používatelia + povolenia** a vyberte **Používatelia**.
     1. Vyberte možnosť **+ Nové** a zvoľte možnosť **Používateľ**.
     1. Vyberte **Používateľ aplikácie**, ak ešte nie je vybraté, zadajte nasledujúce informácie:

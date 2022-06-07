@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755328"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800391"
 ---
 # <a name="connections-preview-overview"></a>Prehľad pripojení (ukážka)
 
@@ -69,7 +69,7 @@ Pri nastavovaní alebo úprave exportného pripojenia si vyberáte, ktorí použ
 
 1. Prejdite na kartu **Pripojenia**.
 
-1. Vyberte zvislé tri bodky pri pripojení, ktoré chcete upraviť.
+1. Vyberte zvislú elipsu (&vellip;) pre pripojenie, ktoré chcete upraviť.
 
 1. Vyberte **Upraviť**.
 
@@ -85,7 +85,7 @@ Oddelené obohatenia a exporty sa stanú neaktívnymi. Znova ich aktivujete prid
 
 1. Prejdite na kartu **Pripojenia**.
 
-1. Vyberte zvislé tri bodky pri pripojení, ktoré chcete odstrániť.
+1. Vyberte zvislú elipsu (&vellip;) pre pripojenie, ktoré chcete odstrániť.
 
 1. Vyberte položku **Odstrániť** z rozbaľovacej ponuky. Zobrazí sa dialógové okno s potvrdením.
 

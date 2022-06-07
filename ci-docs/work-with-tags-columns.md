@@ -14,16 +14,16 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 04ae4ffd303a47add15044f313c96a23e5efcd76
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0d23a74b5ca68162ee21307705b1f781a7eb97e
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643718"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800578"
 ---
 # <a name="work-with-tags-and-columns"></a>Práca so značkami a stĺpcami
 
-Usporiadajte zoznamy pomocou značiek a stĺpcov, aby ste rýchlo a jednoducho našli údaje a zobrazili údaje požadovaným spôsobom.
+Usporiadajte zoznamy pomocou značiek a stĺpcov, aby ste rýchlo a jednoducho našli údaje a zobrazili údaje tak, ako chcete.
 
 V súčasnosti sú podporované značky a stĺpce **[Segmenty](segments.md)** a **[Opatrenia](measures.md)**.
 
@@ -37,7 +37,7 @@ Môžete zobraziť, pridať a odstrániť štítky z položky. Pri vytváraní p
 
 1. Vyberte položku, ktorej značky chcete spravovať.
 
-1. Vyberte **Zobraziť viac (...)** a vyberte **Tag**.
+1. Vyberte zvislú elipsu (&vellip;) a vyberte **Tag**.
 
    :::image type="content" source="media/segments_list_tag.png" alt-text="Vybratý segment s rozbaľovacím zoznamom možností a dostupnými možnosťami."lightbox="media/segments_list_tag.png":::
 
@@ -61,7 +61,7 @@ Na filtrovanie zoznamu položiek použite značky.
 
 1. Vyhľadajte a vyberte značky, podľa ktorých chcete filtrovať.
 
-1. Vyberte **Použiť**. Zobrazia sa len záznamy, ktoré zodpovedajú značkám filtra. Váš výber filtra sa uloží, kým sa neodhlásite z tejto relácie alebo neprepnete prehliadač.
+1. Vyberte **Použiť**. Zobrazia sa iba záznamy, ktoré zodpovedajú značkám filtra. Váš výber filtra sa uloží, kým sa neodhlásite z tejto relácie alebo neprepnete prehliadač.
 
 1. Ak chcete filter vymazať, vyberte **Filter** a **Zmazať všetko**.
 

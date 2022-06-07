@@ -1,19 +1,19 @@
 ---
 title: Zdroj údajov obohatenie
 description: Pred procesom zjednotenia údajov obohaťte zdroje údajov.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755705"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800300"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obohatenie pre zdroje údajov (ukážka)
 
@@ -27,7 +27,7 @@ Na vytváranie alebo úpravu obohatení musíte mať oprávnenia prispievateľa 
 
 1. Prejdite do **Údaje** > **Zdroje údajov**.
 
-1. Vyberte zvislú elipsu vedľa zdroj údajov, ktorú chcete obohatiť, a vyberte **Obohatiť**.
+1. Vyberte zvislú elipsu (&vellip;) vedľa zdroj údajov, ktorý chcete obohatiť a vybrať **Obohatiť**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stránka obohatenia zdrojov údajov.":::
 
@@ -41,11 +41,12 @@ Pre zdroje údajov sú v súčasnosti k dispozícii nasledujúce rozšírenia. P
 
 - [Vylepšené adresy](enrichment-enhanced-addresses.md)
 - [Rozšírené firemné údaje](enrichment-enhanced-company-data.md)
+- [Údaje o identite z LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Spravujte existujúce zdroj údajov obohatenia
 
 Prejdite na kartu **Moje obohatenia**, kde nájdete všetky nakonfigurované obohatenia.
 
-Ak chcete zobraziť prístupné možnosti, označte položku obohatenia. Možnosti môžete zobraziť aj tak, že stlačíte tri bodky (...) v položke zoznamu. Ak ste nakonfigurovali niekoľko obohatení, môžete ich rýchlo nájsť pomocou vyhľadávacieho poľa.
+Ak chcete zobraziť prístupné možnosti, označte položku obohatenia. Môžete tiež vybrať zvislú elipsu (&vellip;) na položke zoznamu, aby ste videli možnosti. Ak ste nakonfigurovali niekoľko obohatení, môžete ich rýchlo nájsť pomocou vyhľadávacieho poľa.
 
 Môžete zobraziť, upraviť, spustiť alebo odstrániť obohatenie zdroj údajov. Viac informácií nájdete v časti [Spravujte existujúce obohatenia](enrichment-hub.md).

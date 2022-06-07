@@ -11,34 +11,34 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
-ms.translationtype: HT
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743432"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768369"
 ---
 # <a name="explore-customer-insights"></a>Preskúmajte štatistiky zákazníkov
 
 Môžete pristupovať [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) na nasledujúcej adrese URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-The **Domov** stránka ukazuje vás prevedie procesom konfigurácie pre kľúčové funkcie a poskytuje prehľad segmentov, meraní a údajov o obohatení.
+The **Domov** Stránka vás prevedie procesom konfigurácie kľúčových funkcií a poskytne prehľad segmentov, meraní a údajov o obohatení.
 
 :::image type="content" source="media/home-page.png" alt-text="Snímka domovskej obrazovky s ukážkou vzorových prehľadov.":::
 
 ## <a name="left-side-pane"></a>Panel na ľavej strane
 
-Na navigáciu medzi rôznymi oblasťami Customer Insights použite ľavý panel. 
+Na navigáciu medzi rôznymi oblasťami Customer Insights použite ľavý panel.
 
-Ak pracujete s obchodnými účtami a individuálnymi spotrebiteľmi, môžete si vybrať svoje primárne publikum a podľa toho nastaviť svoje zameranie. 
+Ak pracujete s obchodnými účtami a individuálnymi spotrebiteľmi, môžete si vybrať svoje primárne publikum a podľa toho nastaviť svoje zameranie.
 
 ## <a name="application-header"></a>Hlavička aplikácie
 
-The **Životné prostredie** výber zobrazuje prostredie, v ktorom pracujete, a umožňuje vám vytvárať alebo spravovať prostredia ako správcovi.
+The **Životné prostredie** picker zobrazuje prostredie, v ktorom pracujete, a umožňuje vám vytvárať alebo spravovať prostredia ako správcovi.
 
 Ikona smajlíka je **Spätná väzba** ovládanie. Vyberte ju, aby ste nám povedali o svojich skúsenostiach s Customer Insights. Aktívne počúvame vašu spätnú väzbu a vopred vám ďakujeme, že ste nám dali vedieť, čo sa vám páči a ako sa môžeme zlepšiť.
 
-The **nastavenie** ovládanie, ktoré predstavuje ikona ozubeného kolieska, vám umožňuje zhromažďovať podrobnosti o relácii pre Customer Insights a konfigurovať globálne nastavenia Microsoft 365 profilu. 
+The **nastavenie** ovládanie, ktoré predstavuje ikona ozubeného kolieska, vám umožňuje zhromažďovať podrobnosti o relácii pre Customer Insights a konfigurovať globálne nastavenia Microsoft 365 profilu.
 
 **Pomoc** možnosti, zobrazené s ikonou otáznika, poskytujú kontextové odkazy na pomoc a ďalšie užitočné zdroje.
 
@@ -46,7 +46,7 @@ Váš profilový obrázok otvorí **Account manager** pre teba Microsoft 365 pro
 
 ## <a name="getting-started-with-customer-insights-section"></a>Začíname so sekciou Customer Insights
 
-Táto časť obsahuje karty, ktoré vám pomôžu prejsť procesom nastavenia prostredia Customer Insights. 
+Táto časť obsahuje karty, ktoré vám pomôžu prejsť procesom nastavenia prostredia Customer Insights.
 
 1. The **Pridajte údaje** karta vám pomôže s importom údajov. Podpora Customer Insights [niekoľko možností, ako získať údaje o svojich zákazníkoch](data-sources.md). Vyberte **Pridajte zdroje údajov** začať.
 1. Po úspešnom dokončení úvodného importu údajov môžete použiť **Zjednotiť dáta** kartu na harmonizáciu údajov a [vytvárať jednotné profily zákazníkov](data-unification.md) z rôznych zdrojov. 

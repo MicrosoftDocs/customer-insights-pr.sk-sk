@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643558"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800115"
 ---
 # <a name="create-segments"></a>Vytvorenie segmentov
 
@@ -134,8 +134,9 @@ Pri vytváraní segmentu môžete uložiť koncept. V štádiu konceptu je segme
 > - Pri nastavovaní operátorov pre podmienky zostavovač segmentov nenavrhne platné hodnoty z entít. Môžete prejsť do časti **Údaje** > **Entity** a stiahnuť si údaje entity, aby ste zistili, ktoré hodnoty sú dostupné.
 > - Podmienky založené na dátumoch vám umožnia prepínať sa medzi pevnými dátumami a pohyblivým rozsahom dátumov.
 > - Ak máte pre svoj segment viacero pravidiel, pravidlo, ktoré upravujete, má vedľa seba zvislú modrú čiaru.
-> - Pravidlá a podmienky môžete presunúť na iné miesta v definícii segmentu. Vyberte [...] vedľa pravidla alebo podmienky a určte, ako a kam ho chcete presunúť.
+> - Pravidlá a podmienky môžete presunúť na iné miesta v definícii segmentu. Vyberte zvislú elipsu (&vellip;) vedľa pravidla alebo podmienky a vyberte, ako a kam ju presunúť.
 > - Ovládacie prvky **Vrátiť späť** a **Znova** na paneli príkazov vám umožňujú vrátiť zmeny späť.
+> - Po vytvorení segmentu vám to niektoré segmenty umožňujú [sledovať využitie segmentu](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Rýchle segmenty
 

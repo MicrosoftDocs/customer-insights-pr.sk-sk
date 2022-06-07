@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Katalóg Learning
   items:
-    - name: Začať
+    - name: Certifikujte sa ako špecialista na platformu zákazníckych údajov spoločnosti Microsoft
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Začíname so službou Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
     - name: Príjem údajov
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Začnite s platenou licenciou
       href: paid-license.md
-    - name: Vytvoriť nové prostredie
-      href: create-environment.md
     - name: Preskúmajte štatistiky zákazníkov
       href: home.md
     - name: Práca so značkami a stĺpcami
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: "Dynamics\_365 Marketing"
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Kontrola schém entít v Common Data Model
       href: entity-schemas.md
-    - name: Údaje riešenia Customer Insights v Dataverse
-      href: customer-insights-dataverse.md
     - name: Budujte vzťahy a prepojené entity
       href: relationships.md
     - name: Definícia sémantického mapovania
       href: semantic-mappings.md
+- name: Prostredia
+  items:
+    - name: Vytvoriť nové prostredie
+      href: create-environment.md
+    - name: "Pripojiť k\_systému Microsoft Dataverse"
+      href: customer-insights-dataverse.md
+    - name: Použite svoj vlastný Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: Spravovať nastavenia prostredia
+      href: manage-environments.md
+    - name: Pripojte sa k účtu úložiska pomocou funkcie Service Principal
+      href: connect-service-principal.md
 - name: Spravovanie
   items:
     - name: Nastavte konfiguráciu systému
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Priradenie používateľských povolení
       href: permissions.md
-    - name: Prehľad pripojení
-      href: connections.md
-    - name: Správa viacerých prostredí
-      href: manage-environments.md
     - name: Vlastná služba Key Vault
       href: use-azure-key-vault.md
-    - name: Pripojte sa k účtu úložiska pomocou funkcie Service Principal
-      href: connect-service-principal.md
     - name: Exportujte diagnostické protokoly
       href: diagnostics.md
-    - name: Obmedzenia služby
-      href: service-limits.md
-    - name: Práva a požiadavky DSR
-      href: dsr-rights-requests.md
+    - name: Prehľad pripojení
+      href: connections.md
 - name: Rozhrania API
   items:
     - name: "Práca s\_API"
@@ -324,5 +328,9 @@
       items:
         - name: Vytvárajte predpovede s údajmi o súhlase
           href: consent-management/predictions-consent-data.md
+- name: Obmedzenia služby
+  href: service-limits.md
+- name: Práva a požiadavky DSR
+  href: dsr-rights-requests.md
 - name: Získanie podpory
   href: /power-platform/admin/get-help-support

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653496"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763598"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Prineste si vlastný trezor kľúčov Azure (verzia Preview)
 
@@ -89,9 +89,9 @@ Nasledujúce povolenia sú udelené pre Customer Insights v prepojenom trezore k
 
 | Zadať        | Povolenia          |
 | ----------- | -------------------- |
-| Kláves         | [Získajte kľúče](/rest/api/keyvault/get-keys), [Získajte kľúč](/rest/api/keyvault/get-key)                                 |
-| Tajný kód      | [Získajte tajomstvá](/rest/api/keyvault/get-secrets), [Získajte tajomstvo](/rest/api/keyvault/get-secret)                     |
-| Certifikát | [Získajte certifikáty](/rest/api/keyvault/get-certificates), [Získajte certifikát](/rest/api/keyvault/get-certificate) |
+| Kláves         | [Získajte kľúče](/rest/api/keyvault/keys/get-keys/get-keys), [Získajte kľúč](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Tajný kód      | [Získajte tajomstvá](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Získajte tajomstvo](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Certifikát | [Získajte certifikáty](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Získajte certifikát](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Predchádzajúce hodnoty sú minimum na zobrazenie a čítanie počas vykonávania.
 

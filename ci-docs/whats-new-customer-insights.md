@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700956"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833649"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v službe Dynamics 365 Customer Insights
 
@@ -33,7 +33,7 @@ Aktualizácie v apríli 2022 zahŕňajú nové funkcie, vylepšenia výkonu a op
 
 Dun & Bradstreet poskytuje firmám komerčné údaje, analýzy a prehľady. Umožňuje zákazníkom so zjednotenými zákazníckymi profilmi pre spoločnosti obohacovať svoje údaje. Obohatenia zahŕňajú atribúty, ako je číslo DUNS, veľkosť spoločnosti, lokalita, odvetvie a ďalšie.
 
-Viac informácií nájdete v časti [Obohatenie firemných profilov o Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Ďalšie informácie nájdete v časti [Obohatenie firemných profilov o Dun & Bradstreet (Preview)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Pri vytváraní novej miery definujte typ miery
 
@@ -53,27 +53,28 @@ Aktualizácie v marci 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opra
 
 ### <a name="liveramp-abilitec-enrichment-preview"></a>LiveRamp AbiliTec obohatenie (ukážka)
 
-LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Môžete namapovať osobné identifikátory vo svojich zákazníckych údajoch do grafu identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
+LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Môžete mapovať osobné identifikátory vo svojich zákazníckych údajoch do grafu identity AbiliTec a prijímať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
 
 Viac informácií nájdete v časti [Obohaťte zákaznícke profily o údaje o identite z LiveRamp (Preview)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Usporiadajte segmenty a miery pomocou značiek a filtrov
+
 Ak vaša organizácia udržiava veľa segmentov alebo opatrení, nájsť ten správny môže byť niekedy náročné. Táto nová funkcia vám umožňuje organizovať zoznamy pomocou značiek a stĺpcov. Pomáha rýchlo a jednoducho nájsť údaje a prispôsobiť zobrazenia.
 
 Viac informácií nájdete v časti [Práca so značkami a stĺpcami](work-with-tags-columns.md).
 
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Povoliť zdieľanie údajov s Dataverse pri používaní vlastného účtu úložiska
 
-Ak vaše prostredie používa Azure Data Lake Storage na ukladanie údajov Customer Insights, zdieľanie údajov s Microsoft Dataverse potrebuje nejakú extra konfiguráciu.
-Predtým ste mohli povoliť zdieľanie údajov iba s Dataverse keď boli vaše údaje uložené v našom jazere spravovaných údajov. 
+Ak vaše prostredie používa Azure Data Lake Storage na ukladanie údajov Customer Insights, zdieľanie údajov s Microsoft Dataverse potrebuje nejakú dodatočnú konfiguráciu.
+Predtým ste mohli povoliť zdieľanie údajov iba s Dataverse keď boli vaše údaje uložené v našom jazere spravovaných údajov.
 
-Viac informácií nájdete v časti [Povoliť zdieľanie údajov s Dataverse z vlastného Azure Data Lake Storage (Náhľad)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Viac informácií nájdete v časti [Povoliť zdieľanie údajov s Dataverse z vlastného Azure Data Lake Storage (Náhľad)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Nové exportné destinácie: Iterable a Braze
 
 Pokračujeme v rozširovaní nášho ekosystému exportných destinácií o nové spojenia. Teraz môžete exportovať segmenty do Iterable a Braze a využívať ich aktivačné služby.
 
-Viac informácií nájdete v časti [Exportovať segmenty do Iterable (ukážka)](export-iterable.md) a [Export segmentov do Braze (ukážka)](export-braze.md).
+Ďalšie informácie nájdete v časti [Exportovať segmenty do Iterable (ukážka)](export-iterable.md) a [Export segmentov do Braze (ukážka)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Vylepšenia exportu Marketo a Google Ads
 
@@ -81,7 +82,6 @@ Zmena rozhraní API v pripojených službách vedie k aktualizáciám konektorov
 
 - Google Ads: Nová verzia konektora na export služby Google Ads zjednodušuje overenie a teraz vám umožňuje automaticky vytvárať nové publiká Google Ads. 
 - Marketo: Nová verzia exportného konektora Marketo poskytuje podporu pre Marketo ID, čo vám umožňuje vyhnúť sa duplicite údajov, aktualizovať existujúce záznamy a vytvárať nové záznamy v Marketo. 
-
 
 ## <a name="february-2022-updates"></a>Aktualizácie z februára 2022
 
@@ -103,7 +103,7 @@ Viac informácií nájdete v časti [Pripojte Azure Synapse zdroj údajov (uká�
 
 ### <a name="liveramp-enrichment-preview"></a>LiveRamp obohatenie (ukážka)
 
-LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Môžete namapovať osobné identifikátory vo svojich zákazníckych údajoch do grafu identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
+LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Môžete mapovať osobné identifikátory vo svojich zákazníckych údajoch do grafu identity AbiliTec a prijímať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
 
 Viac informácií nájdete v časti [Obohaťte zákaznícke profily o údaje o identite z LiveRamp (Preview)](enrichment-liveramp.md).
 
@@ -123,7 +123,7 @@ Viac informácií nájdete v časti [Zmeňte vlastníka prostredia](manage-envir
 
 Príprava údajov teraz ukazuje dôvod poškodenia pre všetky polia s poškodenými údajmi. Informácie sa poskytujú na úrovni jednotlivých záznamov pre ľahkú identifikáciu. 
 
-Viac informácií nájdete v časti [Poškodené zdroje údajov](entities.md#corrupted-data-sources).
+Ďalšie informácie nájdete v časti [Poškodené zdroje údajov](entities.md#corrupted-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Koniec ukážky pre funkcie vytvárania prehľadov v funkcii štatistík interakcií
 
@@ -149,7 +149,7 @@ Aktualizácie v januári 2022 zahŕňajú nové funkcie, vylepšenia výkonu a o
 
 Customer Insights poskytuje novú funkciu poháňanú umelou inteligenciou, ktorá syntetizuje sentiment zákazníkov a identifikuje špecifické obchodné aspekty ako príležitosti na cielené zlepšenia. Analýzou písomnej spätnej väzby vašich zákazníkov môžete získať presné informácie pri nízkych nákladoch. Analýza sentimentu založená na modeloch spracovania prirodzeného jazyka (NLP), ktoré generujú dva odvodené štatistiky pre každé ID zákazníka. Skóre sentimentu (od –5 do 5) a zoznam príslušných obchodných aspektov. 
 
-Viac informácií nájdete v časti [Analyzujte sentiment v spätnej väzbe zákazníkov (ukážka)](sentiment-analysis.md).
+Ďalšie informácie nájdete v časti [Analyzujte sentiment v spätnej väzbe zákazníkov (ukážka)](sentiment-analysis.md).
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

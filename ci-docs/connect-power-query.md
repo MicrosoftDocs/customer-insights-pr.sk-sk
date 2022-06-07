@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643358"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800205"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Pripojte sa k a Power Query zdroj údajov
 
@@ -48,7 +48,7 @@ Pridávanie zdrojov údajov na základe Power Query konektory sa vo všeobecnost
    > [!div class="mx-imgBorder"]
    > ![Úprava dialógového okna dotazov.](media/data-manager-configure-edit-queries.png "Úprava dialógového okna dotazov")
 
-1. Údaje môžete aj transformovať. Vyberte entitu, ktorú chcete upraviť alebo transformovať. Použite možnosti v Power Query okno na použitie transformácií. Každá transformácia bude uvedená v zozname **Použité kroky**. Power Query poskytuje množstvo vopred pripravených možností transformácie. Viac informácií nájdete v časti [Power Query Premeny](/power-query/power-query-what-is-power-query#transformations).
+1. Údaje môžete aj transformovať. Vyberte entitu, ktorú chcete upraviť alebo transformovať. Použite možnosti v Power Query okno na použitie transformácií. Každá transformácia bude uvedená v zozname **Použité kroky**. Power Query poskytuje množstvo vopred pripravených možností transformácie. Ďalšie informácie nájdete v časti [Power Query Premeny](/power-query/power-query-what-is-power-query#transformations).
 
    Odporúčame vám použiť nasledujúce transformácie:
 
@@ -76,7 +76,7 @@ Konektory so začiarknutím v **Customer Insights (údajové toky)** sú k dispo
 
 1. Prejdite do **Údaje** > **Zdroje údajov**.
 
-2. Vyberte zvislé tri bodky vedľa zdroja údajov, ktorý chcete zmeniť, a z rozbaľovacieho zoznamu vyberte položku **Upraviť**.
+2. Vyberte zvislú elipsu (&vellip;) vedľa zdroj údajov, ktorý chcete zmeniť a vyberte **Upraviť** z rozbaľovacej ponuky.
 
    > [!div class="mx-imgBorder"]
    > ![Úprava možnosti.](media/edit-option-data-sources.png "Úprava možnosti")
