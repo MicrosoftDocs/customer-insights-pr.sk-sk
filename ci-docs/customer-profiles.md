@@ -1,7 +1,7 @@
 ---
 title: Zobrazenie profilov zákazníkov
 description: Získajte kombinovaný pohľad na vaše zjednotené údaje o zákazníkoch.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755801"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947065"
 ---
 # <a name="customer-profiles"></a>Profily zákazníkov
 
@@ -55,9 +55,9 @@ Zákazníkov môžete filtrovať podľa polí entity *Zákazník*. Podobne ako p
 
 Vyberte ktorúkoľvek z dlaždíc zákazníka a otvorte **stránku s podrobnosťami o zákazníkovi**. Toto zobrazenie obsahuje zjednotené informácie o vybranom zákazníkovi. Podrobnosti o zákazníkovi obsahujú nasledujúci obsah:
 
-**Dlaždica profilu zákazníka**: Táto dlaždica zobrazuje hodnoty, ktoré sa líšia od entity *Zákazník*. Ak pole pre vybratý profil zákazníka nemá žiadnu hodnotu, nezobrazí sa. Dlaždica je štruktúrovaná do sekcií:
+**Dlaždica profilu zákazníka**: Táto dlaždica zobrazuje hodnoty, ktoré sa líšia od entity *Zákazník*. Ak pole nemá žiadnu hodnotu pre vybraný profil zákazníka, nezobrazí sa okrem poľa adresy. Dlaždica je štruktúrovaná do sekcií:
 
-- Prvá sekcia zobrazuje vopred definovanú množinu polí, za ktorou nasledujú všetky polia, ktoré sú súčasťou indexu vyhľadávania a filtrovania. Ak profil obsahuje tieto polia, všetky polia súvisiace s adresou sa spoja do jedného riadka.
+- Prvá sekcia zobrazuje vopred definovanú množinu polí, za ktorou nasledujú všetky polia, ktoré sú súčasťou indexu vyhľadávania a filtrovania. Všetky polia súvisiace s adresou sú spojené do jedného riadku, ktorý sa zobrazuje, aj keď profil neobsahuje žiadne informácie o adrese.
 - **Kontakty na tohto zákazníka**: V prostrediach pre firemné obchodné vzťahy uvidíte všetky súvisiace kontakty na tohto zákazníka ako druhú sekciu. Každý kontakt je zobrazený s jeho poľami. Prázdne polia sú skryté.
 - **Ďalšie polia**: Zobrazuje zostávajúce polia vybratého zákazníka s výnimkou IDs.
 - **IDs**: Uvádza všetky identifikátory pod ich zodpovedajúcim názvom entity. Polia sú identifikované ako IDs svojou sémantikou, ktorá ich ako taká kategorizuje.

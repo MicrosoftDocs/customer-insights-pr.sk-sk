@@ -1,7 +1,7 @@
 ---
 title: Obohatenie zjednotených profilov zákazníkov
 description: Využite možnosti na obohatenie údajov vašich zákazníkov.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800624"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954060"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obohacovanie profilov zákazníkov (ukážka)
 
@@ -35,29 +35,29 @@ Na karte **Objavovať** nájdete všetky podporované možnosti obohatenia.
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 
+- [AbiliTec Identity](enrichment-liveramp.md) poskytuje LiveRamp AbiliTec
 - [Značky](enrichment-microsoft.md) od spoločnosti Microsoft
-- [Záujmy](enrichment-microsoft.md) od spoločnosti Microsoft
-- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft 
 - [Demografické údaje](enrichment-experian.md), ktoré poskytuje Experian
-- [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
-- [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
-- [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies 
-- [identita](enrichment-liveramp.md) poskytuje LiveRamp AbiliTec
+- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft
+- [Záujmy](enrichment-microsoft.md) od spoločnosti Microsoft
+- [Údaje o polohe](enrichment-azure-maps.md) poskytuje Microsoft Azure Mapy
+- [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies
+- [Vlastné údaje SFTP](enrichment-SFTP-custom-import.md) cez protokol Secure File Transfer Protocol (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
-- [Údaje o spoločnosti](enrichment-leadspace.md) poskytované spoločnosťou Leadspace
-- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft 
-- [Vylepšené firemné údaje](enrichment-enhanced-company-data.md) poskytovaná spoločnosťou Microsoft
-- [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies 
-- [Vlastné údaje](enrichment-SFTP-custom-import.md) prostredníctvom protokolu SFTP (Secure File Transfer Protocol) 
-- [Azure Maps](enrichment-azure-maps.md) poskytuje spoločnosť Microsoft
-- [Údaje o spoločnosti](enrichment-dnb.md) poskytuje Dun & Bradstreet
 - [Údaje o interakcii účtu](enrichment-office.md) poskytovaná spoločnosťou Microsoft
+- [Údaje o spoločnosti](enrichment-dnb.md) poskytuje Dun & Bradstreet
+- [Údaje o spoločnosti](enrichment-leadspace.md) poskytované spoločnosťou Leadspace
+- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované spoločnosťou Microsoft
+- [Vylepšené firemné údaje](enrichment-enhanced-company-data.md) poskytovaná spoločnosťou Microsoft
+- [Údaje o polohe](enrichment-azure-maps.md) poskytuje Microsoft Azure Mapy
+- [Údaje o polohe](enrichment-here.md) poskytované spoločnosťou HERE Technologies
+- [Vlastné údaje SFTP](enrichment-SFTP-custom-import.md) cez protokol Secure File Transfer Protocol (SFTP)
 
 ---
 
-Na karte **Moje obohatenia** môžete vidieť obohatenia, ktoré ste nakonfigurovali, a upraviť ich vlastnosti.
+Na karte **Moje obohatenia** môžete vidieť obohatenia, ktoré ste nakonfigurovali, a upraviť ich vlastnosti. Môžete tiež vytvoriť [segmentov](segments.md) alebo [Opatrenia](measures.md) z obohatenia.
 
 ## <a name="manage-existing-enrichments"></a>Spravovanie existujúcich obohatení
 
@@ -81,36 +81,45 @@ Obohatenia tretích strán sa konfigurujú pomocou [spojení](connections.md), k
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Viacnásobné obohatenie rovnakého typu
 
-Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia, ktorá umožňuje obohatiť iba podmnožinu vašich profilov. Môžete napríklad obohatiť údaje iba v konkrétnom segmente. Môžete nakonfigurovať niekoľko obohatení rovnakého typu a znova použiť to isté pripojenie. Niektoré obohatenia budú mať obmedzený počet obohatení rovnakého typu, ktoré je možné vytvoriť. Limity a súčasné použitie sú uvedené na stránke **Obohatenie**.
+Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia, ktorá umožňuje obohatiť iba podmnožinu vašich profilov. Môžete napríklad obohatiť údaje iba v konkrétnom segmente. Môžete nakonfigurovať niekoľko obohatení rovnakého typu a znova použiť to isté pripojenie. Niektoré obohatenia budú mať obmedzený počet obohatení rovnakého typu, ktoré je možné vytvoriť. Limity a aktuálne využitie je možné vidieť na každej dlaždici na **Objavte** záložku **Obohacovanie** stránku.
 
 ## <a name="enrich-data-sources-before-unification"></a>Obohaťte zdroje údajov pred zjednotením
 
-Pred zjednotením údajov môžete obohatiť údaje o svojich zákazníkoch, aby ste zvýšili kvalitu zhody údajov. Ďalšie informácie nájdete v časti [zdroj údajov obohatenie](data-sources-enrichment.md).
+Pred zjednotením údajov môžete obohatiť údaje o svojich zákazníkoch, aby ste zvýšili kvalitu zhody údajov. Viac informácií nájdete v časti [zdroj údajov obohatenie](data-sources-enrichment.md).
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Zobrazte priebeh procesu obohacovania
+## <a name="run-or-refresh-enrichments"></a>Beh alebo osvieženie obohatenie
+
+1. Ak chcete spustiť proces obohatenia, vyberte **Bežať**. Alebo nechajte systém spustiť obohatenie automaticky ako súčasť a [plánované obnovenie](system.md#schedule-tab). Čas spracovania závisí od veľkosti vašich zákazníckych údajov.
+
+1. voliteľne [vidieť priebeh procesu obohacovania](#see-the-progress-of-the-enrichment-process).
+
+1. Po dokončení procesu obohatenia prejdite na **Moje obohatenia** na kontrolu údajov novo obohatených profilov zákazníkov, času poslednej aktualizácie a počtu obohatených profilov.
+
+1. Vyberte obohatenie, ktoré chcete vidieť [výsledky obohatenia](#enrichment-results).
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Zobrazte priebeh procesu obohacovania
 
 Môžete nájsť detaily spracúvania obohatenia vrátane jeho stavu a možných problémov počas obnovovania či po dokončení obnovenia. Zoznámte sa s procesmi, ktoré sú súčasťou obnovenia obohatenia, a dĺžkou behu týchto procesov. Stav obohatenia je podporovaný pre Experian, Leadspace, HERE Technologies, import SFTP a Azure Maps.
 
-Zobrazenie stavu obohatenia
-
-1. Prejdite na položku **Údaje** > **Obohatenie**. 
-1. Na karte **Moje obohatenia** označte stav obohatenia. Otvorí sa bočná tabla. 
-1. Na table **Podrobnosti o priebehu** rozbaľte časť **Obohatenia**. 
-1. Pod položkou obohatenia, ktoré chcete vidieť, označte položku **Zobraziť podrobnosti**. 
-1. V table **Podrobnosti o úlohe** označením položky **Zobraziť podrobnosti** zobrazíte procesy tvoriace proces aktualizácie obohatenia, a ich stav. 
+1. Prejdite na položku **Údaje** > **Obohatenie**.
+1. V **Moje obohatenia** vyberte stav obohatenia a otvorte bočný panel.
+1. Na table **Podrobnosti o priebehu** rozbaľte časť **Obohatenia**.
+1. Pod položkou obohatenia, ktoré chcete vidieť, označte položku **Zobraziť podrobnosti**.
+1. V table **Podrobnosti o úlohe** označením položky **Zobraziť podrobnosti** zobrazíte procesy tvoriace proces aktualizácie obohatenia, a ich stav.
 
 ## <a name="enrichment-results"></a>Výsledky obohatenia
 
-Po dokončení cyklu obohatenia si môžete prezrieť výsledky obohatenia.
+Po dokončení cyklu obohatenia skontrolujte výsledky obohatenia.
 
-1. Prejdite na položku **Údaje** > **Obohatenie**. 
-1. Vyberte obohatenie, o ktorom chcete získať informácie.
+1. Prejdite na položku **Údaje** > **Obohatenie**.
+1. V **Moje obohatenia** vyberte obohatenie, o ktorom chcete získať informácie.
 
-Všetky obohatenia zobrazujú základné informácie, ako je počet obohatených profilov, náhľad vygenerovanej entity obohatenia a počet obohatených profilov v priebehu času. Ak je k dispozícii, **Počet zákazníkov obohatený o odbor** poskytuje hĺbkovú analýzu pokrytia každého obohateného poľa.
+Všetky obohatenia zobrazujú základné informácie, ako je počet obohatených profilov a počet obohatených profilov v priebehu času. The **Ukážka obohatených zákazníkov** dlaždica zobrazuje vzorku vygenerovanej entity obohatenia. Ak chcete zobraziť podrobné zobrazenie, vyberte **Pozrieť viac** a vyberte **Údaje** tab.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Stránka s výsledkami obohatení.":::
 
-Niektoré obohatenia tiež zobrazujú informácie špecifické pre daný typ obohatenia. Ďalšie informácie nájdete v dokumentácii k príslušnému obohateniu.
+Ak je k dispozícii, **Počet zákazníkov obohatený o odbor** poskytuje hĺbkovú analýzu pokrytia každého obohateného poľa.
 
+Niektoré obohatenia tiež zobrazujú informácie špecifické pre daný typ obohatenia. Ďalšie informácie nájdete v súvisiacej dokumentácii.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

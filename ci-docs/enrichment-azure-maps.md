@@ -1,95 +1,95 @@
 ---
 title: Obohaťte profily zákazníkov údajmi o polohe z Azure Maps
 description: Všeobecné informácie o obohatení pomocou služby prvej strany Azure Maps.
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755373"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953647"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Obohatenie zákazníckych profilov o Azure Maps (ukážka)
 
-Služba Azure Maps poskytuje údaje a služby týkajúce sa polohy. Poskytuje zážitky založené na geopriestorových údajoch so zabudovanou analýzou polohy. Služby obohacovania údajov Azure Maps zlepšujú presnosť informácií o polohe vašich zákazníkov. Prináša možnosti, ako je normalizácia adries a výber zemepisnej šírky a dĺžky Dynamics 365 Customer Insights.
+Azure Maps poskytujú údaje a služby orientované na polohu, aby poskytovali skúsenosti založené na geopriestorových údajoch so vstavanou inteligenciou polohy. Služby obohacovania údajov Azure Maps zlepšujú presnosť informácií o polohe vašich zákazníkov. Prináša možnosti, ako je normalizácia adries a výber zemepisnej šírky a dĺžky Dynamics 365 Customer Insights.
 
-## <a name="prerequisites"></a>Predpoklady
+## <a name="prerequisites"></a>Požiadavky
 
-Ak chcete nakonfigurovať obohatenie údajov služby Azure Maps, je potrebné splniť tieto predpoklady:
+- Aktívne predplatné služby Azure Maps. Ak chcete získať predplatné, [zaregistrujte sa alebo získajte bezplatnú skúšobnú verziu](https://azure.microsoft.com/services/azure-maps/).
 
-- Je potrebné mať aktívne predplatnú službu Azure Maps. Predplatné získate [zaregistrovaním sa alebo získaním bezplatnej skúšobnej verzie](https://azure.microsoft.com/services/azure-maps/).
-
-- Je dostupné [pripojenie](connections.md) k službe Azure Maps, *alebo* máte povolenie [správcu](permissions.md#admin) a aktívny kľúč API služby Azure Maps.
-
-## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
-
-1. Prejdite na položku **Údaje** > **Obohatenie**. 
-
-1. Na dlaždici **Poloha** označte položku **Obohatiť moje údaje**.
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="Dlaždica služby Azure Maps.":::
-
-1. Vyberte si z rozbaľovacieho zoznamu [pripojenie](connections.md). Ak nie je dostupné pripojenie k službe Azure Maps, obráťte sa na správcu. Ak ste správca, môžete[ nakonfigurovať pripojenie pre službu Azure Maps ](#configure-the-connection-for-azure-maps). 
-
-1. Označenim položky **Ďalej** potvrďte výber.
-
-1. Označte **dátový súbor zákazníka**, ktorý chcete obohatiť o údaje polohy zo služby Azure Maps. Vybraním položky **Zákazník** môžete obohatiť všetky svoje zjednotené profily zákazníkov, alebo vybraním entity segmentu obohatíte iba profily zákazníkov obsiahnuté v tomto segmente.
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="Snímka obrazovky pre výber množiny údajov zákazníkov.":::
-
-1. Zvoľte, či chcete polia mapovať na primárnu a/alebo sekundárnu adresu. Môžete určiť mapovanie polí pre obidve adresy a obohatiť profily pre obidve adresy zvlášť&mdash; napríklad pre domovskú a firemnú adresu. Vyberte **Ďalej**.
-
-1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na vyhľadanie príslušných údajov o polohe zo spoločnosti Azure Maps. Polia **Ulica 1** a **PSČ** sú povinné pre zvolenú primárnu alebo sekundárnu adresu. Pre väčšiu presnosť zhody môžete pridať ďalšie polia.
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Stránka konfigurácie obohatenia od Azure Maps.":::
-
-1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
-
-1. Rozhodnite sa, či chcete upraviť **Pokročilé nastavenia**. Tieto nastavenia poskytujú maximálnu flexibilitu pri riešení pokročilých prípadov použitia, ale predvolené hodnoty budú vo väčšine prípadov primerané:
-   - **Typ adries**: Predvolené správanie je, že obohatenie vráti tú najlepšiu zhodu adries, aj keď je neúplná. Ak chcete získať iba úplné adresy&mdash; napríklad adresy, ktoré obsahujú popisné číslo&mdash; zrušte začiarknutie všetkých políčok okrem **Adresy bodov**. 
-   - **Jazyk** : Adresy sa štandardne vracajú v jazyku oblasti, pre ktorú bola určená adresa. Ak chcete použiť štandardizovaný jazyk adries, vyberte jazyk z rozbaľovacej ponuky. Napríklad výberom možnosti **Angličtina** sa zobrazí text **Kodaň, Dánsko** namiesto **København, Danmark**.
-
-1. Zadajte názov pre obohatenie.
-
-1. Prezrite si svoje voľby a potom vyberte možnosť **Uložiť obohatenie**.
+- Azúrové mapy [spojenie](connections.md) je [nakonfigurovaný](#configure-the-connection-for-azure-maps) správcom.
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Nakonfigurujte pripojenie pre službu Azure Maps
 
-Ak chcete nakonfigurovať pripojenia, musíte byť správcom v Customer Insights. Pri konfigurácii obohatenia zvoľte možnosť **Pridať pripojenie**, alebo prejdite na položku **Správca** > **Pripojenia** a vyberte možnosť **Nastaviť** na dlaždici služby Azure Maps..
+Musíte byť [správca](permissions.md#admin) v Customer Insights a máte aktívny kľúč API pre Azure Maps.
 
-1. V poli **Zobraziť názov** napíšte názov pripojenia.
+1. Pri konfigurácii obohatenia zvoľte možnosť **Pridať pripojenie**, alebo prejdite na položku **Správca** > **Pripojenia** a vyberte možnosť **Nastaviť** na dlaždici služby Azure Maps..
 
-1. Zadajte platný kľúč API služby Azure Maps.
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Stránka konfigurácie pripojenia služby Azure Maps.":::
 
-1. Skontrolujte a poskytnite svoj súhlas pre **Ochrana osobných údajov a dodržiavanie súladu s nariadeniami** označením začiarkavacieho políčka **Súhlasím**.
+1. Zadajte názov pripojenia a platný kľúč API pre Azure Maps.
 
-1. Stlačte **Overiť** na overenie konfigurácie.
+1. Skontrolujte a poskytnite svoj súhlas pre [Ochranu osobných údajov a dodržiavanie súladu s nariadeniami](#data-privacy-and-compliance) výberom možnosti **Súhlasím**.
 
-1. Po dokončení overenia stlačte možnosť **Uložiť**.
+1. Vyberte **Overiť** potvrďte konfiguráciu a potom vyberte **Uložiť**.
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Stránka konfigurácie pripojenia služby Azure Maps.":::
+### <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
+
+Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje do Azure Maps, povoľujete tým aj prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za to, že Azure Maps spĺňa všetky vaše povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete na stránke [Vyhlásenie o ochrane osobných údajov spoločnosti Microsoft ](https://go.microsoft.com/fwlink/?linkid=396732).
+Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
+
+## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
+
+1. Prejdite na **Údaje** > **Obohatenie** a vyberte kartu **Objavovať**.
+
+1. Vyberte **Obohaťte moje údaje** na **Miesto** od Microsoft Azure Dlaždice mapy.
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="Dlaždica služby Azure Maps.":::
+
+1. Skontrolujte prehľad a potom vyberte **Ďalšie**.
+
+1. Vyberte pripojenie. Ak nie je k dispozícii pripojenie, kontaktujte správcu.
+
+1. Vyberte **Ďalej**.
+
+1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o údaje od spoločnosti Microsoft. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+
+1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na porovnávanie: primárna a/alebo sekundárna adresa. Môžete určiť mapovanie poľa pre obe adresy a profily pre obe adresy na samostatné obohatenie. Napríklad pre adresu bydliska a adresu firmy. Vyberte **Ďalej**.
+
+1. Namapujte svoje polia na údaje o polohe z Azure Maps. Polia **Ulica 1** a **PSČ** sú povinné pre vybranú primárnu a/alebo sekundárnu adresu. Pre vyššiu presnosť zhody pridajte viac polí.
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Mapovanie atribútov Azure Maps.":::
+
+1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
+
+1. Preskúmanie **Pokročilé nastavenia** ktoré ponúkajú maximálnu flexibilitu pri riešení pokročilých prípadov použitia. Nasledujúce predvolené hodnoty však zvyčajne nie je potrebné meniť.
+
+   - **Typ adries** : Najlepšia zhoda adresy sa vráti, aj keď je neúplná. Ak chcete získať iba úplné adresy&mdash; napríklad adresy, ktoré obsahujú popisné číslo&mdash; zrušte začiarknutie všetkých políčok okrem **Adresy bodov**.
+   - **Jazyk** : Adresy sa vrátia v jazyku podľa regiónu adresy. Ak chcete použiť štandardizovaný jazyk adries, vyberte jazyk z rozbaľovacej ponuky. Napríklad výber **Angličtina** sa vracia **Kodaň, Dánsko** namiesto **København, Dánsko**.
+   - **Maximálny počet výsledkov** : Počet výsledkov na adresu.
+
+1. Vyberte **Ďalej**.
+
+1. Poskytnúť **názov** za obohatenie a **Názov výstupnej entity**.
+
+1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
+
+1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
 
 ## <a name="enrichment-results"></a>Výsledky obohatenia
 
-Proces obohatenia spustíte výberom položky **Spustiť** z panela príkazov. Môžete tiež nechať systém, aby obohatenie spustil automaticky ako súčasť a [plánovaného obnovenia](system.md#schedule-tab). Čas spracovania bude závisieť od množstva vašich údajov o zákazníkoch a časov odozvy rozhrania API.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Po dokončení obohacovania si môžete pozrieť údaje novo obohatených profilov zákazníkov v časti **Moje obohatenia**. Ďalej nájdete čas poslednej aktualizácie a počet obohatených profilov.
-
-Môžete získať podrobné zobrazenie každého obohateného profilu výberom **Zobraziť obohatené údaje**.
+The **Počet zákazníkov obohatený o odbor** poskytuje hĺbkovú analýzu pokrytia každého obohateného poľa.
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
-
-Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje do Azure Maps, povoľujete tým aj prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za to, že Azure Maps spĺňa všetky vaše povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete na stránke [Vyhlásenie o ochrane osobných údajov spoločnosti Microsoft ](https://go.microsoft.com/fwlink/?linkid=396732).
-Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

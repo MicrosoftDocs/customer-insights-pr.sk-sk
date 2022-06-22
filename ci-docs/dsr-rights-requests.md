@@ -1,19 +1,19 @@
 ---
 title: Žiadosti dotknutých osôb (DSR) podľa GDPR | Dokumentácia spoločnosti Microsoft
 description: Odpovedanie na žiadosť dotknutej osoby Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808580"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947387"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žiadosti o práva dotknutých osôb (DSR) podľa GDPR
 
@@ -77,11 +77,5 @@ Správca nájomníka môže exportovať údaje podľa týchto krokov:
 1. Pošlite e-mail na D365CI@microsoft.com, v ktorom je uvedená e-mailová adresa požadovaného používateľa. Tím služby Customer Insights pošle e-mail na zaregistrovanú e-mailovú adresu správcu nájomníka a požiada o potvrdenie exportu údajov.
 2. Potvrďte potvrdenie na exportovanie údajov pre požadovaného používateľa.
 3. Exportované údaje dostanete prostredníctvom e-mailovej adresy správcu nájomníka.
-
-## <a name="consent-management-preview"></a>Správa súhlasu (ukážka)
-
-Funkcia správy súhlasu nezhromažďuje údaje používateľov priamo. Importuje a spracováva iba údaje o súhlase, ktoré poskytujú používatelia v iných aplikáciách.
-
-Ak chcete odstrániť údaje o súhlase o konkrétnych používateľoch, odstráňte ich zo zdrojov údajov prijatých do funkcie správy súhlasu. Po obnovení zdroj údajov budú odstránené údaje vymazané aj v Centre súhlasu. Aplikácie, ktoré používajú entitu súhlasu, tiež odstránia údaje, ktoré boli odstránené zo zdroja po a [Obnoviť](system.md#refresh-processes). Odporúčame rýchlo obnoviť zdroje údajov po odpovedi na žiadosť dotknutej osoby, aby sa odstránili údaje používateľa zo všetkých ostatných procesov a aplikácií.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

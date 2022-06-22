@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833787"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011906"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Časté otázky o skúšobnej verzii Dynamics 365 Customer Insights
 
@@ -66,9 +66,9 @@ Voliteľne, ak používate iba Customer Insights, môžete skopírovať svoje ú
 
 Po prvom prihlásení do platenej inštancie služby Customer Insights sa zobrazí výzva na vytvorenie nového prostredia. Pri tomto procese máte možnosť sa rozhodnúť, či chcete skopírovať konfiguráciu z už existujúceho prostredia a migrovať z neho väčšinu nastavení. Ak máte hore uvedené povolenia, v tomto zozname sa zobrazí dané skúšobné prostredie. Ďalšie údaje nájdete v časti [Skopírujte konfiguráciu prostredia](create-environment.md#copy-the-environment-configuration).
 
-### <a name="what-are-the-trial-limits-and-quotas"></a>Aké sú limity a kvóty skúšobnej verzie?
+### <a name="what-are-the-trial-limits-and-quotas"></a>Aké sú limity a kvóty skúšobnej verzie?
 
-- Počas skúšobnej verzie Customer Insights nemôžete na ukladanie výstupných údajov použiť svoje vlastné konto úložiska Azure Data Lake. Údaje však môžete prijímať z konta úložiska Data Lake.
+- Nemôžete použiť svoje vlastné Azure Data Lake Storage na ukladanie výstupných údajov počas skúšobnej verzie Customer Insights. Môžete však prijímať údaje z účtu Data Lake Storage.
 - Do pamäte v prostredí Dataverse je možné uložiť až 3 GB údajov, ktoré sa automaticky zaistia pri spustení skúšobnej verzie Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Otázky týkajúce sa Customer Insights
@@ -83,7 +83,7 @@ Väčšina funkcií Customer Insights je k dispozícii v skúšobnej verzii.
 
 Nasledujúce funkcie sú **nie je k dispozícií**:
 
-- Nemôžete vytvárať nové prostredia, ktoré používajú váš vlastný účet Azure Data Lake Storage.
+- Nemôžete vytvárať nové prostredia, ktoré používajú vaše vlastné Azure Data Lake Storage účtu.
 - Skúšobné prostredie nemôžete odstrániť.
 
 ### <a name="how-long-does-the-trial-last"></a>Ako dlho trvá skúšobný proces?

@@ -1,101 +1,92 @@
 ---
 title: Obohatenie pomocou tretej strany Experian
 description: Všeobecné informácie o obohatení pomocou tretej strany Experian.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f5aa45316b9e0e99c7ba4389353063e9d3ce06c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642984"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954106"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obohaťte profily zákazníkov o demografické údaje od spoločnosti Experian (verzia Preview)
 
 Experian je svetovým lídrom v oblasti vykazovania spotrebiteľských a obchodných úverov a marketingových služieb. So službami obohatenia údajov spoločnosti Experian môžete lepšie porozumieť svojim zákazníkom tým, že obohatíte ich zákaznícke profily o demografické údaje, ako je veľkosť domácnosti, príjem a podobne.
 
-## <a name="prerequisites"></a>Predpoklady
-
-Ak chcete nakonfigurovať Experian, musia byť splnené nasledujúce podmienky:
-
-- Mať aktívne predplatné služby Experian. Ak chcete získať predplatné, [kontaktujte priamo spoločnosť Experian](https://www.experian.com/marketing-services/contact). [Získajte ďalšie informácie obohatení údajov Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-
-- Pripojenie Experian už nakonfiguroval správca *alebo* máte povolenia [správcu](permissions.md#admin). Potrebujete tiež ID používateľa, ID strany a číslo modelu pre svoj účet Secure Transport (ST) s povoleným SSH, ktoré vám Experian vytvorí.
-
 ## <a name="supported-countriesregions"></a>Podporované krajiny/regióny
 
 V súčasnosti podporujeme obohacovanie profilov zákazníkov iba v Spojených štátoch.
+
+## <a name="prerequisites"></a>Požiadavky
+
+- Aktívny Experian predplatné. Ak chcete získať predplatné, [kontaktujte priamo spoločnosť Experian](https://www.experian.com/marketing-services/contact). [Získajte ďalšie informácie obohatení údajov Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
+
+- An Experian [spojenie](connections.md) je [nakonfigurovaný](#configure-the-connection-for-experian) správcom.
+
+- Experian ID používateľa, ID strany a číslo modelu pre váš účet Secure Transport (ST) s povoleným SSH Experian vytvorené pre vás.
+
+## <a name="configure-the-connection-for-experian"></a>Konfigurácia pripojenia pre Experian
+
+Musíte byť [správca](permissions.md#admin) v Customer Insights a mať Experian ID používateľa, ID strany a číslo modelu.
+
+1. Vyberte **Pridať pripojenie** pri konfigurácii obohatenia alebo prejdite na **Admin** > **Spojenia** a vyberte **Nastaviť** na Experian dlaždica.
+
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Tabla konfigurácie pripojenia Experian.":::
+
+1. Zadajte názov pripojenia a platné ID používateľa, ID strany a číslo modelu Experian Účet Secure Transport.
+
+1. Skontrolujte a poskytnite svoj súhlas pre [Ochranu osobných údajov a dodržiavanie súladu s nariadeniami](#data-privacy-and-compliance) výberom možnosti **Súhlasím**.
+
+1. Vyberte **Overiť** potvrďte konfiguráciu a potom vyberte **Uložiť**.
+
+### <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
+
+Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje spoločnosti Experian, povoľujete tým aj prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Microsoft prenesie tieto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby Experian spĺňal všetky záväzky týkajúce sa ochrany vášho súkromia alebo bezpečnosti. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
 ## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 
 1. Prejdite na **Údaje** > **Obohatenie** a vyberte kartu **Objavovať**.
 
-1. Vyberte možnosť **Obohatiť moje údaje** na dlaždici Experian.
+1. Vyberte **Obohaťte moje údaje** na **Demografia** od Experian dlaždica.
 
-   > [!div class="mx-imgBorder"]
-   > ![Experian dlaždica.](media/experian-tile.png "Experian tile")
-   > 
+   :::image type="content" source="media/experian-tile.png" alt-text="Experian dlaždicu na stránke prehľadu obohatenia.":::
 
-1. Vyberte si z rozbaľovacieho zoznamu [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie** a následne položky Experian z rozbaľovacieho zoznamu. 
+1. Skontrolujte prehľad a potom vyberte **Ďalšie**.
 
-1. Výberom možnosti **Pripojiť k Experian** potvrdíte výber pripojenia.
+1. Vyberte pripojenie. Ak nie je dostupný, kontaktujte správcu.
 
-1.  Vyberte možnosť **Ďalej** a vyberte si **množinu údajov zákazníkov**, ktorú chcete obohatiť o demografické údaje od spoločnosti Experian. Môžete zvoliť entitu **Zákazník**, aby ste obohatili všetky svoje zákaznícke profily, alebo vyberte entitu segmentu, aby ste obohatili iba profily zákazníkov obsiahnuté v danom segmente.
+1. Vyberte **Ďalej**.
+
+1. Vyberte **Súbor zákazníckych údajov** a vyberte profil alebo segment, ktorý chcete obohatiť o demografické údaje Experian. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Snímka obrazovky pri výbere množiny údajov o zákazníkoch.":::
 
-1. Vyberte možnosť **Ďalej** a definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na vyhľadanie zodpovedajúcich demografických údajov od spoločnosti Experian. Aspoň jedno z polí **Meno a adresa**, **Telefón** alebo **Email** je požadované. Pre vyššiu presnosť zhody je možné pridať až dve ďalšie polia. Tento výber ovplyvní mapovacie polia, ku ktorým máte prístup v ďalšom kroku.
+1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na porovnávanie demografických údajov Experian. Aspoň jedno z polí **Meno a adresa**, **Telefón** alebo **Email** je požadované. Pre vyššiu presnosť zhody pridajte ďalšie polia. Vyberte **Ďalej**.
 
-    > [!TIP]
-    > Viac kľúčových atribútov identifikátora odoslaných spoločnosti Experian pravdepodobne prinesie vyššiu mieru zhody.
+1. Namapujte svoje polia na demografické údaje z Experian.
 
-1. Stlačte možnosť **Ďalej** na spustenie mapovania poľa.
+1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
 
-1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na vyhľadanie zodpovedajúcich demografických údajov od spoločnosti Experian. Požadované polia sú označené.
-
-1. Uveďte názov obohatenia a názov výstupnej entity.
+1. Poskytnúť **názov** za obohatenie a **Názov výstupnej entity**.
 
 1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
 
-## <a name="configure-the-connection-for-experian"></a>Konfigurácia pripojenia pre Experian 
-
-Na konfiguráciu pripojení musíte byť administrátor. Vyberte možnosť **Pridať pripojenie** pri konfigurácii obohatenia *alebo* prejdite na položku **Správca** > **Pripojenia** a vyberte možnosť **Nastaviť** na dlaždici Experian.
-
-1. Vyberte položku **Začíname**.
-
-1. Zadajte názov pripojenia do boxu **Zobrazovaný názov**.
-
-1. Zadajte platné ID používateľa, ID strany a číslo modelu pre svoj účet Experian Secure Transport.
-
-1. Skontrolujte a poskytnite svoj súhlas pre **Ochranu osobných údajov a dodržiavanie súladu s nariadeniami** výberom možnosti **Súhlasím**.
-
-1. Stlačte **Overiť** na overenie konfigurácie.
-
-1. Po dokončení overenia stlačte možnosť **Uložiť**.
-   
-   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Tabla konfigurácie pripojenia Experian.":::
+1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
 
 ## <a name="enrichment-results"></a>Výsledky obohatenia
 
-Proces obohatenia spustíte výberom položky **Spustiť** z panela príkazov. Môžete tiež nechať systém, aby obohatenie spustil automaticky ako súčasť a [plánovaného obnovenia](system.md#schedule-tab). Čas spracovania bude závisieť od rozsahu vašich zákazníckych údajov a procesov obohacovania nastavených pre váš účet spoločnosťou Experian.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Po dokončení procesu obohacovania môžete skontrolovať údaje o nových obohatených zákazníckych profiloch v časti **Moje obohatenia**. Ďalej nájdete čas poslednej aktualizácie a počet obohatených profilov.
-
-Môžete získať podrobné zobrazenie každého obohateného profilu výberom **Zobraziť obohatené údaje**.
+The **Počet zákazníkov obohatený o odbor** poskytuje hĺbkovú analýzu pokrytia každého obohateného poľa.
 
 ## <a name="next-steps"></a>Ďalšie kroky
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
-
-Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje spoločnosti Experian, povoľujete tým aj prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Microsoft prenesie tieto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby Experian spĺňal všetky záväzky týkajúce sa ochrany vášho súkromia alebo bezpečnosti. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

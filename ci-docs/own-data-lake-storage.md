@@ -3,17 +3,17 @@ title: Použite svoj vlastný Azure Data Lake Storage Účet Gen2
 author: mukeshpo
 description: Prečítajte si o požiadavkách na používanie vlastných Azure Data Lake Storage účet na ukladanie údajov Customer Insights.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833955"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011952"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Použite svoj vlastný Azure Data Lake Storage Účet Gen2
 
@@ -37,6 +37,7 @@ Keď vytvoríte nové prostredie, skontrolujte, či existuje účet Data Lake St
 1. Vyberte si, ako na to **Pripojte úložisko**. Na autentifikáciu si môžete vybrať medzi možnosťou založenou na zdrojoch a možnosťou založenou na predplatnom. Ďalšie informácie nájdete v časti [Pripojte sa k Azure Data Lake Storage účtu pomocou Azure Service Principal](connect-service-principal.md).
    - Pre **Predplatné Azure**, vyber **Predplatné**, **zdrojov** a **Účet úložiska** ktorý obsahuje`customerinsights` kontajner.
    - Pre **Kľúč účtu**, poskytnúť **Názov účtu** a **Kľúč účtu** pre účet Data Lake Storage. Použitie tejto metódy overenia znamená, že ste informovaní, ak vaša organizácia strieda kľúče. Ty musíš [aktualizovať konfiguráciu prostredia](manage-environments.md#edit-an-existing-environment) s novým kľúčom, keď je otočený.
+1. Vyberte, či chcete použiť Azure Private Link na pripojenie k účtu úložiska a [vytvorte pripojenie k súkromnému odkazu](security-overview.md#private-links-tab) s dvojkrokovým procesom.
 
 Po dokončení systémových procesov, ako je príjem údajov, systém vytvorí zodpovedajúce priečinky v účte úložiska. Vytvoria sa dátové súbory a súbory *model.json*, ktoré sa pridajú do priečinkov podľa názvu procesu.
 

@@ -11,25 +11,25 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833695"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011570"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práca s údajmi Customer Insights v Microsoft Dataverse
 
 Customer Insights poskytuje možnosť sprístupniť výstupné entity ako [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Táto integrácia umožňuje jednoduché zdieľanie údajov a vlastný vývoj prostredníctvom prístupu s nízkym kódom/bez kódu. The [výstupné entity](#output-entities) sú dostupné ako tabuľky v a Dataverse životné prostredie. Údaje môžete použiť pre akúkoľvek inú aplikáciu založenú na Dataverse tabuľky. Tieto tabuľky umožňujú scenáre, ako sú automatizované pracovné postupy Power Automate alebo vytváranie aplikácií pomocou Power Apps.
 
-Pripája sa k vášmu Dataverse prostredie vám to tiež umožňuje [prijímať údaje zo zdrojov údajov lokálny pomocou Power Platform dátové toky a brány](data-sources.md#add-data-from-on-premises-data-sources).
+Pripája sa k vášmu Dataverse prostredie vám to tiež umožňuje [prijímať údaje zo zdrojov údajov lokálny pomocou Power Platform dátové toky a brány](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Požiadavky
 
 - Štatistiky zákazníkov a Dataverse prostredia musia byť hosťované v rovnakej oblasti.
 - Musíte mať rolu globálneho správcu v Dataverse životné prostredie. Overte si, či toto [Dataverse prostredie je spojené](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) do určitých skupín zabezpečenia a uistite sa, že ste do týchto skupín zabezpečenia pridaný.
 - Žiadne iné prostredie Customer Insights už nie je priradené k Dataverse prostredie, ktoré chcete pripojiť. Naučiť sa ako [odstrániť existujúce pripojenie k a Dataverse životné prostredie](#remove-an-existing-connection-to-a-dataverse-environment).
-- A Microsoft Dataverse prostredie sa môže pripojiť iba k jednému účtu úložiska. Platí to iba vtedy, ak nakonfigurujete prostredie [použi svoj Azure Data Lake Storage](own-data-lake-storage.md).
+- A Microsoft Dataverse prostredie sa môže pripojiť iba k jednému účtu úložiska. Platí to len vtedy, ak nakonfigurujete prostredie [použi svoj Azure Data Lake Storage](own-data-lake-storage.md).
 
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Pripojte a Dataverse prostredia na Customer Insights
 
@@ -49,7 +49,7 @@ Ak používate svoj vlastný účet Data Lake Storage, potrebujete aj **Identifi
 
 Povolenie zdieľania údajov s Microsoft Dataverse keď vaše prostredie [používa svoje vlastné Azure Data Lake Storage účtu](own-data-lake-storage.md) potrebuje nejakú extra konfiguráciu. Používateľ, ktorý nastavuje prostredie Customer Insights, musí mať min **Storage Blob Data Reader** povolenia na *CustomerInsights* kontajner v Azure Data Lake Storage účtu.
 
-1. Vytvorte dve skupiny zabezpečenia vo svojom predplatnom Azure – jednu **Čitateľ** bezpečnostná skupina a jedna **Prispievateľ** bezpečnostnú skupinu a nastavte Microsoft Dataverse ako vlastník pre obe bezpečnostné skupiny.
+1. Vo svojom predplatnom Azure vytvorte dve skupiny zabezpečenia – jednu **Čitateľ** bezpečnostná skupina a jedna **Prispievateľ** bezpečnostnú skupinu a nastavte Microsoft Dataverse ako vlastník pre obe bezpečnostné skupiny.
 2. Spravujte zoznam riadenia prístupu (ACL) v kontajneri CustomerInsights vo svojom účte úložiska prostredníctvom týchto skupín zabezpečenia. Pridajte Microsoft Dataverse servis a akékoľvek Dataverse podnikových aplikácií, ako je Dynamics 365 Marketing **Čitateľ** bezpečnostná skupina s **iba na čítanie** povolenia. Pridať *iba* aplikáciu Customers Insights na **Prispievateľ** bezpečnostná skupina udeliť oboje **čítaj a píš** povolenia na písanie profilov a prehľadov.
 
 ### <a name="limitations"></a>Obmedzenia
@@ -57,7 +57,7 @@ Povolenie zdieľania údajov s Microsoft Dataverse keď vaše prostredie [použ�
 Pri používaní existujú dve obmedzenia Dataverse so svojimi vlastnými Azure Data Lake Storage účet:
 
 - Existuje mapovanie jedna ku jednej medzi a Dataverse organizácia a an Azure Data Lake Storage účtu. Raz Dataverse organizácia je pripojená k účtu úložiska, nemôže sa pripojiť k inému účtu úložiska. Toto obmedzenie bráni tomu, aby a Dataverse nezapĺňa viacero účtov úložiska.
-- Zdieľanie údajov nebude fungovať, ak je na prístup k účtu úložiska Azure Data Lake potrebné nastavenie Azure Private Link, pretože je za bránou firewall. Dataverse momentálne nepodporuje pripojenie k súkromným koncovým bodom cez Private Link.
+- Zdieľanie údajov nebude fungovať, ak je na prístup k vášmu účtu potrebné nastavenie Azure Private Link Azure Data Lake Storage účet, pretože je za firewallom. Dataverse momentálne nepodporuje pripojenie k súkromným koncovým bodom cez Private Link.
 
 ### <a name="set-up-powershell"></a>Nastavte PowerShell
 
@@ -80,7 +80,7 @@ Ak chcete spustiť skripty PowerShell, musíte najskôr zodpovedajúcim spôsobo
        - Uložte obe hodnoty ID bezpečnostnej skupiny vygenerované týmto skriptom, pretože ich použijeme v`ByolSetup.ps1` skript.
 
         > [!NOTE]
-        > Vytváranie bezpečnostnej skupiny je možné vo vašom nájomníkovi zakázať. V takom prípade by bolo potrebné manuálne nastavenie a vaše Azure AD admin by musel [povoliť vytvorenie bezpečnostnej skupiny](/azure/active-directory/enterprise-users/groups-self-service-management).
+        > Vytvorenie skupiny zabezpečenia môže byť vo vašom nájomníkovi zakázané. V takom prípade by bolo potrebné manuálne nastavenie a vaše Azure AD admin by musel [povoliť vytvorenie bezpečnostnej skupiny](/azure/active-directory/enterprise-users/groups-self-service-management).
 
     2. `ByolSetup.ps1`
         - Potrebuješ *Vlastník údajov objektu Storage Blob* oprávnenia na úrovni účtu úložiska/kontajnera na spustenie tohto skriptu alebo tento skript vytvorí jeden za vás. Po úspešnom spustení skriptu je možné priradenie vašej role manuálne odstrániť.

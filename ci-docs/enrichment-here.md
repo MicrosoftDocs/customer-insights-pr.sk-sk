@@ -1,95 +1,85 @@
 ---
 title: Obohatenie pomocou tretej strany HERE Technologies
 description: Všeobecné informácie o obohatení pomocou obohatenia tretej stranou HERE Technologies.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c131ffb230a62b76e123334ff3c6776c8f9aa06e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643301"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953692"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obohatenie profilov zákazníkov s pomocou HERE Technologies (ukážka)
 
-HERE Technologies je spoločnosť s lokalizačnou platformou, ktorá poskytuje údaje a služby zamerané na lokalizáciu. So službami obohatenia údajov HERE Technologies môžete dosiahnuť presnejšie pochopenie polohy vašich zákazníkov pomocou normalizácie adresy, extrakcie zemepisnej šírky a dĺžky a ďalších údajov.
+HERE Technologies je spoločnosť s lokalizačnou platformou, ktorá poskytuje údaje a služby zamerané na lokalizáciu. Služby obohacovania údajov spoločnosti HERE Technologies zlepšujú presnosť informácií o polohe vašich zákazníkov. Poskytuje normalizáciu adries, extrakciu zemepisnej šírky a dĺžky a ďalšie.
 
-## <a name="prerequisites"></a>Predpoklady
+## <a name="prerequisites"></a>Požiadavky
 
-Ak chcete nakonfigurovať obohatenia od HERE Technologies, musíte splniť nasledujúce predpoklady:
+- Aktívne predplatné HERE Technologies. Ak chcete získať predplatné, [zaregistrujte sa tu](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) alebo [kontaktujte spoločnosť HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) priamo. [Ďalšie informácie o obohacovaní lokalizačných údajov od HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Musíte mať aktívne predplatné HERE Technologies. Predplatné môžete získať tak, že [sa zaregistrujete tu](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) alebo že priamo [kontaktujete HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Ďalšie informácie o obohacovaní lokalizačných údajov od HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- A TU [spojenie](connections.md) je [nakonfigurovaný](#configure-the-connection-for-here-technologies) správcom.
 
-- Je k dispozícii [pripojenie](connections.md) HERE *alebo* máte povolania [správcu](permissions.md#admin) a kľúč rozhrania API pre HERE Technologies.
+## <a name="configure-the-connection-for-here-technologies"></a>Nakonfigurujte pripojenie pre HERE Technologies
 
-## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
+Musíte byť [správca](permissions.md#admin) v Customer Insights a máte aktívny kľúč API technológie HERE.
 
-1. Prejdite na položku **Údaje** > **Obohatenie**. 
+1. Vyberte **Pridať pripojenie** pri konfigurácii obohatenia alebo prejdite na **Admin** > **Spojenia** a vyberte **Nastaviť** na dlaždici HERE Technologies.
 
-1. Zvoľte možnosť **Obohatiť moje údaje** na dlaždici HERE Technologies a stlačte možnosť **Začíname**.
+1. Zadajte názov pripojenia a platný kľúč rozhrania HERE Technologies API.
 
-   > [!div class="mx-imgBorder"]
-   > ![Dlaždica HERE Technologies.](media/HERE-tile.png "Dlaždica HERE Technologies")
+1. Skontrolujte a poskytnite svoj súhlas pre [Ochranu osobných údajov a dodržiavanie súladu s nariadeniami](#data-privacy-and-compliance) výberom možnosti **Súhlasím**.
 
-1. Vyberte si z rozbaľovacieho zoznamu [pripojenie](connections.md). Ak nie je k dispozícii pripojenie, kontaktujte správcu. Ak ste správca, pripojenie môžete vytvoriť výberom možnosti **Pridať pripojenie**. Vyberte si z rozbaľovacieho zoznamu možnosť **HERE Technologies**. 
+1. Vyberte **Overiť** potvrďte konfiguráciu a potom vyberte **Uložiť**.
 
-1. Vyberte **Pripojiť k HERE Technologies** na potvrdenie zvoleného spojenia.
+   :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="Konfiguračná stránka pripojenia HERE Technologies.":::
 
-1.  Stlačte možnosť **Ďalej** a vyberte **Množina údajov o zákazníkoch** na obohatenie o údaje umiestnenia z HERE Technologies. Môžete zvoliť entitu **Zákazník**, aby ste obohatili všetky svoje zákaznícke profily, alebo vyberte entitu segmentu, aby ste obohatili iba profily zákazníkov obsiahnuté v danom segmente.
-
-    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Snímka obrazovky pri výbere množiny údajov o zákazníkoch.":::
-
-1. Vyberte, či chcete namapovať polia na primárnu a/alebo sekundárnu adresu. Môžete určiť mapovanie poľa pre obe adresy a profily pre obe adresy na samostatné obohatenie. Napríklad, ak je tam adresa domova a firmy. Vyberte **Ďalej**.
-
-1. Definujte, ktoré polia z vašich zjednotených profilov sa majú použiť na vyhľadanie zodpovedajúcich údajov o polohe od spoločnosti HERE Technologies. Polia **Ulica 1** a **PSČ** sú povinné pre vybranú primárnu a/alebo sekundárnu adresu. Pre vyššiu presnosť zhody je možné pridať viac polí.
-
-   > [!div class="mx-imgBorder"]
-   > ![Stránka konfigurácie obohatenia od HERE Technologies.](media/enrichment-HERE-configuration.png "Stránka konfigurácie obohatenia od HERE Technologies")
-
-1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
-
-1. Zadajte názov pre obohatenie. 
-
-1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
-
-## <a name="configure-the-connection-for-here-technologies"></a>Nakonfigurujte pripojenie pre HERE Technologies 
-
-Na konfiguráciu pripojení musíte byť administrátor. Stlačte možnosť **Pridať pripojenie** pri konfigurácii obohatenia *alebo* prejdite na **Správca** > **Pripojenia** a vyberte **Nastaviť** na dlaždici HERE Technologies.
-
-1. Zadajte názov pripojenia do boxu **Zobrazovaný názov**.
-
-1. Zadajte platný kľúč API technológie HERE Technologies.
-
-1. Skontrolujte a poskytnite svoj súhlas pre **Ochranu osobných údajov a dodržiavanie súladu s nariadeniami** výberom možnosti **Súhlasím**.
-
-1. Stlačte **Overiť** na overenie konfigurácie.
-
-1. Po dokončení overenia stlačte možnosť **Uložiť**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Konfiguračná stránka pripojenia HERE Technologies.](media/enrichment-HERE-connection.png "Konfiguračná stránka pripojenia HERE Technologies")
-
-## <a name="enrichment-results"></a>Výsledky obohatenia
-
-Proces obohatenia spustíte výberom položky **Spustiť** z panela príkazov. Môžete tiež nechať systém, aby obohatenie spustil automaticky ako súčasť a [plánovaného obnovenia](system.md#schedule-tab). Čas spracovania bude závisieť od veľkosti vašich zákazníckych údajov a časov odozvy rozhraní API od HERE Technologies.
-
-Po dokončení procesu obohacovania môžete skontrolovať údaje o nových obohatených zákazníckych profiloch v časti **Moje obohatenia**. Ďalej nájdete čas poslednej aktualizácie a počet obohatených profilov.
-
-Môžete získať podrobné zobrazenie každého obohateného profilu výberom **Zobraziť obohatené údaje**.
-
-## <a name="next-steps"></a>Ďalšie kroky
-
-[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
+### <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 
 Keď povolíte prenos údajov spoločnosti HERE Technologies v službe Dynamics 365 Customer Insights, povoľujete tým prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Spoločnosť Microsoft prenesie tieto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby spoločnosť HERE Technologies plnila všetky prípadné povinnosti týkajúce sa ochrany vašich osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
+## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
+
+1. Prejdite na **Údaje** > **Obohatenie** a vyberte kartu **Objavovať**.
+
+1. Vyberte **Obohaťte moje údaje** na **Miesto** z dlaždice HERE Technologies.
+
+   :::image type="content" source="media/HERE-tile.png" alt-text="Dlaždica HERE Technologies.":::
+
+1. Skontrolujte prehľad a potom vyberte **Ďalšie**.
+
+1. Vyberte pripojenie. Ak nie je dostupný, kontaktujte správcu.
+
+1. Vyberte **Ďalej**.
+
+1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o dáta od HERE Technologies. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+
+1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na porovnávanie: primárna a/alebo sekundárna adresa. Môžete určiť mapovanie poľa pre obe adresy a profily pre obe adresy na samostatné obohatenie. Napríklad pre adresu bydliska a adresu firmy. Vyberte **Ďalej**.
+
+1. Namapujte svoje polia na údaje z HERE Technologies. Polia **Ulica 1** a **PSČ** sú povinné pre vybranú primárnu a/alebo sekundárnu adresu. Pre vyššiu presnosť zhody pridajte viac polí.
+
+1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
+
+1. Poskytnúť **názov** za obohatenie a **Názov výstupnej entity**.
+
+1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
+
+1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
+
+## <a name="enrichment-results"></a>Výsledky obohatenia
+
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
+
+The **Počet zákazníkov obohatený o odbor** poskytuje hĺbkovú analýzu pokrytia každého obohateného poľa.
+
+## <a name="next-steps"></a>Ďalšie kroky
+
+[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

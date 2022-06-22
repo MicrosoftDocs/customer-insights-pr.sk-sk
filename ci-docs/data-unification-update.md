@@ -1,7 +1,7 @@
 ---
 title: Aktualizujte nastavenia zjednotenia
 description: Aktualizujte duplicitné pravidlá, pravidlá zhody alebo zjednotené polia v nastaveniach zjednotenia.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755609"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844059"
 ---
 # <a name="update-the-unification-settings"></a>Aktualizujte nastavenia zjednotenia
 
@@ -43,8 +43,9 @@ Ak chcete po vytvorení jednotného profilu skontrolovať alebo zmeniť nastaven
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Snímka obrazovky stránky Data Unify so zvýraznenými možnosťami Unify.":::
 
-   - Ak chcete aktualizovať zjednotený zákaznícky profil (so závislosťami alebo bez nich), pozri [Spustite aktualizácie profilu zákazníka](#run-updates-to-the-unified-customer-profile).
-   - Ak chcete vyhodnotiť kvalitu vašich zodpovedajúcich podmienok bez aktualizácie zjednoteného profilu, pozrite si [Spustite zodpovedajúce podmienky](#run-matching-conditions). The **Spustite iba zodpovedajúce podmienky** možnosť sa nezobrazuje pre jednu entitu.
+   - [Spustite zodpovedajúce podmienky](#run-matching-conditions) na rýchle vyhodnotenie kvality vašich podmienok zhody (deduplikácia a pravidlá zhody) bez aktualizácie zjednoteného profilu. The **Spustite iba zodpovedajúce podmienky** možnosť sa nezobrazuje pre jednu entitu.
+   - [Zjednotiť profily zákazníkov](#run-updates-to-the-unified-customer-profile) spustiť zodpovedajúce podmienky a aktualizovať entitu jednotného profilu zákazníka bez ovplyvnenia závislostí (ako sú obohatenia, segmenty alebo opatrenia). Závislé procesy nie sú spustené, ale budú obnovené ako [definované v pláne obnovy](system.md#schedule-tab).
+   - [Zjednotiť profily a závislosti zákazníkov](#run-updates-to-the-unified-customer-profile) spustiť zodpovedajúce podmienky a aktualizovať entitu jednotného profilu zákazníka a všetky závislosti (ako sú obohatenia, segmenty alebo opatrenia). Všetky procesy sa automaticky znova spustia.
 
 ## <a name="edit-source-fields"></a>Upravte zdrojové polia
 
@@ -68,14 +69,14 @@ Nemôžete odstrániť atribút alebo entitu, ak už boli zjednotené.
 
    :::image type="content" source="media/m3_duplicates_edit.png" alt-text="Snímka obrazovky stránky duplicitných záznamov zobrazujúca počet duplicitných záznamov" lightbox="media/m3_duplicates_edit.png":::
 
-   Počet nájdených duplicitných záznamov sa zobrazuje pod **Duplikáty**. The **Záznamy boli deduplikované** stĺpec zobrazuje, ktoré entity mali duplicitné záznamy a percento duplicitných záznamov.
+   Počet nájdených duplicitných záznamov sa zobrazuje pod **Duplikáty**. The **Záznamy boli deduplikované** zobrazuje, ktoré entity mali duplicitné záznamy a percento duplicitných záznamov.
 
 1. Ak ste pridali obohatenú entitu, vyberte **Použite obohatené entity**. Ďalšie informácie nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md).
 
 1. Ak chcete spravovať pravidlá deduplikácie, vyberte niektorú z nasledujúcich možností:
    - **Vytvorte nové pravidlo** : Vyberte **Pridať pravidlo** pod príslušným subjektom. Ďalšie informácie nájdete v časti [Definujte pravidlá deduplikácie](remove-duplicates.md#define-deduplication-rules).
    - **Zmeňte podmienky pravidiel** : Vyberte pravidlo a potom **Upraviť**. Zmeňte polia, pridajte alebo odstráňte podmienky alebo pridajte alebo odstráňte výnimky.
-   - **Náhľad** : Vyberte pravidlo a potom **Náhľad** zobrazíte výsledky posledného spustenia tohto pravidla.
+   - **Náhľad** : Vyberte pravidlo a potom **Náhľad** zobrazíte výsledky posledného spustenia pre toto pravidlo.
    - **Deaktivujte pravidlo** : Vyberte pravidlo a potom **Deaktivovať** zachovať pravidlo deduplikácie a zároveň ho vylúčiť z procesu priraďovania.
    - **Duplikovať pravidlo** : Vyberte pravidlo a potom **Duplicitné** vytvoriť podobné pravidlo s úpravami.
    - **Odstráňte pravidlo** : Vyberte pravidlo a potom **Odstrániť**.
@@ -84,7 +85,7 @@ Nemôžete odstrániť atribút alebo entitu, ak už boli zjednotené.
    1. Vyberte **Upravte predvoľby zlúčenia** a zmeniť **Záznam na uchovanie** možnosť.
    1. Ak chcete zmeniť preferencie zlúčenia pre jednotlivé atribúty entity, vyberte **Pokročilé** a vykonať potrebné zmeny.
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="Snímka obrazovky rozšírených predvolieb zlúčenia zobrazujúca najnovší e-mail a najúplnejšiu adresu":::
+      :::image type="content" source="media/m3_adv_merge.png" alt-text="Snímka obrazovky rozšírených predvolieb zlúčenia zobrazujúca najnovší e-mail a najkompletnejšiu adresu":::
 
    1. Vyberte položku **Hotovo**.
 
@@ -135,11 +136,13 @@ Väčšinu parametrov zhody môžete prekonfigurovať a doladiť. Nemôžete pri
 
 ## <a name="run-matching-conditions"></a>Spustite zodpovedajúce podmienky
 
+Spustiť podmienky zhody spustí iba deduplikáciu a pravidlá zhody a aktualizuje sa *Deduplikácia_* a *ConflationMatchPair* subjektov.
+
 1. Od **Údaje** > **Zjednotiť** stránku, vyberte **Spustite iba zodpovedajúce podmienky**.
 
-   The **Duplicitné záznamy** a **Zodpovedajúce podmienky** dlaždice ukazujú **Vo fronte** alebo **Osviežujúce**.
+   The **Duplicitné záznamy** a **Zodpovedajúce podmienky** dlaždice ukazujú **Vo fronte** alebo **Osviežujúce** postavenie.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Po dokončení procesu priraďovania vyberte **Upraviť** na **Zodpovedajúce podmienky** dlaždica.
 
@@ -153,10 +156,12 @@ Väčšinu parametrov zhody môžete prekonfigurovať a doladiť. Nemôžete pri
 
 1. Od **Údaje** > **Zjednotiť** stránka, vyberte:
 
-   - **Zjednotiť profily zákazníkov** : Aktualizuje entitu jednotného profilu zákazníka bez ovplyvnenia závislostí (ako sú obohatenia, segmenty alebo opatrenia). Závislé procesy nie sú spustené, ale budú obnovené ako [definované v pláne obnovy](system.md#schedule-tab).
+   - **Zjednotiť profily zákazníkov** : Spustí zodpovedajúce podmienky a aktualizuje entitu jednotného profilu zákazníka bez ovplyvnenia závislostí (ako sú obohatenia, segmenty alebo opatrenia). Závislé procesy nie sú spustené, ale budú obnovené ako [definované v pláne obnovy](system.md#schedule-tab).
 
-   - **Zjednotiť profily a závislosti zákazníkov** : Aktualizuje jednotný profil a všetky závislosti. Všetky procesy sa automaticky znova spustia. Po dokončení všetkých nadväzujúcich procesov sa v profile zákazníka zohľadnia aktualizované údaje.
+   - **Zjednotiť profily a závislosti zákazníkov** : Spustí zodpovedajúce podmienky a aktualizuje zjednotený profil a všetky závislosti. Všetky procesy sa automaticky znova spustia. Po dokončení všetkých nadväzujúcich procesov sa v profile zákazníka zohľadnia aktualizované údaje.
 
-   The **Duplicitné záznamy**, **podmienky** a **Zjednotené zákaznícke polia** dlaždice ukazujú **Vo fronte** alebo **Osviežujúce**.
+   The **Duplicitné záznamy**, **podmienky** a **Zjednotené zákaznícke polia** dlaždice ukazujú **Vo fronte** alebo **Osviežujúce** postavenie.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Výsledky úspešného behu sa zobrazia na **Zjednotiť** stránka zobrazujúca počet zjednotených zákazníckych profilov.

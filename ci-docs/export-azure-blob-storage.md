@@ -1,19 +1,19 @@
 ---
 title: Export údajov služby Customer Insights do úložiska Azure Blob Storage
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do úložiska Blob.
-ms.date: 10/06/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757405"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947157"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportujte zoznam segmentov a ďalšie údaje do Azure Blob Storage (ukážka)
 
@@ -58,16 +58,19 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 Uloženie exportu nespustí export okamžite.
 
-Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab).     
+Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab).
 
-Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand). 
+Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand).
 
 Exportované údaje sú uložené v kontajneri úložiska Blob, ktorý ste nakonfigurovali. Vo vašom kontajneri sa automaticky vytvoria nasledujúce cesty k priečinkom:
 
 - Pre zdrojové entity a entity generované systémom:  
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Príklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
+  
+  > [!TIP]
+  > Export entít, ktoré obsahujú veľké množstvo údajov, môže viesť k viacerým súborom CSV v rovnakom priečinku pre každý export. K rozdeleniu exportov dochádza z dôvodov výkonu, aby sa minimalizoval čas potrebný na dokončenie exportu.
+
 - Model.json pre exportované entity bude na úrovni %ExportDestinationName%.  
   - Príklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833416"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011860"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby Azure
 
@@ -27,7 +27,7 @@ Automatizované nástroje, ktoré využívajú služby Azure, by mali mať vždy
 > [!IMPORTANT]
 >
 > - Účet Data Lake Storage, ktorý bude používať principál služby, musí byť Gen2 a mať ho [hierarchický menný priestor povolený](/azure/storage/blobs/data-lake-storage-namespace). Účty úložiska Azure Data Lake Gen1 nie sú podporované.
-> - Na vytvorenie principála služby potrebujete administrátorské povolenia pre nájomník platformy Azure.
+> - Na vytvorenie principála služby potrebujete oprávnenia správcu pre nájomník platformy Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Vytvorte objekt služby Azure pre Customer Insights
 
@@ -51,7 +51,13 @@ Pred vytvorením nového principála služby pre Customer Insights skontrolujte,
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Udeľte povolenia pre objekt služby na prístup k účtu úložiska
 
-Prejdite na portál Azure a udeľte povolenia principálovi služby pre účet úložiska, ktorý chcete použiť v Customer Insights.
+Prejdite na portál Azure a udeľte povolenia principálovi služby pre účet úložiska, ktorý chcete použiť v Customer Insights. K účtu úložiska alebo kontajneru musí byť priradená jedna z nasledujúcich rolí:
+
+|Poverenie|Požiadavky|
+|----------|------------|
+|Aktuálne prihlásený používateľ|**Role** : Čítačka dát objektu Storage Blob, prispievateľ objektu Storage Blob alebo vlastník objektu Storage Blob.<br>**úroveň** : Povolenia môžu byť udelené pre účet úložiska alebo kontajner.</br>|
+|Riaditeľ služby Customer Insights -<br>Použitím Azure Data Lake Storage ako zdroj údajov</br>|Možnosť č. 1<ul><li>**Role** : Čítačka údajov objektu Storage Blob, prispievateľ údajov objektu Storage Blob alebo vlastník údajov objektu Storage Blob.</li><li>**úroveň** : Povolenia by mali byť udelené účtu úložiska.</li></ul>Možnosť 2 *(bez zdieľania prístupu Principal služby k účtu úložiska)*<ul><li>**Úloha 1** : Čítačka údajov objektu Storage Blob, prispievateľ údajov objektu Storage Blob alebo vlastník údajov objektu Storage Blob.</li><li>**úroveň** : Na kontajneri by mali byť udelené povolenia.</li><li>**Úloha 2** : Storage Blob Data Delegator.</li><li>**úroveň** : Povolenia by mali byť udelené účtu úložiska.</li></ul>|
+|Riaditeľ služby Customer Insights - <br>Použitím Azure Data Lake Storage ako výstup alebo cieľ</br>|Možnosť č. 1<ul><li>**Role** : Prispievateľ údajov objektu Storage Blob alebo Vlastník objektu Storage Blob.</li><li>**úroveň** : Povolenia by mali byť udelené účtu úložiska.</li></ul>Možnosť 2 *(bez zdieľania prístupu Principal služby k účtu úložiska)*<ul><li>**Role** : Prispievateľ údajov objektu Storage Blob alebo Vlastník objektu Storage Blob.</li><li>**úroveň** : Na kontajneri by mali byť udelené povolenia.</li><li>**Úloha 2** : Storage Blob Delegator.</li><li>**úroveň** : Povolenia by mali byť udelené účtu úložiska.</li></ul>|
 
 1. Prejdite do [portálu spravovania služby Azure](https://portal.azure.com) a prihláste sa do svojej organizácie.
 
@@ -62,7 +68,7 @@ Prejdite na portál Azure a udeľte povolenia principálovi služby pre účet �
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Snímka obrazovky zobrazujúca portál Azure pri pridávaní priradenia roly.":::
 
 1. Na table **Pridať priradenie roly** nastavte nasledujúce vlastnosti:
-   - Rola: **Prispievateľ údajov do objektu BLOB úložiska**
+   - Rola: Čítačka dát objektu Storage Blob, prispievateľ objektu Storage Blob alebo vlastník objektu Storage Blob na základe poverení uvedených vyššie.
    - Priradiť prístup k: **Používateľovi, skupine alebo objektu služby**
    - Vyberte členov: **Dynamics 365 AI pre Customer Insights** (ten [príkazca služby](#create-a-new-service-principal) vyhľadali ste skôr v tomto postupe)
 
