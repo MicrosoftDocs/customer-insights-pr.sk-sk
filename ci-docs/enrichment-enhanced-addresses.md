@@ -1,5 +1,5 @@
 ---
-title: Obohatenie vylepšenia adresy (obsahuje video)
+title: Obohaťte profily zákazníkov o vylepšené adresy (obsahuje video)
 description: Obohaťte a normalizujte informácie o adrese profilov zákazníkov pomocou modelov spoločnosti Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953830"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082080"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obohatenie zákazníckych profilov vylepšenými adresami
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Obohaťte zákaznícke profily o vylepšené adresy
 
 Adresy vo vašich údajoch môžu byť neštruktúrované, neúplné alebo nesprávne. Použite modely spoločnosti Microsoft na normalizáciu a obohatenie vašich adries do [formátu Common Data Model](/common-data-model/schema/core/applicationcommon/address), aby bola zaistená lepšia presnosť a prehľad.
 
@@ -84,7 +84,7 @@ V súčasnosti podporujeme obohatenie adries v týchto krajinách alebo regióno
 
 1. Skontrolujte prehľad a potom vyberte **Ďalšie**.
 
-1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť. The *Zákazník* subjekt obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 
 1. Vyberte spôsob formátovania adries vo svojich množinách údajov. Stlačte možnosť **Adresa s jedným atribútom** ak adresy vo vašich údajoch používajú jedno pole. Stlačte možnosť **Adresa s viacerými atribútmi** ak adresy vo vašich údajoch používajú viac než jedno údajové pole.
 
@@ -101,7 +101,7 @@ V súčasnosti podporujeme obohatenie adries v týchto krajinách alebo regióno
 
 1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
 
-## <a name="enrichment-results"></a>Výsledky obohatenia
+## <a name="view-enrichment-results"></a>Pozrite si výsledky obohatenia
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

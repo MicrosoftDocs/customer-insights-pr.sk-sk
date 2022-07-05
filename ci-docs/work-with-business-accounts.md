@@ -1,6 +1,6 @@
 ---
-title: Začíname s firemnými obchodnými vzťahmi ako s primárnou cieľovou skupinou
-description: Prečítajte si o firemných obchodných vzťahoch ako o primárnej cieľovej skupine Dynamics 365 Customer Insights.
+title: Práca s firemnými obchodnými vzťahmi
+description: Získajte informácie o firemných účtoch ako primárnom cieľovom publiku v Dynamics 365 Customer Insights.
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -13,12 +13,12 @@ searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: f16c8ad50ed290562fa9f223a3e8c86228e5331e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643481"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053132"
 ---
 # <a name="work-with-business-accounts"></a>Práca s firemnými obchodnými vzťahmi
 
@@ -26,7 +26,7 @@ The Dynamics 365 Customer Insights vám umožňuje nakonfigurovať vaše prostre
 
 ## <a name="create-an-environment-for-business-accounts"></a>Vytvorenie prostredia pre firemné obchodné vzťahy
 
-Správcovia môžu [vytvoriť prostredie v existujúcej organizácii](create-environment.md). Krok v procese vytvárania nového prostredia požaduje od správcov primárnu cieľovú skupinu daného prostredia. V prípade, že ide o prvotné nastavenie po zakúpení licencie, s vytvorením prvého prostredia pomáha riadená skúsenosť.
+Správcovia môžu [vytvoriť prostredie v existujúcej organizácii](create-environment.md). Krok v procese vytvárania nového prostredia požaduje od správcov primárnu cieľovú skupinu daného prostredia. V prípade, že ide o prvotné nastavenie po zakúpení licencie, s vytvorením prvého prostredia vám pomôže riadená skúsenosť.
 
 Potom môžete [prijať údaje](data-sources.md) pre firemné obchodné vzťahy a súvisiace kontakty ako zdroje údajov zo všetkých podporovaných zdrojov.
 

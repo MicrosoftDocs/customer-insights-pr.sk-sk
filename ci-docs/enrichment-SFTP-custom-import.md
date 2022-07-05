@@ -1,5 +1,5 @@
 ---
-title: Obohatenie pomocou vlastného importu protokolu SFTP
+title: Obohaťte profily zákazníkov pomocou vlastného importu SFTP (ukážka)
 description: Všeobecné informácie o obohatení pomocou vlastného importu protokolu SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953738"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082332"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obohatenie profilov zákazníkov o vlastné údaje (ukážka)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Obohaťte profily zákazníkov pomocou vlastného importu SFTP (ukážka)
 
 Vlastný import protokolu SFTP (Secure File Transfer Protocol) vám umožňuje importovať údaje, ktoré nemusia prechádzať procesom zjednotenia údajov. Ide o flexibilný, bezpečný a ľahký spôsob, ako prenášať vaše údaje. Vlastný import SFTP je možné použiť v kombinácii s [exportom protokolu SFTP](export-sftp.md), ktorý vám umožňuje exportovať údaje profilu zákazníka, ktoré sú potrebné na obohatenie. Údaje sa potom môžu spracovať a obohatiť a pomocou vlastného importu SFTP sa obohatené údaje vrátia späť do Dynamics 365 Customer Insights.
 
@@ -106,7 +106,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Vyberte pripojenie. Ak nie je dostupný, kontaktujte správcu.
 
-1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť. The *Zákazník* subjekt obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 
 1. Vyberte **Ďalej**.
 
@@ -118,9 +118,9 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
 
-1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
+1. Vyberte **Bežať** začať proces obohacovania alebo zavrieť návrat do **Obohatenia** stránku.
 
-## <a name="enrichment-results"></a>Výsledky obohatenia
+## <a name="view-enrichment-results"></a>Pozrite si výsledky obohatenia
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

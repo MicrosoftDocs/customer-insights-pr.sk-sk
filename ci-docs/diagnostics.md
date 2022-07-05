@@ -1,5 +1,5 @@
 ---
-title: Audit Dynamics 365 Customer Insights s Azure Monitor
+title: Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)
 description: Zistite, ako odosielať denníky na Microsoft Azure Monitor.
 ms.date: 12/14/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807600"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052672"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)
 
@@ -40,11 +40,11 @@ Ak chcete nakonfigurovať diagnostiku v Customer Insights, musia byť splnené t
 - Máš [správca](permissions.md#admin) povolenia v Customer Insights.
 - Máte **Prispievateľ** a **Administrátor prístupu používateľov** rolu na cieľovom prostriedku v Azure. Zdrojom môže byť Azure Data Lake Storage účet, centrum udalostí Azure alebo pracovný priestor Azure Log Analytics. Ďalšie informácie nájdete v časti [Pridajte alebo odstráňte priradenia rolí Azure pomocou portálu Azure](/azure/role-based-access-control/role-assignments-portal). Toto povolenie je potrebné pri konfigurácii diagnostických nastavení v Customer Insights, po úspešnom nastavení ho možno zmeniť.
 - [Požiadavky na destináciu](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pre Azure Storage, Azure Event Hub alebo Azure Log Analytics splnené.
-- Máte aspoň ten **Čitateľ** rolu v skupine prostriedkov, do ktorej prostriedok patrí.
+- Máte aspoň **Čitateľ** rolu v skupine prostriedkov, do ktorej prostriedok patrí.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Nastavte diagnostiku pomocou Azure Monitor
 
-1. V Customer Insights vyberte **systém** > **Diagnostika** aby ste videli diagnostické ciele nakonfigurované pre túto inštanciu.
+1. V Customer Insights vyberte **Systém** > **Diagnostika** aby ste videli diagnostické ciele nakonfigurované pre túto inštanciu.
 
 1. Vyberte **Pridať cieľ**.
 
@@ -65,11 +65,11 @@ Ak chcete nakonfigurovať diagnostiku v Customer Insights, musia byť splnené t
 
 1. Potvrďte **Ochrana osobných údajov a dodržiavanie predpisov** vyhlásenie.
 
-1. Vyberte **Pripojte sa k systému** na pripojenie k cieľovému zdroju. Protokoly sa začnú objavovať v cieli po 15 minútach, ak sa používa API a generuje udalosti.
+1. Vyberte **Pripojte sa k systému** na pripojenie k cieľovému zdroju. Protokoly sa začnú objavovať v cieli po 15 minútach, ak sa API používa a generuje udalosti.
 
 ### <a name="remove-a-destination"></a>Odstráňte cieľ
 
-1. Ísť do **systém** > **Diagnostika**.
+1. Ísť do **Systém** > **Diagnostika**.
 
 1. V zozname vyberte cieľ diagnostiky.
 
@@ -95,7 +95,7 @@ Na základe vášho výberu typu zdroja sa automaticky použijú nasledujúce kr
 
 ### <a name="storage-account"></a>Storage account
 
-Riaditeľ služby Customer Insights dostane **Prispievateľ účtu úložiska** povolenie na vybratý zdroj a vytvorí dva kontajnery pod vybratým priestorom názvov:
+Riaditeľ služby Customer Insights dostane **Prispievateľ účtu úložiska** povolenie na vybraný zdroj a vytvorí dva kontajnery pod vybratým priestorom názvov:
 
 - `insight-logs-audit` obsahujúce **auditové udalosti**
 - `insight-logs-operational` obsahujúce **prevádzkové udalosti**
@@ -132,7 +132,7 @@ Udalosti API a udalosti workflow majú spoločnú štruktúru a detaily, kde sa 
 | `resultSignature` | String    | Voliteľné          | Stav výsledku udalosti. Ak operácia zodpovedá volaniu Rozhranie REST API, je to stavový kód HTTP.        | `200`             |
 | `durationMs`      | Long      | Voliteľné          | Trvanie operácie v milisekundách.     | `133`     |
 | `callerIpAddress` | String    | Voliteľné          | IP adresa volajúceho, ak operácia zodpovedá volaniu API, ktoré prichádza z verejne dostupnej IP adresy.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Voliteľné          | Objekt JSON popisujúci identitu používateľa alebo aplikácie, ktorá vykonala operáciu.       | Pozri [identita](#identity-schema) oddiele.     |  
+| `identity`        | String    | Voliteľné          | Objekt JSON popisujúci identitu používateľa alebo aplikácie, ktorá vykonala operáciu.       | Pozri [Identita](#identity-schema) oddiele.     |  
 | `properties`      | String    | Voliteľné          | Objekt JSON s viacerými vlastnosťami pre konkrétnu kategóriu udalostí.      | Pozri [Vlastnosti](#api-properties-schema) oddiele.    |
 | `level`           | String    | Požaduje sa          | Úroveň závažnosti udalosti.    | `Informational`,`Warning`,`Error`, alebo `Critical`.           |
 | `uri`             | String    | Voliteľné          | Absolútny identifikátor URI požiadavky.    |               |
@@ -159,7 +159,7 @@ The`identity` Objekt JSON má nasledujúcu štruktúru
 
 | Pole                         | Description                                                                                                                          |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `Authorization.UserRole`      | Priradená rola používateľovi alebo aplikácii. Ďalšie informácie nájdete v časti [používateľské oprávnenia](permissions.md).                                     |
+| `Authorization.UserRole`      | Priradená rola používateľovi alebo aplikácii. Viac informácií nájdete v časti [používateľské oprávnenia](permissions.md).                                     |
 | `Authorization.RequiredRoles` | Požadované roly na vykonanie operácie. `Admin` rola môže vykonávať všetky operácie.                                                    |
 | `Claims`                      | Nároky používateľa alebo aplikácie webový token JSON (JWT). Vlastnosti nároku sa líšia v závislosti od organizácie a organizácie Azure Active Directory konfigurácia. |
 
@@ -169,7 +169,7 @@ The`identity` Objekt JSON má nasledujúcu štruktúru
 
 | Pole                        | Description                                                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `properties.eventType`       | Vždy`ApiEvent`, pričom udalosť protokolu sa označí ako udalosť API.                                                                 |
+| `properties.eventType`       | Vždy`ApiEvent`, pričom udalosť protokolu sa označí ako udalosť rozhrania API.                                                                 |
 | `properties.userAgent`       | Agent prehliadača odosielajúci požiadavku resp `unknown`.                                                                        |
 | `properties.method`          | HTTP metóda:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
 | `properties.path`            | Relatívna cesta žiadosti.                                                                                          |
@@ -182,7 +182,7 @@ The`identity` Objekt JSON má nasledujúcu štruktúru
 
 ### <a name="workflow-event-schema"></a>Schéma udalosti pracovného toku
 
-Pracovný postup obsahuje viacero krokov. [Zdroje údajov príjmu](data-sources.md),[zjednotiť](data-unification.md),[obohatiť](enrichment-hub.md) a [export](export-destinations.md) údajov. Všetky tieto kroky môžu prebiehať jednotlivo alebo organizovane s nasledujúcimi procesmi.
+Pracovný postup obsahuje viacero krokov. [Zdroje údajov príjmu](data-sources.md),[zjednotiť](data-unification.md),[obohatiť](enrichment-hub.md), a [export](export-destinations.md) údajov. Všetky tieto kroky môžu prebiehať jednotlivo alebo organizovane s nasledujúcimi procesmi.
 
 #### <a name="operation-types"></a>Typy operácií
 
@@ -215,7 +215,7 @@ Pracovný postup obsahuje viacero krokov. [Zdroje údajov príjmu](data-sources.
 | `time`          | Časová pečiatka | Požaduje sa          | Časová pečiatka udalosti (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Požaduje sa          | ResourceId inštancie, ktorá vyvolala udalosť.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Požaduje sa          | Názov operácie reprezentovanej touto udalosťou. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Pozri [Typy operácií](#operation-types) pre referenciu. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Požaduje sa          | Kategória denníka udalosti. Vždy`Operational` pre udalosti pracovného toku                                                                                           | `Operational`                                                                                                                                                            |
+| `category`      | String    | Požaduje sa          | Kategória denníka udalosti. Vždy`Operational` pre Workflow udalosti                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Požaduje sa          | Stav udalosti. `Running`,`Skipped`,`Successful`,`Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Long      | Voliteľné          | Trvanie operácie v milisekundách.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Voliteľné          | Objekt JSON s viacerými vlastnosťami pre konkrétnu kategóriu udalostí.                                                                                        | Pozri podsekciu [Vlastnosti pracovného postupu](#workflow-properties-schema)                                                                                                       |
@@ -243,7 +243,7 @@ Udalosti pracovného toku majú nasledujúce vlastnosti.
 | `properties.identifier`                      | No       | Áno  | - Pre typ operácie =`Export`, identifikátor je vodítkom pre konfiguráciu exportu. <br> - Pre typ operácie =`Enrichment`, je to vodca obohatenia <br> - Pre typ operácie`Measures` a`Segmentation`, identifikátorom je názov entity. |
 | `properties.friendlyName`                    | No       | Áno  | Užívateľsky prívetivý názov exportu alebo entity, ktorá sa spracováva.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Áno  | Voliteľné. Chybová správa s ďalšími podrobnosťami.                                                                                                                                                                                                                  |
-| `properties.additionalInfo.Kind`             | No       | Áno  | Voliteľné. Pre typ operácie`Export` iba. Identifikuje typ exportu. Ďalšie informácie nájdete v časti [prehľad exportných destinácií](export-destinations.md).                                                                                          |
+| `properties.additionalInfo.Kind`             | No       | Áno  | Voliteľné. Pre typ operácie`Export` iba. Identifikuje typ exportu. Viac informácií nájdete v časti [prehľad exportných destinácií](export-destinations.md).                                                                                          |
 | `properties.additionalInfo.AffectedEntities` | No       | Áno  | Voliteľné. Pre typ operácie`Export` iba. Obsahuje zoznam nakonfigurovaných entít v exporte.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Áno  | Voliteľné. Pre typ operácie`Export` iba. Podrobná správa pre export.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Áno  | Voliteľné. Pre typ operácie`Segmentation` iba. Označuje celkový počet členov segmentu.                                                                                                                                                    |

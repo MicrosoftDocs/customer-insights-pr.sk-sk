@@ -1,5 +1,5 @@
 ---
-title: Analýza sentimentu pre spätnú väzbu od zákazníkov
+title: Analyzujte sentiment pre spätnú väzbu od zákazníkov (ukážka)
 description: Naučte sa, ako používať model analýzy sentimentu na spätnú väzbu od zákazníkov v Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e51225bbfcd445180b12661cba12256c3f042045
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af1afd3eff8a795a9e199b1c1d411b79dc2841b4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643523"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055555"
 ---
-# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analýza sentimentu v spätnej väzbe od zákazníkov (ukážka)
+# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analyzujte sentiment v spätnej väzbe od zákazníkov (ukážka)
 
 Zákazníci v dnešnej dobe očakávajú vysokú kvalitu produktov, služieb a skúseností. Najmä zákazníci, ktorí zdieľajú svoju spätnú väzbu. Pre organizácie je veľmi náročné analyzovať rastúci objem údajov bez zníženia presnosti a vyšších nákladov na pracovnú silu. Dynamics 365 Customer Insights ponúka model analýzy sentimentu pre spätnú väzbu od zákazníkov, ktorý umožňuje organizáciám analyzovať ich údaje presnejšie a pri nižších nákladoch.
 
@@ -37,7 +37,7 @@ Aby ste sa uistili, že výsledkom modelov môžete dôverovať, poskytujeme tra
 
 Používame dve **Modely spracovania prirodzeného jazyka (NLP).** : Prvá priradí každému komentáru spätnej väzby skóre sentimentu. Druhý model spája každú spätnú väzbu so všetkými platnými obchodnými aspektmi. Modely sú trénované na verejných údajoch zo zdrojov zo sociálnych médií, maloobchodu, reštaurácií, spotrebných produktov a automobilového priemyslu.    
   
-Vopred definované obchodné aspekty pre model, ktoré sa majú spojiť s údajmi spätnej väzby, zahŕňajú:
+Vopred definované obchodné aspekty modelu, ktoré sa majú spojiť s údajmi spätnej väzby, zahŕňajú:
 -   Správa kont
 -   Pokladňa a platba
 -   Zákaznícka podpora
@@ -53,11 +53,11 @@ Vopred definované obchodné aspekty pre model, ktoré sa majú spojiť s údajm
 -   Kvalita webovej lokality/aplikácie
 
 > [!NOTE]
-> V súčasnosti podporujeme len analýzu sentimentu na základe spätnej väzby od zákazníkov v angličtine. V budúcnosti bude podporovaných viac jazykov. Ak odošlete spätnú väzbu v iných jazykoch, model bude stále vracať výsledky. Tieto výsledky však nebudú presné. 
+> V súčasnosti podporujeme analýzu sentimentu iba pri spätnej väzbe zákazníkov v angličtine. V budúcnosti bude podporovaných viac jazykov. Ak sa odovzdá spätná väzba v iných jazykoch, model bude stále vracať výsledky. Tieto výsledky však nebudú presné. 
 
 ## <a name="prerequisites"></a>Požiadavky
 
-Analýza sentimentu je založená na údajoch textovej spätnej väzby, ktoré prešli [proces zjednotenia údajov](data-unification.md). Vrelo vám odporúčame [nakonfigurujte svoje entity údajov spätnej väzby ako entity aktivity sémantického typu](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (Typ spätnej väzby) vopred. 
+Analýza sentimentu je založená na údajoch textovej spätnej väzby, ktoré prešli [proces zjednotenia údajov](data-unification.md). Vrelo vám odporúčame [nakonfigurujte entity údajov spätnej väzby ako entity aktivity sémantického typu](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (Typ spätnej väzby) vopred. 
 
 Na konfiguráciu modelu analýzy sentimentu potrebujete min [Povolenia prispievateľa](permissions.md).
 
@@ -66,7 +66,7 @@ Customer Insights dokáže spracovať až 10 miliónov záznamov spätnej väzby
 ### <a name="data-requirements"></a>Požiadavky na údaje
   
 Vyžadujú sa nasledujúce atribúty údajov:
-- Zjednotené ID zákazníka (UCID) na priradenie dátových záznamov textovej spätnej väzby k jednotlivým zákazníkom. Toto ID je výsledkom [proces zjednotenia údajov](data-unification.md).
+- Zjednotené ID zákazníka (UCID) na priradenie dátových záznamov textovej spätnej väzby k jednotlivému zákazníkovi. Toto ID je výsledkom [proces zjednotenia údajov](data-unification.md).
 - ID pripomienok
 - Časová pečiatka spätnej väzby
 - Text pripomienok   
@@ -100,7 +100,7 @@ Vyžadujú sa nasledujúce atribúty údajov:
 
 1. Vidíte stav mapovania údajov. Na pokračovanie zvoľte možnosť **Ďalej**. 
 
-1. V **Skontrolujte podrobnosti o svojom modeli** krok, overte konfiguráciu analýzy vášho sentimentu. Môžete sa vrátiť do ktorejkoľvek časti konfigurácie predikcia. Vyberte **Uložiť a spustiť** na spustenie analýzy. 
+1. V **Skontrolujte podrobnosti o svojom modeli** krok, overte konfiguráciu vašej analýzy sentimentu. Môžete sa vrátiť do ktorejkoľvek časti konfigurácie predikcia. Vyberte **Uložiť a spustiť** na spustenie analýzy. 
 
    :::image type="content" source="media/sentiment-model-review-config.png" alt-text="Krok kontroly pre model sentimentu zobrazujúci všetky nakonfigurované položky.":::
 
@@ -111,7 +111,7 @@ Vyžadujú sa nasledujúce atribúty údajov:
 1.  Prejdite do ponuky **Analýza** > **Predikcie** a vyberte kartu **Moje predikcie**.
 2.  Vyberte predikciu, ktorú chcete skontrolovať.
 - **Názov predikcie**: Názov predikcie zadaný pri jej vytváraní.
-- **predikcia typ** : Typ modelu použitého pre predikcia.
+- **predikcia typ** : Typ modelu použitý pre predikcia.
 - **Výstupná entita**: Názov entity, do ktorej sa má uložiť výstup predikcie. Prejdite do **Údaje** > **Entity** a nájdite entitu s týmto názvom.
 - **Predpovedané pole**: Toto pole je vyplnené iba pre niektoré typy predikcií a nepoužíva sa v predikcii hodnoty životnosti zákazníka.
 - **Stav**: Stav spustenia predikcie.
@@ -146,18 +146,18 @@ Stránka s výsledkami obsahuje štyri hlavné časti údajov.
 
   :::image type="content" source="media/distribution-customer-sentiment.png" alt-text="Stĺpcový graf znázorňujúci sentiment zákazníkov v rámci troch skupín nálad.":::
 
-- **Priemerné skóre sentimentu v priebehu času** : Nálada zákazníkov sa môže časom meniť. Poskytujeme trendy v pocitoch vašich zákazníkov pre časový rozsah vašich údajov. Toto zobrazenie vám môže pomôcť zmerať vplyv sezónnych akcií, uvádzania produktov na trh alebo iných časovo ohraničených zásahov na sentiment zákazníkov. Pozrite si graf výberom roku záujmu z rozbaľovacej ponuky. 
+- **Priemerné skóre sentimentu v priebehu času** : Nálady zákazníkov sa môžu časom meniť. Poskytujeme trendy v pocitoch vašich zákazníkov pre časový rozsah vašich údajov. Toto zobrazenie vám môže pomôcť zmerať vplyv sezónnych akcií, uvádzania produktov na trh alebo iných časovo ohraničených zásahov na sentiment zákazníkov. Pozrite si graf výberom roku záujmu z rozbaľovacej ponuky. 
 
   :::image type="content" source="media/sentiment-score-over-time.png" alt-text="Graf histórie so skóre sentimentu v priebehu času znázorneným ako čiara.":::
  
-- **Sentiment naprieč obchodnými aspektmi** : Táto tabuľka uvádza priemerný sentiment v rámci obchodných aspektov. Môže vám pomôcť zmerať, ktoré aspekty vášho podnikania už uspokojujú zákazníkov alebo aspekty, ktoré si vyžadujú viac pozornosti. Záznamy spätnej väzby, ktoré sa nezhodujú so žiadnym z podporovaných obchodných aspektov, sú kategorizované pod **Iné**. Tabuľka je štandardne zoradená podľa abecedy. Triedenie môžete upraviť výberom hlavičky tabuľky.
+- **Sentiment naprieč obchodnými aspektmi** : Táto tabuľka uvádza priemerný sentiment v rámci obchodných aspektov. Môže vám pomôcť zmerať, ktoré aspekty vášho podnikania už uspokojujú zákazníkov alebo ktoré aspekty vyžadujú viac pozornosti. Záznamy spätnej väzby, ktoré sa nezhodujú so žiadnym z podporovaných obchodných aspektov, sú kategorizované pod **Iné**. Tabuľka je štandardne zoradená podľa abecedy. Triedenie môžete upraviť výberom hlavičky tabuľky.
 
   :::image type="content" source="media/sentiment-across-business-aspects.png" alt-text="Zoznam obchodných aspektov s pridruženou hodnotou sentimentu a počtom zákazníkov, ktorí to uvádzajú.":::
  
   Výberom názvu obchodného aspektu zobrazíte ďalšie informácie o tom, ako model identifikuje obchodný aspekt. V tomto paneli sú dve časti: 
 
   - **Vplyvné slová** : Zobrazuje hlavné slová, ktoré ovplyvnili identifikáciu obchodného aspektu modelu AI v spätnej väzbe od zákazníkov. 
-    **Ukážte urážlivé slová** : Umožňuje vám zahrnúť urážlivé slová do zoznamu z pôvodných údajov spätnej väzby od zákazníkov. V predvolenom nastavení je vypnutá.  Maskovanie urážlivých slov je založené na modeli AI a nemusí odhaliť všetky urážlivé slová. Pokračujeme v iterácii a trénovaní klasifikátora pre optimálny výkon. Ak nájdete urážlivé slovo, ktoré nebolo filtrované podľa očakávania, dajte nám vedieť. 
+    **Ukážte urážlivé slová** : Umožňuje vám zahrnúť urážlivé slová do zoznamu z pôvodných údajov spätnej väzby od zákazníkov. V predvolenom nastavení je vypnutá.  Maskovanie urážlivých slov je založené na modeli AI a nemusí odhaliť všetky urážlivé slová. Pokračujeme v iterácii a trénovaní klasifikátora pre optimálny výkon. Ak zistíte urážlivé slovo, ktoré nebolo filtrované podľa očakávania, dajte nám vedieť. 
     
     :::image type="content" source="media/offensive-words-sentiment.png" alt-text="Zoznam vplyvných slov s prepínačom na zobrazenie alebo skrytie nevhodných slov.":::
  
@@ -175,11 +175,11 @@ Existujú tri časti dodatočných informácií, ktoré vysvetľujú, ako funguj
    
    :::image type="content" source="media/sentiment-feedback-samples.png" alt-text="Príklady analýzy sentimentu na základe spätnej väzby od zákazníkov.":::
  
-**Ukážte urážlivé slová** : Umožňuje vám zahrnúť urážlivé slová do zoznamu z pôvodných údajov spätnej väzby od zákazníkov. V predvolenom nastavení je vypnutá.  Maskovanie urážlivých slov je založené na modeli AI a nemusí odhaliť všetky urážlivé slová. Pokračujeme v iterácii a trénovaní klasifikátora pre optimálny výkon. Ak nájdete urážlivé slovo, ktoré nebolo filtrované podľa očakávania, dajte nám vedieť. 
+**Ukážte urážlivé slová** : Umožňuje vám zahrnúť urážlivé slová do zoznamu z pôvodných údajov spätnej väzby od zákazníkov. V predvolenom nastavení je vypnutá.  Maskovanie urážlivých slov je založené na modeli AI a nemusí odhaliť všetky urážlivé slová. Pokračujeme v iterácii a trénovaní klasifikátora pre optimálny výkon. Ak zistíte urážlivé slovo, ktoré nebolo filtrované podľa očakávania, dajte nám vedieť. 
 
 ## <a name="act-on-analysis-results"></a>Zákon o výsledkoch analýzy
 
-Môžete jednoducho začať vytvárať nové segmenty zákazníkov zo stránky s výsledkami analýzy sentimentu výberom **Vytvorte segmenty** v hornej časti stránky s výsledkami modelu.
+Na stránke s výsledkami analýzy sentimentu môžete jednoducho začať vytvárať nové segmenty zákazníkov výberom **Vytvorte segmenty** v hornej časti stránky s výsledkami modelu.
 
 :::image type="content" source="media/create-segment-model.png" alt-text="Panel príkazov s možnosťami na modeloch predikcia.":::
  
@@ -187,7 +187,7 @@ Môžete jednoducho začať vytvárať nové segmenty zákazníkov zo stránky s
 
 Ako pri každej funkcii, ktorá využíva prediktívnu umelú inteligenciu, mali by ste si byť vedomí potenciálnej skreslenia údajov, ktoré používate na predpovedanie sentimentu zákazníkov. Ak napríklad zbierate spätnú väzbu iba digitálne, môže vám chýbať spätná väzba od zákazníkov, ktorí s vami primárne obchodujú osobne, čo by mohlo ovplyvniť výstup funkcie.
 
-Keďže táto funkcia využíva automatizované prostriedky na vyhodnocovanie údajov a vytváranie predpovedí na základe týchto údajov, môže sa použiť ako metóda profilovania, ako je tento pojem definovaný vo všeobecnom nariadení o ochrane údajov (ďalej len „GDPR“). Vaše použitie tejto funkcie na spracovanie údajov môže podliehať GDPR alebo iným zákonom alebo predpisom. Ste zodpovední za zabezpečenie toho, že používate Dynamics 365 Customer Insights, vrátane analýzy sentimentu, je v súlade so všetkými platnými zákonmi a nariadeniami, vrátane zákonov týkajúcich sa súkromia, osobných údajov, biometrických údajov, ochrany údajov a dôvernosti komunikácie.
+Keďže táto funkcia využíva automatizované prostriedky na vyhodnocovanie údajov a vytváranie predpovedí na základe týchto údajov, môže sa použiť ako metóda profilovania, ako je tento pojem definovaný vo všeobecnom nariadení o ochrane údajov (ďalej len „GDPR“). Vaše použitie tejto funkcie na spracovanie údajov môže podliehať GDPR alebo iným zákonom alebo predpisom. Ste zodpovedný za zabezpečenie toho, že používate Dynamics 365 Customer Insights, vrátane analýzy sentimentu, je v súlade so všetkými platnými zákonmi a nariadeniami, vrátane zákonov týkajúcich sa súkromia, osobných údajov, biometrických údajov, ochrany údajov a dôvernosti komunikácie.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Entity a množiny údajov
+title: Entity v Customer Insights
 description: Zobrazujte údaje na stránke Entity.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: c1094bc2f6d137087b317ed20d0615289d6f1187
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4abb7704710ac269a4f3c9463fe905fa6eec3234
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643427"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082731"
 ---
 # <a name="entities-in-customer-insights"></a>Entity v Customer Insights
 
@@ -34,7 +34,7 @@ The **entity** stránka obsahuje entity a obsahuje tieto stĺpce:
 ## <a name="explore-a-specific-entitys-data"></a>Preskúmanie údajov konkrétnej entity
 
 1. Ísť do **Údaje** > **entity**.
-1. Od **entity** vyberte entitu na otvorenie stránky s podrobnosťami.  
+1. Z **entity** vyberte entitu na otvorenie stránky s podrobnosťami.  
 1. Preskúmajte rôzne polia a záznamy zahrnuté pre túto entitu.
 
 - Karta **Atribúty** je predvolene vybratá a zobrazuje tabuľku na kontrolu podrobností o vybranej entite, ako sú názvy polí, typy údajov a typy. Stĺpec **Typ** zobrazuje typy asociované s modelom Common Data Model, ktoré sú buď automaticky identifikované systémom alebo [manuálne priradené](map-entities.md) používateľmi. Tieto typy sú sémantické typy, ktoré sa môžu líšiť od dátových typov atribútov. Napríklad pole *E-mail* dole má typ údajov *Text*, ale jeho (sémantický) typ dátového modelu Common Data Model môže byť *E-mail* alebo *E-mailová adresa*.

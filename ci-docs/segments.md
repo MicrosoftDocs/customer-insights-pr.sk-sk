@@ -1,5 +1,5 @@
 ---
-title: Segmenty v Customer Insights
+title: Prehľad segmentov
 description: Prehľad o segmentoch a o tom, ako ich vytvárať a spravovať.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800761"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050966"
 ---
 # <a name="segments-overview"></a>Prehľad segmentov
 
@@ -47,7 +47,7 @@ Existuje niekoľko spôsobov, ako vytvoriť nový segment:
 
 ## <a name="manage-existing-segments"></a>Spravovanie existujúcich segmentov
 
-Choďte na **Segmenty** zobrazíte všetky svoje uložené segmenty a spravujete ich.
+Choďte na **Segmenty** na zobrazenie všetkých uložených segmentov a ich správu.
 
 Každý segment je reprezentovaný radom, ktorý obsahuje ďalšie informácie o segmente.
 
@@ -103,13 +103,13 @@ Segment môžete exportovať zo stránky so segmentmi alebo zo [stránky s expor
 
 Ak v aplikáciách používate segmenty, ktoré sú založené na tom istom Microsoft Dataverse organizácie, ktorá je prepojená s Customer Insights, môžete sledovať využitie segmentu. Pre [Segmenty Customer Insights používané na cestách zákazníkov Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), systém vás informuje o využití daného segmentu.
 
-Pri úprave segmentu, ktorý sa používa v prostredí Customer Insights alebo v činnosť zákazníka v marketingu, sa banner v [tvorca segmentov](segment-builder.md) vás informuje o závislostiach. Podrobnosti závislosti môžete skontrolovať priamo z bannera alebo výberom **Použitie** v nástroji na tvorbu segmentov.
+Pri úprave segmentu, ktorý sa používa v prostredí Customer Insights alebo v činnosť zákazníka v marketingu, sa banner v [tvorca segmentov](segment-builder.md) vás informuje o závislostiach. Podrobnosti o závislosti môžete skontrolovať priamo z bannera alebo výberom **Použitie** v nástroji na tvorbu segmentov.
 
 The **Použitie segmentu** panel zobrazuje podrobnosti o použití tohto segmentu v Dataverse -založené aplikácie. Pre segmenty používané v cestách zákazníkov nájdete odkaz na kontrolu cesty v Marketingu, kde sa tento segment používa. Ak máte povolenia na prístup k aplikácii Marketing, môžete tam získať ďalšie podrobnosti.
 
 :::image type="content" source="media/segment-usage-pane.png" alt-text="Bočný panel s podrobnosťami o použití segmentu v nástroji na tvorbu segmentov.":::
 
-Systém vás informuje o použití sledovaného segmentu, keď sa ho pokúsite odstrániť. Ak sa segment, ktorý sa chystáte odstrániť, použije v činnosť zákazníka v marketingu, táto cesta sa zastaví pre všetkých používateľov v segmente. Ak je cesta súčasťou marketingovej kampane, vymazanie ovplyvní samotnú kampaň. Napriek upozorneniam však stále môžete segment odstrániť.
+Systém vás informuje o použití sledovaného segmentu, keď sa ho pokúsite odstrániť. Ak sa segment, ktorý sa chystáte odstrániť, použije v činnosť zákazníka v marketingu, táto cesta sa zastaví pre všetkých používateľov v segmente. Ak je cesta súčasťou marketingovej kampane, odstránenie ovplyvní samotnú kampaň. Napriek upozorneniam však stále môžete segment odstrániť.
 
 :::image type="content" source="media/segment-usage-delete.png" alt-text="Dialógové okno na potvrdenie vymazania segmentu, keď sa segment používa v a Dataverse aplikácie.":::
 

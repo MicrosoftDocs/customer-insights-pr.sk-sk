@@ -1,5 +1,5 @@
 ---
-title: Prijímať údaje z Azure Synapse Analytics
+title: Pripojte Azure Synapse zdroj údajov (ukážka)
 description: Použite databázu v Azure Synapse ako zdroj údajov v Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011446"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052718"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Pripojte Azure Synapse Analytics zdroj údajov (ukážka)
 
-Azure Synapse Analytics je podniková analytická služba, ktorá urýchľuje čas potrebný na získanie prehľadov naprieč dátovými skladmi a veľkými dátovými systémami. Azure Synapse Analytics spája to najlepšie z SQL technológií používaných v podnikových dátových skladoch, technológie Spark používané pre veľké dáta, Data Explorer pre analýzu protokolov a časových radov, Pipelines pre dátovú integráciu a ETL/ELT a hlbokú integráciu s ďalšími službami Azure, ako napr.Power BI,Cosmos DB a AzureML.
+Azure Synapse Analytics je podniková analytická služba, ktorá urýchľuje čas potrebný na získanie prehľadov naprieč dátovými skladmi a veľkými dátovými systémami. Azure Synapse Analytics spája to najlepšie z SQL technológií používaných v podnikových dátových skladoch, technológie Spark používané pre veľké dáta, Data Explorer pre analýzu protokolov a časových radov, Pipelines pre integráciu dát a ETL/ELT a hlbokú integráciu s ďalšími službami Azure, ako napr.Power BI,Cosmos DB a AzureML.
 
-Viac informácií nájdete v časti [Azure Synapse prehľad](/azure/synapse-analytics/overview-what-is).
+Ďalšie informácie nájdete v časti [Azure Synapse prehľad](/azure/synapse-analytics/overview-what-is).
 
 ## <a name="prerequisites"></a>Požiadavky
 
@@ -37,7 +37,7 @@ Viac informácií nájdete v časti [Azure Synapse prehľad](/azure/synapse-anal
 
 - Ak používate nový Azure Data Lake Storage účet Gen2, *principál služby pre Customer Insights* potreby **Storage Blob Data Contributor** povolenia. Naučiť sa viac o [pripojenie k an Azure Data Lake Storage s principálom služby pre Customer Insights](connect-service-principal.md). Úložisko Data Lake Storage Gen2 **musí mať** povolenú možnosť [hierarchický názov](/azure/storage/blobs/data-lake-storage-namespace).
 
-- V skupine prostriedkov Azure Synapse pracovný priestor sa nachádza, *príkazca služby* a *používateľa pre Customer Insights* je potrebné prideliť minimálne **Čitateľ** povolenia. Viac informácií nájdete v časti [Priradiť roly Azure pomocou portálu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
+- V skupine prostriedkov Azure Synapse sa nachádza pracovný priestor, *objednávateľ služby* a *používateľa pre Customer Insights* je potrebné prideliť minimálne **Čitateľ** povolenia. Viac informácií nájdete v časti [Priradiť roly Azure pomocou portálu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 
 - *Používateľ* potrebuje povolenia **Prispievateľ údajov do objektu BLOB úložiska** v účte Azure Data Lake Storage Gen2, kde sa nachádzajú údaje a sú prepojené s účtom pracovného priestoru Azure Synapse. Prečítajte si viac o [používaní portálu Azure Portal na priradenie roly Azure pre prístup k údajom blob a frontu](/azure/storage/common/storage-auth-aad-rbac-portal) a [Povolenia Prispievateľ údajov do objektu BLOB úložiska](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
@@ -59,7 +59,7 @@ Viac informácií nájdete v časti [Azure Synapse prehľad](/azure/synapse-anal
 
 1. Vyberte si [dostupné pripojenie](connections.md) do Azure Synapse Analytics alebo vytvorte nový.
 
-1. Vyber **Databáza** z pracovného priestoru pripojeného vo vybranom Azure Synapse Analytics pripojenie a vyberte **Ďalšie**.
+1. Vyber **Databáza** z pracovného priestoru pripojeného vo vybranom Azure Synapse Analytics pripojenie a vyberte **Ďalšie**. V súčasnosti podporujeme iba typ databázy *Databáza jazera*.
 
 1. Vyberte entity na príjem z pripojenej databázy a vyberte **Ďalšie**.
 

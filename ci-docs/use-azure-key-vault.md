@@ -1,6 +1,6 @@
 ---
-title: Prineste si vlastný trezor kľúčov Azure na správu tajomstiev
-description: Zistite, ako nakonfigurovať Customer Insights na používanie vlastného trezora kľúčov Azure.
+title: Prineste si vlastný trezor kľúčov Azure (verzia Preview)
+description: Zistite, ako nakonfigurovať Customer Insights na používanie vlastného trezoru kľúčov Azure na správu tajných informácií.
 ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
-ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
+ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "8763598"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082647"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Prineste si vlastný trezor kľúčov Azure (verzia Preview)
 
@@ -37,7 +37,7 @@ Ak chcete nakonfigurovať trezor kľúčov v Customer Insights, musia byť splne
 
 - Trezor kľúčov musí mať bránu firewall Key Vault **zakázanú**.
 
-- Trezor kľúčov je v tom istom [Azúrová poloha](https://azure.microsoft.com/global-infrastructure/geographies/#overview) ako prostredie Customer Insights. Oblasť prostredia v Customer Insights je uvedená pod **Admin** > **systém** > **O** > **región**.
+- Trezor kľúčov je v tom istom [Azúrová poloha](https://azure.microsoft.com/global-infrastructure/geographies/#overview) ako prostredie Customer Insights. Oblasť prostredia v Customer Insights je uvedená pod **Admin** > **Systém** > **O** > **región**.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Prepojenie trezora kľúčov s prostredím
 
@@ -83,7 +83,7 @@ Sú podporované nasledujúce pripojenia [exportu](export-destinations.md):
 
 ## <a name="permissions-granted-on-the-key-vault"></a>Povolenia udelené v trezore kľúčov
 
-Nasledujúce povolenia sú udelené pre Customer Insights v prepojenom trezore kľúčov, ak sú také [Zásady prístupu k trezoru kľúčov](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) alebo [Riadenie prístupu na základe rolí v Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) je umožnené.
+Nasledujúce povolenia sú udelené pre Customer Insights v prepojenom trezore kľúčov, ak sú k dispozícii [Zásady prístupu k trezoru kľúčov](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) alebo [Riadenie prístupu na základe rolí v Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) je umožnené.
 
 ### <a name="key-vault-access-policy"></a>Zásady prístupu ku Key Vault
 

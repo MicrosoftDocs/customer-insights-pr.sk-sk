@@ -1,5 +1,5 @@
 ---
-title: Export údajov služby Customer Insights do Reklám Google
+title: Exportovať segmenty do služby Google Ads (ukážka)
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Google Ads.
 ms.date: 03/31/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3e0eb91be97d69a999e90708d29c572f0055527e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b7f08936d7d90322cb4e62396a2961fe06273b76
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643394"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083004"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportovať segmenty do služby Google Ads (ukážka)
 
@@ -66,7 +66,7 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. Ak chcete vytvoriť nové publikum, ponechajte pole Google Audience ID prázdne. Vo vašom účte Google Ads automaticky vytvoríme nové publikum a použijeme názov exportovaného segmentu. Ak chcete aktualizovať existujúce publikum Google Ads, zadajte svoje [ID publika Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
-1. V **Zhoda údajov** vyberte jedno alebo viac dátových polí na export a vyberte pole, ktoré predstavuje zodpovedajúce dátové polia v Customer Insights.
+1. V **Zhoda údajov** vyberte jedno alebo viac údajových polí na export a vyberte pole, ktoré predstavuje zodpovedajúce údajové polia v Customer Insights.
 
 1. Vyberte segmenty, ktoré chcete exportovať. 
 

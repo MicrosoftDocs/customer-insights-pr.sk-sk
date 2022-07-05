@@ -1,5 +1,5 @@
 ---
-title: Konfigurácia systému v Customer Insights
+title: Konfigurácia systému
 description: Ďalšie informácie o systémových nastaveniach nájdete v Dynamics 365 Customer Insights.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,16 +15,16 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653635"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050690"
 ---
 # <a name="system-configuration"></a>Konfigurácia systému
 
-Ak chcete získať prístup ku konfiguráciám systému, prejdite na **Admin** > **systém** na zobrazenie zoznamu systémových úloh a procesov.
+Ak chcete získať prístup ku konfiguráciám systému, prejdite na **Admin** > **Systém** na zobrazenie zoznamu systémových úloh a procesov.
 
 Stránka **Systém** obsahuje nasledujúce karty:
 - [Status](#status-tab)
@@ -37,7 +37,7 @@ Stránka **Systém** obsahuje nasledujúce karty:
 
 ## <a name="status-tab"></a>Karta stavu
 
-The **Karta Stav** umožňuje sledovať priebeh úloh, príjem údajov, export údajov a niekoľko ďalších dôležitých procesov produktu. Skontrolujte informácie na tejto karte, aby ste sa uistili, že vaše aktívne úlohy a procesy sú úplné.
+The **Karta Stav** umožňuje sledovať priebeh úloh, príjem údajov, export údajov a niekoľko ďalších dôležitých procesov produktu. Skontrolujte informácie na tejto karte, aby ste sa uistili o úplnosti svojich aktívnych úloh a procesov.
 
 Táto karta obsahuje tabuľky so stavom a informáciami o spracovaní pre rôzne procesy. Každá tabuľka sleduje **Názov** úlohy a jej zodpovedajúcej entity, **Stav** jej posledného spustenia a kedy bola **Naposledy aktualizovaná**. Výberom názvu úlohy alebo procesu môžete zobraziť podrobnosti o niekoľkých posledných spusteniach. 
 
@@ -51,7 +51,7 @@ Systém používa pre úlohy a procesy nasledujúce stavy:
 
 |Status  |Definícia  |
 |---------|---------|
-|Zrušená |Spracovanie bolo pred dokončením používateľom zrušené.   |
+|Zrušená |Spracovanie bolo zrušené používateľom pred dokončením.   |
 |Zlyhalo   |Pri prijímaní údajov nastali chyby.         |
 |Zlyhanie  |Spracovanie zlyhalo.  |
 |Nespustené   |Zdroj údajov zatiaľ nemá žiadne prijaté údaje alebo je stále v režime konceptu.         |
@@ -59,7 +59,7 @@ Systém používa pre úlohy a procesy nasledujúce stavy:
 |Obnovuje sa    |Prebieha prijímanie údajov. Túto operáciu môžete zrušiť tak, že v stĺpci **Akcie** vyberiete **Zastaviť obnovovanie**. Zastavenie obnovovania zdroja údajov sa obnoví do posledného stavu obnovenia.       |
 |Vynechané  |Úloha alebo proces boli preskočené. Jeden alebo viac následných procesov, od ktorých závisí táto úloha, zlyháva alebo sú preskočené.|
 |Úspešné  |Úloha alebo proces úspešne dokončený. V prípade zdrojov údajov označuje, že údaje boli úspešne prijaté, ak je v položke uvedený čas **Osviežené** stĺpec.|
-|Vo fronte | Spracovanie je zaradené do frontu a začne sa po dokončení všetkých nadradených úloh a procesov. Ďalšie informácie nájdete v časti [Obnoviť procesy](#refresh-processes).|
+|Vo fronte | Spracovanie je zaradené do frontu a začne sa po dokončení všetkých nadradených úloh a procesov. Viac informácií nájdete v časti [Obnoviť procesy](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Obnoviť procesy
 
@@ -70,7 +70,7 @@ Obnovenie úloh a procesov prebieha podľa [nakonfigurovaný rozvrh](#schedule-t
 |Aktivita  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. Štatistiky závisia od spracovania.|
 |Prepojenie analýzy |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
 |Príprava analýzy |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
-|Príprava údajov   |Na spustenie potrebuje entitu. Zdroj údajov entity závisia od príjmu. Obohatené entity závisia od obohatenia. Subjekt Zákazník závisí od zlúčenia.  |
+|Príprava údajov   |Na spustenie potrebuje entitu. Zdroj údajov entity závisia od príjmu. Obohatené entity závisia od obohatenia. Entita Zákazník závisí od zlúčenia.  |
 |Zdroje údajov   |Nezávisí od žiadneho iného procesu. Zhoda závisí od úspešného ukončenia tohto procesu.  |
 |Obohatenia   |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od procesu spájania. |
 |Vývozné destinácie |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od segmentov.  |
@@ -85,7 +85,7 @@ Obnovenie úloh a procesov prebieha podľa [nakonfigurovaný rozvrh](#schedule-t
 |Systémové   |Závisí od úspešného ukončenia procesu zhody. Segmenty, miery, obohatenie, vyhľadávanie, aktivity, predikcie a príprava dát závisia od úspešného ukončenia tohto procesu.   |
 |User  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od subjektov.  |
 
-Výberom stavu procesu zobrazíte podrobnosti o priebehu celej úlohy, v ktorej sa nachádzal. Vyššie uvedené procesy obnovenia vám môžu pomôcť pochopiť, čo môžete urobiť, aby ste vyriešili problém a **Preskočené** alebo **Vo fronte** úloha alebo proces.
+Výberom stavu procesu zobrazíte podrobnosti o priebehu celej úlohy, v ktorej sa nachádzal. Vyššie uvedené procesy obnovy vám môžu pomôcť pochopiť, čo môžete urobiť pre riešenie a **Preskočené** alebo **Vo fronte** úlohu alebo proces.
 
 ## <a name="schedule-tab"></a>Karta Plán
 
@@ -95,7 +95,7 @@ Použite kartu **Plán** na naplánovanie automatického obnovenie všetkých va
 > Vami spravované zdroje údajov sa obnovujú podľa vlastných plánov. Ak chcete naplánovať obnovenie vami spravovaných zdrojov údajov, nakonfigurujte nastavenia obnovenia na tomto konkrétnom zdroj údajov z **Zdroje dát** stránku.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Nastavenia obnovenia toku údajov.":::
 
-1. Ísť do **Admin** > **systém** a vyberte **Rozvrh** tab.
+1. Ísť do **Admin** > **Systém** a vyberte **Rozvrh** tab.
 
 2. Predvolený stav plánovanej obnovy je **Vyp.** Ak chcete povoliť naplánované obnovovanie, zmeňte prepínač v hornej časti obrazovky na **Zap.**
 

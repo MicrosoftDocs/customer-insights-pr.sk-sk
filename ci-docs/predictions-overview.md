@@ -1,5 +1,5 @@
 ---
-title: Prehľad podporovaných scenárov predikcie
+title: Prehľad predikcií
 description: Scenáre predikcie a možnosti, ktoré pokrýva aplikácia Dynamics 365 Customer Insights.
 ms.date: 03/24/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643938"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083109"
 ---
 # <a name="predictions-overview"></a>Prehľad predikcií
 
@@ -29,7 +29,7 @@ Najjednoduchší spôsob, ako začať s predikovaním údajov, sú preddefinovan
 - [Odporúčanie produktu](predict-product-recommendation.md): Navrhuje množiny prediktívnych odporúčaní produktov na základe nákupného správania a zákazníkov s podobnými nákupnými vzormi.
 - [Odchod predplatiteľov](predict-subscription-churn.md): Predikuje, či hrozí odchod zákazníka, pretože už nebude používať predplatené produkty alebo služby vašej spoločnosti.
 - [Odchod transakcií](predict-transactional-churn.md): Predikujte, či si zákazník už v určitom časovom rámci viac nebude kupovať vaše produkty alebo služby.
-- [Analýza sentimentu](sentiment-analysis.md) : Analyzujte pocity spätnej väzby od zákazníkov a identifikujte obchodné aspekty, ktoré sa často spomínajú.
+- [Analýza sentimentu](sentiment-analysis.md) : Analyzujte názory zákazníkov a identifikujte obchodné aspekty, ktoré sa často spomínajú.
 
 # <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
@@ -38,9 +38,9 @@ Najjednoduchší spôsob, ako začať s predikovaním údajov, sú preddefinovan
 ---
 
 > [!TIP]
-> Odporúčame vám pravidelne obnovovať predvolené modely s aktualizovanými údajmi, aby ste zaistili, že budú presne informovať o vašom firemnom použití. Údaje sa obnovujú ad-hoc, keď systém prijíma nové alebo aktualizované zdroje údajov. Modely však v tomto prípade len prehodnotia a budú naďalej využívať existujúce tréningové dáta.
+> Odporúčame vám pravidelne obnovovať predvolené modely s aktualizovanými údajmi, aby ste zaistili, že budú presne informovať o vašom firemnom použití. Údaje sa obnovujú ad-hoc, keď systém prijíma nové alebo aktualizované zdroje údajov. Modely však v tomto prípade iba prehodnotia a budú naďalej využívať existujúce tréningové údaje.
 > 
-> Môžete nakonfigurovať **Aktualizovať plán** nastavením plánu preškolenia modelu v prostredí konfigurácie. Model sa preškolí a prehodnotí podľa tohto rozvrhu, ktorý môžete kedykoľvek zmeniť.
+> Môžete nakonfigurovať a **Aktualizovať plán** nastavením plánu preškolenia modelu v prostredí konfigurácie. Model sa preškolí a prehodnotí podľa tohto rozvrhu, ktorý môžete kedykoľvek zmeniť.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integrácia strojového učenia platformy Azure

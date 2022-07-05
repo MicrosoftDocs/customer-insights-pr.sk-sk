@@ -11,28 +11,28 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800345"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083025"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Použite nástroj na tvorbu opatrení na vytvorenie opatrení od začiatku
+# <a name="create-new-measures-with-the-measure-builder"></a>Vytvorte nové opatrenia pomocou nástroja na tvorbu opatrení
 
 Tento článok vysvetľuje, ako vytvoriť nový [opatrenie](measures.md) od nuly. Nástroj na tvorbu opatrení vám umožňuje definovať výpočty pomocou matematických operátorov, agregačných funkcií a filtrov. Môžete vytvoriť mieru s atribútmi z entít, ktoré súvisia s jednotným *Zákazník* subjekt.
 
 Vytváranie mier v prostrediach B-to-C a B-to-B funguje rovnakým spôsobom. Avšak, ak ste B-to-B prostredie [používa účty s hierarchiami](relationships.md#set-up-account-hierarchies), môžete sa rozhodnúť agregovať mieru medzi súvisiacimi podúčtami.
 
-Mieru môžete tiež rýchlo vytvoriť výberom zo súboru bežne používaných a preddefinovaných mier. Ďalšie informácie nájdete v časti [Na vytvorenie miery použite šablónu](measure-templates.md).
+Mieru môžete tiež rýchlo vytvoriť výberom zo súboru bežne používaných a preddefinovaných mier. Viac informácií nájdete v časti [Na vytvorenie miery použite šablónu](measure-templates.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 
-Môžete vytvárať miery na úrovni jednotlivých zákazníkov (atribút zákazníka, miera zákazníka) alebo na úrovni podniku/organizácie (obchodné opatrenie). Atribút zákazníka a miera zákazníka sú dva typy, ktoré vám umožňujú sledovať výkonnosť na zákazníka. Napríklad celkové výdavky každého zákazníka. Obchodné opatrenia vám umožňujú sledovať výkonnosť jednotlivých podnikov. Napríklad celkový príjem spoločnosti.
+Môžete vytvárať miery na úrovni jednotlivých zákazníkov (atribút zákazníka, miera zákazníka) alebo na úrovni podniku/organizácie (obchodné opatrenie). Atribút zákazníka a meranie zákazníka sú dva typy, ktoré vám umožňujú sledovať výkonnosť na zákazníka. Napríklad celkové výdavky každého zákazníka. Obchodné opatrenia vám umožňujú sledovať výkonnosť jednotlivých podnikov. Napríklad celkový príjem spoločnosti.
 
 - Atribút zákazníka: Vygeneruje výstup ako nový atribút, ktorý sa uloží ako nový stĺpec v entite vygenerovanej systémom s názvom *Customer_Measure*. Pri obnovovaní atribútu zákazníka sa všetky ostatné atribúty zákazníka v *Customer_Measure* obnovenie entity súčasne. Okrem toho sú atribúty zákazníka zobrazené na karte profilu zákazníka. Po spustení alebo uložení atribútu zákazníka ho nemôžete zmeniť na mieru zákazníka.
 
-- Zákaznícke meranie: Generuje výstup ako svoju vlastnú entitu a po spustení alebo uložení ho nemôžete zmeniť na atribút zákazníka. Zákaznícke miery sa nezobrazujú na karte profilu zákazníka.
+- Zákaznícke meranie: Generuje výstup ako svoju vlastnú entitu a po spustení alebo uložení ho nemôžete zmeniť na atribút zákazníka. Merania zákazníka sa nezobrazujú na karte profilu zákazníka.
 
 - Obchodné meranie: Generuje výstup ako vlastnú entitu a zobrazuje sa na domovskej stránke vášho prostredia Customer Insights.
 
@@ -76,7 +76,7 @@ Môžete vytvárať miery na úrovni jednotlivých zákazníkov (atribút zákaz
 
    1. Vyberte **Upraviť dimenzie**, ak chcete pridať atribúty údajov, podľa ktorých chcete zoskupiť namerané hodnoty. Napríklad mesto alebo pohlavie.
    > [!TIP]
-   > Ak ste vybrali **Zákaznícka úroveň** ako **Typ merania** a *CustomerId* atribút je už pridaný. Ak odstránite atribút, **Typ merania** prepne na **Obchodná úroveň**.
+   > Ak ste vybrali **Zákaznícka úroveň** ako **Typ merania** a *CustomerId* atribút je už pridaný. Ak atribút odstránite, **Typ merania** prepne na **Obchodná úroveň**.
    1. Vyberte **Hotovo** na pridanie dimenzie k miere.
 
 1. Ak vo vašich údajoch existujú hodnoty, ktoré je potrebné nahradiť celým číslom, vyberte položku **Pravidlá**. Nakonfigurujte pravidlo a uistite sa, že ste ako náhradu vybrali iba celé čísla. Napríklad nahraďte *null* s *0*.
@@ -102,9 +102,9 @@ Môžete vytvárať miery na úrovni jednotlivých zákazníkov (atribút zákaz
 
 # <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
-Opatrenia môžete vytvárať na úrovni jednotlivých účtov (zákaznícke opatrenie) alebo na úrovni všetkých účtov (obchodné opatrenie).
+Môžete vytvárať miery na úrovni jednotlivých účtov (zákaznícke opatrenie) alebo na úrovni všetkých účtov (obchodné opatrenie).
 
-- Zákaznícke meranie: Vytvára výstup ako vlastný subjekt. Zákaznícke miery sa nezobrazujú na karte profilu zákazníka.
+- Zákaznícke meranie: Vytvára výstup ako vlastný subjekt. Merania zákazníka sa nezobrazujú na karte profilu zákazníka.
 
 - Obchodné meranie: Generuje výstup ako vlastnú entitu a zobrazuje sa na domovskej stránke vášho prostredia Customer Insights.
 
@@ -144,7 +144,7 @@ Opatrenia môžete vytvárať na úrovni jednotlivých účtov (zákaznícke opa
 
    1. Vyberte **Upraviť dimenzie**, ak chcete pridať atribúty údajov, podľa ktorých chcete zoskupiť namerané hodnoty. Napríklad mesto alebo pohlavie.
       > [!TIP]
-      > Ak ste vybrali **Zákaznícka úroveň** ako **Typ merania** a *CustomerId* atribút je už pridaný. Ak odstránite atribút, **Typ merania** prepne na **Obchodná úroveň**.
+      > Ak ste vybrali **Zákaznícka úroveň** ako **Typ merania** a *CustomerId* atribút je už pridaný. Ak atribút odstránite, **Typ merania** prepne na **Obchodná úroveň**.
    1. Vyberte **Hotovo** na pridanie dimenzie k miere.
 
 1. Ak vo vašich údajoch existujú hodnoty, ktoré je potrebné nahradiť celým číslom, vyberte položku **Pravidlá**. Nakonfigurujte pravidlo a uistite sa, že ste ako náhradu vybrali iba celé čísla. Napríklad nahraďte *null* s *0*.

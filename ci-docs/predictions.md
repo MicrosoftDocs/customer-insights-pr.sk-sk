@@ -1,5 +1,5 @@
 ---
-title: Doplnenie čiastkových údajov pomocou predikcií
+title: Doplňte svoje predbežné údaje o predikcie
 description: Použite predikcie na vyplnenie neúplných údajov o zákazníkoch.
 ms.date: 11/01/2021
 ms.subservice: audience-insights
@@ -12,17 +12,17 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 7e93670007db27d13b84d7516f56830988da083e
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800669"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082521"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Doplňte svoje čiastočné údaje o prognózy (zastarané)
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Doplňte svoje čiastočné údaje o predpovede (ukončená podpora)
 
 > [!IMPORTANT]
-> Táto funkcia bude **zastarané** ku dňu **5. novembra 2021**. Aktuálne implementácie budú fungovať až do odstránenia funkcie, ale pomocou pokynov nižšie nebudete môcť vytvárať nové integrácie.
+> Táto funkcia bude **zastarané** ku dňu **5. novembra 2021**. Súčasné implementácie budú fungovať až do odstránenia funkcie, ale podľa pokynov nižšie nebudete môcť vytvárať nové integrácie.
 
 Predikcie vám umožňujú ľahko vytvárať predikované hodnoty, ktoré môžu zlepšiť vaše pochopenie zákazníka. Na stránke **Inteligencia** > **Predikcie** môžete vybrať **Moje predikcie**, aby ste videli predikcie, ktoré ste nakonfigurovali v iných častiach Customer Insights, a umožňujú vám ich ďalšie prispôsobenie.
 
@@ -91,7 +91,7 @@ V rámci tohto toku vyberiete konkrétny atribút, ktorý bude základom vášho
 
 ## <a name="view-a-prediction"></a>Zobrazenie predikcie
 
-1. Ísť do **inteligencia** > **Predpovede** > **Moje predpovede**.
+1. Ísť do **Inteligencia** > **Predpovede** > **Moje predpovede**.
 
 2. Vyberte predikciu, ktorú chcete skontrolovať.
 
@@ -108,7 +108,7 @@ V rámci tohto toku vyberiete konkrétny atribút, ktorý bude základom vášho
 
 ## <a name="update-a-prediction"></a>Aktualizácia predikcie
 
-1. Ísť do **inteligencia** > **Predpovede** > **Moje predpovede**.
+1. Ísť do **Inteligencia** > **Predpovede** > **Moje predpovede**.
 
 2. Vyberte predikciu, ktorú chcete aktualizovať, a vyberte ikonu **Aktualizovať**.
 
@@ -118,7 +118,7 @@ V rámci tohto toku vyberiete konkrétny atribút, ktorý bude základom vášho
 
 Po vytvorení predikcia si môžete prispôsobiť model v AI Builder na zvýšenie efektivity vášho modelu.  
 
-1. Ísť do **inteligencia** > **Predpovede** > **Moje predpovede**.
+1. Ísť do **Inteligencia** > **Predpovede** > **Moje predpovede**.
 
 2. Vyberte predikciu, ktorú chcete upraviť.
 
@@ -135,7 +135,7 @@ Pri ďalšom spustení predikcie sa použije aktualizovaný model, ktorý ste vy
 
 ## <a name="remove-a-prediction"></a>Odstránenie predikcie
 
-1. Ísť do **inteligencia** > **Predpovede** > **Moje predpovede**.
+1. Ísť do **Inteligencia** > **Predpovede** > **Moje predpovede**.
 
 2. Vyberte predikciu, ktorú chcete odstrániť.
 

@@ -1,5 +1,5 @@
 ---
-title: Zjednotiť polia zákazníka alebo účtu
+title: Zjednoťte zákaznícke polia pre zjednotenie údajov
 description: Zlučujte entity na účely vytvorenia jednotných profilov zákazníkov.
 recommendations: false
 ms.date: 05/04/2022
@@ -14,14 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740876"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082962"
 ---
-# <a name="unify-customer-fields"></a>Zjednotiť zákaznícke polia
+# <a name="unify-customer-fields-for-data-unification"></a>Zjednoťte zákaznícke polia pre zjednotenie údajov
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
@@ -101,7 +101,7 @@ Vylúčte zlúčené alebo samostatné pole z jednotného profilu zákazníka. A
 
 1. Potvrďte vylúčenie.
 
-Ak chcete zobraziť zoznam všetkých vylúčených polí, vyberte **Vylúčené polia**. V prípade potreby si môžete prečítať vylúčené pole.
+Ak chcete zobraziť zoznam všetkých vylúčených polí, vyberte **Vylúčené polia**. V prípade potreby môžete vylúčené pole prečítať.
 
 ### <a name="change-the-order-of-fields"></a>Zmena poradia polí
 
@@ -109,7 +109,7 @@ Niektoré entity obsahujú viac podrobností ako iné. Ak entita obsahuje najnov
 
 1. Vyberte pole.
   
-1. Vyberte si **Pohyb hore/dole** na nastavenie poradia alebo ich presuňte na požadované miesto.
+1. Vyberte si **Pohyb hore/dole** na nastavenie poradia alebo ich presuňte na požadovanú pozíciu.
 
 ### <a name="combine-fields-manually"></a>Skombinujte polia ručne
 
@@ -131,7 +131,7 @@ So skupinou polí zaobchádzajte ako s jednou jednotkou. Ak napríklad naše zá
 
 1. Vyberte **Skombinujte** > **Skupina polí**.
 
-1. Zadajte politiku víťaza zlúčenia v **Zoradiť skupiny podľa** rozbaľovacia ponuka.
+1. Zadajte politiku víťaza zlúčenia v **Zoraďte skupiny podľa** rozbaľovacia ponuka.
 
 1. Vyberte **Pridať** a vyberte, či chcete do polí pridať ďalšie polia alebo skupiny.
 
@@ -145,7 +145,7 @@ So skupinou polí zaobchádzajte ako s jednou jednotkou. Ak napríklad naše zá
 
 Definujte, ako generovať hodnoty ID zákazníka, jedinečné identifikátory profilu zákazníka. Krok zjednotenia polí v procese zjednotenia údajov vygeneruje jedinečný identifikátor profilu zákazníka. Identifikátor je *CustomerId* v *Zákazník* subjekt, ktorý je výsledkom procesu zjednocovania údajov.
 
-The *CustomerId*  je založený na hashe prvej hodnoty primárnych kľúčov víťaza, ktoré nie sú nulové. Tieto kľúče pochádzajú z entít používaných pri zjednocovaní údajov a sú ovplyvnené poradím zhody.Vygenerované ID zákazníka sa teda môže zmeniť, keď sa zmení hodnota primárneho kľúča v primárnej entite priraďovacej objednávky. Hodnota primárneho kľúča nemusí vždy predstavovať toho istého zákazníka.
+The *CustomerId*  je založený na hashe prvej hodnoty primárnych kľúčov víťaza, ktoré nie sú nulové. Tieto kľúče pochádzajú z entít používaných pri zjednocovaní údajov a sú ovplyvnené poradím zhody.Takže vygenerované ID zákazníka sa môže zmeniť, keď sa zmení hodnota primárneho kľúča v primárnej entite priraďovacej objednávky. Hodnota primárneho kľúča nemusí vždy predstavovať toho istého zákazníka.
 
 Konfiguráciou stabilného ID zákazníka sa vyhnete takémuto správaniu.
 

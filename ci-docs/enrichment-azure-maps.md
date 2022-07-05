@@ -1,5 +1,5 @@
 ---
-title: Obohaťte profily zákazníkov údajmi o polohe z Azure Maps
+title: Obohaťte profily zákazníkov o údaje o polohe z Azure Maps (ukážka)
 description: Všeobecné informácie o obohatení pomocou služby prvej strany Azure Maps.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953647"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052626"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Obohatenie zákazníckych profilov o Azure Maps (ukážka)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Obohaťte profily zákazníkov o údaje o polohe z Azure Maps (ukážka)
 
 Azure Maps poskytujú údaje a služby orientované na polohu, aby poskytovali skúsenosti založené na geopriestorových údajoch so vstavanou inteligenciou polohy. Služby obohacovania údajov Azure Maps zlepšujú presnosť informácií o polohe vašich zákazníkov. Prináša možnosti, ako je normalizácia adries a výber zemepisnej šírky a dĺžky Dynamics 365 Customer Insights.
 
@@ -27,7 +27,7 @@ Azure Maps poskytujú údaje a služby orientované na polohu, aby poskytovali s
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Nakonfigurujte pripojenie pre službu Azure Maps
 
-Musíte byť [správca](permissions.md#admin) v Customer Insights a máte aktívny kľúč API pre Azure Maps.
+Musíte byť [správca](permissions.md#admin) v Customer Insights a mať aktívny kľúč API pre Azure Maps.
 
 1. Pri konfigurácii obohatenia zvoľte možnosť **Pridať pripojenie**, alebo prejdite na položku **Správca** > **Pripojenia** a vyberte možnosť **Nastaviť** na dlaždici služby Azure Maps..
 
@@ -48,7 +48,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Prejdite na **Údaje** > **Obohatenie** a vyberte kartu **Objavovať**.
 
-1. Vyberte **Obohaťte moje údaje** na **Miesto** od Microsoft Azure Dlaždice mapy.
+1. Vyberte **Obohaťte moje údaje** na **Poloha** od Microsoft Azure Dlaždice mapy.
 
    :::image type="content" source="media/azure-maps-tile.png" alt-text="Dlaždica služby Azure Maps.":::
 
@@ -58,7 +58,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Vyberte **Ďalej**.
 
-1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o údaje od spoločnosti Microsoft. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o údaje od spoločnosti Microsoft. The *Zákazník* subjekt obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 
 1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na porovnávanie: primárna a/alebo sekundárna adresa. Môžete určiť mapovanie poľa pre obe adresy a profily pre obe adresy na samostatné obohatenie. Napríklad pre adresu bydliska a adresu firmy. Vyberte **Ďalej**.
 
@@ -71,7 +71,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 1. Preskúmanie **Pokročilé nastavenia** ktoré ponúkajú maximálnu flexibilitu pri riešení pokročilých prípadov použitia. Nasledujúce predvolené hodnoty však zvyčajne nie je potrebné meniť.
 
    - **Typ adries** : Najlepšia zhoda adresy sa vráti, aj keď je neúplná. Ak chcete získať iba úplné adresy&mdash; napríklad adresy, ktoré obsahujú popisné číslo&mdash; zrušte začiarknutie všetkých políčok okrem **Adresy bodov**.
-   - **Jazyk** : Adresy sa vrátia v jazyku podľa regiónu adresy. Ak chcete použiť štandardizovaný jazyk adries, vyberte jazyk z rozbaľovacej ponuky. Napríklad výber **Angličtina** sa vracia **Kodaň, Dánsko** namiesto **København, Dánsko**.
+   - **Jazyk** : Adresy sa vrátia v jazyku podľa oblasti adresy. Ak chcete použiť štandardizovaný jazyk adries, vyberte jazyk z rozbaľovacej ponuky. Napríklad výber **Angličtina** sa vracia **Kodaň, Dánsko** namiesto **København, Dánsko**.
    - **Maximálny počet výsledkov** : Počet výsledkov na adresu.
 
 1. Vyberte **Ďalej**.
@@ -80,9 +80,9 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
 
-1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
+1. Vyberte **Bežať** začať proces obohacovania alebo zavrieť návrat do **Obohatenia** stránku.
 
-## <a name="enrichment-results"></a>Výsledky obohatenia
+## <a name="view-enrichment-results"></a>Pozrite si výsledky obohatenia
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

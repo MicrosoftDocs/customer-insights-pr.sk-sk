@@ -1,5 +1,5 @@
 ---
-title: Priraďovanie entít na účely zjednotenia údajov
+title: Dodržujte podmienky zjednotenia údajov
 description: Priraďujte entity na účely vytvorenia jednotných profilov zákazníkov.
 recommendations: false
 ms.date: 05/05/2022
@@ -14,29 +14,29 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: bc470dd932c2c981adc5840bb52d60f8dfe0de61
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740968"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082416"
 ---
-# <a name="match-conditions"></a>Podmienky zápasu
+# <a name="match-conditions-for-data-unification"></a>Dodržujte podmienky zjednotenia údajov
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-Tento krok zjednotenia definuje poradie zhody a pravidlá pre párovanie medzi entitami. Tento krok vyžaduje aspoň dve entity.
+Tento krok zjednotenia definuje poradie zhody a pravidlá pre zhodu medzi entitami. Tento krok vyžaduje aspoň dve entity.
 
 > [!NOTE]
 > Po vytvorení podmienok zhody a výbere **Ďalšie**, nemôžete odstrániť vybratú entitu alebo atribút. V prípade potreby vyberte **späť** pred pokračovaním skontrolujte vybrané entity a atribúty.
 
 ## <a name="include-enriched-entities-preview"></a>Zahrnúť obohatené entity (ukážka)
 
-Ak ste obohatili entity na úrovni zdroj údajov, aby ste pomohli zlepšiť výsledky zjednotenia, vyberte ich. Ďalšie informácie nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md). Ak ste vybrali obohatené entity na **Duplicitné záznamy** stránku, nemusíte ich znova vyberať.
+Ak ste obohatili entity na úrovni zdroj údajov, aby ste pomohli zlepšiť výsledky zjednotenia, vyberte ich. Viac informácií nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md). Ak ste vybrali obohatené entity na **Duplicitné záznamy** stránku, nemusíte ich znova vyberať.
 
 1. Na **Zodpovedajúce podmienky** stránku, vyberte **Použite obohatené entity** v hornej časti stránky.
 
-1. Od **Použite obohatené entity** vyberte jednu alebo viacero obohatených entít.
+1. Z **Použite obohatené entity** vyberte jednu alebo viac obohatených entít.
 
 1. Vyberte položku **Hotovo**.
 
@@ -45,7 +45,7 @@ Ak ste obohatili entity na úrovni zdroj údajov, aby ste pomohli zlepšiť výs
 Každá zhoda zjednocuje dve alebo viac entít do jednej konsolidovanej entity. Zároveň vedie jedinečné záznamy o zákazníkoch. Poradie zhody označuje poradie, v ktorom sa systém pokúša zladiť záznamy.
 
 > [!IMPORTANT]
-> Prvá entita v zozname sa nazýva primárna entita. Primárna entita slúži ako základ pre váš jednotný súbor údajov profilov. Do tejto entity sa pridajú ďalšie vybrané entity.
+> Prvá entita v zozname sa nazýva primárna entita. Primárna entita slúži ako základ pre váš jednotný súbor údajov profilov. Do tejto entity sa pridajú ďalšie vybraté entity.
 >
 > Dôležité úvahy:
 >
@@ -85,7 +85,7 @@ Upozornenie vedľa názvu entity znamená, že pre pár zhody nie je definované
      - **Biely vesmír** : Odstráni všetky medzery. *Ahoj svet* sa stáva *HelloWorld*.
 
    - **Presnosť**: Nastavte úroveň presnosti, ktorá sa má použiť pre túto podmienku.
-     - **Základné** : Vyber z *Nízka (30 %)*, *(60 %)*, *(80 %)* a *Presne (100 %)*. Vyberte **Presne** aby sa zhodovali iba záznamy, ktoré sa stopercentne zhodujú.
+     - **Základné** : Vyber z *Nízka (30 %)*, *(60 %)*, *(80 %)*, a *Presne (100 %)*. Vyberte **Presne** aby sa zhodovali iba záznamy, ktoré sa stopercentne zhodujú.
      - **Vlastné**: Nastavte percento, ktorému sa musia záznamy zhodovať. Systém bude porovnávať iba záznamy prekračujúce tento limit.
 
    - **názov** : Názov pravidla.
@@ -112,7 +112,7 @@ Pravidlá spárovania predstavujú súbory podmienok. Ak chcete priradiť entity
 1. Postupujte podľa pokynov v časti [Definujte pravidlá pre dvojice párov](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> Na poradí pravidiel záleží. Algoritmus párovania sa pokúša nájsť zhodu s daným záznamom zákazníka na základe vášho prvého pravidla a pokračuje k druhému pravidlu iba vtedy, ak neboli identifikované žiadne zhody s prvým pravidlom.
+> Na poradí pravidiel záleží. Algoritmus priraďovania sa pokúša nájsť zhodu s daným záznamom zákazníka na základe vášho prvého pravidla a pokračuje k druhému pravidlu iba vtedy, ak neboli identifikované žiadne zhody s prvým pravidlom.
 
 ## <a name="advanced-options"></a>Rozšírené možnosti
 
@@ -124,7 +124,7 @@ Napríklad, ak vaše pravidlo zhody kombinuje priezvisko, mesto a dátum naroden
 
 1. V **Upraviť pravidlo** panel, vyberte **Pridať** > **Pridať výnimku**.
 
-1. Zadajte kritériá výnimiek.
+1. Zadajte kritériá výnimky.
 
 1. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
 
@@ -135,7 +135,7 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
 |Možnosť  |Description |Príklad  |
 |---------|---------|---------|
 |Vždy sa zhodovať     | Definuje hodnoty, ktoré sa vždy zhodujú.         |  Vždy sa zhodujú *Mike* a *MikeR*.       |
-|Nikdy sa nezhodovať     | Definuje hodnoty, ktoré sa nikdy nezhodujú.        | Nikdy sa nezhodujte *John* a *Jonathan*.        |
+|Nikdy sa nezhodovať     | Definuje hodnoty, ktoré sa nikdy nezhodujú.        | Nikdy sa nezhodujú *John* a *Jonathan*.        |
 |Vlastné obídenie     | Definuje hodnoty, ktoré by mal systém vždy ignorovať vo fáze zápasu. |  Ignorujte hodnoty *11111* a *Neznámy* počas zápasu.        |
 |Mapovanie aliasu    | Definovanie hodnôt, ktoré by mal systém považovať za rovnakú hodnotu.         | Zvážte *Joe* byť rovný *Jozefa*.        |
 
@@ -159,16 +159,16 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
 
 1. Prejdite na **Údaje** > **Zdroje údajov** a prijmite súbory šablón ako nové entity.
 
-1. Po nahratí súborov vyberte **Vlastné** možnosť znova. Z rozbaľovacej ponuky vyberte požadované entity a vyberte **Hotový**.
+1. Po nahratí súborov vyberte **Vlastné** možnosť znova. Z rozbaľovacej ponuky vyberte požadované entity a vyberte **hotový**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Snímka obrazovky dialógového okna na výber prepísania pre vlastný scenár zhody.":::
 
 1. Použitie vlastnej zhody závisí od možnosti zhody, ktorú chcete použiť.
 
-   - Pre **Vždy sa zhodujú** alebo **Nikdy sa nezhodujte**, prejdite na ďalší krok.
+   - Pre **Vždy sa zhodujú** alebo **Nikdy sa nezhodujú**, prejdite na ďalší krok.
    - Pre **Obchvat** alebo **Mapovanie aliasu**, vyberte **Upraviť** na existujúce pravidlo zhody alebo vytvorte nové pravidlo. V rozbaľovacej ponuke Normalizácie vyberte možnosť **Vlastný bypass** alebo **Mapovanie aliasu** možnosť a vyberte **hotový**.
 
-1. Vyberte **hotový** na **Vlastné** na použitie vlastnej konfigurácie zhody.
+1. Vyberte **hotový** na **Vlastné** panel na použitie vlastnej konfigurácie zhody.
 
 > [!div class="nextstepaction"]
 > [Ďalší krok: Zjednotenie polí](merge-entities.md)

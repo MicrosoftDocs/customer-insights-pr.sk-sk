@@ -21,14 +21,14 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: a7b10d985d5cba64b25595a3d7c101d6cb5c62a5
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643803"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082584"
 ---
-# <a name="relationships-between-entities"></a>Vzťahy medzi entitami
+# <a name="relationships-between-entities-and-entity-paths"></a>Vzťahy medzi entitami a cestami entít
 
 Vzťahy spájajú entity a definujú graf vašich údajov, keď entity zdieľajú spoločný identifikátor, cudzí kľúč. Tento cudzí kľúč je možné odkazovať z jednej entity na druhú. Pripojené entity vám umožňujú definovať segmenty a miery na základe viacerých zdrojov údajov.
 
@@ -84,7 +84,7 @@ Vzťah pozostáva zo *zdrojovej entity*, ktorá obsahuje cudzí kľúč a z *cie
 
 Prostredia, ktoré sú nakonfigurované na používanie firemných obchodných vzťahov ako primárnej cieľovej skupiny môžu konfigurovať hierarchie obchodných vzťahov pre súvisiace obchodné podnikové vzťahy. Napríklad spoločnosť, ktorá má oddelené obchodné jednotky. 
 
-Organizácie vytvárajú hierarchie obchodných vzťahov, aby lepšie spravovali obchodné vzťahy a ich vzájomné vzťahy. Customer Insights podporuje hierarchie nadradených a podradených účtov, ktoré už existujú v prijatých zákazníckych údajoch. Napríklad obchodné vzťahy z Dynamics 365 Sales. Tieto hierarchie možno konfigurovať na **Vzťahy** stránku.
+Organizácie vytvárajú hierarchie obchodných vzťahov, aby lepšie spravovali obchodné vzťahy a ich vzájomné vzťahy. Customer Insights podporuje hierarchie nadradených a podradených účtov, ktoré už existujú v prijatých zákazníckych údajoch. Napríklad obchodné vzťahy z Dynamics 365 Sales. Tieto hierarchie je možné konfigurovať na **Vzťahy** stránku.
 
 1. Prejdite na **Údaje** > **Vzťahy**.
 1. Vyberte kartu **Hierarchia obchodných vzťahov**.

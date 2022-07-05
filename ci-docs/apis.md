@@ -1,5 +1,5 @@
 ---
-title: Práca s API
+title: Pracujte s rozhraniami API v službe Customer Insights
 description: Používajte rozhrania API a pochopte ich obmedzenia.
 ms.date: 05/10/2021
 ms.reviewer: wimohabb
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 8e8bd590d3bba9dc7b1644b6ff42b9fc53237ca9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808546"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054083"
 ---
 # <a name="work-with-customer-insights-apis"></a>Pracujte s rozhraniami API v službe Customer Insights
 
@@ -67,7 +67,7 @@ Tieto kroky vám pomôžu začať s používaním rozhraní API pre Customer Ins
 
 1. Pri novej registrácii aplikácie prejdite na **Povolenia pre API**.
 
-1. Vyberte **Pridajte povolenie** a vyberte **Dynamics 365 AI pre Customer Insights** v bočnom paneli.
+1. Vyberte **Pridajte povolenie** a vyberte **Dynamics 365 AI for Customer Insights** v bočnom paneli.
 
 1. Pre **Typ povolenia** vyberte možnosť **Delegované povolenia** a potom vyberte povolenie **user_impersonation**.
 
@@ -149,7 +149,7 @@ Zistite viac o tom, ako začať používať knižnice klientov C# z NuGet.org. �
 
 1. Uskutočňujte hovory s klientom pre „metódy rozšírenia“ – napríklad `GetAllInstancesAsync`. Ak je preferovaný prístup k základnému `Microsoft.Rest.HttpOperationResponse`, použite „metódy správ http“ – napríklad `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Odpoveď bude pravdepodobne typu `object`, pretože metóda môže vrátiť viac typov (napríklad `IList<InstanceInfo>` a `ApiErrorResult`). Ak chcete skontrolovať návratový typ, použite objekty v typoch odpovedí špecifikovaných na [Stránka s podrobnosťami o rozhraní API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pre danú operáciu.    
+1. Odpoveď bude pravdepodobne typu `object`, pretože metóda môže vrátiť viac typov (napríklad `IList<InstanceInfo>` a `ApiErrorResult`). Ak chcete skontrolovať návratový typ, použite objekty v typoch odpovedí špecifikovaných na [Stránka s podrobnosťami o rozhraní API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) na tú operáciu.    
    
    Ak sú potrebné ďalšie informácie o požiadavke, získajte prístup k nespracovanému objektu odpovede cez **metódy správ HTTP**.
 

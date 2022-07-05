@@ -1,5 +1,5 @@
 ---
-title: Export údajov z Customer Insights do ActiveCampaign
+title: Export segmentov do ActiveCampaign
 description: Zistite, ako nakonfigurovať pripojenie a exportovať do ActiveCampaign.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5d15b9bf7383d06070ac92d7a729fc6e6e00c9d7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643412"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054727"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Export segmentov do ActiveCampaign (verzia Preview)
 
@@ -21,9 +21,9 @@ Exportujte segmenty zjednotených profilov zákazníkov do ActiveCampaign a pou�
 
 ## <a name="prerequisites"></a>Predpoklady
 
--   Máte [účet ActiveCampaign](https://www.activecampaign.com/) a zodpovedajúce poverenia správcu.
--   Máš [nakonfigurované segmenty](segments.md) v Customer Insights.
--   Zjednotené profily zákazníkov v exportovaných segmentoch obsahujú pole s e-mailovou adresou.
+- Máte [účet ActiveCampaign](https://www.activecampaign.com/) a zodpovedajúce poverenia správcu.
+- Máš [nakonfigurované segmenty](segments.md) v Customer Insights.
+- Zjednotené profily zákazníkov v exportovaných segmentoch obsahujú pole s e-mailovou adresou.
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 

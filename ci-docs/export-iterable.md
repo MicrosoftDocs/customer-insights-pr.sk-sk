@@ -1,5 +1,5 @@
 ---
-title: Exportujte údaje Customer Insights do Iterable
+title: Export segmentov do Iterable (ukážka)
 description: Zistite, ako nakonfigurovať pripojenie a exportovať do Iterable.
 ms.date: 03/29/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 714a1323521be7d2f29ccaacd7799b2174e2937d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 98d5aeab6b0e932d291213053d509ec72da82e47
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643898"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052254"
 ---
-# <a name="export-segment-lists-to-iterable-preview"></a>Exportovať zoznamy segmentov do Iterable (ukážka)
+# <a name="export-segments-to-iterable-preview"></a>Export segmentov do Iterable (ukážka)
 
 Exportujte segmenty zjednotených zákazníckych profilov do Iterable a použite ich na marketingové aktivity.
 
@@ -72,6 +72,6 @@ Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab). M�
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 
-Keď povolíte Dynamics 365 Customer Insights na prenos údajov do Iterable povolíte prenos údajov mimo hranice súladu pre Dynamics 365 Customer Insights, vrátane potenciálne citlivých údajov, ako sú Osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, že Iterable spĺňa všetky vaše povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Keď povolíte Dynamics 365 Customer Insights na prenos údajov do Iterable povolíte prenos údajov mimo hranice súladu pre Dynamics 365 Customer Insights, vrátane potenciálne citlivých údajov, ako sú Osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, že Iterable spĺňa všetky vaše prípadné povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Váš správca služby Dynamics 365 Customer Insights môže túto funkciu kedykoľvek prestať používať odstránením tohto cieľového umiestnenia exportu.

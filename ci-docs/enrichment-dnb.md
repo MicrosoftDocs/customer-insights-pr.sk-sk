@@ -1,5 +1,5 @@
 ---
-title: Obohatenie firemných profilov o Dun & Bradstreet
+title: Obohaťte firemné profily o Dun & Bradstreet (ukážka)
 description: Všeobecné informácie o obohatení Dun & Bradstreet treťou stranou.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953910"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082563"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Obohatenie firemných profilov o Dun & Bradstreet (ukážka)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Obohaťte firemné profily o Dun & Bradstreet (ukážka)
 
-Dun & Bradstreet poskytuje firmám komerčné údaje, analýzy a prehľady. Umožňuje zákazníkom so zjednotenými zákazníckymi profilmi pre spoločnosti obohacovať svoje údaje. Obohatenia zahŕňajú atribúty, ako je číslo DUNS, veľkosť spoločnosti, lokalita, odvetvie a ďalšie.
+Dun & Bradstreet poskytuje firmám komerčné údaje, analýzy a štatistiky. Umožňuje zákazníkom so zjednotenými zákazníckymi profilmi pre spoločnosti obohacovať svoje údaje. Obohatenia zahŕňajú atribúty, ako je číslo DUNS, veľkosť spoločnosti, lokalita, odvetvie a ďalšie.
 
 ## <a name="prerequisites"></a>Požiadavky
 
@@ -29,7 +29,7 @@ Dun & Bradstreet poskytuje firmám komerčné údaje, analýzy a prehľady. Umo�
 
 ## <a name="set-up-your-dun--bradstreet-project"></a>Nastavte svoj projekt Dun & Bradstreet
 
-Ako licencovaný používateľ Dun & Bradstreet si môžete nastaviť projekt v [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights).
+Ako licencovaný používateľ Dun & Bradstreet môžete nastaviť projekt v [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights).
 
 1. Prihlásiť sa [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights). Ak chcete získať poverenia, [obnovte svoje heslo](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights).
 
@@ -41,7 +41,7 @@ Ako licencovaný používateľ Dun & Bradstreet si môžete nastaviť projekt v 
 
    :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Snímka obrazovky bodiek v projekte Dun & Bradstreet.":::
 
-1. Vyberte si **Získajte podrobnosti o S3**. Uložte tieto informácie na bezpečnom mieste. Budete to potrebovať [vytvoriť spojenie na obohatenie](#configure-a-connection-for-dun--bradstreet) v Customer Insights.
+1. Vyberte si **Získajte podrobnosti o S3**. Uchovajte tieto informácie na bezpečnom mieste. Budete to potrebovať [vytvoriť spojenie na obohatenie](#configure-a-connection-for-dun--bradstreet) v Customer Insights.
 
    :::image type="content" source="media/enrichment-dnb-s3info.png" alt-text="Snímka obrazovky výberu informácií s3 v projekte Dun & Bradstreet.":::
 
@@ -63,7 +63,7 @@ Musíte byť [správca](permissions.md#admin) v Customer Insights a mať poveren
 
 ### <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
 
-Keď povolíte Dynamics 365 Customer Insights na prenos údajov do spoločnosti Dun & Bradstreet povolíte prenos údajov mimo hraníc súladu pre Dynamics 365 Customer Insights, vrátane potenciálne citlivých údajov, ako sú Osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za to, že Dun & Bradstreet spĺňa všetky vaše prípadné povinnosti týkajúce sa ochrany súkromia alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Keď povolíte Dynamics 365 Customer Insights na prenos údajov do spoločnosti Dun & Bradstreet povolíte prenos údajov mimo hraníc súladu pre Dynamics 365 Customer Insights, vrátane potenciálne citlivých údajov, ako sú Osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za to, že Dun & Bradstreet spĺňa všetky vaše prípadné povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
 ## <a name="supported-countries-or-regions"></a>Podporované krajiny alebo regióny
@@ -84,7 +84,7 @@ V súčasnosti podporujeme nasledujúce možnosti krajiny/regiónu: Kanada (angl
 
 1. Vyberte **Ďalej**.
 
-1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o firemné údaje z Dun & Bradstreet. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o firemné údaje z Dun & Bradstreet. The *Zákazník* subjekt obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 
 1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na porovnávanie firemných údajov z Dun & Bradstreet. Aspoň jedno z polí **Meno a adresa**, **Telefón** alebo **Email** je požadované.
 
@@ -100,9 +100,9 @@ V súčasnosti podporujeme nasledujúce možnosti krajiny/regiónu: Kanada (angl
 
 1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
 
-1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
+1. Vyberte **Bežať** začať proces obohacovania alebo zavrieť návrat do **Obohatenia** stránku.
 
-## <a name="enrichment-results"></a>Výsledky obohatenia
+## <a name="view-enrichment-results"></a>Pozrite si výsledky obohatenia
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

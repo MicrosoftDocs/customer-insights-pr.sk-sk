@@ -1,6 +1,6 @@
 ---
-title: Obohaťte profily zákazníkov o údaje o značkách a záujmoch od spoločnosti Microsoft
-description: Použite proprietárne údaje od spoločnosti Microsoft na obohatenie údajov o zákazníkoch o príbuznosti a zdieľanie hlasu.
+title: Obohaťte profily zákazníkov o údaje o značkách a záujmoch od spoločnosti Microsoft (ukážka)
+description: Použite vlastné údaje od spoločnosti Microsoft na obohatenie údajov o zákazníkoch o príbuznosť a zdieľanie hlasu.
 ms.date: 03/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -12,22 +12,22 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953784"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082710"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obohaťte zákaznícke profily o afinity a zdieľanie hlasu (ukážka)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Obohaťte profily zákazníkov o údaje o značkách a záujmoch od spoločnosti Microsoft (ukážka)
 
-Použite vlastné údaje spoločnosti Microsoft na obohatenie svojich zákazníckych údajov o príbuznosť so značkou, záujmovú príbuznosť a podiel hlasu (SoV). Tieto afinity a SoV sú založené na údajoch od ľudí s podobnými demografickými údajmi ako vaši zákazníci. Tieto informácie vám pomôžu lepšie pochopiť a segmentovať vašich zákazníkov na základe ich afinity alebo SoV ku konkrétnym značkám a záujmom.
+Použite vlastné údaje spoločnosti Microsoft na obohatenie údajov o zákazníkoch o príbuznosť so značkou, príbuznosť so záujmom a podiel hlasu (SoV). Tieto afinity a SoV sú založené na údajoch od ľudí s podobnými demografickými údajmi ako vaši zákazníci. Tieto informácie vám pomôžu lepšie pochopiť a segmentovať vašich zákazníkov na základe ich afinity alebo SoV ku konkrétnym značkám a záujmom.
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Ako určujeme afinity a SoV
 
 Údaje z online vyhľadávania od spoločnosti Microsoft používame na nájdenie afinity a SoV pre značky a záujmy v rôznych demografických segmentoch (definovaných podľa veku, pohlavia alebo polohy). Online objem vyhľadávania pre značku alebo záujem tvorí základ pre určenie afinity alebo SoV. Každý z nich však poskytuje iný pohľad na pochopenie vašich zákazníkov.
 
-- Afinita je porovnateľný údaj naprieč demografickými segmentmi. Tieto informácie môžete použiť na identifikáciu demografických segmentov, ktoré majú najvyššiu afinitu k danej značke alebo záujmu v porovnaní s inými segmentmi.
+- Afinita predstavuje porovnanie naprieč demografickými segmentmi. Tieto informácie môžete použiť na identifikáciu demografických segmentov, ktoré majú najvyššiu afinitu k danej značke alebo záujmu v porovnaní s inými segmentmi.
 
 - Podiel hlasu predstavuje porovnanie medzi vami vybranými značkami alebo záujmami. Tieto informácie môžete použiť na zistenie, ktorá značka alebo záujem má najvyšší podiel hlasu pre daný demografický segment v porovnaní s inými značkami alebo záujmami, ktoré ste vybrali.
 
@@ -83,7 +83,7 @@ V súčasnosti podporujeme možnosti nasledujúcich krajín/regiónov: Austráli
 
 1. Vyberte **Ďalej**.
 
-1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o údaje od spoločnosti Microsoft. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o údaje od spoločnosti Microsoft. The *Zákazník* subjekt obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 
 1. Vyberte **Ďalej**.
 
@@ -100,11 +100,11 @@ V súčasnosti podporujeme možnosti nasledujúcich krajín/regiónov: Austráli
 
 1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
 
-1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
+1. Vyberte **Bežať** začať proces obohacovania alebo zavrieť návrat do **Obohatenia** stránku.
 
    Pri obohacovaní profilov obohatíme všetky profily zákazníkov, pre ktoré získame údaje o vybraných značkách a záujmoch, vrátane profilov, ktoré sa nenachádzajú vo vybranej krajine alebo regióne. Napríklad ak ste vybrali Nemecko, obohatíme profily nachádzajúce sa v USA, ak máme k dispozícii údaje o vybraných značkách a záujmoch v USA.
 
-## <a name="enrichment-results"></a>Výsledky obohatenia
+## <a name="view-enrichment-results"></a>Pozrite si výsledky obohatenia
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

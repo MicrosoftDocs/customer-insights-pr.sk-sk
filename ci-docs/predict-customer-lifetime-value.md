@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643823"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055233"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predikcia hodnoty životnosti zákazníka (CLV)
 
-Predikujte potenciálnu hodnotu (výnos), ktorú jednotliví aktívni zákazníci prinesú do vášho podnikania v definovanom budúcom časovom období. Táto funkcia vám môže pomôcť dosiahnuť rôzne ciele: 
+Predikujte potenciálnu hodnotu (výnos), ktorú jednotliví aktívni zákazníci prinesú do vášho podnikania v definovanom budúcom časovom období. Táto funkcia vám môže pomôcť dosiahnuť rôzne ciele:
 - Identifikovať zákazníkov s vysokou hodnotou a spracovať tento prehľad
 - Vytvárať strategické zákaznícke segmenty na základe ich potenciálnej hodnoty pre uskutočňovanie personalizovaných kampaní s cieleným predajom, marketingom a podporou
 - Usmerňovať vývoj produktov zameraním na funkcie, ktoré zvyšujú hodnotu zákazníka
@@ -74,7 +74,7 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Vytvorenie predikcie hodnoty životnosti zákazníka
 
-1. Ísť do **inteligencia** > **Predpovede**.
+1. Ísť do **Inteligencia** > **Predpovede**.
 
 1. Vyberte dlaždicu **Hodnota životnosti zákazníka** a následne **Použiť model**. 
 

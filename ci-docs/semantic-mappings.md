@@ -1,5 +1,5 @@
 ---
-title: Sémantické mapovanie (verzia Preview)
+title: Sémantické mapovanie (Preview)
 description: Prehľad sémantických mapovaní a ich použitie.
 ms.date: 12/01/2021
 ms.subservice: audience-insights
@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643538"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083151"
 ---
-# <a name="semantic-mappings-preview"></a>Sémantické mapovanie (verzia Preview)
+# <a name="semantic-mappings-preview"></a>Sémantické mapovanie (Preview)
 
-Sémantické mapovania vám umožňujú mapovať údaje o vašej neaktivite do vopred definovaných schém. Tieto schémy pomáhajú Customer Insights lepšie porozumieť atribútom vašich údajov. Sémantické mapovanie a poskytnuté údaje umožňujú nové poznatky a funkcie v Customer Insights. Ak chcete mapovať údaje o svojej aktivite na schémy, prečítajte si dokumentáciu k [aktivitám](activities.md).
+Sémantické mapovania vám umožňujú mapovať údaje o vašej neaktivite do vopred definovaných schém. Tieto schémy pomáhajú Customer Insights lepšie pochopiť atribúty vašich údajov. Sémantické mapovanie a poskytnuté údaje umožňujú nové poznatky a funkcie v Customer Insights. Ak chcete mapovať údaje o svojej aktivite na schémy, prečítajte si dokumentáciu k [aktivitám](activities.md).
 
 **Sémantické mapovania sú v súčasnosti povolené pre prostredia založené na firemných obchodných vzťahoch**. *Kontaktný profil* je jediný typ sémantického mapovania, ktorý je v súčasnosti dostupný v Customer Insights.
 
@@ -108,7 +108,7 @@ Po vytvorení a *Kontaktný profil* mapovanie sémantických entít, môžete za
 
 1. Pomenujte aktivitu, vyberte entitu zdrojovej aktivity a vyberte primárny kľúč entity aktivity.
 
-1. V **Vzťahy** krok, vytvorte nepriamy vzťah medzi vašimi zdrojmi aktivít a účtami pomocou vašich kontaktných údajov ako sprostredkovateľskej entity. Ďalšie informácie nájdete v časti [cesty priamych a nepriamych vzťahov](relationships.md#relationship-paths).
+1. V **Vzťahy** krok, vytvorte nepriamy vzťah medzi vašimi zdrojmi aktivít a účtami pomocou vašich kontaktných údajov ako sprostredkovateľskej entity. Viac informácií nájdete v časti [cesty priamych a nepriamych vzťahov](relationships.md#relationship-paths).
    - Príklad vzťahu pre aktivitu tzv *Nákupy*:
       - **Údaje o aktivite zdroja nákupov** > **Kontaktné údaje** na atribúte **ContactID**
       - **Kontaktné údaje** > **Údaje o účte** na atribúte **Číslo účtu**
@@ -119,13 +119,13 @@ Po vytvorení a *Kontaktný profil* mapovanie sémantických entít, môžete za
 
 1. Spustite svoje mapovania aktivít.
 
-1. Vaše aktivity na úrovni kontaktov budú teraz viditeľné na vašej časovej osi zákazníka.
+1. Vaše aktivity na úrovni kontaktu budú teraz viditeľné na vašej časovej osi zákazníka.
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Konečný výsledok po konfigurácii kontaktných aktivít":::
 
 ### <a name="contact-level-activity-timeline-filtering"></a>Filtrovanie časovej osi aktivity na úrovni kontaktu
 
-Po nakonfigurovaní mapovania aktivít na úrovni kontaktu a jeho spustení sa časová os aktivít vašich zákazníkov aktualizuje. Zahŕňa ich ID alebo mená, v závislosti od vás *Kontaktný profil* konfiguráciu pre činnosti, v ktorých konali. Aktivity môžete filtrovať podľa kontaktov na časovej osi, aby ste videli konkrétne kontakty, o ktoré máte záujem. Okrem toho môžete výberom vidieť všetky aktivity, ktoré nie sú priradené ku konkrétnemu kontaktu **Aktivity nie sú priradené ku kontaktu**.
+Po nakonfigurovaní mapovania aktivít na úrovni kontaktu a jeho spustení sa časová os aktivít vašich zákazníkov aktualizuje. Zahŕňa ich ID alebo mená, v závislosti od vás *Kontaktný profil* konfiguráciu pre činnosti, na ktorých pôsobili. Aktivity môžete filtrovať podľa kontaktov na časovej osi, aby ste videli konkrétne kontakty, o ktoré máte záujem. Okrem toho môžete výberom vidieť všetky aktivity, ktoré nie sú priradené ku konkrétnemu kontaktu **Aktivity nie sú priradené ku kontaktu**.
 
    :::image type="content" source="media/Contact_Activities3.png" alt-text="Dostupné možnosti filtrovania pre aktivity na úrovni kontaktu.":::
 

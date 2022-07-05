@@ -1,5 +1,5 @@
 ---
-title: Exportujte údaje z Customer Insights
+title: Prehľad exportov (verzia Preview)
 description: Spravujte exporty do zdieľania údajov.
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9c3b35f1514adcc697672f09cabf593f936e4a82
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d983e84e713003610eb27dc9b3f911b62b01d522
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643409"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082920"
 ---
 # <a name="exports-preview-overview"></a>Prehľad exportov (verzia Preview)
 
@@ -30,7 +30,7 @@ Prejdite do ponuky **Údaje** > **Exporty** a zobrazte si stránku s exportmi. V
 Existujú dva hlavné typy exportov:  
 
 - **Export dát** vám umožní exportovať akýkoľvek typ entity dostupnej v Customer Insights. Entity, ktoré vyberiete na export, sa exportujú so všetkými údajovými poľami, metadátami, schémami a podrobnosťami mapovania. 
-- **Segmentové exporty** vám umožní exportovať entity segmentov zo Customer Insights. Segmenty predstavujú zoznam profilov zákazníkov. Pri konfigurácii exportu vyberiete zahrnuté údajové polia v závislosti od cieľového systému, do ktorého exportujete údaje. 
+- **Segmentové exporty** vám umožní exportovať entity segmentov z Customer Insights. Segmenty predstavujú zoznam profilov zákazníkov. Pri konfigurácii exportu vyberiete zahrnuté údajové polia v závislosti od cieľového systému, do ktorého exportujete údaje. 
 
 ### <a name="export-segments"></a>Segmenty exportu
 

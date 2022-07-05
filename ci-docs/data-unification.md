@@ -1,5 +1,5 @@
 ---
-title: Vytvorte si zjednotené zobrazenie svojich zákazníkov
+title: Prehľad zjednotenia údajov
 description: Prejdite procesom zjednotenia údajov s vašimi údajmi a vytvorte jednu množinu údajov zjednotených zákazníckych profilov.
 ms.date: 05/10/2022
 ms.reviewer: v-wendysmith
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: bb8da6f4b9f92f2b265ff9807e04638edae4f814
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755753"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082227"
 ---
 # <a name="data-unification-overview"></a>Prehľad zjednotenia údajov
 
@@ -30,7 +30,7 @@ Dáta môžu byť zjednotené na jednej entite alebo viacerých entitách. Zjedn
 
 1. [Duplicitné záznamy](remove-duplicates.md) (predtým súčasť Match): V kroku duplicitných záznamov voliteľne definujte pravidlá na odstránenie duplicitných záznamov zákazníkov z každej entity.
 
-1. [Zodpovedajúce podmienky](match-entities.md) (predtým nazývané Match): V kroku podmienok priraďovania definujte pravidlá, ktoré priraďujú záznamy zákazníkov medzi entitami. Keď sa zákazník nájde v dvoch alebo viacerých entitách, vytvorí sa jeden konsolidovaný záznam so všetkými stĺpcami a údajmi z každej entity.
+1. [Zodpovedajúce podmienky](match-entities.md) (predtým nazývané Match): V kroku podmienok párovania definujte pravidlá, ktoré priraďujú záznamy zákazníkov medzi entitami. Keď sa zákazník nájde v dvoch alebo viacerých entitách, vytvorí sa jeden konsolidovaný záznam so všetkými stĺpcami a údajmi z každej entity.
 
 1. [Zjednotené zákaznícke polia](merge-entities.md) (predtým nazývané Zlúčiť): V kroku zjednotených zákazníckych polí určite, ktoré zdrojové polia by mali byť zahrnuté, vylúčené alebo zlúčené do jednotného zákazníckeho profilu.  
 

@@ -1,5 +1,5 @@
 ---
-title: Export údajov z Customer Insights do Adobe Experience Platform
+title: Exportovať segmenty do Adobe Experience Platform (Náhľad)
 description: Zistite, ako používať segmenty Customer Insights v Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 42a4e0c6bce67a63b449a541299620ef2f4a3259
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c29b8264019669ffd954a298ce3a633c852477fa
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643738"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052530"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Použite segmenty z aplikácie Customer Insights v aplikácii Adobe Experience Platform (náhľad)
+# <a name="export-segments-to-adobe-experience-platform-preview"></a>Exportovať segmenty do Adobe Experience Platform (Náhľad)
 
 Ako používateľ Dynamics 365 Customer Insights, možno ste vytvorili segmenty na zefektívnenie svojich marketingových kampaní zacielením na relevantné publikum. Ak chcete použiť segment zo služby Customer Insights v Adobe Experience Platform a aplikácie ako Adobe Campaign Standard, musíte postupovať podľa niekoľkých krokov uvedených v tomto článku.
 
@@ -30,7 +30,7 @@ Ako používateľ Dynamics 365 Customer Insights, možno ste vytvorili segmenty 
 
 ## <a name="campaign-overview"></a>Prehľad kampane
 
-Aby ste lepšie pochopili, ako môžete použiť segmenty z Customer Insights v Adobe Experience Platform, pozrime sa na fiktívnu ukážkovú kampaň.
+Ak chcete lepšie pochopiť, ako môžete použiť segmenty zo služby Customer Insights v Adobe Experience Platform, pozrime sa na fiktívnu ukážkovú kampaň.
 
 Predpokladajme, že vaša spoločnosť ponúka svojim zákazníkom v USA mesačnú službu na základe predplatného. Chcete identifikovať zákazníkov, ktorých predplatné sa má predĺžiť počas nasledujúcich ôsmich dní, ale ešte si ich predplatné neobnovili. Aby ste si udržali týchto zákazníkov, chcete im poslať propagačnú ponuku e-mailom pomocou Adobe Experience Platform.
 

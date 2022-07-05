@@ -1,19 +1,19 @@
 ---
-title: Export údajov z Customer Insights do Azure Synapse Analytics
+title: Exportovať údaje do Azure Synapse Analytics (Náhľad)
 description: Zistite, ako nakonfigurovať pripojenie k Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741522"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082878"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportovať údaje do Azure Synapse Analytics (Náhľad)
 
@@ -34,11 +34,11 @@ V Azure:
 
 - Aktívne predplatné služieb Azure.
 
-- Ak používate nový Azure Data Lake Storage účet Gen2, *principál služby pre Customer Insights* potreby **Storage Blob Data Contributor** povolenia. Viac sa dozviete na [pripojenie k Azure Data Lake Storage Účet Gen2 s principálom služby Azure pre Customer Insights](connect-service-principal.md). Úložisko Data Lake Storage Gen2 **musí mať** povolenú možnosť [hierarchický názov](/azure/storage/blobs/data-lake-storage-namespace).
+- Ak používate nový Azure Data Lake Storage účet Gen2, *principál služby pre Customer Insights* potreby **Storage Blob Data Contributor** povolenia. Viac sa dozviete na [pripojenie k an Azure Data Lake Storage Účet Gen2 s principálom služby Azure pre Customer Insights](connect-service-principal.md). Úložisko Data Lake Storage Gen2 **musí mať** povolenú možnosť [hierarchický názov](/azure/storage/blobs/data-lake-storage-namespace).
 
-- V skupine prostriedkov, kde je Azure Synapse pracovný priestor sa nachádza, *objednávateľ služby* a *Azure AD používateľ s oprávneniami správcu v Customer Insights* je potrebné prideliť minimálne **Čitateľ** povolenia. Viac informácií nájdete v časti [Priradiť roly Azure pomocou portálu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
+- V skupine prostriedkov, kde je Azure Synapse sa nachádza pracovný priestor, *objednávateľ služby* a *Azure AD používateľ s oprávneniami správcu v Customer Insights* je potrebné prideliť minimálne **Čitateľ** povolenia. Viac informácií nájdete v časti [Priradiť roly Azure pomocou portálu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 
-- The *Azure AD používateľ s oprávneniami správcu v Customer Insights* potreby **Storage Blob Data Contributor** povolenia na Azure Data Lake Storage Účet Gen2, kde sú údaje umiestnené a prepojené s Azure Synapse pracovnom priestore. Prečítajte si viac o [používaní portálu Azure Portal na priradenie roly Azure pre prístup k údajom blob a frontu](/azure/storage/common/storage-auth-aad-rbac-portal) a [Povolenia Prispievateľ údajov do objektu BLOB úložiska](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- The *Azure AD používateľ s oprávneniami správcu v Customer Insights* potreby **Storage Blob Data Contributor** povolenia na Azure Data Lake Storage Účet Gen2, v ktorom sú údaje umiestnené a prepojené s Azure Synapse pracovnom priestore. Prečítajte si viac o [používaní portálu Azure Portal na priradenie roly Azure pre prístup k údajom blob a frontu](/azure/storage/common/storage-auth-aad-rbac-portal) a [Povolenia Prispievateľ údajov do objektu BLOB úložiska](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Spravovaná identita pracovného priestoru Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* potrebuje povolenia **Prispievateľ údajov do objektu BLOB úložiska** v účte Azure Data Lake Storage Gen2, kde sa údaje nachádzajú a sú prepojené na pracovisko Azure Synapse. Prečítajte si viac o [používaní portálu Azure Portal na priradenie roly Azure pre prístup k údajom blob a frontu](/azure/storage/common/storage-auth-aad-rbac-portal) a [Povolenia Prispievateľ údajov do objektu BLOB úložiska](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
@@ -48,7 +48,7 @@ V Azure:
 
 ### <a name="configure-a-connection"></a>Konfigurácia a pripojenie
 
-Na vytvorenie pripojenia je potrebný principál služby a používateľský účet v Customer Insights **Čitateľ** povolenia na *zdrojová skupina* kde sa nachádza pracovný priestor Synapse Analytics. Okrem toho potrebuje principál služby a používateľ v pracovnom priestore Synapse Analytics **Správca Synapse** povolenia. 
+Na vytvorenie pripojenia je potrebný principál služby a používateľský účet v Customer Insights **Čitateľ** povolenia na *skupina zdrojov* kde sa nachádza pracovný priestor Synapse Analytics. Okrem toho potrebuje principál služby a používateľ v pracovnom priestore Synapse Analytics **Správca Synapse** povolenia. 
 
 1. Prejdite do časti **Správca** > **Pripojenia**.
 
@@ -72,13 +72,13 @@ Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu
 
 1. V **Pripojenie na export** vyberte spojenie z poľa **Azure Synapse Analytics** oddiele. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne [spojenia](connections.md) tohto typu.
 
-1. Poskytnite rozoznateľný **Zobrazovaný názov** pre váš export a **Názov databázy**.
+1. Poskytnite rozoznateľný **Zobrazovaný názov** pre váš export a **Názov databázy**. Exportom sa vytvorí nový [Azure Synapse databáza jazier](/azure/synapse-analytics/database-designer/concepts-lake-database) v pracovnom priestore definovanom v pripojení.
 
 1. Vyberte entity, do ktorých chcete exportovať Azure Synapse Analytics.
    > [!NOTE]
    > Zdroje údajov založené na [priečinku Common Data Model](connect-common-data-model.md) nie sú podporované.
 
-2. Vyberte položku **Uložiť**.
+1. Vyberte položku **Uložiť**.
 
 Uloženie exportu nespustí export okamžite.
 

@@ -1,5 +1,5 @@
 ---
-title: Zdroj údajov obohatenie
+title: Obohatenie pre zdroje údajov (ukážka)
 description: Pred procesom zjednotenia údajov obohaťte zdroje údajov.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011492"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082122"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obohatenie pre zdroje údajov (ukážka)
 
@@ -23,7 +23,7 @@ Použite údaje zo zdrojov, ako je Microsoft a ďalší partneri, na obohatenie 
 
 Na vytváranie alebo úpravu obohatení musíte mať oprávnenia prispievateľa alebo správcu. Ďalšie informácie nájdete v časti [Povolenia](permissions.md).  
 
-1. Ísť do **Údaje** > **Zjednotiť**. Vyberte entitu, ktorú chcete obohatiť, a vyberte jeden atribút ako primárny kľúč pre entitu. Viac informácií nájdete v časti [Vyberte primárny kľúč](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Ísť do **Údaje** > **Zjednotiť**. Vyberte entitu, ktorú chcete obohatiť, a vyberte jeden atribút ako primárny kľúč pre entitu. Ďalšie informácie nájdete v časti [Vyberte primárny kľúč](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Prejdite do **Údaje** > **Zdroje údajov**.
 
@@ -51,4 +51,4 @@ Prejdite na kartu **Moje obohatenia**, kde nájdete všetky nakonfigurované obo
 
 Ak chcete zobraziť prístupné možnosti, označte položku obohatenia. Môžete tiež vybrať zvislú elipsu (&vellip;) na položke zoznamu, aby ste videli možnosti. Ak ste nakonfigurovali niekoľko obohatení, môžete ich rýchlo nájsť pomocou vyhľadávacieho poľa.
 
-Môžete zobraziť, upraviť, spustiť alebo odstrániť obohatenie zdroj údajov. Viac informácií nájdete v časti [Spravujte existujúce obohatenia](enrichment-hub.md).
+Môžete zobraziť, upraviť, spustiť alebo odstrániť obohatenie zdroj údajov. Ďalšie informácie nájdete v časti [Spravujte existujúce obohatenia](enrichment-hub.md).

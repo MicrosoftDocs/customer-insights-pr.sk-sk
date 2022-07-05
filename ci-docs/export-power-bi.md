@@ -1,5 +1,5 @@
 ---
-title: Konektor služby Power BI
+title: Konektor Power BI (ukážka)
 description: Informácie o používaní konektora Dynamics 365 Customer Insights v Power BI.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643638"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051288"
 ---
-# <a name="connector-for-power-bi-preview"></a>Konektor pre Power BI (ukážka)
+# <a name="power-bi-connector-preview"></a>Konektor Power BI (ukážka)
 
-Vytvorte vizualizácie svojich údajov cez Power BI Desktop. Vytvárajte ďalšie informácie a zostavujte prehľady s vašimi zjednotenými údajmi o zákazníkoch.
+Vytvorte vizualizácie pre svoje údaje pomocou Microsoft Power BI Desktop. Vytvárajte ďalšie informácie a zostavujte prehľady s vašimi zjednotenými údajmi o zákazníkoch.
 
 ## <a name="prerequisites"></a>Predpoklady
 
@@ -70,7 +70,7 @@ Po odstránení duplicitných vzťahov sa pokúste konektor Power BI nakonfiguro
 
 ### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Pri načítaní entít do aplikácie Power BI Desktop sa vyskytli chyby v poliach dátumu
 
-Pri načítavaní entít obsahujúcich polia s formátom dátumu, ako je MM/DD/RRRR, sa môžu vyskytnúť chyby v dôsledku nezhodných formátov miestnych nastavení. Tento nesúlad nastane, keď váš Power BI Desktop súbor je nastavený na iné miestne nastavenie ako angličtina (Spojené štáty americké), pretože polia dátumu v Customer Insights sú uložené v americkom formáte.
+Pri načítavaní entít obsahujúcich polia s formátom dátumu, ako je MM/DD/RRRR, sa môžu vyskytnúť chyby v dôsledku nezhodných formátov miestnych nastavení. Tento nesúlad nastane, keď váš Power BI Desktop súbor je nastavený na iné miestne nastavenie ako angličtina (Spojené štáty), pretože polia dátumu v Customer Insights sú uložené v americkom formáte.
 
 Súbor aplikácie Power BI Desktop má jedno miestne nastavenie, ktoré sa používa pri získavaní údajov. Ak chcete, aby boli tieto polia dátumu interpretované správne, nastavte miestne nastavenie súboru .BPI na angličtinu (Spojené štáty americké). [Zistite, ako môžete zmeniť miestne nastavenia súboru počítačovej aplikácie Power BI](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 

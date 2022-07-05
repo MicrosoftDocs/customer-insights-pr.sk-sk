@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643139"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051703"
 ---
-# <a name="use-a-template-to-build-a-measure"></a>Na vytvorenie miery použite šablónu
+# <a name="create-measures-from-templates"></a>Vytvorte miery zo šablón
 
-Môžete použiť preddefinované šablóny bežne používaných [Opatrenia](measures.md) na ich vytvorenie. Podrobné popisy šablón a sprievodca vám pomôže s efektívnym vytváraním opatrení. Šablóny vychádzajú z mapovaných údajov z entity *Zjednotená aktivita*. Uistite sa teda, že ste nakonfigurovali [aktivity zákazníkov](activities.md) pred vytvorením merania zo šablóny.
+Môžete použiť preddefinované šablóny bežne používaných [Opatrenia](measures.md) aby ste ich vytvorili. Podrobné popisy šablón a sprievodca vám pomôže s efektívnym vytváraním opatrení. Šablóny vychádzajú z mapovaných údajov z entity *Zjednotená aktivita*. Uistite sa teda, že ste nakonfigurovali [aktivity zákazníkov](activities.md) pred vytvorením merania zo šablóny.
 
-Ak chcete vytvoriť vlastné miery, pozrite si [Použite nástroj na tvorbu opatrení na vytvorenie mier od začiatku](measure-builder.md).
+Ak chcete vytvoriť vlastné miery, pozri [Použite nástroj na tvorbu opatrení na vytvorenie mier od začiatku](measure-builder.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 

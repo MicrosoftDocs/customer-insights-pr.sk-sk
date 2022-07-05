@@ -1,5 +1,5 @@
 ---
-title: Obohatenie profilov spoločností pomocou obohatenia tretej strany Leadspace
+title: Obohaťte firemné profily pomocou Leadspace (ukážka)
 description: Všeobecné informácie o obohatení pomocou obohatenia tretej stranou Leadspace.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954198"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082374"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obohatenie profilov spoločnosti pomocou Leadspace (náhľad)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Obohaťte firemné profily pomocou Leadspace (ukážka)
 
 Leadspace je dátová vedecká spoločnosť, ktorá poskytuje platformu údajov zákazníkov pre scenáre „firma a firma“. Umožňuje prostrediam so zjednotenými profilmi zákazníkov na základe obchodných vzťahov obohatiť ich údaje. Obohaťte *Profily zákazníkov* s atribútmi, ako je veľkosť spoločnosti, umiestnenie alebo odvetvie. Obohaťte *Kontaktné profily* s atribútmi, ako sú titul, osoba alebo overenie e-mailom.
 
@@ -27,7 +27,7 @@ Leadspace je dátová vedecká spoločnosť, ktorá poskytuje platformu údajov 
 
 ## <a name="configure-the-connection-for-leadspace"></a>Nakonfigurujte pripojenie pre Leadspace
 
-Musíte byť [správca](permissions.md#admin) v Customer Insights a majú „večný kľúč“ (označovaný ako **Token leadspace**).
+Musíte byť [správca](permissions.md#admin) v Customer Insights a majú „trvalý kľúč“ (označovaný ako **Token leadspace**).
 
 1. Vyberte **Pridať pripojenie** pri konfigurácii obohatenia alebo prejdite na **Admin** > **Spojenia** a vyberte **Nastaviť** na dlaždici Leadspace.
 
@@ -58,7 +58,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Vyberte **Ďalej**.
 
-1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o firemné údaje z Leadspace. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o firemné údaje z Leadspace. The *Zákazník* subjekt obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 
     :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Snímka obrazovky pri výbere množiny údajov o zákazníkoch.":::
 
@@ -80,9 +80,9 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
 
-1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
+1. Vyberte **Bežať** začať proces obohacovania alebo zavrieť návrat do **Obohatenia** stránku.
 
-## <a name="enrichment-results"></a>Výsledky obohatenia
+## <a name="view-enrichment-results"></a>Pozrite si výsledky obohatenia
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

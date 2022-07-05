@@ -1,5 +1,5 @@
 ---
-title: Ako na to – Spravovať prostredia
+title: 'Ako na to: Spravovať prostredia'
 description: Zistite, ako spravovať existujúce prostredia Customer Insights ako správca.“
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: 62a5856edac5e66e5e42c93313d78fa6826469b3
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: fc3b3f404cf0ac84c782778414494289c803babe
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833511"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083067"
 ---
 # <a name="how-to-manage-environments"></a>Ako na to: Spravovať prostredia
 
-Správcovia [vytvoriť](create-environment.md) a spravovať prostredia. Môžu zmeniť niektoré nastavenia v existujúcich prostrediach. Firma, typ, región, možnosť uloženia a Dataverse nastavenia sú opravené po vytvorení prostredia. Ak chcete zmeniť tieto nastavenia, resetujte prostredie alebo vytvorte nové prostredie.
+Administrátori [vytvoriť](create-environment.md) a spravovať prostredia. Môžu zmeniť niektoré nastavenia v existujúcich prostrediach. Firma, typ, región, možnosť uloženia a Dataverse nastavenia sú opravené po vytvorení prostredia. Ak chcete zmeniť tieto nastavenia, resetujte prostredie alebo vytvorte nové prostredie.
 
 ## <a name="edit-an-existing-environment"></a>Úprava existujúceho prostredia
 
@@ -50,7 +50,7 @@ Niekoľko používateľov môže mať oprávnenia správcu, ale iba jeden použ�
 
 1. Vyberte **Skontrolujte a dokončite**, potom **Aktualizovať** aplikujte zmeny.
 
-## <a name="claim-ownership-of-an-environment"></a>Nárokujte si vlastníctvo prostredia
+## <a name="claim-ownership-of-an-environment"></a>Nárokovať si vlastníctvo prostredia
 
 Ak je používateľský účet vlastníka odstránený alebo pozastavený, prostredie nebude mať vlastníka. Každý administrátor si môže nárokovať vlastníctvo a stať sa novým vlastníkom. Môžu naďalej vlastniť životné prostredie resp [zmeniť vlastníctvo na iného správcu](#change-the-owner-of-an-environment).
 

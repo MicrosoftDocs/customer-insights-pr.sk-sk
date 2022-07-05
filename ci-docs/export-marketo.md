@@ -1,5 +1,5 @@
 ---
-title: Export údajov služby Customer Insights do Marketo
+title: Export segmentov do Marketo (ukážka)
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Marketo.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7354b0aeafbe95e60d172b16c26d83c5dc25fb96
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8cd24cf436bd5fdfd4ec3834d35baa1495e37ca4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643958"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053224"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Export segmentov do Marketo (ukážka)
 

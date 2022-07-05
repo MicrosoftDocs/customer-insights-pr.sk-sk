@@ -1,5 +1,5 @@
 ---
-title: Obohatenie pomocou tretej strany Experian
+title: Obohaťte profily zákazníkov o demografické údaje od spoločnosti Experian (verzia Preview)
 description: Všeobecné informácie o obohatení pomocou tretej strany Experian.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954106"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053040"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obohaťte profily zákazníkov o demografické údaje od spoločnosti Experian (verzia Preview)
 
@@ -53,7 +53,7 @@ Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje sp
 
 1. Prejdite na **Údaje** > **Obohatenie** a vyberte kartu **Objavovať**.
 
-1. Vyberte **Obohaťte moje údaje** na **Demografia** od Experian dlaždica.
+1. Vyberte **Obohaťte moje údaje** na **Demografické údaje** od Experian dlaždica.
 
    :::image type="content" source="media/experian-tile.png" alt-text="Experian dlaždicu na stránke prehľadu obohatenia.":::
 
@@ -63,7 +63,7 @@ Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje sp
 
 1. Vyberte **Ďalej**.
 
-1. Vyberte **Súbor zákazníckych údajov** a vyberte profil alebo segment, ktorý chcete obohatiť o demografické údaje Experian. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+1. Vyberte **Súbor zákazníckych údajov** a vyberte profil alebo segment, ktorý chcete obohatiť o demografické údaje Experian. The *Zákazník* subjekt obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Snímka obrazovky pri výbere množiny údajov o zákazníkoch.":::
 
@@ -77,9 +77,9 @@ Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje sp
 
 1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
 
-1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
+1. Vyberte **Bežať** začať proces obohacovania alebo zavrieť návrat do **Obohatenia** stránku.
 
-## <a name="enrichment-results"></a>Výsledky obohatenia
+## <a name="view-enrichment-results"></a>Pozrite si výsledky obohatenia
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

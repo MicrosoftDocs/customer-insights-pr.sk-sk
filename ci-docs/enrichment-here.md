@@ -1,5 +1,5 @@
 ---
-title: Obohatenie pomocou tretej strany HERE Technologies
+title: Obohaťte zákaznícke profily pomocou HERE Technologies (ukážka)
 description: Všeobecné informácie o obohatení pomocou obohatenia tretej stranou HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953692"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052070"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obohatenie profilov zákazníkov s pomocou HERE Technologies (ukážka)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Obohaťte zákaznícke profily pomocou HERE Technologies (ukážka)
 
 HERE Technologies je spoločnosť s lokalizačnou platformou, ktorá poskytuje údaje a služby zamerané na lokalizáciu. Služby obohacovania údajov spoločnosti HERE Technologies zlepšujú presnosť informácií o polohe vašich zákazníkov. Poskytuje normalizáciu adries, extrakciu zemepisnej šírky a dĺžky a ďalšie.
 
@@ -27,7 +27,7 @@ HERE Technologies je spoločnosť s lokalizačnou platformou, ktorá poskytuje �
 
 ## <a name="configure-the-connection-for-here-technologies"></a>Nakonfigurujte pripojenie pre HERE Technologies
 
-Musíte byť [správca](permissions.md#admin) v Customer Insights a máte aktívny kľúč API technológie HERE.
+Musíte byť [správca](permissions.md#admin) v Customer Insights a mať aktívny kľúč API technológie HERE.
 
 1. Vyberte **Pridať pripojenie** pri konfigurácii obohatenia alebo prejdite na **Admin** > **Spojenia** a vyberte **Nastaviť** na dlaždici HERE Technologies.
 
@@ -48,7 +48,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Prejdite na **Údaje** > **Obohatenie** a vyberte kartu **Objavovať**.
 
-1. Vyberte **Obohaťte moje údaje** na **Miesto** z dlaždice HERE Technologies.
+1. Vyberte **Obohaťte moje údaje** na **Poloha** z dlaždice HERE Technologies.
 
    :::image type="content" source="media/HERE-tile.png" alt-text="Dlaždica HERE Technologies.":::
 
@@ -58,7 +58,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Vyberte **Ďalej**.
 
-1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o dáta od HERE Technologies. The *Zákazník* entita obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
+1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť o dáta od HERE Technologies. The *Zákazník* subjekt obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 
 1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na porovnávanie: primárna a/alebo sekundárna adresa. Môžete určiť mapovanie poľa pre obe adresy a profily pre obe adresy na samostatné obohatenie. Napríklad pre adresu bydliska a adresu firmy. Vyberte **Ďalej**.
 
@@ -70,9 +70,9 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Stlačte možnosť **Uložiť obohatenie** po preskúmaní vašich možností.
 
-1. Vyberte **Bežať** na spustenie procesu obohacovania alebo zatvorenie návratu do **Obohatenia** stránku.
+1. Vyberte **Bežať** začať proces obohacovania alebo zavrieť návrat do **Obohatenia** stránku.
 
-## <a name="enrichment-results"></a>Výsledky obohatenia
+## <a name="view-enrichment-results"></a>Pozrite si výsledky obohatenia
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,6 +1,6 @@
 ---
-title: Ako na to – Vytvorte nové prostredie
-description: Kroky na vytvorenie prostredia s pre Dynamics 365 Customer Insights.
+title: 'Ako na to: Vytvorte nové prostredie'
+description: Kroky na vytvorenie prostredia v Dynamics 365 Customer Insights.
 ms.date: 05/31/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 6dfaa09cd80498e9a4e4dea6a07ce6e9d29105e2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 62969527ceed906ff06fb9be90b972496323ce0a
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011630"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052765"
 ---
 # <a name="how-to-create-a-new-environment"></a>Ako na to: Vytvorte nové prostredie
 
@@ -38,7 +38,7 @@ Potrebuješ [oprávnenia správcu](permissions.md) v Customer Insights na vytvá
   
    :::image type="content" source="media/environment-picker.png" alt-text="Vyberte nástroj na výber prostredia.":::
 
-1. Ak chcete poskytnúť všetky požadované informácie pre nové prostredie, postupujte podľa riadených skúseností uvedených v nasledujúcich častiach. Ak ste predtým nakonfigurovali prostredie, môžete tiež [skopírujte konfiguráciu](#copy-the-environment-configuration).
+1. Ak chcete poskytnúť všetky požadované informácie pre nové prostredie, postupujte podľa sprievodcu popísaných v nasledujúcich častiach. Ak ste prostredie nakonfigurovali skôr, môžete tiež [skopírujte konfiguráciu](#copy-the-environment-configuration).
 
 ## <a name="step-1-provide-basic-information"></a>Krok 1: Poskytnite základné informácie
 
@@ -51,7 +51,7 @@ Uveďte nasledujúce podrobnosti:
 - **Názov**: Názov tohto prostredia. Toto pole je už vyplnené, ak ste skopírovali existujúce prostredie, ale môžete ho zmeniť.
 - **Vyberte si svoje podnikanie**: Vyberte primárnu cieľovú skupinu pre nové prostredie. Môžete pracovať s jednotlivými spotrebiteľmi (firma a spotrebiteľ) resp. s [podnikateľskými obchodnými vzťahmi](work-with-business-accounts.md) (firma a firma). Ak vaša organizácia obchoduje najmä s jednotlivcami, ako je maloobchod alebo kaviareň, vyberte si individuálnych spotrebiteľov. Ak sú vaším hlavným publikom iné spoločnosti, ako napríklad výrobca automobilov alebo papierenská spoločnosť, vyberte si podnikateľské účty.
 - **Typ**: Vyberte, či chcete vytvoriť výrobné alebo testovacie prostredie. Testovacie prostredia neumožňujú plánované obnovenie údajov a sú určené na predbežnú implementáciu a testovanie. Izolované prostredia používajú rovnaké primárne publikum ako produkčné prostredie, ktoré je aktuálne vybraté.
-- **Región**: Región, v ktorom je služba nasadená a hosťovaná. Komu [použiť svoj vlastný Azure Data Lake Storage účtu](own-data-lake-storage.md) alebo [pripojiť k existujúcemu Microsoft Dataverse Organizácia](customer-insights-dataverse.md), prostredie Customer Insights musí byť v rovnakom regióne.
+- **Región**: Región, v ktorom je služba nasadená a hosťovaná. Komu [použiť svoj vlastný Azure Data Lake Storage účtu](own-data-lake-storage.md) alebo [pripojiť k existujúcemu Microsoft Dataverse Organizácia](customer-insights-dataverse.md), prostredie Customer Insights musí byť v rovnakej oblasti.
 
 ## <a name="step-2-configure-data-storage"></a>Krok 2: Konfigurácia ukladania údajov
 
@@ -60,7 +60,7 @@ V **Úložisko dát** vyberte, kam sa majú uložiť údaje Customer Insights.
 Môžete si vybrať z dvoch možností:
 
 - **Úložisko Customer Insights** : Ukladanie údajov spravuje tím Customer Insights. Je to predvolená možnosť a pokiaľ neexistujú špecifické požiadavky na ukladanie údajov vo vašom vlastnom účte úložiska, odporúčame použiť túto možnosť.
-- **Azure Data Lake Storage**: Zadajte svoje vlastné Azure Data Lake Storage na ukladanie údajov, aby ste mali plnú kontrolu nad tým, kde sú údaje uložené. Ďalšie informácie nájdete v časti [Použite svoj vlastný Azure Data Lake Storage účtu](own-data-lake-storage.md).
+- **Azure Data Lake Storage**: Zadajte svoje vlastné Azure Data Lake Storage na ukladanie údajov, aby ste mali plnú kontrolu nad tým, kde sú údaje uložené. Viac informácií nájdete v časti [Použite svoj vlastný Azure Data Lake Storage účtu](own-data-lake-storage.md).
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Vyberte preferovanú možnosť na uloženie údajov.":::
 
@@ -69,9 +69,9 @@ Môžete si vybrať z dvoch možností:
 Krok **Microsoft Dataverse** vám umožní prepojiť Customer Insights s vašim prostredím Dataverse. Zdieľať údaje s Dataverse používať s obchodnými aplikáciami založenými na Dataverse, ako je Dynamics 365 Marketing alebo modelom riadené aplikácie Power Apps.
 
 
-Nechajte toto pole prázdne, ak nemáte vlastné Dataverse prostredie a my vám ho vytvoríme.
+Ak nemáte vlastné, nechajte toto pole prázdne Dataverse prostredie a my vám ho vytvoríme.
 
-Ďalšie informácie nájdete v časti [Pracujte s údajmi Customer Insights v Microsoft Dataverse](customer-insights-dataverse.md).
+Viac informácií nájdete v časti [Pracujte s údajmi Customer Insights v Microsoft Dataverse](customer-insights-dataverse.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="zdieľanie údajov s Microsoft Dataverse automaticky povolené pre nové sieťové prostredia.":::
 
@@ -93,7 +93,7 @@ Prečítajte si nasledujúce články, ktoré vám pomôžu začať s konfigurá
 
 ## <a name="copy-the-environment-configuration"></a>Skopírovať konfiguráciu prostredia
 
-Ako správca sa môžete rozhodnúť skopírovať konfiguráciu z existujúceho prostredia, keď vytvoríte nové.
+Ako správca môžete pri vytváraní nového prostredia skopírovať konfiguráciu z existujúceho prostredia.
 
 :::image type="content" source="media/environment-settings-dialog.png" alt-text="Snímka obrazovky s možnosťami nastavení v nastaveniach prostredia.":::
 

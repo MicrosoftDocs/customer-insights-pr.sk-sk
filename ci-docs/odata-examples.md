@@ -1,6 +1,6 @@
 ---
-title: Príklady OData pre Dynamics 365 Customer Insights API
-description: Bežne používané príklady protokolu Open Data Protocol (OData) na dopytovanie rozhraní API Customer Insights na kontrolu údajov.
+title: Príklady dotazov OData pre rozhrania API Customer Insights
+description: Bežne používané príklady pre protokol Open Data Protocol (OData) na dopytovanie rozhraní API Customer Insights na kontrolu údajov.
 ms.date: 05/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -8,14 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808480"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083172"
 ---
-# <a name="odata-query-examples"></a>Príklady dotazov OData
+# <a name="odata-query-examples-for-customer-insights-apis"></a>Príklady dotazov OData pre rozhrania API Customer Insights
 
 Open Data Protocol (OData) je protokol pre prístup k údajom založený na základných protokoloch, ako je HTTP. Používa bežne akceptované metodológie ako REST pre web. Existujú rôzne druhy knižníc a nástrojov, ktoré možno použiť na používanie služieb OData.
 
@@ -53,12 +53,12 @@ Nasledujúca tabuľka obsahuje súbor vzorových dotazov pre *UnifiedActivity* s
 |Časový rámec činnosti    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Aktivity zákazníckeho profilu v časovom rámci       |
 |Typ aktivity    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
 |Aktivita podľa zobrazovaného mena     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
-|Triedenie činností    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Zoraďte aktivity vzostupne alebo zostupne       |
+|Triedenie aktivít    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Zoraďte aktivity vzostupne alebo zostupne       |
 |Aktivita sa rozšírila z členstva v segmente  |   `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId eq '{CID}'`     |         |
 
 ## <a name="other-examples"></a>Ďalšie príklady
 
-Nasledujúca tabuľka obsahuje súbor vzorových dopytov pre iné entity.
+Nasledujúca tabuľka obsahuje súbor vzorových dotazov pre iné entity.
 
 |Typ dotazu |Príklad  | Poznámka  |
 |---------|---------|---------|

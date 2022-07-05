@@ -1,5 +1,5 @@
 ---
-title: Pripojte údaje z Common Data Model k účtu Azure Data Lake
+title: Pripojte priečinok Common Data Model použitím účtu Azure Data Lake
 description: Pracujte s údajmi z Common Data Model cez Azure Data Lake Storage.
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011592"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082269"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Pripojiť sa k údajom v doplnku Azure Data Lake Storage
 
@@ -29,18 +29,18 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 - The Azure Data Lake Storage účet musí mať [hierarchický menný priestor povolený](/azure/storage/blobs/data-lake-storage-namespace). Údaje musia byť uložené vo formáte hierarchického priečinka, ktorý definuje koreňový priečinok a má podpriečinky pre každú entitu. Podpriečinky môžu mať priečinky s úplnými údajmi alebo s prírastkovými údajmi.
 
-- Ak chcete vykonať overenie pomocou objektu služby Azure, uistite sa, že je nakonfigurovaný vo vašom nájomníkovi. Ďalšie informácie nájdete v časti [Pripojte sa k Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
+- Ak chcete vykonať overenie pomocou objektu služby Azure, uistite sa, že je nakonfigurovaný vo vašom nájomníkovi. Viac informácií nájdete v časti [Pripojte sa k Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
 
-- The Azure Data Lake Storage z ktorého sa chcete pripojiť a prijímať údaje, musí byť v rovnakej oblasti Azure ako Dynamics 365 Customer Insights životné prostredie. Pripojenia k priečinku Common Data Model z dátového jazera v inej oblasti Azure nie sú podporované. Ak chcete poznať oblasť prostredia Azure, prejdite na **Admin** > **systém** > **O** v Customer Insights.
+- The Azure Data Lake Storage z ktorého sa chcete pripojiť a prijímať údaje, musí byť v rovnakej oblasti Azure ako Dynamics 365 Customer Insights životné prostredie. Pripojenia k priečinku Common Data Model z dátového jazera v inej oblasti Azure nie sú podporované. Ak chcete poznať oblasť prostredia Azure, prejdite na **Admin** > **Systém** > **O** v Customer Insights.
 
-- Údaje uložené v online službách môžu byť uložené na inom mieste, než kde sa údaje spracúvajú alebo ukladajú Dynamics 365 Customer Insights.Importovaním údajov uložených v online službách alebo ich pripojením k nim súhlasíte s tým, že údaje možno preniesť a uložiť Dynamics 365 Customer Insights . [Ďalšie informácie nájdete v Centre dôveryhodnosti spoločnosti Microsoft](https://www.microsoft.com/trust-center).
+- Údaje uložené v online službách môžu byť uložené na inom mieste, než kde sa údaje spracúvajú alebo ukladajú Dynamics 365 Customer Insights.Importovaním alebo pripojením k údajom uloženým v online službách súhlasíte s tým, že údaje môžu byť prenesené a uložené s Dynamics 365 Customer Insights . [Ďalšie informácie nájdete v Centre dôveryhodnosti spoločnosti Microsoft](https://www.microsoft.com/trust-center).
 
-- Principál služby Customer Insights musí mať jednu z nasledujúcich rolí, aby mohol pristupovať k účtu úložiska. Ďalšie informácie nájdete v časti [Udeľte správcovi služby povolenia na prístup k účtu úložiska](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
+- Principál služby Customer Insights musí mať jednu z nasledujúcich rolí, aby mohol pristupovať k účtu úložiska. Viac informácií nájdete v časti [Udeľte správcovi služby povolenia na prístup k účtu úložiska](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
   - Čítačka údajov objektu Blob
   - Majiteľ údajov objektu Blob
   - Prispievateľ údajov do objektu BLOB úložiska
 
-- Údaje vo vašom úložisku Data Lake by sa mali riadiť štandardom Common Data Model pre ukladanie vašich údajov a mali by mať manifest spoločného údajového modelu, ktorý bude reprezentovať schému dátových súborov (*.csv alebo *.parquet). Manifest musí obsahovať podrobnosti o entitách, ako sú stĺpce entít a typy údajov a umiestnenie a typ súboru s údajmi. Ďalšie informácie nájdete v časti [Manifest spoločného dátového modelu](/common-data-model/sdk/manifest). Ak manifest nie je prítomný, správcovia s prístupom vlastníka údajov objektu Storage Blob alebo prispievateľa údajov objektu úložiska môžu definovať schému pri prijímaní údajov.
+- Údaje vo vašom úložisku Data Lake by sa mali riadiť štandardom Common Data Model pre ukladanie vašich údajov a mali by mať manifest spoločného údajového modelu, ktorý bude reprezentovať schému dátových súborov (*.csv alebo *.parquet). Manifest musí obsahovať podrobnosti o entitách, ako sú stĺpce entít a typy údajov a umiestnenie a typ súboru s údajmi. Viac informácií nájdete v časti [Manifest spoločného dátového modelu](/common-data-model/sdk/manifest). Ak manifest neexistuje, správcovia s prístupom vlastníka údajov objektu Storage Blob alebo prispievateľa údajov objektu úložiska môžu definovať schému pri prijímaní údajov.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Pripojenie k sieti Azure Data Lake Storage
 
@@ -54,16 +54,16 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 1. Zadajte a **názov** pre zdroj údajov a voliteľné **Popis**. Názov jedinečne identifikuje zdroj údajov a odkazuje sa naň v následných procesoch a nemožno ho zmeniť.
 
-1. Vyberte jednu z nasledujúcich možností pre **Pripojte svoje úložisko pomocou**. Ďalšie informácie nájdete v časti [Pripojte Customer Insights k a Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
+1. Vyberte jednu z nasledujúcich možností pre **Pripojte svoje úložisko pomocou**. Viac informácií nájdete v časti [Pripojte Customer Insights k a Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
 
-   - **Prostriedok Azure** : Zadajte **ID zdroja** . Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Ďalšie informácie nájdete v časti [Súkromné odkazy](security-overview.md#private-links-tab).
-   - **Predplatné Azure** : Vyberte **Predplatné** a potom **Skupina zdrojov** a **Účet úložiska**. Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Ďalšie informácie nájdete v časti [Súkromné odkazy](security-overview.md#private-links-tab).
+   - **Prostriedok Azure** : Zadajte **ID zdroja** . Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#private-links-tab).
+   - **Predplatné Azure** : Vyberte **Predplatné** a potom **Skupina zdrojov** a **Účet úložiska**. Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#private-links-tab).
   
    > [!NOTE]
    > Na vytvorenie zdroj údajov potrebujete jednu z nasledujúcich rolí pre kontajner alebo účet úložiska:
    >
-   >  - Storage Blob Data Reader postačuje na čítanie z účtu úložiska a prijímanie údajov do Customer Insights. 
-   >  - Ak chcete upraviť súbory manifestu priamo v Customer Insights, vyžaduje sa prispievateľ alebo vlastník dátového objektu úložiska.  
+   >  - Aplikácia Storage Blob Data Reader postačuje na čítanie z účtu úložiska a prijímanie údajov do Customer Insights. 
+   >  - Ak chcete upravovať súbory manifestu priamo v Customer Insights, vyžaduje sa prispievateľ alebo vlastník dátového objektu úložiska.  
   
 1. Vyberte názov **Kontajner** ktorý obsahuje údaje a schému (súbor model.json alebo manifest.json), z ktorého chcete importovať údaje, a vyberte **Ďalšie**.
    > [!NOTE]
@@ -86,7 +86,7 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 1. Pre vybrané entity, ktoré vyžadujú postupné prijímanie, **Požadovaný** zobrazuje pod **Prírastkové obnovenie**. Pre každý z týchto subjektov viď [Nakonfigurujte prírastkové obnovenie pre zdroje údajov Azure Data Lake](incremental-refresh-data-sources.md).
 
-1. Pre vybrané entity, kde nebol definovaný primárny kľúč, **Požadovaný** zobrazuje pod **Primárny kľúč**. Pre každý z týchto subjektov:
+1. Pre vybrané entity, kde primárny kľúč nebol definovaný, **Požadovaný** zobrazuje pod **Primárny kľúč**. Pre každý z týchto subjektov:
    1. Vyberte **Požadovaný**. The **Upraviť entitu** zobrazí panel.
    1. Vyber **Primárny kľúč**. Primárny kľúč je atribút jedinečný pre entitu. Ak má byť atribút platným primárnym kľúčom, nemal by obsahovať duplicitné hodnoty, chýbajúce hodnoty ani nulové hodnoty. Ako primárne kľúče sú podporované atribúty typu reťazec, celé číslo a GUID.
    1. Voliteľne zmeňte vzor oddielu.
@@ -140,7 +140,7 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 1. Pre vybrané entity, ktoré vyžadujú postupné prijímanie, **Požadovaný** zobrazuje pod **Prírastkové obnovenie**. Pre každý z týchto subjektov viď [Nakonfigurujte prírastkové obnovenie pre zdroje údajov Azure Data Lake](incremental-refresh-data-sources.md).
 
-1. Pre vybrané entity, kde nebol definovaný primárny kľúč, **Požadovaný** zobrazuje pod **Primárny kľúč**. Pre každý z týchto subjektov:
+1. Pre vybrané entity, kde primárny kľúč nebol definovaný, **Požadovaný** zobrazuje pod **Primárny kľúč**. Pre každý z týchto subjektov:
    1. Vyberte **Požadovaný**. The **Upraviť entitu** zobrazí panel.
    1. Vyber **Primárny kľúč**. Primárny kľúč je atribút jedinečný pre entitu. Ak má byť atribút platným primárnym kľúčom, nemal by obsahovať duplicitné hodnoty, chýbajúce hodnoty ani nulové hodnoty. Ako primárne kľúče sú podporované atribúty typu reťazec, celé číslo a GUID.
    1. Voliteľne zmeňte vzor oddielu.
@@ -151,7 +151,7 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Upraviť Azure Data Lake Storage zdroj údajov
 
-Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Ďalšie informácie nájdete v časti [Pripojte Customer Insights k a Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md). Ak sa chcete pripojiť k inému kontajneru z účtu úložiska alebo zmeniť názov účtu, musíte [vytvoriť nové pripojenie k zdroju údajov](#connect-to-azure-data-lake-storage).
+Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Viac informácií nájdete v časti [Pripojte Customer Insights k a Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md). Ak sa chcete pripojiť k inému kontajneru z účtu úložiska alebo zmeniť názov účtu, musíte [vytvoriť nové pripojenie k zdroju údajov](#connect-to-azure-data-lake-storage).
 
 1. Prejdite do **Údaje** > **Zdroje údajov**.
 
@@ -169,7 +169,7 @@ Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Ďal
         > - Majiteľ údajov objektu Blob
         > - Prispievateľ údajov do objektu BLOB úložiska
 
-   - **Povoliť súkromný odkaz** ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure. Ďalšie informácie nájdete v časti [Súkromné odkazy](security-overview.md#private-links-tab).
+   - **Povoliť súkromný odkaz** ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#private-links-tab).
 
 1. Vyberte **Ďalej**.
 1. Zmeňte čokoľvek z nasledujúceho:

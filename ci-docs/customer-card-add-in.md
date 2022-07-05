@@ -1,6 +1,6 @@
 ---
-title: Doplnok zákazníckej karty pre aplikácie Dynamics 365 (obsahuje video)
-description: Zobrazujte údaje profilu zákazníka z Customer Insights v aplikáciách Dynamics 365 pomocou tohto doplnku.
+title: Doplnok zákazníckej karty pre aplikácie Dynamics 365 (ukážka) (obsahuje video)
+description: Pomocou tohto doplnku zobrazujte údaje profilu zákazníka z Customer Insights v aplikáciách Dynamics 365.
 ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755655"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082143"
 ---
-# <a name="customer-card-add-in-preview"></a>Doplnok Karta zákazníka (ukážka)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Doplnok zákazníckej karty pre aplikácie Dynamics 365 (ukážka)
 
 Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dynamics 365. Keď je v podporovanej aplikácii Dynamics 365 nainštalovaný doplnok karty zákazníka, môžete sa rozhodnúť zobrazovať polia profilu zákazníka, prehľady a časovú os aktivít. Doplnok načíta údaje z Customer Insights bez ovplyvnenia údajov v pripojenej aplikácii Dynamics 365.
 
@@ -29,14 +29,14 @@ Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dyn
 ## <a name="prerequisites"></a>Predpoklady
 
 - Doplnok funguje iba s aplikáciami Dynamics 365 riadenými modelmi, ako sú napríklad Sales alebo Customer Service, verzia 9.0 a novšia.
-- Odporúčame vám, aby sa vaše údaje Dynamics 365 namapovali na zákaznícke profily Customer Insights [prijaté z aplikácie Dynamics 365 pomocou Microsoft Dataverse konektor](connect-power-query.md). Ak na prijímanie kontaktov (alebo účtov) Dynamics 365 používate inú metódu, musíte sa uistiť`contactid` (alebo`accountid`) je nastavené ako [primárny kľúč pre tento zdroj údajov v kroku mapy procesu zjednotenia údajov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Odporúčame vám to, aby sa vaše údaje Dynamics 365 namapovali na zákaznícke profily Customer Insights [prijaté z aplikácie Dynamics 365 pomocou Microsoft Dataverse konektor](connect-power-query.md). Ak na prijímanie kontaktov (alebo účtov) Dynamics 365 používate inú metódu, musíte sa uistiť, že`contactid` (alebo`accountid`) je nastavené ako [primárny kľúč pre tento zdroj údajov v kroku mapy procesu zjednotenia údajov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Všetci používatelia Dynamics 365 doplnku Zákaznícka karta musia byť [pridané ako používatelia](permissions.md) v Customer Insights, aby ste videli údaje.
 - [Konfigurované možnosti vyhľadávania a filtrovania](search-filter-index.md) v Customer Insights sú potrebné na fungovanie vyhľadávania údajov.
 - Každý ovládací prvok doplnku závisí od konkrétnych údajov v Customer Insights. Niektoré údaje a ovládacie prvky sú k dispozícii iba v prostrediach špecifických typov. Konfigurácia doplnku vás bude informovať, ak ovládací prvok nie je dostupný z dôvodu zvoleného typu prostredia. Ďalšie informácie o [prípadoch použitia prostredia](work-with-business-accounts.md).
   - **Ovládací prvok Miera**: Vyžaduje [nakonfigurované miery](measures.md) typových atribútov zákazníkov.
   - **Kontrola inteligencie** : Vyžaduje údaje generované pomocou [predpovede alebo vlastné modely](predictions-overview.md).
   - **Ovládací prvok Podrobnosti o zákazníkovi**: Všetky polia z profilu sú k dispozícii v zjednotenom profile zákazníka.
-  - **Ovládací prvok Obohatenie**: Vyžaduje sa aktívne [obohatenia](enrichment-hub.md) aplikované na profily zákazníkov. Doplnok karty podporuje tieto vylepšenia: [Značky](enrichment-microsoft.md) poskytované spoločnosťou Microsoft, [Záujmy](enrichment-microsoft.md) poskytované spoločnosťou Microsoft a [Údaje o zapojení do kancelárie](enrichment-office.md) poskytovaná spoločnosťou Microsoft.
+  - **Ovládací prvok Obohatenie**: Vyžaduje sa aktívne [obohatenia](enrichment-hub.md) aplikované na profily zákazníkov. Doplnok karty podporuje tieto vylepšenia: [Značky](enrichment-microsoft.md) poskytované spoločnosťou Microsoft, [Záujmy](enrichment-microsoft.md) poskytované spoločnosťou Microsoft a [Údaje o zapojení do kancelárie](enrichment-office.md) poskytuje spoločnosť Microsoft.
   - **Ovládací prvok Kontakty**: Vyžaduje definíciu sémantickej entity typových kontaktov.
   - **Ovládací prvok Časová os**: Vyžadujú sa [nakonfigurované aktivity](activities.md).
 
@@ -77,7 +77,7 @@ Možno sa budete musieť prihlásiť so svojimi prihlasovacími údajmi, aby moh
 
 ## <a name="add-customer-card-controls-to-forms"></a>Pridanie ovládacích prvkov Zákazníckej karty do formulárov
 
-V závislosti od vášho scenára sa môžete rozhodnúť pridať ovládacie prvky do ktoréhokoľvek z formulárov **Kontakt** alebo **Obchodný vzťah**. Ak je vaše prostredie Customer Insights pre firemné účty, odporúčame vám pridať ovládacie prvky do formulára Účet. V takom prípade nahraďte „kontakt“ v nižšie uvedených krokoch „obchodným vzťahom“.
+V závislosti od vášho scenára sa môžete rozhodnúť pridať ovládacie prvky do ktoréhokoľvek z formulárov **Kontakt** alebo **Obchodný vzťah**. Ak je vaše prostredie Customer Insights určené pre firemné účty, odporúčame vám pridať ovládacie prvky do formulára Účet. V takom prípade nahraďte „kontakt“ v nižšie uvedených krokoch „obchodným vzťahom“.
 
 1. Ak chcete pridať ovládacie prvky Karty zákazníka do svojho formulára Kontakt, prejdite na stránku **Nastavenia** > **Prispôsobenia** v Dynamics 365.
 

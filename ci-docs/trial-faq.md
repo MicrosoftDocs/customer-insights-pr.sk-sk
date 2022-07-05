@@ -1,5 +1,5 @@
 ---
-title: Najčastejšie otázky o skúšobnej verzii – Dynamics 365 Customer Insights
+title: Časté otázky o skúšobnej verzii Dynamics 365 Customer Insights
 description: Riešenia bežných otázok súvisiacich so správou a nastavením skúšobnej verzie Customer Insights. Prečítajte si, ako vyriešiť problémy s platformou a aplikáciou.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 41f112466d54c9923d0daf7c55d343f9b5c81d98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011906"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051518"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Časté otázky o skúšobnej verzii Dynamics 365 Customer Insights
 
@@ -42,7 +42,7 @@ Keď sa zaregistrujete na skúšobnú verziu, dostanete e-mail s podrobnosťami 
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Ako do skúšobnej verzie pridám ďalších používateľov?
 
-Ak chcete pridať používateľov, prejdite do [Centra spravovania služby Microsoft 365](https://admin.microsoft.com) pomocou konta správcu skúšobnej verzie. Podľa [pokynov centra správcu](/microsoft-365/admin/add-users/add-users) pridajte používateľov do limitu skúšobnej licencie. Ak používateľ, ktorého pridávate, už má a Microsoft 365 účtu, priraďte im príslušné rola zabezpečenia v skúšobnej org. Ďalšie informácie nájdete v časti [Priraďte rola zabezpečenia používateľovi](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Ak chcete pridať používateľov, prejdite do [Centra spravovania služby Microsoft 365](https://admin.microsoft.com) pomocou konta správcu skúšobnej verzie. Podľa [pokynov centra správcu](/microsoft-365/admin/add-users/add-users) pridajte používateľov do limitu skúšobnej licencie. Ak používateľ, ktorého pridávate, už má a Microsoft 365 účtu, priraďte im vhodné rola zabezpečenia v skúšobnej org. Ďalšie informácie nájdete v časti [Priraďte rola zabezpečenia používateľovi](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Koľko používateľov môžem pridať do svojho skúšobného prostredia?
 

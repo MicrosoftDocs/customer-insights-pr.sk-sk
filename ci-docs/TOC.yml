@@ -80,7 +80,7 @@
       href: data-unification-update.md
 - name: Obohatenie údajov
   items:
-    - name: Obohatenie profilov zákazníkov
+    - name: Prehľad obohatenia údajov
       href: enrichment-hub.md
     - name: Účty z Office 365 údajov
       href: enrichment-office.md
@@ -112,7 +112,7 @@
       href: search-filter-index.md
     - name: Definujte aktivity zákazníka
       href: activities.md
-    - name: Správa súhlasu pre Customer Insights
+    - name: Použite správu súhlasu
       href: consent-management.md
 - name: Segmenty
   items:
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Reklamy Google
           href: export-google-ads.md
+        - name: InMobi
+          href: export-inmobi.md
         - name: Iterovateľné
           href: export-iterable.md
         - name: Klaviyo

@@ -1,5 +1,5 @@
 ---
-title: Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby
+title: Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby Azure
 description: Na pripojenie k vlastnému dátovému jazeru použite objekt služby Azure.
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011860"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082248"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Pripojenie k účtu Azure Data Lake Storage pomocou objektu služby Azure
 
@@ -26,8 +26,8 @@ Automatizované nástroje, ktoré využívajú služby Azure, by mali mať vždy
 
 > [!IMPORTANT]
 >
-> - Účet Data Lake Storage, ktorý bude používať principál služby, musí byť Gen2 a mať ho [hierarchický menný priestor povolený](/azure/storage/blobs/data-lake-storage-namespace). Účty úložiska Azure Data Lake Gen1 nie sú podporované.
-> - Na vytvorenie principála služby potrebujete oprávnenia správcu pre nájomník platformy Azure.
+> - Účet Data Lake Storage, ktorý bude používať principál služby, musí byť Gen2 a musí mať [povolený hierarchický menný priestor](/azure/storage/blobs/data-lake-storage-namespace). Účty úložiska Azure Data Lake Gen1 nie sú podporované.
+> - Na vytvorenie principála služby potrebujete administrátorské povolenia pre nájomník platformy Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Vytvorte objekt služby Azure pre Customer Insights
 
@@ -56,12 +56,12 @@ Prejdite na portál Azure a udeľte povolenia principálovi služby pre účet �
 |Poverenie|Požiadavky|
 |----------|------------|
 |Aktuálne prihlásený používateľ|**Role** : Čítačka dát objektu Storage Blob, prispievateľ objektu Storage Blob alebo vlastník objektu Storage Blob.<br>**úroveň** : Povolenia môžu byť udelené pre účet úložiska alebo kontajner.</br>|
-|Riaditeľ služby Customer Insights -<br>Použitím Azure Data Lake Storage ako zdroj údajov</br>|Možnosť č. 1<ul><li>**Role** : Čítačka údajov objektu Storage Blob, prispievateľ údajov objektu Storage Blob alebo vlastník údajov objektu Storage Blob.</li><li>**úroveň** : Povolenia by mali byť udelené účtu úložiska.</li></ul>Možnosť 2 *(bez zdieľania prístupu Principal služby k účtu úložiska)*<ul><li>**Úloha 1** : Čítačka údajov objektu Storage Blob, prispievateľ údajov objektu Storage Blob alebo vlastník údajov objektu Storage Blob.</li><li>**úroveň** : Na kontajneri by mali byť udelené povolenia.</li><li>**Úloha 2** : Storage Blob Data Delegator.</li><li>**úroveň** : Povolenia by mali byť udelené účtu úložiska.</li></ul>|
-|Riaditeľ služby Customer Insights - <br>Použitím Azure Data Lake Storage ako výstup alebo cieľ</br>|Možnosť č. 1<ul><li>**Role** : Prispievateľ údajov objektu Storage Blob alebo Vlastník objektu Storage Blob.</li><li>**úroveň** : Povolenia by mali byť udelené účtu úložiska.</li></ul>Možnosť 2 *(bez zdieľania prístupu Principal služby k účtu úložiska)*<ul><li>**Role** : Prispievateľ údajov objektu Storage Blob alebo Vlastník objektu Storage Blob.</li><li>**úroveň** : Na kontajneri by mali byť udelené povolenia.</li><li>**Úloha 2** : Storage Blob Delegator.</li><li>**úroveň** : Povolenia by mali byť udelené účtu úložiska.</li></ul>|
+|Riaditeľ služby Customer Insights –<br>Použitím Azure Data Lake Storage ako zdroj údajov</br>|Možnosť č. 1<ul><li>**Role** : Čítačka údajov objektu Storage Blob, prispievateľ údajov objektu Storage Blob alebo vlastník údajov objektu Storage Blob.</li><li>**úroveň** : Povolenia by mali byť udelené na účte úložiska.</li></ul>Možnosť 2 *(bez zdieľania prístupu Principal Service k účtu úložiska)*<ul><li>**Úloha 1** : Čítačka údajov objektu Storage Blob, prispievateľ údajov objektu Storage Blob alebo vlastník údajov objektu Storage Blob.</li><li>**úroveň** : Na kontajneri by mali byť udelené povolenia.</li><li>**Úloha 2** : Storage Blob Data Delegator.</li><li>**úroveň** : Povolenia by mali byť udelené na účte úložiska.</li></ul>|
+|Riaditeľ služby Customer Insights – <br>Použitím Azure Data Lake Storage ako výstup alebo cieľ</br>|Možnosť č. 1<ul><li>**Role** : Prispievateľ údajov objektu Storage Blob alebo Vlastník objektu Storage Blob.</li><li>**úroveň** : Povolenia by mali byť udelené na účte úložiska.</li></ul>Možnosť 2 *(bez zdieľania prístupu Principal Service k účtu úložiska)*<ul><li>**Role** : Prispievateľ údajov objektu Storage Blob alebo Vlastník objektu Storage Blob.</li><li>**úroveň** : Na kontajneri by mali byť udelené povolenia.</li><li>**Úloha 2** : Storage Blob Delegator.</li><li>**úroveň** : Povolenia by mali byť udelené na účte úložiska.</li></ul>|
 
 1. Prejdite do [portálu spravovania služby Azure](https://portal.azure.com) a prihláste sa do svojej organizácie.
 
-1. Otvorte účet úložiska, ku ktorému má mať prístup principál služby pre Customer Insights.
+1. Otvorte konto úložiska, ku ktorému má mať principál služby pre Customer Insights prístup.
 
 1. Na ľavej table vyberte **Kontrola prístupu (IAM)** a potom vyberte **Pridať** > **Pridať priradenie roly**.
 
@@ -70,7 +70,7 @@ Prejdite na portál Azure a udeľte povolenia principálovi služby pre účet �
 1. Na table **Pridať priradenie roly** nastavte nasledujúce vlastnosti:
    - Rola: Čítačka dát objektu Storage Blob, prispievateľ objektu Storage Blob alebo vlastník objektu Storage Blob na základe poverení uvedených vyššie.
    - Priradiť prístup k: **Používateľovi, skupine alebo objektu služby**
-   - Vyberte členov: **Dynamics 365 AI pre Customer Insights** (ten [príkazca služby](#create-a-new-service-principal) vyhľadali ste skôr v tomto postupe)
+   - Vyberte členov: **Dynamics 365 AI for Customer Insights** (ten [objednávateľ služby](#create-a-new-service-principal) vyhľadali ste skôr v tomto postupe)
 
 1. Vyberte **Preskúmať + priradiť**.
 
@@ -118,7 +118,7 @@ V Customer Insights môžete pripojiť účet Data Lake Storage [uložiť výstu
 
 2. Vytvorte objekt služby pre Customer Insights pomocou modulu Azure AD PowerShell.
 
-   1. Do okna PowerShell zadajte výraz `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Vymeňte *[ID vášho adresára]* so skutočným ID adresára vášho predplatného Azure, kde chcete vytvoriť principál služby. Parameter názvu prostredia, `AzureEnvironmentName`, je voliteľný.
+   1. Do okna PowerShell zadajte výraz `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Nahradiť *[ID vášho adresára]* so skutočným ID adresára vášho predplatného Azure, kde chcete vytvoriť principál služby. Parameter názvu prostredia, `AzureEnvironmentName`, je voliteľný.
   
    1. Zadajte `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Tento príkaz vytvorí objekt služby pre Customer Insights vo vybratom predplatnom Azure.
 

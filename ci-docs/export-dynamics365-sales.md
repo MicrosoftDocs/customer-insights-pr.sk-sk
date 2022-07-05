@@ -1,5 +1,5 @@
 ---
-title: Export údajov služby Customer Insights do Dynamics 365 Sales
+title: Export segmentov do Dynamics 365 Sales (ukážka)
 description: Zistite ako nakonfigurovať pripojenie a realizovať exportovanie do Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 987690283090ec83ca75f50bf8f3cd8da9295887
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643319"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082395"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Použitie segmentov v Dynamics 365 Sales (ukážka)
-
-
+# <a name="export-segments-to-dynamics-365-sales-preview"></a>Export segmentov do Dynamics 365 Sales (ukážka)
 
 Dynamics 365 Sales umožňuje pomocou zákazníckych údajov vytvárať marketingové zoznamy, sledovať pracovné postupy a odosielať propagačné akcie.
 
