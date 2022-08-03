@@ -14,86 +14,96 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050966"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170700"
 ---
 # <a name="segments-overview"></a>Prehľad segmentov
 
 Segmenty vám umožňujú zoskupiť zákazníkov na základe demografických, transakčných alebo behaviorálnych atribútov. Segmenty môžete použiť na zacielenie reklamných kampaní, predajných aktivít a akcií podpory zákazníkov na dosiahnutie vašich obchodných cieľov.
 
-Profily zákazníkov, ktoré zodpovedajú filtrom definície segmentu, sa označujú ako *členovia* segmentu. Platia niektoré [obmedzenia služby](/dynamics365/customer-insights/service-limits).
+Profily zákazníkov, ktoré zodpovedajú filtrom definície segmentu, sa označujú ako *členov* segmentu. Platia niektoré [obmedzenia služby](/dynamics365/customer-insights/service-limits).
 
-## <a name="create-a-new-segment"></a>Vytvorenie nového segmentu
+## <a name="create-a-segment"></a>Vytvoriť segment
 
-Existuje niekoľko spôsobov, ako vytvoriť nový segment: 
+Vyberte spôsob vytvorenia segmentu na základe vášho cieľového publika.
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
 
-- Komplexný segment s nástrojom na tvorbu segmentov: [Zostavte si vlastný](segment-builder.md#create-a-new-segment) 
-- Jednoduché segmenty s jedným operátorom: [Rýchly segment](segment-builder.md#quick-segments) 
-- Spôsob hľadania podobných zákazníkov pomocou technológie AI: [Podobní zákazníci](find-similar-customer-segments.md) 
-- Návrhy založené na AI založené na opatreniach alebo atribútoch: [Navrhované segmenty na zlepšenie opatrení](suggested-segments.md) 
-- Návrhy založené na činnostiach: [Navrhované segmenty na základe aktivity zákazníka](suggested-segments-activity.md) 
+- Komplexné segmenty s nástrojom na tvorbu segmentov: [Zostavte si svoj vlastný](segment-builder.md)
+- Jednoduché segmenty s jedným operátorom: [Rýchly segment](segment-quick.md)
+- Spôsob, ako nájsť podobných zákazníkov pomocou AI: [Podobní zákazníci](find-similar-customer-segments.md)
+- Návrhy založené na AI založené na mierach alebo atribútoch: [Navrhované segmenty na základe meraní](suggested-segments.md)
+- Návrhy založené na činnostiach: [Navrhované segmenty na základe aktivity zákazníka](suggested-segments-activity.md)
 
 # <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
 
-- Komplexný segment s nástrojom na tvorbu segmentov: [Zostavte si vlastný](segment-builder.md#create-a-new-segment)
+- Jednoduché alebo zložité segmenty s nástrojom na tvorbu segmentov: [Zostavte si svoj vlastný](segment-builder.md)
 
 ---
 
 ## <a name="manage-existing-segments"></a>Spravovanie existujúcich segmentov
 
-Choďte na **Segmenty** na zobrazenie všetkých uložených segmentov a ich správu.
+Choďte na **Segmenty** zobrazíte segmenty, ktoré ste vytvorili, ich stav a stav, počet členov a čas poslednej aktualizácie údajov. Zoznam segmentov môžete zoradiť podľa ľubovoľného stĺpca alebo pomocou vyhľadávacieho poľa nájsť segment, ktorý chcete spravovať.
 
-Každý segment je reprezentovaný radom, ktorý obsahuje ďalšie informácie o segmente.
+Ak chcete zobraziť dostupné akcie, vyberte segment.
 
 :::image type="content" source="media/segments-selected-segment.png" alt-text="Vybratý segment s rozbaľovacím zoznamom možností a dostupnými možnosťami." lightbox="media/segments-selected-segment.png":::
 
-Keď vyberiete segment, sú k dispozícii nasledujúce akcie:
-
-- **Zobrazenie** podrobností o segmente vrátane trendu počtu členov a ukážky členov segmentu.
+- [**vyhliadka**](#view-segment-details) podrobnosti o segmente vrátane trendu počtu členov a náhľadu členov segmentu.
 - **Stiahnutie** zoznam členov ako súbor .CSV.
 - **Úprava** segmentu na zmenu jeho vlastností.
 - **Vytvorte duplikát** segmentu. Môžete sa rozhodnúť upraviť jeho vlastnosti ihneď alebo uložiť duplikát.
-- **Obnova** segmentu, ktorý obsahuje najnovšie údaje.
-- **Aktivácia** alebo **deaktivácia** segmentu. Pre neaktívne segmenty existuje definícia segmentu, zatiaľ však neobsahuje žiadnych zákazníkov. Aktívny segment hľadá zákazníkov, ktorí zodpovedajú definícii segmentu. Ak je [plánované obnovenie](system.md#schedule-tab) nakonfigurované, neaktívne segmenty majú **Postavenie** uvedené ako **Preskočené**, čo naznačuje, že k obnoveniu ani nedošlo. Keď je neaktívny segment aktivovaný, obnoví sa a bude zahrnutý do plánovaných aktualizácií.
-  Prípadne môžete použiť funkciu **Naplánovať neskôr** v rozbaľovacej ponuke **Aktivácia/Deaktivácia** na určenie budúceho dátumu a času aktivácie a deaktivácie konkrétneho segmentu.
-- **[Nájdite podobných zákazníkov](find-similar-customer-segments.md)** zo segmentu.
+- [**Obnoviť**](#refresh-segments) segment, ktorý obsahuje najnovšie údaje.
+- **Aktivácia** alebo **deaktivácia** segmentu. Neaktívne segmenty sa počas a [plánované obnovenie](system.md#schedule-tab) a mať **Postavenie** uvedené ako **Preskočené**, čo naznačuje, že sa ani nepokúsili o obnovenie. Aktívne segmenty sa obnovujú podľa ich typu: statické alebo dynamické.
+- **Urobte statické** alebo **Urobte dynamický** typ segmentu. Statické segmenty sa musia obnoviť manuálne. Dynamické segmenty sa automaticky obnovujú počas obnovovania systému.
+- [**Nájdite podobných zákazníkov**](find-similar-customer-segments.md) zo segmentu.
 - **Premenovanie** segmentu.
 - **Tag** do [spravovať značky](work-with-tags-columns.md#manage-tags) pre segment.
-- **Stiahnutie** zoznam členov ako súbor .CSV.
-- **Spravujte exporty**, ak chcete zobraziť segmenty súvisiace s exportom a spravovať ich. [Ďalšie informácie o exportoch.](export-destinations.md)
+- [**Spravujte exporty**](#export-segments) zobraziť segmenty súvisiace s exportom a spravovať ich. [Ďalšie informácie o exportoch.](export-destinations.md)
 - **Odstránenie** segmentu.
 - **Stĺpce** do [prispôsobiť stĺpce](work-with-tags-columns.md#customize-columns) ten displej.
 - **Filter** do [filtrovať podľa značiek](work-with-tags-columns.md#filter-on-tags).
 - **Vyhľadať meno** na vyhľadávanie podľa názvu segmentu.
 
+## <a name="view-segment-details"></a>Zobraziť podrobnosti segmentu
+
+Na **Segmenty** vyberte segment na zobrazenie histórie spracovania a členov segmentu.
+
+Horná časť stránky obsahuje graf trendov, ktorý vizualizuje zmeny v počte členov. Ak umiestnite kurzor myši nad údajové body, zobrazí sa počet členov k určitému dátumu. Zmeňte časový rámec vizualizácie.
+
+:::image type="content" source="media/segment-time-range.png" alt-text="Časový rozsah segmentu.":::
+
+Spodná časť obsahuje zoznam členov segmentu.
+
+> [!NOTE]
+> Polia, ktoré sa nachádzajú v tomto zozname, sú založené na atribútoch entít vášho segmentu.
+>
+>Zoznam predstavuje ukážku zodpovedajúcich členov segmentu a zobrazuje prvých 100 záznamov segmentu, aby ste ho mohli rýchlo vyhodnotiť a podľa potreby skontrolovať jeho definície. Ak chcete zobraziť všetky zodpovedajúce záznamy, [exportovať segment](export-destinations.md).
+
 ## <a name="refresh-segments"></a>Obnovenie segmentov
 
-Výberom možnosti **Obnoviť všetko** na stránke **Segmenty** môžete obnoviť všetky segmenty naraz alebo môžete jeden alebo viac segmentov, keď ich vyberiete a následne vyberiete **Obnoviť** z možností. Prípadne môžete nakonfigurovať opakujúce sa obnovovanie v ponuke **Správca** > **Systém** > **Plán**. Keď je nakonfigurované opakované obnovenie, platia nasledujúce pravidlá:
+Segmenty je možné obnoviť podľa automatického plánu alebo manuálne na požiadanie. Ak chcete manuálne obnoviť jeden alebo viac segmentov, vyberte ich a vyberte **Obnoviť**.
 
-- Všetky segmenty s typom **Dynamický** alebo **Rozšírenie** sa automaticky obnoví pri nastavenej kadencii. Po dokončení obnovy **Postavenie** označuje, či sa vyskytli nejaké problémy pri obnovovaní segmentu. The **Naposledy obnovené** zobrazuje časovú pečiatku posledného úspešného obnovenia. Ak sa vyskytne chyba, výberom chyby zobrazíte podrobnosti o tom, čo sa stalo.
-- Segmenty s typom **Statické** *nebude* automaticky obnovovať. The **Naposledy obnovené** zobrazuje časovú pečiatku posledného spustenia alebo manuálnej obnovy statických segmentov.
+Komu [naplánovať automatické obnovenie](system.md#schedule-tab), ísť do **Admin** > **Systém** > **Rozvrh**. Platia nasledujúce pravidlá:
+
+- Všetky segmenty s typom **Dynamický** alebo **Rozšírenie** sa automaticky obnoví pri nastavenej kadencii. Po dokončení obnovy sa **Postavenie** označuje, či sa vyskytli nejaké problémy pri obnovovaní segmentu. The **Naposledy obnovené** zobrazuje časovú pečiatku posledného úspešného obnovenia. Ak sa vyskytne chyba, výberom chyby zobrazíte podrobnosti o tom, čo sa stalo.
+- Segmenty s typom **Statické** *nebude* automaticky obnovovať. The **Naposledy obnovené** zobrazuje časovú pečiatku posledného manuálneho spustenia alebo obnovenia statický segment.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Segmenty exportu
 
-Segment môžete exportovať zo stránky so segmentmi alebo zo [stránky s exportom](export-destinations.md). 
+Ak chcete údaje ďalej využívať, exportujte segmenty do iných aplikácií. Exportujte segment zo stránky segmentov alebo [stránku exportu](export-destinations.md).
 
-1. Prejdite na stránku **Segmenty**.
+1. Choďte na **Segmenty** a vyberte segment, ktorý chcete exportovať.
 
-1. Vyberte zvislú elipsu (&vellip;) pre segment, ktorý chcete exportovať.
+1. Vyberte **Spravujte exporty**. Otvorí sa stránka **Exporty (verzia Preview) pre segment**. Zobrazte všetky nakonfigurované exporty zoskupené podľa toho, či obsahujú aktuálny segment alebo nie.
 
-1. Z rozbaľovacieho zoznamu akcií si vyberte možnosť **Spravovať exporty**.
-
-1. Otvorí sa stránka **Exporty (verzia Preview) pre segment**. Všetky nakonfigurované exporty môžete vidieť zoskupené podľa toho, či obsahujú aktuálny segment alebo nie.
-
-   1. Ak chcete vybratý segment pridať do exportu, **Upravte** príslušný export, vyberte príslušný segment a potom ho uložte. V prostrediach pre jednotlivých zákazníkov môžete namiesto toho vybrať export v zozname a vybrať **Pridať segment** dosiahnuť rovnaký výsledok.
+   1. Ak chcete vybratý segment pridať do exportu, **Upravte** príslušný export, vyberte príslušný segment a potom ho uložte. V prostrediach pre jednotlivých zákazníkov vyberte export v zozname a vyberte **Pridať segment** dosiahnuť rovnaký výsledok.
 
    1. Ak chcete vytvoriť nový export s vybraným segmentom, vyberte **Pridať export**. Ďalšie informácie o vytváraní exportu nájdete v článku [Nastavenie nového exportu](export-destinations.md#set-up-a-new-export).
 
@@ -101,11 +111,11 @@ Segment môžete exportovať zo stránky so segmentmi alebo zo [stránky s expor
 
 ## <a name="track-usage-of-a-segment"></a>Sledujte využitie segmentu
 
-Ak v aplikáciách používate segmenty, ktoré sú založené na tom istom Microsoft Dataverse organizácie, ktorá je prepojená s Customer Insights, môžete sledovať využitie segmentu. Pre [Segmenty Customer Insights používané na cestách zákazníkov Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), systém vás informuje o využití daného segmentu.
+Ak používate segmenty v aplikáciách, ktoré sú založené na tom istom Microsoft Dataverse organizácie, ktorá je prepojená s Customer Insights, môžete sledovať využitie segmentu. Pre [Segmenty Customer Insights používané na cestách zákazníkov Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), systém vás informuje o využití daného segmentu.
 
-Pri úprave segmentu, ktorý sa používa v prostredí Customer Insights alebo v činnosť zákazníka v marketingu, sa banner v [tvorca segmentov](segment-builder.md) vás informuje o závislostiach. Podrobnosti o závislosti môžete skontrolovať priamo z bannera alebo výberom **Použitie** v nástroji na tvorbu segmentov.
+Pri úprave segmentu, ktorý sa používa v prostredí Customer Insights alebo v činnosť zákazníka v marketingu, sa banner v [tvorca segmentov](segment-builder.md) vás informuje o závislostiach. Skontrolujte podrobnosti o závislosti priamo z bannera alebo výberom **Použitie** v nástroji na tvorbu segmentov.
 
-The **Použitie segmentu** panel zobrazuje podrobnosti o použití tohto segmentu v Dataverse -založené aplikácie. Pre segmenty používané v cestách zákazníkov nájdete odkaz na kontrolu cesty v Marketingu, kde sa tento segment používa. Ak máte povolenia na prístup k aplikácii Marketing, môžete tam získať ďalšie podrobnosti.
+The **Použitie segmentu** panel zobrazuje podrobnosti o použití tohto segmentu v Dataverse -založené aplikácie. Pre segmenty používané v cestách zákazníkov nájdete odkaz na kontrolu cesty v Marketingu, kde sa tento segment používa. Ak máte povolenia na prístup k aplikácii Marketing, pozrite si tam ďalšie podrobnosti.
 
 :::image type="content" source="media/segment-usage-pane.png" alt-text="Bočný panel s podrobnosťami o použití segmentu v nástroji na tvorbu segmentov.":::
 
@@ -118,25 +128,5 @@ Systém vás informuje o použití sledovaného segmentu, keď sa ho pokúsite o
 Využitie je momentálne sledované nasledovne Dataverse aplikácie založené na:
 
 - [Cesty zákazníkov v Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
-
-## <a name="view-processing-history-and-segment-members"></a>Zobrazenie histórie spracovania a členov segmentu
-
-Ak chcete zobraziť konsolidované údaje o segmente, prečítajte si podrobnosti.
-
-Na stránke **Segmenty** vyberte segment, ktorý chcete skontrolovať.
-
-Horná časť stránky obsahuje graf trendov, ktorý vizualizuje zmeny v počte členov. Ak umiestnite kurzor myši nad údajové body, zobrazí sa počet členov k určitému dátumu.
-
-Môžete aktualizovať časový rámec vizualizácie.
-
-> [!div class="mx-imgBorder"]
-> ![Časový rozsah segmentu.](media/segment-time-range.png "Časový rozsah segmentu")
-
-Spodná časť obsahuje zoznam členov segmentu.
-
-> [!NOTE]
-> Polia, ktoré sa nachádzajú v tomto zozname, sú založené na atribútoch entít vášho segmentu.
->
->Zoznam predstavuje ukážku zodpovedajúcich členov segmentu a zobrazuje prvých 100 záznamov segmentu, aby ste ho mohli rýchlo vyhodnotiť a podľa potreby skontrolovať jeho definície. Ak chcete zobraziť všetky zodpovedajúce záznamy, musíte [exportovať segment](export-destinations.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

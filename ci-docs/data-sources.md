@@ -1,7 +1,7 @@
 ---
 title: Prehľad zdrojov údajov
 description: Zistite, ako importovať alebo prijímať údaje z rôznych zdrojov.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051472"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207110"
 ---
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
 Dynamics 365 Customer Insights poskytuje pripojenia na prenos údajov zo širokej škály zdrojov. Pripojenie k zdroju údajov sa často označuje ako proces *prijímania údajov*. Po prijatí údajov môžete [zjednotiť](data-unification.md), generovať štatistiky a aktivovať údaje na vytváranie prispôsobených skúseností.
 
-## <a name="add-data-sources"></a>Pridať zdroje údajov
+## <a name="add-or-edit-data-sources"></a>Pridajte alebo upravte zdroje údajov
 
-Do Customer Insights môžete pripojiť alebo importovať zdroje údajov. Nižšie uvedené odkazy poskytujú pokyny na pridávanie zdrojov údajov.
+Do Customer Insights môžete pripojiť alebo importovať zdroje údajov. Nižšie uvedené odkazy poskytujú pokyny na pridávanie a úpravu zdrojov údajov.
 
 **Pripojte zdroj údajov**
 
@@ -50,13 +50,18 @@ Ak bolo vaše prostredie nakonfigurované na používanie úložiska Customer In
 
 Ak vaše prostredie nepoužíva Power Platform dátové toky, **Zdroje dát** obsahuje iba zoznam všetkých zdrojov údajov. Nezobrazujú sa žiadne sekcie.
 
-Ísť do **Údaje** > **Zdroje dát** zobraziť názov každého prijatého zdroj údajov, jeho stav a čas poslednej aktualizácie údajov pre daný zdroj. Zoznam zdrojov údajov môžete zoradiť podľa každého stĺpca.
+## <a name="manage-existing-data-sources"></a>Spravujte existujúce zdroje údajov
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Pridaný zdroj údajov.":::
+Ísť do **Údaje** > **Zdroje dát** zobraziť názov každého prijatého zdroj údajov, jeho stav a čas poslednej aktualizácie údajov pre daný zdroj. Zoznam zdrojov údajov môžete zoradiť podľa ľubovoľného stĺpca alebo pomocou vyhľadávacieho poľa nájsť zdroj údajov, ktorý chcete spravovať.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Ak chcete zobraziť dostupné akcie, vyberte zdroj údajov.
 
-Načítanie údajov môže chvíľu trvať. Po úspešnom obnovení môžu byť prijaté údaje preskúmané na stránke **Entity**. Ďalšie informácie nájdete v časti [Entity](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Pridaný zdroj údajov.":::
+
+- [**Upraviť**](#add-or-edit-data-sources) zdroj údajov na zmenu jeho vlastností.
+- [**Obnoviť**](#refresh-data-sources) zdroj údajov na zahrnutie najnovších údajov.
+- [**Obohatiť**](data-sources-enrichment.md) zdroj údajov pred zjednotením.
+- **Odstrániť** zdroj údajov. Zdroj údajov je možné vymazať iba vtedy, ak sa údaje nepoužívajú pri žiadnom spracovaní, ako je zjednotenie, prehľady, aktivácie alebo exporty.
 
 ## <a name="refresh-data-sources"></a>Obnovenie zdrojov údajov
 
@@ -64,23 +69,12 @@ Zdroje údajov je možné obnovovať automaticky alebo podľa potreby manuálne.
 
 Ísť do **Admin** > **Systém** > [**Rozvrh**](system.md#schedule-tab) na konfiguráciu systémovo naplánovaných obnovení vašich prijatých zdrojov údajov.
 
-Ak chcete obnoviť zdroj údajov na požiadanie, postupujte takto:
+Ak chcete obnoviť zdroj údajov na požiadanie:
 
 1. Prejdite do **Údaje** > **Zdroje údajov**.
 
-1. Vyberte zvislú elipsu (&vellip;) vedľa zdroj údajov, ktorý chcete obnoviť a vybrať **Obnoviť** z rozbaľovacieho zoznamu. Zdroj údajov je teraz spustený na účely manuálneho obnovenia. Obnovením zdroja údajov sa aktualizuje schéma entity aj údaje pre všetky entity uvedené v zdroji údajov.
+1. Vyberte zdroj údajov, ktorý chcete obnoviť, a vyberte **Obnoviť**. Zdroj údajov je teraz spustený na účely manuálneho obnovenia. Obnovením zdroja údajov sa aktualizuje schéma entity aj údaje pre všetky entity uvedené v zdroji údajov.
 
-1. Vyberte položku **Zastaviť obnovovanie**, ak chcete zrušiť existujúce obnovenie a zdroj údajov sa vráti do posledného stavu obnovenia.
-
-## <a name="delete-a-data-source"></a>Odstránenie zdroja údajov
-
-Zdroj údajov je možné vymazať iba vtedy, ak sa údaje nepoužívajú pri žiadnom spracovaní, ako je zjednotenie, prehľady, aktivácie alebo exporty.
-
-1. Prejdite do **Údaje** > **Zdroje údajov**.
-
-2. Vyberte zvislú elipsu (&vellip;) vedľa zdroj údajov, ktorý chcete odstrániť a vybrať **Odstrániť** z rozbaľovacej ponuky.
-
-3. Potvrďte odstránenie.
-
+1. Vyberte stav, ktorý chcete otvoriť **Podrobnosti o pokroku** panel a zobraziť priebeh. Ak chcete úlohu zrušiť, vyberte **Zrušiť úlohu** v spodnej časti tabule.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

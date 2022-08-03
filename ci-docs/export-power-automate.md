@@ -1,19 +1,19 @@
 ---
 title: Power Automate konektor (náhľad) | Dokumenty Microsoft
 description: Vytvorenie postupov v Microsoft Power Automate z Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082458"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196137"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (ukážka)
 
@@ -21,18 +21,18 @@ ms.locfileid: "9082458"
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Môžete uskutočniť maximálne 100 hovorov za 60 sekúnd. Koncový bod API môžete volať viackrát pomocou parametra $skip. [Prečítajte si viac o parametri $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Maximálne 100 hovorov za 60 sekúnd. Použi [$skip parameter](/connectors/customerinsights/#get-items-from-an-entity) viackrát zavolať koncový bod API.
 
 ## <a name="power-automate-triggers"></a>Spúšťače Power Automate
 
-Pomocou spúšťačov môžete vytvárať postupy v cloude a automatizovať opakujúce sa úlohy, napríklad oznámenia alebo pokročilejšie akcie.
+Pomocou spúšťačov môžete vytvárať postupy v cloude a automatizovať opakujúce sa úlohy, napríklad oznámenia alebo pokročilejšie akcie. Použite spúšťače, keď:
 
-- Spúšťač pri zlyhaní obnovenia zdroja údajov.
-- Spúšťač pri úspešnom obnovení zdroja údajov.
-- Spúšťač pri prekročení prahu v segmente. Spúšťač je obmedzený na prekročenie prahu.
-- Spúšťač pri prekročení prahu vo firemnej miere. Podporované sú len podnikové opatrenia bez dimenzie. Spúšťač je obmedzený na prekročenie prahu.
-- Spustí sa, keď sa dokončí úplné obnovenie (zdrojov údajov, segmentov, mier, ...).
-- Spustite sa po dokončení obnovy procesu zjednotenia.
+- Obnovenie zdroj údajov zlyhá.
+- Obnovenie zdroj údajov je úspešné.
+- Na segmente je prekročený prah. Spúšťač je obmedzený na prekročenie prahu.
+- Pri obchodnom opatrení je prekročená hranica. Podporované sú len podnikové opatrenia bez dimenzie. Spúšťač je obmedzený na prekročenie prahu.
+- Úplné naplánované obnovenie je dokončené. Tento spúšťač nefunguje pre manuálne spustené obnovy.
+- Obnovenie procesu zjednotenia je dokončené.
 
 [Nakonfigurujte svoje spúšťače v službe Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Konektor Power Automate poskytuje iné akcie ako dostupné spúšťače. Viac in
 
 ## <a name="create-a-power-automate-flow"></a>Vytvorte postup Power Automate
 
-1. Prejdite do ponuky **Správca** > **Ciele exportu**.
+1. Prejdite do časti **Správca** > **Pripojenia**.
 
 1. Na dlaždici **Power Automate** vyberte **Nastaviť**.
 
@@ -53,7 +53,5 @@ Konektor Power Automate poskytuje iné akcie ako dostupné spúšťače. Viac in
 Príklady použitia tokov: 
 - Pošlite správu do kanála Microsoft Teams, ak zlyhá obnovenie zdroja údajov. 
 - Po prekročení prahovej hodnoty v segmente pošlite e-mail vlastníkom údajov.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

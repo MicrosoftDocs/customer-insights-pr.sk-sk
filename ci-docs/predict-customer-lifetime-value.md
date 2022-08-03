@@ -1,7 +1,7 @@
 ---
 title: Predikcia hodnoty životnosti zákazníka (CLV)
 description: Predpovedajte potenciálny výnos pre aktívnych zákazníkov v budúcnosti.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055233"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186459"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predikcia hodnoty životnosti zákazníka (CLV)
 
 Predikujte potenciálnu hodnotu (výnos), ktorú jednotliví aktívni zákazníci prinesú do vášho podnikania v definovanom budúcom časovom období. Táto funkcia vám môže pomôcť dosiahnuť rôzne ciele:
+
 - Identifikovať zákazníkov s vysokou hodnotou a spracovať tento prehľad
 - Vytvárať strategické zákaznícke segmenty na základe ich potenciálnej hodnoty pre uskutočňovanie personalizovaných kampaní s cieleným predajom, marketingom a podporou
 - Usmerňovať vývoj produktov zameraním na funkcie, ktoré zvyšujú hodnotu zákazníka
 - Optimalizovať predajnú alebo marketingovú stratégiu a presnejšie rozdeľovať rozpočet na získavanie zákazníkov
-- Identifikovať a odmeňovať zákazníkov s vysokou hodnotou prostredníctvom vernostných programov alebo programov odmien 
+- Identifikovať a odmeňovať zákazníkov s vysokou hodnotou prostredníctvom vernostných programov alebo programov odmien
 
 ## <a name="prerequisites"></a>Predpoklady
 
@@ -35,7 +36,7 @@ Skôr ako začnete, sa zamyslite, čo CLV znamená pre vaše podnikanie. V súč
 
 Pretože konfigurácia a spustenie modelu CLV netrvá dlho, zvážte vytvorenie niekoľkých modelov s rôznymi preferenciami vstupu a porovnajte výsledky modelu, aby ste zistili, ktorý modelový scenár najlepšie vyhovuje vašim obchodným potrebám.
 
-###  <a name="data-requirements"></a>Požiadavky na údaje
+### <a name="data-requirements"></a>Požiadavky na údaje
 
 Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú pre zvýšenie výkonu modelu. Čím viac údajov bude môcť model spracovať, tým presnejšia bude predikcia. Preto vám odporúčame, aby ste prijali viac údajov o aktivite zákazníkov, ak sú k dispozícii.
 
@@ -52,11 +53,12 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
     - Webové aktivity: história návštev webových stránok, história e-mailov
     - Vernostné aktivity: prírastky vernostných bonusových bodov a história uplatnení
     - Denník služieb pre zákazníkov, servisné volanie, reklamácia alebo história vrátení
+    - Informácie o profile zákazníka
 - Údaje o aktivitách zákazníka (voliteľné):
     - Identifikátory aktivity na rozlíšenie aktivít rovnakého typu
     - Identifikátory zákazníka na mapovanie aktivít vašich zákazníkov
     - Informácie o činnosti obsahujúce názov a dátum aktivity
-    - Schéma sémantických údajov pre aktivity obsahuje: 
+    - Schéma sémantických údajov pre aktivity obsahuje:
         - **Primárny kľúč:** Jedinečný identifikátor aktivity.
         - **Časová značka**: Dátum a čas udalosti identifikovaný primárnym kľúčom.
         - **Udalosť (názov aktivity)**: Názov udalosti, ktorý chcete použiť
@@ -66,7 +68,7 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
     - Dostatočné historické údaje: Aspoň jeden rok transakčných údajov. Najlepšie je dva až tri roky transakčných údajov na predpovedanie CLV na jeden rok.
     - Viacnásobné nákupy na zákazníka: V ideálnom prípade minimálne dve až tri transakcie na jedno ID zákazníka, najlepšie vo viacerých dátumoch.
     - Počet zákazníkov: Minimálne 100 jedinečných zákazníkov, najlepšie viac ako 10 000 zákazníkov. Model zlyhá s menej ako 100 zákazníkmi a nedostatkom historických údajov.
-    - Úplnosť údajov: Menej ako 20 % chýbajúcich hodnôt v povinných poliach vstupných údajov   
+    - Úplnosť údajov: Menej ako 20 % chýbajúcich hodnôt v povinných poliach vstupných údajov
 
 > [!NOTE]
 > - Tento model vyžaduje históriu transakcií vašich zákazníkov. Aktuálne je možné nakonfigurovať iba jednu entitu histórie transakcií. Ak existuje viacero nákupných/transakčných subjektov, môžete ich spojiť Power Query pred prijímaním údajov.
@@ -122,11 +124,11 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
 
 1. Vyberte **Ďalej**.
 
-### <a name="add-optional-data"></a>Pridať voliteľné údaje
+### <a name="add-optional-activity-data"></a>Pridajte voliteľné údaje o aktivite
 
-Údaje odrážajúce kľúčové interakcie so zákazníkom (napríklad web, služby pre zákazníkov a protokoly udalostí) pridávajú do záznamov transakcií kontext. Ďalšie vzory, ktoré sa nachádzajú v dátach o aktivite zákazníka, môžu zlepšiť presnosť predikcií. 
+Údaje odrážajúce kľúčové interakcie so zákazníkom (napríklad web, služby pre zákazníkov a protokoly udalostí) pridávajú do záznamov transakcií kontext. Ďalšie vzory, ktoré sa nachádzajú v dátach o aktivite zákazníka, môžu zlepšiť presnosť predikcií.
 
-1. V kroku **Dodatočné údaje (voliteľné)** vyberte **Pridať údaje**. Vyberte entitu aktivity zákazníka, ktorá poskytuje informácie o aktivite zákazníka, ako je opísané v [nevyhnutných podmienkach](#prerequisites).
+1. V **Ďalšie údaje (voliteľné)** krok, vyberte **Pridajte údaje** pod **Rozšírte štatistiky modelu o ďalšie údaje o aktivite**. Vyberte entitu aktivity zákazníka, ktorá poskytuje informácie o aktivite zákazníka, ako je opísané v [nevyhnutných podmienkach](#prerequisites).
 
 1. Mapujte sémantické polia na atribúty v entite aktivity zákazníka a vyberte **Ďalej**.
 
@@ -135,15 +137,34 @@ Nasledujúce údaje sú povinné. Označené voliteľné údaje sa odporúčajú
 1. Vyberte typ aktivity, ktorý zodpovedá typu aktivity zákazníka, ktorú pridávate. Vyberte si z existujúcich typov aktivít alebo pridajte nový typ aktivity.
 
 1. Nakonfigurujte vzťah medzi entitou aktivity zákazníkov a entitou *Zákazník*.
-    
+
     1. Vyberte pole, ktoré identifikuje zákazníka v tabuľke aktivity zákazníkov. Môže to priamo súvisieť s primárnym ID zákazníka vašej entity *Zákazník*.
     1. Vyberte entitu *Zákazník*, ktorá sa zhoduje s vašou primárnou entitou *Zákazník*.
     1. Zadajte názov, ktoré opisuje vzťah.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Obrázok kroku v konfiguračnom postupe na pridanie ďalších údajov a konfiguráciu aktivity s vyplnenými príkladmi.":::
 
-1. Vyberte položku **Uložiť**.    
+1. Vyberte položku **Uložiť**.
     Pridajte ďalšie údaje, ak chcete zahrnúť aj ďalšie aktivity zákazníkov.
+
+1. Pridajte voliteľné údaje zákazníka alebo vyberte **Ďalšie**.
+
+### <a name="add-optional-customer-data"></a>Pridajte voliteľné údaje o zákazníkovi
+
+Vyberte si z 18 bežne používaných atribútov profilu zákazníka, ktoré chcete zahrnúť ako vstup do modelu. Tieto atribúty môžu viesť k prispôsobenejším, relevantnejším a použiteľnejším výsledkom modelov pre vaše obchodné prípady použitia.
+
+Napríklad: Contoso Coffee chce predpovedať celoživotnú hodnotu zákazníka a zacieliť na zákazníkov s vysokou hodnotou pomocou personalizovanej ponuky súvisiacej s uvedením ich nového kávovaru na espresso. Contoso používa model CLV a pridáva všetkých 18 atribútov profilu zákazníka, aby zistil, ktoré faktory ovplyvňujú ich zákazníkov s najvyššou hodnotou. Zistia, že poloha zákazníka je pre týchto zákazníkov najvplyvnejším faktorom.
+Na základe týchto informácií organizujú miestne podujatie na uvedenie kávovaru na espresso a spolupracujú s miestnymi predajcami za účelom prispôsobenia ponúk a špeciálneho zážitku na podujatí. Bez týchto informácií by Contoso možno poslal iba všeobecné marketingové e-maily a premeškal príležitosť prispôsobiť sa pre tento miestny segment svojich vysokohodnotných zákazníkov.
+
+1. V **Ďalšie údaje (voliteľné)** krok, vyberte **Pridajte údaje** pod **Rozšírte informácie o modeli ešte viac pomocou dodatočných údajov o zákazníkoch**.
+
+1. Pre **Entita**, vyberte si **Zákazník: CustomerInsights** vyberte zjednotenú tabuľku profilu zákazníka, ktorá sa mapuje na údaje atribútov zákazníka. Pre **ID zákazníka**, vyberte si **System.Customer.CustomerId**.
+
+1. Mapujte viac polí, ak sú údaje dostupné vo vašich zjednotených zákazníckych profiloch.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Príklad namapovaných polí pre údaje profilu zákazníka.":::
+
+1. Vyberte **Uložiť** po zmapovaní atribútov, ktoré by mal model použiť na predpovedanie celoživotnej hodnoty zákazníka.
 
 1. Vyberte **Ďalej**.
 

@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 766e688cb80c50a0d620943f87b76eb84a2fb89a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082227"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139537"
 ---
 # <a name="data-unification-overview"></a>Prehľad zjednotenia údajov
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Po [nastavení zdrojov údajov](data-sources.md) môžete údaje zjednotiť. Zjednotenie údajov vám umožňuje zjednotiť kedysi nesúrodé zdroje údajov do jedného hlavného súboru údajov, ktorý poskytuje jednotný pohľad na tieto údaje. Pre individuálnych spotrebiteľov (B-to-C), kde sú údaje sústredené okolo jednotlivcov, zjednotenie poskytuje jednotný pohľad na vašich zákazníkov. Pre firemné účty (B-to-B), kde sú údaje sústredené okolo účtov, zjednotenie poskytuje jednotný pohľad na vaše účty.
 

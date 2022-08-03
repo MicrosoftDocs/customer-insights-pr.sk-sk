@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643978"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171114"
 ---
 # <a name="transaction-churn-prediction"></a>Predikcia odchodov založená na transakciách
 
@@ -120,7 +120,7 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
    >[!TIP]
    > Môžete si vybrať **Uložiť koncept** kedykoľvek uložiť predikcia ako koncept. Draft predikcie nájdete na karte **Moje predikcie**, kde môžete pokračovať.
 
-1. Zadajte počet dní, počas ktorých sa má definovať odchod **Definícia míňania** lúka. Ak napríklad zákazník za posledných 30 dní neuskutočnil žiadne nákupy, môže sa považovať pre vašu firmu za odídeného. 
+1. Zadajte počet dní na definovanie odchodu **Definícia odchodu** lúka. Ak napríklad zákazník za posledných 30 dní neuskutočnil žiadne nákupy, môže sa považovať pre vašu firmu za odídeného. 
 
 1. Na pokračovanie zvoľte možnosť **Ďalej**.
 
@@ -128,7 +128,7 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
 
 1. Označte položku **Pridať údaje** a na bočnej tabli označte typ aktivity obsahujúci požadované údaje o histórii transakcií alebo nákupov.
 
-1. Pod **Vyberte aktivity**, vyberte konkrétne aktivity z vybraného typu aktivity, na ktoré sa má výpočet zamerať.
+1. Pod **Vyberte aktivity**, vyberte konkrétne aktivity z vybratého typu aktivity, na ktoré sa má výpočet zamerať.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Bočná tabla zobrazujúca výber daných činností v rámci sémantického typu.":::
 
@@ -136,7 +136,7 @@ V prostrediach založených na firemných obchodných vzťahoch môžeme prediko
 
 1. Namapujte atribúty sémantiky na polia, ktoré sú nutné na to, aby sa model spustil. Ak polia uvedené nižšie nie sú vyplnené, nakonfigurujte vzťah medzi entitou histórie nákupov a entitou *Zákazník*. Vyberte **Uložiť**.
 
-1. V **Pridajte požadované údaje** krok, vyberte **Ďalšie** pokračovať, ak nechcete pridávať ďalšie aktivity.
+1. V **Pridajte požadované údaje** krok, vyberte **Ďalšie** pokračovať, ak nechcete pridať ďalšie aktivity.
 
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
@@ -240,7 +240,7 @@ Pridajte zoznam svojich firemných zákazníkov a obchodných vzťahov, ktoré c
    - **Názov predikcie**: Názov predikcie zadaný pri jej vytváraní.
    - **Typ predikcie**: Typ modelu použitého pre predikciu
    - **Výstupná entita**: Názov entity, do ktorej sa má uložiť výstup predikcie. Entitu s týmto názvom nájdete v časti **Údaje** > **Entity**.
-     Vo výstupnej entite *ChurnScore* je predpovedaná pravdepodobnosť churn a *IsChurn* je binárny štítok založený na *ChurnScore* s prahom 0,5. Predvolená hranica nemusí pre váš scenár fungovať. [Vytvorte nový segment](segments.md#create-a-new-segment) s vami preferovaným prahom.
+     Vo výstupnej entite *ChurnScore* je predpovedaná pravdepodobnosť churn a *IsChurn* je binárny štítok založený na *ChurnScore* s prahom 0,5. Predvolená hranica nemusí pre váš scenár fungovať. [Vytvorte nový segment](segments.md#create-a-segment) s vami preferovaným prahom.
      Nie všetci zákazníci sú nevyhnutne aktívni zákazníci. Niektoré z nich nemuseli dlho vykonávať žiadnu činnosť a na základe vašej definície churn sa už považujú za churn. Predikcia rizika odchodu pre zákazníkov, ktorí už odišli, nie je užitočná, pretože nie sú cieľovou skupinou, ktorá vás zaujíma.
    - **Predikované pole**: Toto pole je vyplnené iba pre niektoré typy predikcií a nepoužíva sa pri predikcii odchodov.
    - **Stav**: Stav spustenia predikcie.

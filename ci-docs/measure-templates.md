@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051703"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170792"
 ---
 # <a name="create-measures-from-templates"></a>Vytvorte miery zo šablón
 
-Môžete použiť preddefinované šablóny bežne používaných [Opatrenia](measures.md) aby ste ich vytvorili. Podrobné popisy šablón a sprievodca vám pomôže s efektívnym vytváraním opatrení. Šablóny vychádzajú z mapovaných údajov z entity *Zjednotená aktivita*. Uistite sa teda, že ste nakonfigurovali [aktivity zákazníkov](activities.md) pred vytvorením merania zo šablóny.
+Použite preddefinované šablóny bežne používaných [Opatrenia](measures.md) aby ste ich vytvorili. Šablóny vychádzajú z mapovaných údajov z entity *Zjednotená aktivita*. Uistite sa teda, že ste nakonfigurovali [aktivity zákazníkov](activities.md) pred vytvorením merania zo šablóny.
 
-Ak chcete vytvoriť vlastné miery, pozri [Použite nástroj na tvorbu opatrení na vytvorenie mier od začiatku](measure-builder.md).
+Šablóny meraní sú podporované iba v prostrediach pre **individuálnych zákazníkov**. Ak chcete vytvoriť vlastné miery alebo vytvoriť miery pre B-to-B, pozri [Použite nástroj na tvorbu opatrení](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotrebitelia (firma a spotrebiteľ)](#tab/b2c)
-
-Dostupné šablóny merania: 
+Dostupné šablóny merania:
 - Priemerná hodnota transakcie (ATV)
 - Celková hodnota transakcií
 - Priemerný denný výnos
+- Priemerný mesačný výnos
 - Priemerný ročný výnos
 - Počet transakcií
 - Získané vernostné body
@@ -57,21 +56,22 @@ Dostupné šablóny merania:
 
 1. Vyberte položku **Hotovo**.
 
-1. V časti **Nastaviť časové obdobie** definujte časový rámec údajov, ktoré sa majú použiť. Vyberte, či chcete, aby nové opatrenie pokrylo celú množinu údajov tak, že vyberiete možnosť **Celkovo**, alebo či chcete, aby sa opatrenie zameralo na **Konkrétne časové obdobie**.
+1. V **Nastavte časové obdobie** definujte časový rámec údajov. Vyberte, či chcete, aby nové opatrenie pokrylo celú množinu údajov tak, že vyberiete možnosť **Celkovo**, alebo či chcete, aby sa opatrenie zameralo na **Konkrétne časové obdobie**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Snímka obrazovky zobrazujúca sekciu časového obdobia pri konfigurácii merania zo šablóny.":::
 
 1. V ďalšej časti vyberte možnosť **Pridať údaje** a vyberte si činnosti a namapujte príslušné údaje z vašej entity *Zjednotenej aktivity*.
 
-    1. Krok 1 z 2: V časti **Typ činnosti**, vyberte typ entity, ktorú chcete použiť. Pre **Činnosti**, vyberte entity, ktoré chcete mapovať.
-    1. Krok 2 z 2: Vyberte atribút z entity *Zjednotená činnosť* pre komponent požadovaný vzorcom. Napríklad pre Priemernú hodnotu transakcie je to atribút predstavujúci hodnotu Transakcie. Pre **Časová pečiatka aktivity** vyberte atribút z entity Unified Activity, ktorá predstavuje dátum a čas aktivity.
-   
-1. Po úspešnom mapovaní údajov môžete vidieť stav ako **Dokončené** a názov mapovaných aktivít a atribútov.
+    1. Krok 1 z 2: V časti **Typ činnosti**, vyberte typ entity, ktorú chcete použiť. Pre **Aktivity**, vyberte entity, ktoré chcete mapovať, a potom vyberte **Ďalšie**.
+    1. Krok 2 z 2: Vyberte atribút z entity *Zjednotená činnosť* pre komponent požadovaný vzorcom. Napríklad pre Priemernú hodnotu transakcie je to atribút predstavujúci hodnotu Transakcie. Pre **Časová pečiatka aktivity**, vyberte atribút z *Jednotná aktivita* subjekt, ktorý predstavuje dátum a čas činnosti.
+    1. Vyberte **Uložiť**.
 
-1. Teraz môžete stlačiť možnosť **Spustiť** na výpočet výsledkov opatrenia. Ak ju chcete neskôr spresniť, stlačte možnosť **Uložiť koncept**.
+    Keď je mapovanie údajov úspešné, zobrazí sa stav **Dokončiť** a zobrazí sa názov mapovaných aktivít a atribútov.
 
-# <a name="business-accounts-b-to-b"></a>[Firemné obchodné vzťahy (firma a firma)](#tab/b2b)
+1. Vyberte **Bežať** na výpočet výsledkov merania. Vyberte **Uložiť koncept** ak chcete zachovať aktuálnu konfiguráciu a spustiť meranie neskôr. The **Opatrenia** zobrazí stránka.
 
-Táto funkcia je k dispozícii iba pre miery vytvorené v prostrediach s individuálnymi zákazníkmi ako primárnym cieľovým publikom.
+## <a name="next-step"></a>Ďalší krok
 
----
+Na vytvorenie použite existujúce opatrenia [zákaznícky segment](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -13,16 +13,14 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
-ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
+ms.openlocfilehash: 20728ffaef9bb705410b3ac22d19868ffd5d1243
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8844105"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139603"
 ---
 # <a name="review-data-unification"></a>Skontrolujte zjednotenie údajov
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Tento posledný krok v procese zjednotenia zobrazuje súhrn krokov v procese a poskytuje možnosť vykonať zmeny pred vytvorením zjednoteného profilu.
 
@@ -32,9 +30,9 @@ Tento posledný krok v procese zjednotenia zobrazuje súhrn krokov v procese a p
 
 1. Vyberte **Upraviť** na ktoromkoľvek z krokov zjednotenia údajov, aby ste ich mohli skontrolovať a vykonať akékoľvek zmeny.
 
-1. Ak ste s výberom spokojní, vyberte si **Vytvorte profily zákazníkov**. The **Zjednotiť** stránka sa zobrazí počas vytvárania jednotného zákazníckeho profilu. Všetky dlaždice okrem **Zdrojové polia** šou **Vo fronte** alebo **Osviežujúce** postavenie.
+1. Ak ste s výberom spokojní, vyberte si **Vytvorte profily zákazníkov**. The **Zjednotiť** počas vytvárania jednotného zákazníckeho profilu. Všetky dlaždice okrem **Zdrojové polia** šou **Vo fronte** alebo **Osviežujúce** postavenie.
 
-   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Snímka obrazovky stránky Zjednotiť s dlaždicami so zobrazením Zaradené do poradia alebo Obnovovanie.":::
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Snímka obrazovky stránky Zjednotiť s dlaždicami so zobrazením v rade alebo Obnovuje sa.":::
 
    [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 

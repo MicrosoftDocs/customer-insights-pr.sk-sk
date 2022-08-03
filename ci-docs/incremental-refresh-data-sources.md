@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012044"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207156"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Prírastkové obnovenie pre Power Query a zdroje údajov Azure Data Lake
 
-Tento článok popisuje, ako nakonfigurovať prírastkové obnovenie pre zdroje údajov na základe Power Query alebo Azure Data Lake.
-
-Prírastkové obnovenie pre zdroje údajov poskytuje nasledujúce výhody:
+Prírastkové obnovenie pre zdroje údajov založené na Power Query alebo Azure Data Lake poskytuje nasledujúce výhody:
 
 - **Rýchlejšie obnovenie** – Obnovia sa iba údaje, ktoré sa zmenili. Môžete napríklad obnoviť iba posledných päť dní historického súboru údajov.
 - **Zvýšená spoľahlivosť** – Pri menších aktualizáciách nemusíte udržiavať pripojenia k systémom pohyblivých zdrojov tak dlho, aby ste znížili riziko problémov s pripojením.
@@ -61,18 +59,19 @@ Customer Insights umožňuje prírastkové obnovenie pre zdroje údajov importov
 Customer Insights umožňuje prírastkové obnovenie pre pripojené zdroje údajov Azure Data Lake Storage. Ak chcete použiť prírastkové prijímanie a obnovenie pre entitu, nakonfigurujte túto entitu pri pridávaní Azure Data Lake zdroj údajov alebo neskôr pri úprave zdroj údajov. Priečinok s údajmi entity musí obsahovať nasledujúce priečinky:
 
 - **Úplné údaje** : Priečinok s dátovými súbormi obsahujúcimi počiatočné záznamy
-- **IncrementalData** : Priečinok s priečinkami s hierarchiou dátumu a času **yyyy/mm/dd/hh** formát obsahujúci prírastkové aktualizácie. **hh** predstavuje UTC hodinu aktualizácií a obsahuje **Upserts** a **Vymaže** priečinky. **Upserts** obsahuje dátové súbory s aktualizáciami existujúcich záznamov alebo nových záznamov. **Vymaže** obsahuje dátové súbory so záznamami, ktoré sa majú odstrániť.
+- **IncrementalData** : Priečinok s priečinkami s hierarchiou dátumu a času **rrrr/mm/dd/hh** formát obsahujúci prírastkové aktualizácie. **hh** predstavuje hodinu UTC aktualizácií a obsahuje **Upserts** a **Vymaže** priečinky. **Upserts** obsahuje dátové súbory s aktualizáciami existujúcich záznamov alebo nových záznamov. **Vymaže** obsahuje dátové súbory so záznamami, ktoré sa majú odstrániť.
 
 1. Pri pridávaní alebo úprave zdroj údajov prejdite na **Atribúty** panel pre entitu.
 
 1. Skontrolujte atribúty. Uistite sa, že atribút dátumu vytvorenia alebo poslednej aktualizácie je nastavený na a *Dátum Čas* **Formát údajov** a a *Kalendár.Dátum* **Sémantický typ**. V prípade potreby upravte atribút a vyberte **hotový**.
 
-1. Od **Vyberte položku Entity** panel, upravte entitu. The **Postupné požitie** je začiarknuté políčko.
+1. Z **Vyberte položku Entity** panel, upravte entitu. The **Postupné požitie** je začiarknuté políčko.
 
    :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="Nakonfigurujte entity v zdroj údajov na prírastkové obnovovanie.":::
 
    1. Prejdite do koreňového priečinka, ktorý obsahuje súbory .csv alebo .parquet, kde nájdete úplné údaje, prírastkové aktualizácie údajov a prírastkové vymazania údajov.
    1. Zadajte príponu úplných údajov a oboch prírastkových súborov (\. csv alebo\. parkety).
+   1. V prípade súborov .csv vyberte oddeľovač stĺpcov a ak chcete, aby sa ako hlavička stĺpca použil prvý riadok súboru.
    1. Vyberte **Uložiť**.
 
 1. Pre **Naposledy aktualizovaný**, vyberte atribút dátum a časová pečiatka.

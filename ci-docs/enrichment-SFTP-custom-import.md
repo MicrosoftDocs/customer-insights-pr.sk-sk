@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082332"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195815"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Obohaťte profily zákazníkov pomocou vlastného importu SFTP (ukážka)
 
@@ -104,7 +104,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Skontrolujte prehľad a potom vyberte **Ďalšie**.
 
-1. Vyberte pripojenie. Ak nie je dostupný, kontaktujte správcu.
+1. Vyberte pripojenie. Ak nie je k dispozícii pripojenie, kontaktujte správcu.
 
 1. Vyberte **Súbor zákazníckych údajov** a vyberte si profil alebo segment, ktorý chcete obohatiť. The *Zákazník* subjekt obohacuje všetky vaše profily zákazníkov, zatiaľ čo segment obohacuje iba profily zákazníkov obsiahnuté v tomto segmente.
 

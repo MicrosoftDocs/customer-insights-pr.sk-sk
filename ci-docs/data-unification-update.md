@@ -13,16 +13,14 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
-ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
+ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8844059"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139630"
 ---
 # <a name="update-the-unification-settings"></a>Aktualizujte nastavenia zjednotenia
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Ak chcete po vytvorení jednotného profilu skontrolovať alebo zmeniť nastavenia zjednotenia, vykonajte nasledujúce kroky.
 
@@ -53,13 +51,13 @@ Nemôžete odstrániť atribút alebo entitu, ak už boli zjednotené.
 
 1. Vyberte **Upraviť** na **Zdrojové polia** dlaždica.
 
-   :::image type="content" source="media/m3_source_edit.png" alt-text="Snímka obrazovky stránky zdrojových polí zobrazujúca počet primárnych kľúčov, namapovaných a nezmapovaných polí":::
+   :::image type="content" source="media/m3_source_edit.png" alt-text="Snímka obrazovky stránky zdrojových polí zobrazujúca počet primárnych kľúčov, mapovaných a nemapovaných polí":::
 
    Zobrazí sa počet zmapovaných a nezmapovaných polí.
 
 1. Vyberte **Vyberte entity a polia** pridať ďalšie atribúty alebo entity. Pomocou vyhľadávania alebo posúvania nájdite a vyberte atribúty a entity, ktoré vás zaujímajú. Vyberte **Použiť**.
 
-1. Voliteľne môžete zmeniť primárny kľúč entity, typy atribútov a prepínač **Inteligentné mapovanie** zapnuté alebo vypnuté. Ďalšie informácie nájdete v časti [Vyberte primárny kľúč a sémantický typ atribútov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Voliteľne môžete zmeniť primárny kľúč entity, typy atribútov a prepínač **Inteligentné mapovanie** zapnuté alebo vypnuté. Viac informácií nájdete v časti [Vyberte primárny kľúč a sémantický typ atribútov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Vyberte **Ďalšie** ak chcete vykonať zmeny pravidiel deduplikácie, alebo vyberte **Uložiť a zavrieť** a vrátiť sa do [Aktualizujte nastavenia zjednotenia](#update-the-unification-settings).
 
@@ -69,19 +67,19 @@ Nemôžete odstrániť atribút alebo entitu, ak už boli zjednotené.
 
    :::image type="content" source="media/m3_duplicates_edit.png" alt-text="Snímka obrazovky stránky duplicitných záznamov zobrazujúca počet duplicitných záznamov" lightbox="media/m3_duplicates_edit.png":::
 
-   Počet nájdených duplicitných záznamov sa zobrazuje pod **Duplikáty**. The **Záznamy boli deduplikované** zobrazuje, ktoré entity mali duplicitné záznamy a percento duplicitných záznamov.
+   Počet nájdených duplicitných záznamov sa zobrazuje pod **Duplikáty**. The **Záznamy boli deduplikované** stĺpec zobrazuje, ktoré entity mali duplicitné záznamy a percento duplicitných záznamov.
 
-1. Ak ste pridali obohatenú entitu, vyberte **Použite obohatené entity**. Ďalšie informácie nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md).
+1. Ak ste pridali obohatenú entitu, vyberte **Použite obohatené entity**. Viac informácií nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md).
 
 1. Ak chcete spravovať pravidlá deduplikácie, vyberte niektorú z nasledujúcich možností:
-   - **Vytvorte nové pravidlo** : Vyberte **Pridať pravidlo** pod príslušným subjektom. Ďalšie informácie nájdete v časti [Definujte pravidlá deduplikácie](remove-duplicates.md#define-deduplication-rules).
+   - **Vytvorte nové pravidlo** : Vyberte **Pridať pravidlo** pod príslušným subjektom. Viac informácií nájdete v časti [Definujte pravidlá deduplikácie](remove-duplicates.md#define-deduplication-rules).
    - **Zmeňte podmienky pravidiel** : Vyberte pravidlo a potom **Upraviť**. Zmeňte polia, pridajte alebo odstráňte podmienky alebo pridajte alebo odstráňte výnimky.
    - **Náhľad** : Vyberte pravidlo a potom **Náhľad** zobrazíte výsledky posledného spustenia pre toto pravidlo.
    - **Deaktivujte pravidlo** : Vyberte pravidlo a potom **Deaktivovať** zachovať pravidlo deduplikácie a zároveň ho vylúčiť z procesu priraďovania.
    - **Duplikovať pravidlo** : Vyberte pravidlo a potom **Duplicitné** vytvoriť podobné pravidlo s úpravami.
    - **Odstráňte pravidlo** : Vyberte pravidlo a potom **Odstrániť**.
 
-1. Ak chcete zmeniť preferencie zlúčenia, vyberte entitu. Predvoľby môžete zmeniť, iba ak je vytvorené pravidlo.
+1. Ak chcete zmeniť predvoľby zlúčenia, vyberte entitu. Predvoľby môžete zmeniť iba vtedy, ak je vytvorené pravidlo.
    1. Vyberte **Upravte predvoľby zlúčenia** a zmeniť **Záznam na uchovanie** možnosť.
    1. Ak chcete zmeniť preferencie zlúčenia pre jednotlivé atribúty entity, vyberte **Pokročilé** a vykonať potrebné zmeny.
 
@@ -93,7 +91,7 @@ Nemôžete odstrániť atribút alebo entitu, ak už boli zjednotené.
 
 ## <a name="manage-match-rules"></a>Spravovať pravidlá spárovania
 
-Väčšinu parametrov zhody môžete prekonfigurovať a doladiť. Nemôžete pridávať ani odstraňovať entity. Pravidlá zhody sa nevzťahujú na jeden subjekt.
+Väčšinu parametrov zhody môžete prekonfigurovať a doladiť. Nemôžete pridávať ani odstraňovať entity. Pravidlá zhody sa nevzťahujú na jednu entitu.
 
 1. Vyberte **Upraviť** na **Zodpovedajúce podmienky** dlaždica.
 
@@ -112,11 +110,11 @@ Väčšinu parametrov zhody môžete prekonfigurovať a doladiť. Nemôžete pri
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Grafické znázornenie nespárovaných a spárovaných záznamov vrátane zoznamu údajov.":::
 
-1. Ak ste pridali obohatenú entitu, vyberte **Použite obohatené entity**. Ďalšie informácie nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md).
+1. Ak ste pridali obohatenú entitu, vyberte **Použite obohatené entity**. Viac informácií nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md).
 
 1. Ak chcete spravovať pravidlá, vyberte niektorú z nasledujúcich možností:
-   - **Vytvorte nové pravidlo** : Vyberte **Pridať pravidlo** pod príslušným subjektom. Ďalšie informácie nájdete v časti [Definujte pravidlá pre zápasové dvojice](match-entities.md#define-rules-for-match-pairs).
-   - **Zmeňte poradie svojich pravidiel** ak ste definovali viacero pravidiel: Presuňte pravidlá do požadovaného poradia. Ďalšie informácie nájdete v časti [Zadajte poradie zhody](match-entities.md#specify-the-match-order).
+   - **Vytvorte nové pravidlo** : Vyberte **Pridať pravidlo** pod príslušným subjektom. Viac informácií nájdete v časti [Definujte pravidlá pre zápasové dvojice](match-entities.md#define-rules-for-match-pairs).
+   - **Zmeňte poradie svojich pravidiel** ak ste definovali viacero pravidiel: Presuňte pravidlá do požadovaného poradia. Viac informácií nájdete v časti [Zadajte poradie zhody](match-entities.md#specify-the-match-order).
    - **Zmeňte podmienky pravidiel** : Vyberte pravidlo a potom **Upraviť**. Zmeňte polia, pridajte alebo odstráňte podmienky alebo pridajte alebo odstráňte výnimky.
    - **Deaktivujte pravidlo** : Vyberte pravidlo a potom **Deaktivovať** zachovať pravidlo zhody a zároveň ho vylúčiť z procesu priraďovania.
    - **Duplikovať pravidlo** : Vyberte pravidlo a potom **Duplicitné** vytvoriť podobné pravidlo s úpravami.
@@ -130,15 +128,15 @@ Väčšinu parametrov zhody môžete prekonfigurovať a doladiť. Nemôžete pri
 
     :::image type="content" source="media/m3_merge_edit.png" alt-text="Snímka obrazovky zjednotených zákazníckych polí":::
 
-1. Skontrolujte kombinované a vylúčené polia a vykonajte potrebné zmeny. Pridajte alebo upravte kľúč CustomerID alebo skupinové profily do klastrov. Ďalšie informácie nájdete v časti [Zjednotiť zákaznícke polia](merge-entities.md).
+1. Skontrolujte kombinované a vylúčené polia a vykonajte potrebné zmeny. Pridajte alebo upravte kľúč CustomerID alebo skupinové profily do klastrov. Viac informácií nájdete v časti [Zjednotiť zákaznícke polia](merge-entities.md).
 
 1. Vyberte **Ďalšie** skontrolujte nastavenia zjednotenia a [aktualizovať jednotný profil a závislosti](#run-updates-to-the-unified-customer-profile) alebo vyberte **Uložiť a zavrieť** a vrátiť sa do [Aktualizujte nastavenia zjednotenia](#update-the-unification-settings) vykonať ďalšie zmeny.
 
 ## <a name="run-matching-conditions"></a>Spustite zodpovedajúce podmienky
 
-Spustiť podmienky zhody spustí iba deduplikáciu a pravidlá zhody a aktualizuje sa *Deduplikácia_* a *ConflationMatchPair* subjektov.
+Spustiť podmienky zhody spustí iba deduplikáciu a pravidlá zhody a aktualizuje *Deduplikácia_* * a *ConflationMatchPair* subjektov.
 
-1. Od **Údaje** > **Zjednotiť** stránku, vyberte **Spustite iba zodpovedajúce podmienky**.
+1. Z **Údaje** > **Zjednotiť** stránku, vyberte **Spustite iba zodpovedajúce podmienky**.
 
    The **Duplicitné záznamy** a **Zodpovedajúce podmienky** dlaždice ukazujú **Vo fronte** alebo **Osviežujúce** postavenie.
 
@@ -154,13 +152,13 @@ Spustiť podmienky zhody spustí iba deduplikáciu a pravidlá zhody a aktualizu
 
 ## <a name="run-updates-to-the-unified-customer-profile"></a>Spustite aktualizácie jednotného profilu zákazníka
 
-1. Od **Údaje** > **Zjednotiť** stránka, vyberte:
+1. Z **Údaje** > **Zjednotiť** stránka, vyberte:
 
-   - **Zjednotiť profily zákazníkov** : Spustí zodpovedajúce podmienky a aktualizuje entitu jednotného profilu zákazníka bez ovplyvnenia závislostí (ako sú obohatenia, segmenty alebo opatrenia). Závislé procesy nie sú spustené, ale budú obnovené ako [definované v pláne obnovy](system.md#schedule-tab).
+   - **Zjednotiť profily zákazníkov** : Spúšťa zodpovedajúce podmienky a aktualizuje entitu jednotného profilu zákazníka bez ovplyvnenia závislostí (ako sú obohatenia, segmenty alebo opatrenia). Závislé procesy nie sú spustené, ale budú obnovené ako [definované v pláne obnovy](system.md#schedule-tab).
 
    - **Zjednotiť profily a závislosti zákazníkov** : Spustí zodpovedajúce podmienky a aktualizuje zjednotený profil a všetky závislosti. Všetky procesy sa automaticky znova spustia. Po dokončení všetkých nadväzujúcich procesov sa v profile zákazníka zohľadnia aktualizované údaje.
 
-   The **Duplicitné záznamy**, **podmienky** a **Zjednotené zákaznícke polia** dlaždice ukazujú **Vo fronte** alebo **Osviežujúce** postavenie.
+   The **Duplicitné záznamy**, **podmienky**, a **Zjednotené zákaznícke polia** dlaždice ukazujú **Vo fronte** alebo **Osviežujúce** postavenie.
 
    [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 

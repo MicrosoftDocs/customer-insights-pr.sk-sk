@@ -1,7 +1,7 @@
 ---
 title: Pripojte priečinok Common Data Model použitím účtu Azure Data Lake
 description: Pracujte s údajmi z Common Data Model cez Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082269"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207018"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Pripojiť sa k údajom v doplnku Azure Data Lake Storage
 
@@ -27,7 +27,7 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 - Podporuje príjem údajov Azure Data Lake Storage *Gen2* účty. Účty Data Lake Storage Gen1 nemôžete používať na prijímanie údajov.
 
-- The Azure Data Lake Storage účet musí mať [hierarchický menný priestor povolený](/azure/storage/blobs/data-lake-storage-namespace). Údaje musia byť uložené vo formáte hierarchického priečinka, ktorý definuje koreňový priečinok a má podpriečinky pre každú entitu. Podpriečinky môžu mať priečinky s úplnými údajmi alebo s prírastkovými údajmi.
+- The Azure Data Lake Storage účet musí mať [povolený hierarchický menný priestor](/azure/storage/blobs/data-lake-storage-namespace). Údaje musia byť uložené vo formáte hierarchického priečinka, ktorý definuje koreňový priečinok a má podpriečinky pre každú entitu. Podpriečinky môžu mať priečinky s úplnými údajmi alebo s prírastkovými údajmi.
 
 - Ak chcete vykonať overenie pomocou objektu služby Azure, uistite sa, že je nakonfigurovaný vo vašom nájomníkovi. Viac informácií nájdete v časti [Pripojte sa k Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
 
@@ -42,7 +42,7 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 - Údaje vo vašom úložisku Data Lake by sa mali riadiť štandardom Common Data Model pre ukladanie vašich údajov a mali by mať manifest spoločného údajového modelu, ktorý bude reprezentovať schému dátových súborov (*.csv alebo *.parquet). Manifest musí obsahovať podrobnosti o entitách, ako sú stĺpce entít a typy údajov a umiestnenie a typ súboru s údajmi. Viac informácií nájdete v časti [Manifest spoločného dátového modelu](/common-data-model/sdk/manifest). Ak manifest neexistuje, správcovia s prístupom vlastníka údajov objektu Storage Blob alebo prispievateľa údajov objektu úložiska môžu definovať schému pri prijímaní údajov.
 
-## <a name="connect-to-azure-data-lake-storage"></a>Pripojenie k sieti Azure Data Lake Storage
+## <a name="connect-to-azure-data-lake-storage"></a>Pripojenie k produktu Azure Data Lake Storage
 
 1. Prejdite do **Údaje** > **Zdroje údajov**.
 
@@ -82,7 +82,7 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
    :::image type="content" source="media/ADLS_required.png" alt-text="Dialógové okno so zobrazením Povinné pre primárny kľúč":::
 
    > [!TIP]
-   > Ak chcete upraviť entity v rozhraní na úpravu JSON, vyberte **Zobraziť viac** > **Upravte súbor schémy**. Vykonajte zmeny a vyberte **Uložiť**.
+   > Ak chcete upraviť entitu v rozhraní na úpravu JSON, vyberte entitu a potom **Upravte súbor schémy**. Vykonajte zmeny a vyberte **Uložiť**.
 
 1. Pre vybrané entity, ktoré vyžadujú postupné prijímanie, **Požadovaný** zobrazuje pod **Prírastkové obnovenie**. Pre každý z týchto subjektov viď [Nakonfigurujte prírastkové obnovenie pre zdroje údajov Azure Data Lake](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
    1. Vyberte položku **Hotovo**.
 
 1. Vyberte **Uložiť**. The **Zdroje dát** otvorí sa stránka s novým zdroj údajov v **Osviežujúce** postavenie.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Načítanie údajov môže chvíľu trvať. Po úspešnom obnovení môžu byť prijaté údaje skontrolované z [**entity**](entities.md) stránku.
 
 ### <a name="create-a-new-schema-file"></a>Vytvorte nový súbor schémy
 
@@ -148,6 +152,9 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 1. Vyberte **Uložiť**. The **Zdroje dát** otvorí sa stránka s novým zdroj údajov v **Osviežujúce** postavenie.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Načítanie údajov môže chvíľu trvať. Po úspešnom obnovení môžu byť prijaté údaje skontrolované z [**entity**](entities.md) stránku.
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Upraviť Azure Data Lake Storage zdroj údajov
 
@@ -179,8 +186,16 @@ Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Viac
       > [!IMPORTANT]
       > Ak existujú závislosti na existujúcom súbore model.json alebo manifest.json a množine entít, zobrazí sa chybové hlásenie a nemôžete vybrať iný súbor model.json alebo manifest.json. Pred zmenou súboru model.json alebo manifest.json tieto závislosti odstráňte alebo vytvorte nový zdroj údajov so súborom model.json alebo manifest.json, ktorý chcete použiť, aby ste sa vyhli odstráneniu závislostí.
    - Ak chcete zmeniť umiestnenie dátového súboru alebo primárny kľúč, vyberte **Upraviť**.
-   - Ak chcete zmeniť údaje o prírastkovom príjme, pozrite si časť [Nakonfigurujte prírastkové obnovenie pre zdroje údajov Azure Data Lake](incremental-refresh-data-sources.md)
+   - Ak chcete zmeniť údaje o prírastkovom príjme, pozrite si časť [Nakonfigurujte prírastkové obnovenie pre zdroje údajov Azure Data Lake](incremental-refresh-data-sources.md).
+   - Zmeňte iba názov entity tak, aby sa zhodoval s názvom entity v súbore .json.
+
+     > [!NOTE]
+     > Po prijatí vždy ponechajte názov entity v Customer Insights rovnaký ako názov entity v súbore model.json alebo manifest.json. Customer Insights overuje všetky názvy entít pomocou súboru model.json alebo manifest.json počas každého obnovenia systému. Ak sa zmení názov entity v rámci Customer Insights alebo mimo neho, vyskytne sa chyba, pretože Customer Insights nemôže nájsť nový názov entity v súbore .json. Ak sa názov prijímanej entity náhodou zmenil, upravte názov entity v Customer Insights tak, aby sa zhodoval s názvom v súbore .json.
 
 1. Vyberte **Atribúty** pridať alebo zmeniť atribúty alebo povoliť profilovanie údajov. Potom vyberte položku **Hotovo**.
 
-1. Kliknite **Uložiť** aplikujte zmeny a vráťte sa do **Zdroje dát** stránku.
+1. Kliknite **Uložiť** aplikujte zmeny a vráťte sa na stránku **Zdroje dát** stránku.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

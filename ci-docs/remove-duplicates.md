@@ -1,6 +1,6 @@
 ---
 title: Pred zjednotením údajov odstráňte duplikáty
-description: Druhým krokom v procese zjednotenia je výber záznamu, ktorý sa má zachovať, keď sa nájdu duplikáty.
+description: Druhým krokom v procese zjednotenia je výber záznamu, ktorý sa má ponechať, keď sa nájdu duplikáty.
 recommendations: false
 ms.date: 04/22/2022
 ms.subservice: audience-insights
@@ -13,26 +13,24 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 27dff3551ab411a12c273536d7431d651c48573e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: MT
+ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8742980"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139448"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Pred zjednotením údajov odstráňte duplikáty
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Tento krok zjednotenia vám voliteľne umožňuje nastaviť pravidlá pre zaobchádzanie s duplicitnými záznamami v rámci entity. *Deduplikácia* identifikuje duplicitné záznamy a zlúči ich do jedného záznamu. Zdrojové záznamy sa prepoja so zlúčeným záznamom s alternatívnymi ID. Ak pravidlá nie sú nakonfigurované, použijú sa pravidlá definované systémom.
 
 ## <a name="include-enriched-entities-preview"></a>Zahrnúť obohatené entity (ukážka)
 
-Ak ste obohatili entity na úrovni zdroj údajov, aby ste pomohli zlepšiť výsledky zjednotenia, vyberte ich. Ďalšie informácie nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md).
+Ak ste obohatili entity na úrovni zdroj údajov, aby ste pomohli zlepšiť výsledky zjednotenia, vyberte ich. Viac informácií nájdete v časti [Obohatenie pre zdroje údajov](data-sources-enrichment.md).
 
 1. Na **Duplicitné záznamy** stránku, vyberte **Použite obohatené entity** v hornej časti stránky.
 
-1. Od **Použite obohatené entity** vyberte jednu alebo viacero obohatených entít.
+1. Z **Použite obohatené entity** vyberte jednu alebo viac obohatených entít.
 
 1. Vyberte položku **Hotovo**.
 
@@ -52,7 +50,7 @@ Ak ste obohatili entity na úrovni zdroj údajov, aby ste pomohli zlepšiť výs
         - **Unicode na ASCII** : Konvertuje notáciu Unicode na znaky ASCII. */u00B2* sa stáva *2*.
         - **Biely vesmír** : Odstráni všetky medzery. *Ahoj svet* sa stáva *HelloWorld*.
       - **Presnosť**: Nastavte úroveň presnosti, ktorá sa má použiť pre túto podmienku.
-        - **Základné** : Vyber z *Nízka (30 %)*, *(60 %)*, *(80 %)* a *Presne (100 %)*. Vyberte **Presne** aby sa zhodovali iba záznamy, ktoré sa stopercentne zhodujú.
+        - **Základné** : Vyber z *Nízka (30 %)*, *(60 %)*, *(80 %)*, a *Presne (100 %)*. Vyberte **Presne** aby sa zhodovali iba záznamy, ktoré sa stopercentne zhodujú.
         - **Vlastné**: Nastavte percento, ktorému sa musia záznamy zhodovať. Systém bude porovnávať iba záznamy prekračujúce tento limit.
       - **názov** : Názov pravidla.
 
@@ -74,7 +72,7 @@ Ak ste obohatili entity na úrovni zdroj údajov, aby ste pomohli zlepšiť výs
       - **Najnovšie**: Identifikuje víťazný záznam na základe najväčšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
       - **Najstaršie**: Identifikuje víťazný záznam na základe najmenšej aktuálnosti. Na definovanie aktuálnosti sa vyžaduje dátum alebo číselné pole.
       
-      V prípade nerozhodného výsledku je víťazným záznamom ten, ktorý má MAX(PK) alebo vyššiu hodnotu primárneho kľúča.
+      V prípade nerozhodného výsledku je víťazným záznamom záznam s MAX(PK) alebo vyššou hodnotou primárneho kľúča.
       
    1. Voliteľne, ak chcete definovať preferencie zlúčenia pre jednotlivé atribúty entity, vyberte **Pokročilé** v spodnej časti tabule. Môžete sa napríklad rozhodnúť ponechať najnovší e-mail A najkompletnejšiu adresu z rôznych záznamov. Rozbaľte entitu, aby ste videli všetky jej atribúty a definujte, ktorá možnosť sa má použiť pre jednotlivé atribúty. Ak vyberiete možnosť založenú na aktuálnosti, musíte tiež zadať pole dátumu a času, ktoré definuje aktuálnosť.
 

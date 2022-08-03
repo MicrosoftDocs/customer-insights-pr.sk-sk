@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082206"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196367"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)
 
@@ -59,7 +59,7 @@ Keď povolíte Dynamics 365 Customer Insights na prenos údajov do LiveRamp povo
 
 1. Skontrolujte prehľad a potom vyberte **Ďalšie**.
 
-1. Vyberte pripojenie. Ak nie je dostupný, kontaktujte správcu.
+1. Vyberte pripojenie. Ak nie je k dispozícii pripojenie, kontaktujte správcu.
 
 1. Vyberte **Ďalej**.
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccb33594a3a92e87d307f3300c77772ef8b4a82f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051610"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171022"
 ---
 # <a name="segment-insights-preview"></a>Prehľady segmentov (ukážka)
 
@@ -43,26 +43,25 @@ Môžete tiež analyzovať, ako sa prekrývanie mení pre konkrétne atribúty.
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Zobrazenie a optimalizácia analýzy prekrývania
 
-Po dokončení analýzy vyhľadajte podrobnosti o tomto prehľade v časti **Segmenty** > **Prehľady (ukážka)**.
+1. Po dokončení analýzy vyhľadajte podrobnosti o tomto prehľade v časti **Segmenty** > **Prehľady (ukážka)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Podrobnosti prehľadu prekrývania segmentov.":::
+   :::image type="content" source="media/segment-overlap.png" alt-text="Podrobnosti prehľadu prekrývania segmentov.":::
 
-Ak chcete zobraziť výsledky analýzy, vyberte prehľad:
+1. Ak chcete zobraziť výsledky analýzy, vyberte prehľad:
 
-- Počet členov prekrývajúcich segmenty vybrané na analýzu.
-- Počet členov zahrnutých v jednom zo segmentov, ale nie v ostatných segmentoch.
-- Ak ste pri konfigurácii analýzy prekrývania vybrali polia, nájdete ich na príslušných kartách. Pomocou rozbaľovacej ponuky filtra si môžete vybrať ľubovoľnú úroveň atribútu, ktorá vás zaujíma, pričom tabuľka v dolnej časti obsahuje príslušné údaje.
+   - Počet členov prekrývajúcich segmenty vybrané na analýzu.
+   - Počet členov zahrnutých v jednom zo segmentov, ale nie v ostatných segmentoch.
+   - Ak ste pri konfigurácii analýzy prekrývania vybrali polia, nájdete ich na príslušných kartách. Pomocou rozbaľovacej ponuky filtra si môžete vybrať ľubovoľnú úroveň atribútu, ktorá vás zaujíma, pričom tabuľka v dolnej časti obsahuje príslušné údaje.
 
 ## <a name="segment-differentiators"></a>Diferenciátory segmentov
 
-Diferenciátory segmentov vám pomôžu zistiť, čo odlišuje segment od ostatných zákazníkov alebo od iného segmentu. Musíte iba vybrať segment a systém identifikuje atribúty profilu a miery, ktoré odlišujú vybraný segment.
+Diferenciátory segmentov vám pomôžu zistiť, čo odlišuje segment od ostatných zákazníkov alebo od iného segmentu. Vyberte segment a systém identifikuje atribúty profilu a miery, ktoré odlišujú vybraný segment.
 
 ### <a name="run-a-differentiator-analysis"></a>Spustenie analýzy diferenciátora
 
 1. Prejdite na **Segmenty** a vyberte kartu **Štatistiky (ukážka)**.
 
-1. Vyberte **Nový** a vyberte možnosť **Prekrytie** na table **Vyberte typ štatistík**.
+1. Vyberte **Nový** a vyberte si **Diferenciátory** možnosť v **Vyberte Typ štatistiky** tabuľka.
 
 1. Vyberte segment, ktorý chcete analyzovať ako **Primárny segment** a vyberte **Ďalšie**.
 
@@ -70,29 +69,29 @@ Diferenciátory segmentov vám pomôžu zistiť, čo odlišuje segment od ostatn
 
 1. Prípadne vyberte jednu alebo viac oblastí záujmu, aby sa analýza zamerala na konkrétne atribúty, a vyberte **Ďalšie**.
 
-1. Uveďte názov prekrývajúcej sa analýzy, voliteľný zobrazovaný názov a popis.
+1. Zadajte názov pre analýzu diferenciátora, voliteľný zobrazovaný názov a popis.
 
-1. Vyberte **Uložiť** na spustenie analýzy. Analýza prekrývania je pripravená, keď sa stav zmení z Obnovuje sa na Úspešné.
+1. Vyberte **Uložiť** na spustenie analýzy. Analýza diferenciátora je pripravená, keď sa stav zmení z Obnovuje sa na Úspešné.
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Prezrite si a optimalizujte analýzu diferenciátorov
 
-Po dokončení analýzy vyhľadajte podrobnosti o tomto prehľade v časti **Segmenty** > **Prehľady (ukážka)**.
+1. Po dokončení analýzy prejdite na **Segmenty** > **Štatistiky (ukážka)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Podrobnosti prehľadu diferenciátora segmentov.":::
+   :::image type="content" source="media/segment-differentiators.png" alt-text="Podrobnosti prehľadu diferenciátora segmentov.":::
 
-Ak chcete zobraziť výsledky analýzy, vyberte prehľad. Analýza diferenciátora obsahuje dve karty. Karta **Atribúty** uvádza atribúty profilu, ktoré sa považujú za diferenciátory. Karta **Miery** zobrazuje diferenciátory. Každá karta obsahuje nasledujúce podrobnosti:
+1. Ak chcete zobraziť výsledky analýzy, vyberte prehľad. Analýza diferenciátora obsahuje dve karty. Karta **Atribúty** uvádza atribúty profilu, ktoré sa považujú za diferenciátory. Karta **Miery** zobrazuje diferenciátory. Každá karta obsahuje nasledujúce podrobnosti:
 
-- Hodnotený zoznam diferenciátorov zoradený podľa skóre rozdielu.
-- **Skóre rozdielu** pre každého diferenciátora. Skóre rozdielu predstavuje stupeň rozdielu atribútu medzi dvoma segmentmi. Čím vyššie je skóre rozdielu, tým viac atribútov sa medzi týmito dvoma segmentmi líši. Vyberte skóre, a otvorte tablu **Skóre rozdielu** s rozdelením hodnôt pre tento atribút.
+   - Hodnotený zoznam diferenciátorov zoradený podľa skóre rozdielu.
+   - **Skóre rozdielu** pre každého diferenciátora. Skóre rozdielu predstavuje stupeň rozdielu atribútu medzi dvoma segmentmi. Čím vyššie je skóre rozdielu, tým viac atribútov sa medzi týmito dvoma segmentmi líši. Vyberte skóre, a otvorte tablu **Skóre rozdielu** s rozdelením hodnôt pre tento atribút.
 
 ## <a name="manage-segment-insights"></a>Spravovanie prehľadov o segmentoch
 
-V štatistikách na paneli príkazov môžete použiť nasledujúce možnosti:
+Ísť do **Segmenty** > **Štatistiky (ukážka)** zobraziť štatistiky segmentov a spravovať ich. Ak chcete zobraziť dostupné akcie, vyberte štatistiku segmentu.
 
-- **Späť** na vrátenie zoznamu prehľadov
-- **Obnoviť** na opätovné spustenie analýzy
-- **Odstrániť** na odstránenie prehľadu
-
+- **vyhliadka** analýza vhľadu
+- **Upraviť** vhľad zmeniť jeho vlastnosti
+- **Obnoviť** prehľad na opätovné spustenie analýzy
+- **Premenovať** prehľad
+- **Odstrániť** prehľad
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

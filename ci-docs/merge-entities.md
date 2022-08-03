@@ -14,16 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
-ms.translationtype: MT
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082962"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139676"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Zjednoťte zákaznícke polia pre zjednotenie údajov
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 V tomto kroku procesu zjednotenia vyberte a vylúčte atribúty, ktoré sa majú zlúčiť v rámci entity zjednoteného profilu. Napríklad, ak tri entity mali e-mailové údaje, možno budete chcieť ponechať všetky tri samostatné e-mailové polia alebo ich zlúčiť do jedného e-mailového poľa pre zjednotený profil. Niektoré atribúty systém automaticky kombinuje. Môžete vytvoriť stabilné a jedinečné ID zákazníkov a zoskupiť súvisiace profily do klastra.
 
@@ -145,7 +143,7 @@ So skupinou polí zaobchádzajte ako s jednou jednotkou. Ak napríklad naše zá
 
 Definujte, ako generovať hodnoty ID zákazníka, jedinečné identifikátory profilu zákazníka. Krok zjednotenia polí v procese zjednotenia údajov vygeneruje jedinečný identifikátor profilu zákazníka. Identifikátor je *CustomerId* v *Zákazník* subjekt, ktorý je výsledkom procesu zjednocovania údajov.
 
-The *CustomerId*  je založený na hashe prvej hodnoty primárnych kľúčov víťaza, ktoré nie sú nulové. Tieto kľúče pochádzajú z entít používaných pri zjednocovaní údajov a sú ovplyvnené poradím zhody.Takže vygenerované ID zákazníka sa môže zmeniť, keď sa zmení hodnota primárneho kľúča v primárnej entite priraďovacej objednávky. Hodnota primárneho kľúča nemusí vždy predstavovať toho istého zákazníka.
+The *CustomerId*  je založený na hashe prvej hodnoty primárnych kľúčov víťaza, ktoré nie sú nulové. Tieto kľúče pochádzajú z entít používaných pri zjednocovaní údajov a sú ovplyvnené poradím zhody.Vygenerované ID zákazníka sa teda môže zmeniť, keď sa zmení hodnota primárneho kľúča v primárnej entite priraďovacej objednávky. Hodnota primárneho kľúča nemusí vždy predstavovať toho istého zákazníka.
 
 Konfiguráciou stabilného ID zákazníka sa vyhnete takémuto správaniu.
 

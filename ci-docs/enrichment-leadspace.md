@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082374"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196229"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Obohaťte firemné profily pomocou Leadspace (ukážka)
 
@@ -54,7 +54,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Skontrolujte prehľad a potom vyberte **Ďalšie**.
 
-1. Vyberte pripojenie. Ak nie je dostupný, kontaktujte správcu.
+1. Vyberte pripojenie. Ak nie je k dispozícii pripojenie, kontaktujte správcu.
 
 1. Vyberte **Ďalej**.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cc65314f1b083694b60ac0a2625bea906be7272b
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054773"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183512"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémy entít v modeli Common Data Model
 
@@ -39,9 +39,8 @@ Aby sme získali 360-stupňový pohľad na zákazníka a sprístupnili modely Cu
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Zobrazte entít pomocou Navigátora entít formátu Common Data Model
 
-Entity si môžete pozrieť v sekcii [Navigátor entít vo formáte Common Data Model](https://microsoft.github.io/CDM/). Vyberte entitu v sekcii Aplikácia Insights, aby ste získali zoznam entít Customer Insights a ich definície.
-> [!div class="mx-imgBorder"]
-> ![Navigátor entít CDM zobrazuje entitu CustomerActivity.](media/CDM-entity-navigator.png "Navigátor entít CDM zobrazuje entitu CustomerActivity")
+Zobraziť entity v [Common Data Model Entity Navigator](https://microsoft.github.io/CDM/). Vyberte entitu v sekcii Aplikácia Insights, aby ste získali zoznam entít Customer Insights a ich definície.
 
+:::image type="content" source="media/CDM-entity-navigator.png" alt-text="Navigátor entít CDM zobrazuje entitu CustomerActivity.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

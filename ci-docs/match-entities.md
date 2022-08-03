@@ -14,16 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082416"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139722"
 ---
 # <a name="match-conditions-for-data-unification"></a>Dodržujte podmienky zjednotenia údajov
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Tento krok zjednotenia definuje poradie zhody a pravidlá pre zhodu medzi entitami. Tento krok vyžaduje aspoň dve entity.
 
@@ -124,7 +122,7 @@ Napríklad, ak vaše pravidlo zhody kombinuje priezvisko, mesto a dátum naroden
 
 1. V **Upraviť pravidlo** panel, vyberte **Pridať** > **Pridať výnimku**.
 
-1. Zadajte kritériá výnimky.
+1. Zadajte kritériá výnimiek.
 
 1. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
 
@@ -159,7 +157,7 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
 
 1. Prejdite na **Údaje** > **Zdroje údajov** a prijmite súbory šablón ako nové entity.
 
-1. Po nahratí súborov vyberte **Vlastné** možnosť znova. Z rozbaľovacej ponuky vyberte požadované entity a vyberte **hotový**.
+1. Po nahratí súborov vyberte **Vlastné** možnosť znova. Z rozbaľovacej ponuky vyberte požadované entity a vyberte **Hotový**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Snímka obrazovky dialógového okna na výber prepísania pre vlastný scenár zhody.":::
 

@@ -1,28 +1,56 @@
 ---
 title: Novinky v službe Dynamics 365 Customer Insights
 description: Informácie o nových funkciách, vylepšeniach a opravách chýb.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054037"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114265"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v službe Dynamics 365 Customer Insights
 
 Sme radi, že môžeme oznámiť naše najnovšie aktualizácie! Tento článok sumarizuje funkcie verejnej ukážky, vylepšenia všeobecnej dostupnosti a aktualizácie funkcií. Ak chcete zobraziť dlhodobé plány pre funkcie, pozrite si [Plány vydaní Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
-Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých regiónov sa teda môžu niektoré funkcie dostať skôr než do ostatných. Pokiaľ nie je uvedené inak, nemusíte podniknúť žiadne kroky a my aplikáciu automaticky aktualizujeme bez prestojov.
+Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých regiónov sa teda môžu niektoré funkcie dostať skôr než do ostatných. Ak nie je uvedené inak, nemusíte podnikať žiadne kroky, aplikáciu aktualizujeme automaticky bez prestojov.
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Aktualizácie z júna 2022
+
+Aktualizácie v júni 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Aktualizované používateľské prostredie pre zdroje údajov a príjem údajov
+
+Import údajov zo širokej škály zdrojov údajov je základom konsolidácie údajov o vašich zákazníkoch v Dynamics 365 Customer Insights. Prehodnotili sme používateľskú skúsenosť s importom a pripojením zdrojov údajov. Cieľom tejto aktualizácie je uľahčiť vám prijímanie údajov do Customer Insights.
+
+Viac informácií nájdete v časti [Prehľad zdrojov údajov](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Exportovať do InMobi
+
+InMobi pomáha značkám pochopiť, identifikovať, zaujať a získať spotrebiteľov. Segmenty a ďalšie údaje môžete exportovať do služby InMobi prostredníctvom účtov Azure Blob Storage.
+
+Viac informácií nájdete v časti [Exportovať do InMobi (ukážka)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Podpora zámkov v Customer Insights
+
+Customer Lockbox poskytuje rozhranie na kontrolu a schvaľovanie (alebo odmietanie) žiadostí o prístup k údajom. Tieto požiadavky sa vyskytujú, keď je potrebný prístup k údajom o zákazníckych údajoch na vyriešenie prípadu podpory.
+
+Viac informácií nájdete v časti [Bezpečne pristupujte k zákazníckym údajom pomocou Customer Lockbox (ukážka)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Pripojte sa k svojim údajom pomocou Azure Private Link
+
+Súkromné prepojenie Azure umožní, aby sa Customer Insights pripojili k vášmu Azure Data Lake Storage účtu cez súkromný koncový bod vo vašej virtuálnej sieti. Pre údaje v účte úložiska, ktorý nie je vystavený verejnému internetu, súkromné prepojenie umožňuje pripojenie k tejto obmedzenej sieti.
+
+Viac informácií nájdete v časti [Použite súkromný odkaz v Customer Insights](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>Aktualizácie z mája 2022
 
@@ -82,30 +110,30 @@ Ak nám chcete dať vedieť, ako vnímate túto zmenu alebo si všimnete, že ni
 
 Aktualizácie v marci 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
 
-### <a name="liveramp-abilitec-enrichment-preview"></a>LiveRamp AbiliTec obohatenie (ukážka)
+### <a name="liveramp-abilitec-enrichment-preview"></a>Obohatenie LiveRamp AbiliTec (ukážka)
 
 LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Osobné identifikátory vo svojich zákazníckych údajoch môžete namapovať na graf identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
 
-Viac informácií nájdete v časti [Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)](enrichment-liveramp.md).
+Ďalšie informácie nájdete v časti [Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Usporiadajte segmenty a miery pomocou značiek a filtrov
 
 Ak vaša organizácia udržiava veľa segmentov alebo opatrení, nájsť ten správny môže byť niekedy náročné. Táto nová funkcia vám umožňuje organizovať zoznamy pomocou značiek a stĺpcov. Pomáha rýchlo a jednoducho nájsť údaje a prispôsobiť zobrazenia.
 
-Viac informácií nájdete v časti [Práca so značkami a stĺpcami](work-with-tags-columns.md).
+Ďalšie informácie nájdete v časti [Práca so značkami a stĺpcami](work-with-tags-columns.md).
 
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Povoliť zdieľanie údajov s Dataverse pri používaní vlastného účtu úložiska
 
 Ak vaše prostredie používa Azure Data Lake Storage na ukladanie údajov Customer Insights, zdieľanie údajov s Microsoft Dataverse potrebuje nejakú extra konfiguráciu.
 Predtým ste mohli povoliť iba zdieľanie údajov s Dataverse keď boli vaše údaje uložené v našom jazere spravovaných údajov.
 
-Viac informácií nájdete v časti [Povoliť zdieľanie údajov s Dataverse z vlastného Azure Data Lake Storage (Náhľad)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Ďalšie informácie nájdete v časti [Povoliť zdieľanie údajov s Dataverse z vlastného Azure Data Lake Storage (Náhľad)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Nové exportné destinácie: Iterable a Braze
 
 Pokračujeme v rozširovaní nášho ekosystému exportných destinácií o nové spojenia. Teraz môžete exportovať segmenty do Iterable a Braze a využívať ich aktivačné služby.
 
-Viac informácií nájdete v časti [Export segmentov do Iterable (ukážka)](export-iterable.md) a [Export segmentov do Braze (ukážka)](export-braze.md).
+Ďalšie informácie nájdete v časti [Exportovať segmenty do Iterable (ukážka)](export-iterable.md) a [Export segmentov do Braze (ukážka)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Vylepšenia exportu Marketo a Google Ads
 
@@ -136,7 +164,7 @@ Organizácie, ktoré už používajú Azure Synapse Analytics môže tieto údaj
 
 LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Osobné identifikátory vo svojich zákazníckych údajoch môžete namapovať na graf identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
 
-Viac informácií nájdete v časti [Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)](enrichment-liveramp.md).
+Ďalšie informácie nájdete v časti [Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)](enrichment-liveramp.md).
 
 ### <a name="enrichment-for-data-sources-preview"></a>Obohatenie pre zdroje údajov (ukážka)
 
@@ -167,7 +195,7 @@ Počas prechodného obdobia majú existujúci účastníci ukážky stále prís
 
 - Získanie kódu na inštrumentáciu webovej lokality alebo mobilnej aplikácie 
 - Pozrite si udalosti a vlastnosti udalosti 
-- Vylepšite zjednotené profily pomocou prijatých a spresnených udalostí, aby ste mohli využívať plnú hodnotu údajov o svojich zákazníkoch
+- Vylepšite zjednotené profily pomocou prijatých a spresnených udalostí, aby ste mohli využiť plnú hodnotu údajov o svojich zákazníkoch
   
 Počas prechodného obdobia sa zachytené udalosti stále streamujú do pripojeného Data Lake. Po vypnutí tejto funkcie sa zdieľanie údajov zastaví a do pripojeného úložiska sa nebudú odosielať žiadne nové udalosti.
 Ak máte otázky týkajúce sa konca ukážky funkcií, kontaktujte priamo svoj tím Microsoft Account. Váš účtovný tím vás bude informovať o pripravovaných spusteniach. 

@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082122"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207202"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obohatenie pre zdroje údajov (ukážka)
 
@@ -21,9 +21,9 @@ Použite údaje zo zdrojov, ako je Microsoft a ďalší partneri, na obohatenie 
 
 ## <a name="enrich-a-data-source"></a>Obohaťte zdroj údajov
 
-Na vytváranie alebo úpravu obohatení musíte mať oprávnenia prispievateľa alebo správcu. Ďalšie informácie nájdete v časti [Povolenia](permissions.md).  
+Musíte mať prispievateľa alebo správcu [povolenia](permissions.md) vytvárať alebo upravovať obohatenia.  
 
-1. Ísť do **Údaje** > **Zjednotiť**. Vyberte entitu, ktorú chcete obohatiť, a vyberte jeden atribút ako primárny kľúč pre entitu. Ďalšie informácie nájdete v časti [Vyberte primárny kľúč](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Ísť do **Údaje** > **Zjednotiť**. Vyberte entitu, ktorú chcete obohatiť, a vyberte jeden atribút ako a [primárny kľúč](map-entities.md#select-primary-key-and-semantic-type-for-attributes) pre subjekt.
 
 1. Prejdite do **Údaje** > **Zdroje údajov**.
 
@@ -47,8 +47,8 @@ Pre zdroje údajov sú v súčasnosti k dispozícii nasledujúce rozšírenia. P
 
 ## <a name="manage-existing-data-source-enrichments"></a>Spravujte existujúce zdroj údajov obohatenia
 
-Prejdite na kartu **Moje obohatenia**, kde nájdete všetky nakonfigurované obohatenia.
+Prejdite na položku **Údaje** > **Obohatenie**. Na **Moje obohatenia** zobrazte nakonfigurované rozšírenia, ich stav, počet obohatených zákazníkov a čas poslednej aktualizácie údajov. Zoznam obohatení môžete zoradiť podľa ľubovoľného stĺpca alebo použiť vyhľadávacie pole na nájdenie obohatenia, ktoré chcete spravovať.
 
-Ak chcete zobraziť prístupné možnosti, označte položku obohatenia. Môžete tiež vybrať zvislú elipsu (&vellip;) na položke zoznamu, aby ste videli možnosti. Ak ste nakonfigurovali niekoľko obohatení, môžete ich rýchlo nájsť pomocou vyhľadávacieho poľa.
+Ak chcete zobraziť prístupné možnosti, označte položku obohatenia. Môžete tiež vybrať zvislú elipsu (&vellip;) na položke zoznamu, aby ste videli možnosti.
 
-Môžete zobraziť, upraviť, spustiť alebo odstrániť obohatenie zdroj údajov. Ďalšie informácie nájdete v časti [Spravujte existujúce obohatenia](enrichment-hub.md).
+Môžete zobraziť, upraviť, spustiť alebo odstrániť obohatenie zdroj údajov. Ďalšie informácie nájdete v časti [Spravujte existujúce obohatenia](enrichment-hub.md#manage-existing-enrichments).

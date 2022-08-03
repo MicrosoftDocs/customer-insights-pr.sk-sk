@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082101"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195193"
 ---
 # <a name="connections-preview-overview"></a>Prehľad pripojení (ukážka)
 
@@ -27,6 +27,12 @@ Prejdite na **Správca** > **Pripojenia** na vytváranie a prezeranie pripojení
 Karta **Pripojenia** zobrazuje všetky aktívne pripojenia. Zoznam zobrazuje riadok pre každé pripojenie.
 
 Získajte rýchly prehľad, popis a zistite, čo môžete robiť s každou možnosťou rozšíriteľnosti na karte **Objavovať**.
+
+## <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
+
+Keď povolíte Dynamics 365 Customer Insights na prenos údajov tretím stranám alebo iným produktom spoločnosti Microsoft povoľujete prenos údajov mimo rámca súladu Dynamics 365 Customer Insights, vrátane potenciálne citlivých údajov, ako sú Osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za to, že tretia strana splní všetky vaše povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Váš Dynamics 365 Customer Insights správca môže pripojenie kedykoľvek zrušiť a prestať tak funkciu používať.
 
 ## <a name="exports"></a>Exporty
 
@@ -41,8 +47,6 @@ Iba správcovia môžu konfigurovať nové pripojenia, ale vytvorené pripojenia
 Ak chcete pridať pripojenia, musíte mať [oprávnenia správcu](permissions.md). Ak sa pripájate k iným službám spoločnosti Microsoft, predpokladáme, že obe služby sú v rovnakej organizácii.
 
 1. Prejdite do časti **Správca** > **Pripojenia (ukážka)**.
-
-1. Prejdite na kartu **Pripojenia**.
 
 1. Ak chcete vytvoriť nové pripojenie, vyberte **Pridať pripojenie**. Z rozbaľovacej ponuky si vyberte, aký typ pripojenia chcete vytvoriť.
 
@@ -99,3 +103,5 @@ Oddelené obohatenia a exporty sa stanú neaktívnymi. Znova ich aktivujete prid
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Nastavte si pripojenia pomocou tajomstiev, ktoré spravuje váš vlastný Key Vault
 
 Niektoré pripojenia vyžadujú tajomstvá, ako sú kľúče API alebo heslá. Niektoré pripojenia podporujú tajomstvá uložené vo vašom vlastnom Key Vault. Získajte viac informácií o podporovaných pripojeniach a o tom, ako ich nastaviť [svoj vlastný trezor kľúčov pre Customer Insights](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

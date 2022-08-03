@@ -1,7 +1,7 @@
 ---
 title: Pripojte Azure Synapse zdroj údajov (ukážka)
 description: Použite databázu v Azure Synapse ako zdroj údajov v Dynamics 365 Customer Insights.
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052718"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206926"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Pripojte Azure Synapse Analytics zdroj údajov (ukážka)
 
@@ -66,3 +66,9 @@ Azure Synapse Analytics je podniková analytická služba, ktorá urýchľuje č
 1. Voliteľne vyberte dátové entity, na ktorých chcete povoliť profilovanie údajov.
 
 1. Vyberte **Uložiť** aby ste použili svoj výber a začali prijímať údaje z vášho novovytvoreného zdroj údajov prepojeného s tabuľkami databázy Lake v Azure Synapse Analytics. The **Zdroje dát** otvorí sa stránka s novým zdroj údajov v **Osviežujúce** postavenie.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Načítanie údajov môže chvíľu trvať. Po úspešnom obnovení môžu byť prijaté údaje skontrolované z [**entity**](entities.md) stránku.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

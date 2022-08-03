@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947387"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146714"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žiadosti o práva dotknutých osôb (DSR) podľa GDPR
 
@@ -31,18 +31,22 @@ Zaviazali sme sa pomôcť našim zákazníkom splniť ich požiadavky v zmysle s
 
 Customer Insights ponúka nasledujúce možnosti v rámci produktu na odstránenie osobných údajov konkrétneho zákazníka alebo používateľa:
 
-- **Spravovať žiadosti o vymazanie údajov zákazníkov**: Údaje zákazníkov v Customer Insights sa získavajú z pôvodných zdrojov údajov, ktoré nepochádzajú z Customer Insights. Všetky žiadosti o vymazanie GDPR musia byť vykonané v pôvodnom zdroji údajov.
+- **Spravovať žiadosti o vymazanie údajov zákazníkov**: Údaje zákazníkov v Customer Insights sa získavajú z pôvodných zdrojov údajov, ktoré nepochádzajú z Customer Insights. Najprv vykonajte žiadosti o vymazanie GDPR v pôvodnom zdroj údajov.
 - **Spravovanie žiadostí o vymazanie používateľských údajov v Customer Insights**: Údaje pre používateľov vytvára služba Customer Insights. Všetky žiadosti o vymazanie GDPR sa musia vykonať v Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Spravovanie žiadostí o vymazanie údajov o zákazníkoch
 
-Správca Customer Insights môže podľa týchto krokov odstrániť zákaznícke údaje, ktoré boli odstránené v zdroji údajov:
+Správca Customer Insights môže podľa týchto krokov odstrániť zákaznícke údaje, ktoré boli odstránené v zdroj údajov. Uistite sa, že žiadosť o odstránenie bola vykonaná vo vašom zdroj údajov predtým, ako budete pokračovať podľa krokov uvedených nižšie. 
 
 1. Prihlásiť sa do Dynamics 365 Customer Insights.
-2. Ísť do **Údaje** > **Zdroje dát**
-3. Pre každý zdroj údajov v zozname, ktorý obsahuje odstránené údaje o zákazníkoch:
+1. Ísť do **Údaje** > **Zdroje dát**
+1. Pre každý zdroj údajov v zozname, ktorý obsahuje odstránené údaje o zákazníkoch:
    1. Vyberte zvislú elipsu (&vellip;) a potom vyberte **Obnoviť**.
-   2. Skontrolujte stav zdroja údajov v časti **Stav**. Začiarknutie znamená, že obnovenie bolo úspešné. Výstražný trojuholník znamená, že sa niečo pokazilo. Ak sa zobrazí výstražný trojuholník, kontaktujte D365CI@microsoft.com.
+   1. Skontrolujte stav zdroja údajov v časti **Stav**. Začiarknutie znamená, že obnovenie bolo úspešné. Výstražný trojuholník znamená, že sa niečo pokazilo. Ak sa zobrazí výstražný trojuholník, kontaktujte D365CI@microsoft.com.
+1. Po úspešnom obnovení zdrojov údajov spustite aj následné aktualizácie. Najmä ak nemáte naplánované opakované úplné obnovenie štatistík zákazníkov. 
+
+> [!IMPORTANT]
+> Statické segmenty nie sú zahrnuté v úplnom obnovení alebo spustených obnoveniach po prúde po požiadavke na odstránenie. Ak chcete zabezpečiť, aby sa údaje o zákazníkoch odstránili aj zo statických segmentov, znova vytvorte statické segmenty s obnovenými zdrojovými údajmi.
 
 > [!div class="mx-imgBorder"]
 > ![Spravovanie žiadostí o vymazanie údajov o zákazníkoch podľa GDPR.](media/gdpr-data-sources.png "Spravovanie žiadostí o vymazanie údajov o zákazníkoch podľa GDPR")
@@ -77,5 +81,10 @@ Správca nájomníka môže exportovať údaje podľa týchto krokov:
 1. Pošlite e-mail na D365CI@microsoft.com, v ktorom je uvedená e-mailová adresa požadovaného používateľa. Tím služby Customer Insights pošle e-mail na zaregistrovanú e-mailovú adresu správcu nájomníka a požiada o potvrdenie exportu údajov.
 2. Potvrďte potvrdenie na exportovanie údajov pre požadovaného používateľa.
 3. Exportované údaje dostanete prostredníctvom e-mailovej adresy správcu nájomníka.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Spracovanie vymazania údajov v Dynamics 365 Customer Insights
+
+1. Údaje budú vymazané (údajové oddiely a dátové snímky), ak sú dátové oddiely a dátové snímky neaktívne dlhšie ako 30 dní, čo znamená, že boli nahradené novým dátovým oddielom a snímkou prostredníctvom obnovenia zdrojov údajov.
+2. Nie všetky údaje a snímky sa odstránia. Najnovší údajový oddiel a snímka údajov sú podľa definície aktívne, pretože sa používajú v Customer Insights. V prípade najnovších údajov nezáleží na tom, či sa zdroje údajov neobnovili za posledných 30 dní.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

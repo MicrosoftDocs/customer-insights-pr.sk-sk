@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052070"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196275"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Obohaťte zákaznícke profily pomocou HERE Technologies (ukážka)
 
@@ -27,7 +27,7 @@ HERE Technologies je spoločnosť s lokalizačnou platformou, ktorá poskytuje �
 
 ## <a name="configure-the-connection-for-here-technologies"></a>Nakonfigurujte pripojenie pre HERE Technologies
 
-Musíte byť [správca](permissions.md#admin) v Customer Insights a mať aktívny kľúč API technológie HERE.
+Musíte byť [správca](permissions.md#admin) v Customer Insights a máte aktívny kľúč API technológie HERE.
 
 1. Vyberte **Pridať pripojenie** pri konfigurácii obohatenia alebo prejdite na **Admin** > **Spojenia** a vyberte **Nastaviť** na dlaždici HERE Technologies.
 
@@ -54,7 +54,7 @@ Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prest
 
 1. Skontrolujte prehľad a potom vyberte **Ďalšie**.
 
-1. Vyberte pripojenie. Ak nie je dostupný, kontaktujte správcu.
+1. Vyberte pripojenie. Ak nie je k dispozícii pripojenie, kontaktujte správcu.
 
 1. Vyberte **Ďalej**.
 

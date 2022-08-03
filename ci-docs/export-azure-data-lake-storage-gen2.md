@@ -1,62 +1,70 @@
 ---
 title: Exportovať údaje do Azure Data Lake Storage Gen2 (ukážka)
 description: Zistite, ako môžete nakonfigurovať pripojenie k Azure Data Lake Storage Gen2.
-ms.date: 10/06/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: c2446fba425203d2910b82134b73543a73c7ecf8
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 55a61e4d9166df7809a64aeb1168a730402aaed6
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082668"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196459"
 ---
 # <a name="export-data-to-azure-data-lake-storage-gen2-preview"></a>Exportovať údaje do Azure Data Lake Storage Gen2 (ukážka)
 
 Ukladajte svoje údaje zo služby Customer Insights do účtu Azure Data Lake Storage Gen2 alebo ho použite na prenesenie údajov do iných aplikácií.
 
+## <a name="prerequisites"></a>Požiadavky
+
+- A [účet úložiska na použitie s Azure Data Lake Gen2](/azure/storage/blobs/create-data-lake-storage-account). Ak chcete nájsť názov účtu úložiska a kľúč, pozrite si časť [Spravujte nastavenia účtu úložiska na portáli Azure](/azure/storage/common/storage-account-manage).
+- An [Kontajner Azure Blob Storage](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-1. Pre Azure Data Lake Storage Gen2 si môžete zvoliť medzi [úrovňou štandardného a prémiového výkonu](/azure/storage/blobs/create-data-lake-storage-account), keď vytvárate účet úložiska pre svoje dátové jazero. Ak si vyberiete úroveň výkonu Premium, vyberte blob prémiových blokov ako typ účtu.
+- Pre Azure Data Lake Storage Gen2, vyberte si medzi [Úroveň štandardného výkonu a prémiového výkonu](/azure/storage/blobs/create-data-lake-storage-account). Ak si vyberiete úroveň prémiového výkonu, vyberte [blob prémiových blokov ako typ účtu](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nastavenie pripojenia k Azure Data Lake Storage Gen2
+## <a name="set-up-connection-to-azure-data-lake-storage-gen2"></a>Nastaviť pripojenie k Azure Data Lake Storage Gen2
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Prejdite do časti **Správca** > **Pripojenia**.
 
-1. Stlačte možnosť **Pridať pripojenie** a stlačením možnosti **Azure Data Lake Gen 2** nakonfigurujte pripojenie.
+1. Vyberte **Pridať pripojenie** a vyberte si **Azure Data Lake Gen 2**.
 
 1. Do poľa **Zobrazovaný názov** zadajte rozpoznateľný názov pripojenia. Zobrazovaný názov a typ spojenia, ktoré popisuje toto spojenie. Odporúčame zvoliť názov, ktorý vysvetľuje účel a cieľ tohto spojenia.
 
-1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Ak neurobíte nič, predvolená hodnota bude Správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Predvolene sú to iba správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Zadajte **Názov účtu**, **Kľúč účtu** a **Kontajner** pre svoje Azure Data Lake Storage Gen2.
-    - Naučte sa, ako vytvoriť účet úložiska na použitie s Azure Data Lake Storage Gen2, pozri [Vytvorte si účet úložiska](/azure/storage/blobs/create-data-lake-storage-account). 
-    - Ak sa chcete dozvedieť viac o názve a kľúči účtu úložiska Azure Data Lake Gen2, prečítajte si časť [Správa nastavení účtu v portáli Azure](/azure/storage/common/storage-account-manage).
+
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
 
 1. Stlačte možnosť **Uložiť** a dokončite pripojenie.
 
 ## <a name="configure-an-export"></a>Nakonfigurujte export
 
-Tento export môžete nakonfigurovať, ak máte prístup k pripojeniu tohto typu. Viac informácií nájdete na stránke [Na konfiguráciu exportu sú potrebné povolenia](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Prejdite na **Údaje** > **Exporty**.
 
-1. Na vytvorenie nového exportu stlačte možnosť **Pridať export**.
+1. Vyberte **Pridať export**.
 
-1. V poli **Pripojenie na export** vyberte pripojenie v časti **Azure Data Lake**. Ak nevidíte názov tejto sekcie, nemáte k dispozícii žiadne spojenia tohto typu.
+1. V **Pripojenie na export** vyberte pripojenie zo sekcie Azure Data Lake. Ak nie je k dispozícii pripojenie, kontaktujte správcu.
+
+1. Zadajte názov exportu.
+
+1. Zadajte názov priečinka pre Azure Data Lake Storage Úložisko Gen2.
 
 1. Vyberte si políčko vedľa každej entity, ktorú chcete exportovať do tohto cieľa.
 
-1. Vyberte položku **Uložiť**.
+1. Vyberte **Uložiť**.
 
-Uloženie exportu nespustí export okamžite.
-
-Export prebieha s každým [plánovaným obnovením](system.md#schedule-tab).
-Môžete tiež [exportovať údaje na požiadanie](export-destinations.md#run-exports-on-demand).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 Exportované údaje sú uložené v kontajneri úložiska Azure Data Lake Gen 2, ktorý ste nakonfigurovali.
 

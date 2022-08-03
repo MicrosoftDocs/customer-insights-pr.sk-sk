@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643818"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171068"
 ---
 # <a name="subscription-churn-prediction"></a>Predikcia straty predplatného
 
@@ -61,8 +61,8 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
 
 ## <a name="create-a-subscription-churn-prediction"></a>Vytvorenie predikcia rizika straty predplatného
 
-1. Ísť do **inteligencia** > **Predpovede**.
-1. Vyberte **Model prerušenia predplatného** dlaždice a vyberte **Použite tento model**.
+1. Ísť do **Inteligencia** > **Predpovede**.
+1. Vyberte **Model vracania predplatného** dlaždice a vyberte **Použite tento model**.
    > [!div class="mx-imgBorder"]
    > ![Dlaždica modelu rizika zrusenia predplatného zákazníkmi s tlačidlom Použiť tento model.](media/subscription-churn-usethismodel.PNG "Dlaždica modelu rizika straty predplatného s tlačidlom Použiť tento model")
 
@@ -121,7 +121,7 @@ Predikcia rizika straty predplatného pomáha predikovať, či hrozí riziko, ž
    - **Názov predikcie:** Názov predikcie uvedený pri jej vytváraní.
    - **Typ predikcie:** Typ modelu použitého na predikciu
    - **Entita Výstup:** Názov entity, do ktorej sa má uložiť výstup predikcie. Entitu s týmto názvom nájdete v časti **Údaje** > **Entity**.    
-     Vo výstupnej entite *ChurnScore* je predpovedaná pravdepodobnosť churn a *IsChurn* je binárny štítok založený na *ChurnScore* s prahom 0,5. Predvolená hranica nemusí pre váš scenár fungovať. [Vytvorte nový segment](segments.md#create-a-new-segment) s vami preferovaným prahom.
+     Vo výstupnej entite *ChurnScore* je predpovedaná pravdepodobnosť churn a *IsChurn* je binárny štítok založený na *ChurnScore* s prahom 0,5. Predvolená hranica nemusí pre váš scenár fungovať. [Vytvorte nový segment](segments.md#create-a-segment) s vami preferovaným prahom.
    - **Predikované pole:** Toto pole sa vyplní iba pre niektoré typy predikcií a nepoužíva sa v predikcii rizika straty predplatného.
    - **Postavenie:** Aktuálny stav spustenia predikcie.
         - **Vo fronte:** Predikcia momentálne čaká na spustenie ďalších procesov.

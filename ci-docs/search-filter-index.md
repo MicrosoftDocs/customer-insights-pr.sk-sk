@@ -1,7 +1,7 @@
 ---
-title: 'Profily zákazníkov: Index vyhľadávania a filtrovania'
+title: Spravujte index vyhľadávania a filtrovania pre profily zákazníkov
 description: Rýchlo vyhľadajte informácie o zjednotených profiloch zákazníkov a filtrujte konkrétne atribúty.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050828"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187928"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Profily zákazníkov: Index vyhľadávania a filtrovania
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Spravujte index vyhľadávania a filtrovania pre profily zákazníkov
 
-Výsledkom zjednocovanie vašich zákazníckych údajov je entita profilu zákazníka, ktorá poskytuje zjednotený pohľad na celkovú zákaznícku základňu. Ak chcete [rýchlo vyhľadať informácie o konkrétnom zákazníkovi alebo skupine zákazníkov](customer-profiles.md), môžete nakonfigurovať možnosti **vyhľadávania** a **filtrovania** na stránke **zákazníci**. Čítajte ďalej a dozviete sa, ako môžu správcovia upravovať atribúty na stránke **indexu vyhľadávania a filtrovania**, ktoré sú k dispozícii používateľom na vyhľadávanie a filtrovanie.
+Výsledkom zjednotenia vašich zákazníckych údajov je a *Zákazník* subjekt, ktorý poskytuje jednotný pohľad na vašu celkovú zákaznícku základňu. Pre používateľov rýchlo [nájsť informácie o konkrétnom zákazníkovi alebo skupine zákazníkov](customer-profiles.md), správca musí nakonfigurovať **Vyhľadávanie** a **Filter** schopnosti pre **zákazníkov** stránku.
 
    :::image type="content" source="media/search-filter.png" alt-text="Filter vyhľadávania":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Definujte vyhľadávateľné atribúty a indexované polia
 
-## <a name="add-fields-and-specify-attributes"></a>Pridanie polí a zadanie atribútov
+Ak ako správca definujete vyhľadávateľné atribúty prvýkrát, najskôr definujte indexované polia. Odporúčame, aby ste si vybrali všetky atribúty, podľa ktorých môžu používatelia vyhľadávať a filtrovať zákazníkov na stránke **Zákazníci**. Iba atribúty, ktoré existujú v *Zákazník* možno špecifikovať entitu vytvorenú počas procesu zjednocovania údajov.
 
-Ak definujete atribúty s možnosťou vyhľadávania ako správca po prvý raz, musíte najprv definovať indexované polia. Odporúčame, aby ste si vybrali všetky atribúty, podľa ktorých môžu používatelia vyhľadávať a filtrovať zákazníkov na stránke **Zákazníci**. Môžete zadať iba atribúty, ktoré existujú v entite profilu zákazníka, ktorý ste vytvorili počas procesu zjednotenia údajov.
+1. Ísť do **zákazníkov** a vyberte **Index vyhľadávania a filtrovania**.
 
-1. Otvorte stránku **Zákazníci** a vyberte **Index vyhľadávania a filtrovania**.
+1. Vyberte **+ Pridať**.
 
-2. Vyberte **+ pridať** a zadajte indexované polia.
+1. Vyberte atribúty v zozname, ktoré chcete pridať ako indexované polia, a kliknite **Použiť**.
 
-3. Vyberte atribúty v zozname, ktoré chcete pridať ako indexované polia. Vždy môžete pridať ďalšie atribúty výberom položky **Pridať**. Vybrané atribúty môžete tiež odstrániť výberom symbolu **Odstrániť**.
+1. Ak chcete pridať ďalšie atribúty, vyberte **Pridať**. Ak chcete odstrániť vybratý atribút, vyberte atribút a potom **Odstrániť**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Preskúmanie tabuľky Indexované polia zákazníkov
+   :::image type="content" source="media/search-filter-index.png" alt-text="Indexová stránka vyhľadávania a filtrovania.":::
 
-V tabuľke sú uvedené nasledujúce informácie.
+1. Vyberte **Bežať** keď budete pripravení použiť nastavenia vyhľadávania a filtra. Po spracovaní zmien ich zobrazte v [zákaznícke karty na Zákazníckej stránke](customer-profiles.md).
 
-- **Názov**: Predstavuje názov atribútu, ako sa zobrazuje v entite profilu zákazníka.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Definujte možnosti filtrovania pre daný atribút
+
+Nastavte polia, ktoré možno použiť na filtrovanie zákazníkov na **zákazníkov** stránku.
+
+1. Ísť do **zákazníkov** a vyberte **Index vyhľadávania a filtrovania**.
+
+1. Vyberte atribút a **Pridať filter**. Definujte počet výsledkov a poradie, v ktorom budú usporiadané. V závislosti od typu údajov atribútu sa zobrazí jeden z nasledujúcich panelov.
+
+   - Atribúty typu reťazca: Zadajte počet požadovaných výsledkov na **Reťazcový filter** tabla a pravidlá objednávok, podľa ktorých budú usporiadané.
+
+   - Atribúty numerického typu: Zadajte intervaly zahrnuté na **Filter čísel** tabla a pravidlá objednávok, podľa ktorých budú usporiadané.
+
+   - Atribúty typu dátumu: Zadajte intervaly zahrnuté na **Dátumový filter** tabla a pravidlá objednávok, podľa ktorých budú usporiadané.
+
+1. Vyberte položku **OK**. Opakujte pre všetky atribúty, podľa ktorých chcete filtrovať.
+
+1. Vyberte **Bežať** keď budete pripravení použiť nastavenia vyhľadávania a filtra. Po spracovaní zmien ich zobrazte v [zákaznícke karty na Zákazníckej stránke](customer-profiles.md).
+
+## <a name="view-indexed-customer-fields"></a>Zobraziť indexované polia zákazníkov
+
+The **Index vyhľadávania a filtrovania** stránka zobrazuje nasledujúce informácie:
+
+- **názov** : Predstavuje názov atribútu tak, ako sa objavuje v *Zákazník* subjekt.
 - **Typ údajov**: Určuje, či je typ údajov reťazec, číslo alebo dátum.
 - **Zahrnuté do vyhľadávania**: Určuje, či sa tento atribút môže použiť na vyhľadávanie zákazníkov na stránke **Zákazníci** pomocou **vyhľadávacieho** poľa.
 - **Pridať filter**: Ovládací prvok na definovanie spôsobu, akým sa tento atribút môže použiť na filtrovanie na stránke **Zákazníci**.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Úprava možností filtrovania pre daný atribút
-
-Ponuka **Filter** na stránke **Zákazníci** môže obsahovať rôzny počet úrovní atribútov (napríklad rôzne vekové skupiny na filtrovanie zákazníkov).
-
-1. Vyberte **Pridať filter** pre daný atribút na stránke **Index vyhľadávania a filtrovania**. Môžete definovať počet výsledkov a poradie, v ktorom budú usporiadané. V závislosti od typu údajov atribútu sa zobrazí jedna z nasledujúcich tabiel.
-
-- Atribúty typu Reťazec: Zadajte počet požadovaných výsledkov na table **Možnosti filtrovania reťazcov** a pravidlá poradia, podľa ktorých budú usporiadané.
-
-- Atribúty typu Číselný: Zadajte počet intervalov obsiahnutých na table **Možnosti filtrovania čísiel** a pravidlá poradia, podľa ktorých budú usporiadané.
-
-- Atribúty typu Údaje: Zadajte počet intervalov obsiahnutých na table **Možnosti filtrovania údajov** a pravidlá poradia, podľa ktorých budú usporiadané.
-
-2. Zmeny vykonajte výberom položky **Uložiť**.
-
-3. Vyberte položku **Spustiť**, keď budete pripravení použiť svoje nastavenia. Po spracovaní zmien ich nájdete na[ zákazníckych kartách na stránke Zákazník ](customer-profiles.md). 
-
 ## <a name="next-steps"></a>Ďalšie kroky
 
 Prezrite si [stránku zjednotených profilov](customer-profiles.md) na vyhľadávanie profilov alebo používanie indexovaných polí na zobrazenie podmnožiny všetkých zjednotených profilov.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
