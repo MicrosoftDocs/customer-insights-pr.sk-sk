@@ -1,19 +1,19 @@
 ---
 title: Obohaťte profily zákazníkov o údaje o polohe z Azure Maps (ukážka)
 description: Všeobecné informácie o obohatení pomocou služby prvej strany Azure Maps.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052626"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238061"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Obohaťte profily zákazníkov o údaje o polohe z Azure Maps (ukážka)
 
@@ -27,22 +27,17 @@ Azure Maps poskytujú údaje a služby orientované na polohu, aby poskytovali s
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Nakonfigurujte pripojenie pre službu Azure Maps
 
-Musíte byť [správca](permissions.md#admin) v Customer Insights a mať aktívny kľúč API pre Azure Maps.
+Musíte byť [správca](permissions.md#admin) v Customer Insights a máte aktívny kľúč API pre Azure Maps.
 
 1. Pri konfigurácii obohatenia zvoľte možnosť **Pridať pripojenie**, alebo prejdite na položku **Správca** > **Pripojenia** a vyberte možnosť **Nastaviť** na dlaždici služby Azure Maps..
 
    :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Stránka konfigurácie pripojenia služby Azure Maps.":::
 
-1. Zadajte názov pripojenia a platný kľúč API pre Azure Maps.
+1. Zadajte názov pripojenia a platný kľúč rozhrania Azure Maps API.
 
-1. Skontrolujte a poskytnite svoj súhlas pre [Ochranu osobných údajov a dodržiavanie súladu s nariadeniami](#data-privacy-and-compliance) výberom možnosti **Súhlasím**.
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
 
 1. Vyberte **Overiť** potvrďte konfiguráciu a potom vyberte **Uložiť**.
-
-### <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
-
-Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje do Azure Maps, povoľujete tým aj prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za to, že Azure Maps spĺňa všetky vaše povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete na stránke [Vyhlásenie o ochrane osobných údajov spoločnosti Microsoft ](https://go.microsoft.com/fwlink/?linkid=396732).
-Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
 ## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 

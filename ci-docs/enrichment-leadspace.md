@@ -1,19 +1,19 @@
 ---
 title: Obohaťte firemné profily pomocou Leadspace (ukážka)
 description: Všeobecné informácie o obohatení pomocou obohatenia tretej stranou Leadspace.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: f45fabc036775e11fc439f69513678d0607729d0
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196229"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237969"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Obohaťte firemné profily pomocou Leadspace (ukážka)
 
@@ -35,14 +35,9 @@ Musíte byť [správca](permissions.md#admin) v Customer Insights a majú „trv
 
 1. Zadajte názov pripojenia a platný token Leadspace.
 
-1. Skontrolujte a poskytnite svoj súhlas pre [Ochranu osobných údajov a dodržiavanie súladu s nariadeniami](#data-privacy-and-compliance) výberom možnosti **Súhlasím**.
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
 
 1. Vyberte **Overiť** potvrďte konfiguráciu a potom vyberte **Uložiť**.
-
-### <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
-
-Keď povolíte prenos údajov spoločnosti Leadspace v službe Dynamics 365 Customer Insights, povoľujete tým prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Spoločnosť Microsoft prenesie tieto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby spoločnosť Leadspace plnila všetky prípadné povinnosti týkajúce sa ochrany vašich osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
 ## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 

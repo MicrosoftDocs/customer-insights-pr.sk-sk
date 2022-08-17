@@ -1,23 +1,23 @@
 ---
 title: Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)
 description: Obohaťte profily zákazníkov o údaje LiveRamp.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196367"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237832"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)
 
-LiveRamp poskytuje deterministické offline rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Osobné identifikátory vo svojich zákazníckych údajoch môžete namapovať na graf identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
+LiveRamp poskytuje deterministické offline rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Môžete namapovať osobné identifikátory vo svojich zákazníckych údajoch do grafu identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
 
 ## <a name="supported-countriesregions"></a>Podporované krajiny/regióny
 
@@ -41,13 +41,9 @@ Musíte byť [správca](permissions.md#admin) v Customer Insights a mať aktívn
 
 1. Zadajte názov pripojenia a platné ID klienta LiveRamp a tajný kód.
 
-1. Skontrolujte a poskytnite svoj súhlas pre [Ochranu osobných údajov a dodržiavanie súladu s nariadeniami](#data-privacy-and-compliance) výberom možnosti **Súhlasím**.
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
 
 1. Vyberte **Overiť** potvrďte konfiguráciu a potom vyberte **Uložiť**.
-
-### <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
-
-Keď povolíte Dynamics 365 Customer Insights na prenos údajov do LiveRamp povolíte prenos údajov mimo hranice zhody pre Dynamics 365 Customer Insights, vrátane potenciálne citlivých údajov, ako sú Osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, že LiveRamp spĺňa všetky vaše povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete na stránke [Vyhlásenie o ochrane osobných údajov spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
 ## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 
@@ -55,7 +51,7 @@ Keď povolíte Dynamics 365 Customer Insights na prenos údajov do LiveRamp povo
 
 1. Vyberte **Obohaťte moje údaje** na **Identita** z dlaždice LiveRamp.
 
-   :::image type="content" source="media/liveramp-tile.png" alt-text="Dlaždica identity na stránke prehľadu obohatenia.":::
+   :::image type="content" source="media/liveramp-tile.png" alt-text="Dlaždice identity na stránke prehľadu obohatenia.":::
 
 1. Skontrolujte prehľad a potom vyberte **Ďalšie**.
 

@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173826"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224314"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Prispôsobte si svoje skúsenosti s údajmi o známych a neznámych používateľoch
 
-Správa údajov o zákazníkoch nie je novou výzvou, ale je čoraz ťažšia, keďže používatelia prechádzajú rôznymi digitálnymi kanálmi, ktoré značky ponúkajú. Používateľ, ktorý je známy (autentizovaný) v jednom kanáli, sa stáva neznámym (neautentizovaným) v inom, ak nie je prihlásený. Problémom často je, že neoverení (neznámi) používatelia nemajú spoločné ID. Dalo by sa použiť na priradenie zmysluplných atribútov profilov a generovanie zjednotených profilov zákazníkov. Customer Insights pomáha vyriešiť tento problém prijímaním údajov z metód sledovania na vašich zdrojových systémoch. Konsolidované neznáme a známe profily poskytujú organizáciám úplný pohľad na aktuálne profily a ich historické transakcie, správanie a demografické údaje. Ide dokonca ešte o krok ďalej tým, že poskytuje rozlíšenie identity, ktoré vám umožňuje zjednotiť aktivitu zákazníkov naprieč viacerými kanálmi vrátane vášho webu, nákupu v obchode, vernostných programov atď.
+Správa údajov o zákazníkoch nie je novou výzvou, ale je čoraz ťažšia, keďže používatelia prechádzajú rôznymi digitálnymi kanálmi, ktoré značky ponúkajú. Používateľ, ktorý je známy (autentizovaný) v jednom kanáli, sa stáva neznámym (neautentizovaným) v inom, ak nie je prihlásený. Problémom často je, že neoverení (neznámi) používatelia nemajú spoločné ID. Dalo by sa použiť na priradenie zmysluplných atribútov profilov a generovanie zjednotených profilov zákazníkov. Customer Insights pomáha vyriešiť tento problém prijímaním údajov z metód sledovania vo vašich zdrojových systémoch. Konsolidácia neznámych a známych profilov poskytuje organizáciám úplný pohľad na aktuálne profily a ich historické transakcie, správanie a demografické údaje. Ide dokonca ešte o krok ďalej tým, že poskytuje rozlíšenie identity, ktoré vám umožňuje zjednotiť aktivitu zákazníkov naprieč viacerými kanálmi vrátane vášho webu, nákupu v obchode, vernostných programov atď.
 
 ## <a name="sample-scenario"></a>Vzorový scenár
 
@@ -45,7 +45,7 @@ Nasledujúca tabuľka zobrazuje zjednodušený príklad, ako by sa mohli zachyti
 
 ## <a name="data-ingestion"></a>Prijímanie údajov
 
-Údaje o zákazníkoch môžu pochádzať z vášho webu ako údaje o udalostiach a môžu byť uložené vo vašich vlastných interných službách alebo službách analýzy údajov tretích strán. Webové údaje obsahujú známych a neznámych používateľov, ak má webová lokalita overovací tok, ktorý sa integruje s overovacou službou. Napríklad systém elektronického obchodu, ktorý vyžaduje, aby používatelia poskytli svoje úplné údaje na dokončenie nákupnej transakcie. Alebo vernostný systém, ktorý vyžaduje autentifikáciu na potvrdenie platného príjemcu zliav odmien.
+Údaje o zákazníkoch môžu pochádzať z vašej webovej lokality ako údaje o udalostiach a môžu byť uložené vo vašich vlastných interných službách alebo službách analýzy údajov tretích strán. Webové údaje obsahujú známych a neznámych používateľov, ak má webová lokalita overovací tok, ktorý sa integruje s overovacou službou. Napríklad systém elektronického obchodu, ktorý vyžaduje, aby používatelia poskytli svoje úplné údaje na dokončenie nákupnej transakcie. Alebo vernostný systém, ktorý vyžaduje autentifikáciu na potvrdenie platného príjemcu zliav.
 
 Údaje udalostí v našom príklade vyššie obsahujú odlišné ID profilu známych a neznámych používateľov. V prípade 1 a 4 sú používatelia neznámi, zatiaľ čo v prípade 2 a 3 sa používateľ s ID abc123 zaregistruje do vernostného programu.
 
@@ -65,7 +65,7 @@ Keďže niektorí používatelia v našich údajoch sú známi, môžeme použi�
 
 1. Pridajte pravidlá na zlúčenie duplicitných záznamov. Pre webové údaje vyberte najviac vyplnené údaje.
 
-1. Nakonfigurujte pravidlá a podmienky zápasu. Údaje udalostí webových profilov v tomto príklade sa budú zhodovať na ID s profilmi z iných zdrojov údajov, ktoré obsahujú informácie o zákazníkoch. Nastavte pravidlá presnej zhody pre ID ako samostatné pravidlá pre každú z ostatných entít profilu, ktoré majú zodpovedajúci primárny kľúč alebo zhodu ID. V tomto príklade sa údaje profilu webovej udalosti použijú ako posledná zhodná entita, takže ostatné údaje profilu sa skombinujú ako prvé.
+1. Nakonfigurujte pravidlá a podmienky zápasu. Údaje udalostí webových profilov v tomto príklade sa budú zhodovať na ID s profilmi z iných zdrojov údajov, ktoré obsahujú informácie o zákazníkoch. Nastavte pravidlá presnej zhody pre ID ako samostatné pravidlá pre každú z ostatných entít profilu, ktoré majú zodpovedajúci primárny kľúč alebo zhodu ID. V tomto príklade sú údaje profilu webovej udalosti použité ako posledná zodpovedajúca entita, takže ostatné údaje profilu sa kombinujú ako prvé.
    1. Nekontrolujem **Zahrňte všetky záznamy** vytvára jednotné profily pre známych používateľov a zahŕňa ich zodpovedajúce neznáme ID používateľov. Je to užitočné v scenároch, keď máte záujem o zobrazenie minulých behaviorálnych aktivít známych používateľov, keď boli ešte neznámi.
    1. Kontrola **Zahrnúť všetky záznamy** vytvára samostatné profilové záznamy pre neznámych používateľov. Neznámi používatelia získajú jedinečné ID zákazníka. V budúcnosti, keď je známy profil priradený k údajom profilu webových udalostí, potom je možné zobraziť cestu nového známeho používateľa a použiť ju na prispôsobenie na základe minulých neznámych údajov o správaní.
 
@@ -73,7 +73,7 @@ Keďže niektorí používatelia v našich údajoch sú známi, môžeme použi�
 
 ## <a name="get-insights"></a>Získať prehľady
 
-Ak sa vytvoria zákaznícke profily pre neznámych a známych používateľov, údaje o udalostiach na webe s vysokou hodnotou môžu byť použité ako [činnosti](activities.md). Tieto aktivity možno použiť na vytvorenie ďalších prehľadov. Napríklad zákazníci, ktorí navštívili webovú stránku pred šiestimi mesiacmi (keď boli ešte neznámi) alebo zákazníci, ktorí nemajú vernostné ID, nikdy nedokončili platbu.
+Ak sa vytvoria profily zákazníkov pre neznámych a známych používateľov, môžu sa použiť údaje o udalostiach na webe s vysokou hodnotou [činnosti](activities.md). Tieto aktivity možno použiť na vytvorenie ďalších prehľadov. Napríklad zákazníci, ktorí navštívili webovú stránku pred šiestimi mesiacmi (keď boli ešte neznámi) alebo zákazníci, ktorí nemajú vernostné ID, nikdy nedokončili platbu.
 
 :::image type="content" source="media/website-known-unknown.png" alt-text="Snímka obrazovky zákazníckej stránky so známymi a neznámymi zákazníkmi.":::
 

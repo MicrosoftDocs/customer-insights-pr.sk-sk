@@ -1,7 +1,7 @@
 ---
-title: Správa povolení používateľov
+title: Priradenie používateľských povolení
 description: Ďalšie informácie povoleniach a rolách používateľov.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054907"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245438"
 ---
-# <a name="manage-user-permissions"></a>Správa povolení používateľov
+# <a name="assign-user-permissions"></a>Priradenie používateľských povolení
 
-The **Povolenia** je to, kde nastavíte roly a povolenia na používanie Customer Insights.
-
-Ak chcete stránku zobraziť, musíte mať oprávnenie správcu. Ak chcete získať prístup na stránku povolení, prejdite na **Admin** > **Bezpečnosť** > **Používatelia**.
-
-Existujú tri typy rol:
+Prístup k Customer Insights je obmedzený na používateľov vo vašej organizácii, ktorých do aplikácie pridá správca. Správca môže pridávať, upravovať alebo odstraňovať používateľov. Používateľom môže byť jeden používateľ, skupina alebo aplikácia. Používateľ môže mať tri typy rolí:
 
 ## <a name="viewer"></a>Divák
 
@@ -41,18 +37,18 @@ Existujú tri typy rol:
 
 - Všetky povolenia, ktoré má Zobrazovač k dispozícii.
 - Načítanie a transformácia údajov pomocou stránky **Zdroje údajov**.
-- Dokončiť ***Zjednotenie údajov** ktorých výsledkom je jednotná entita profilu zákazníka.
+- Dokončiť **Zjednotenie údajov** ktorých výsledkom je jednotná entita profilu zákazníka.
 - Definujte **Vzťahy** a **Aktivity**.
 - Vytvárajte segmenty pomocou stránky **Segmenty**.
 - Vytvárajte miery pomocou stránky **Miery**.
 - Spravujte konfiguráciu a obohacujte profily zákazníkov zo stránky **Obohatenie** (iba pre obohatenie prvej strany).
-- Spravujte a vytvárajte exporty na základe pripojení zdieľaných s prispievateľmi. [Získajte viac informácií o tom, ako správcovia umožňujú prispievateľom používať pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Spravujte a vytvárajte exporty založené na [pripojenia zdieľané s prispievateľmi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="admin"></a>Správca
+## <a name="admin"></a>Správa
 
 - Všetky povolenia, ktoré má Prispievateľ k dispozícii.
-- Zmeňte nastavenia na stránke **Systém** vrátane pracovného jazyka a plánov obnovy pre vaše systémové procesy.
-- Zobrazujte a pridávajte povolenia pomocou stránky **Povolenia**.
+- Zmeňte nastavenia na **Systém** stránku vrátane pracovného jazyka, plány obnovy pre vaše systémové procesy a exportovanie diagnostických protokolov.
+- Zmeňte nastavenia na **Bezpečnosť** vrátane používateľov, kľúčov API, súkromných odkazov a trezoru kľúčov.
 - Nastavte definície vyhľadávania a filtrovania pre stránku Zákazníci pomocou stránky **Index vyhľadávania a filtrovania**(prístupná cez stránku **Zákazníci**).
 - Spravujte pripojenia a povoľte ich pre ďalšie roly používateľov na stránke **Pripojenia**.
 - Spravujte konfiguráciu a obohacujte profily zákazníkov zo stránky **Obohatenie** (pre všetky obohatenia).
@@ -67,24 +63,27 @@ Existujú tri typy rol:
 - Všetky povolenia dostupné pre správcu.
 - [Obnoviť a odstrániť](manage-environments.md#reset-an-existing-environment-preview) prostredie.
 
-## <a name="assign-roles-and-permissions"></a>Priradenie rolí a povolení
+## <a name="add-users"></a>Pridanie používateľov
 
-1. Ísť do **Admin** > **Bezpečnosť** > **Používatelia***.
+1. Ísť do **Admin** > **Bezpečnosť** a vyberte **Používatelia** tab.
 
 1. Výberom možnosti **Pridať používateľov** otvorte tablu **Pridať/upraviť povolenia**.
 
-1. Použite pole **Vyhľadávanie** na vyhľadanie používateľa alebo skupiny Azure Active Directory, ktorých povolenia chcete upraviť. Vyberte a **Rolu** na priradenie k tomuto používateľovi alebo skupine.
+1. Použi **Vyhľadávanie** pole nájsť Azure Active Directory používateľa alebo skupinu, ktorú chcete pridať. Vyberte a **Rolu** na priradenie k tomuto používateľovi alebo skupine.
 
-1. Vyberte položku **Uložiť**. Aktuálne prostredie sa bude automaticky zdieľať s používateľom alebo členmi skupiny, ktorých povolenia ste zmenili. Používatelia majú prístup k aplikácii Customer Insights a môžu pracovať podľa svojej zadanej roly.
+1. Vyberte **Uložiť**. Aktuálne prostredie sa automaticky zdieľa s používateľom alebo členmi skupiny. Používatelia majú prístup k aplikácii Customer Insights a môžu pracovať podľa svojej zadanej roly.
 
 ## <a name="view-current-permissions"></a>Zobrazenie aktuálnych povolení
 
-Ísť do **Admin** > **Bezpečnosť** > **Používatelia** aby ste videli, aké roly sú momentálne aktívne.
+Ísť do **Admin** > **Bezpečnosť** a vyberte **Používatelia** zobrazíte zoznam aktívnych používateľov a ich priradenia rolí. Zoznam používateľov môžete zoradiť podľa ľubovoľného stĺpca alebo pomocou vyhľadávacieho poľa nájsť konkrétneho používateľa.
 
-- Stĺpec **Typ** určuje jedného používateľa, skupinu alebo aplikáciu. Systém podporuje jednotlivých používateľov a skupiny.
-- Roly sú špecifikované v stĺpci **Rola**.
-- Ak chcete zoradiť výsledky podľa hodnoty v tomto stĺpci, vyberte ľubovoľný názov stĺpca.
-- Pomocou poľa **Vyhľadať** v hornej časti stránky vyhľadajte konkrétnych používateľov.
+## <a name="manage-current-users"></a>Spravujte aktuálnych používateľov
 
+Ísť do **Admin** > **Bezpečnosť** a vyberte **Používatelia** tab. Zoznam používateľov môžete zoradiť podľa ľubovoľného stĺpca alebo pomocou vyhľadávacieho poľa nájsť používateľa, ktorého chcete spravovať.
+
+Ak chcete zobraziť dostupné akcie, vyberte používateľa.
+
+- **Upraviť** upraviť rolu používateľa v Customer Insights. Vyberte **Uložiť** na potvrdenie zmeny.
+- **Odstrániť** na odstránenie používateľa z prístupu k Customer Insights. Vyberte možnosť **Odstrániť** a potvrďte odstránenie.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

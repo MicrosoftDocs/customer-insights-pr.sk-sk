@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 6c951219410b55adc34691f677158b574cea1e01
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188067"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245714"
 ---
 # <a name="use-customer-consent"></a>Použite súhlas zákazníka
 
-Nariadenia o ochrane údajov a súkromia poskytujú jednotlivcom právo riadiť, ako organizácia používa ich osobné údaje. Príkladmi takýchto nariadení sú všeobecné nariadenie o ochrane údajov v Európskej únii alebo kalifornský zákon o ochrane osobných údajov spotrebiteľov v Spojených štátoch. Tieto nariadenia umožňujú ľuďom odmietnuť zhromažďovanie, spracúvanie alebo zdieľanie ich osobných údajov s tretími stranami.  
+Nariadenia o ochrane údajov a súkromia poskytujú jednotlivcom právo riadiť, ako organizácia používa ich osobné údaje. Príkladmi takýchto nariadení sú všeobecné nariadenie o ochrane údajov v Európskej únii alebo kalifornský zákon o ochrane osobných údajov spotrebiteľov v Spojených štátoch. Tieto nariadenia umožňujú ľuďom odmietnuť zhromažďovanie, spracovanie alebo zdieľanie ich osobných údajov s tretími stranami.  
 
 Zákazníci sa môžu rozhodnúť odvolať alebo odoprieť svoj súhlas pre konkrétne formy kontaktu. Môžu tiež požiadať, aby ste ich odhlásili zo zhromažďovania, uchovávania, používania alebo predaja ich osobných údajov. Je dôležité, aby vaša organizácia rešpektovala súhlas a preferencie ochrany osobných údajov všetkých zákazníkov.  
 
@@ -56,7 +56,7 @@ Importujte údaje o súhlase rovnakým spôsobom, akým prijímate iné zdroje �
 
 ## <a name="use-consent-data"></a>Použite údaje o súhlase
 
-Keď budú údaje o vašom súhlase súčasťou vašich zjednotených zákazníckych profilov, môžete ich použiť v Customer Insights. Vytvorte napríklad segment s pravidlom, ktoré zabezpečí, že budete rešpektovať preferencie ochrany súkromia a údajov vašich zákazníkov. Pravidlá podporujúce predvoľby súhlasu sa používajú na vylúčenie používateľov zo segmentu na základe atribútov profilu. Pridajte pravidlo do segmentu, ktorý vylučuje profily zákazníkov, ktorí neposkytli súhlas s kontaktovaním.
+Keď budú vaše údaje o súhlase súčasťou vašich zjednotených zákazníckych profilov, môžete ich použiť v Customer Insights. Vytvorte napríklad segment s pravidlom, ktoré zabezpečí, že budete rešpektovať preferencie ochrany súkromia a údajov vašich zákazníkov. Pravidlá podporujúce predvoľby súhlasu sa používajú na vylúčenie používateľov zo segmentu na základe atribútov profilu. Pridajte pravidlo do segmentu, ktorý vylučuje profily zákazníkov, ktorí neposkytli súhlas s kontaktovaním.
 
 Podľa vzorovej tabuľky vyššie môže segment obsahovať toto pravidlo:`Consent option=Newsletter & Consent value=True`. Výsledkom tejto konfigurácie je segment, ktorý rešpektuje preferencie kontaktov na odosielanie bulletinu.
 
@@ -66,10 +66,10 @@ Po vytvorení segmentu môžete použiť jeden z mnohých [možnosti exportu](ex
 
 ## <a name="ensure-updated-consent-status"></a>Zabezpečte aktualizovaný stav súhlasu
 
-Je dôležité aktualizovať stav súhlasu pre vašich zákazníkov. Plánované obnovenie v Customer Insights vždy importuje najnovší stav vašich zdrojov údajov. Tieto informácie sú následne spracované prostredníctvom zjednotenia údajov a výsledkom sú aktualizované profily zákazníkov. Tieto aktualizované profily sa potom použijú na obnovenie segmentov, aby ste sa uistili, že pracujete s najaktuálnejšími informáciami.
+Je dôležité aktualizovať stav súhlasu pre vašich zákazníkov. Plánované obnovenie v Customer Insights vždy importuje najnovší stav vašich zdrojov údajov. Tieto informácie sú následne spracované prostredníctvom zjednotenia údajov a výsledkom sú aktualizované zákaznícke profily. Tieto aktualizované profily sa potom používajú na obnovenie segmentov, aby ste sa uistili, že pracujete s najaktuálnejšími informáciami.
 
 Inými slovami, uistite sa, že zdrojové údaje, ktoré sa importujú do Customer Insights, majú vždy najnovšie informácie.
 
-Ďalšie informácie nájdete v časti [Obnovte segmenty manuálne](segments.md#refresh-segments) alebo [nakonfigurovať plánovanú obnovu](system.md#schedule-tab).
+Ďalšie informácie nájdete v časti [Obnovte segmenty manuálne](segments.md#refresh-segments) alebo [nakonfigurovať plánovanú obnovu](schedule-refresh.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

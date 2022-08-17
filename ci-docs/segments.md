@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170700"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246312"
 ---
 # <a name="segments-overview"></a>Prehľad segmentov
 
@@ -58,8 +58,8 @@ Ak chcete zobraziť dostupné akcie, vyberte segment.
 - **Úprava** segmentu na zmenu jeho vlastností.
 - **Vytvorte duplikát** segmentu. Môžete sa rozhodnúť upraviť jeho vlastnosti ihneď alebo uložiť duplikát.
 - [**Obnoviť**](#refresh-segments) segment, ktorý obsahuje najnovšie údaje.
-- **Aktivácia** alebo **deaktivácia** segmentu. Neaktívne segmenty sa počas a [plánované obnovenie](system.md#schedule-tab) a mať **Postavenie** uvedené ako **Preskočené**, čo naznačuje, že sa ani nepokúsili o obnovenie. Aktívne segmenty sa obnovujú podľa ich typu: statické alebo dynamické.
-- **Urobte statické** alebo **Urobte dynamický** typ segmentu. Statické segmenty sa musia obnoviť manuálne. Dynamické segmenty sa automaticky obnovujú počas obnovovania systému.
+- **Aktivácia** alebo **deaktivácia** segmentu. Neaktívne segmenty sa počas a [plánované obnovenie](schedule-refresh.md) a mať **Postavenie** uvedené ako **Preskočené**, čo naznačuje, že sa ani nepokúsili o obnovenie. Aktívne segmenty sa obnovujú podľa ich typu: statické alebo dynamické.
+- **Urobte statické** alebo **Urobte dynamiku** typ segmentu. Statické segmenty sa musia obnoviť manuálne. Dynamické segmenty sa automaticky obnovujú počas obnovovania systému.
 - [**Nájdite podobných zákazníkov**](find-similar-customer-segments.md) zo segmentu.
 - **Premenovanie** segmentu.
 - **Tag** do [spravovať značky](work-with-tags-columns.md#manage-tags) pre segment.
@@ -88,7 +88,7 @@ Spodná časť obsahuje zoznam členov segmentu.
 
 Segmenty je možné obnoviť podľa automatického plánu alebo manuálne na požiadanie. Ak chcete manuálne obnoviť jeden alebo viac segmentov, vyberte ich a vyberte **Obnoviť**.
 
-Komu [naplánovať automatické obnovenie](system.md#schedule-tab), ísť do **Admin** > **Systém** > **Rozvrh**. Platia nasledujúce pravidlá:
+Komu [naplánovať automatické obnovenie](schedule-refresh.md), ísť do **Admin** > **Systém** > **Rozvrh**. Platia nasledujúce pravidlá:
 
 - Všetky segmenty s typom **Dynamický** alebo **Rozšírenie** sa automaticky obnoví pri nastavenej kadencii. Po dokončení obnovy sa **Postavenie** označuje, či sa vyskytli nejaké problémy pri obnovovaní segmentu. The **Naposledy obnovené** zobrazuje časovú pečiatku posledného úspešného obnovenia. Ak sa vyskytne chyba, výberom chyby zobrazíte podrobnosti o tom, čo sa stalo.
 - Segmenty s typom **Statické** *nebude* automaticky obnovovať. The **Naposledy obnovené** zobrazuje časovú pečiatku posledného manuálneho spustenia alebo obnovenia statický segment.

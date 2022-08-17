@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207110"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245668"
 ---
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
@@ -44,7 +44,7 @@ Ak používate lokálne zdroje údajov, Microsoft alebo údaje tretích strán, 
 Ak bolo vaše prostredie nakonfigurované na používanie úložiska Customer Insights a používate lokálne zdroje údajov, použite Power Platform dátové toky. s Power Platform dátové toky, môžete zobraziť zdieľané dátové zdroje a dátové zdroje spravované inými. The **Zdroje dát** stránka uvádza zdroje údajov v troch sekciách:
 - **Zdieľané** : Zdroje údajov, ktoré môžu spravovať všetci správcovia Customer Insights. Power Platform dátové toky, váš vlastný úložný účet a pripojenie k a Dataverse -managed data lake sú príklady zdieľaných zdrojov údajov.
 - **Spravované mnou** :Power Platform dátové toky vytvorené a spravované iba vami. Ostatní správcovia Customer Insights môžu tieto toky údajov iba zobraziť, ale nemôžu ich upravovať, obnovovať ani odstraňovať.
-- **Spravované inými** :Power Platform dátové toky vytvorené inými administrátormi. Môžete si ich len prezerať. Uvádza vlastníka toku údajov, na ktorého sa môžete obrátiť so žiadosťou o pomoc.
+- **Spravované inými** :Power Platform dátové toky vytvorené inými administrátormi. Môžete si ich iba prezerať. Uvádza vlastníka toku údajov, na ktorého sa môžete obrátiť so žiadosťou o pomoc.
 > [!NOTE]
 > Všetky entity môžu prezerať a používať iní používatelia. Zatiaľ čo zdroje údajov vlastní používateľ, ktorý ich vytvoril, výsledné entity z príjmu údajov môže použiť každý používateľ Customer Insights.
 
@@ -67,7 +67,7 @@ Ak chcete zobraziť dostupné akcie, vyberte zdroj údajov.
 
 Zdroje údajov je možné obnovovať automaticky alebo podľa potreby manuálne. [Miestne zdroje údajov](connect-power-query.md#add-data-from-on-premises-data-sources) obnovovať podľa vlastných plánov, ktoré sú nastavené počas prijímania údajov. V prípade pripojených zdrojov údajov prijíma príjem údajov najnovšie údaje dostupné z tohto zdroj údajov.
 
-Ísť do **Admin** > **Systém** > [**Rozvrh**](system.md#schedule-tab) na konfiguráciu systémovo naplánovaných obnovení vašich prijatých zdrojov údajov.
+Ísť do **Admin** > **Systém** > [**Rozvrh**](schedule-refresh.md) na konfiguráciu systémovo naplánovaných obnovení vašich prijatých zdrojov údajov.
 
 Ak chcete obnoviť zdroj údajov na požiadanie:
 

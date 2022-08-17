@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195677"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246127"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Prijímanie údajov v reálnom čase (ukážka)
 
 Vďaka funkcii takmer reálneho času môžete v priebehu niekoľkých sekúnd vidieť najnovšie interakcie, ktoré zákazníci vykonali s vašimi produktmi alebo službami.
 
-[Plánované obnovenia](system.md#schedule-tab) zahŕňajú veľké množstvo záznamov a niekoľko zložitých operácií. Najskôr sa údaje načítajú zo zdroja údajov. Ďalej sú údaje zjednotené a potom obohatené o ďalšie informácie. Každé spustenie tohto procesu môže trvať minúty až hodiny.
+[Plánované obnovenia](schedule-refresh.md) zahŕňajú veľké množstvo záznamov a niekoľko zložitých operácií. Najskôr sa údaje načítajú zo zdroja údajov. Ďalej sú údaje zjednotené a potom obohatené o ďalšie informácie. Každé spustenie tohto procesu môže trvať minúty až hodiny.
 
 Funkcia v reálnom čase sprístupňuje údaje okamžite na spotrebu, až kým nasledujúce naplánované obnovenie nenačíta tieto údaje zo zdroja údajov.
 
@@ -85,7 +85,7 @@ Podrobnosti o tomto API vrátane parametrov a odpovedí nájdete v časti **Enti
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Získajte informácie o svojom využití v reálnom čase pomocou telemetrie
 
-Získajte prehľad o objeme požiadaviek na API v reálnom čase a informácie o problémoch, s ktorými sa systém môže stretnúť. Môžete [pristupovať k telemetrii v reálnom čase](system.md#api-usage-tab). 
+Získajte prehľad o objeme požiadaviek na API v reálnom čase a informácie o problémoch, s ktorými sa systém môže stretnúť. Môžete [pristupovať k telemetrii v reálnom čase](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

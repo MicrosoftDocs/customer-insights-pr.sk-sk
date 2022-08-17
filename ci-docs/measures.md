@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170868"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245392"
 ---
 # <a name="measures-overview"></a>Prehľad opatrení
 
@@ -53,7 +53,7 @@ Výberom položky vedľa miery zobrazíte dostupné akcie. Ak chcete zobraziť u
 - **Upraviť** opatrenie na zmenu jeho vlastností.
 - **Obnoviť** opatrenie obsahuje najnovšie údaje.
 - **Premenujte** mieru.
-- **Aktivovať** alebo **Deaktivovať** opatrenie. Neaktívne opatrenia sa počas a [plánované obnovenie](system.md#schedule-tab) a mať **Postavenie** uvedené ako **Preskočené**, čo naznačuje, že sa ani nepokúsili o obnovenie.
+- **Aktivovať** alebo **Deaktivovať** opatrenie. Neaktívne opatrenia sa počas a [plánované obnovenie](schedule-refresh.md) a mať **Postavenie** uvedené ako **Preskočené**, čo naznačuje, že sa ani nepokúsili o obnovenie.
 - **Tag** do [spravovať značky](work-with-tags-columns.md#manage-tags) za opatrenie.
 - **Odstráňte** mieru.
 - **Stĺpce** do [prispôsobiť stĺpce](work-with-tags-columns.md#customize-columns) ten displej.
@@ -62,7 +62,7 @@ Výberom položky vedľa miery zobrazíte dostupné akcie. Ak chcete zobraziť u
 
 ## <a name="refresh-measures"></a>Obnoviť opatrenia
 
-Opatrenia môžu byť obnovené podľa automatického plánu alebo manuálne na požiadanie. Ak chcete manuálne obnoviť jedno alebo viac taktov, vyberte ich a vyberte **Obnoviť**. Komu [naplánovať automatické obnovenie](system.md#schedule-tab), ísť do **Admin** > **Systém** > **Rozvrh**.
+Opatrenia môžu byť obnovené podľa automatického plánu alebo manuálne na požiadanie. Ak chcete manuálne obnoviť jedno alebo viac taktov, vyberte ich a vyberte **Obnoviť**. Komu [naplánovať automatické obnovenie](schedule-refresh.md), ísť do **Admin** > **Systém** > **Rozvrh**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

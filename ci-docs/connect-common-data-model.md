@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207018"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245852"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Pripojiť sa k údajom v doplnku Azure Data Lake Storage
 
@@ -27,7 +27,7 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 - Podporuje príjem údajov Azure Data Lake Storage *Gen2* účty. Účty Data Lake Storage Gen1 nemôžete používať na prijímanie údajov.
 
-- The Azure Data Lake Storage účet musí mať [povolený hierarchický menný priestor](/azure/storage/blobs/data-lake-storage-namespace). Údaje musia byť uložené vo formáte hierarchického priečinka, ktorý definuje koreňový priečinok a má podpriečinky pre každú entitu. Podpriečinky môžu mať priečinky s úplnými údajmi alebo s prírastkovými údajmi.
+- The Azure Data Lake Storage účet musí mať [hierarchický menný priestor povolený](/azure/storage/blobs/data-lake-storage-namespace). Údaje musia byť uložené vo formáte hierarchického priečinka, ktorý definuje koreňový priečinok a má podpriečinky pre každú entitu. Podpriečinky môžu mať priečinky s úplnými údajmi alebo s prírastkovými údajmi.
 
 - Ak chcete vykonať overenie pomocou objektu služby Azure, uistite sa, že je nakonfigurovaný vo vašom nájomníkovi. Viac informácií nájdete v časti [Pripojte sa k Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
 
@@ -56,8 +56,8 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 1. Vyberte jednu z nasledujúcich možností pre **Pripojte svoje úložisko pomocou**. Viac informácií nájdete v časti [Pripojte Customer Insights k a Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
 
-   - **Prostriedok Azure** : Zadajte **ID zdroja** . Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#private-links-tab).
-   - **Predplatné Azure** : Vyberte **Predplatné** a potom **Skupina zdrojov** a **Účet úložiska**. Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#private-links-tab).
+   - **Prostriedok Azure** : Zadajte **ID zdroja** . Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#set-up-an-azure-private-link).
+   - **Predplatné Azure** : Vyberte **Predplatné** a potom **Skupina zdrojov** a **Účet úložiska**. Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Na vytvorenie zdroj údajov potrebujete jednu z nasledujúcich rolí pre kontajner alebo účet úložiska:
@@ -97,7 +97,7 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
    :::image type="content" source="media/dataprofiling-entities.png" alt-text="Dialógové okno na výber profilovania údajov.":::
 
    1. Vytvorte nové atribúty, upravte alebo odstráňte existujúce atribúty. Môžete zmeniť názov, formát údajov alebo pridať sémantický typ.
-   1. Ak chcete povoliť analýzu a ďalšie funkcie, vyberte **Profilovanie údajov** pre celú entitu alebo pre špecifické atribúty. V predvolenom nastavení nie je pre profilovanie údajov povolená žiadna entita.
+   1. Ak chcete povoliť analýzu a ďalšie funkcie, vyberte **Profilovanie údajov** pre celú entitu alebo pre konkrétne atribúty. V predvolenom nastavení nie je pre profilovanie údajov povolená žiadna entita.
    1. Vyberte položku **Hotovo**.
 
 1. Vyberte **Uložiť**. The **Zdroje dát** otvorí sa stránka s novým zdroj údajov v **Osviežujúce** postavenie.
@@ -130,7 +130,7 @@ Načítanie údajov môže chvíľu trvať. Po úspešnom obnovení môžu byť 
 
    1. Uistite sa, že formát údajov je správny pre každý atribút.
 
-   1. Ak chcete povoliť analýzu a ďalšie funkcie, vyberte **Profilovanie údajov** pre celú entitu alebo pre špecifické atribúty. V predvolenom nastavení nie je pre profilovanie údajov povolená žiadna entita.
+   1. Ak chcete povoliť analýzu a ďalšie funkcie, vyberte **Profilovanie údajov** pre celú entitu alebo pre konkrétne atribúty. V predvolenom nastavení nie je pre profilovanie údajov povolená žiadna entita.
 
       :::image type="content" source="media/dataprofiling-entities.png" alt-text="Dialógové okno na výber profilovania údajov.":::
 
@@ -176,7 +176,7 @@ Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Viac
         > - Majiteľ údajov objektu Blob
         > - Prispievateľ údajov do objektu BLOB úložiska
 
-   - **Povoliť súkromný odkaz** ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#private-links-tab).
+   - **Povoliť súkromný odkaz** ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#set-up-an-azure-private-link).
 
 1. Vyberte **Ďalej**.
 1. Zmeňte čokoľvek z nasledujúceho:
@@ -186,11 +186,11 @@ Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Viac
       > [!IMPORTANT]
       > Ak existujú závislosti na existujúcom súbore model.json alebo manifest.json a množine entít, zobrazí sa chybové hlásenie a nemôžete vybrať iný súbor model.json alebo manifest.json. Pred zmenou súboru model.json alebo manifest.json tieto závislosti odstráňte alebo vytvorte nový zdroj údajov so súborom model.json alebo manifest.json, ktorý chcete použiť, aby ste sa vyhli odstráneniu závislostí.
    - Ak chcete zmeniť umiestnenie dátového súboru alebo primárny kľúč, vyberte **Upraviť**.
-   - Ak chcete zmeniť údaje o prírastkovom príjme, pozrite si časť [Nakonfigurujte prírastkové obnovenie pre zdroje údajov Azure Data Lake](incremental-refresh-data-sources.md).
+   - Ak chcete zmeniť údaje prírastkového príjmu, pozrite si časť [Nakonfigurujte prírastkové obnovenie pre zdroje údajov Azure Data Lake](incremental-refresh-data-sources.md).
    - Zmeňte iba názov entity tak, aby sa zhodoval s názvom entity v súbore .json.
 
      > [!NOTE]
-     > Po prijatí vždy ponechajte názov entity v Customer Insights rovnaký ako názov entity v súbore model.json alebo manifest.json. Customer Insights overuje všetky názvy entít pomocou súboru model.json alebo manifest.json počas každého obnovenia systému. Ak sa zmení názov entity v rámci Customer Insights alebo mimo neho, vyskytne sa chyba, pretože Customer Insights nemôže nájsť nový názov entity v súbore .json. Ak sa názov prijímanej entity náhodou zmenil, upravte názov entity v Customer Insights tak, aby sa zhodoval s názvom v súbore .json.
+     > Po prijatí vždy ponechajte názov entity v Customer Insights rovnaký ako názov entity v súbore model.json alebo manifest.json. Customer Insights overuje všetky názvy entít pomocou súboru model.json alebo manifest.json počas každého obnovenia systému. Ak sa zmení názov entity v rámci Customer Insights alebo mimo neho, vyskytne sa chyba, pretože Customer Insights nemôže nájsť nový názov entity v súbore .json. Ak sa názov prijatej entity náhodou zmenil, upravte názov entity v Customer Insights tak, aby sa zhodoval s názvom v súbore .json.
 
 1. Vyberte **Atribúty** pridať alebo zmeniť atribúty alebo povoliť profilovanie údajov. Potom vyberte položku **Hotovo**.
 

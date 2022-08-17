@@ -1,19 +1,19 @@
 ---
 title: Obohaťte profily zákazníkov pomocou vlastného importu SFTP (ukážka)
 description: Všeobecné informácie o obohatení pomocou vlastného importu protokolu SFTP.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195815"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237785"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Obohaťte profily zákazníkov pomocou vlastného importu SFTP (ukážka)
 
@@ -85,14 +85,9 @@ Musíte byť [správca](permissions.md#admin) v Customer Insights a majte použ�
 
 1. Zadajte platné používateľské meno, heslo a adresu URL hostiteľa servera SFTP, na ktorom sa nachádzajú údaje, ktoré sa majú importovať.
 
-1. Skontrolujte a poskytnite svoj súhlas pre [Ochranu osobných údajov a dodržiavanie súladu s nariadeniami](#data-privacy-and-compliance) výberom možnosti **Súhlasím**.
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
 
 1. Vyberte **Overiť** potvrďte konfiguráciu a potom vyberte **Uložiť**.
-
-### <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
-
-Keď povolíte Dynamics 365 Customer Insights na prenos údajov pomocou vlastného importu povolíte prenos údajov mimo hranice súladu pre Dynamics 365 Customer Insights, vrátane potenciálne citlivých údajov, ako sú Osobné údaje. Spoločnosť Microsoft prenesie takéto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby údaje spĺňali všetky vaše povinnosti týkajúce sa ochrany osobných údajov alebo zabezpečenia. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
 ## <a name="configure-the-import"></a>Konfigurácia importu
 

@@ -12,18 +12,18 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142838"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245576"
 ---
 # <a name="how-to-create-a-new-environment"></a>Ako na to: Vytvorte nové prostredie
 
 Po [zakúpenie predplatiteľskej licencie pre Dynamics 365 Customer Insights](paid-license.md), globálny správca spoločnosti Microsoft 365 nájomník dostane e-mail, ktorý ho pozýva na vytvorenie prostredia. Ak chcete začať, pozrite si časť [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). V tomto scenári môžete prejsť priamo na [Krok 1: Poskytnite základné informácie](#step-1-provide-basic-information).
 
-Po vytvorení prvého prostredia globálny správca Microsoft 365 nájomca môže [pridať používateľov zo svojej organizácie ako správcov](permissions.md). V budúcnosti môžu títo správcovia spravovať používateľov a prostredia. Ak si vaša organizácia zakúpi viac ako jednu licenciu na Customer Insights, [kontaktujte náš tím podpory](https://go.microsoft.com/fwlink/?linkid=2079641) zvýšiť počet dostupných prostredí. Ďalšie informácie o kapacite a prídavnej kapacite nájdete na stránke [Licenčná príručka Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+Po vytvorení prvého prostredia globálny správca Microsoft 365 nájomca môže [pridať používateľov zo svojej organizácie ako správcov](permissions.md). V budúcnosti môžu títo správcovia spravovať používateľov a prostredia. Ak si vaša organizácia zakúpi viac ako jednu licenciu pre Customer Insights, [kontaktujte náš tím podpory](https://go.microsoft.com/fwlink/?linkid=2079641) zvýšiť počet dostupných prostredí. Ďalšie informácie o kapacite a prídavnej kapacite nájdete na stránke [Licenčná príručka Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
 
 > [!TIP]
 > Ak chcete službu vyskúšať, pozrite si [Nastavenie skúšobného prostredia](trial-signup.md).
@@ -38,7 +38,7 @@ Potrebuješ [oprávnenia správcu](permissions.md) v Customer Insights na vytvá
   
    :::image type="content" source="media/environment-picker.png" alt-text="Vyberte nástroj na výber prostredia.":::
 
-1. Ak chcete poskytnúť všetky požadované informácie pre nové prostredie, postupujte podľa sprievodcu popísaných v nasledujúcich častiach. Ak ste prostredie nakonfigurovali skôr, môžete tiež [skopírujte konfiguráciu](#copy-the-environment-configuration).
+1. Ak chcete poskytnúť všetky požadované informácie pre nové prostredie, postupujte podľa sprievodcu popísaných v nasledujúcich častiach. Ak ste predtým nakonfigurovali prostredie, môžete tiež [skopírujte konfiguráciu](#copy-the-environment-configuration).
 
 ## <a name="step-1-provide-basic-information"></a>Krok 1: Poskytnite základné informácie
 
@@ -48,7 +48,7 @@ V kroku **Základné informácie** zvoľte, či chcete vytvoriť prostredie od z
 
 Uveďte nasledujúce podrobnosti:
 
-- **Názov**: Názov tohto prostredia. Toto pole je už vyplnené, ak ste skopírovali existujúce prostredie, ale môžete ho zmeniť.
+- **Názov**: Názov tohto prostredia. Toto pole je už vyplnené, ak ste skopírovali existujúce prostredie, ale môžete ho zmeniť. Ak máte viac ako jedno pracovné prostredie, dajte každému ľahko identifikovateľný názov.
 - **Vyberte si svoje podnikanie**: Vyberte primárnu cieľovú skupinu pre nové prostredie. Môžete pracovať s jednotlivými spotrebiteľmi (firma a spotrebiteľ) resp. s [podnikateľskými obchodnými vzťahmi](work-with-business-accounts.md) (firma a firma). Ak vaša organizácia obchoduje najmä s jednotlivcami, ako je maloobchod alebo kaviareň, vyberte si individuálnych spotrebiteľov. Ak sú vaším hlavným publikom iné spoločnosti, ako napríklad výrobca automobilov alebo papierenská spoločnosť, vyberte si podnikateľské účty.
 - **Typ**: Vyberte, či chcete vytvoriť výrobné alebo testovacie prostredie. Testovacie prostredia neumožňujú plánované obnovenie údajov a sú určené na predbežnú implementáciu a testovanie. Izolované prostredia používajú rovnaké primárne publikum ako produkčné prostredie, ktoré je aktuálne vybraté.
 - **Región**: Región, v ktorom je služba nasadená a hosťovaná. Komu [použiť svoj vlastný Azure Data Lake Storage účtu](own-data-lake-storage.md) alebo [pripojiť k existujúcemu Microsoft Dataverse Organizácia](customer-insights-dataverse.md), prostredie Customer Insights musí byť v rovnakej oblasti.

@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139676"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213601"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Zjednoťte zákaznícke polia pre zjednotenie údajov
 
@@ -58,6 +58,9 @@ V tomto kroku procesu zjednotenia vyberte a vylúčte atribúty, ktoré sa majú
 
 1. Určte jednu z troch možností, ako sa majú polia zlúčiť:
     - **Dôležitosť**: Určuje výslednú hodnotu podľa stupňa dôležitosti daného pre zúčastnené polia. Toto je predvolená možnosť zlučovania. Vyberaním možnosti **Pohyb nahor/nadol** nastavte stupeň dôležitosti.
+
+      > [!NOTE]
+      > Customer Insights používa prvú nenulovú hodnotu. Napríklad dané entity A, B a C zoradené v tomto poradí, ak A.Name a B.Name sú null, potom sa použije hodnota z C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Možnosť dôležitosti v dialógovom okne zlúčenia polí.":::
 
@@ -143,7 +146,7 @@ So skupinou polí zaobchádzajte ako s jednou jednotkou. Ak napríklad naše zá
 
 Definujte, ako generovať hodnoty ID zákazníka, jedinečné identifikátory profilu zákazníka. Krok zjednotenia polí v procese zjednotenia údajov vygeneruje jedinečný identifikátor profilu zákazníka. Identifikátor je *CustomerId* v *Zákazník* subjekt, ktorý je výsledkom procesu zjednocovania údajov.
 
-The *CustomerId*  je založený na hashe prvej hodnoty primárnych kľúčov víťaza, ktoré nie sú nulové. Tieto kľúče pochádzajú z entít používaných pri zjednocovaní údajov a sú ovplyvnené poradím zhody.Vygenerované ID zákazníka sa teda môže zmeniť, keď sa zmení hodnota primárneho kľúča v primárnej entite priraďovacej objednávky. Hodnota primárneho kľúča nemusí vždy predstavovať toho istého zákazníka.
+The *CustomerId*  je založený na hashe prvej hodnoty primárnych kľúčov víťaza, ktoré nie sú nulové. Tieto kľúče pochádzajú z entít používaných pri zjednocovaní údajov a sú ovplyvnené poradím zhody.Takže vygenerované ID zákazníka sa môže zmeniť, keď sa zmení hodnota primárneho kľúča v primárnej entite priraďovacej objednávky. Hodnota primárneho kľúča nemusí vždy predstavovať toho istého zákazníka.
 
 Konfiguráciou stabilného ID zákazníka sa vyhnete takémuto správaniu.
 

@@ -1,7 +1,7 @@
 ---
-title: Konfigurácia systému
+title: Pozrite si konfiguráciu systému
 description: Ďalšie informácie o systémových nastaveniach nájdete v Dynamics 365 Customer Insights.
-ms.date: 04/21/2022
+ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -10,40 +10,78 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-system-status
-- ci-system-schedule
 - ci-system-about
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050690"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246266"
 ---
-# <a name="system-configuration"></a>Konfigurácia systému
+# <a name="view-system-configuration"></a>Pozrite si konfiguráciu systému
 
-Ak chcete získať prístup ku konfiguráciám systému, prejdite na **Admin** > **Systém** na zobrazenie zoznamu systémových úloh a procesov.
+Zobrazenie systémových informácií, stavu systému a využitia API.
 
-Stránka **Systém** obsahuje nasledujúce karty:
-- [Status](#status-tab)
-- [Plánovanie](#schedule-tab)
-- [Využitie rozhrania API](#api-usage-tab)
-- [Informácie](#about-tab)
-- [Všeobecné](#general-tab)
+## <a name="view-api-usage"></a>Zobraziť využitie API
 
-:::image type="content" source="media/system-tabs.png" alt-text="Karty nastavení na systémovej stránke.":::
+Pozrite si podrobnosti o používaní rozhrania API v reálnom čase a zistite, ktoré udalosti sa stali v danom časovom rámci.
 
-## <a name="status-tab"></a>Karta stavu
+1. Ísť do **Admin** > **Systém** a vyberte **Použitie API** tab.
 
-The **Karta Stav** umožňuje sledovať priebeh úloh, príjem údajov, export údajov a niekoľko ďalších dôležitých procesov produktu. Skontrolujte informácie na tejto karte, aby ste sa uistili o úplnosti svojich aktívnych úloh a procesov.
+1. **Vyberte časový rámec** zobraziť.
 
-Táto karta obsahuje tabuľky so stavom a informáciami o spracovaní pre rôzne procesy. Každá tabuľka sleduje **Názov** úlohy a jej zodpovedajúcej entity, **Stav** jej posledného spustenia a kedy bola **Naposledy aktualizovaná**. Výberom názvu úlohy alebo procesu môžete zobraziť podrobnosti o niekoľkých posledných spusteniach. 
+   The **Použitie API** stránka obsahuje tri časti:
 
-Vyberte stav vedľa úlohy alebo procesu v **Postavenie** stĺpec na otvorenie **Podrobnosti o pokroku** tabuľka.
+   - **Volania API** – graf, ktorý vizualizuje agregovaný počet volaní API vo vybranom časovom rámci.
+   - **Prenos údajov** – graf, ktorý zobrazuje množstvo dát, ktoré boli prenesené cez API vo vybranom časovom rámci.
+   - **Operácie** – tabuľka s riadkami pre každú dostupnú operáciu API a podrobnosťami o použití týchto operácií. Vyberte názov operácie, na ktorú chcete prejsť [referenciu API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operácie, ktoré využívajú [prijímanie údajov v reálnom čase](real-time-data-ingestion.md) obsahujú binokulárny symbol na zobrazenie využitia API v reálnom čase.
+
+   1. Výberom ďalekohľadu otvorte **Využitie API v reálnom čase** panel s podrobnosťami o použití pre danú operáciu.
+   1. **Vyberte časový rámec** zobraziť.
+   1. Použi **Zoskupiť podľa** vyberte, ako najlepšie prezentovať svoje interakcie v reálnom čase. Zoskupte údaje podľa API **Metóda**, **názov entity** (požitá entita), **Vytvoril** (zdroj udalosti), **Výsledok** (úspech alebo neúspech) príp **Chybové kódy**. Dáta sú k dispozícii ako graf histórie a ako tabuľka.
+
+## <a name="view-system-information"></a>Zobrazenie systémových informácií
+
+Zobrazte zobrazovaný názov prostredia, ID, región, typ a ID relácie.
+
+1. Ísť do **Admin** > **Systém** a vyberte **O** tab.
+
+1. Ak chcete zobraziť jazyk a krajinu/región, vyberte **generál** tab.
+
+### <a name="update-preferred-language-or-countryregion"></a>Aktualizujte preferovaný jazyk alebo krajinu/región
+
+Customer Insights [podporuje mnoho jazykov](/dynamics365/get-started/availability). Aplikácia použije vaše jazykové preferencie na zobrazenie prvkov, ako sú ponuka, text štítkov a systémové správy vo vašom preferovanom jazyku.
+
+Importované údaje a informácie, ktoré ste zadali manuálne, sa neprekladajú.
+
+1. Ísť do **Admin** > **Systém** a vyberte **generál** tab.
+
+1. Ak chcete zmeniť preferovaný jazyk, vyberte z rozbaľovacej ponuky **Jazyk**.
+
+1. Ak chcete zmeniť preferované formátovanie pre dátumy, čas a čísla, použite rozbaľovaciu ponuku **Formát krajiny alebo oblasti**. Zobrazí sa náhľad formátovania. Pri výbere nového jazyka systém automaticky navrhne výber.
+
+1. Vyberte **Uložiť**.
+
+## <a name="view-system-status"></a>Zobraziť stav systému
+
+Sledujte priebeh úloh, príjem údajov, export údajov a niekoľko ďalších dôležitých procesov produktu. Skontrolujte informácie, aby ste zaistili úplnosť svojich aktívnych úloh a procesov.
+
+1. Ísť do **Admin** > **Systém** a vyberte **Postavenie** tab.
+
+   Zobrazenie informácií o stave a spracovaní pre rôzne procesy. Pozrite si **názov** úlohy, **Postavenie** svojho posledného spustenia a kedy to bolo **Naposledy aktualizovaný**.
+
+1. Ak chcete zobraziť podrobnosti o niekoľkých posledných spusteniach, vyberte názov úlohy alebo procesu.
+
+1. Ak chcete zobraziť podrobnosti o priebehu úlohy, vyberte stav. The **Podrobnosti o pokroku** panel zobrazí.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Panel s podrobnosťami o priebehu systému":::
+
+1. Ak chcete zobraziť podrobnosti o priebehu všetkých úloh, vyberte **Celý pracovný postup**.
 
 ### <a name="status-definitions"></a>Definície stavu
 
@@ -51,19 +89,19 @@ Systém používa pre úlohy a procesy nasledujúce stavy:
 
 |Status  |Definícia  |
 |---------|---------|
-|Zrušená |Spracovanie bolo zrušené používateľom pred dokončením.   |
-|Zlyhalo   |Pri prijímaní údajov nastali chyby.         |
-|Zlyhanie  |Spracovanie zlyhalo.  |
-|Nespustené   |Zdroj údajov zatiaľ nemá žiadne prijaté údaje alebo je stále v režime konceptu.         |
+|Zrušená |Úloha alebo proces boli zrušené používateľom pred dokončením.   |
+|Zlyhalo   |V úlohe alebo procese sa vyskytli chyby.         |
+|Zlyhanie  |Úloha alebo proces zlyhal.  |
+|Nespustené   |Zdroj údajov ešte neprijali žiadne údaje alebo je úloha stále v režime konceptu.         |
 |Spracováva sa  |Úloha alebo proces prebieha.  |
-|Obnovuje sa    |Prebieha prijímanie údajov. Túto operáciu môžete zrušiť tak, že v stĺpci **Akcie** vyberiete **Zastaviť obnovovanie**. Zastavenie obnovovania zdroja údajov sa obnoví do posledného stavu obnovenia.       |
+|Obnovuje sa    |Úloha alebo proces prebieha. Ak chcete zrušiť túto operáciu, vyberte **Osviežujúce** a **Zrušiť úlohu**. Zastavenie obnovy úlohy alebo procesu ich vráti do posledného stavu obnovenia.       |
 |Vynechané  |Úloha alebo proces boli preskočené. Jeden alebo viac následných procesov, od ktorých závisí táto úloha, zlyháva alebo sú preskočené.|
 |Úspešné  |Úloha alebo proces úspešne dokončený. V prípade zdrojov údajov označuje, že údaje boli úspešne prijaté, ak je v položke uvedený čas **Osviežené** stĺpec.|
 |Vo fronte | Spracovanie je zaradené do frontu a začne sa po dokončení všetkých nadradených úloh a procesov. Viac informácií nájdete v časti [Obnoviť procesy](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Obnoviť procesy
 
-Obnovenie úloh a procesov prebieha podľa [nakonfigurovaný rozvrh](#schedule-tab). 
+Obnovenie úloh a procesov prebieha podľa [nakonfigurovaný rozvrh](schedule-refresh.md).
 
 |Spracovať  |Description  |
 |---------|---------|
@@ -85,59 +123,7 @@ Obnovenie úloh a procesov prebieha podľa [nakonfigurovaný rozvrh](#schedule-t
 |Systémové   |Závisí od úspešného ukončenia procesu zhody. Segmenty, miery, obohatenie, vyhľadávanie, aktivity, predikcie a príprava dát závisia od úspešného ukončenia tohto procesu.   |
 |User  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od subjektov.  |
 
-Výberom stavu procesu zobrazíte podrobnosti o priebehu celej úlohy, v ktorej sa nachádzal. Vyššie uvedené procesy obnovy vám môžu pomôcť pochopiť, čo môžete urobiť pre riešenie a **Preskočené** alebo **Vo fronte** úlohu alebo proces.
-
-## <a name="schedule-tab"></a>Karta Plán
-
-Použite kartu **Plán** na naplánovanie automatického obnovenie všetkých vašich [prijatých zdrojov údajov](data-sources.md). Automatické obnovovanie pomáha zaistiť, aby sa aktualizácie z vašich zdrojov údajov prejavili vo vašich zjednotených profiloch zákazníkov.
-
-> [!NOTE]
-> Vami spravované zdroje údajov sa obnovujú podľa vlastných plánov. Ak chcete naplánovať obnovenie vami spravovaných zdrojov údajov, nakonfigurujte nastavenia obnovenia na tomto konkrétnom zdroj údajov z **Zdroje dát** stránku.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Nastavenia obnovenia toku údajov.":::
-
-1. Ísť do **Admin** > **Systém** a vyberte **Rozvrh** tab.
-
-2. Predvolený stav plánovanej obnovy je **Vyp.** Ak chcete povoliť naplánované obnovovanie, zmeňte prepínač v hornej časti obrazovky na **Zap.**
-
-3. Vyberte si medzi **Týždenné** (predvolené) a **Denné** obnovenie. Ak chcete naplánovať týždenné obnovovanie, vyberte jeden alebo viac dní, v ktorých chcete obnovenie spustiť.
-
-4. Nastavte si **Časové pásmo**, potom použite rozbaľovaciu ponuku **Čas** a nastavte časovanie obnovenia. Po dokončení vyberte **Nastaviť**. Ak chcete naplánovať viac aktualizácií za jeden deň, vyberte položku **Pridať ďalší čas**.
-
-5. Zmeny vykonajte výberom položky **Uložiť**.
-
-## <a name="about-tab"></a>Karta Informácie o systéme
-
-Karta **Informácie** obsahuje **Zobrazovaný názov** vašej organizácie, aktívne **ID prostredia**, **Región** a vaše **ID relácie**. Ak máte viac ako jedno pracovné prostredie, mali by ste každému dať ľahko identifikovateľný zobrazovaný názov.
-
-## <a name="general-tab"></a>Karta Všeobecné
-
-Jazyk a formát krajiny/regiónu môžete zmeniť na karte **Všeobecné**.
-
-Customer Insights [podporuje mnoho jazykov](/dynamics365/get-started/availability). Aplikácia použije vaše jazykové preferencie na zobrazenie prvkov, ako sú ponuka, text štítkov a systémové správy vo vašom preferovanom jazyku.
-
-Importované údaje a informácie, ktoré ste zadali manuálne, sa neprekladajú.
-
-### <a name="update-the-settings"></a>Aktualizácia nastavení
-
-Ak chcete zmeniť preferovaný jazyk, vyberte z rozbaľovacej ponuky **Jazyk**.
-
-Ak chcete zmeniť preferované formátovanie pre dátumy, čas a čísla, použite rozbaľovaciu ponuku **Formát krajiny alebo oblasti**. Pod týmto poľom sa zobrazí ukážka formátovania. Keď zvolíte nový jazyk, systém automaticky navrhne výber.
-
-Zmeny potvrďte výberom položky **Uložiť**.
-
-## <a name="api-usage-tab"></a>Karta použitia rozhrania API
-
-Nájdite podrobnosti o použití API v reálnom čase a uvidíte, ktoré udalosti sa stali v danom časovom rámci. Časový rámec si zvolíte z položky rozbaľovacieho zoznamu **Vyberte časový rámec**. 
-
-**Využitie API** obsahuje tri časti: 
-- **Volania API** – graf, ktorý vizualizuje agregovaný počet volaní API vo vybranom časovom rámci.
-
-- **Prenos údajov** – graf, ktorý zobrazuje množstvo dát, ktoré boli prenesené cez API vo vybranom časovom rámci.
-
--  **Operácie** – tabuľka s riadkami pre každú dostupnú operáciu API a podrobnosťami o použití týchto operácií. Môžete zvoliť názov operácie, a prejsť na [referenčnú príručku rozhrania API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operácie, ktoré využívajú [prijímanie údajov v reálnom čase](real-time-data-ingestion.md) obsahujú tlačidlo s binokulárnym symbolom na zobrazenie využitia API v reálnom čase. Výberom tohto tlačidla otvoríte bočnú tablu obsahujúcu podrobnosti o použití rozhrania API v reálnom čase v aktuálnom prostredí.   
-   Použite políčko **Zoskupiť podľa** na table **Využitie API v reálnom čase** a vyberte, ako najlepšie prezentovať svoje interakcie v reálnom čase. Údaje môžete zoskupiť podľa metódy API, kvalifikovaného názvu entity (prijatá entita), spôsobu vytvorenia (zdroj udalosti), výsledku (úspech alebo zlyhanie) alebo chybových kódov. Dáta sú k dispozícii ako graf histórie a ako tabuľka.
+Výberom stavu procesu zobrazíte podrobnosti o priebehu celej úlohy, v ktorej sa nachádzal. Vyššie uvedené procesy obnovenia vám môžu pomôcť pochopiť, čo môžete urobiť, aby ste vyriešili problém a **Preskočené** alebo **Vo fronte** úlohu alebo proces.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

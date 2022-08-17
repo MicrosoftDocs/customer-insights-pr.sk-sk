@@ -1,68 +1,39 @@
 ---
-title: Nastavenia zabezpečenia v Customer Insights
+title: Nakonfigurujte nastavenia zabezpečenia
 description: Prečítajte si o nastaveniach zabezpečenia v Dynamics 365 Customer Insights.
-ms.date: 06/08/2022
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947434"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246081"
 ---
-# <a name="security-settings-in-customer-insights"></a>Nastavenia zabezpečenia v Customer Insights
+# <a name="configure-security-settings"></a>Nakonfigurujte nastavenia zabezpečenia
 
-The **Bezpečnosť** stránka obsahuje zoznam možností na konfiguráciu používateľských povolení a funkcií, ktoré pomáhajú pri vytváraní Dynamics 365 Customer Insights bezpečnejšie. Na túto stránku majú prístup iba správcovia.
+Spravujte kľúče API, pristupujte k údajom zákazníkov a nastavte súkromné prepojenie Azure.
 
-Ísť do **Admin** > **Bezpečnosť** na konfiguráciu nastavení.
+## <a name="manage-api-keys"></a>Spravujte kľúče API
 
-The **Bezpečnosť** stránka obsahuje nasledujúce karty:
+Zobrazte a spravujte kľúče na použitie [Rozhrania API Customer Insights](apis.md) s údajmi vo vašom prostredí.
 
-- [Používatelia](#users-tab)
-- [Rozhrania API](#apis-tab)
-- [Súkromné prepojenia](#private-links-tab)
-- [Key Vault](#key-vault-tab)
-- [Bezpečný prístup k zákazníckym údajom pomocou Customer Lockbox (ukážka)](#securely-access-customer-data-with-customer-lockbox-preview)
+1. Ísť do **Systém** > **Bezpečnosť** a vyberte **API** tab.
 
-## <a name="users-tab"></a>Karta Používatelia
+1. Ak nebol nastavený prístup API k prostrediu, vyberte **Povoliť**. Alebo ak chcete zablokovať prístup API k prostrediu, vyberte **Zakázať** a potvrďte.
 
-Prístup k Customer Insights je obmedzený na používateľov vo vašej organizácii, ktorých do aplikácie pridal správca. The **Používatelia** vám umožňuje spravovať prístup používateľov a ich povolenia. Ďalšie informácie nájdete v časti [Používateľské oprávnenia](permissions.md).
+1. Spravujte primárne a sekundárne kľúče API:
 
-## <a name="apis-tab"></a>Karta API
+   1. Ak chcete zobraziť primárny alebo sekundárny kľúč API, vyberte **Šou** symbol.
 
-Zobrazte a spravujte kľúče na použitie [Rozhrania API Customer Insights](apis.md) s údajmi vášho prostredia.
+   1. Ak chcete skopírovať primárny alebo sekundárny kľúč API, vyberte **Kopírovať** symbol.
 
-Výberom môžete vytvoriť nový primárny a sekundárny kľúč **Primárne regenerovať** alebo **Regenerovať sekundárne**. 
-
-Ak chcete zablokovať prístup API k prostrediu, vyberte **Zakázať**. Ak sú rozhrania API zakázané, môžete si vybrať **Povoliť** znovu udeliť prístup.
-
-## <a name="private-links-tab"></a>Karta Súkromné odkazy
-
-[Súkromné prepojenie Azure](/azure/private-link/private-link-overview) prepojme Customer Insights s vaším Azure Data Lake Storage účtu cez súkromný koncový bod vo vašej virtuálnej sieti. Pre údaje v účte úložiska, ktorý nie je vystavený verejnému internetu, umožňuje Súkromné prepojenie pripojenie k tejto obmedzenej sieti.
-
-> [!IMPORTANT]
-> Minimálna požiadavka na rolu na nastavenie pripojenia Private Link:
->
-> - Customer Insights: Administrátor
-> - Vstavaná rola Azure: [Prispievateľ účtu úložiska](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
-> - Povolenia pre vlastnú rolu Azure: [Microsoft.Storage/storageAccounts/read a Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
-
-Nastavenie Private Link v Customer Insights je dvojkrokový proces. Najprv spustíte vytvorenie súkromného odkazu z **Admin** > **Bezpečnosť** > **Súkromné odkazy** v Customer Insights. The **Pridať súkromný odkaz** panel zobrazuje účty úložiska od vášho nájomníka, na zobrazenie ktorých máte povolenia. Vyberte účet úložiska a poskytnite súhlas na vytvorenie súkromného prepojenia.
-
-Ďalej musíte schváliť súkromné prepojenie na strane účtu Data Lake Storage. Otvorte odkaz zobrazený na obrazovke, aby ste schválili nový súkromný odkaz.
-
-## <a name="key-vault-tab"></a>Záložka Key Vault
-
-The **Trezor na kľúče** karta vám umožňuje prepojiť a spravovať svoje vlastné [Azúrový trezor kľúčov](/azure/key-vault/general/basic-concepts) k životnému prostrediu.
-Vyhradený trezor kľúčov je možné použiť na fázovanie a používanie tajomstiev v hraniciach dodržiavania predpisov organizácie. Customer Insights môže použiť tajomstvá v Azure Key Vault na [nastaviť pripojenia](connections.md) na systémy tretích strán.
-
-Viac informácií nájdete v časti [Prineste si vlastný trezor kľúčov Azure](use-azure-key-vault.md).
+   1. Ak chcete vytvoriť nové primárne alebo sekundárne kľúče API, vyberte **Primárne regenerovať** alebo **Regenerovať sekundárne**.
 
 ## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Bezpečný prístup k zákazníckym údajom pomocou Customer Lockbox (ukážka)
 
@@ -72,5 +43,33 @@ Customer Insights používa Power Platform Možnosť zákazníckeho uzamykacieho
 
 > [!IMPORTANT]
 > Globálni správcovia pre Power Platform alebo Power Platform správcovia môžu schvaľovať požiadavky zákazníckej schránky vydané pre Customer Insights.
+
+## <a name="set-up-an-azure-private-link"></a>Nastavte súkromné prepojenie Azure
+
+[Súkromný odkaz Azure](/azure/private-link/private-link-overview) prepojme Customer Insights s vašou Azure Data Lake Storage účtu cez súkromný koncový bod vo vašej virtuálnej sieti. Pre údaje v účte úložiska, ktorý nie je vystavený verejnému internetu, umožňuje Súkromné prepojenie pripojenie k tejto obmedzenej sieti.
+
+> [!IMPORTANT]
+> Minimálna požiadavka na rolu na nastavenie pripojenia Private Link:
+>
+> - Customer Insights: Administrátor
+> - Vstavaná rola Azure: [Prispievateľ účtu úložiska](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
+> - Povolenia pre vlastnú rolu Azure: [Microsoft.Storage/storageAccounts/read a Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
+
+1. V Customer Insights prejdite na **Admin** > **Bezpečnosť** a vyberte **Súkromné odkazy** tab.
+
+1. Vyberte **Pridať súkromný odkaz**.
+
+   The **Pridať súkromný odkaz** panel zobrazuje účty úložiska od vášho nájomníka, na zobrazenie ktorých máte povolenia.
+
+1. Vyberte predplatné, skupinu prostriedkov a konto úložiska.
+
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
+
+1. Vyberte **Uložiť**.
+
+1. Prejdite do svojho účtu Data Lake Storage a otvorte odkaz zobrazený na obrazovke.
+
+1. Schváľte súkromný odkaz.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

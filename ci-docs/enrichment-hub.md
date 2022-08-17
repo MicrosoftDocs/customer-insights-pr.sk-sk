@@ -1,6 +1,6 @@
 ---
 title: Prehľad obohatenia údajov (ukážka).
-description: Využite možnosti od spoločnosti Microsoft a iných služieb tretích strán na obohatenie údajov o svojich zákazníkoch.
+description: Využite možnosti od spoločnosti Microsoft a ďalších služieb tretích strán na obohatenie údajov o svojich zákazníkoch.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
-ms.translationtype: MT
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053899"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245898"
 ---
 # <a name="data-enrichment-preview-overview"></a>Prehľad obohatenia údajov (ukážka).
 
@@ -27,11 +27,11 @@ Na obohatenie údajov o zákazníkoch použite údaje zo zdrojov ako Microsoft a
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Viacnásobné obohatenie rovnakého typu
 
-Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia, ktorá umožňuje obohatiť iba podmnožinu vašich profilov. Môžete napríklad obohatiť údaje iba v konkrétnom segmente. Môžete nakonfigurovať niekoľko obohatení rovnakého typu a znova použiť to isté pripojenie. Niektoré obohatenia budú mať obmedzený počet obohatení rovnakého typu, ktoré je možné vytvoriť. Limity a aktuálne využitie je možné vidieť na každej dlaždici na **Objavte** kartu z **Obohacovanie** stránku.
+Entita, ktorá sa má obohatiť, sa špecifikuje počas konfigurácie obohatenia, ktorá umožňuje obohatiť iba podmnožinu vašich profilov. Môžete napríklad obohatiť údaje iba v konkrétnom segmente. Môžete nakonfigurovať niekoľko obohatení rovnakého typu a znova použiť to isté pripojenie. Niektoré obohatenia budú mať obmedzený počet obohatení rovnakého typu, ktoré je možné vytvoriť. Limity a aktuálne využitie je možné vidieť na každej dlaždici **Objavte** kartu z **Obohacovanie** stránku.
 
 ## <a name="enrich-data-sources-before-unification"></a>Obohaťte zdroje údajov pred zjednotením
 
-Pred zjednotením údajov môžete obohatiť údaje o svojich zákazníkoch, aby ste zvýšili kvalitu zhody údajov. Viac informácií nájdete v časti [zdroj údajov obohatenie](data-sources-enrichment.md).
+Pred zjednotením údajov môžete obohatiť údaje o svojich zákazníkoch, aby ste zvýšili kvalitu zhody údajov. Ďalšie informácie nájdete v časti [zdroj údajov obohatenie](data-sources-enrichment.md).
 
 ## <a name="create-an-enrichment"></a>Vytvorenie obohatenia
 
@@ -76,16 +76,16 @@ Výberom obohatenia zobrazíte dostupné akcie.
 - **Zobrazenie** podrobností o obohatení s počtom obohatených profilov zákazníkov.
 - **Úprava** konfigurácie obohacovania.
 - [**Bežať**](#run-or-refresh-enrichments) obohatenie o aktualizáciu zákazníckych profilov o najnovšie údaje. Spustite viacero obohatení naraz ich výberom v zozname.
-- **Aktivovať** alebo **Deaktivovať** obohatenie. Neaktívne obohatenia sa počas a [plánované obnovenie](system.md#schedule-tab).
+- **Aktivovať** alebo **Deaktivovať** obohatenie. Neaktívne obohatenia sa počas a [plánované obnovenie](schedule-refresh.md).
 - **Odstrániť** obohatenie.
 
 Môžete tiež vytvoriť [segmentov](segments.md) alebo [Opatrenia](measures.md) z obohatenia.
 
 ## <a name="run-or-refresh-enrichments"></a>Beh alebo osvieženie obohatenie
 
-Po spustení možno obohatenia obnoviť podľa automatického plánu alebo manuálne na požiadanie.
+Po spustení sa obohatenia môžu obnoviť podľa automatického plánu alebo manuálne na požiadanie.
 
-1. Ak chcete manuálne obnoviť jedno alebo viac obohatení, vyberte ich a vyberte **Bežať**. Komu [naplánovať automatické obnovenie](system.md#schedule-tab), ísť do **Admin** > **Systém** > **Rozvrh**. Čas spracovania závisí od veľkosti vašich zákazníckych údajov.
+1. Ak chcete manuálne obnoviť jedno alebo viac obohatení, vyberte ich a vyberte **Bežať**. Komu [naplánovať automatické obnovenie](schedule-refresh.md), ísť do **Admin** > **Systém** > **Rozvrh**. Čas spracovania závisí od veľkosti vašich zákazníckych údajov.
 
 1. voliteľne [vidieť priebeh procesu obohacovania](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Môžete nájsť detaily spracúvania obohatenia vrátane jeho stavu a možných
 1. Na table **Podrobnosti o priebehu** rozbaľte časť **Obohatenia**.
 1. Pod položkou obohatenia, ktoré chcete vidieť, označte položku **Zobraziť podrobnosti**.
 1. V table **Podrobnosti o úlohe** označením položky **Zobraziť podrobnosti** zobrazíte procesy tvoriace proces aktualizácie obohatenia, a ich stav.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Pozrite si výsledky obohatenia
 

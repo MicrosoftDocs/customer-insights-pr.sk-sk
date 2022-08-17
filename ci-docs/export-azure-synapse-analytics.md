@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196413"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259863"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportovať údaje do Azure Synapse Analytics (Náhľad)
 
@@ -24,7 +24,7 @@ Azure Synapse je analytická služba, ktorá urýchľuje čas na získanie preh�
 > [!NOTE]
 > Nezabudnite nastaviť všetky **priradenia rolí**, ako je opísané.
 
-- V Customer Insights, vaše Azure Active Directory (AD) používateľský účet musí mať [Rola správcu](permissions.md#assign-roles-and-permissions).
+- V Customer Insights, vaše Azure Active Directory (AD) používateľský účet musí mať [Rola správcu](permissions.md#add-users).
 
 V Azure:
 
@@ -38,7 +38,9 @@ V Azure:
 
 - The *[Azure Synapse identita spravovaná pracovným priestorom](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* má **Storage Blob Data Contributor** povolenia na Azure Data Lake Storage Účet Gen2, v ktorom sú údaje umiestnené a prepojené s Azure Synapse pracovnom priestore. Prečítajte si viac o [používaní portálu Azure Portal na priradenie roly Azure pre prístup k údajom blob a frontu](/azure/storage/common/storage-auth-aad-rbac-portal) a [Povolenia Prispievateľ údajov do objektu BLOB úložiska](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Na Azure Synapse pracovný priestor, *princíp služby pre Customer Insights* má **Správca Synapse**[pridelená rola](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Na Azure Synapse pracovný priestor, *principál služby pre Customer Insights* má **Správca Synapse**[pridelená rola](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Ak vaše prostredie Customer Insights ukladá údaje vo vašom [vlastné Azure Data Lake Storage](own-data-lake-storage.md), používateľ, ktorý nastavuje pripojenie k Azure Synapse Analytics potrebuje aspoň vstavaný **Čitateľ** rolu na účte Data Lake Storage. Viac informácií nájdete v časti [Priradiť roly Azure pomocou portálu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Nastaviť pripojenie k Azure Synapse
 

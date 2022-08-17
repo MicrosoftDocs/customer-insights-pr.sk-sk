@@ -2,7 +2,7 @@
 title: Pred zjednotením údajov odstráňte duplikáty
 description: Druhým krokom v procese zjednotenia je výber záznamu, ktorý sa má ponechať, keď sa nájdu duplikáty.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139448"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213646"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Pred zjednotením údajov odstráňte duplikáty
 
-Tento krok zjednotenia vám voliteľne umožňuje nastaviť pravidlá pre zaobchádzanie s duplicitnými záznamami v rámci entity. *Deduplikácia* identifikuje duplicitné záznamy a zlúči ich do jedného záznamu. Zdrojové záznamy sa prepoja so zlúčeným záznamom s alternatívnymi ID. Ak pravidlá nie sú nakonfigurované, použijú sa pravidlá definované systémom.
+Tento voliteľný krok zjednotenia vám umožňuje nastaviť pravidlá na odstránenie duplicitných záznamov **v rámci** entita. Deduplikácia identifikuje viacero záznamov pre zákazníka a vyberie najlepší záznam na uchovanie (na základe základných preferencií zlučovania) alebo zlúči záznamy do jedného (na základe pokročilých preferencií zlučovania). Zdrojové záznamy sa prepoja so zlúčeným záznamom s alternatívnymi ID. Ak pravidlá nie sú nakonfigurované, použijú sa pravidlá definované systémom.
+
+## <a name="default-deduplication"></a>Predvolená deduplikácia
+
+Ak nie sú pridané žiadne pravidlá deduplikácie, použijú sa systémom definované pravidlá.
+
+- Primárny kľúč je deduplikovaný.
+  Pre všetky záznamy s rovnakým primárnym kľúčom, **Najviac naplnené** rekord (ten s najmenším počtom nulových hodnôt) je víťaz.
+- Na entitu sa použijú všetky pravidlá párovania medzi entitami.
+  Napríklad: V kroku zhody, ak je entita A spárovaná s entitou B zapnutá *Celé meno* a *Dátum narodenia*, potom je entita A tiež deduplikovaná podľa *Celé meno* a *Dátum narodenia*. Pretože *Celé meno* a *Dátum narodenia* sú platné kľúče na identifikáciu zákazníka v účtovnej jednotke A, tieto kľúče sú platné aj na identifikáciu duplicitných zákazníkov v účtovnej jednotke A.
 
 ## <a name="include-enriched-entities-preview"></a>Zahrnúť obohatené entity (ukážka)
 

@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139630"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245613"
 ---
 # <a name="update-the-unification-settings"></a>Aktualizujte nastavenia zjednotenia
 
@@ -42,7 +42,7 @@ Ak chcete po vytvorení jednotného profilu skontrolovať alebo zmeniť nastaven
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Snímka obrazovky stránky Data Unify so zvýraznenými možnosťami Unify.":::
 
    - [Spustite zodpovedajúce podmienky](#run-matching-conditions) na rýchle vyhodnotenie kvality vašich podmienok zhody (deduplikácia a pravidlá zhody) bez aktualizácie zjednoteného profilu. The **Spustite iba zodpovedajúce podmienky** možnosť sa nezobrazuje pre jednu entitu.
-   - [Zjednotiť profily zákazníkov](#run-updates-to-the-unified-customer-profile) spustiť zodpovedajúce podmienky a aktualizovať entitu jednotného profilu zákazníka bez ovplyvnenia závislostí (ako sú obohatenia, segmenty alebo opatrenia). Závislé procesy nie sú spustené, ale budú obnovené ako [definované v pláne obnovy](system.md#schedule-tab).
+   - [Zjednotiť profily zákazníkov](#run-updates-to-the-unified-customer-profile) spustiť zodpovedajúce podmienky a aktualizovať entitu jednotného profilu zákazníka bez ovplyvnenia závislostí (ako sú obohatenia, segmenty alebo opatrenia). Závislé procesy nie sú spustené, ale budú obnovené ako [definované v pláne obnovy](schedule-refresh.md).
    - [Zjednotiť profily a závislosti zákazníkov](#run-updates-to-the-unified-customer-profile) spustiť zodpovedajúce podmienky a aktualizovať entitu jednotného profilu zákazníka a všetky závislosti (ako sú obohatenia, segmenty alebo opatrenia). Všetky procesy sa automaticky znova spustia.
 
 ## <a name="edit-source-fields"></a>Upravte zdrojové polia
@@ -51,7 +51,7 @@ Nemôžete odstrániť atribút alebo entitu, ak už boli zjednotené.
 
 1. Vyberte **Upraviť** na **Zdrojové polia** dlaždica.
 
-   :::image type="content" source="media/m3_source_edit.png" alt-text="Snímka obrazovky stránky zdrojových polí zobrazujúca počet primárnych kľúčov, mapovaných a nemapovaných polí":::
+   :::image type="content" source="media/m3_source_edit.png" alt-text="Snímka obrazovky stránky zdrojových polí zobrazujúca počet primárnych kľúčov, namapovaných a nezmapovaných polí":::
 
    Zobrazí sa počet zmapovaných a nezmapovaných polí.
 
@@ -134,7 +134,7 @@ Väčšinu parametrov zhody môžete prekonfigurovať a doladiť. Nemôžete pri
 
 ## <a name="run-matching-conditions"></a>Spustite zodpovedajúce podmienky
 
-Spustiť podmienky zhody spustí iba deduplikáciu a pravidlá zhody a aktualizuje *Deduplikácia_* * a *ConflationMatchPair* subjektov.
+Spustiť podmienky zhody spustí iba deduplikáciu a pravidlá zhody a aktualizuje sa *Deduplikácia_* * a *ConflationMatchPair* subjektov.
 
 1. Z **Údaje** > **Zjednotiť** stránku, vyberte **Spustite iba zodpovedajúce podmienky**.
 
@@ -154,7 +154,7 @@ Spustiť podmienky zhody spustí iba deduplikáciu a pravidlá zhody a aktualizu
 
 1. Z **Údaje** > **Zjednotiť** stránka, vyberte:
 
-   - **Zjednotiť profily zákazníkov** : Spúšťa zodpovedajúce podmienky a aktualizuje entitu jednotného profilu zákazníka bez ovplyvnenia závislostí (ako sú obohatenia, segmenty alebo opatrenia). Závislé procesy nie sú spustené, ale budú obnovené ako [definované v pláne obnovy](system.md#schedule-tab).
+   - **Zjednotiť profily zákazníkov** : Spúšťa zodpovedajúce podmienky a aktualizuje entitu jednotného profilu zákazníka bez ovplyvnenia závislostí (ako sú obohatenia, segmenty alebo opatrenia). Závislé procesy nie sú spustené, ale budú obnovené ako [definované v pláne obnovy](schedule-refresh.md).
 
    - **Zjednotiť profily a závislosti zákazníkov** : Spustí zodpovedajúce podmienky a aktualizuje zjednotený profil a všetky závislosti. Všetky procesy sa automaticky znova spustia. Po dokončení všetkých nadväzujúcich procesov sa v profile zákazníka zohľadnia aktualizované údaje.
 

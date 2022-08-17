@@ -1,7 +1,7 @@
 ---
-title: Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)
+title: Exportovať diagnostické denníky (ukážka)
 description: Zistite, ako odosielať denníky na Microsoft Azure Monitor.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,87 +11,56 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052672"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245944"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prihláste sa preposielanie Dynamics 365 Customer Insights s Azure Monitor (ukážka)
+# <a name="export-diagnostic-logs-preview"></a>Exportovať diagnostické denníky (ukážka)
 
-Dynamics 365 Customer Insights poskytuje priamu integráciu s Azure Monitor. Protokoly prostriedkov Azure Monitor vám umožňujú monitorovať a odosielať protokoly [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) alebo ich streamujte na [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
+Preposielajte denníky zo Customer Insights pomocou Azure Monitor. Protokoly prostriedkov Azure Monitor vám umožňujú monitorovať a odosielať protokoly [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) alebo ich streamujte na [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights odosiela nasledujúce protokoly udalostí:
 
 - **Udalosti auditu**
-  - **APIEvent** - umožňuje sledovanie zmien pomocou Dynamics 365 Customer Insights UI.
+  - **APIEvent** - umožňuje sledovanie zmien cez Dynamics 365 Customer Insights UI.
 - **Prevádzkové udalosti**
-  - **WorkflowEvent** - Pracovný postup vám umožňuje nastaviť [Zdroje dát](data-sources.md),[zjednotiť](data-unification.md),[obohatiť](enrichment-hub.md), a nakoniec [export](export-destinations.md) údaje do iných systémov. Všetky tieto kroky je možné vykonať jednotlivo (napríklad spustiť jeden export). Môže tiež bežať organizovane (napríklad obnova údajov zo zdrojov údajov, ktorá spustí proces zjednotenia, ktorý zavedie obohatenia a po dokončení exportuje údaje do iného systému). Viac informácií nájdete na [WorkflowEvent Schema](#workflow-event-schema).
-  - **APIEvent** - všetky volania API do inštancie zákazníkov Dynamics 365 Customer Insights. Viac informácií nájdete na [Schéma APIEvent](#api-event-schema).
+  - **WorkflowEvent** - umožňuje nastaviť [zdroje dát](data-sources.md),[zjednotiť](data-unification.md),[obohatiť](enrichment-hub.md), a [export](export-destinations.md) údaje do iných systémov. Tieto kroky je možné vykonať individuálne (napríklad spustiť jeden export). Môžu tiež bežať organizovane (napríklad obnovovanie údajov zo zdrojov údajov, ktoré spúšťajú proces zjednotenia, ktorý zavedie obohatenia a exportuje údaje do iného systému). Viac informácií nájdete na [WorkflowEvent Schema](#workflow-event-schema).
+  - **APIEvent** - odosiela všetky volania API inštancie zákazníkov Dynamics 365 Customer Insights. Viac informácií nájdete na [Schéma APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Nastavte diagnostické nastavenia
 
 ### <a name="prerequisites"></a>Požiadavky
 
-Ak chcete nakonfigurovať diagnostiku v Customer Insights, musia byť splnené tieto predpoklady:
-
-- Máte aktívny [Azure predplatné](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Máš [správca](permissions.md#admin) povolenia v Customer Insights.
-- Máte **Prispievateľ** a **Administrátor prístupu používateľov** rolu na cieľovom prostriedku v Azure. Zdrojom môže byť Azure Data Lake Storage účet, centrum udalostí Azure alebo pracovný priestor Azure Log Analytics. Ďalšie informácie nájdete v časti [Pridajte alebo odstráňte priradenia rolí Azure pomocou portálu Azure](/azure/role-based-access-control/role-assignments-portal). Toto povolenie je potrebné pri konfigurácii diagnostických nastavení v Customer Insights, po úspešnom nastavení ho možno zmeniť.
-- [Požiadavky na destináciu](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pre Azure Storage, Azure Event Hub alebo Azure Log Analytics splnené.
-- Máte aspoň **Čitateľ** rolu v skupine prostriedkov, do ktorej prostriedok patrí.
+- Aktívny [Azure predplatné](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- [správca](permissions.md#admin) povolenia v Customer Insights.
+- [Rola prispievateľa a správcu prístupu používateľov](/azure/role-based-access-control/role-assignments-portal) na cieľovom prostriedku v Azure. Zdrojom môže byť Azure Data Lake Storage účet, centrum udalostí Azure alebo pracovný priestor Azure Log Analytics. Toto povolenie je potrebné pri konfigurácii diagnostických nastavení v Customer Insights, ale po úspešnom nastavení ho možno zmeniť.
+- [Požiadavky na destináciu](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pre Azure Storage, Azure Event Hub alebo Azure Log Analytics sú splnené.
+- Aspoň ten **Čitateľ** rolu v skupine prostriedkov, do ktorej prostriedok patrí.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Nastavte diagnostiku pomocou Azure Monitor
 
-1. V Customer Insights vyberte **Systém** > **Diagnostika** aby ste videli diagnostické ciele nakonfigurované pre túto inštanciu.
+1. V Customer Insights prejdite na **Admin** > **Systém** a vyberte **Diagnostika** tab.
 
 1. Vyberte **Pridať cieľ**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Diagnostické pripojenie](media/diagnostics-pane.png "Diagnostické pripojenie")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Diagnostické pripojenie.":::
 
 1. Zadajte meno v **Názov cieľa diagnostiky** lúka.
 
-1. Vyber **Nájomca** predplatného Azure s cieľovým prostriedkom a vyberte **Prihlásiť sa**.
+1. Vyberte **Typ zdroja** (účet úložiska, centrum udalostí alebo analýza denníka).
 
-1. Vyberte **Typ zdroja** (Účet úložiska, centrum udalostí alebo analýza denníkov).
+1. Vyberte **Predplatné**, **zdrojov**, a **Zdroj** pre cieľový zdroj. Pozri [Konfigurácia na cieľovom zdroji](#configuration-on-the-destination-resource) informácie o povolení a protokole.
 
-1. Vyberte **Predplatné** pre cieľový zdroj.
-
-1. Vyberte **Skupina zdrojov** pre cieľový zdroj.
-
-1. Vyberte **Zdroj**.
-
-1. Potvrďte **Ochrana osobných údajov a dodržiavanie predpisov** vyhlásenie.
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
 
 1. Vyberte **Pripojte sa k systému** na pripojenie k cieľovému zdroju. Protokoly sa začnú objavovať v cieli po 15 minútach, ak sa API používa a generuje udalosti.
 
-### <a name="remove-a-destination"></a>Odstráňte cieľ
-
-1. Ísť do **Systém** > **Diagnostika**.
-
-1. V zozname vyberte cieľ diagnostiky.
-
-1. V **Akcie** vyberte stĺpec **Odstrániť** ikonu.
-
-1. Ak chcete zastaviť preposielanie denníka, potvrďte vymazanie. Prostriedok v predplatnom Azure sa neodstráni. Môžete si vybrať odkaz v **Akcie** otvorte Azure Portal pre vybratý prostriedok a odstráňte ho tam.
-
-## <a name="log-categories-and-event-schemas"></a>Kategórie denníkov a schémy udalostí
-
-V súčasnosti [Udalosti API](apis.md) a udalosti pracovného toku sú podporované a platia nasledujúce kategórie a schémy.
-Logová schéma nasleduje [Bežná schéma Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
-
-### <a name="categories"></a>Kategórie
-
-Customer Insights poskytuje dve kategórie:
-
-- **Audit udalostí** :[Udalosti API](#api-event-schema) sledovať zmeny konfigurácie v službe. `POST|PUT|DELETE|PATCH` operácie patria do tejto kategórie.
-- **Prevádzkové udalosti** :[Udalosti API](#api-event-schema) alebo [udalosti pracovného toku](#workflow-event-schema) generované počas používania služby.  Napríklad,`GET` požiadavky alebo udalosti vykonávania pracovného toku.
-
 ## <a name="configuration-on-the-destination-resource"></a>Konfigurácia na cieľovom zdroji
 
-Na základe vášho výberu typu zdroja sa automaticky použijú nasledujúce kroky:
+Na základe vášho výberu typu zdroja sa automaticky vyskytnú nasledujúce zmeny:
 
 ### <a name="storage-account"></a>Storage account
 
@@ -109,16 +78,41 @@ Riaditeľ služby Customer Insights dostane **Vlastník údajov Azure Event Hubs
 
 ### <a name="log-analytics"></a>Log Analytics
 
-Riaditeľ služby Customer Insights dostane **Log Analytics Contributor** povolenie na zdroj. Záznamy budú dostupné pod **Denníky** > **Tabuľky** > **Správa denníkov** vo vybranom pracovnom priestore Log Analytics. Rozbaľte **Správa denníkov** riešenie a nájdite`CIEventsAudit` a`CIEventsOperational` tabuľky.
+Riaditeľ služby Customer Insights dostane **Log Analytics Contributor** povolenie na zdroj. Záznamy sú dostupné pod **Denníky** > **Tabuľky** > **Správa denníkov** vo vybranom pracovnom priestore Log Analytics. Rozbaľte **Správa denníkov** riešenie a nájdite`CIEventsAudit` a`CIEventsOperational` tabuľky.
 
 - `CIEventsAudit` obsahujúce **auditové udalosti**
 - `CIEventsOperational` obsahujúce **prevádzkové udalosti**
 
 Pod **Dotazy** okno, rozbaľte **Audit** riešenie a nájdite príklady dotazov poskytnutých vyhľadávaním `CIEvents`.
 
+## <a name="remove-a-diagnostics-destination"></a>Odstráňte diagnostický cieľ
+
+1. Ísť do **Admin** > **Systém** a vyberte **Diagnostika** tab.
+
+1. V zozname vyberte cieľ diagnostiky.
+
+   > [!TIP]
+   > Odstránenie cieľa zastaví preposielanie denníka, ale neodstráni prostriedok v predplatnom Azure. Ak chcete odstrániť prostriedok v Azure, vyberte odkaz v **Akcie** otvorte Azure Portal pre vybratý prostriedok a odstráňte ho tam. Potom odstráňte cieľ diagnostiky.
+
+1. V **Akcie** vyberte stĺpec **Odstrániť** ikonu.
+
+1. Potvrdením vymazania odstránite cieľ a zastavíte preposielanie protokolu.
+
+## <a name="log-categories-and-event-schemas"></a>Kategórie denníkov a schémy udalostí
+
+V súčasnosti [Udalosti API](apis.md) a udalosti pracovného toku sú podporované a platia nasledujúce kategórie a schémy.
+Logová schéma nasleduje [Bežná schéma Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
+
+### <a name="categories"></a>Kategórie
+
+Customer Insights poskytuje dve kategórie:
+
+- **Audit udalostí** :[Udalosti API](#api-event-schema) sledovať zmeny konfigurácie v službe. `POST|PUT|DELETE|PATCH` operácie patria do tejto kategórie.
+- **Prevádzkové udalosti** :[Udalosti API](#api-event-schema) alebo [udalosti pracovného toku](#workflow-event-schema) generované počas používania služby.  Napríklad,`GET` požiadavky alebo udalosti vykonávania pracovného toku.
+
 ## <a name="event-schemas"></a>Schémy udalostí
 
-Udalosti API a udalosti workflow majú spoločnú štruktúru a detaily, kde sa líšia, viď [Schéma udalosti API](#api-event-schema) alebo [schéma udalosti pracovného toku](#workflow-event-schema).
+Udalosti API a udalosti pracovného toku majú spoločnú štruktúru, no s niekoľkými rozdielmi. Viac informácií nájdete v časti [Schéma udalosti API](#api-event-schema) alebo [schéma udalosti pracovného toku](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Schéma udalosti API
 
@@ -161,7 +155,7 @@ The`identity` Objekt JSON má nasledujúcu štruktúru
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `Authorization.UserRole`      | Priradená rola používateľovi alebo aplikácii. Viac informácií nájdete v časti [používateľské oprávnenia](permissions.md).                                     |
 | `Authorization.RequiredRoles` | Požadované roly na vykonanie operácie. `Admin` rola môže vykonávať všetky operácie.                                                    |
-| `Claims`                      | Nároky používateľa alebo aplikácie webový token JSON (JWT). Vlastnosti nároku sa líšia v závislosti od organizácie a organizácie Azure Active Directory konfigurácia. |
+| `Claims`                      | Nároky webového tokenu JSON (JWT) používateľa alebo aplikácie. Vlastnosti nároku sa líšia v závislosti od organizácie a organizácie Azure Active Directory konfigurácia. |
 
 #### <a name="api-properties-schema"></a>Schéma vlastností API
 
@@ -220,7 +214,6 @@ Pracovný postup obsahuje viacero krokov. [Zdroje údajov príjmu](data-sources.
 | `durationMs`    | Long      | Voliteľné          | Trvanie operácie v milisekundách.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Voliteľné          | Objekt JSON s viacerými vlastnosťami pre konkrétnu kategóriu udalostí.                                                                                        | Pozri podsekciu [Vlastnosti pracovného postupu](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Požaduje sa          | Úroveň závažnosti udalosti.                                                                                                                                  | `Informational`, `Warning` alebo `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Schéma vlastností pracovného toku
 
@@ -247,3 +240,5 @@ Udalosti pracovného toku majú nasledujúce vlastnosti.
 | `properties.additionalInfo.AffectedEntities` | No       | Áno  | Voliteľné. Pre typ operácie`Export` iba. Obsahuje zoznam nakonfigurovaných entít v exporte.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Áno  | Voliteľné. Pre typ operácie`Export` iba. Podrobná správa pre export.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Áno  | Voliteľné. Pre typ operácie`Segmentation` iba. Označuje celkový počet členov segmentu.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

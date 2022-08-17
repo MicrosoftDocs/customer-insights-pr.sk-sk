@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800439"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245822"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastné modely strojového učenia
 
@@ -60,7 +60,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 
 1. Vyberte **Pracovné priestory** spojené s vašou webovou službou. 
 
-1. Vyberte potrubie strojové učenie Azure v **Webová služba, ktorá obsahuje váš model** rozbaľovacia ponuka. Potom vyberte položku **Ďalej**.    
+1. Vyberte si potrubie strojové učenie Azure v **Webová služba, ktorá obsahuje váš model** rozbaľovacia ponuka. Potom vyberte položku **Ďalej**.    
    Zistite viac o [publikovaní kanálu v strojovom učení platformy Azure pomocou návrhára](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) alebo [súpravy SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Váš kanál musí byť zverejnený pod [koncovým bodom kanála](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Pre každý **Vstup webovej služby** vyberte zhodnú položku **Entita** v rámci Customer Insights a následne vyberte položku **Ďalej**.
@@ -84,7 +84,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
    > ![Spárovanie výsledkov s tablou údajov o zákazníkoch.](media/intelligence-screen4-relatetocustomer.png "Spárovanie výsledkov s tablou údajov o zákazníkoch")
 
 1. Zobrazí sa obrazovka **Pracovný postup bol uložený** s podrobnosťami o pracovnom postupe.    
-   Ak ste nakonfigurovali pracovný tok pre kanál Azure strojové učenie, Customer Insights sa pripojí k pracovnému priestoru, ktorý obsahuje kanál. Customer Insights získajú a **Prispievateľ** rolu na pracovnom priestore Azure.
+   Ak ste nakonfigurovali pracovný tok pre kanál strojové učenie Azure, Customer Insights sa pripojí k pracovnému priestoru, ktorý obsahuje kanál. Customer Insights získajú a **Prispievateľ** rolu na pracovnom priestore Azure.
 
 1. Vyberte **Hotovo**.
 
@@ -92,7 +92,7 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 
 ## <a name="edit-a-workflow"></a>Upraviť pracovný postup
 
-1. Na **Vlastné modely** vyberte zvislú elipsu (&vellip;) v **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili, a vyberte ho **Upraviť**.
+1. Na **Vlastné modely** stránku, vyberte zvislú elipsu (&vellip;) v **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili, a vyberte ho **Upraviť**.
 
 1. Rozpoznateľný názov svojho pracovného postupu môžete aktualizovať v poli **Zobrazovaný názov**, ale nakonfigurovanú webovú službu alebo kanál nemôžete zmeniť. Vyberte **Ďalej**.
 
@@ -108,15 +108,15 @@ Predikcie ponúkajú možnosti na vytváranie lepších zákazníckych prostred�
 
 ## <a name="run-a-workflow"></a>Spustenie pracovného postupu
 
-1. Na **Vlastné modely** vyberte zvislú elipsu (&vellip;) v **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili.
+1. Na **Vlastné modely** stránku, vyberte zvislú elipsu (&vellip;) v **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili.
 
 1. Vyberte položku **Spustiť**.
 
-Váš pracovný postup sa tiež spustí automaticky pri každej plánovanej aktualizácii. Zistite viac o [nastavovaní naplánovaného obnovovania](system.md#schedule-tab).
+Váš pracovný postup sa tiež spustí automaticky pri každej plánovanej aktualizácii. Zistite viac o [nastavovaní naplánovaného obnovovania](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Odstrániť pracovný postup
 
-1. Na **Vlastné modely** vyberte zvislú elipsu (&vellip;) v **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili.
+1. Na **Vlastné modely** stránku, vyberte zvislú elipsu (&vellip;) v **Akcie** vedľa pracovného postupu, ktorý ste predtým vytvorili.
 
 1. Vyberte možnosť **Odstrániť** a odstránenie potvrďte.
 

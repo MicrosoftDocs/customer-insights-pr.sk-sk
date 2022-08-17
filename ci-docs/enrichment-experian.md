@@ -1,19 +1,19 @@
 ---
 title: Obohaťte profily zákazníkov o demografické údaje od spoločnosti Experian (verzia Preview)
 description: Všeobecné informácie o obohatení pomocou tretej strany Experian.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195955"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238015"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obohaťte profily zákazníkov o demografické údaje od spoločnosti Experian (verzia Preview)
 
@@ -41,13 +41,9 @@ Musíte byť [správca](permissions.md#admin) v Customer Insights a mať Experia
 
 1. Zadajte názov pripojenia a platné ID používateľa, ID strany a číslo modelu Experian Účet Secure Transport.
 
-1. Skontrolujte a poskytnite svoj súhlas pre [Ochranu osobných údajov a dodržiavanie súladu s nariadeniami](#data-privacy-and-compliance) výberom možnosti **Súhlasím**.
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
 
 1. Vyberte **Overiť** potvrďte konfiguráciu a potom vyberte **Uložiť**.
-
-### <a name="data-privacy-and-compliance"></a>Ochrana osobných údajov a dodržiavanie súladu s nariadeniami
-
-Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje spoločnosti Experian, povoľujete tým aj prenos údajov mimo hranice súladu so službou Dynamics 365 Customer Insights vrátane potenciálne citlivých údajov, ako sú napríklad osobné údaje. Microsoft prenesie tieto údaje na váš pokyn, ale vy ste zodpovední za zabezpečenie toho, aby Experian spĺňal všetky záväzky týkajúce sa ochrany vášho súkromia alebo bezpečnosti. Ďalšie informácie nájdete vo [vyhlásení o ochrane súkromia spoločnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Váš správca služby Dynamics 365 Customer Insights môžete kedykoľvek prestať používať odstránením tohto obohatenia.
 
 ## <a name="configure-the-enrichment"></a>Konfigurácia obohatenia
 
@@ -69,7 +65,7 @@ Keď povolíte službe Dynamics 365 Customer Insights, aby prenášala údaje sp
 
 1. Definujte, ktorý typ polí z vašich zjednotených profilov sa má použiť na porovnávanie demografických údajov Experian. Aspoň jedno z polí **Meno a adresa**, **Telefón** alebo **Email** je požadované. Pre vyššiu presnosť zhody pridajte ďalšie polia. Vyberte **Ďalej**.
 
-1. Mapujte svoje polia na demografické údaje z Experian.
+1. Namapujte svoje polia na demografické údaje z Experian.
 
 1. Stlačte možnosť **Ďalej** na vyplnenie mapovania poľa.
 
