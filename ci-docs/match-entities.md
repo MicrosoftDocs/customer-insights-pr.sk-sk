@@ -2,7 +2,7 @@
 title: Dodržujte podmienky zjednotenia údajov
 description: Priraďujte entity na účely vytvorenia jednotných profilov zákazníkov.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139722"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304676"
 ---
 # <a name="match-conditions-for-data-unification"></a>Dodržujte podmienky zjednotenia údajov
 
@@ -27,6 +27,8 @@ Tento krok zjednotenia definuje poradie zhody a pravidlá pre zhodu medzi entita
 
 > [!NOTE]
 > Po vytvorení podmienok zhody a výbere **Ďalšie**, nemôžete odstrániť vybratú entitu alebo atribút. V prípade potreby vyberte **späť** pred pokračovaním skontrolujte vybrané entity a atribúty.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Zahrnúť obohatené entity (ukážka)
 
@@ -43,16 +45,16 @@ Ak ste obohatili entity na úrovni zdroj údajov, aby ste pomohli zlepšiť výs
 Každá zhoda zjednocuje dve alebo viac entít do jednej konsolidovanej entity. Zároveň vedie jedinečné záznamy o zákazníkoch. Poradie zhody označuje poradie, v ktorom sa systém pokúša zladiť záznamy.
 
 > [!IMPORTANT]
-> Prvá entita v zozname sa nazýva primárna entita. Primárna entita slúži ako základ pre váš jednotný súbor údajov profilov. Do tejto entity sa pridajú ďalšie vybraté entity.
+> Prvá entita sa nazýva primárna entita, ktorá slúži ako základ pre vaše zjednotené profily. Do tejto entity sa pridajú ďalšie vybraté entity.
 >
 > Dôležité úvahy:
 >
 > - Ako primárny subjekt vyberte subjekt s najúplnejšími a najspoľahlivejšími profilovými údajmi o vašich zákazníkoch.
 > - Vyberte entitu, ktorá má niekoľko spoločných atribútov s inými entitami (napríklad meno, telefónne číslo alebo e-mailovú adresu), ako primárnu entitu.
 
-1. Na **Zodpovedajúce podmienky** pomocou šípok nahor a nadol presuňte entity v požadovanom poradí alebo ich presuňte myšou. Napríklad vyberte **Kontakty: elektronický obchod** ako primárny subjekt a **CustomerLoyalty:Lojalita** ako druhý subjekt.
+1. Na **Zodpovedajúce podmienky** pomocou šípok nahor a nadol presuňte entity v požadovanom poradí alebo ich presuňte myšou. Napríklad vyberte **eCommerceZákazníci** ako primárny subjekt a **loyZákazníci** ako druhý subjekt.
 
-1. Ak chcete mať každý záznam v entite ako jedinečného zákazníka bez ohľadu na to, či sa nájde zhoda, vyberte **Zahrňte všetky záznamy**. Všetky záznamy v tejto entite, ktoré sa nezhodujú so záznamami v iných entitách, sú zahrnuté v zjednotenom profile. Záznamy, ktoré nemajú zhodu, sa nazývajú singletony.
+1. Ak chcete mať každý záznam v entite ako jedinečného zákazníka bez ohľadu na to, či sa nájde zhoda, vyberte **Zahrňte všetky záznamy**. Všetky záznamy v tejto entite, ktoré sa nezhodujú so záznamami v žiadnej inej entite, sú zahrnuté v zjednotenom profile. Záznamy, ktoré nemajú zhodu, sa nazývajú singletony.
   
 Primárna entita *Kontakty: elektronický obchod* sa zhoduje s ďalšou entitou *CustomerLoyalty:Lojalita*. Ak máte viac ako dve entity, množina údajov, ktorá je výsledkom prvého kroku zhody, sa zhoduje s nasledujúcou entitou.
 
@@ -70,7 +72,7 @@ Upozornenie vedľa názvu entity znamená, že pre pár zhody nie je definované
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Snímka obrazovky panela Pridať pravidlo.":::
 
-   - **Vyberte entitu/pole (prvý riadok)** : Vyberte súvisiacu entitu a atribút na určenie vlastnosti záznamu, ktorá je pravdepodobne jedinečná pre zákazníka. Napríklad telefónne číslo alebo e-mailová adresa. Vyvarujte sa zhody podľa atribútov typu aktivity. Napríklad ID nákupu pravdepodobne nenájde zhodu v iných typoch záznamov.
+   - **Vyberte entitu/pole (prvý riadok)** : Vyberte entitu a atribút, ktoré sú pravdepodobne jedinečné pre zákazníka. Napríklad telefónne číslo alebo e-mailová adresa. Vyvarujte sa zhody podľa atribútov typu aktivity. Napríklad ID nákupu pravdepodobne nenájde zhodu v iných typoch záznamov.
 
    - **Vyberte entitu/pole (druhý riadok)** : Vyberte atribút, ktorý súvisí s atribútom entity uvedenej v prvom riadku.
 
@@ -116,13 +118,13 @@ Pravidlá spárovania predstavujú súbory podmienok. Ak chcete priradiť entity
 
 ### <a name="add-exceptions-to-a-rule"></a>Pridajte do pravidla výnimky
 
-Vo väčšine prípadov zhoda entity vedie k jedinečným profilom zákazníkov s konsolidovanými údajmi. Ak chcete dynamicky riešiť zriedkavé prípady falošne pozitívnych a falošne negatívnych výsledkov, môžete definovať výnimky pre pravidlo zhody. Výnimky sa uplatňujú po spracovaní pravidiel zhody a vyhýbajú sa zhodovaniu všetkých záznamov, ktoré spĺňajú kritériá výnimky.
+Vo väčšine prípadov zhoda entity vedie k jedinečným profilom zákazníkov s konsolidovanými údajmi. Ak chcete riešiť zriedkavé prípady falošne pozitívnych a falošne negatívnych výsledkov, definujte výnimky pre pravidlo zhody. Výnimky sa uplatňujú po spracovaní pravidiel zhody a vyhýbajú sa zhodovaniu všetkých záznamov, ktoré spĺňajú kritériá výnimky.
 
 Napríklad, ak vaše pravidlo zhody kombinuje priezvisko, mesto a dátum narodenia, systém identifikuje dvojčatá s rovnakým priezvisko, ktoré žijú v rovnakom meste ako rovnaký profil. Môžete zadať výnimku, ktorá sa nezhoduje s profilmi, ak krstné meno v entitách, ktoré kombinujete, nie sú rovnaké.
 
 1. V **Upraviť pravidlo** panel, vyberte **Pridať** > **Pridať výnimku**.
 
-1. Zadajte kritériá výnimiek.
+1. Zadajte kritériá výnimky.
 
 1. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
 
@@ -134,7 +136,7 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
 |---------|---------|---------|
 |Vždy sa zhodovať     | Definuje hodnoty, ktoré sa vždy zhodujú.         |  Vždy sa zhodujú *Mike* a *MikeR*.       |
 |Nikdy sa nezhodovať     | Definuje hodnoty, ktoré sa nikdy nezhodujú.        | Nikdy sa nezhodujú *John* a *Jonathan*.        |
-|Vlastné obídenie     | Definuje hodnoty, ktoré by mal systém vždy ignorovať vo fáze zápasu. |  Ignorujte hodnoty *11111* a *Neznámy* počas zápasu.        |
+|Obísť            | Definuje hodnoty, ktoré by mal systém vždy ignorovať vo fáze zápasu. |  Ignorujte hodnoty *11111* a *Neznámy* počas zápasu.        |
 |Mapovanie aliasu    | Definovanie hodnôt, ktoré by mal systém považovať za rovnakú hodnotu.         | Zvážte *Joe* byť rovný *Jozefa*.        |
 
 1. Vyberte **Vlastné**.
@@ -157,7 +159,7 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
 
 1. Prejdite na **Údaje** > **Zdroje údajov** a prijmite súbory šablón ako nové entity.
 
-1. Po nahratí súborov vyberte **Vlastné** možnosť znova. Z rozbaľovacej ponuky vyberte požadované entity a vyberte **Hotový**.
+1. Po nahratí súborov vyberte **Vlastné** možnosť znova. Z rozbaľovacej ponuky vyberte požadované entity a vyberte **hotový**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Snímka obrazovky dialógového okna na výber prepísania pre vlastný scenár zhody.":::
 

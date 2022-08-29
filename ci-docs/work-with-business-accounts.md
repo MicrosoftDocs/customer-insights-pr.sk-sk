@@ -4,21 +4,21 @@ description: Získajte informácie o firemných účtoch ako primárnom cieľovo
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.custom: intro-internal
 ms.author: wimohabb
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: abb77a720ab737520a905b0c93b65573e669109f
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053132"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303935"
 ---
 # <a name="work-with-business-accounts"></a>Práca s firemnými obchodnými vzťahmi
 
@@ -30,7 +30,7 @@ Správcovia môžu [vytvoriť prostredie v existujúcej organizácii](create-env
 
 Potom môžete [prijať údaje](data-sources.md) pre firemné obchodné vzťahy a súvisiace kontakty ako zdroje údajov zo všetkých podporovaných zdrojov.
 
-Po zjednotení údajov [zadajte hierarchie obchodných vzťahov](relationships.md#set-up-account-hierarchies) ako súčasť konfigurácie vzťahu. Môžete tiež [konfigurovať sémantické mapovania](semantic-mappings.md) na prepojenie entít kontaktov a obchodných vzťahov. 
+ [Zjednotiť](data-unification.md) údaje o vašom účte nasledované vašimi kontaktnými údajmi na prepojenie kontaktov a účtovných subjektov.
 
 ## <a name="switch-between-primary-target-audience"></a>Prepínanie medzi primárnou cieľovou skupinou
 
@@ -43,11 +43,12 @@ Ak vaša organizácia spravuje prostredia pre individuálnych zákazníkov a fir
 - [Aktivity](activities.md): Podpora pre obchodné vzťahy a súvisiace kontakty na vytváranie aktivít a ich zobrazovanie na časovej osi.
 - [Vzťahy](relationships.md): Sprievodca aktivitami pomáha vytvárať vzťahy medzi entitami, aby zobrazenie obchodného vzťahu mohlo zobrazovať všetky aktivity z kontaktov. Kontakty je možné zobraziť detailnejšie a hierarchie je možné použiť na agregáciu aktivít obchodného vzťahu.
 - [Miery](measures.md): Podporuje miery vytvorené z nástroja na tvorbu mier pomocou jedného výpočtu. Voliteľné nastavenie umožňuje súhrn pre vedľajšie obchodné vzťahy pri vytváraní mier.
-- [Segmenty](segments.md): Podporuje segmenty, ktoré sú vytvárané úplne od začiatku pomocou nástroja na tvorbu segmentov. Noví operátori umožňujú začlenenie hierarchie obchodných vzťahov pri vytváraní segmentov.
+- [Segmenty](segments.md): Podporuje segmenty, ktoré sú vytvárané úplne od začiatku pomocou nástroja na tvorbu segmentov. Segmenty môžu byť založené na účtoch alebo kontaktoch.
 - [Prijímanie údajov](data-sources.md): Všetky funkcie v tejto oblasti sú rovnaké pre firemné obchodné vzťahy a individuálnych zákazníkov.
-- [Zjednotenie údajov](data-unification.md): Všetky funkcie v tejto oblasti sú rovnaké pre firemné obchodné vzťahy a individuálnych zákazníkov.
+- Zjednotenie údajov B-to-B je veľmi podobné zjednoteniu údajov B-to-C, ale má ďalší krok na zjednotenie kontaktov po zjednotení účtu. Pozri [Podnikateľské účty (B-to-B)](data-unification.md).
 - [Obohatenie](enrichment-hub.md): Niektoré typy obohatenia sú k dispozícii iba pre scenáre individuálnych zákazníkov, zatiaľ čo iné sú k dispozícii výlučne pre firemné obchodné vzťahy.
 - [Predikcie a vopred pripravené modely](predictions-overview.md): Predikcia úbytku transakcií obsahuje ďalšie kroky pre firemné obchodné vzťahy. Ostatné predikcie sú k dispozícii iba pre individuálnych zákazníkov.
 - [Aktivácia a export](export-destinations.md): Export je dostupný pre firemné obchodné vzťahy a individuálnych zákazníkov. Niektoré exporty vyžadujú dodatočnú konfiguráciu a kontaktné informácie projektované v príslušných segmentoch, aby boli platné pre firemné obchodné vzťahy.
 - [Systémové nastavenia](system.md) a [správa používateľov](permissions.md): Všetky funkcie v tejto oblasti sú rovnaké pre firemné obchodné vzťahy a individuálnych zákazníkov.
 
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,25 +1,25 @@
 ---
-title: Začíname pracovať so systémom Dynamics 365 Customer Insights
-description: Prehľad Customer Insights pomáha zdrojom rýchlo začať.
-ms.reviewer: v-wendysmith
+title: Začíname s doplnkom Dynamics 365 Customer Insights
+description: Prehľad zdrojov Customer Insights pomáha rýchlo začať.
+ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
-ms.date: 04/12/2022
-ms.subservice: engagement-insights
+ms.date: 08/31/2021
+ms.subservice: audience-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: ce0336c4bf853bc81ec01c45410169a63b69eb03
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011998"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304630"
 ---
-# <a name="get-started-with-dynamics-365-customer-insights"></a>Začíname pracovať so systémom Dynamics 365 Customer Insights
+# <a name="get-started-with-dynamics-365-customer-insights"></a>Začíname s doplnkom Dynamics 365 Customer Insights
 
 Customer Insights vám môže pomôcť lepšie porozumieť vašim zákazníkom. Prepojte údaje z rôznych transakčných, behaviorálnych a observačných zdrojov a vytvorte 360-stupňový pohľad na zákazníka. Tieto informácie použite na získanie skúseností a procesov zameraných na zákazníka. Zjednoťte a pochopte údaje zákazníkov a využite ich na získavanie inteligentných prehľadov a akcií.
 
@@ -41,7 +41,7 @@ Zjednotené profily sú základom na získanie prehľadov a vykonávanie akcií 
 
 1. Prijímajte údaje vytváraním zdrojov údajov z viacerých možností. Vyberte si medzi [Azure Data Lake Storage vrátane spoločného dátového modelu](connect-common-data-model.md),[Azure Synapse Analytics](connect-synapse.md),[Microsoft Dataverse](connect-dataverse-managed-lake.md), alebo [Power Query konektory](connect-power-query.md).
 
-1. Spustite [proces zjednotenia údajov](data-unification.md) identifikáciou [zdrojové polia](map-entities.md), odstránenie [duplikáty](remove-duplicates.md),[zodpovedajúce podmienky](match-entities.md) a [zjednocujúce polia](merge-entities.md).
+1. Spustite [proces zjednotenia údajov](data-unification.md) identifikáciou [zdrojové polia](map-entities.md), odstránenie [duplikáty](remove-duplicates.md),[zodpovedajúce podmienky](match-entities.md), a [zjednocujúce polia](merge-entities.md).
 
 1. Zoznámte sa s [entitami, ktoré systém vytvára](entities.md) a vytvorte [vzťahy medzi prijatými entitami ](relationships.md).
 

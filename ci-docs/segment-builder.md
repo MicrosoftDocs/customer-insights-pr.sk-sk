@@ -1,7 +1,7 @@
 ---
-title: Vytvárajte zložité segmenty pomocou nástroja na tvorbu segmentov
+title: Vytvorte zložité segmenty pomocou nástroja na tvorbu segmentov
 description: Pomocou nástroja na tvorbu segmentov vytvorte komplexné segmenty zákazníkov ich zoskupením na základe rôznych atribútov.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170654"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304768"
 ---
-# <a name="create-complex-segments-with-segment-builder"></a>Vytvárajte zložité segmenty pomocou nástroja na tvorbu segmentov
+# <a name="create-complex-segments-with-segment-builder"></a>Vytvorte zložité segmenty pomocou nástroja na tvorbu segmentov
 
-Definujte komplexné filtre okolo zjednotenej entity zákazníka a jej súvisiacich entít. Každý segment po spracovaní vytvorí skupinu zákazníckych záznamov, ktoré môžete exportovať a podniknúť kroky.
+Definujte komplexné filtre okolo jednotného zákazníka alebo jednotného kontaktu a s ním súvisiacich entít. Každý segment po spracovaní vytvorí množinu záznamov o zákazníkoch alebo kontaktoch, ktoré môžete exportovať a podniknúť kroky.
 
 > [!TIP]
-> Segmenty založené na **individuálnych zákazníkoch** automaticky zahŕňajú dostupné kontaktné informácie pre členov segmentu. V prostrediach pre **firemné obchodné vzťahy** sú segmenty založené na obchodných vzťahoch (spoločnostiach alebo dcérskych spoločnostiach). Ak chcete zahrnúť kontaktné informácie do segmentu, použite funkciu **Atribúty projektu** v nástroji na tvorbu segmentov. Uistite sa, že zdroje kontaktných údajov sú [sémanticky mapované na entitu ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> Segmenty založené na **individuálnych zákazníkoch** automaticky zahŕňajú dostupné kontaktné informácie pre členov segmentu. In **podnikateľské účty**, Ak ty [zjednotený](data-unification.md) účty aj kontakty, vyberte, či je segment založený na účtoch alebo obchodných kontaktoch. Ak chcete exportovať do cieľa očakávajúceho kontaktné informácie, použite segment kontaktov. Ak chcete exportovať do cieľa očakávajúceho informácie o účte, použite segment účtov.
 
 ## <a name="segment-builder"></a>Zostavovač segmentov
 
@@ -57,6 +57,11 @@ Vyššie uvedený príklad ilustruje schopnosť segmentácie. Definovali sme seg
 
 1. Vyberte položku **Nový** > **Vytvorte si vlastný**. Na stránke tvorcu segmentov definujete alebo zostavujete pravidlá. Pravidlo pozostáva z jednej alebo viacerých podmienok, ktoré definujú skupinu zákazníkov.
 
+   > [!NOTE]
+   > Pre prostredia založené na obchodných účtoch vyberte **Nový** > **Segment účtov** alebo **Segment kontaktov (ukážka)** podľa typu segmentu, ktorý chcete vytvoriť. Ak [hierarchia účtov](relationships.md#set-up-account-hierarchies) bol definovaný a chcete vytvoriť pravidlá na filtrovanie údajov na základe vzťahu dieťaťa a rodiča, vyberte **Použiť hierarchiu? (Náhľad)**, vyberte hierarchiu a potom **Použiť**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Panel hierarchie výberu segmentov.":::
+
 1. Vyberte **Upraviť podrobnosti** vedľa segmentu bez názvu. Zadajte názov pre segment a aktualizujte navrhovaný **Názov výstupnej entity** pre daný segment. Voliteľne pridajte popis a [značky](work-with-tags-columns.md#manage-tags) do segmentu.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Dialógové okno Upraviť podrobnosti.":::
@@ -65,11 +70,11 @@ Vyššie uvedený príklad ilustruje schopnosť segmentácie. Definovali sme seg
    - Pozrite si zoznam dostupných entít a atribútov na table **Pridať k pravidlu** a označte **+** ikonu vedľa atribútu, ktorý chcete pridať. Určte, či chcete atribút pridať k existujúcemu pravidlu, alebo ho použijete na vytvorenie nového pravidla.
    - Návrhy na zhodu zobrazíte zadaním názvu atribútu do sekcie pravidiel.
 
-1. Vyberte operátory a určte príslušné hodnoty podmienky. Atribút môže mať ako hodnotu jeden zo štyroch dátových typov: číselný, reťazcový, dátumový alebo boolovský. Podľa typu údajov atribútu sú na určenie podmienky k dispozícii rôzne operátory. Pre segmenty s firemnými obchodnými vzťahmi sú k dispozícii dva špeciálne operátory na zahrnutie potenciálnych hierarchií medzi prijaté obchodné vzťahy. Použite operátory *podriadená položka k* a *nadradená položka k*, ak chcete zahrnúť súvisiace obchodné vzťahy.
+1. Vyberte operátory a určte príslušné hodnoty podmienky. Atribút môže mať ako hodnotu jeden zo štyroch dátových typov: číselný, reťazcový, dátumový alebo boolovský. Podľa typu údajov atribútu sú na určenie podmienky k dispozícii rôzne operátory.
 
 1. Vybraním možnosti **Pridať podmienku** pridáte do pravidla ďalšie podmienky. Ak chcete vytvoriť pravidlo podľa aktuálneho pravidla, vyberte položku **Pridajte čiastkové pravidlo**.
 
-1. Ak pravidlo používa iné entity ako *Zákazník* subjekt, vyberte **Nastavte cestu vzťahu** na mapovanie vybranej entity k jednotnej entite zákazníka. Ak existuje len jedna možná cesta vzťahu, systém ju vyberie automaticky. Rôzne [vzťahové cesty](relationships.md#relationship-paths) môže priniesť rôzne výsledky. Každé pravidlo môže mať pre vzťah vlastnú cestu.
+1. Ak pravidlo používa iné entity ako *Zákazník* subjekt (resp *Kontaktný profil* entity pre B-to-B), vyberte **Nastavte cestu vzťahu** na mapovanie vybranej entity k jednotnej entite zákazníka. Ak existuje len jedna možná cesta vzťahu, systém ju vyberie automaticky. Rôzne [vzťahové cesty](relationships.md#relationship-paths) môže priniesť rôzne výsledky. Každé pravidlo môže mať pre vzťah vlastnú cestu.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Cesta potenciálneho vzťahu pri vytváraní pravidla na základe entity mapovanej na zjednotenú entitu zákazníka.":::
 
@@ -92,24 +97,22 @@ Vyššie uvedený príklad ilustruje schopnosť segmentácie. Definovali sme seg
       - **Prienik** prekrýva obe skupiny. Iba údaje, ktoré *sú bežné* pre obe skupiny, zostávajú v zjednotenej skupine.
       - Možnosť **Okrem** kombinuje dve skupiny. Iba údaje v skupine A, ktoré *nie je bežné* pre údaje v skupine B, sa uchovajú.
 
-1. Štandardne bude výstupná entita automaticky obsahovať všetky atribúty zákazníckych profilov, ktoré zodpovedajú definovaným filtrom. Ak je segment založený na iných entitách ako na *Zákazník* subjekt, vyberte **Atribúty projektu** pridať ďalšie atribúty z týchto entít do výstupnej entity.
-
-   > [!IMPORTANT]
-   > Pre segmenty založené na obchodných účtoch podrobnosti o jednom alebo viacerých kontaktoch každého účtu z *Kontaktný profil* entita musí byť zahrnutá do segmentu, aby bolo možné tento segment aktivovať alebo exportovať do destinácií, ktoré vyžadujú kontaktné informácie. Pre viac informácií o entite *ContactProfile* si prečítajte [Sémantické mapovania](semantic-mappings.md).
-   > Vzorový výstup pre segment založený na obchodných vzťahoch s projektovanými atribútmi kontaktov by mohol vyzerať takto:
-   >
-   > |Identifikátor  |Názov obchodného vzťahu  |Výnos  |Meno kontaktu  | Rola kontaktu|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100 tis. | [Abbie Moss, Ruth Soto]  | [CEO, manažér pre obstarávanie]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Príklad projektovaných atribútov vybratých na bočnej table, ktoré sa majú pridať do výstupnej entity.":::
-  
+1. Štandardne bude výstupná entita automaticky obsahovať všetky atribúty zákazníckych profilov, ktoré zodpovedajú definovaným filtrom. V B-to-B pri použití *Kontaktný profil* entita, ID účtu je automaticky zahrnuté. Ak je segment založený na iných entitách ako na *Zákazník* entity alebo zahrnúť viac atribútov z *Kontaktný profil*, vyberte **Atribúty projektu** pridať ďalšie atribúty z týchto entít do výstupnej entity.
+ 
    Napríklad: Segment je založený na entite, ktorá obsahuje údaje o nákupoch, ktoré súvisia s entitou *Zákazník*. Segment vyhľadá všetkých zákazníkov zo Španielska, ktorí v aktuálnom roku nakúpili tovar. Môžete sa rozhodnúť pripojiť atribúty ako cena tovaru alebo dátum nákupu ku všetkým zodpovedajúcim záznamom zákazníkov vo výstupnej entite. Tieto údaje môžu byť užitočné, ak chcete analyzovať sezónne korelácie s celkovými výdavkami.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Príklad projektovaných atribútov vybratých na bočnej table, ktoré sa majú pridať do výstupnej entity.":::
+ 
+   Vzorový výstup pre segment založený na obchodných vzťahoch s projektovanými atribútmi kontaktov by mohol vyzerať takto:
+
+   |Identifikátor  |Názov obchodného vzťahu  |Výnos  |Meno kontaktu  | Rola kontaktu|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100 tis. | [Abbie Moss, Ruth Soto]  | [CEO, manažér pre obstarávanie]
+
    > [!NOTE]
-   > - **Atribúty projektu** funguje iba pre entity, ktoré majú vzťah s entitou zákazníka jeden k mnohým. Napríklad jeden zákazník môže mať viac predplatných.
-   > - Ak je atribút, ktorý chcete premietať, vzdialený viac ako jeden skok od entity *Zákazník*, ako je definované vzťahom, tento atribút by mal byť použitý v každom pravidle dotazu segmentu, ktorý vytvárate.
-   > - Ak je atribút, ktorý chcete premietať, len na jeden skok od entity *Zákazník*, tento atribút nemusí byť prítomný v každom pravidle dotazu segmentu, ktorý vytvárate.
+   > - **Atribúty projektu** fungujú iba pre subjekty, ktoré majú vzťah typu one-to-many s *Zákazník* alebo *Kontaktný profil* subjekt. Napríklad jeden zákazník môže mať viac predplatných.
+   > - Ak je atribút, ktorý chcete premietnuť, vzdialený viac ako jeden skok od *Zákazník* alebo *Kontaktný profil* entity, ako je definované vzťahom, tento atribút by sa mal použiť v každom pravidle segmentového dotazu, ktorý vytvárate.
+   > - Ak je atribút, ktorý chcete premietnuť, vzdialený len jeden skok od atribútu *Zákazník* alebo *Kontaktný profil* entita, tento atribút nemusí byť prítomný v každom pravidle segmentového dotazu, ktorý vytvárate.
    > - **Premietané atribúty** sa zohľadňujú pri použití množinových operátorov.
 
 1. Vyberte **Bežať** na vytvorenie segmentu. Vyberte **Uložiť** ak chcete zachovať aktuálnu konfiguráciu a spustiť segment neskôr. The **Segmenty** zobrazí stránka.

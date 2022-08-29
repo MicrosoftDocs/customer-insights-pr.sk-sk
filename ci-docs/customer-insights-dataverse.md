@@ -1,7 +1,7 @@
 ---
 title: Práca s údajmi Customer Insights v Microsoft Dataverse
 description: Zistite, ako prepojiť Customer Insights a Microsoft Dataverse a pochopiť výstupné entity, ktoré sa exportujú do Dataverse.
-ms.date: 07/15/2022
+ms.date: 08/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,25 +11,25 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
-ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
+ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "9153423"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303848"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práca s údajmi Customer Insights v Microsoft Dataverse
 
-Customer Insights poskytuje možnosť sprístupniť výstupné entity ako [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Táto integrácia umožňuje jednoduché zdieľanie údajov a vlastný vývoj prostredníctvom prístupu s nízkym kódom/bez kódu. The [výstupné entity](#output-entities) sú dostupné ako tabuľky v a Dataverse životné prostredie. Údaje môžete použiť pre akúkoľvek inú aplikáciu založenú na Dataverse tabuľky. Tieto tabuľky umožňujú scenáre, ako sú automatizované pracovné postupy Power Automate alebo vytváranie aplikácií pomocou Power Apps.
+Customer Insights poskytuje možnosť sprístupniť výstupné entity dostupné v [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Táto integrácia umožňuje jednoduché zdieľanie údajov a vlastný vývoj prostredníctvom prístupu s nízkym kódom/bez kódu. The [výstupné entity](#output-entities) sú dostupné ako tabuľky v a Dataverse životné prostredie. Údaje môžete použiť pre akúkoľvek inú aplikáciu založenú na Dataverse tabuľky. Tieto tabuľky umožňujú scenáre, ako sú automatizované pracovné postupy Power Automate alebo vytváranie aplikácií pomocou Power Apps.
 
 Pripája sa k vášmu Dataverse prostredie vám to tiež umožňuje [prijímať údaje zo zdrojov údajov lokálny pomocou Power Platform dátové toky a brány](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Požiadavky
 
 - Štatistiky zákazníkov a Dataverse prostredia musia byť hosťované v rovnakej oblasti.
-- Musíte mať rolu globálneho správcu v Dataverse životné prostredie. Overte si, či toto [Dataverse prostredie je spojené](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) do určitých skupín zabezpečenia a uistite sa, že ste do týchto skupín zabezpečenia pridaný.
-- Žiadne iné prostredie Customer Insights už nie je priradené k Dataverse prostredie, ktoré chcete pripojiť. Naučiť sa ako [odstrániť existujúce pripojenie k a Dataverse životné prostredie](#remove-an-existing-connection-to-a-dataverse-environment).
-- A Microsoft Dataverse prostredie sa môže pripojiť iba k jednému účtu úložiska. Platí to iba vtedy, ak nakonfigurujete prostredie [použi svoj Azure Data Lake Storage](own-data-lake-storage.md).
+- Rola globálneho správcu nastavená v Dataverse životné prostredie. Overte si, či toto [Dataverse prostredie je spojené](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) do určitých skupín zabezpečenia a uistite sa, že ste do týchto skupín zabezpečenia pridaný.
+- Žiadne iné prostredie Customer Insights už nie je spojené s Dataverse prostredie, ktoré chcete pripojiť. Naučiť sa ako [odstrániť existujúce pripojenie k a Dataverse životné prostredie](#remove-an-existing-connection-to-a-dataverse-environment).
+- A Microsoft Dataverse prostredie pripojené k jednému úložnému kontu, ak toto prostredie nakonfigurujete [použi svoj Azure Data Lake Storage](own-data-lake-storage.md).
 
 ## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse nárok na skladovaciu kapacitu
 
@@ -37,7 +37,7 @@ Predplatné Customer Insights vás oprávňuje na dodatočnú kapacitu pre exist
 
 **Príklad:**
 
-Za predpokladu, že získate 15 GB úložného priestoru pre databázu a 20 GB úložného priestoru pre súbory na 100 000 zákazníckych profilov. Ak vaše predplatné zahŕňa 300 000 zákazníckych profilov, vaša celková úložná kapacita bude 45 GB (3 x 15 GB) úložisko databázy a 60 GB úložisko súborov (3 x 20 GB). Podobne, ak máte predplatné B2B s 30 000 účtami, vaša celková kapacita úložiska by bola 45 GB (3 x 15 GB) úložiska databázy a 60 GB úložiska súborov (3 x 20 GB).
+Za predpokladu, že získate 15 GB úložného priestoru pre databázu a 20 GB úložného priestoru pre súbory na 100 000 zákazníckych profilov. Ak vaše predplatné zahŕňa 300 000 zákazníckych profilov, vaša celková kapacita úložiska je 45 GB (3 x 15 GB) úložiska databázy a 60 GB úložiska súborov (3 x 20 GB). Podobne, ak máte predplatné B-to-B s 30 000 účtami, vaša celková úložná kapacita je 45 GB (3 x 15 GB) úložisko databázy a 60 GB úložisko súborov (3 x 20 GB).
 
 Kapacita denníka nie je pre vašu organizáciu prírastková a pevná.
 
@@ -47,70 +47,80 @@ Kapacita denníka nie je pre vašu organizáciu prírastková a pevná.
 
 The **Microsoft Dataverse** krok vám umožní prepojiť Customer Insights s vaším Dataverse prostredia kým [vytvorenie prostredia Customer Insights](create-environment.md).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="zdieľanie údajov s Microsoft Dataverse automaticky povolené pre nové sieťové prostredia.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="zdieľanie údajov s Microsoft Dataverse automaticky povolené pre nové prostredia.":::
 
-Správcovia môžu nakonfigurovať Customer Insights na pripojenie existujúceho Dataverse životné prostredie. Poskytnutím adresy URL na Dataverse prostredie, pripája sa k ich novému prostrediu Customer Insights. Po nadviazaní spojenia medzi Customer Insights a Dataverse, nemeňte názov organizácie pre Dataverse životné prostredie. Názov organizácie sa používa v Dataverse URL a zmenený názov prerušia spojenie s Customer Insights.
+1. Poskytnite webovú adresu svojho Dataverse prostredie alebo ponechajte pole prázdne, ak chcete, aby bolo vytvorené pre vás.
 
-Ak nechcete použiť existujúci Dataverse prostredie, systém vytvorí nové prostredie pre údaje Customer Insights vo vašom nájomníkovi. [Power Platform správcovia môžu kontrolovať, kto môže vytvárať prostredia](/power-platform/admin/control-environment-creation). Keď nastavujete nové prostredie Customer Insights a správca zakázal vytváranie Dataverse prostredia pre všetkých okrem správcov, možno nebudete môcť vytvoriť nové prostredie.
+   > [!NOTE]
+   > Po nadviazaní spojenia medzi Customer Insights a Dataverse, nemeňte názov organizácie pre Dataverse životné prostredie. Názov organizácie sa používa v Dataverse URL a zmenený názov prerušia spojenie s Customer Insights.
 
-**Povoliť zdieľanie údajov** s Dataverse začiarknutím políčka zdieľania údajov.
+   [Power Platform správcovia môžu kontrolovať, kto môže vytvoriť nový Dataverse prostredia](/power-platform/admin/control-environment-creation). Ak sa pokúšate nastaviť nové prostredie Customer Insights a nedarí sa vám to, správca možno zakázal vytváranie Dataverse prostredia pre všetkých okrem správcov.
 
-Ak používate svoj vlastný účet Data Lake Storage, potrebujete aj **Identifikátor povolení**. Ďalšie informácie o tom, ako získať identifikátor povolenia, nájdete v nasledujúcej časti.
+1. Ak používate svoj vlastný účet Data Lake Storage:
+   1. Vyberte **Povoliť zdieľanie údajov** s Dataverse.
+   1. Zadajte **Identifikátor povolení**. Ak chcete získať identifikátor povolenia, [povoliť zdieľanie údajov s Dataverse zo svojho vlastného Azure Data Lake Storage](#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Povoliť zdieľanie údajov s Dataverse z vlastného Azure Data Lake Storage (Náhľad)
 
-Povolenie zdieľania údajov s Microsoft Dataverse keď vaše prostredie [používa svoje vlastné Azure Data Lake Storage účtu](own-data-lake-storage.md) potrebuje nejakú extra konfiguráciu. Používateľ, ktorý nastavuje prostredie Customer Insights, musí mať min **Storage Blob Data Reader** povolenia na *CustomerInsights* kontajner v Azure Data Lake Storage účtu.
-
-1. Vytvorte dve skupiny zabezpečenia vo svojom predplatnom Azure – jednu **Čitateľ** bezpečnostná skupina a jedna **Prispievateľ** bezpečnostnú skupinu a nastavte Microsoft Dataverse ako vlastník pre obe bezpečnostné skupiny.
-2. Spravujte zoznam riadenia prístupu (ACL) v kontajneri CustomerInsights vo svojom účte úložiska prostredníctvom týchto skupín zabezpečenia. Pridajte Microsoft Dataverse servis a akékoľvek Dataverse podnikových aplikácií, ako je Dynamics 365 Marketing **Čitateľ** bezpečnostná skupina s **iba na čítanie** povolenia. Pridať *iba* aplikáciu Customers Insights na **Prispievateľ** bezpečnostná skupina udeliť oboje **čítaj a píš** povolenia na písanie profilov a prehľadov.
+In [tvoj vlastný Azure Data Lake Storage účtu](own-data-lake-storage.md), overte, či používateľ, ktorý nastavuje prostredie Customer Insights, má min **Storage Blob Data Reader** povolenia na`customerinsights` kontajnera v účte úložiska.
 
 ### <a name="limitations"></a>Obmedzenia
 
-Pri používaní existujú dve obmedzenia Dataverse s vlastným Azure Data Lake Storage účet:
-
-- Existuje mapovanie jedna ku jednej medzi a Dataverse organizácia a an Azure Data Lake Storage účtu. Raz Dataverse organizácia je pripojená k účtu úložiska, nemôže sa pripojiť k inému účtu úložiska. Toto obmedzenie zabraňuje tomu, aby a Dataverse nezapĺňa viacero účtov úložiska.
+- Iba mapovanie jedna ku jednej medzi a Dataverse organizácia a an Azure Data Lake Storage účtu. Raz Dataverse organizácia je pripojená k účtu úložiska, nemôže sa pripojiť k inému účtu úložiska. Toto obmedzenie zabraňuje Dataverse z naplnenia viacerých účtov úložiska.
 - Zdieľanie údajov nebude fungovať, ak je na prístup k vášmu účtu potrebné nastavenie Azure Private Link Azure Data Lake Storage účet, pretože je za firewallom. Dataverse momentálne nepodporuje pripojenie k súkromným koncovým bodom cez Private Link.
+
+### <a name="set-up-security-groups-on-your-own-azure-data-lake-storage"></a>Nastavte si skupiny zabezpečenia sami Azure Data Lake Storage
+
+1. Vytvorte dve skupiny zabezpečenia vo svojom predplatnom Azure – jednu **Čitateľ** bezpečnostná skupina a jedna **Prispievateľ** bezpečnostnú skupinu a nastavte Microsoft Dataverse ako vlastník pre obe bezpečnostné skupiny.
+
+1. Spravujte zoznam riadenia prístupu (ACL) na`customerinsights` kontajnera vo vašom účte úložiska prostredníctvom týchto skupín zabezpečenia.
+   1. Pridajte Microsoft Dataverse servis a akékoľvek Dataverse podnikových aplikácií, ako je Dynamics 365 Marketing **Čitateľ** bezpečnostná skupina s **iba na čítanie** povolenia.
+   1. Pridať *iba* aplikáciu Customers Insights na **Prispievateľ** bezpečnostná skupina udeliť oboje **čítaj a píš** povolenia na písanie profilov a prehľadov.
 
 ### <a name="set-up-powershell"></a>Nastavte PowerShell
 
-Ak chcete spustiť skripty PowerShell, musíte najprv zodpovedajúcim spôsobom nastaviť PowerShell.
+Nastavte PowerShell na spúšťanie skriptov PowerShell.
 
 1. Nainštalujte najnovšiu verziu [Azure Active Directory PowerShell pre Graph](/powershell/azure/active-directory/install-adv2).
    1. Na počítači stlačte kláves Windows a nájdite **Windows PowerShell** a vyberte **Spustiť ako správca**.
    1. Do okna PowerShell, ktoré sa otvorí, zadajte výraz `Install-Module AzureAD`.
-2. Importujte tri moduly.
-    1. V okne PowerShell zadajte`Install-Module -Name Az.Accounts` a postupujte podľa krokov.
-    1. Opakujte pre`Install-Module -Name Az.Resources` a `Install-Module -Name Az.Storage`.
 
-### <a name="configuration-steps"></a>Kroky konfigurácie
+1. Importujte tri moduly.
+   1. V okne PowerShell zadajte`Install-Module -Name Az.Accounts` a postupujte podľa krokov.
+   1. Opakujte pre`Install-Module -Name Az.Resources` a `Install-Module -Name Az.Storage`.
+
+### <a name="execute-powershell-scripts-and-obtain-the-permission-identifier"></a>Spustite skripty PowerShell a získajte identifikátor povolenia
 
 1. Stiahnite si dva skripty PowerShell, ktoré potrebujete na spustenie, z nášho inžiniera [Úložisko GitHub](https://github.com/trin-msft/byol).
-    1. `CreateSecurityGroups.ps1`
-       - Potrebuješ *správca nájomcu* povolenia na spustenie tohto skriptu PowerShell.
-       - Tento skript PowerShell vytvorí dve skupiny zabezpečenia vo vašom predplatnom Azure. Jeden pre skupinu Reader a druhý pre skupinu Contributor and will make Microsoft Dataverse ako vlastník pre obe tieto bezpečnostné skupiny.
-       - Spustite tento skript PowerShell v prostredí Windows PowerShell zadaním ID predplatného Azure, ktoré obsahuje vaše Azure Data Lake Storage. Otvorte skript PowerShell v editore a pozrite si ďalšie informácie a implementovanú logiku.
-       - Uložte obe hodnoty ID bezpečnostnej skupiny vygenerované týmto skriptom, pretože ich použijeme v`ByolSetup.ps1` skript.
+   - `CreateSecurityGroups.ps1`: Vyžaduje oprávnenia správcu nájomníka.
+   - `ByolSetup.ps1`: Vyžaduje povolenia vlastníka údajov objektu Storage Blob na úrovni účtu úložiska/kontajnera. Tento skript vytvorí povolenie za vás. Po úspešnom spustení skriptu je možné priradenie vašej role manuálne odstrániť.
 
-        > [!NOTE]
-        > Vytvorenie skupiny zabezpečenia môže byť vo vašom nájomníkovi zakázané. V takom prípade by bolo potrebné manuálne nastavenie a vaše Azure AD admin by musel [povoliť vytvorenie bezpečnostnej skupiny](/azure/active-directory/enterprise-users/groups-self-service-management).
+1. Vykonať`CreateSecurityGroups.ps1` v prostredí Windows PowerShell poskytnutím ID predplatného Azure, ktoré obsahuje vaše Azure Data Lake Storage. Otvorte skript PowerShell v editore a pozrite si ďalšie informácie a implementovanú logiku.
 
-    2. `ByolSetup.ps1`
-        - Potrebuješ *Vlastník údajov objektu Storage Blob* oprávnenia na úrovni účtu úložiska/kontajnera na spustenie tohto skriptu alebo tento skript vytvorí jeden za vás. Po úspešnom spustení skriptu je možné priradenie vašej role manuálne odstrániť.
-        - Tento skript PowerShell pridáva požadované riadenie prístupu na základe rolí pre Microsoft Dataverse servis a akékoľvek Dataverse podnikové aplikácie. Aktualizuje tiež zoznam riadenia prístupu (ACL) v kontajneri CustomerInsights pre skupiny zabezpečenia vytvorené pomocou`CreateSecurityGroups.ps1` skript. Skupina prispievateľov bude mať *rwx* a skupina čitateľov bude mať *rx* iba povolenie.
-        - Spustite tento skript PowerShell v prostredí Windows PowerShell zadaním ID predplatného Azure, ktoré obsahuje vaše Azure Data Lake Storage, názov účtu úložiska, názov skupiny prostriedkov a hodnoty ID bezpečnostnej skupiny Reader a Contributor. Otvorte skript PowerShell v editore a pozrite si ďalšie informácie a implementovanú logiku.
-        - Po úspešnom spustení skriptu skopírujte výstupný reťazec. Výstupný reťazec vyzerá takto:`https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+   Tento skript vytvorí dve skupiny zabezpečenia vo vašom predplatnom Azure: jednu pre skupinu Reader a druhú pre skupinu Contributor. Microsoft Dataverse služba je vlastníkom oboch týchto bezpečnostných skupín.
 
-2. Zadajte výstupný reťazec skopírovaný zhora do **Identifikátor povolení** poľa kroku konfigurácie prostredia pre Microsoft Dataverse.
+1. Uložte obe hodnoty ID bezpečnostnej skupiny vygenerované týmto skriptom na použitie v`ByolSetup.ps1` skript.
 
-:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Možnosti konfigurácie umožňujúce zdieľanie údajov z vašich vlastných Azure Data Lake Storage s Microsoft Dataverse .":::
+   > [!NOTE]
+   > Vytvorenie skupiny zabezpečenia je možné vo vašom nájomníkovi zakázať. V takom prípade by bolo potrebné manuálne nastavenie a vaše Azure AD admin by musel [povoliť vytvorenie bezpečnostnej skupiny](/azure/active-directory/enterprise-users/groups-self-service-management).
 
-### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Odstráňte existujúce pripojenie k a Dataverse životné prostredie
+1. Vykonať`ByolSetup.ps1` v prostredí Windows PowerShell poskytnutím ID predplatného Azure, ktoré obsahuje vaše Azure Data Lake Storage, názov účtu úložiska, názov skupiny prostriedkov a hodnoty ID bezpečnostnej skupiny Reader a Contributor. Otvorte skript PowerShell v editore a pozrite si ďalšie informácie a implementovanú logiku.
+
+   Tento skript pridáva požadované riadenie prístupu na základe rolí pre Microsoft Dataverse servis a akékoľvek Dataverse podnikové aplikácie. Aktualizuje tiež zoznam riadenia prístupu (ACL) na`customerinsights` kontajner pre bezpečnostné skupiny vytvorené pomocou`CreateSecurityGroups.ps1` skript. Skupina prispievateľov je uvedená *rwx* je udelené povolenie a skupina čitateľov *rx* iba povolenie.
+
+1. Skopírujte výstupný reťazec, ktorý vyzerá takto:`https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+
+1. Zadajte skopírovaný výstupný reťazec do **Identifikátor povolení** poľa kroku konfigurácie prostredia pre Microsoft Dataverse.
+
+   :::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Možnosti konfigurácie umožňujúce zdieľanie údajov z vašich vlastných Azure Data Lake Storage s Microsoft Dataverse .":::
+
+## <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Odstráňte existujúce pripojenie k a Dataverse životné prostredie
 
 Pri pripájaní k a Dataverse prostredia, chybové hlásenie **Táto organizácia CDS je už pripojená k inej inštancii Customer Insights** znamená, že Dataverse sa už používa v prostredí Customer Insights. Existujúce pripojenie môžete odstrániť ako globálny správca na Dataverse životné prostredie. Vyplnenie zmien môže trvať niekoľko hodín.
 
 1. Prejdite do systému [Power Apps](https://make.powerapps.com).
 1. Vyberte prostredie z výberu prostredia.
-1. Ísť do **Riešenia**
+1. Ísť do **Riešenia**.
 1. Odinštalujte alebo odstráňte pomenované riešenie **Dynamics 365 Customer Insights Doplnok zákazníckej karty (ukážka)**.
 
 OR
@@ -155,16 +165,16 @@ Tabuľka AlternateKey obsahuje kľúče entít, ktoré sa zúčastnili procesu z
 
 Táto tabuľka obsahuje aktivity používateľov, ktoré sú k dispozícii v Customer Insights.
 
-| Column            | Zadať        | Popis                                                                              |
+| Column            | Type        | Description                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
 | ID zákazníka        | String      | ID profilu zákazníka                                                                      |
 | ActivityId        | String      | Interné ID aktivity zákazníka (primárny kľúč)                                       |
 | SourceEntityName  | String      | Názov zdrojovej entity                                                                |
 | SourceActivityId  | String      | Primárny kľúč zo zdrojovej entity                                                       |
 | ActivityType      | String      | Typ sémantickej aktivity alebo názov vlastnej aktivity                                        |
-| ActivityTimeStamp | DATETIME    | Časová pečiatka aktivity                                                                      |
-| Nadpis             | String      | Titul alebo názov aktivity                                                               |
-| Popis       | String      | Opis aktivity                                                                     |
+| ActivityTimeStamp | DATETIME    | Časová známka aktivity                                                                      |
+| Title             | String      | Titul alebo názov aktivity                                                               |
+| Description       | String      | Opis aktivity                                                                     |
 | Adresa URL               | String      | Odkaz na externú adresu URL špecifickú pre danú aktivitu                                         |
 | SemanticData      | Reťazec JSON | Zahŕňa zoznam párov kľúč/hodnota pre polia sémantického mapovania špecifické pre typ aktivity |
 | RangeIndex        | String      | Unixová časová pečiatka používaná na triedenie časovej osi aktivity a dotazov na efektívny rozsah |
@@ -199,7 +209,7 @@ Táto tabuľka obsahuje výstup z procesu obohacovania.
 
 Táto tabuľka obsahuje výstup predikcií modelu.
 
-| Column               | Zadať        | Popis                                          |
+| Column               | Type        | Description                                          |
 |----------------------|-------------|------------------------------------------------------|
 | ID zákazníka           | String      | ID profilu zákazníka                                  |
 | ModelProvider        | String      | Názov poskytovateľa modelu                                      |
@@ -216,38 +226,10 @@ Táto tabuľka obsahuje informácie o členstve v segmentoch profilov zákazník
 |--------------------|--------------|-----------------------------|
 | ID zákazníka        | String       | ID profilu zákazníka        |
 | SegmentProvider      | String       | Aplikácia, ktorá zverejňuje segmenty.      |
-| Typ členstva v segmente | String       | Typ záznamu členstva v tomto segmente zákazníka. Podporuje viacero typov, ako napríklad Zákazník, Kontakt alebo Účet. Predvolené: Zákazník  |
+| Typ členstva v segmente | String       | Typ zákazníka pre tento záznam členstva v segmente. Podporuje viacero typov, ako napríklad Zákazník, Kontakt alebo Účet. Predvolené: Zákazník  |
 | Segmenty       | Reťazec JSON  | Zoznam jedinečných segmentov, ktorých členom je profil zákazníka      |
 | msdynci_identifier  | String   | Jedinečný identifikátor záznamu členstva v segmente. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministický GUID generovaný z`msdynci_identifier`          |
+| msdynci_segmentmembershipid | GUID      | Deterministické GUID generované z`msdynci_identifier`          |
 
-<!--
-## FAQ: Update existing environments to use Microsoft Dataverse
 
-Between mid-May 2022 and June 13, 2022, administrators can update the environment settings with a Dataverse environment that Customer Insights can use. On June 13, 2022, your environment will be updated automatically and we'll create a Dataverse environment on your tenant for you.
-
-1. My environment uses my own Azure Data Lake Storage account. Do I still need to update?
-
-   If there's already a Dataverse environment configured in your environment, the update isn't required. If no Dataverse is environment configured, the **Update now** button will create a Dataverse environment and update from the Customer Insights database to a Dataverse database.
-
-1. Will we get extra Dataverse capacity, or will the update use my existing Dataverse capacity?
-
-   - If there's already a Dataverse environment configured in your Customer Insights environment, or connected with other Dynamics 365 or Power Apps applications, the capacity remains unchanged.
-   - If the Dataverse environment is new, it will add new storage and database capacity. The capacity added varies per environment and entitlements. You'll get 3 GB for trial and sandbox environment. Production environments get 15 GB.
-
-1. I proceeded with the update and it seems like nothing happened. Is the update complete?
-
-   If the notification in Customer Insights doesn't show anymore, the update is complete. You can check the status of the update by reviewing your environment settings.
-
-1. Why do I still see the banner after completing the update steps?
-
-   It can happen due to an upgrade or refresh failure. Contact support.
-
-1. I received a "Failed to provision Dataverse environment" error after starting the update. What happened?
-
-   It can happen due to an upgrade or refresh failure. Contact support.
-   Common causes:
-    - Insufficient capacity. There's no more capacity to create more environments. For more information, see [Manage capacity action](/power-platform/admin/capacity-storage#actions-to-take-for-a-storage-capacity-deficit).
-    - Region mismatch between tenant region and Customer Insights environment region in the Australia and India regions.
-    - Insufficient privileges to provision Dataverse. The users starting the update needs a Dynamics 365 admin role.
-    - -->
+[!INCLUDE [footer-include](includes/footer-banner.md)]

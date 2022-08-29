@@ -2,7 +2,7 @@
 title: Zjednoťte zákaznícke polia pre zjednotenie údajov
 description: Zlučujte entity na účely vytvorenia jednotných profilov zákazníkov.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213601"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304032"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Zjednoťte zákaznícke polia pre zjednotenie údajov
+# <a name="unify-customer-fields"></a>Zjednotiť zákaznícke polia
 
-V tomto kroku procesu zjednotenia vyberte a vylúčte atribúty, ktoré sa majú zlúčiť v rámci entity zjednoteného profilu. Napríklad, ak tri entity mali e-mailové údaje, možno budete chcieť ponechať všetky tri samostatné e-mailové polia alebo ich zlúčiť do jedného e-mailového poľa pre zjednotený profil. Niektoré atribúty systém automaticky kombinuje. Môžete vytvoriť stabilné a jedinečné ID zákazníkov a zoskupiť súvisiace profily do klastra.
+V tomto kroku procesu zjednotenia vyberte a vylúčte atribúty, ktoré sa majú zlúčiť v rámci entity zjednoteného profilu. Napríklad, ak tri entity mali e-mailové údaje, možno budete chcieť ponechať všetky tri samostatné e-mailové polia alebo ich zlúčiť do jedného e-mailového poľa pre zjednotený profil. Niektoré atribúty systém automaticky kombinuje. Môžete vytvoriť stabilné a jedinečné ID zákazníkov. Pre jednotlivých zákazníkov môžete zoskupiť súvisiace profily do klastra.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Stránka zlúčenia v procese zjednotenia údajov zobrazujúca tabuľku so zlúčenými poľami, ktoré definujú zjednotený profil zákazníka.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Stránka Zjednotiť polia zákazníka v procese zjednotenia údajov zobrazuje tabuľku so zlúčenými poľami, ktoré definujú zjednotený profil zákazníka.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Skontrolujte a aktualizujte polia zákazníkov
 
@@ -47,7 +47,7 @@ V tomto kroku procesu zjednotenia vyberte a vylúčte atribúty, ktoré sa majú
 
 1. voliteľne [vygenerovať konfiguráciu ID zákazníka](#configure-customer-id-generation).
 
-1. voliteľne [skupinové profily do domácností alebo klastrov](#group-profiles-into-households-or-clusters).
+1. Voliteľne pre B-to-C, [skupinové profily do domácností alebo klastrov](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Ďalší krok: Skontrolujte zjednotenie](review-unification.md)
@@ -161,7 +161,7 @@ Konfiguráciou stabilného ID zákazníka sa vyhnete takémuto správaniu.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Zoskupte profily do domácností alebo klastrov
 
-Môžete definovať pravidlá na zoskupenie súvisiacich profilov do klastra. V súčasnosti sú k dispozícii dva typy klastrov – domácnosti a vlastné klastre. Systém automaticky vyberie domácnosť s preddefinovanými pravidlami, ak entita *Zákazník* obsahuje sémantické polia *Person.LastName* a *Location.Address*. Môžete tiež vytvoriť klaster s vlastnými pravidlami a podmienkami podobný [pravidlám zhody](match-entities.md#define-rules-for-match-pairs).
+Pre jednotlivých zákazníkov môžete definovať pravidlá na zoskupenie súvisiacich profilov do klastra. V súčasnosti sú k dispozícii dva typy klastrov – domácnosti a vlastné klastre. Systém automaticky vyberie domácnosť s preddefinovanými pravidlami, ak entita *Zákazník* obsahuje sémantické polia *Person.LastName* a *Location.Address*. Môžete tiež vytvoriť klaster s vlastnými pravidlami a podmienkami podobný [pravidlám zhody](match-entities.md#define-rules-for-match-pairs).
 
 1. Vyberte **Pokročilé** > **Vytvorte klaster**.
 

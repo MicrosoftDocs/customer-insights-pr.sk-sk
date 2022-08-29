@@ -1,7 +1,7 @@
 ---
 title: Prehľad exportov (verzia Preview)
 description: Spravujte exporty do zdieľania údajov.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245346"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304078"
 ---
 # <a name="exports-preview-overview"></a>Prehľad exportov (verzia Preview)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245346"
 
 Existujú dva hlavné typy exportov:  
 
-- **Export dát** : exportovať akýkoľvek typ entity dostupnej v Customer Insights. Entity, ktoré vyberiete na export, sa exportujú so všetkými údajovými poľami, metadátami, schémami a podrobnosťami mapovania.
-- **Segmentové exporty** : export entít segmentu z Customer Insights. Segmenty predstavujú zoznam profilov zákazníkov. Pri konfigurácii exportu vyberáte zahrnuté dátové polia v závislosti od cieľového systému, do ktorého exportujete dáta.
+- **Export dát** vám umožní exportovať akýkoľvek typ entity dostupnej v Customer Insights. Entity, ktoré vyberiete na export, sa exportujú so všetkými údajovými poľami, metadátami, schémami a podrobnosťami mapovania.
+- **Segmentové exporty** vám umožní exportovať entity segmentov z Customer Insights. Pre individuálnych spotrebiteľov (B-to-C) predstavujú segmenty zoznam zákazníckych profilov. Pre firmy (B-to-B), [segmenty môžu predstavovať zoznam účtov alebo kontaktov](segment-builder.md#create-a-new-segment-with-segment-builder). Pri konfigurácii exportu vyberáte zahrnuté dátové polia v závislosti od cieľového systému, do ktorého exportujete dáta.
 
 ### <a name="export-segments"></a>Segmenty exportu
 
@@ -38,14 +38,15 @@ Väčšina možností exportu podporuje oba typy prostredí. Export segmentov do
 **Exporty segmentov v prostrediach pre jednotlivých spotrebiteľov (firma a spotrebiteľ)**  
 - Segmenty v kontexte prostredí pre jednotlivých zákazníkov sú založené na entite *zjednotený profil zákazníka*. Exportovať je možné každý segment, ktorý spĺňa požiadavky cieľových systémov (napríklad e -mailová adresa).
 
-**Prostredia exportu segmentov pre firemné obchodné vzťahy (firma a firma)**  
-- Segmenty v kontexte prostredí pre firemné obchodné vzťahy sú založené na entite *obchodný vzťah*. Na export segmentov obchodného vzťahu tak, ako sú, musí cieľový systém podporovať čisté segmenty obchodných vzťahov. To je prípad [LinkedIn](export-linkedin-ads.md), keď si vyberiete možnosť **spoločnosť** pri definovaní exportu.
-- Všetky ostatné cieľové systémy vyžadujú polia od entity kontaktu. Aby ste zaistili, že segmenty obchodného vzťahu môžu získavať údaje zo súvisiacich kontaktov, definícia vášho segmentu musí premietať atribúty entity kontaktu. Prečítajte si viac o tom, ako [konfigurovať segmenty a atribúty projektu](segment-builder.md).
+**Segmentovať exporty v prostrediach pre obchodné účty (B-to-B)**  
+- Segmenty v kontexte prostredí pre obchodné účty sú postavené na *účtu* subjekt alebo *kontakt* subjekt. Na export segmentov obchodného vzťahu tak, ako sú, musí cieľový systém podporovať čisté segmenty obchodných vzťahov. To je prípad [LinkedIn](export-linkedin-ads.md), keď si vyberiete možnosť **spoločnosť** pri definovaní exportu.
+- Všetky ostatné cieľové systémy vyžadujú polia od entity kontaktu.
+- S dvomi typmi segmentov (kontakty a účty) Customer Insights automaticky identifikuje, ktorý typ segmentov je vhodný na export na základe cieľového systému. Napríklad pre cieľový systém zameraný na kontakt, ako je Mailchimp, vám Customer Insights umožňuje vybrať segmenty kontaktov na export.
 
 **Limity exportu segmentov**  
 - Cieľové systémy tretích strán môžu obmedziť počet zákazníckych profilov, ktoré môžete exportovať. 
 - Pri individuálnych zákazníkoch uvidíte skutočný počet členov segmentu, keď vyberiete segment na export. Ak je segment príliš veľký, zobrazí sa upozornenie. 
-- Pri firemných obchodných vzťahoch uvidíte počet obchodných vzťahov v segmente; počet kontaktov, ktoré je možné projektovať, sa však nezobrazí. V niektorých prípadoch to môže viesť k tomu, že exportovaný segment skutočne obsahuje viac profilov zákazníkov, ako cieľový systém akceptuje. Ak sú prekročené limity cieľového systému, export sa preskočí.
+- V prípade firemných účtov uvidíte počet účtov alebo kontaktov v závislosti od segmentu. Ak je segment príliš veľký, dostanete varovanie. Prekročenie limitov výsledkov cieľových systémov preskočí export.
 
 ## <a name="set-up-a-new-export"></a>Nastavenie nového exportu
 
@@ -110,6 +111,20 @@ Ak chcete exportovať údaje bez čakania na plánované obnovenie, prejdite na 
 
 - Ak chcete spustiť všetky exporty, stlačte možnosť **Spustiť všetko** na paneli príkazov. Spustia sa iba exporty, ktoré majú aktívny plán. Ak chcete spustiť export, ktorý nie je aktívny, spustite jeden export.
 - Ak chcete spustiť jeden export, vyberte ho v zozname a vyberte **Spustiť** na paneli príkazov.
+
+## <a name="troubleshooting"></a>Riešenie problémov
+
+### <a name="segment-not-eligible-for-export"></a>Segment nie je vhodný na export
+
+**Problém** V prostredí obchodných účtov vaše exporty zlyhávajú s chybovým hlásením: „Nasledujúci segment nie je vhodný pre tento exportný cieľ:“{ názov segmentu} '. Vyberte len segmenty typu ContactProfile a skúste to znova."
+
+**Rozhodnutie** Prostredia Customer Insights pre firemné účty boli aktualizované, aby okrem segmentov účtov podporovali aj segmenty kontaktov. V dôsledku tejto zmeny exporty vyžadujúce kontaktné údaje fungujú iba so segmentmi založenými na kontaktoch.
+
+1. [Vytvorte segment založený na kontaktoch](segment-builder.md) ktorý sa zhoduje s predtým použitým segmentom.
+
+1. Po spustení segmentu kontaktu upravte príslušný export a vyberte nový segment.
+
+1. Vyberte **Uložiť** pre uloženie konfigurácie resp **Uložiť a spustiť** tento export ihneď otestovať.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

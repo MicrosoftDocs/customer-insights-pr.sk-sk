@@ -76,6 +76,8 @@
       href: merge-entities.md
     - name: Skontrolujte zjednotenie údajov
       href: review-unification.md
+    - name: Vytvorte si jednotný profil kontaktu
+      href: data-unification-contacts.md
     - name: Aktualizujte nastavenia zjednotenia
       href: data-unification-update.md
 - name: Obohatenie údajov
