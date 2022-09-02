@@ -11,40 +11,40 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245944"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352820"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Exportovať diagnostické denníky (ukážka)
 
-Preposielajte denníky zo Customer Insights pomocou Azure Monitor. Protokoly prostriedkov Azure Monitor vám umožňujú monitorovať a odosielať protokoly [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) alebo ich streamujte na [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
+Preposielajte denníky zo Customer Insights pomocou Azure Monitor. Protokoly prostriedkov Azure Monitor vám umožňujú monitorovať a odosielať protokoly [Azure Storage](https://azure.microsoft.com/services/storage/) ,[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) alebo ich streamujte na [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights odosiela nasledujúce protokoly udalostí:
 
 - **Udalosti auditu**
   - **APIEvent** - umožňuje sledovanie zmien cez Dynamics 365 Customer Insights UI.
 - **Prevádzkové udalosti**
-  - **WorkflowEvent** - umožňuje nastaviť [zdroje dát](data-sources.md),[zjednotiť](data-unification.md),[obohatiť](enrichment-hub.md), a [export](export-destinations.md) údaje do iných systémov. Tieto kroky je možné vykonať individuálne (napríklad spustiť jeden export). Môžu tiež bežať organizovane (napríklad obnovovanie údajov zo zdrojov údajov, ktoré spúšťajú proces zjednotenia, ktorý zavedie obohatenia a exportuje údaje do iného systému). Viac informácií nájdete na [WorkflowEvent Schema](#workflow-event-schema).
-  - **APIEvent** - odosiela všetky volania API inštancie zákazníkov Dynamics 365 Customer Insights. Viac informácií nájdete na [Schéma APIEvent](#api-event-schema).
+  - **WorkflowEvent** - umožňuje nastaviť [zdroje dát](data-sources.md) ,[zjednotiť](data-unification.md) ,[obohatiť](enrichment-hub.md) , a [export](export-destinations.md) údaje do iných systémov. Tieto kroky je možné vykonať individuálne (napríklad spustiť jeden export). Môžu tiež bežať organizovane (napríklad obnovovanie údajov zo zdrojov údajov, ktoré spúšťajú proces zjednotenia, ktorý zavedie obohatenia a exportuje údaje do iného systému). Viac informácií nájdete na [WorkflowEvent Schema](#workflow-event-schema) .
+  - **APIEvent** - odosiela všetky volania API inštancie zákazníkov Dynamics 365 Customer Insights . Viac informácií nájdete na [Schéma APIEvent](#api-event-schema) .
 
 ## <a name="set-up-the-diagnostic-settings"></a>Nastavte diagnostické nastavenia
 
 ### <a name="prerequisites"></a>Požiadavky
 
-- Aktívny [Azure predplatné](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- Aktívny [Azure predplatné](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) .
 - [správca](permissions.md#admin) povolenia v Customer Insights.
+- Platný zdroj v Azure, ktorý nasleduje po [požiadavky na destináciu](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pre Azure Storage, Azure Event Hub alebo Azure Log Analytics.
 - [Rola prispievateľa a správcu prístupu používateľov](/azure/role-based-access-control/role-assignments-portal) na cieľovom prostriedku v Azure. Zdrojom môže byť Azure Data Lake Storage účet, centrum udalostí Azure alebo pracovný priestor Azure Log Analytics. Toto povolenie je potrebné pri konfigurácii diagnostických nastavení v Customer Insights, ale po úspešnom nastavení ho možno zmeniť.
-- [Požiadavky na destináciu](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pre Azure Storage, Azure Event Hub alebo Azure Log Analytics sú splnené.
 - Aspoň ten **Čitateľ** rolu v skupine prostriedkov, do ktorej prostriedok patrí.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Nastavte diagnostiku pomocou Azure Monitor
 
 1. V Customer Insights prejdite na **Admin** > **Systém** a vyberte **Diagnostika** tab.
 
-1. Vyberte **Pridať cieľ**.
+1. Vyberte **Pridať cieľ** .
 
    :::image type="content" source="media/diagnostics-pane.png" alt-text="Diagnostické pripojenie.":::
 
@@ -54,7 +54,7 @@ Customer Insights odosiela nasledujúce protokoly udalostí:
 
 1. Vyberte **Predplatné**, **zdrojov**, a **Zdroj** pre cieľový zdroj. Pozri [Konfigurácia na cieľovom zdroji](#configuration-on-the-destination-resource) informácie o povolení a protokole.
 
-1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím** .
 
 1. Vyberte **Pripojte sa k systému** na pripojenie k cieľovému zdroju. Protokoly sa začnú objavovať v cieli po 15 minútach, ak sa API používa a generuje udalosti.
 
@@ -71,7 +71,7 @@ Riaditeľ služby Customer Insights dostane **Prispievateľ účtu úložiska** 
 
 ### <a name="event-hub"></a>Centrum udalostí
 
-Riaditeľ služby Customer Insights dostane **Vlastník údajov Azure Event Hubs** povolenie na zdroj a vytvorí dva Event Hubs pod vybratým menným priestorom:
+Riaditeľ služby Customer Insights dostane **Vlastník údajov Azure Event Hubs** povolenie na zdroj a vytvorí dve centrá udalostí pod vybratým priestorom názvov:
 
 - `insight-logs-audit` obsahujúce **auditové udalosti**
 - `insight-logs-operational` obsahujúce **prevádzkové udalosti**
@@ -83,7 +83,7 @@ Riaditeľ služby Customer Insights dostane **Log Analytics Contributor** povole
 - `CIEventsAudit` obsahujúce **auditové udalosti**
 - `CIEventsOperational` obsahujúce **prevádzkové udalosti**
 
-Pod **Dotazy** okno, rozbaľte **Audit** riešenie a nájdite príklady dotazov poskytnutých vyhľadávaním `CIEvents`.
+Pod **Dotazy** okno, rozbaľte **Audit** riešenie a nájdite príklady dotazov poskytnutých vyhľadávaním`CIEvents` .
 
 ## <a name="remove-a-diagnostics-destination"></a>Odstráňte diagnostický cieľ
 
@@ -101,7 +101,7 @@ Pod **Dotazy** okno, rozbaľte **Audit** riešenie a nájdite príklady dotazov 
 ## <a name="log-categories-and-event-schemas"></a>Kategórie denníkov a schémy udalostí
 
 V súčasnosti [Udalosti API](apis.md) a udalosti pracovného toku sú podporované a platia nasledujúce kategórie a schémy.
-Logová schéma nasleduje [Bežná schéma Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
+Logová schéma nasleduje [Bežná schéma Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema) .
 
 ### <a name="categories"></a>Kategórie
 
@@ -112,7 +112,7 @@ Customer Insights poskytuje dve kategórie:
 
 ## <a name="event-schemas"></a>Schémy udalostí
 
-Udalosti API a udalosti pracovného toku majú spoločnú štruktúru, no s niekoľkými rozdielmi. Viac informácií nájdete v časti [Schéma udalosti API](#api-event-schema) alebo [schéma udalosti pracovného toku](#workflow-event-schema).
+Udalosti API a udalosti pracovného toku majú spoločnú štruktúru, no s niekoľkými rozdielmi. Viac informácií nájdete v časti [Schéma udalosti API](#api-event-schema) alebo [schéma udalosti pracovného toku](#workflow-event-schema) .
 
 ### <a name="api-event-schema"></a>Schéma udalosti API
 
@@ -121,14 +121,14 @@ Udalosti API a udalosti pracovného toku majú spoločnú štruktúru, no s niek
 | `time`            | Časová pečiatka | Požaduje sa          | Časová pečiatka udalosti (UTC)       | `2020-09-08T09:48:14.8050869Z`         |
 | `resourceId`      | String    | Požaduje sa          | ResourceId inštancie, ktorá vyvolala udalosť         | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX`  |
 | `operationName`   | String    | Požaduje sa          | Názov operácie reprezentovanej touto udalosťou.                                                                                                                | `Workflows.GetWorkFlowStatusAsync`                                                                                                                                       |
-| `category`        | String    | Požaduje sa          | Kategória denníka udalosti. Zdroj môže byť buď `Operational`, alebo `Audit`. Všetky POST/PUT/PATCH/DELETE HTTP požiadavky sú označené`Audit`, všetko ostatné s`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
-| `resultType`      | String    | Požaduje sa          | Stav udalosti. `Success`,`ClientError`,`Failure`                                                                                                        |                                                                                                                                                                          |
+| `category`        | String    | Požaduje sa          | Kategória denníka udalosti. Zdroj môže byť buď `Operational`, alebo `Audit`. Všetky POST/PUT/PATCH/DELETE HTTP požiadavky sú označené`Audit` , všetko ostatné s`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
+| `resultType`      | String    | Požaduje sa          | Stav udalosti. `Success`,`ClientError` ,`Failure`                                                                                                        |                                                                                                                                                                          |
 | `resultSignature` | String    | Voliteľné          | Stav výsledku udalosti. Ak operácia zodpovedá volaniu Rozhranie REST API, je to stavový kód HTTP.        | `200`             |
 | `durationMs`      | Long      | Voliteľné          | Trvanie operácie v milisekundách.     | `133`     |
 | `callerIpAddress` | String    | Voliteľné          | IP adresa volajúceho, ak operácia zodpovedá volaniu API, ktoré prichádza z verejne dostupnej IP adresy.                                                 | `144.318.99.233`         |
 | `identity`        | String    | Voliteľné          | Objekt JSON popisujúci identitu používateľa alebo aplikácie, ktorá vykonala operáciu.       | Pozri [Identita](#identity-schema) oddiele.     |  
 | `properties`      | String    | Voliteľné          | Objekt JSON s viacerými vlastnosťami pre konkrétnu kategóriu udalostí.      | Pozri [Vlastnosti](#api-properties-schema) oddiele.    |
-| `level`           | String    | Požaduje sa          | Úroveň závažnosti udalosti.    | `Informational`,`Warning`,`Error`, alebo `Critical`.           |
+| `level`           | String    | Požaduje sa          | Úroveň závažnosti udalosti.    | `Informational`,`Warning` ,`Error` , alebo`Critical` .           |
 | `uri`             | String    | Voliteľné          | Absolútny identifikátor URI požiadavky.    |               |
 
 #### <a name="identity-schema"></a>Schéma identity
@@ -153,7 +153,7 @@ The`identity` Objekt JSON má nasledujúcu štruktúru
 
 | Pole                         | Description                                                                                                                          |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `Authorization.UserRole`      | Priradená rola používateľovi alebo aplikácii. Viac informácií nájdete v časti [používateľské oprávnenia](permissions.md).                                     |
+| `Authorization.UserRole`      | Priradená rola používateľovi alebo aplikácii. Viac informácií nájdete v časti [používateľské oprávnenia](permissions.md) .                                     |
 | `Authorization.RequiredRoles` | Požadované roly na vykonanie operácie. `Admin` rola môže vykonávať všetky operácie.                                                    |
 | `Claims`                      | Nároky webového tokenu JSON (JWT) používateľa alebo aplikácie. Vlastnosti nároku sa líšia v závislosti od organizácie a organizácie Azure Active Directory konfigurácia. |
 
@@ -163,12 +163,12 @@ The`identity` Objekt JSON má nasledujúcu štruktúru
 
 | Pole                        | Description                                                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `properties.eventType`       | Vždy`ApiEvent`, pričom udalosť protokolu sa označí ako udalosť rozhrania API.                                                                 |
-| `properties.userAgent`       | Agent prehliadača odosielajúci požiadavku resp `unknown`.                                                                        |
-| `properties.method`          | HTTP metóda:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
+| `properties.eventType`       | Vždy`ApiEvent` , pričom udalosť protokolu sa označí ako udalosť rozhrania API.                                                                 |
+| `properties.userAgent`       | Agent prehliadača odosielajúci požiadavku resp`unknown` .                                                                        |
+| `properties.method`          | HTTP metóda:`GET/POST/PUT/PATCH/HEAD` .                                                                                |
 | `properties.path`            | Relatívna cesta žiadosti.                                                                                          |
-| `properties.origin`          | URI označujúce, odkiaľ pochádza načítanie alebo `unknown`.                                                                  |
-| `properties.operationStatus` | `Success` pre stavový kód HTTP < 400 <br> `ClientError` pre stavový kód HTTP < 500 <br> `Error` pre stav HTTP >= 500 |
+| `properties.origin`          | URI označujúce, odkiaľ pochádza načítanie alebo`unknown` .                                                                  |
+| `properties.operationStatus` | `Success` for HTTP Status code < 400 <br> `ClientError` for HTTP Status code < 500 <br> `Error` pre stav HTTP >= 500 |
 | `properties.tenantId`        | Identifikátor organizácie                                                                                                        |
 | `properties.tenantName`      | Názov organizácie.                                                                                              |
 | `properties.callerObjectId`  | Azure Active Directory ObjectId volajúceho.                                                                         |

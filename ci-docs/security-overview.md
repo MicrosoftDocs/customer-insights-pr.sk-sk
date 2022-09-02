@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246081"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387277"
 ---
 # <a name="configure-security-settings"></a>Nakonfigurujte nastavenia zabezpečenia
 
@@ -23,7 +23,7 @@ Spravujte kľúče API, pristupujte k údajom zákazníkov a nastavte súkromné
 
 Zobrazte a spravujte kľúče na použitie [Rozhrania API Customer Insights](apis.md) s údajmi vo vašom prostredí.
 
-1. Ísť do **Systém** > **Bezpečnosť** a vyberte **API** tab.
+1. Ísť do **Admin** > **Bezpečnosť** a vyberte **API** tab.
 
 1. Ak nebol nastavený prístup API k prostrediu, vyberte **Povoliť**. Alebo ak chcete zablokovať prístup API k prostrediu, vyberte **Zakázať** a potvrďte.
 
@@ -37,7 +37,7 @@ Zobrazte a spravujte kľúče na použitie [Rozhrania API Customer Insights](api
 
 ## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Bezpečný prístup k zákazníckym údajom pomocou Customer Lockbox (ukážka)
 
-Customer Insights používa Power Platform Možnosť zákazníckeho uzamykacieho boxu. Customer Lockbox poskytuje rozhranie na kontrolu a schválenie (alebo odmietnutie) žiadostí o prístup k údajom. Tieto požiadavky sa vyskytujú, keď je potrebný prístup k údajom o zákazníckych údajoch na vyriešenie prípadu podpory. Ak chcete použiť túto funkciu, Customer Insights musí mať existujúce pripojenie k a Microsoft Dataverse prostredia vo vašom nájomcovi.
+Customer Insights používa Power Platform Možnosť zákazníckeho uzamykacieho boxu. Customer Lockbox poskytuje rozhranie na kontrolu a schvaľovanie (alebo odmietanie) žiadostí o prístup k údajom. Tieto požiadavky sa vyskytujú, keď je potrebný prístup k údajom o zákazníckych údajoch na vyriešenie prípadu podpory. Ak chcete použiť túto funkciu, Customer Insights musí mať existujúce pripojenie k a Microsoft Dataverse prostredia vo vašom nájomcovi.
 
 Ďalšie informácie o Customer Lockbox nájdete na [zhrnutie](/power-platform/admin/about-lockbox#summary) z Power Platform Zákaznícka skrinka. Článok tiež popisuje [pracovný tok](/power-platform/admin/about-lockbox#workflow) a požadované [nastaviť](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) aby ste povolili Customer Lockbox.
 
@@ -46,7 +46,7 @@ Customer Insights používa Power Platform Možnosť zákazníckeho uzamykacieho
 
 ## <a name="set-up-an-azure-private-link"></a>Nastavte súkromné prepojenie Azure
 
-[Súkromný odkaz Azure](/azure/private-link/private-link-overview) prepojme Customer Insights s vašou Azure Data Lake Storage účtu cez súkromný koncový bod vo vašej virtuálnej sieti. Pre údaje v účte úložiska, ktorý nie je vystavený verejnému internetu, umožňuje Súkromné prepojenie pripojenie k tejto obmedzenej sieti.
+[Súkromný odkaz Azure](/azure/private-link/private-link-overview) prepojme Customer Insights s vašou Azure Data Lake Storage účtu cez súkromný koncový bod vo vašej virtuálnej sieti. Pre údaje v účte úložiska, ktorý nie je vystavený verejnému internetu, súkromné prepojenie umožňuje pripojenie k tejto obmedzenej sieti.
 
 > [!IMPORTANT]
 > Minimálna požiadavka na rolu na nastavenie pripojenia Private Link:
@@ -59,11 +59,11 @@ Customer Insights používa Power Platform Možnosť zákazníckeho uzamykacieho
 
 1. Vyberte **Pridať súkromný odkaz**.
 
-   The **Pridať súkromný odkaz** panel zobrazuje účty úložiska od vášho nájomníka, na zobrazenie ktorých máte povolenia.
+   The **Pridať súkromný odkaz** tabla obsahuje zoznam účtov úložiska od vášho nájomníka, na zobrazenie ktorých máte povolenia.
 
 1. Vyberte predplatné, skupinu prostriedkov a konto úložiska.
 
-1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím** .
 
 1. Vyberte **Uložiť**.
 

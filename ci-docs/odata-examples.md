@@ -1,27 +1,27 @@
 ---
 title: Príklady dotazov OData pre rozhrania API Customer Insights
 description: Bežne používané príklady protokolu Open Data Protocol (OData) na dopytovanie rozhraní API Customer Insights na kontrolu údajov.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121581"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387221"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Príklady dotazov OData pre rozhrania API Customer Insights
 
 Open Data Protocol (OData) je protokol pre prístup k údajom založený na základných protokoloch, ako je HTTP. Používa bežne akceptované metodológie ako REST pre web. Existujú rôzne druhy knižníc a nástrojov, ktoré možno použiť na používanie služieb OData.
 
-V tomto článku sú uvedené niektoré často požadované príklady dotazov, ktoré vám pomôžu pri vytváraní vlastných implementácií na základe [Rozhrania API Customer Insights](apis.md).
+Aby sme vám pomohli vytvoriť si vlastné implementácie založené na [Rozhrania API Customer Insights](apis.md) , skontrolujte niektoré často požadované príklady dopytov.
 
-Musíte upraviť vzorky dotazov, aby fungovali v cieľových prostrediach: 
+Upravte vzorky dotazov, aby fungovali v cieľových prostrediach:
 
 - {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` kde{instanceId} je GUID prostredia Customer Insights, na ktoré sa chcete dotazovať. The [Operácia ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vám umožní nájsť{InstanceId} máte prístup k.
 - {CID}: GUID jednotného zákazníckeho záznamu. Príklad: `ce759201f786d590bf2134bff576c369`.
@@ -31,22 +31,22 @@ Musíte upraviť vzorky dotazov, aby fungovali v cieľových prostrediach:
 
 ## <a name="customer"></a>zákazník
 
-Nasledujúca tabuľka obsahuje súbor vzorových dotazov pre *Zákazník* subjekt.
+Vzorové otázky pre *Zákazník* subjekt.
 
 |Typ dotazu |Príklad  | Poznámka  |
 |---------|---------|---------|
 |Identifikačné číslo jedného zákazníka     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Alternatívny kľúč    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Alternatívne kľúče pretrvávajú v jednotnej entite zákazníka       |
+|alternatívny kľúč    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Alternatívne kľúče pretrvávajú v jednotnej entite zákazníka       |
 |Vyberte   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |O    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Alternatívny kľúč + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|alternatívny kľúč + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Vyhľadávať  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Vráti 10 najlepších výsledkov pre hľadaný reťazec      |
 |Členstvo v segmente  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Vráti prednastavený počet riadkov z entity segmentácie.      |
 |Členstvo v segmente pre zákazníka | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Vráti profil zákazníka, ak je členom daného segmentu     |
 
 ## <a name="unified-activity"></a>Jednotná činnosť
 
-Nasledujúca tabuľka obsahuje súbor vzorových dotazov pre *UnifiedActivity* subjekt.
+Vzorové otázky pre *UnifiedActivity* subjekt.
 
 |Typ dotazu |Príklad  | Poznámka  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Nasledujúca tabuľka obsahuje súbor vzorových dotazov pre *UnifiedActivity* s
 
 ## <a name="other-examples"></a>Ďalšie príklady
 
-Nasledujúca tabuľka obsahuje súbor vzorových dotazov pre iné entity.
+Vzorové dopyty pre iné subjekty.
 
 |Typ dotazu |Príklad  | Poznámka  |
 |---------|---------|---------|
