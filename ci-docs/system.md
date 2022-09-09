@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246266"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396020"
 ---
 # <a name="view-system-configuration"></a>Pozrite si konfiguráciu systému
 
@@ -38,12 +38,6 @@ Pozrite si podrobnosti o používaní rozhrania API v reálnom čase a zistite, 
    - **Volania API** – graf, ktorý vizualizuje agregovaný počet volaní API vo vybranom časovom rámci.
    - **Prenos údajov** – graf, ktorý zobrazuje množstvo dát, ktoré boli prenesené cez API vo vybranom časovom rámci.
    - **Operácie** – tabuľka s riadkami pre každú dostupnú operáciu API a podrobnosťami o použití týchto operácií. Vyberte názov operácie, na ktorú chcete prejsť [referenciu API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operácie, ktoré využívajú [prijímanie údajov v reálnom čase](real-time-data-ingestion.md) obsahujú binokulárny symbol na zobrazenie využitia API v reálnom čase.
-
-   1. Výberom ďalekohľadu otvorte **Využitie API v reálnom čase** panel s podrobnosťami o použití pre danú operáciu.
-   1. **Vyberte časový rámec** zobraziť.
-   1. Použi **Zoskupiť podľa** vyberte, ako najlepšie prezentovať svoje interakcie v reálnom čase. Zoskupte údaje podľa API **Metóda**, **názov entity** (požitá entita), **Vytvoril** (zdroj udalosti), **Výsledok** (úspech alebo neúspech) príp **Chybové kódy**. Dáta sú k dispozícii ako graf histórie a ako tabuľka.
 
 ## <a name="view-system-information"></a>Zobrazenie systémových informácií
 
@@ -97,7 +91,7 @@ Systém používa pre úlohy a procesy nasledujúce stavy:
 |Obnovuje sa    |Úloha alebo proces prebieha. Ak chcete zrušiť túto operáciu, vyberte **Osviežujúce** a **Zrušiť úlohu**. Zastavenie obnovy úlohy alebo procesu ich vráti do posledného stavu obnovenia.       |
 |Vynechané  |Úloha alebo proces boli preskočené. Jeden alebo viac následných procesov, od ktorých závisí táto úloha, zlyháva alebo sú preskočené.|
 |Úspešné  |Úloha alebo proces úspešne dokončený. V prípade zdrojov údajov označuje, že údaje boli úspešne prijaté, ak je v položke uvedený čas **Osviežené** stĺpec.|
-|Vo fronte | Spracovanie je zaradené do frontu a začne sa po dokončení všetkých nadradených úloh a procesov. Viac informácií nájdete v časti [Obnoviť procesy](#refresh-processes).|
+|Vo fronte | Spracovanie je zaradené do frontu a začne sa po dokončení všetkých nadradených úloh a procesov. Ďalšie informácie nájdete v časti [Obnoviť procesy](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Obnoviť procesy
 
@@ -123,7 +117,7 @@ Obnovenie úloh a procesov prebieha podľa [nakonfigurovaný rozvrh](schedule-re
 |Systémové   |Závisí od úspešného ukončenia procesu zhody. Segmenty, miery, obohatenie, vyhľadávanie, aktivity, predikcie a príprava dát závisia od úspešného ukončenia tohto procesu.   |
 |User  |Spúšťa sa manuálne (jednorazové obnovenie). Závisí od subjektov.  |
 
-Výberom stavu procesu zobrazíte podrobnosti o priebehu celej úlohy, v ktorej sa nachádzal. Vyššie uvedené procesy obnovenia vám môžu pomôcť pochopiť, čo môžete urobiť, aby ste vyriešili problém a **Preskočené** alebo **Vo fronte** úlohu alebo proces.
+Výberom stavu procesu zobrazíte podrobnosti o priebehu celej úlohy, v ktorej sa nachádzal. Vyššie uvedené procesy obnovy vám môžu pomôcť pochopiť, čo môžete urobiť pre riešenie a **Preskočené** alebo **Vo fronte** úlohu alebo proces.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

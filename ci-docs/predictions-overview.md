@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083109"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411850"
 ---
 # <a name="predictions-overview"></a>Prehľad predikcií
 
@@ -39,14 +39,11 @@ Najjednoduchší spôsob, ako začať s predikovaním údajov, sú preddefinovan
 
 > [!TIP]
 > Odporúčame vám pravidelne obnovovať predvolené modely s aktualizovanými údajmi, aby ste zaistili, že budú presne informovať o vašom firemnom použití. Údaje sa obnovujú ad-hoc, keď systém prijíma nové alebo aktualizované zdroje údajov. Modely však v tomto prípade iba prehodnotia a budú naďalej využívať existujúce tréningové údaje.
-> 
+>
 > Môžete nakonfigurovať a **Aktualizovať plán** nastavením plánu preškolenia modelu v prostredí konfigurácie. Model sa preškolí a prehodnotí podľa tohto rozvrhu, ktorý môžete kedykoľvek zmeniť.
-
 
 ## <a name="azure-machine-learning-integration"></a>Integrácia strojového učenia platformy Azure
 
 Ak organizácia už používa scenáre strojového učenia založené na experimentoch strojového učenia Azure, funkcia vlastných modelov v Customer Insights pomôže tieto body spojiť. Vytvorte pracovné postupy, ktoré vám pomôžu vybrať údaje, z ktorých chcete generovať štatistiky, a výsledky namapovať do svojich zjednotených profilov zákazníkov. Viac informácií nájdete v časti [Vlastné modely strojového učenia](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder predikcia
-
-Množiny údajov niekedy nie sú úplné a niektoré hodnoty chýbajú. Customer Insights môže pomôcť predikovať chýbajúce hodnoty pre entitu a segmenty zákazníka. Viac informácií nájdete v časti [Doplňte svoje čiastkové údaje o predikcie](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
 title: Naplánujte obnovenie systému
-description: Naplánujte čas, kedy sa má systém obnoviť
+description: Naplánujte si čas, kedy sa má systém obnoviť
 ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246438"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395975"
 ---
 # <a name="schedule-system-refresh"></a>Naplánujte obnovenie systému
 
@@ -36,7 +36,7 @@ Naplánujte si automatické obnovy všetkých vašich [prehltnuté zdroje údajo
 
 1. Vyberte si medzi **Týždenné** (predvolené) a **Denné** obnovenie. Ak chcete naplánovať týždenné obnovovanie, vyberte jeden alebo viac dní, v ktorých chcete obnovenie spustiť.
 
-1. Nastavte si **Časové pásmo**, potom použite rozbaľovaciu ponuku **Čas** a nastavte časovanie obnovenia. Ak chcete naplánovať viac aktualizácií za jeden deň, vyberte položku **Pridať ďalší čas**.
+1. Nastavte si **Časové pásmo**, potom použite rozbaľovaciu ponuku **Čas** a nastavte časovanie obnovenia. Ak chcete naplánovať viac aktualizácií za jeden deň, vyberte položku **Pridať ďalší čas**. Môžete pridať až štyri obnovenia.
 
 1. Zmeny vykonajte výberom položky **Uložiť**.
 

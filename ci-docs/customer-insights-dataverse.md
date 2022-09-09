@@ -1,7 +1,7 @@
 ---
 title: Práca s údajmi Customer Insights v Microsoft Dataverse
 description: Zistite, ako prepojiť Customer Insights a Microsoft Dataverse a pochopiť výstupné entity, ktoré sa exportujú do Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303848"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424328"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práca s údajmi Customer Insights v Microsoft Dataverse
 
@@ -97,7 +97,7 @@ Nastavte PowerShell na spúšťanie skriptov PowerShell.
 
 1. Vykonať`CreateSecurityGroups.ps1` v prostredí Windows PowerShell poskytnutím ID predplatného Azure, ktoré obsahuje vaše Azure Data Lake Storage. Otvorte skript PowerShell v editore a pozrite si ďalšie informácie a implementovanú logiku.
 
-   Tento skript vytvorí dve skupiny zabezpečenia vo vašom predplatnom Azure: jednu pre skupinu Reader a druhú pre skupinu Contributor. Microsoft Dataverse služba je vlastníkom oboch týchto bezpečnostných skupín.
+   Tento skript vytvorí dve skupiny zabezpečenia vo vašom predplatnom Azure: jednu pre skupinu Reader a druhú pre skupinu prispievateľov. Microsoft Dataverse služba je vlastníkom oboch týchto bezpečnostných skupín.
 
 1. Uložte obe hodnoty ID bezpečnostnej skupiny vygenerované týmto skriptom na použitie v`ByolSetup.ps1` skript.
 
@@ -129,13 +129,14 @@ OR
 1. Ísť do **Pokročilé nastavenia** > **Riešenia**.
 1. Odinštalujte **CustomerInsightsCustomerCard** Riešenie.
 
-Ak odstránenie pripojenia zlyhá kvôli závislostiam, musíte odstrániť aj závislosti. Ďalšie informácie nájdete v časti [Odstránenie závislostí](/power-platform/alm/removing-dependencies).
+Ak odstránenie pripojenia zlyhá kvôli závislostiam, musíte odstrániť aj závislosti. Viac informácií nájdete v časti [Odstránenie závislostí](/power-platform/alm/removing-dependencies).
 
 ## <a name="output-entities"></a>Výstupné entity
 
 Niektoré výstupné entity z Customer Insights sú dostupné ako tabuľky v Dataverse. Nasledujúce časti popisujú očakávanú schému týchto tabuliek.
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Niektoré výstupné entity z Customer Insights sú dostupné ako tabuľky v Dat
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Táto tabuľka obsahuje zjednotený profil zákazníka z nástroja Customer Insights. Schéma pre zjednotený zákaznícky profil závisí od entít a atribútov použitých v procese zjednotenia údajov. Schéma profilu zákazníka zvyčajne obsahuje podmnožinu atribútov z [Definícia Common Data Model pre CustomerProfile ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Táto tabuľka obsahuje zjednotený profil zákazníka z nástroja Customer Insights. Schéma pre zjednotený zákaznícky profil závisí od entít a atribútov použitých v procese zjednotenia údajov. Schéma profilu zákazníka zvyčajne obsahuje podmnožinu atribútov z [Definícia Common Data Model pre CustomerProfile ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Pre scenár B-to-B obsahuje zákaznícky profil zjednotené účty a schéma zvyčajne obsahuje podmnožinu atribútov z [Definícia spoločného dátového modelu účtu](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>ContactProfile
+
+Kontaktný profil obsahuje jednotné informácie o kontakte. Kontakty sú [jednotlivcov, ktorí sú priradení k účtu](data-unification-contacts.md) v scenári B-to-B.
+
+| Column                       | Type                | Description     |
+| ---------------------------- | ------------------- | --------------- |
+|  Dátum narodenia            | Dátum a čas       |  Dátum narodenia kontaktu               |
+|  City                 | SMS správa |  Mesto kontaktnej adresy               |
+|  ContactId            | SMS správa |  ID profilu kontaktu               |
+|  ContactProfileId     | Jednoznačný identifikátor   |  GUID pre kontakt               |
+|  Krajina alebo Región      | SMS správa |  Krajina/región kontaktnej adresy               |
+|  ID zákazníka           | SMS správa |  ID účtu, ku ktorému je kontakt priradený               |
+|  EntityName           | SMS správa |  Entita, z ktorej pochádzajú údaje                |
+|  FirstName            | SMS správa |  Krstné meno kontaktu               |
+|  Pohlavie               | SMS správa |  Pohlavie kontaktu               |
+|  Id                   | SMS správa |  Deterministický GUID založený na`Identifier`               |
+|  Identifikátor           | SMS správa |  Interné ID profilu kontaktu:`ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | SMS správa |  Pracovná pozícia kontaktu               |
+|  LastName             | SMS správa |  Priezvisko kontaktu               |
+|  PostalCode           | SMS správa |  PSČ kontaktnej adresy               |
+|  Primárny e-mail         | SMS správa |  Emailová adresa kontaktu               |
+|  Hlavný telefón         | SMS správa |  Telefónne číslo kontaktu               |
+|  Kraj      | SMS správa |  Štát alebo provincia kontaktnej adresy               |
+|  StreetAddress        | SMS správa |  Ulica kontaktnej adresy               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 Tabuľka AlternateKey obsahuje kľúče entít, ktoré sa zúčastnili procesu zjednotenia.
 
-|Column  |Zadať  |Popis  |
+|Column  |Type  |Description  |
 |---------|---------|---------|
-|DataSourceName    |String         | Názov zdroja údajov. Napríklad: `datasource5`        |
-|EntityName        | String        | Názov entity v Customer Insights. Napríklad: `contact1`        |
-|AlternateValue    |String         |Alternatívne ID, ktoré je namapované na ID zákazníka. Príklad: `cntid_1078`         |
-|KeyRing           | Viacriadkový text        | Hodnota JSON  </br> Ukážka: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|ID zákazníka         | String        | ID zjednoteného profilu zákazníka.         |
-|AlternateKeyId     | GUID         |  AlternateKey deterministický založený GUID na msdynci_identifier       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Ukážka: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |SMS správa         | Názov zdroja údajov. Napríklad: `datasource5`        |
+|EntityName        | SMS správa        | Názov entity v Customer Insights. Napríklad: `contact1`        |
+|AlternateValue    |SMS správa         |Alternatívne ID, ktoré je namapované na ID zákazníka. Príklad: `cntid_1078`         |
+|KeyRing           | SMS správa        | Hodnota JSON  </br> Ukážka: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|ID zákazníka         | SMS správa        | ID zjednoteného profilu zákazníka.         |
+|AlternateKeyId     | Jednoznačný identifikátor        |  AlternateKey deterministický GUID založený na`Identifier`      |
+|Identifikátor |   SMS správa      |   `DataSourceName|EntityName|AlternateValue`  </br> Ukážka: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,56 +193,55 @@ Táto tabuľka obsahuje aktivity používateľov, ktoré sú k dispozícii v Cus
 
 | Column            | Type        | Description                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| ID zákazníka        | String      | ID profilu zákazníka                                                                      |
-| ActivityId        | String      | Interné ID aktivity zákazníka (primárny kľúč)                                       |
-| SourceEntityName  | String      | Názov zdrojovej entity                                                                |
-| SourceActivityId  | String      | Primárny kľúč zo zdrojovej entity                                                       |
-| ActivityType      | String      | Typ sémantickej aktivity alebo názov vlastnej aktivity                                        |
-| ActivityTimeStamp | DATETIME    | Časová známka aktivity                                                                      |
-| Title             | String      | Titul alebo názov aktivity                                                               |
-| Description       | String      | Opis aktivity                                                                     |
-| Adresa URL               | String      | Odkaz na externú adresu URL špecifickú pre danú aktivitu                                         |
-| SemanticData      | Reťazec JSON | Zahŕňa zoznam párov kľúč/hodnota pre polia sémantického mapovania špecifické pre typ aktivity |
-| RangeIndex        | String      | Unixová časová pečiatka používaná na triedenie časovej osi aktivity a dotazov na efektívny rozsah |
-| mydynci_unifiedactivityid   | GUID | Interné ID aktivity zákazníka (ActivityId) |
+| ID zákazníka        | SMS správa      | ID profilu zákazníka                                                                      |
+| ActivityId        | SMS správa      | Interné ID aktivity zákazníka (primárny kľúč)                                       |
+| SourceEntityName  | SMS správa      | Názov zdrojovej entity                                                                |
+| SourceActivityId  | SMS správa      | Primárny kľúč zo zdrojovej entity                                                       |
+| ActivityType      | SMS správa      | Typ sémantickej aktivity alebo názov vlastnej aktivity                                        |
+| ActivityTimeStamp | Dátum a čas    | Časová známka aktivity                                                                      |
+| Title             | SMS správa      | Titul alebo názov aktivity                                                               |
+| Description       | SMS správa      | Opis aktivity                                                                     |
+| URL               | SMS správa      | Odkaz na externú adresu URL špecifickú pre danú aktivitu                                         |
+| SemanticData      | SMS správa | Zahŕňa zoznam párov kľúč/hodnota pre polia sémantického mapovania špecifické pre typ aktivity |
+| RangeIndex        | SMS správa      | Unixová časová pečiatka používaná na triedenie časovej osi aktivity a dotazov na efektívny rozsah |
+| UnifiedActivityId   | Jednoznačný identifikátor | Interné ID aktivity zákazníka (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Táto tabuľka obsahuje výstupné údaje mier založených na atribútoch zákazníka.
 
-| Column             | Zadať             | Popis                 |
+| Column             | Type             | Description                 |
 |--------------------|------------------|-----------------------------|
-| ID zákazníka         | String           | ID profilu zákazníka        |
-| Miery           | Reťazec JSON      | Zahŕňa zoznam párov kľúčových hodnôt pre názov miery a hodnoty pre daného zákazníka | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | ID profilu zákazníka |
-
+| ID zákazníka         | SMS správa           | ID profilu zákazníka        |
+| Miery           | SMS správa      | Zahŕňa zoznam párov kľúčových hodnôt pre názov miery a hodnoty pre daného zákazníka |
+| Identifikátor | SMS správa           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Jednoznačný identifikátor     | ID profilu zákazníka |
 
 ### <a name="enrichment"></a>Obohatenie
 
 Táto tabuľka obsahuje výstup z procesu obohacovania.
 
-| Column               | Zadať             |  Popis                                          |
+| Column               | Type             |  Description                                          |
 |----------------------|------------------|------------------------------------------------------|
-| ID zákazníka           | String           | ID profilu zákazníka                                 |
-| EnrichmentProvider   | String           | Názov poskytovateľa pre obohatenie                                  |
-| EnrichmentType       | String           | Typ obohatenia                                      |
-| Hodnoty               | Reťazec JSON      | Zoznam atribútov získaných procesom obohacovania |
-| msdynci_enrichmentid | GUID             | Deterministický GUID vygenerovaný z msdynci_identifier |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| ID zákazníka           | SMS správa           | ID profilu zákazníka                                 |
+| EnrichmentProvider   | SMS správa           | Názov poskytovateľa pre obohatenie                                  |
+| EnrichmentType       | SMS správa           | Typ obohatenia                                      |
+| Hodnoty               | SMS správa      | Zoznam atribútov získaných procesom obohacovania |
+| EnrichmentId | Jednoznačný identifikátor            | Deterministické GUID generované z`Identifier` |
+| Identifikátor   | SMS správa           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
-### <a name="prediction"></a>Predikcia
+### <a name="prediction"></a>Predpoveď
 
 Táto tabuľka obsahuje výstup predikcií modelu.
 
 | Column               | Type        | Description                                          |
 |----------------------|-------------|------------------------------------------------------|
-| ID zákazníka           | String      | ID profilu zákazníka                                  |
-| ModelProvider        | String      | Názov poskytovateľa modelu                                      |
-| Model                | String      | Názov modelu                                                |
-| Hodnoty               | Reťazec JSON | Zoznam atribútov získaných modelom |
-| msdynci_predictionid | GUID        | Deterministický GUID vygenerovaný z msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| ID zákazníka           | SMS správa      | ID profilu zákazníka                                  |
+| ModelProvider        | SMS správa      | Názov poskytovateľa modelu                                      |
+| Model                | SMS správa      | Názov modelu                                                |
+| Hodnoty               | SMS správa | Zoznam atribútov získaných modelom |
+| PredpoveďId | Jednoznačný identifikátor       | Deterministické GUID generované z`Identifier` |
+| Identifikátor   | SMS správa      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Členstvo v segmente
 
@@ -224,12 +249,11 @@ Táto tabuľka obsahuje informácie o členstve v segmentoch profilov zákazník
 
 | Column        | Type | Description                        |
 |--------------------|--------------|-----------------------------|
-| ID zákazníka        | String       | ID profilu zákazníka        |
-| SegmentProvider      | String       | Aplikácia, ktorá zverejňuje segmenty.      |
-| Typ členstva v segmente | String       | Typ zákazníka pre tento záznam členstva v segmente. Podporuje viacero typov, ako napríklad Zákazník, Kontakt alebo Účet. Predvolené: Zákazník  |
-| Segmenty       | Reťazec JSON  | Zoznam jedinečných segmentov, ktorých členom je profil zákazníka      |
-| msdynci_identifier  | String   | Jedinečný identifikátor záznamu členstva v segmente. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministické GUID generované z`msdynci_identifier`          |
-
+| ID zákazníka        | SMS správa       | ID profilu zákazníka        |
+| SegmentProvider      | SMS správa       | Aplikácia, ktorá zverejňuje segmenty.      |
+| Typ členstva v segmente | SMS správa       | Typ zákazníka pre tento záznam členstva v segmente. Podporuje viacero typov, ako napríklad Zákazník, Kontakt alebo Účet. Predvolené: Zákazník  |
+| Segmenty       | SMS správa  | Zoznam jedinečných segmentov, ktorých členom je profil zákazníka      |
+| Identifikátor  | SMS správa   | Jedinečný identifikátor záznamu členstva v segmente. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Jednoznačný identifikátor      | Deterministické GUID generované z`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

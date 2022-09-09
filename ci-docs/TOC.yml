@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Používajte vlastné modely zo strojového učenia Azure
           href: custom-models.md
-        - name: Vyplňte čiastočne chýbajúce údaje
-          href: predictions.md
     - name: Ukážkoví sprievodcovia
       items:
         - name: Ukážkový sprievodca pre predikciu CLV

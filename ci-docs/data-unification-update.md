@@ -1,7 +1,7 @@
 ---
 title: Aktualizujte nastavenia zjednotenia zákazníka, účtu alebo kontaktov
 description: Aktualizujte duplicitné pravidlá, pravidlá zhody alebo zjednotené polia v nastaveniach zjednotenia zákazníka alebo účtu.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304354"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392490"
 ---
 # <a name="update-unification-settings"></a>Aktualizujte nastavenia zjednotenia
 
@@ -26,7 +26,7 @@ Ak chcete po vytvorení jednotného profilu skontrolovať alebo zmeniť nastaven
 
 1. Ísť do **Údaje** > **Zjednotiť**.
 
-   Pre individuálnych zákazníkov (B-to-C), **Zjednotiť** zobrazuje počet zjednotených zákazníckych profilov a dlaždíc pre každý z krokov zjednotenia.
+   Pre individuálnych zákazníkov (B-to-C) je **Zjednotiť** zobrazuje počet zjednotených zákazníckych profilov a dlaždíc pre každý z krokov zjednotenia.
 
    :::image type="content" source="media/m3_unified.png" alt-text="Snímka obrazovky stránky Zjednotenie údajov po zjednotení údajov." lightbox="media/m3_unified.png":::
 
@@ -38,7 +38,7 @@ Ak chcete po vytvorení jednotného profilu skontrolovať alebo zmeniť nastaven
    > The **Zodpovedajúce podmienky** dlaždice sa zobrazia iba vtedy, ak bolo vybratých viacero entít.
 
 1. Vyberte, čo chcete aktualizovať:
-   - [Zdrojové polia](#edit-source-fields) pridať entity alebo atribúty alebo zmeniť typy atribútov.
+   - [Zdrojové polia](#edit-source-fields) pridať atribúty alebo entity alebo zmeniť typy atribútov. Ak chcete odstrániť atribút, pozrite si časť [Odstráňte zjednotené pole](#remove-a-unified-field). Ak chcete odstrániť entitu, pozrite si časť [Odstráňte zjednotenú entitu](#remove-a-unified-entity).
    - [Duplicitné záznamy](#manage-deduplication-rules) spravovať pravidlá deduplikácie alebo preferencie zlúčenia.
    - [Zodpovedajúce podmienky](#manage-match-rules) aktualizovať pravidlá zhody v dvoch alebo viacerých entitách.
    - [Zjednotené zákaznícke polia](#manage-unified-fields) na kombináciu alebo vylúčenie polí. Môžete tiež zoskupiť súvisiace profily do klastrov.
@@ -53,8 +53,6 @@ Ak chcete po vytvorení jednotného profilu skontrolovať alebo zmeniť nastaven
 
 ## <a name="edit-source-fields"></a>Upravte zdrojové polia
 
-Nemôžete odstrániť atribút alebo entitu, ak už boli zjednotené.
-
 1. Vyberte **Upraviť** na **Zdrojové polia** dlaždica.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Snímka obrazovky stránky zdrojových polí zobrazujúca počet primárnych kľúčov, mapovaných a nemapovaných polí":::
@@ -63,9 +61,83 @@ Nemôžete odstrániť atribút alebo entitu, ak už boli zjednotené.
 
 1. Ak chcete pridať ďalšie atribúty alebo entity, vyberte **Vyberte entity a polia**.
 
-1. Voliteľne môžete zmeniť primárny kľúč entity, typy atribútov a prepínač **Inteligentné mapovanie** zapnuté alebo vypnuté. Viac informácií nájdete v časti [Vyberte zdrojové polia](map-entities.md).
+1. Voliteľne môžete zmeniť primárny kľúč entity, typy atribútov a prepínač **Inteligentné mapovanie** zapnuté alebo vypnuté. Ďalšie informácie nájdete v časti [Vyberte zdrojové polia](map-entities.md).
 
 1. Vyberte **Ďalšie** ak chcete vykonať zmeny pravidiel deduplikácie, alebo vyberte **Uložiť a zavrieť** a vrátiť sa do [Aktualizujte nastavenia zjednotenia](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Odstráňte zjednotené pole
+
+Ak chcete odstrániť pole, ktoré bolo zjednotené, pole musí byť odstránené zo všetkých závislostí, ako sú segmenty, miery, obohatenia alebo vzťahy.
+
+1. Po odstránení všetkých závislostí pre pole prejdite na **Údaje** > **Zjednotiť**.
+
+1. Vyberte **Upraviť** na **Zjednotené zákaznícke polia** dlaždica.
+
+1. Vyberte všetky výskyty poľa a potom vyberte **Vylúčiť**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Snímka obrazovky stránky Zjednotené polia zobrazujúca vybraté polia a tlačidlo Vylúčiť":::
+
+1. Vyberte **hotový** potvrďte a potom vyberte **Uložiť a zavrieť**.
+
+   > [!TIP]
+   > Ak sa zobrazí správa „Nepodarilo sa uložiť zjednotenie. Zadaný prostriedok nemožno upraviť alebo odstrániť z dôvodu závislostí v smere toku", potom sa pole stále používa v závislosti v smere toku.
+
+1. Ak sa pole používa v pravidle pre duplicitné záznamy alebo podmienky zhody, vykonajte nasledujúce kroky. V opačnom prípade prejdite na ďalší krok.
+   1. Vyberte **Upraviť** na **Duplicitné záznamy** dlaždica.
+   1. Odstráňte pole zo všetkých pravidiel, v ktorých sa používa, ak nejaké existujú, a potom vyberte **Ďalšie**.
+   1. Na **Zodpovedajúce podmienky** odstráňte pole zo všetkých pravidiel, v ktorých sa používa, ak nejaké existujú, a potom vyberte **Uložiť a zavrieť**.
+   1. Vyberte **Zjednotiť** > **Zjednotiť profily a závislosti zákazníkov**. Pred prechodom na ďalší krok počkajte na dokončenie zjednotenia.
+
+1. Vyberte **Upraviť** na **Zdrojové polia** dlaždica.
+
+1. Vyberte **Vyberte entity a polia** a zrušte začiarknutie políčka vedľa každého výskytu poľa.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Snímka obrazovky dialógového okna Vybrať entity a polia so začiarknutými políčkami":::
+
+1. Vyberte **Použiť**.
+
+1. Vyberte položku **Uložiť a zavrieť**.
+
+1. Vyberte **Zjednotiť** > **Zjednotiť profily a závislosti zákazníkov** aktualizovať jednotný profil.
+
+### <a name="remove-a-unified-entity"></a>Odstráňte zjednotenú entitu
+
+Ak chcete odstrániť entitu, ktorá bola zjednotená, entita musí byť odstránená zo všetkých závislostí, ako sú segmenty, miery, obohatenia alebo vzťahy.
+
+1. Po odstránení všetkých závislostí entity prejdite na **Údaje** > **Zjednotiť**.
+
+1. Vyberte **Upraviť** na **Zjednotené zákaznícke polia** dlaždica.
+
+1. Vyberte všetky polia entity a potom vyberte **Vylúčiť**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Snímka obrazovky zjednotených polí so všetkými vybratými poľami entity a tlačidlom Vylúčiť":::
+
+1. Vyberte **hotový** potvrďte a potom vyberte **Uložiť a zavrieť**.
+
+   > [!TIP]
+   > Ak sa zobrazí správa „Nepodarilo sa uložiť zjednotenie. Zadaný zdroj nie je možné upraviť alebo odstrániť z dôvodu downstreamových závislostí“, potom sa entita stále používa v downstreamovej závislosti.
+
+1. Vyberte **Upraviť** na **Duplicitné záznamy** dlaždica.
+
+1. Odstráňte všetky pravidlá z entity, ak nejaké existujú, a potom vyberte **Ďalšie**.
+
+1. Na **Zodpovedajúce podmienky** stránku, vyberte entitu a potom vyberte **Odstrániť**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Snímka obrazovky s podmienkami zhody s vybratou entitou a tlačidlom Odstrániť":::
+
+1. Vyberte položku **Uložiť a zavrieť**.
+
+1. Vyberte **Upraviť** na **Zdrojové polia** dlaždica.
+
+1. Vyberte **Vyberte entity a polia** a zrušte začiarknutie políčka vedľa entity.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Snímka obrazovky dialógového okna Výber entít a polí so zrušeným začiarknutím políčka entity":::
+
+1. Vyberte **Použiť**.
+
+1. Vyberte položku **Uložiť a zavrieť**.
+
+1. Vyberte **Zjednotiť** > **Zjednotiť profily a závislosti zákazníkov** aktualizovať jednotný profil.
 
 ## <a name="manage-deduplication-rules"></a>Spravujte pravidlá deduplikácie
 
@@ -85,7 +157,7 @@ Nemôžete odstrániť atribút alebo entitu, ak už boli zjednotené.
    - **Duplikovať pravidlo** : Vyberte pravidlo a potom **Duplicitné** vytvoriť podobné pravidlo s úpravami.
    - **Odstráňte pravidlo** : Vyberte pravidlo a potom **Odstrániť**.
 
-1. Ak chcete zmeniť predvoľby zlúčenia, vyberte entitu. Predvoľby môžete zmeniť, iba ak je vytvorené pravidlo.
+1. Ak chcete zmeniť predvoľby zlúčenia, vyberte entitu. Predvoľby môžete zmeniť iba vtedy, ak je vytvorené pravidlo.
    1. Vyberte **Upravte predvoľby zlúčenia** a zmeniť **Záznam na uchovanie** možnosť.
    1. Ak chcete zmeniť preferencie zlúčenia pre jednotlivé atribúty entity, vyberte **Pokročilé** a vykonať potrebné zmeny.
 
