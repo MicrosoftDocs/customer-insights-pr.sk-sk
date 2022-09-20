@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411759"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463238"
 ---
 # <a name="service-limits-in-customer-insights"></a>Limity služieb v Customer Insights
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411759"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmenty, miery a predpovede | 300  | Celkový počet [segmentov](segments.md),[Opatrenia](measures.md), a [predpovede](predictions-overview.md) spolu nesmie presiahnuť 300.  |
 | Vzťahy  | 20 úrovní hĺbky vzťahov v cestách entít. | Pri vytváraní [segmentov](segments.md) alebo [opatrení](measures.md) pomocou rozhrania Builder môžu mať cesty entít až 20 skokov vzťahov medzi počiatočnou entitou a cieľovou entitou.  |
+|Prijímanie údajov| Súbežné hodnotenia pre Power Query zdroje údajov sú obmedzené. | Customer Insights má to isté [obnovovacie limity ako Dataflows v PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Spravodlivé rozvrhnutie pracovných miest
 

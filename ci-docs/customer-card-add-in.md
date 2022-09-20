@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194942"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473661"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Doplnok zákazníckej karty pre aplikácie Dynamics 365 (ukážka)
 
@@ -32,7 +32,8 @@ Získajte kompletný prehľad o svojich zákazníkoch priamo v aplikáciách Dyn
 - Odporúčame vám to, aby sa vaše údaje Dynamics 365 namapovali na zákaznícke profily Customer Insights [prijaté z aplikácie Dynamics 365 pomocou Microsoft Dataverse konektor](connect-power-query.md). Ak na prijímanie kontaktov (alebo účtov) Dynamics 365 používate inú metódu, uistite sa, že`contactid` (alebo`accountid`) je nastavené ako [primárny kľúč pre tento zdroj údajov počas procesu zjednotenia údajov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Všetci používatelia Dynamics 365 doplnku Zákaznícka karta musia byť [pridané ako používatelia](permissions.md) v Customer Insights, aby ste videli údaje.
 - [Konfigurované možnosti vyhľadávania a filtrovania](search-filter-index.md) v Customer Insights.
-- Každý ovládací prvok doplnku závisí od konkrétnych údajov v Customer Insights. Niektoré údaje a ovládacie prvky sú k dispozícii iba v prostrediach špecifických typov. Konfigurácia doplnku vás bude informovať, ak ovládací prvok nie je dostupný z dôvodu zvoleného typu prostredia. Ďalšie informácie o [prípadoch použitia prostredia](work-with-business-accounts.md).
+- Niektoré údaje a ovládacie prvky sú k dispozícii iba v prostrediach špecifických typov. Konfigurácia doplnku vás bude informovať, ak ovládací prvok nie je dostupný z dôvodu zvoleného typu prostredia. Táto chyba sa zobrazí v rámci ovládacieho prvku pri jeho vykresľovaní. Ďalšie informácie o [prípadoch použitia prostredia](work-with-business-accounts.md).
+- Každý ovládací prvok doplnku závisí od konkrétnych údajov v Customer Insights.
   - **Kontrola merania** vyžaduje [nakonfigurované merania atribútov zákazníka](measures.md).
   - **Kontrola inteligencie** vyžaduje údaje generované pomocou [predpovede alebo vlastné modely](predictions-overview.md).
   - **Kontrola detailov zákazníka** zobrazuje všetky polia z profilu dostupného v zjednotenom zákazníckom profile.
@@ -81,7 +82,7 @@ Možno sa budete musieť prihlásiť so svojimi prihlasovacími údajmi, aby moh
 
 ## <a name="add-customer-card-controls-to-forms"></a>Pridanie ovládacích prvkov Zákazníckej karty do formulárov
 
-V závislosti od vášho scenára sa môžete rozhodnúť pridať ovládacie prvky do ktoréhokoľvek z formulárov **Kontakt** alebo **Obchodný vzťah**. Ak je vaše prostredie Customer Insights určené pre firemné účty, odporúčame vám pridať ovládacie prvky do formulára Účet. V takom prípade nahraďte „kontakt“ v nižšie uvedených krokoch „obchodným vzťahom“.
+V závislosti od vášho scenára sa môžete rozhodnúť pridať ovládacie prvky do ktoréhokoľvek z formulárov **Kontakt** alebo **Obchodný vzťah**. Ak je vaše prostredie Customer Insights pre firemné účty, odporúčame vám pridať ovládacie prvky do formulára Účet. V takom prípade nahraďte „kontakt“ v nižšie uvedených krokoch „obchodným vzťahom“.
 
 1. Ak chcete pridať ovládacie prvky Karty zákazníka do svojho formulára Kontakt, prejdite na stránku **Nastavenia** > **Prispôsobenia** v Dynamics 365.
 

@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207064"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463284"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Pripojte sa k a Power Query zdroj údajov
 
@@ -63,13 +63,15 @@ Pridávanie zdrojov údajov na základe Power Query konektory sa vo všeobecnost
 Načítanie údajov môže chvíľu trvať. Po úspešnom obnovení môžu byť prijaté údaje skontrolované z [**entity**](entities.md) stránku.
 
 > [!CAUTION]
-> Zdroj údajov na základe Power Query vytvára a [dátový tok v Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nemeňte názov toku údajov v Power Platform centrum spravovania, ktoré sa používa v Customer Insights. Premenovanie toku údajov spôsobuje problémy s referenciami medzi Customer Insights zdroj údajov a Dataverse dátový tok.
+>
+> - Zdroj údajov na základe Power Query vytvára a [dátový tok v Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nemeňte názov toku údajov v Power Platform centrum spravovania, ktoré sa používa v Customer Insights. Premenovanie toku údajov spôsobuje problémy s referenciami medzi Customer Insights zdroj údajov a Dataverse dátový tok.
+> - Súbežné hodnotenia pre Power Query zdroje údajov v Customer Insights majú to isté [obnovovacie limity ako Dataflows v PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Ak obnova údajov zlyhá, pretože dosiahla limit hodnotenia, odporúčame vám upraviť plán obnovy pre každý tok údajov, aby ste zabezpečili, že zdroje údajov nebudú spracované v rovnakom čase.
 
 ### <a name="available-power-query-data-sources"></a>Dostupné Power Query zdroje dát
 
 Pozrite si [Power Query odkaz na konektor](/power-query/connectors/) nájdete zoznam konektorov, ktoré môžete použiť na import údajov do Customer Insights.
 
-Konektory so začiarknutím v **Customer Insights (toky údajov)** na vytvorenie nových zdrojov údajov na základe Power Query. Pozrite si dokumentáciu konkrétneho konektora, aby ste sa dozvedeli viac o jeho predpokladoch, [obmedzenia dopytov](/power-query/power-query-online-limits) a ďalšie podrobnosti.
+Konektory so začiarknutím v **Customer Insights (údajové toky)** na vytvorenie nových zdrojov údajov na základe Power Query. Pozrite si dokumentáciu konkrétneho konektora, aby ste sa dozvedeli viac o jeho predpokladoch, [obmedzenia dopytov](/power-query/power-query-online-limits) a ďalšie podrobnosti.
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Pridajte údaje z lokálny zdrojov údajov
 
@@ -77,7 +79,7 @@ Príjem údajov zo zdrojov údajov lokálny je podporovaný na základe Microsof
 
 Zdroje údajov, ktoré sa vytvoria po priradení a Dataverse prostredie s využitím Customer Insights [Power Platform dátové toky](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) predvolene. Dátové toky podporujú lokálne pripojenie pomocou brány údajov. Môžete odstrániť a znovu vytvoriť zdroje údajov, ktoré existovali pred a Dataverse prostredie bolo spojené [pomocou dátových brán lokálny](/data-integration/gateway/service-gateway-app).
 
-Dátové brány z existujúcich Power BI alebo Power Apps budú viditeľné a môžete ich znova použiť v Customer Insights. Na stránke zdrojov údajov sú zobrazené odkazy smerujúce do prostredia Microsoft Power Platform, v ktorom si môžete prezerať a konfigurovať lokálne brány údajov.
+Dátové brány z existujúcich Power BI alebo Power Apps prostredie bude viditeľné a môžete ich znova použiť v Customer Insights, ak sa brána údajov a prostredie Customer Insights nachádzajú v rovnakej oblasti Azure. Na stránke zdrojov údajov sú zobrazené odkazy smerujúce do prostredia Microsoft Power Platform, v ktorom si môžete prezerať a konfigurovať lokálne brány údajov.
 
 > [!IMPORTANT]
 > Uistite sa, že sú vaše brány aktualizované na najnovšiu verziu. Aktualizáciu a prekonfigurovanie brány môžete nainštalovať priamo z výzvy zobrazenej na obrazovke brány alebo [stiahnite si najnovšiu verziu](https://powerapps.microsoft.com/downloads/). Ak nepoužívate najnovšiu verziu brány, obnovenie toku údajov zlyhá s chybovými hláseniami, ako napr **Kľúčové slovo nie je podporované: konfiguračné vlastnosti. Názov parametra: kľúčové slovo**.

@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304078"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460209"
 ---
 # <a name="exports-preview-overview"></a>Prehľad exportov (verzia Preview)
 
@@ -45,7 +45,7 @@ Väčšina možností exportu podporuje oba typy prostredí. Export segmentov do
 
 **Limity exportu segmentov**  
 - Cieľové systémy tretích strán môžu obmedziť počet zákazníckych profilov, ktoré môžete exportovať. 
-- Pri individuálnych zákazníkoch uvidíte skutočný počet členov segmentu, keď vyberiete segment na export. Ak je segment príliš veľký, zobrazí sa upozornenie. 
+- Pri individuálnych zákazníkoch uvidíte skutočný počet členov segmentu, keď vyberiete segment na export. Ak je segment príliš veľký, dostanete varovanie. 
 - V prípade firemných účtov uvidíte počet účtov alebo kontaktov v závislosti od segmentu. Ak je segment príliš veľký, dostanete varovanie. Prekročenie limitov výsledkov cieľových systémov preskočí export.
 
 ## <a name="set-up-a-new-export"></a>Nastavenie nového exportu
@@ -81,6 +81,11 @@ Ak chcete zobraziť dostupné akcie, vyberte export.
 ## <a name="schedule-and-run-exports"></a>Plánovanie a spustenie exportov
 
 Každý export, ktorý nakonfigurujete, má plán obnovenia. Počas obnovenia systém vyhľadá nové alebo aktualizované údaje, ktoré by zahrnul do exportu. Export sa štandardne spúšťa ako súčasť každého [plánovaného obnovenia systému](schedule-refresh.md). Môžete prispôsobiť plán obnovenia alebo ho vypnúť, aby sa exporty spúšťali manuálne.
+
+> [!TIP]
+> Minimalizujte čas spracovania exportov segmentov pomocou nasledujúcich osvedčených postupov:
+> - Rozdeľte entity segmentov v rámci viacerých exportov.
+> - Vyhnite sa plánovaniu všetkých exportov naraz. Ponechajte 30 minút alebo jednu hodinu medzi naplánovaným časom každého exportu.
 
 Plány exportu závisia od stavu vášho prostredia. Ak prebiehajú aktualizácie v rámci [závislostí](system.md#refresh-processes), keď sa má spustiť plánovaný export, systém najskôr dokončí aktualizácie a potom spustí export. The **Osviežené** zobrazuje, kedy bol export naposledy obnovený.
 
