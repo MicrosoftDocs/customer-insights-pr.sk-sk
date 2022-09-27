@@ -6,12 +6,12 @@ metadata:
   ms.author: mhart
   ms.date: 05/18/2022
   ms.topic: landing-page
-  ms.openlocfilehash: 209d635f8b548559ba035a5803c360d26dea8bab
-  ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+  ms.openlocfilehash: c3781830dbb1ab1bf5d6395e1398c2c3b297abfd
+  ms.sourcegitcommit: e02a0bf51b5440fcf3284d410f24ea652fe90723
   ms.translationtype: MT
   ms.contentlocale: sk-SK
-  ms.lasthandoff: 09/07/2022
-  ms.locfileid: "9411797"
+  ms.lasthandoff: 09/20/2022
+  ms.locfileid: "9544374"
 title: Dokumentácia k službe Dynamics 365 Customer Insights
 summary: Nájdite užitočné zdroje, s ktorými môžete začať, a získajte informácie o funkciách a možnostiach Customer Insights.
 landingContent:
@@ -27,8 +27,8 @@ landingContent:
       url: whats-new-customer-insights.md
   - linkListType: learn
     links:
-    - text: Vzdelávacia cesta Customer Insights
-      url: /learn/paths/build-customer-insights/
+    - text: Učebná cesta Customer Insights
+      url: /training/paths/build-customer-insights/
 - title: Začíname so službou Customer Insights
   linkLists:
   - linkListType: get-started
@@ -42,7 +42,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Začať
-      url: /learn/modules/get-started-customer-data-platform/
+      url: /training/modules/get-started-customer-data-platform/
 - title: Príjem údajov
   linkLists:
   - linkListType: how-to-guide
@@ -55,8 +55,8 @@ landingContent:
       url: connect-dataverse-managed-lake.md
   - linkListType: learn
     links:
-    - text: Vkladajte údaje do Customer Insights
-      url: /learn/modules/ingest-data-customer-insights/
+    - text: Vkladať údaje do Customer Insights
+      url: /training/modules/ingest-data-customer-insights/
 - title: Zjednotenie údajov
   linkLists:
   - linkListType: how-to-guide
@@ -70,7 +70,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Vytvorte si jednotný profil
-      url: /learn/modules/unified-customer-profile/
+      url: /training/modules/unified-customer-profile/
 - title: Získať prehľady
   linkLists:
   - linkListType: how-to-guide
@@ -84,8 +84,8 @@ landingContent:
   - linkListType: learn
     links:
     - text: Obohacujte a predpovedajte údaje
-      url: /learn/modules/enrich-data/
-- title: Stavte na svoje dáta
+      url: /training/modules/enrich-data/
+- title: Stavte na svojich údajoch
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -98,7 +98,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Práca s aplikáciou
-      url: /learn/modules/working-with-customer-insights/
+      url: /training/modules/working-with-customer-insights/
 - title: Exportovať údaje
   linkLists:
   - linkListType: how-to-guide
@@ -112,7 +112,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Spravujte externé pripojenia
-      url: /learn/modules/configure-third-party-connections/
+      url: /training/modules/configure-third-party-connections/
 - title: Správa Customer Insights
   linkLists:
   - linkListType: how-to-guide
@@ -126,7 +126,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Správa Customer Insights
-      url: /learn/modules/administer-customer-data-platform/
+      url: /training/modules/administer-customer-data-platform/
 - title: Buďte v kontakte
   linkLists:
   - linkListType: overview

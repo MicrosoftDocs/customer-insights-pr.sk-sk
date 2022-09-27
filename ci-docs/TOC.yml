@@ -7,21 +7,21 @@
 - name: Katalóg Learning
   items:
     - name: Certifikujte sa ako špecialista na platformu zákazníckych údajov spoločnosti Microsoft
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Začíname so službou Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Príjem údajov
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Vytvorenie zjednoteného profilu zákazníka
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Pracujte so Customer Insights
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Obohacujte údaje a vytvárajte predpovede
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Spravujte externé pripojenia
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Správa Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Bezplatná skúšobná verzia
   items:
     - name: Registrácia na získanie bezplatnej skúšobnej verzie
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Použite webové údaje na prispôsobenie
       href: unknown-to-known.md
+    - name: Spravujte neznáme profily zákazníkov
+      href: manage-unknown-profiles.md
 - name: Segmenty
   items:
     - name: Prehľad segmentov
