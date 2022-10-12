@@ -1,7 +1,7 @@
 ---
 title: Naplánujte obnovenie systému
 description: Naplánujte si čas, kedy sa má systém obnoviť
-ms.date: 08/09/2022
+ms.date: 09/27/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: 4aac02b570357d2086f7a9d7340b0e4837157a0b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9395975"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610347"
 ---
 # <a name="schedule-system-refresh"></a>Naplánujte obnovenie systému
 
 Naplánujte si automatické obnovy všetkých vašich [prehltnuté zdroje údajov](data-sources.md). Automatické obnovovanie pomáha zaistiť, aby sa aktualizácie z vašich zdrojov údajov prejavili vo vašich zjednotených profiloch zákazníkov.
 
 > [!NOTE]
-> Power Query vami spravované zdroje údajov sa obnovujú podľa vlastných plánov. Ak chcete naplánovať obnovenie týchto položiek Power Query zdroje údajov, nakonfigurujte nastavenia obnovenia na tomto konkrétnom zdroj údajov z **Zdroje dát** stránku.
+> Power Query vami spravované zdroje údajov sa obnovujú podľa vlastných plánov. Ak chcete naplánovať obnovenie týchto položiek Power Query zdroje údajov, nakonfigurujte nastavenia obnovenia na tomto konkrétnom zdroj údajov z **Zdroje dát** stránku. Zosúlaďte načasovanie s plánom obnovy údajov upstream tak, aby k obnovám nedošlo naraz.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Nastavenia obnovenia toku údajov.":::
 
 ## <a name="set-system-refresh-schedule"></a>Nastavte plán obnovy systému

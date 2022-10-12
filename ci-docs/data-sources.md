@@ -1,7 +1,7 @@
 ---
 title: Prehľad zdrojov údajov
 description: Zistite, ako importovať alebo prijímať údaje z rôznych zdrojov.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245668"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610071"
 ---
 # <a name="data-sources-overview"></a>Prehľad zdrojov údajov
 
@@ -65,9 +65,11 @@ Ak chcete zobraziť dostupné akcie, vyberte zdroj údajov.
 
 ## <a name="refresh-data-sources"></a>Obnovenie zdrojov údajov
 
-Zdroje údajov je možné obnovovať automaticky alebo podľa potreby manuálne. [Miestne zdroje údajov](connect-power-query.md#add-data-from-on-premises-data-sources) obnovovať podľa vlastných plánov, ktoré sú nastavené počas prijímania údajov. V prípade pripojených zdrojov údajov prijíma príjem údajov najnovšie údaje dostupné z tohto zdroj údajov.
+Zdroje údajov je možné obnovovať automaticky alebo podľa potreby manuálne. [Miestne zdroje údajov](connect-power-query.md#add-data-from-on-premises-data-sources) obnovovať podľa vlastných plánov, ktoré sú nastavené počas prijímania údajov. Tipy na riešenie problémov nájdete v časti [Riešenie problémov s PPDF Power Query -založené zdroj údajov problémy s obnovením](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
 
-Ísť do **Admin** > **Systém** > [**Rozvrh**](schedule-refresh.md) na konfiguráciu systémovo naplánovaných obnovení vašich prijatých zdrojov údajov.
+V prípade pripojených zdrojov údajov prijíma príjem údajov najnovšie údaje dostupné z tohto zdroj údajov.
+
+Ísť do **Admin** > **systém** > [**Rozvrh**](schedule-refresh.md) na konfiguráciu systémovo naplánovaných obnovení vašich prijatých zdrojov údajov.
 
 Ak chcete obnoviť zdroj údajov na požiadanie:
 
@@ -76,5 +78,37 @@ Ak chcete obnoviť zdroj údajov na požiadanie:
 1. Vyberte zdroj údajov, ktorý chcete obnoviť, a vyberte **Obnoviť**. Zdroj údajov je teraz spustený na účely manuálneho obnovenia. Obnovením zdroja údajov sa aktualizuje schéma entity aj údaje pre všetky entity uvedené v zdroji údajov.
 
 1. Vyberte stav, ktorý chcete otvoriť **Podrobnosti o pokroku** panel a zobraziť priebeh. Ak chcete úlohu zrušiť, vyberte **Zrušiť úlohu** v spodnej časti tabule.
+
+## <a name="corrupt-data-sources"></a>Poškodené zdroje údajov
+
+Prijímané údaje môžu mať poškodené záznamy, ktoré môžu spôsobiť dokončenie procesu prijímania údajov s chybami alebo upozorneniami.
+
+> [!NOTE]
+> Ak sa príjem údajov dokončí s chybami, následné spracovanie (napríklad zjednotenie alebo vytvorenie aktivity), ktoré využíva toto zdroj údajov, bude preskočené. Ak je príjem ukončený s upozorneniami, následné spracovanie pokračuje, ale niektoré záznamy nemusia byť zahrnuté.
+
+Tieto chyby je možné vidieť v detailoch úlohy.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Podrobnosti úlohy zobrazujúce chybu poškodených údajov.":::
+
+Poškodené záznamy sa zobrazujú v entitách vytvorených systémom.
+
+### <a name="fix-corrupt-data"></a>Opravte poškodené údaje
+
+1. Ak chcete zobraziť poškodené údaje, prejdite na **Údaje** > **entity** a hľadajte poškodené entity v **Systém** oddiele. Schéma pomenovania poškodených entít: 'Názov_zdroja_Entity_corrupt'.
+
+1. Vyberte skorumpovanú entitu a potom **Údaje** tab.
+
+1. Identifikujte poškodené polia v zázname a dôvod.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Dôvod korupcie." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Údaje** > **entity** zobraziť iba časť poškodených záznamov. Ak chcete zobraziť všetky poškodené záznamy, exportujte súbory do kontajnera v účte úložiska pomocou [Proces exportu Customer Insights](export-destinations.md). Ak ste použili svoj vlastný účet úložiska, môžete sa tiež pozrieť do priečinka Customer Insights vo svojom účte úložiska.
+
+1. Opravte poškodené údaje. Napríklad pre zdroje údajov Azure Data Lake, [opravte údaje v Data Lake Storage alebo aktualizujte typy údajov v súbore manifest/model.json](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Pre Power Query zdroje údajov, opravte údaje v zdrojovom súbore a [opravte typ údajov krok transformácie](connect-power-query.md#data-type-does-not-match-data) na **Power Query - Upraviť otázky** stránku.
+
+Po ďalšom obnovení zdroja údajov sa opravené záznamy prijmú v nástroji Customer Insights a odošlú sa do následných procesov.
+
+V stĺpci „deň narodenia“ je napríklad nastavený dátový typ ako „dátum“. Záznam zákazníka má dátum narodenia zapísaný ako „01/01/19777“. Systém označí tento záznam ako poškodený. Zmeňte dátum narodenia v zdrojovom systéme na „1977“. Po automatickom obnovení zdrojov údajov má pole teraz platný formát a záznam sa odstráni z poškodenej entity.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

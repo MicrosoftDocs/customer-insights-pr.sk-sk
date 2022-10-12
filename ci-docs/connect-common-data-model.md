@@ -1,7 +1,7 @@
 ---
 title: Pripojte priečinok Common Data Model použitím účtu Azure Data Lake
 description: Pracujte s údajmi z Common Data Model cez Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396110"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609967"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Pripojiť sa k údajom v doplnku Azure Data Lake Storage
 
@@ -27,22 +27,26 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 - Podporuje príjem údajov Azure Data Lake Storage *Gen2* účty. Účty Data Lake Storage Gen1 nemôžete používať na prijímanie údajov.
 
-- The Azure Data Lake Storage účet musí mať [povolený hierarchický menný priestor](/azure/storage/blobs/data-lake-storage-namespace). Údaje musia byť uložené vo formáte hierarchického priečinka, ktorý definuje koreňový priečinok a má podpriečinky pre každú entitu. Podpriečinky môžu mať priečinky s úplnými údajmi alebo s prírastkovými údajmi.
+- The Azure Data Lake Storage účet musí mať [hierarchický menný priestor povolený](/azure/storage/blobs/data-lake-storage-namespace). Údaje musia byť uložené vo formáte hierarchického priečinka, ktorý definuje koreňový priečinok a má podpriečinky pre každú entitu. Podpriečinky môžu mať priečinky s úplnými údajmi alebo s prírastkovými údajmi.
 
-- Ak chcete vykonať overenie pomocou objektu služby Azure, uistite sa, že je nakonfigurovaný vo vašom nájomníkovi. Ďalšie informácie nájdete v časti [Pripojte sa k Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
+- Ak chcete vykonať overenie pomocou objektu služby Azure, uistite sa, že je nakonfigurovaný vo vašom nájomníkovi. Viac informácií nájdete v časti [Pripojte sa k Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
 
 - The Azure Data Lake Storage z ktorého sa chcete pripojiť a prijímať údaje, musí byť v rovnakej oblasti Azure ako Dynamics 365 Customer Insights životné prostredie. Pripojenia k priečinku Common Data Model z dátového jazera v inej oblasti Azure nie sú podporované. Ak chcete poznať oblasť prostredia Azure, prejdite na **Admin** > **Systém** > **O** v Customer Insights.
 
 - Údaje uložené v online službách môžu byť uložené na inom mieste, než kde sa údaje spracúvajú alebo ukladajú Dynamics 365 Customer Insights.Importovaním alebo pripojením k údajom uloženým v online službách súhlasíte s tým, že údaje môžu byť prenesené a uložené s Dynamics 365 Customer Insights . [Ďalšie informácie nájdete v Centre dôveryhodnosti spoločnosti Microsoft](https://www.microsoft.com/trust-center).
 
-- Principál služby Customer Insights musí mať jednu z nasledujúcich rolí, aby mohol pristupovať k účtu úložiska. Ďalšie informácie nájdete v časti [Udeľte správcovi služby povolenia na prístup k účtu úložiska](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
+- Principál služby Customer Insights musí mať jednu z nasledujúcich rolí, aby mohol pristupovať k účtu úložiska. Viac informácií nájdete v časti [Udeľte správcovi služby povolenia na prístup k účtu úložiska](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
   - Čítačka údajov objektu Blob
   - Majiteľ údajov objektu Blob
   - Prispievateľ údajov do objektu BLOB úložiska
 
 - Používateľ, ktorý nastavuje pripojenie zdroj údajov, potrebuje v účte úložiska najmenej povolení prispievateľa údajov objektu Storage Blob.
 
-- Údaje vo vašom úložisku Data Lake by sa mali riadiť štandardom Common Data Model pre ukladanie vašich údajov a mali by mať manifest spoločného údajového modelu, ktorý bude reprezentovať schému dátových súborov (*.csv alebo *.parquet). Manifest musí obsahovať podrobnosti o entitách, ako sú stĺpce entít a typy údajov a umiestnenie a typ súboru s údajmi. Ďalšie informácie nájdete v časti [Manifest spoločného dátového modelu](/common-data-model/sdk/manifest). Ak manifest neexistuje, správcovia s prístupom vlastníka údajov objektu Storage Blob alebo prispievateľa údajov objektu úložiska môžu definovať schému pri prijímaní údajov.
+- Údaje vo vašom úložisku Data Lake by sa mali riadiť štandardom Common Data Model pre ukladanie vašich údajov a mali by mať manifest spoločného údajového modelu, ktorý bude reprezentovať schému dátových súborov (*.csv alebo *.parquet). Manifest musí obsahovať podrobnosti o entitách, ako sú stĺpce entít a typy údajov a umiestnenie a typ súboru s údajmi. Viac informácií nájdete v časti [Manifest spoločného dátového modelu](/common-data-model/sdk/manifest). Ak manifest neexistuje, správcovia s prístupom vlastníka údajov objektu Storage Blob alebo prispievateľa údajov objektu úložiska môžu definovať schému pri prijímaní údajov.
+
+## <a name="recommendations"></a>Odporúčania
+
+Pre optimálny výkon Customer Insights odporúča veľkosť oddielu 1 GB alebo menej a počet súborov oddielu v priečinku nesmie prekročiť 1 000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Pripojenie k produktu Azure Data Lake Storage
 
@@ -56,10 +60,10 @@ Vkladať údaje do Dynamics 365 Customer Insights pomocou vášho Azure Data Lak
 
 1. Zadajte a **názov** pre zdroj údajov a voliteľné **Popis**. Názov jedinečne identifikuje zdroj údajov a odkazuje sa naň v následných procesoch a nemožno ho zmeniť.
 
-1. Vyberte jednu z nasledujúcich možností pre **Pripojte svoje úložisko pomocou**. Ďalšie informácie nájdete v časti [Pripojte Customer Insights k a Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
+1. Vyberte jednu z nasledujúcich možností pre **Pripojte svoje úložisko pomocou**. Viac informácií nájdete v časti [Pripojte Customer Insights k a Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md).
 
-   - **Prostriedok Azure** : Zadajte **ID zdroja** . Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Ďalšie informácie nájdete v časti [Súkromné odkazy](security-overview.md#set-up-an-azure-private-link).
-   - **Predplatné Azure** : Vyberte **Predplatné** a potom **Skupina zdrojov** a **Účet úložiska**. Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Ďalšie informácie nájdete v časti [Súkromné odkazy](security-overview.md#set-up-an-azure-private-link).
+   - **Prostriedok Azure** : Zadajte **ID zdroja** . Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#set-up-an-azure-private-link).
+   - **Predplatné Azure** : Vyberte **Predplatné** a potom **Skupina zdrojov** a **Účet úložiska**. Voliteľne, ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure, vyberte **Povoliť súkromný odkaz**. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Na vytvorenie zdroj údajov potrebujete jednu z nasledujúcich rolí pre kontajner alebo účet úložiska:
@@ -160,7 +164,7 @@ Načítanie údajov môže chvíľu trvať. Po úspešnom obnovení môžu byť 
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Upraviť Azure Data Lake Storage zdroj údajov
 
-Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Ďalšie informácie nájdete v časti [Pripojte Customer Insights k a Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md). Ak sa chcete pripojiť k inému kontajneru z účtu úložiska alebo zmeniť názov účtu, musíte [vytvoriť nové pripojenie k zdroju údajov](#connect-to-azure-data-lake-storage).
+Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Viac informácií nájdete v časti [Pripojte Customer Insights k a Azure Data Lake Storage Účet Gen2 s principálom služby Azure](connect-service-principal.md). Ak sa chcete pripojiť k inému kontajneru z účtu úložiska alebo zmeniť názov účtu, musíte [vytvoriť nové pripojenie k zdroju údajov](#connect-to-azure-data-lake-storage).
 
 1. Prejdite do **Údaje** > **Zdroje údajov**.
 
@@ -178,7 +182,7 @@ Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Ďal
         > - Majiteľ údajov objektu Blob
         > - Prispievateľ údajov do objektu BLOB úložiska
 
-   - **Povoliť súkromný odkaz** ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure. Ďalšie informácie nájdete v časti [Súkromné odkazy](security-overview.md#set-up-an-azure-private-link).
+   - **Povoliť súkromný odkaz** ak chcete prijímať údaje z účtu úložiska prostredníctvom súkromného prepojenia Azure. Viac informácií nájdete v časti [Súkromné odkazy](security-overview.md#set-up-an-azure-private-link).
 
 1. Vyberte **Ďalej**.
 1. Zmeňte čokoľvek z nasledujúceho:
@@ -196,8 +200,104 @@ Môžete aktualizovať *Pripojte sa k účtu úložiska pomocou* možnosť. Ďal
 
 1. Vyberte **Atribúty** pridať alebo zmeniť atribúty alebo povoliť profilovanie údajov. Potom vyberte položku **Hotovo**.
 
-1. Kliknite **Uložiť** aplikujte zmeny a vráťte sa na stránku **Zdroje dát** stránku.
+1. Kliknite **Uložiť** aplikujte zmeny a vráťte sa do **Zdroje dát** stránku.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Bežné dôvody chýb príjmu alebo poškodených údajov
+
+Medzi najbežnejšie dôvody, prečo môže byť záznam počas príjmu údajov považovaný za poškodený, patria:
+
+- Typy údajov a hodnoty polí sa medzi zdrojovým súborom a schémou nezhodujú
+- Počet stĺpcov v zdrojovom súbore sa nezhoduje so schémou
+- Polia obsahujú znaky, ktoré spôsobujú zošikmenie stĺpcov v porovnaní s očakávanou schémou. Napríklad: nesprávne formátované úvodzovky, úvodzovky bez špeciálnych znakov, znaky nového riadku alebo znaky s tabuľkami.
+- Chýbajú súbory oddielov
+- Ak existujú stĺpce datetime/date/datetimeoffset, ich formát musí byť špecifikovaný v schéme, ak sa neriadi štandardným formátom.
+
+### <a name="schema-or-data-type-mismatch"></a>Nesúlad schémy alebo typu údajov
+
+Ak údaje nezodpovedajú schéme, proces prijímania sa dokončí s chybami. Opravte buď zdrojové údaje alebo schému a znova vykonajte údaje.
+
+### <a name="partition-files-are-missing"></a>Chýbajú súbory oddielov
+
+- Ak bol príjem úspešný bez poškodených záznamov, ale nevidíte žiadne údaje, upravte súbor model.json alebo manifest.json, aby ste sa uistili, že sú zadané oblasti. potom [obnovte zdroj údajov](data-sources.md#refresh-data-sources).
+
+- Ak dôjde k príjmu údajov v rovnakom čase, ako sa obnovujú zdroje údajov počas automatického obnovenia plánu, súbory oddielov môžu byť prázdne alebo nie sú k dispozícii na spracovanie Customer Insights. Ak chcete zosúladiť s plánom aktualizácie upstream, zmeňte [plán obnovy systému](schedule-refresh.md) alebo plán obnovy pre zdroj údajov. Zosúlaďte načasovanie tak, aby sa všetky aktualizácie nevyskytli naraz a poskytovali najnovšie údaje na spracovanie v Customer Insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Polia dátumu a času v nesprávnom formáte
+
+Polia dátumu a času v entite nie sú vo formáte ISO 8601 alebo en-US. Predvolený formát dátumu a času v Customer Insights je formát en-US. Všetky polia dátumu a času v entite by mali byť v rovnakom formáte. Customer Insights podporuje iné formáty za predpokladu, že anotácie alebo vlastnosti sú vytvorené na úrovni zdroja alebo entity v modeli alebo manifest.json. Napríklad:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  V súbore manifest.json možno formát dátumu a času zadať na úrovni entity alebo na úrovni atribútu. Na úrovni entity použite „exhibitsTraits“ v entite v súbore *.manifest.cdm.json na definovanie formátu dátumu a času. Na úrovni atribútu použite "appliedTraits" v atribúte v entityname.cdm.json.
+
+**Manifest.json na úrovni entity**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json na úrovni atribútov**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
