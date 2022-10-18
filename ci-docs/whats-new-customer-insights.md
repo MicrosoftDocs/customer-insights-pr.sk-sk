@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
-ms.translationtype: HT
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
+ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609611"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638370"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v službe Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Aktualizácie zavádzame na základe jednotlivých regiónov. Do niektorých reg
 
 > [!TIP]
 > Ak chcete odoslať hlas pre požadované funkcie a návrhy produktov, prejdite na [portál aplikačných nápadov Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Aktualizácie zo septembra 2022
+
+Aktualizácie v septembri 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
+
+### <a name="export-data-to-hubspot"></a>Exportujte údaje do HubSpot
+
+Exportujte segmenty zjednotených zákazníckych profilov do HubSpot a použite ich na e-mailový marketing.
+
+Viac informácií nájdete v časti [Exportujte segmenty do HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Odstráňte zjednotené pole alebo entitu zo zjednotenia údajov
+
+Z procesu zjednotenia údajov môžete odstrániť polia a entity.
+
+Viac informácií nájdete v časti [Odstráňte zjednotené pole](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Spravujte neznáme profily zákazníkov
+
+Zapamätateľné prispôsobenie závisí od bohatosti a úplnosti údajov o vašich zákazníkoch a Customer Insights vám pomáha dosiahnuť tieto ciele. Môžete spravovať zákaznícke profily pre používateľov, o ktorých okrem ID nemáte žiadne informácie.
+
+Viac informácií nájdete v časti [Spravujte neznáme profily pomocou Customer Insights](manage-unknown-profiles.md).
 
 ## <a name="august-2022-updates"></a>Aktualizácie z augusta 2022
 
@@ -98,7 +120,7 @@ Viac informácií nájdete v časti [Bezpečný prístup k zákazníckym údajom
 
 Súkromné prepojenie Azure umožní, aby sa Customer Insights pripojili k vášmu Azure Data Lake Storage účtu cez súkromný koncový bod vo vašej virtuálnej sieti. Pre údaje v účte úložiska, ktorý nie je vystavený verejnému internetu, súkromné prepojenie umožňuje pripojenie k tejto obmedzenej sieti.
 
-Viac informácií nájdete v časti [Použite súkromný odkaz v Customer Insights](security-overview.md#set-up-an-azure-private-link).
+Ďalšie informácie nájdete v časti [Použite súkromný odkaz v Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Aktualizácie z mája 2022
 
@@ -108,7 +130,7 @@ Aktualizácie v máji 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opra
 
  Zjednotenie údajov vám umožňuje zjednotiť kedysi nesúrodé zdroje údajov do jedného hlavného súboru údajov, ktorý poskytuje jednotný pohľad na tieto údaje. Dáta môžu byť zjednotené na jednej entite alebo viacerých entitách. Najprv ty [vyberte entity a zdrojové polia](map-entities.md),[odstrániť duplicitné záznamy](remove-duplicates.md), špecifikovať pravidlá pre [zodpovedajúce podmienky](match-entities.md) a definujte ktoré [polia, ktoré sa majú zahrnúť do zjednotených zákazníckych profilov](merge-entities.md).
 
-Viac informácií nájdete v časti [Prehľad zjednotenia údajov](data-unification.md).
+Ďalšie informácie nájdete v časti [Prehľad zjednotenia údajov](data-unification.md).
 
 ### <a name="refreshed-home-page-in-customer-insights"></a>Obnovená domovská stránka v Customer Insights
 
@@ -124,13 +146,13 @@ Teraz môžeš [sledovať využitie segmentu](segments.md#track-usage-of-a-segme
 
 Criteo je online platforma, ktorá pomáha používateľom spravovať digitálnu reklamu. Teraz môžete exportovať segmenty zjednotených zákazníckych profilov na generovanie kampaní, poskytovanie e-mailového marketingu a používanie špecifických skupín zákazníkov s Criteo.
 
-Ďalšie informácie nájdete v časti [Export segmentov do Criteo (ukážka)](export-criteo.md).
+Viac informácií nájdete v časti [Export segmentov do Criteo (ukážka)](export-criteo.md).
 
 ### <a name="refined-documentation-structure-for-environment-creation"></a>Prepracovaná štruktúra dokumentácie pre tvorbu prostredia
 
-Prezreli sme si dokumenty pomocníka týkajúce sa vytvárania a správy prostredí v Customer Insights. Články sú teraz zoskupené pod uzlom Prostredia v obsahu. Reštrukturalizované články poskytujú viac usmernení pre rôzne spôsoby nastavenia prostredí a majú jasnejšiu štruktúru. Ak sa chcete podeliť o spätnú väzbu, dajte nám vedieť pomocou ovládacích prvkov na konci článkov pomocníka.
+Prezreli sme si dokumenty pomoci súvisiace s vytváraním a správou prostredí v Customer Insights. Články sú teraz zoskupené pod uzlom Prostredia v obsahu. Reštrukturalizované články poskytujú viac usmernení pre rôzne spôsoby nastavenia prostredí a majú jasnejšiu štruktúru. Ak máte spätnú väzbu, ktorú chcete zdieľať, dajte nám vedieť pomocou ovládacích prvkov na konci článkov pomocníka.
 
-Ďalšie informácie nájdete v časti [Ako na to: Vytvorte nové prostredie](create-environment.md).
+Viac informácií nájdete v časti [Ako na to: Vytvorte nové prostredie](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Aktualizácie pre apríl 2022
 
@@ -140,7 +162,7 @@ Aktualizácie v apríli 2022 zahŕňajú nové funkcie, vylepšenia výkonu a op
 
 Dun & Bradstreet poskytuje firmám komerčné údaje, analýzy a štatistiky. Umožňuje zákazníkom so zjednotenými zákazníckymi profilmi pre spoločnosti obohacovať svoje údaje. Obohatenia zahŕňajú atribúty, ako je číslo DUNS, veľkosť spoločnosti, lokalita, odvetvie a ďalšie.
 
-Viac informácií nájdete v časti [Obohatenie firemných profilov o Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Viac informácií nájdete v časti [Obohatenie firemných profilov o Dun & Bradstreet (ukážka)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Pri vytváraní novej miery definujte typ miery
 
@@ -158,9 +180,9 @@ Ak nám chcete dať vedieť, ako vnímate túto zmenu alebo si všimnete, že ni
 
 Aktualizácie v marci 2022 zahŕňajú nové funkcie, vylepšenia výkonu a opravy chýb.
 
-### <a name="liveramp-abilitec-enrichment-preview"></a>Obohatenie LiveRamp AbiliTec (ukážka)
+### <a name="liveramp-abilitec-enrichment-preview"></a>LiveRamp AbiliTec obohatenie (ukážka)
 
-LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Osobné identifikátory vo svojich zákazníckych údajoch môžete namapovať na graf identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
+LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Môžete namapovať osobné identifikátory vo svojich zákazníckych údajoch do grafu identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
 
 Viac informácií nájdete v časti [Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)](enrichment-liveramp.md).
 
@@ -168,7 +190,7 @@ Viac informácií nájdete v časti [Obohaťte profily zákazníkov o údaje o i
 
 Ak vaša organizácia udržiava veľa segmentov alebo opatrení, nájsť ten správny môže byť niekedy náročné. Táto nová funkcia vám umožňuje organizovať zoznamy pomocou značiek a stĺpcov. Pomáha rýchlo a jednoducho nájsť údaje a prispôsobiť zobrazenia.
 
-Ďalšie informácie nájdete v časti [Práca so značkami a stĺpcami](work-with-tags-columns.md).
+Viac informácií nájdete v časti [Práca so značkami a stĺpcami](work-with-tags-columns.md).
 
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Povoliť zdieľanie údajov s Dataverse pri používaní vlastného účtu úložiska
 
@@ -210,7 +232,7 @@ Organizácie, ktoré už používajú Azure Synapse Analytics môže tieto údaj
 
 ### <a name="liveramp-enrichment-preview"></a>Obohatenie LiveRamp (ukážka)
 
-LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Osobné identifikátory vo svojich zákazníckych údajoch môžete namapovať na graf identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
+LiveRamp poskytuje rozlíšenie identity a konsolidáciu údajov o zákazníkoch. Môžete namapovať osobné identifikátory vo svojich zákazníckych údajoch do grafu identity AbiliTec a získať AbiliTec ID. Tieto ID potom môžete použiť na lepšie zjednotenie údajov o vašich zákazníkoch.
 
 Viac informácií nájdete v časti [Obohaťte profily zákazníkov o údaje o identite z LiveRamp (ukážka)](enrichment-liveramp.md).
 
@@ -218,7 +240,7 @@ Viac informácií nájdete v časti [Obohaťte profily zákazníkov o údaje o i
 
 Použite údaje zo zdrojov, ako je Microsoft a ďalší partneri, na obohatenie údajov o zákazníkoch pred zjednotením údajov. Zdroj údajov obohatenia pomáhajú produkovať vyššiu úplnosť a kvalitu údajov, ktoré môžu pomôcť dosiahnuť lepšie výsledky, keď svoje údaje zjednotíte.
 
-Ďalšie informácie nájdete v časti [Obohatenie pre zdroje údajov (Ukážka)](data-sources-enrichment.md).
+Ďalšie informácie nájdete v časti [Obohatenie pre zdroje údajov (ukážka)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Zmeniť vlastníka prostredia
 
