@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424328"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671270"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práca s údajmi Customer Insights v Microsoft Dataverse
 
@@ -63,6 +63,9 @@ The **Microsoft Dataverse** krok vám umožní prepojiť Customer Insights s va�
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Povoliť zdieľanie údajov s Dataverse z vlastného Azure Data Lake Storage (Náhľad)
 
 In [tvoj vlastný Azure Data Lake Storage účtu](own-data-lake-storage.md), overte, či používateľ, ktorý nastavuje prostredie Customer Insights, má min **Storage Blob Data Reader** povolenia na`customerinsights` kontajnera v účte úložiska.
+
+> [!NOTE]
+> Zdieľanie údajov je možné len vtedy, ak používate svoje vlastné Azure Data Lake Storage účtu. Toto nastavenie nie je dostupné, ak prostredie Customer Insights používa predvolené nastavenie Dataverse skladovanie.
 
 ### <a name="limitations"></a>Obmedzenia
 
@@ -129,7 +132,7 @@ OR
 1. Ísť do **Pokročilé nastavenia** > **Riešenia**.
 1. Odinštalujte **CustomerInsightsCustomerCard** Riešenie.
 
-Ak odstránenie pripojenia zlyhá kvôli závislostiam, musíte odstrániť aj závislosti. Viac informácií nájdete v časti [Odstránenie závislostí](/power-platform/alm/removing-dependencies).
+Ak odstránenie pripojenia zlyhá kvôli závislostiam, musíte odstrániť aj závislosti. Ďalšie informácie nájdete v časti [Odstránenie závislostí](/power-platform/alm/removing-dependencies).
 
 ## <a name="output-entities"></a>Výstupné entity
 
@@ -146,7 +149,7 @@ Niektoré výstupné entity z Customer Insights sú dostupné ako tabuľky v Dat
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Táto tabuľka obsahuje zjednotený profil zákazníka z nástroja Customer Insights. Schéma pre zjednotený zákaznícky profil závisí od entít a atribútov použitých v procese zjednotenia údajov. Schéma profilu zákazníka zvyčajne obsahuje podmnožinu atribútov z [Definícia Common Data Model pre CustomerProfile ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Pre scenár B-to-B obsahuje zákaznícky profil zjednotené účty a schéma zvyčajne obsahuje podmnožinu atribútov z [Definícia spoločného dátového modelu účtu](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+Táto tabuľka obsahuje zjednotený profil zákazníka z nástroja Customer Insights. Schéma pre zjednotený zákaznícky profil závisí od entít a atribútov použitých v procese zjednotenia údajov. Schéma profilu zákazníka zvyčajne obsahuje podmnožinu atribútov z [Definícia Common Data Model pre CustomerProfile ](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Pre scenár B-to-B obsahuje zákaznícky profil jednotné účty a schéma zvyčajne obsahuje podmnožinu atribútov z [Definícia spoločného dátového modelu účtu](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
 
 ### <a name="contactprofile"></a>ContactProfile
 
