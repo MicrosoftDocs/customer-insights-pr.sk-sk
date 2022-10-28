@@ -2,7 +2,7 @@
 title: Dodržujte podmienky zjednotenia údajov
 description: Priraďujte entity na účely vytvorenia jednotných profilov zákazníkov.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304676"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721540"
 ---
 # <a name="match-conditions-for-data-unification"></a>Dodržujte podmienky zjednotenia údajov
 
@@ -124,18 +124,18 @@ Napríklad, ak vaše pravidlo zhody kombinuje priezvisko, mesto a dátum naroden
 
 1. V **Upraviť pravidlo** panel, vyberte **Pridať** > **Pridať výnimku**.
 
-1. Zadajte kritériá výnimky.
+1. Zadajte kritériá výnimiek.
 
 1. Ak chcete pravidlo uložiť, kliknite na položku **Hotovo**.
 
 ### <a name="specify-custom-match-conditions"></a>Zadajte vlastné podmienky spárovania
 
-Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozícii sú štyri možnosti:
+Zadajte podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozícii sú štyri možnosti:
 
 |Možnosť  |Description |Príklad  |
 |---------|---------|---------|
-|Vždy sa zhodovať     | Definuje hodnoty, ktoré sa vždy zhodujú.         |  Vždy sa zhodujú *Mike* a *MikeR*.       |
-|Nikdy sa nezhodovať     | Definuje hodnoty, ktoré sa nikdy nezhodujú.        | Nikdy sa nezhodujú *John* a *Jonathan*.        |
+|Vždy sa zhodovať     | Definuje hodnoty pre primárne kľúče, ktoré sa vždy zhodujú.         |  Vždy priraďte riadok k primárnemu kľúču *12345* do riadku s primárnym kľúčom *54321*.       |
+|Nikdy sa nezhodovať     | Definuje hodnoty pre primárne kľúče, ktoré sa nikdy nezhodujú.        | Nikdy nepriraďujte riadok k primárnemu kľúču *12345* do riadku s primárnym kľúčom *54321*.        |
 |Obísť            | Definuje hodnoty, ktoré by mal systém vždy ignorovať vo fáze zápasu. |  Ignorujte hodnoty *11111* a *Neznámy* počas zápasu.        |
 |Mapovanie aliasu    | Definovanie hodnôt, ktoré by mal systém považovať za rovnakú hodnotu.         | Zvážte *Joe* byť rovný *Jozefa*.        |
 
@@ -143,17 +143,18 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Vlastné tlačidlo":::
 
-1. Vyber **Vlastný typ** a vyberte **Stiahnite si šablónu**. Pre každú možnosť zhody potrebujete samostatnú šablónu.
+1. Vyber **Vlastný typ** a vyberte **Stiahnite si šablónu**. Premenujte šablónu bez medzier. Pre každú možnosť zhody použite samostatnú šablónu.
 
-1. Otvorte stiahnutý súbor šablóny a vyplňte podrobnosti. Šablóna obsahuje polia na určenie hodnôt entity a primárneho kľúča entity, ktoré sa majú použiť pri vlastnom zosúlaďovaní. Napríklad ak chcete primárny kľúč *12345* od entity *Predaj*, aby sa vždy zhodoval s primárnym kľúčom *34567* od entity *Kontakt*, vyplňte šablónu:
-    - Entity1: Predaj
-    - Entity1Key: 12345
-    - Entity2: Kontakt
-    - Entity2Key: 34567
+1. Otvorte stiahnutý súbor šablóny a vyplňte podrobnosti. Šablóna obsahuje polia na určenie hodnôt entity a primárneho kľúča entity, ktoré sa majú použiť pri vlastnom zosúlaďovaní. V názvoch entít sa rozlišujú malé a veľké písmená. Napríklad ak chcete primárny kľúč *12345* od entity *Predaj*, aby sa vždy zhodoval s primárnym kľúčom *34567* od entity *Kontakt*, vyplňte šablónu:
+   - Entity1: Predaj
+   - Entity1Key: 12345
+   - Entity2: Kontakt
+   - Entity2Key: 34567
 
    Rovnaký súbor šablóny môže určiť vlastné záznamy zosúlaďovania z viacerých entít.
 
-   Ak chcete určiť vlastné párovanie pre deduplikáciu entity, zadajte rovnakú entitu pre Entitu1 aj Entitu2 a nastavte rôzne hodnoty primárneho kľúča.
+   > [!NOTE]
+   > Ak chcete určiť vlastné párovanie pre deduplikáciu entity, zadajte rovnakú entitu pre Entitu1 aj Entitu2 a nastavte rôzne hodnoty primárneho kľúča. Ak chcete použiť vlastnú zhodu, musíte pre entitu definovať aspoň jedno deduplikačné pravidlo.
 
 1. Po pridaní všetkých prepísaní uložte súbor šablóny.
 
@@ -169,6 +170,8 @@ Môžete zadať podmienky, ktoré prepíšu predvolenú logiku zhody. K dispozí
    - Pre **Obchvat** alebo **Mapovanie aliasu**, vyberte **Upraviť** na existujúce pravidlo zhody alebo vytvorte nové pravidlo. V rozbaľovacej ponuke Normalizácie vyberte možnosť **Vlastný bypass** alebo **Mapovanie aliasu** možnosť a vyberte **hotový**.
 
 1. Vyberte **hotový** na **Vlastné** panel na použitie vlastnej konfigurácie zhody.
+
+   Každý prijatý súbor šablóny je vlastný zdroj údajov. Ak sa zistia záznamy, ktoré si vyžadujú špeciálne prispôsobenie, aktualizujte príslušné zdroj údajov. Aktualizácia sa použije pri ďalšom procese zjednotenia. Napríklad identifikujete dvojčatá s takmer rovnakým menom, ktoré žijú na rovnakej adrese, ktorá bola zlúčená ako jedna osoba. Aktualizujte zdroj údajov a identifikujte dvojičky ako samostatné, jedinečné záznamy.
 
 > [!div class="nextstepaction"]
 > [Ďalší krok: Zjednotenie polí](merge-entities.md)
