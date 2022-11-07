@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196597"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725097"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportovať segmenty do služby Google Ads (ukážka)
 
@@ -30,6 +30,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do zoznamu cieľových s
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
 - Exportujte až 1 milión zákazníckych profilov na export do služby Google Ads, čo môže z dôvodu obmedzení na strane poskytovateľa trvať až 30 minút.
 - Iba segmenty.
 - Zhoda v službe Google Ads môže trvať až 48 hodín.

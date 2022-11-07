@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f2990ad410dda0cbf952f82f3fc30b3a53a7bcd4
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 855e77055eeb24a2c6cff0d45cd23edf93cc0581
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9197011"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724867"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Export segmentov do SendGrid (ukážka)
 
@@ -29,6 +29,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do zoznamov kontaktov Se
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
 - Celkovo až 100 000 zákazníckych profilov do SendGrid, čo môže trvať až niekoľko hodín. Počet zákazníckych profilov, ktoré môžete exportovať do SendGrid, závisí od vašej zmluvy so SendGrid.
 - Iba segmenty.
 

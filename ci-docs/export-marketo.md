@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f57cdfbb24df8a8ffa1670b426d50dbba2c5f40f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: cba40b74b86a40fc41db856760c9361b755a8864
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195263"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724959"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Export segmentov do Marketo (ukážka)
 
@@ -23,12 +23,13 @@ Marketo umožňuje export zjednotených profilov zákazníkov s cieľom vytvára
 
 - A [Účet Marketo](https://login.marketo.com/) a zodpovedajúce poverenia správcu.
 - A [ID klienta Marketo, tajný kľúč klienta a názov hostiteľa koncového bodu REST](https://developers.marketo.com/rest-api/authentication/).
-- [Existujúce zoznamy v Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) a príslušné ID.
+- [Existujúce zoznamy v službe Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) a príslušné ID.
 - [Konfigurované segmenty](segments.md).
 - Zjednotené profily zákazníkov v exportovaných segmentoch obsahujú pole predstavujúce e-mailovú adresu.
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
 - Až 1 milión zákazníckych profilov na export do Marketo, čo môže trvať až 3 hodiny. Počet zákazníckych profilov, ktoré môžete exportovať do Marketo, závisí od vašej zmluvy so spoločnosťou Marketo.
 - Iba segmenty.
 

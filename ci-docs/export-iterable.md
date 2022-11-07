@@ -1,5 +1,5 @@
 ---
-title: Export segmentov do Iterable (ukážka)
+title: Exportovať segmenty do Iterable (ukážka)
 description: Zistite, ako nakonfigurovať pripojenie a exportovať do Iterable.
 ms.date: 07/25/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195448"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724623"
 ---
-# <a name="export-segments-to-iterable-preview"></a>Export segmentov do Iterable (ukážka)
+# <a name="export-segments-to-iterable-preview"></a>Exportovať segmenty do Iterable (ukážka)
 
 Exportujte segmenty zjednotených zákazníckych profilov do Iterable a použite ich na marketingové aktivity.
 
@@ -28,6 +28,7 @@ Exportujte segmenty zjednotených zákazníckych profilov do Iterable a použite
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
 - Až 1 milión zákazníckych profilov do Iterable, ktorých dokončenie môže trvať až 30 minút. Počet zákazníckych profilov, ktoré môžete exportovať do Iterable, závisí od vašej zmluvy s Iterable.
 - Iba segmenty.
 

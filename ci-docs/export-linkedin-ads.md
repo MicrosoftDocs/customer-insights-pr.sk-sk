@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304722"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725327"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Export segmentov do služby LinkedIn Ads (verzia Preview)
 
@@ -28,6 +28,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do LinkedIn Ads a vytvor
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
 - Až 100 000 profilov zákazníkov na export do reklám LinkedIn, ktorého dokončenie môže trvať až 10 minút.
 - Iba segmenty. Segment musí obsahovať aspoň 300 jedinečných profilov.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 178d2df8edf1abcec72664e19d73a88f2b97f12d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e62888a6d618fb1154890e607d8c23d3767d35f7
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195586"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725419"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Export segmentov do ActiveCampaign (verzia Preview)
 
@@ -29,6 +29,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do ActiveCampaign a pou�
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
 - Až 1 milión zákazníckych profilov na export do ActiveCampaign, ktorého dokončenie môže trvať až 90 minút. Počet profilov zákazníkov, ktoré môžete exportovať do služby ActiveCampaign, závisí od vašej zmluvy so spoločnosťou ActiveCampaign.
 - Iba segmenty.
 

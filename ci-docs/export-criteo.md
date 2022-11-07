@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195355"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724808"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Export segmentov do Criteo (ukážka)
 
@@ -27,7 +27,8 @@ Exportujte segmenty zjednotených zákazníckych profilov na generovanie kampan�
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Až 1 milión zákazníckych profilov na export do Criteo, ktorého dokončenie môže trvať až 30 minút. Počet zákazníckych profilov, ktoré môžete exportovať do Criteo, závisí od vašej zmluvy s Criteo.
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
+- Až 1 milión zákazníckych profilov na export do Criteo, ktorého dokončenie môže trvať až 30 minút. Počet zákazníckych profilov, ktoré môžete exportovať do Critea, závisí od vašej zmluvy so spoločnosťou Criteo.
 - Iba segmenty.
 
 ## <a name="set-up-connection-to-criteo"></a>Nastavte pripojenie k Criteo
@@ -65,8 +66,6 @@ Exportujte segmenty zjednotených zákazníckych profilov na generovanie kampan�
 1. Zadajte názov exportu.
 
 1. V sekcii **Párovanie údajov** v poli **E-mail** vyberte pole, ktoré predstavuje e-mailovú adresu zákazníka.
-
-1. Voliteľne exportujte **ID inzerenta** a **názov**.
 
 1. Vyberte segmenty, ktoré chcete exportovať.
 

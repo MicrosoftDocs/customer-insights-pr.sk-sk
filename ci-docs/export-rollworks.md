@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d857bf5d11de86521c4a9d4fc665c020496d89d2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195631"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725144"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Export segmentov do RollWorks (verzia Preview)
 
@@ -28,6 +28,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do RollWorks a použite 
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
 - Až 250 000 zákazníckych profilov na export do RollWorks, čo môže trvať až 10 minút. Počet zákazníckych profilov, ktoré môžete exportovať do RollWorks, závisí od vašej zmluvy s RollWorks.
 - Iba segmenty.
 

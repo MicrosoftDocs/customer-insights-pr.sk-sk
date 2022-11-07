@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196505"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724520"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Export segmentov do Constant Contact (verzia Preview)
 
@@ -28,6 +28,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do Constant Contact a po
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
 - Až 1 milión zákazníckych profilov na export do Constant Contact, ktorého dokončenie môže trvať až jednu hodinu. Počet zákazníckych profilov, ktoré môžete exportovať do Constant Contact, závisí od vašej zmluvy s Constant Contact.
 - Iba segmenty.
 

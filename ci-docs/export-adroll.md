@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195769"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724731"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Export segmentov do AdRoll (verzia Preview)
 
@@ -28,6 +28,7 @@ Exportujte segmenty zjednotených profilov zákazníkov do služby AdRoll a pou�
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
+- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
 - Až 250 000 profilov zákazníkov na export do AdRoll, ktorého dokončenie môže trvať až 10 minút. Počet zákazníckych profilov, ktoré môžete exportovať do AdRoll, závisí od vašej zmluvy so spoločnosťou AdRoll.
 - Iba segmenty. Segment musí obsahovať aspoň 100 profilov zákazníkov.
 
