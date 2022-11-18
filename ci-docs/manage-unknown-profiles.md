@@ -8,29 +8,29 @@ ms.topic: conceptual
 author: andtapia
 ms.author: andreatapia
 manager: shellyha
-ms.openlocfilehash: d7e5050ee5832df5ecf40a352f7ea8d42830fa45
-ms.sourcegitcommit: f6b6a4c4ce9cf12e449488b24aab80a2cbfe0c47
+ms.openlocfilehash: 0e12f64a22b93d117009fb8aee76d02a7583e699
+ms.sourcegitcommit: 24627d53dcdf607baaab1cc3c299a3584c386173
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "9556415"
+ms.lasthandoff: 11/15/2022
+ms.locfileid: "9776840"
 ---
 # <a name="manage-unknown-profiles-with-customer-insights"></a>Spravujte neznáme profily pomocou Customer Insights
 
-Používatelia internetu sú často online neznámi a anonymní. Ak nie sú prihlásení, pretože používajú iné zariadenia alebo kanály, platí to aj pre tých najvernejších zákazníkov. Keďže súbory cookie tretích strán pravdepodobne čoskoro zmiznú, spravovanie používateľských preferencií na základe údajov prvej strany je kľúčové na dosiahnutie odlišných prispôsobených skúseností. Pre mnohé značky sú známi alebo overení používatelia menšinou napriek rastúcim očakávaniam zákazníkov v súvislosti s personalizáciou. Pre firmy je skvelé vedieť, kto sú ich zákazníci, na základe spoľahlivých, podrobných a jednotných údajov.
+Používatelia internetu sú často online neidentifikovaní alebo anonymní. Dokonca aj tí najvernejší zákazníci sa môžu zdať „neznámi“, ak nie sú prihlásení na rôznych zariadeniach. Pre mnohé značky sú známi alebo overení používatelia menšinou napriek rastúcim očakávaniam zákazníkov v súvislosti s personalizáciou. Vzhľadom na budúcnosť súborov cookie tretích strán je na dosiahnutie prispôsobených skúseností rozhodujúce spravovanie používateľských preferencií na základe údajov prvej strany.
 
-Zapamätateľné prispôsobenie závisí od bohatosti a úplnosti údajov o vašich zákazníkoch a Customer Insights vám pomáha dosiahnuť tieto ciele. Na začiatku činnosť zákazníka nemusíte obmedzovať ani zastaviť používanie údajov zozbieraných. Customer Insights vám umožňuje priniesť svoje vlastné údaje na vytvorenie zákazníckeho profilu pre neznámych používateľov. Potom môžete tento profil použiť na ďalšie akcie aj napriek chýbajúcim kontaktným informáciám. Importujte údaje prvej strany zo zdrojov, ako sú webové, mobilné alebo CRM systémy, do Customer Insights, aby ste neustále obohacovali profily zákazníkov. Keď zjednotíte viac interakcií, [otočte *neznámy* zákazníka do a *známy* zákazníka](unknown-to-known.md).
+Zapamätateľné prispôsobenie závisí od toho, ako dobre poznáte svojho zákazníka a Customer Insights vám v tom pomáha sledovaním všetkých vašich zákazníkov.  Na začiatku činnosť zákazníka nemusíte obmedzovať ani zastaviť používanie údajov zozbieraných. Customer Insights vám umožňuje priniesť svoje vlastné údaje na vytvorenie zákazníckeho profilu pre neznámych používateľov. Potom môžete tento profil použiť na ďalšie akcie aj napriek chýbajúcim kontaktným informáciám. Importujte údaje prvej strany zo zdrojov, ako sú webové, mobilné alebo CRM systémy, do Customer Insights, aby ste neustále obohacovali profily zákazníkov. Keď zjednotíte viac interakcií, [otočte *neznámy* zákazníka do a *známy* zákazníka](unknown-to-known.md).
 
 ## <a name="sample-scenario"></a>Vzorový scenár
 
-Elektronický obchod je najrýchlejšie rastúci kanál za posledné desaťročie. Predpokladajme, že používateľ používa svoje mobilné zariadenie na prehliadanie vášho webu elektronického obchodu. Webová stránka priradí návštevníkovi „mobile_guest123“ ako jedinečný identifikátor a vy začnete zbierať behaviorálne aktivity na základe ich online aktivity. Napríklad, ktoré stránky navštívili, koľko času na týchto stránkach strávili alebo na ktoré odkazy klikli. Nepoznáte ich meno ani e-mailovú adresu, no tieto údaje môžu značkám poskytnúť zmysluplné informácie o tomto konkrétnom používateľovi. Na druhej strane môžete tieto štatistiky použiť pri ďalšej návšteve stránky používateľa. Dopytujte na Customer Insights pre „mobile_guest123“, aby ste získali zoznam segmentov používateľa, ako sú „organickí zákazníci“, „mobilní predobjednávkoví zákazníci“, „zákazníci s vysokou hodnotou“ atď., alebo získajte profil na vytvorenie prispôsobených webových skúseností. Údaje môžete tiež exportovať do akéhokoľvek aktivačného systému a urobiť to isté.
+Predpokladajme, že používateľ používa svoje mobilné zariadenie na prehliadanie vášho webu elektronického obchodu. Webová stránka priradí návštevníkovi „mobile_guest123“ ako jedinečný identifikátor a vy začnete zbierať behaviorálne aktivity na základe ich online aktivity. Napríklad, ktoré stránky navštívili, koľko času na týchto stránkach strávili alebo na ktoré odkazy klikli. Nepoznáte ich meno ani e-mailovú adresu, no tieto údaje môžu značkám poskytnúť zmysluplné informácie o tomto konkrétnom používateľovi. Na druhej strane môžete tieto štatistiky použiť pri ďalšej návšteve stránky používateľa. Dopytujte na Customer Insights pre „mobile_guest123“, aby ste získali zoznam segmentov používateľa, ako napríklad „organický“, „mobilní predobjednávkoví zákazníci“, „zákazníci s vysokou hodnotou“ atď., alebo získajte profil a vytvorte si prispôsobené webové zážitky. Údaje môžete tiež exportovať do akéhokoľvek aktivačného systému a urobiť to isté.
 
 ## <a name="prerequisites"></a>Požiadavky
 
 - Vkladajte údaje prvej strany do Customer Insights
 - Každá entita má jedinečné ID, ktoré je nastavené ako primárny kľúč
 - Každá entita s primárnym kľúčom na personalizáciu je zjednotená
-- Redakčný systém vášho webu dokáže využívať API (na personalizáciu webu na základe priamej komunikácie so Customer Insights)
+- Redakčný systém vášho webu môže využívať API (na personalizáciu webu na základe priamej komunikácie so Customer Insights)
 
 Nasledujúca tabuľka zobrazuje zjednodušený príklad toho, ako sa dajú zachytiť webové udalosti s vysokou hodnotou.
 

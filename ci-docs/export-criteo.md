@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: MT
 ms.contentlocale: sk-SK
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724808"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760045"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Export segmentov do Criteo (ukážka)
 
@@ -27,8 +27,7 @@ Exportujte segmenty zjednotených zákazníckych profilov na generovanie kampan�
 
 ## <a name="known-limitations"></a>Známe obmedzenia
 
-- Súkromný odkaz v kombinácii s Prineste si vlastný úložný priestor (BYOS) nie je podporovaný.
-- Až 1 milión zákazníckych profilov na export do Criteo, ktorého dokončenie môže trvať až 30 minút. Počet zákazníckych profilov, ktoré môžete exportovať do Critea, závisí od vašej zmluvy so spoločnosťou Criteo.
+- Až 1 milión zákazníckych profilov na export do Criteo, ktorého dokončenie môže trvať až 30 minút. Počet zákazníckych profilov, ktoré môžete exportovať do Criteo, závisí od vašej zmluvy s Criteo.
 - Iba segmenty.
 
 ## <a name="set-up-connection-to-criteo"></a>Nastavte pripojenie k Criteo
@@ -43,7 +42,7 @@ Exportujte segmenty zjednotených zákazníckych profilov na generovanie kampan�
 
 1. Vyberte používateľov, ktorí môžu používať toto pripojenie. Predvolene sú to iba správcovia. Viac informácií nájdete v časti [Umožnite prispievateľom použiť pripojenie na export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím**.
+1. Skontrolujte [ochrana osobných údajov a dodržiavanie predpisov](connections.md#data-privacy-and-compliance) a vyberte **Súhlasím** .
 
 1. Vyberte **Pripojte sa** na inicializáciu pripojenia.
 
@@ -59,7 +58,7 @@ Exportujte segmenty zjednotených zákazníckych profilov na generovanie kampan�
 
 1. Prejdite na **Údaje** > **Exporty**.
 
-1. Vyberte **Pridať export**.
+1. Vyberte **Pridať export** .
 
 1. V **Pripojenie na export** vyberte spojenie zo sekcie Criteo. Ak nie je k dispozícii pripojenie, kontaktujte správcu.
 
